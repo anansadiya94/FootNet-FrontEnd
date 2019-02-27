@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Landing Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LandingController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F8O-FT-7vB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="PgO-2a-LWg">
+                                <rect key="frame" x="154.5" y="102" width="66" height="66"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-b4-KOt">
+                                <rect key="frame" x="16" y="192" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDo-uV-Heh" userLabel="password">
+                                <rect key="frame" x="16" y="238" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrD-0Q-Ixg" userLabel="Forgot password" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="244" y="284" width="115" height="30"/>
+                                <state key="normal" title="Forget password"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0E-wH-gML" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="16" y="346" width="343" height="30"/>
+                                <state key="normal" title="Sign in"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsG-vG-gCV" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <state key="normal" title="New? Register"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IrD-0Q-Ixg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wGB-Iy-jwD" secondAttribute="leading" constant="16" id="0NA-o6-dQa"/>
+                            <constraint firstItem="vDo-uV-Heh" firstAttribute="leading" secondItem="wGB-Iy-jwD" secondAttribute="leading" constant="16" id="3Di-XM-UiH"/>
+                            <constraint firstItem="2yV-b4-KOt" firstAttribute="top" secondItem="PgO-2a-LWg" secondAttribute="bottom" constant="24" id="6dd-Om-42o"/>
+                            <constraint firstItem="vDo-uV-Heh" firstAttribute="top" secondItem="2yV-b4-KOt" secondAttribute="bottom" constant="16" id="AlY-2T-NJl"/>
+                            <constraint firstItem="PgO-2a-LWg" firstAttribute="centerX" secondItem="wGB-Iy-jwD" secondAttribute="centerX" id="ENt-U7-kPi"/>
+                            <constraint firstItem="2yV-b4-KOt" firstAttribute="leading" secondItem="wGB-Iy-jwD" secondAttribute="leading" constant="16" id="Sbm-nh-2sT"/>
+                            <constraint firstItem="wGB-Iy-jwD" firstAttribute="trailing" secondItem="2yV-b4-KOt" secondAttribute="trailing" constant="16" id="URA-Wd-zgN"/>
+                            <constraint firstItem="wGB-Iy-jwD" firstAttribute="bottom" secondItem="BsG-vG-gCV" secondAttribute="bottom" id="Vsk-A8-bJ5"/>
+                            <constraint firstItem="c0E-wH-gML" firstAttribute="top" secondItem="IrD-0Q-Ixg" secondAttribute="bottom" constant="32" id="bPs-vR-cPo"/>
+                            <constraint firstItem="wGB-Iy-jwD" firstAttribute="trailing" secondItem="vDo-uV-Heh" secondAttribute="trailing" constant="16" id="bwn-Y8-GjL"/>
+                            <constraint firstItem="PgO-2a-LWg" firstAttribute="top" secondItem="wGB-Iy-jwD" secondAttribute="top" constant="82" id="cZl-9D-fiD"/>
+                            <constraint firstItem="IrD-0Q-Ixg" firstAttribute="trailing" secondItem="vDo-uV-Heh" secondAttribute="trailing" id="eCR-6G-qnd"/>
+                            <constraint firstItem="BsG-vG-gCV" firstAttribute="centerX" secondItem="F8O-FT-7vB" secondAttribute="centerX" id="hUJ-bX-dQd"/>
+                            <constraint firstItem="wGB-Iy-jwD" firstAttribute="trailing" secondItem="c0E-wH-gML" secondAttribute="trailing" constant="16" id="oHN-Vz-dN3"/>
+                            <constraint firstItem="c0E-wH-gML" firstAttribute="leading" secondItem="wGB-Iy-jwD" secondAttribute="leading" constant="16" id="rUU-L3-wQL"/>
+                            <constraint firstItem="IrD-0Q-Ixg" firstAttribute="top" secondItem="vDo-uV-Heh" secondAttribute="bottom" constant="16" id="uMn-Kk-eBm"/>
+                            <constraint firstItem="BsG-vG-gCV" firstAttribute="leading" secondItem="wGB-Iy-jwD" secondAttribute="leading" id="uvM-dA-Det"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wGB-Iy-jwD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="66.5" height="66.5"/>
+    </resources>
+</document>

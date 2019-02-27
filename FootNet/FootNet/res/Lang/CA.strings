@@ -1,0 +1,69 @@
+/* 
+  CA.strings
+  FootNet
+
+  Created by Anan Sadiya on 26/02/2019.
+  Copyright © 2019 FootNet. All rights reserved.
+*/
+// =======================================
+// ===== LANGUAGES =====
+
+
+//
+
+"language_title" = "Languages";
+"language_available_title" = "LANGUAGES AVAILABLE";
+"spanish_language" = "Español";
+"english_language" = "English";
+"catalan_language" = "Catalan";
+"select_language_dialog_title" = "Please select your favorite language";
+"select_language_dialog_cancel" = "CANCEL";
+"select_language_dialog_accept" = "CONFIRM";
+"english_language_label" = "English (United Kingdom)";
+"spanish_language_label" = "Español (España)";
+"catalan_language_label" = "Catalan (Catalunya)";
+
+"good_morning"="Bon dia";
+
+"username_placeholder"="Nom d'usuari";
+"password_placeholder"="Contrasenya";
+
+"username_hint"="El nom d'usuari que vas introduïr durant el registre.";
+"password_hint"="La contrasenya que vas introduïr durant el registre.";
+
+"username_is_not_valid_feedback"="El nom d'usuari introduït no és vàlid.";
+"password_is_not_valid_feedback"="La contrasenya introduïda no és vàlida.";
+
+"forgot_password_button"="He oblidat la contrasenya";
+"register_button"="Registrar-se";
+
+"loggin_in_loading"="Entrant...";
+
+"login_credentials_error"="Les credencials no són correctes.";
+
+"connection_error"="Error de connexió.";
+"unknown_error"="Ha hagut un error.";
+
+// =======================================
+// ===== SPLASH =====
+
+
+//
+
+"splash_loading" = "S'està carregant...";
+"default_error" = "Hi havia un error";
+"no_implemented_yet" = "No s'ha implementat encara";
+
+// Error
+
+"retry_button" = "Torneu a provar";
+"error_title" = "Error";
+"error_sharing" = "No es pot compartir";
+"server_response_error" = "El servidor no respon, torneu-ho a provar més tard";
+"format_response_error" = "Hi ha un problema amb la resposta, torneu-ho a provar més tard";
+"no_connection_error" = "No hi ha connexió a Internet, torneu-ho a provar més tard";
+"no_more_items_error" = "No hi ha més elements";
+"cannot_load_dynamic_menu_items" = "No es poden carregar elements del menú dinàmic";
+"no_search_results_error" = "No hi ha resultats de cerca";
+"no_items_error" = "No hi ha elements";
+"empty_string" = "";

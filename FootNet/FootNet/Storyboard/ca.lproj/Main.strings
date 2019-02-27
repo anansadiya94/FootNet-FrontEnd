@@ -1,7 +1,4 @@
 
-/* Class = "UITextField"; placeholder = "email"; ObjectID = "2yV-b4-KOt"; */
-"2yV-b4-KOt.placeholder" = "email";
-
 /* Class = "UIButton"; normalTitle = "New? Register"; ObjectID = "BsG-vG-gCV"; */
 "BsG-vG-gCV.normalTitle" = "New? Register";
 
@@ -13,5 +10,3 @@
 
 /* Class = "UITextField"; placeholder = "password"; ObjectID = "vDo-uV-Heh"; */
 "vDo-uV-Heh.placeholder" = "password";
-
-"username_placeholder"="Nom d'usuari";

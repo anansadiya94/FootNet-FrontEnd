@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  FootNet
+
+  Created by Anan Sadiya on 27/02/2019.
+  Copyright © 2019 FootNet. All rights reserved.
+*/
+"email_placeholder"="Correo electrónico" ;
+"password_placeholder"="Contraseña";

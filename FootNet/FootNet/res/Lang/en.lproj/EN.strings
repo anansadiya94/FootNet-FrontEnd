@@ -1,0 +1,69 @@
+/* 
+  EN.strings
+  FootNet
+
+  Created by Anan Sadiya on 26/02/2019.
+  Copyright © 2019 FootNet. All rights reserved.
+*/
+// =======================================
+// ===== LANGUAGES =====
+
+
+//
+
+"language_title" = "Languages";
+"language_available_title" = "LANGUAGES AVAILABLE";
+"spanish_language" = "Español";
+"english_language" = "English";
+"catalan_language" = "Catalan";
+"select_language_dialog_title" = "Please select your favorite language";
+"select_language_dialog_cancel" = "CANCEL";
+"select_language_dialog_accept" = "CONFIRM";
+"english_language_label" = "English (United Kingdom)";
+"spanish_language_label" = "Español (España)";
+"catalan_language_label" = "Catalan (Catalunya)";
+
+"good_morning"="Good morning";
+
+"username_placeholder"="Username";
+"password_placeholder"="Password";
+
+"username_hint"="The username used when registering.";
+"password_hint"="The password use when registering.";
+
+"username_is_not_valid_feedback"="Invalid username.";
+"password_is_not_valid_feedback"="Invalid password.";
+
+"forgot_password_button"="I forgot my password";
+"register_button"="Register";
+
+"loggin_in_loading"="Logging in...";
+
+"login_credentials_error"="This credentials are not valid.";
+
+"connection_error"="Connection error.";
+"unknown_error"="Unknown error occurred.";
+
+// =======================================
+// ===== SPLASH =====
+
+
+//
+
+"splash_loading" = "Cargando...";
+"default_error" = "There was an error";
+"no_implemented_yet" = "Not implemented yet";
+
+// Error
+
+"retry_button" = "Retry";
+"error_title" = "Error";
+"error_sharing" = "It could not be shared";
+"server_response_error" = "Server is not responding, try again later";
+"format_response_error" = "There is an issue with the response, try again later";
+"no_connection_error" = "There is no internet connection, try again later";
+"no_more_items_error" = "There are no more items";
+"cannot_load_dynamic_menu_items" = "Can't load dynamic menu items";
+"no_search_results_error" = "There are no search results";
+"no_items_error" = "There are no items";
+"empty_string" = "";

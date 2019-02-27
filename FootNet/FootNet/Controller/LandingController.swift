@@ -29,10 +29,8 @@ class LandingController: BaseViewController {
     private func configureOutlets() {
         
         //placeholders
-        textFieldEmail.placeholder = NSLocalizedString("username_placeholder", comment: "")
-        let a = NSLocalizedString("username_placeholder", comment: "")
-        print(a)
-        
+        textFieldEmail.placeholder = NSLocalizedString("email_placeholder", comment: "")
+        textFieldPassword.placeholder = NSLocalizedString("password_placeholder", comment: "")
         //buttons
     }
     

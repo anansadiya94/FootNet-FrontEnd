@@ -1,0 +1,69 @@
+/* 
+  ES.strings
+  FootNet
+
+  Created by Anan Sadiya on 26/02/2019.
+  Copyright © 2019 FootNet. All rights reserved.
+*/
+// =======================================
+// ===== LANGUAGES =====
+
+
+//
+
+"language_title" = "Languages";
+"language_available_title" = "LANGUAGES AVAILABLE";
+"spanish_language" = "Español";
+"english_language" = "English";
+"catalan_language" = "Catalan";
+"select_language_dialog_title" = "Please select your favorite language";
+"select_language_dialog_cancel" = "CANCEL";
+"select_language_dialog_accept" = "CONFIRM";
+"english_language_label" = "English (United Kingdom)";
+"spanish_language_label" = "Español (España)";
+"catalan_language_label" = "Catalan (Catalunya)";
+
+"good_morning"="Buenos días";
+
+"username_placeholder"="Nombre de usuario";
+"password_placeholder"="Contraseña";
+
+"username_hint"="El nombre de usuario introducido durante el registro.";
+"password_hint"="La constraseña introducida durante el registro.";
+
+"username_is_not_valid_feedback"="El nombre de usuario introducido no es válido.";
+"password_is_not_valid_feedback"="La contraseña introducida no es válida.";
+
+"forgot_password_button"="He olvidado la contraseña";
+"register_button"="Registrarse";
+
+"loggin_in_loading"="Entrando";
+
+"login_credentials_error"="Las credenciales no son correctas.";
+
+"connection_error"="Error de conexión.";
+"unknown_error"="Ha ocurrido un error.";
+
+// =======================================
+// ===== SPLASH =====
+
+
+//
+
+"splash_loading" = "Cargando...";
+"default_error" = "Hubo un error";
+"no_implemented_yet" = "Aun no implementado";
+
+// Error
+
+"retry_button" = "Procesar de nuevo";
+"error_title" = "Error";
+"error_sharing" = "No se pudo compartir";
+"server_response_error" = "El servidor no responde, inténtalo de nuevo más tarde";
+"format_response_error" = "Hay un problema con la respuesta, inténtalo de nuevo más tarde";
+"no_connection_error" = "No hay conexión a internet, inténtalo de nuevo más tarde";
+"no_more_items_error" = "No hay más artículos.";
+"cannot_load_dynamic_menu_items" = "No se pueden cargar elementos de menú dinámicos";
+"no_search_results_error" = "No hay resultados de búsqueda.";
+"no_items_error" = "No hay articulos";
+"empty_string" = "";

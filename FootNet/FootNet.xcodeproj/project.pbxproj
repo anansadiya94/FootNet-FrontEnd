@@ -20,9 +20,13 @@
 		9E4E076D2225970C00F8ED17 /* ES.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E076C2225970C00F8ED17 /* ES.strings */; };
 		9E4E076F2225972200F8ED17 /* EN.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E076E2225972200F8ED17 /* EN.strings */; };
 		9E4E07712225973300F8ED17 /* CA.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E07702225973300F8ED17 /* CA.strings */; };
+		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
+		BDD91548CA55E0379DB644C2 /* Pods_FootNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ADF54F56DB766954955BDE /* Pods_FootNet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17C24D91D019369570032E0C /* Pods-FootNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootNet.release.xcconfig"; path = "Target Support Files/Pods-FootNet/Pods-FootNet.release.xcconfig"; sourceTree = "<group>"; };
+		97ADF54F56DB766954955BDE /* Pods_FootNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1B1E1F2225A55600C82019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E35D930222681B4008E8361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E35D93322268440008E8361 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -38,6 +42,11 @@
 		9E4E076C2225970C00F8ED17 /* ES.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ES.strings; sourceTree = "<group>"; };
 		9E4E076E2225972200F8ED17 /* EN.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = EN.strings; sourceTree = "<group>"; };
 		9E4E07702225973300F8ED17 /* CA.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = CA.strings; sourceTree = "<group>"; };
+		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		9E5456592226CF7D002A55F2 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Main.strings; sourceTree = "<group>"; };
+		9E54565A2226CF81002A55F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		9E54565C2226CF91002A55F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D1025D132B5E76E3C12FEF49 /* Pods-FootNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootNet.debug.xcconfig"; path = "Target Support Files/Pods-FootNet/Pods-FootNet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,12 +54,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD91548CA55E0379DB644C2 /* Pods_FootNet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0E86002226A3F10076BFDF /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				9E5456512226B8B7002A55F2 /* CustomTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
 		9E35D932222683F6008E8361 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +90,8 @@
 			children = (
 				9E4E074A222593B200F8ED17 /* FootNet */,
 				9E4E0749222593B200F8ED17 /* Products */,
+				F09DBDB1709DEAD94AC8024A /* Pods */,
+				DA4CA0CA16CC5CF290EF2EC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +160,7 @@
 		9E4E07642225966E00F8ED17 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				9E0E86002226A3F10076BFDF /* TextFields */,
 				9E35D932222683F6008E8361 /* Buttons */,
 				9E4E07722225974900F8ED17 /* Img */,
 				9E35D937222687F0008E8361 /* Fonts */,
@@ -200,6 +221,23 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		DA4CA0CA16CC5CF290EF2EC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97ADF54F56DB766954955BDE /* Pods_FootNet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F09DBDB1709DEAD94AC8024A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1025D132B5E76E3C12FEF49 /* Pods-FootNet.debug.xcconfig */,
+				17C24D91D019369570032E0C /* Pods-FootNet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E4E075A222593B300F8ED17 /* Build configuration list for PBXNativeTarget "FootNet" */;
 			buildPhases = (
+				ACCA0C5C9330D0A0080C7011 /* [CP] Check Pods Manifest.lock */,
 				9E4E0744222593B200F8ED17 /* Sources */,
 				9E4E0745222593B200F8ED17 /* Frameworks */,
 				9E4E0746222593B200F8ED17 /* Resources */,
+				0CAA8E16C76CB8A538DE3C6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,11 +310,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CAA8E16C76CB8A538DE3C6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FootNet/Pods-FootNet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FootNet/Pods-FootNet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACCA0C5C9330D0A0080C7011 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FootNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9E4E0744222593B200F8ED17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */,
 				9E4E074E222593B200F8ED17 /* LandingController.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
@@ -291,6 +379,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				9E4E0750222593B200F8ED17 /* Base */,
+				9E5456592226CF7D002A55F2 /* ca */,
+				9E54565A2226CF81002A55F2 /* es */,
+				9E54565C2226CF91002A55F2 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -302,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -363,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -416,6 +509,7 @@
 		};
 		9E4E075B222593B300F8ED17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1025D132B5E76E3C12FEF49 /* Pods-FootNet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -435,6 +529,7 @@
 		};
 		9E4E075C222593B300F8ED17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C24D91D019369570032E0C /* Pods-FootNet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

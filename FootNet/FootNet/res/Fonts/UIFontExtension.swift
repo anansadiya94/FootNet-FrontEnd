@@ -16,4 +16,8 @@ extension UIFont {
         get { return UIFont(name: "Noteworthy", size: 25)! }
     }
     
+    static var textFieldFontOfSize : UIFont {
+        get { return UIFont(name: "Noteworthy", size: 20)! }
+    }
+    
 }

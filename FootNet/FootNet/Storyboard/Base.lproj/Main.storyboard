@@ -14,20 +14,20 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LandingController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="F8O-FT-7vB">
+                    <view key="view" contentMode="scaleToFill" id="F8O-FT-7vB" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="PgO-2a-LWg">
                                 <rect key="frame" x="154.5" y="102" width="66" height="66"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-b4-KOt">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-b4-KOt" customClass="CustomTextField" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="16" y="192" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDo-uV-Heh" userLabel="password">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDo-uV-Heh" userLabel="password" customClass="CustomTextField" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="16" y="238" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -73,6 +73,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wGB-Iy-jwD"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonForgotPassword" destination="IrD-0Q-Ixg" id="zmn-hu-DBp"/>
+                        <outlet property="buttonSignIn" destination="c0E-wH-gML" id="gkA-Xb-55l"/>
+                        <outlet property="buttonSignUp" destination="BsG-vG-gCV" id="h4z-rk-TjX"/>
+                        <outlet property="textFieldEmail" destination="2yV-b4-KOt" id="RMo-Rl-L4z"/>
+                        <outlet property="textFieldPassword" destination="vDo-uV-Heh" id="Eua-3q-JLC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

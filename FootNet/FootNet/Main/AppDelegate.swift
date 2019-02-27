@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    //Logger
+    public let fileLogger: DDFileLogger = DDFileLogger()
+    private func setupLogger() {
+        DDLog.add(DDTTYLogger.sharedInstance)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setupLogger()
+        DDLogInfo("App starts, let's have some fun!")
         return true
     }
 

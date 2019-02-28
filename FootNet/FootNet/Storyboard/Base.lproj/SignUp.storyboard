@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ppL-vL-Pkj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SignUp View Controller-->
+        <scene sceneID="4bU-Jg-d4x">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdi-HE-m0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="SignUp" id="eWP-7E-qVS" userLabel="SignUp View Controller" customClass="SignUpSelectProfileTableViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Umg-vr-kLs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="signUpSelectProfileCell" rowHeight="120" id="tdv-Dm-Agt" customClass="SignUpSelectProfileCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tdv-Dm-Agt" id="FxJ-LU-wE3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-gN-x0V">
+                                            <rect key="frame" x="16" y="0.0" width="88" height="120"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulz-Nu-wWb" customClass="CustomLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="120" y="16" width="42" height="88"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ulz-Nu-wWb" secondAttribute="trailing" constant="16" id="7fe-ld-deh"/>
+                                        <constraint firstAttribute="bottom" secondItem="ulz-Nu-wWb" secondAttribute="bottom" constant="16" id="CrN-e0-aDu"/>
+                                        <constraint firstItem="ulz-Nu-wWb" firstAttribute="top" secondItem="FxJ-LU-wE3" secondAttribute="top" constant="16" id="W5J-LT-pcc"/>
+                                        <constraint firstItem="ulz-Nu-wWb" firstAttribute="leading" secondItem="kzG-gN-x0V" secondAttribute="trailing" constant="16" id="cKY-Kz-Poq"/>
+                                        <constraint firstItem="kzG-gN-x0V" firstAttribute="leading" secondItem="FxJ-LU-wE3" secondAttribute="leading" constant="16" id="jHU-j9-KZb"/>
+                                        <constraint firstAttribute="bottom" secondItem="kzG-gN-x0V" secondAttribute="bottom" id="swE-J0-3Ty"/>
+                                        <constraint firstItem="kzG-gN-x0V" firstAttribute="width" secondItem="ulz-Nu-wWb" secondAttribute="height" multiplier="1:1" id="wMQ-pS-KOK"/>
+                                        <constraint firstItem="kzG-gN-x0V" firstAttribute="top" secondItem="FxJ-LU-wE3" secondAttribute="top" id="zEz-zq-lVb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="signUpSelectProfileCell"/>
+                                <connections>
+                                    <outlet property="img" destination="kzG-gN-x0V" id="KW5-Ds-XVf"/>
+                                    <outlet property="lbl" destination="ulz-Nu-wWb" id="bYD-BJ-JAD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eWP-7E-qVS" id="XQ1-ak-8ZR"/>
+                            <outlet property="delegate" destination="eWP-7E-qVS" id="GJ1-9h-nAS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="WfW-JH-4Qu"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="677.60000000000002" y="337.78110944527737"/>
+        </scene>
+        <!--Sign Up Navigation Controller-->
+        <scene sceneID="C1a-JP-LEF">
+            <objects>
+                <navigationController title="SignUp" id="ppL-vL-Pkj" userLabel="Sign Up Navigation Controller" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gWP-jr-md3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eWP-7E-qVS" kind="relationship" relationship="rootViewController" id="S4P-eR-Ei5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixp-kV-ws7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="338"/>
+        </scene>
+    </scenes>
+</document>

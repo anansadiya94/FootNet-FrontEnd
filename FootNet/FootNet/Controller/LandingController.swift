@@ -20,7 +20,7 @@ class LandingController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DDLogInfo("Load Login View")
+        DDLogInfo("Load Landing View")
         configureOutlets()
     }
     
@@ -31,8 +31,20 @@ class LandingController: BaseViewController {
         //placeholders
         textFieldEmail.placeholder = NSLocalizedString("email_placeholder", comment: "")
         textFieldPassword.placeholder = NSLocalizedString("password_placeholder", comment: "")
+        
         //buttons
+        let forgotPasswordTitle = NSLocalizedString("forgotPassword_button", comment: "")
+        buttonForgotPassword.setTitle(forgotPasswordTitle, for: .normal)
+        let signInTitle = NSLocalizedString("signIn_button", comment: "")
+        buttonSignIn.setTitle(signInTitle, for: .normal)
+        let signUpTitle = NSLocalizedString("signUp_button", comment: "")
+        buttonSignUp.setTitle(signUpTitle, for: .normal)
     }
+ 
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//        print("segue")
+//    }
 }
 

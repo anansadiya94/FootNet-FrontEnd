@@ -13,7 +13,11 @@ import UIKit
 extension UIFont {
     
     static var buttonFontOfSize : UIFont {
-        get { return UIFont(name: "Noteworthy", size: 25)! }
+        get { return UIFont(name: "Noteworthy", size: 26)! }
+    }
+    
+    static var buttonForgotPasswordFontOfSize : UIFont {
+        get { return UIFont(name: "Noteworthy", size: 13)! }
     }
     
     static var textFieldFontOfSize : UIFont {

@@ -18,3 +18,11 @@ class BaseViewController: UIViewController {
     }
 
 }
+
+
+extension UIViewController {
+    
+    func setBackground() {
+        view.backgroundColor = .kDarkBlack
+    }
+}

@@ -5,5 +5,18 @@
   Created by Anan Sadiya on 27/02/2019.
   Copyright © 2019 FootNet. All rights reserved.
 */
+
+//Landing Page
 "email_placeholder"="Correo electrónico" ;
 "password_placeholder"="Contraseña";
+"forgotPassword_button"="¿Olvidaste tu contraseña?";
+"signIn_button"="Iniciar Sesión";
+"signUp_button"="¿No tienes una cuenta? Regístrate";
+
+//Sign Up Select Profile Type
+"signUp_navBarTitle"="Registrarse";
+"player_label"="Jugador";
+"coach_label"="Entrenador";
+"sportDirector_label"="Director Deportivo";
+"team_label"="Equipo";
+"fan_label"="Aficionado";

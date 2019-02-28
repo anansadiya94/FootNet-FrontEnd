@@ -33,23 +33,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrD-0Q-Ixg" userLabel="Forgot password" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="244" y="284" width="115" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrD-0Q-Ixg" userLabel="Forgot password" customClass="CustomForgotPasswordButton" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="244" y="272" width="115" height="30"/>
                                 <state key="normal" title="Forget password"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0E-wH-gML" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="16" y="346" width="343" height="30"/>
+                                <rect key="frame" x="16" y="334" width="343" height="30"/>
                                 <state key="normal" title="Sign in"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsG-vG-gCV" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsG-vG-gCV" userLabel="Button Register" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="637" width="375" height="30"/>
                                 <state key="normal" title="New? Register"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ehj-aA-y6C" kind="show" id="bSM-mv-iHV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -68,7 +71,7 @@
                             <constraint firstItem="BsG-vG-gCV" firstAttribute="centerX" secondItem="F8O-FT-7vB" secondAttribute="centerX" id="hUJ-bX-dQd"/>
                             <constraint firstItem="wGB-Iy-jwD" firstAttribute="trailing" secondItem="c0E-wH-gML" secondAttribute="trailing" constant="16" id="oHN-Vz-dN3"/>
                             <constraint firstItem="c0E-wH-gML" firstAttribute="leading" secondItem="wGB-Iy-jwD" secondAttribute="leading" constant="16" id="rUU-L3-wQL"/>
-                            <constraint firstItem="IrD-0Q-Ixg" firstAttribute="top" secondItem="vDo-uV-Heh" secondAttribute="bottom" constant="16" id="uMn-Kk-eBm"/>
+                            <constraint firstItem="IrD-0Q-Ixg" firstAttribute="top" secondItem="vDo-uV-Heh" secondAttribute="bottom" constant="4" id="uMn-Kk-eBm"/>
                             <constraint firstItem="BsG-vG-gCV" firstAttribute="leading" secondItem="wGB-Iy-jwD" secondAttribute="leading" id="uvM-dA-Det"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wGB-Iy-jwD"/>
@@ -76,14 +79,22 @@
                     <connections>
                         <outlet property="buttonForgotPassword" destination="IrD-0Q-Ixg" id="zmn-hu-DBp"/>
                         <outlet property="buttonSignIn" destination="c0E-wH-gML" id="gkA-Xb-55l"/>
-                        <outlet property="buttonSignUp" destination="BsG-vG-gCV" id="h4z-rk-TjX"/>
+                        <outlet property="buttonSignUp" destination="BsG-vG-gCV" id="gij-SF-Yvv"/>
                         <outlet property="textFieldEmail" destination="2yV-b4-KOt" id="RMo-Rl-L4z"/>
                         <outlet property="textFieldPassword" destination="vDo-uV-Heh" id="Eua-3q-JLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+            <point key="canvasLocation" x="21.600000000000001" y="-0.44977511244377816"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="Z9p-YN-Iem">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="ehj-aA-y6C" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5g-c3-5Er" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="424"/>
         </scene>
     </scenes>
     <resources>

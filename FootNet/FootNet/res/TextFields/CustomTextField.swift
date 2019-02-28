@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTextField: UITextField {
+class CustomTextField: NoPasteTextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

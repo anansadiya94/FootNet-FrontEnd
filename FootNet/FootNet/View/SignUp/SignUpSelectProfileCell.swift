@@ -12,7 +12,6 @@ class SignUpSelectProfileCell: UITableViewCell {
     
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbl: CustomLabel!
- 
     
     override func awakeFromNib() {
         super.awakeFromNib()

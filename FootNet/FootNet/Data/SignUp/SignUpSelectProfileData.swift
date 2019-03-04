@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-
-
 class SignUpSelectProfileData {
     
     static func getAllSignUpSelectProfileData() -> [SignUpSelectProfileModel] {
+        
         var signUpSelectProfileData = [SignUpSelectProfileModel]()
+        
         signUpSelectProfileData = [
             SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("player_label", comment: ""), type: .Player ),
             SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("coach_label", comment: ""), type: .Coach),
@@ -22,6 +22,7 @@ class SignUpSelectProfileData {
             SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("team_label", comment: ""), type: .Team),
             SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("fan_label", comment: ""), type: .Fan)
         ]
+        
         return signUpSelectProfileData
     }
 }

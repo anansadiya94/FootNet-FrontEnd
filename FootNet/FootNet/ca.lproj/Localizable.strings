@@ -15,8 +15,32 @@
 
 //Sign Up Select Profile Type
 "signUp_navBarTitle"="Registrar-se";
+"signUp_sectionHeader"="Tria el perfil:";
 "player_label"="Jugador";
 "coach_label"="Entrenador";
 "sportDirector_label"="Director Esportiu";
 "team_label"="Equip";
 "fan_label"="Aficionat";
+
+//SignUp Detail
+"signUp_name"="Nom";
+"signUp_surname"="Cognoms";
+"signUp_mobile"="Mòbil";
+"signUp_email"="Correu electrònic";
+"signUp_password"="Contrasenya";
+"signUp_repeatPawword"="Repetir contrasenya";
+
+"signUp_sex"="Sexe";
+"signUp_bithdayDate"="Data de naixement";
+"signUp_nationality"="Nacionalitat";
+"signUp_location"="Localitat";
+
+"signUp_favoritePosition"="Poisción Favorita";
+"signUp_preferredPositions"="Posicions Preferides";
+"signUp_weight"="Pes";
+"signUp_height"="Alçada";
+
+"signUp_actualClub"="Club Actual";
+"signUp_photo"="Foto";
+"signUp_bio"="Biografia";
+"signUp_record"="Històric";

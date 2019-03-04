@@ -12,7 +12,6 @@
         <!--SignUp View Controller-->
         <scene sceneID="4bU-Jg-d4x">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mdi-HE-m0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="SignUp" id="eWP-7E-qVS" userLabel="SignUp View Controller" customClass="SignUpSelectProfileTableViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Umg-vr-kLs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -51,6 +50,7 @@
                                 <connections>
                                     <outlet property="img" destination="kzG-gN-x0V" id="KW5-Ds-XVf"/>
                                     <outlet property="lbl" destination="ulz-Nu-wWb" id="bYD-BJ-JAD"/>
+                                    <segue destination="lll-bP-5A1" kind="show" id="j7b-ZG-PRR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -59,10 +59,56 @@
                             <outlet property="delegate" destination="eWP-7E-qVS" id="GJ1-9h-nAS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="WfW-JH-4Qu"/>
+                    <navigationItem key="navigationItem" title="Sign Up" id="WfW-JH-4Qu"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdi-HE-m0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="677.60000000000002" y="337.78110944527737"/>
+        </scene>
+        <!--Sign Up Detail Table View Controller-->
+        <scene sceneID="wFj-3j-UcH">
+            <objects>
+                <tableViewController id="lll-bP-5A1" customClass="SignUpDetailTableViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vwo-Wi-eEq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="signUpDetailCell" id="yKM-3j-FoJ" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yKM-3j-FoJ" id="TWw-qd-nOg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFh-np-UJo" customClass="CustomTextField" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="8" width="343" height="27.5"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NFh-np-UJo" firstAttribute="top" secondItem="TWw-qd-nOg" secondAttribute="top" constant="8" id="7T8-WB-ivt"/>
+                                        <constraint firstItem="NFh-np-UJo" firstAttribute="leading" secondItem="TWw-qd-nOg" secondAttribute="leading" constant="16" id="Aab-Nm-CBl"/>
+                                        <constraint firstAttribute="trailing" secondItem="NFh-np-UJo" secondAttribute="trailing" constant="16" id="YxI-Dk-lOs"/>
+                                        <constraint firstAttribute="bottom" secondItem="NFh-np-UJo" secondAttribute="bottom" constant="8" id="wLl-nd-iln"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textfield" destination="NFh-np-UJo" id="alm-Uh-0ga"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lll-bP-5A1" id="trz-Ct-tcJ"/>
+                            <outlet property="delegate" destination="lll-bP-5A1" id="IR8-wM-xc8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EAA-Mt-1et" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636" y="337.78110944527737"/>
         </scene>
         <!--Sign Up Navigation Controller-->
         <scene sceneID="C1a-JP-LEF">

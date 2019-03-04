@@ -15,8 +15,32 @@
 
 //Sign Up Select Profile Type
 "signUp_navBarTitle"="SignUp";
+"signUp_sectionHeader"="Choose your profile:";
 "player_label"="Player";
 "coach_label"="Coach";
 "sportDirector_label"="Sport Director";
 "team_label"="Team";
 "fan_label"="Fan";
+
+//SignUp Detail
+"signUp_name"="Name";
+"signUp_surname"="Surname";
+"signUp_mobile"="Mobile";
+"signUp_email"="Email";
+"signUp_password"="Password";
+"signUp_repeatPawword"="Repeat Password";
+
+"signUp_sex"="Sex";
+"signUp_bithdayDate"="Birthday";
+"signUp_nationality"="Nationality";
+"signUp_location"="Location";
+
+"signUp_favoritePosition"="Favorite Position";
+"signUp_preferredPositions"="Preferred Positions";
+"signUp_weight"="Weight";
+"signUp_height"="Height";
+
+"signUp_actualClub"="Actual Club";
+"signUp_photo"="Photo";
+"signUp_bio"="Biography";
+"signUp_record"="Record";

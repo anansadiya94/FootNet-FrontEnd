@@ -16,9 +16,7 @@ class BaseViewController: UIViewController {
         view.backgroundColor = .kDarkBlack
         DDLogInfo("Load Base View")
     }
-
 }
-
 
 extension UIViewController {
     

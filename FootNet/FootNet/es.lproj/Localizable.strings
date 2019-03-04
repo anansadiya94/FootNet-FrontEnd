@@ -13,10 +13,34 @@
 "signIn_button"="Iniciar Sesión";
 "signUp_button"="¿No tienes una cuenta? Regístrate";
 
-//Sign Up Select Profile Type
+//SignUp Select Profile Type
 "signUp_navBarTitle"="Registrarse";
+"signUp_sectionHeader"="Elige tu perfil:";
 "player_label"="Jugador";
 "coach_label"="Entrenador";
 "sportDirector_label"="Director Deportivo";
 "team_label"="Equipo";
 "fan_label"="Aficionado";
+
+//SignUp Detail
+"signUp_name"="Nombre";
+"signUp_surname"="Apellidos";
+"signUp_mobile"="Móvil";
+"signUp_email"="Correo Electrónico";
+"signUp_password"="Contraseña";
+"signUp_repeatPawword"="Repetir contraseña";
+
+"signUp_sex"="Sexo";
+"signUp_bithdayDate"="Fecha de nacimiento";
+"signUp_nationality"="Nacionalidad";
+"signUp_location"="Localidad";
+
+"signUp_favoritePosition"="Poisción Favorita";
+"signUp_preferredPositions"="Posiciones Preferidas";
+"signUp_weight"="Peso";
+"signUp_height"="Altura";
+
+"signUp_actualClub"="Club Actual";
+"signUp_photo"="Foto";
+"signUp_bio"="Biografía";
+"signUp_record"="Historial";

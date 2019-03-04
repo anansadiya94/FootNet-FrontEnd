@@ -24,8 +24,7 @@ class LandingController: BaseViewController {
         configureOutlets()
     }
     
-    // MARK: UI Configuration
-    
+    // MARK: UI Configurations
     private func configureOutlets() {
         
         //placeholders
@@ -40,11 +39,5 @@ class LandingController: BaseViewController {
         let signUpTitle = NSLocalizedString("signUp_button", comment: "")
         buttonSignUp.setTitle(signUpTitle, for: .normal)
     }
- 
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//        print("segue")
-//    }
 }
 

@@ -25,10 +25,10 @@
 //SignUp Detail
 "signUp_name"="Name";
 "signUp_surname"="Surname";
-"signUp_mobile"="Mobile";
+"signUp_phone"="Phone";
 "signUp_email"="Email";
 "signUp_password"="Password";
-"signUp_repeatPawword"="Repeat Password";
+"signUp_repeatPassword"="Repeat Password";
 
 "signUp_sex"="Sex";
 "signUp_bithdayDate"="Birthday";

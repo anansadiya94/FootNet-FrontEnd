@@ -9,18 +9,20 @@
 import UIKit
 import CocoaLumberjack
 
-class SignUpDetailTableViewController: UITableViewController {
+class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate {
 
     var signUpDeatilSectionsData = [[SignUpDetailModel]]()
     var profileType : ProfileType?
+    private var datePicker: UIDatePicker?
+    var userProfileModel = UserProfileModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
-        
         DDLogInfo("Load SignUp Detail View")
         signUpDeatilSectionsData = SignUpDetailData.getAllsignUpSectionsData(profileType!)
     }
+
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,10 +34,28 @@ class SignUpDetailTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "signUpDetailCell", for: indexPath) as! SignUpDetailCell
-        
-        // Configure the cell...
-        cell.textfield.placeholder = signUpDeatilSectionsData[indexPath.section][indexPath.row].placeholder
+        let cellType = signUpDeatilSectionsData[indexPath.section][indexPath.row].type
+        var cell: SignUpDetailCell
+        switch cellType {
+        case .NormalTextField:
+            cell = tableView.dequeueReusableCell(withIdentifier: "normalSignUpDetailCell", for: indexPath) as! SignUpDetailCell
+            cell.normalTextField.placeholder = signUpDeatilSectionsData[indexPath.section][indexPath.row].placeholder
+        case .EmailTextField:
+            cell = tableView.dequeueReusableCell(withIdentifier: "emailSignUpDetailCell", for: indexPath) as! SignUpDetailCell
+            cell.emailTextField.placeholder = signUpDeatilSectionsData[indexPath.section][indexPath.row].placeholder
+            cell.emailTextField.text = userProfileModel.email
+            cell.emailTextField.delegate = self
+        case .PhoneTextField:
+            cell = tableView.dequeueReusableCell(withIdentifier: "phoneSignUpDetailCell", for: indexPath) as! SignUpDetailCell
+            cell.phoneTextField.placeholder = signUpDeatilSectionsData[indexPath.section][indexPath.row].placeholder
+        case .PasswordTextField:
+            cell = tableView.dequeueReusableCell(withIdentifier: "passwordSignUpDetailCell", for: indexPath) as! SignUpDetailCell
+            cell.passwordTextField.placeholder = signUpDeatilSectionsData[indexPath.section][indexPath.row].placeholder
+        case .DateTextField:
+            cell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as! SignUpDetailCell
+            cell.dateTextField.placeholder = signUpDeatilSectionsData[indexPath.section][indexPath.row].placeholder
+            cell.dateTextField.inputView = datePicker
+        }
         
         return cell
     }

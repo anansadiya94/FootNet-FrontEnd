@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 enum CellType {
-    case TextField
+    case NormalTextField
+    case EmailTextField
+    case PhoneTextField
     case PasswordTextField
-    case Number
+    case DateTextField
 }
 
 struct SignUpDetailModel {

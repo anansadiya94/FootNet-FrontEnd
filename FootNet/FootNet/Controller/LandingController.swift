@@ -12,7 +12,7 @@ import CocoaLumberjack
 class LandingController: BaseViewController {
 
     //IBOutlets
-    @IBOutlet weak var textFieldEmail: CustomTextField!
+    @IBOutlet weak var textFieldEmail: EmailTextField!
     @IBOutlet weak var textFieldPassword: CustomTextField!
     @IBOutlet weak var buttonForgotPassword: CustomButton!
     @IBOutlet weak var buttonSignIn: CustomButton!

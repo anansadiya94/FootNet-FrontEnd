@@ -10,8 +10,12 @@ import UIKit
 
 class SignUpDetailCell: UITableViewCell {
     
-    @IBOutlet weak var textfield: CustomTextField!
-
+    @IBOutlet weak var normalTextField: CustomTextField!
+    @IBOutlet weak var emailTextField: EmailTextField!
+    @IBOutlet weak var phoneTextField: PhoneTextField!
+    @IBOutlet weak var passwordTextField: PasswordTextField!
+    @IBOutlet weak var dateTextField: PasswordTextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear

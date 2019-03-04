@@ -25,10 +25,10 @@
 //SignUp Detail
 "signUp_name"="Nom";
 "signUp_surname"="Cognoms";
-"signUp_mobile"="Mòbil";
+"signUp_phone"="Mòbil";
 "signUp_email"="Correu electrònic";
 "signUp_password"="Contrasenya";
-"signUp_repeatPawword"="Repetir contrasenya";
+"signUp_repeatPassword"="Repetir contrasenya";
 
 "signUp_sex"="Sexe";
 "signUp_bithdayDate"="Data de naixement";

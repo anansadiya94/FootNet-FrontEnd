@@ -9,15 +9,7 @@
 import Foundation
 import UIKit
 
-enum CellType {
-    case NormalTextField
-    case EmailTextField
-    case PhoneTextField
-    case PasswordTextField
-    case DateTextField
-}
-
 struct SignUpDetailModel {
     let placeholder: String
-    let type: CellType
+    let tag: Int
 }

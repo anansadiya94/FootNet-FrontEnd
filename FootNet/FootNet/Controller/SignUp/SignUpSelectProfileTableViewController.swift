@@ -40,15 +40,18 @@ class SignUpSelectProfileTableViewController: UITableViewController {
         return cell
     }
     
+    //cell height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
+    //section title
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let section = NSLocalizedString("signUp_sectionHeader", comment: "")
         return section
     }
     
+    //sending the profile type to the next storyboard
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SignUpDetailTableViewController {
             if let path = tableView.indexPathForSelectedRow {

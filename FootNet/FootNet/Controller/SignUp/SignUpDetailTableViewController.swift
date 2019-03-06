@@ -23,8 +23,36 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         setBackground()
         DDLogInfo("Load SignUp Detail View")
         signUpDeatilSectionsData = SignUpDetailData.getAllsignUpSectionsData(profileType!)
+        createBackButton()
     }
-
+    
+    private func createBackButton() {
+        self.navigationItem.hidesBackButton = true
+        let buttonTitle = NSLocalizedString("back_buttom", comment: "")
+        let newBackButton = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
+    }
+    
+    @objc func back(sender: UIBarButtonItem) {
+        let alertTitle = NSLocalizedString("title_alert", comment: "")
+        let alertMessage = NSLocalizedString("message_alert", comment: "")
+        let alertYesTitle = NSLocalizedString("yes_alert", comment: "")
+        let alertNoTitle =  NSLocalizedString("no_alert", comment: "")
+        
+        // Create alert
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        
+        //add yes action
+        alert.addAction(UIAlertAction(title: alertYesTitle, style: .default, handler: { action in
+            _ = self.navigationController?.popViewController(animated: true)
+        }))
+        
+        //add no action
+        alert.addAction(UIAlertAction(title: alertNoTitle, style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+        
+    }
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,54 +118,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    func normalTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "normalSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.normalTextField.placeholder = placeholder
-            cell.normalTextField.tag = tag
-            cell.normalTextField.text = text
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    func emailTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "emailSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.emailTextField.placeholder = placeholder
-            cell.emailTextField.tag = tag
-            cell.emailTextField.text = text
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    func phoneTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "phoneSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.phoneTextField.placeholder = placeholder
-            cell.phoneTextField.tag = tag
-            cell.phoneTextField.text = text
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    func passwordTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "passwordSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.passwordTextField.placeholder = placeholder
-            cell.passwordTextField.tag = tag
-            cell.passwordTextField.text = text
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    func dateToString(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
-        dateFormatter.timeStyle = .full
-        return dateFormatter.string(from: date)
-    }
-    
+    //sections titles
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var sectionHeader = ""
         
@@ -157,7 +138,59 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return sectionHeader
     }
     
+    //return normal cell
+    func normalTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "normalSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            cell.normalTextField.placeholder = placeholder
+            cell.normalTextField.tag = tag
+            cell.normalTextField.text = text
+            return cell
+        }
+        return UITableViewCell()
+    }
     
+    //return email cell
+    func emailTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "emailSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            cell.emailTextField.placeholder = placeholder
+            cell.emailTextField.tag = tag
+            cell.emailTextField.text = text
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    //return phone cell
+    func phoneTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "phoneSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            cell.phoneTextField.placeholder = placeholder
+            cell.phoneTextField.tag = tag
+            cell.phoneTextField.text = text
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    //return password cell
+    func passwordTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "passwordSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            cell.passwordTextField.placeholder = placeholder
+            cell.passwordTextField.tag = tag
+            cell.passwordTextField.text = text
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    //convert date to string
+    func dateToString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        dateFormatter.timeStyle = .full
+        return dateFormatter.string(from: date)
+    }
+    
+    //Save user input in userProfileModel
     @IBAction func customTextFieldEditingChanged(_ sender: CustomTextField) {
         guard let text = sender.text else {
             return

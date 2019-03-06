@@ -9,7 +9,7 @@
 import UIKit
 import CocoaLumberjack
 
-class LandingController: BaseViewController {
+class LandingController: BaseViewController, UITextFieldDelegate {
 
     //IBOutlets
     @IBOutlet weak var textFieldEmail: EmailTextField!
@@ -22,11 +22,11 @@ class LandingController: BaseViewController {
         super.viewDidLoad()
         DDLogInfo("Load Landing View")
         configureOutlets()
+        configureDismissKeyboard()
     }
     
     // MARK: UI Configurations
     private func configureOutlets() {
-        
         //placeholders
         textFieldEmail.placeholder = NSLocalizedString("email_placeholder", comment: "")
         textFieldPassword.placeholder = NSLocalizedString("password_placeholder", comment: "")
@@ -39,5 +39,36 @@ class LandingController: BaseViewController {
         let signUpTitle = NSLocalizedString("signUp_button", comment: "")
         buttonSignUp.setTitle(signUpTitle, for: .normal)
     }
+    
+    //dismiss keyboad configuration
+    private func configureDismissKeyboard() {
+        textFieldEmail.delegate = self
+        textFieldPassword.delegate = self
+        self.setupHideKeyboardOnTap()
+    }
+    
+    //dismiss keyboard by tapping on the return button
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textFieldEmail.resignFirstResponder()
+        textFieldPassword.resignFirstResponder()
+        return true
+    }
 }
+
+//dismiss keyboard by tapping anywhere in the view controller
+extension UIViewController {
+    /// Call this once to dismiss open keyboards by tapping anywhere in the view controller
+    func setupHideKeyboardOnTap() {
+        self.view.addGestureRecognizer(self.endEditingRecognizer())
+        self.navigationController?.navigationBar.addGestureRecognizer(self.endEditingRecognizer())
+    }
+    
+    /// Dismisses the keyboard from self.view
+    private func endEditingRecognizer() -> UIGestureRecognizer {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        return tap
+    }
+}
+
 

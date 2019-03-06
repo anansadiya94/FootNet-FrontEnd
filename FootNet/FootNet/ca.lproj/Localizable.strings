@@ -29,18 +29,25 @@
 "signUp_email"="Correu electrònic";
 "signUp_password"="Contrasenya";
 "signUp_repeatPassword"="Repetir contrasenya";
-
 "signUp_sex"="Sexe";
 "signUp_bithdayDate"="Data de naixement";
 "signUp_nationality"="Nacionalitat";
 "signUp_location"="Localitat";
-
 "signUp_favoritePosition"="Poisción Favorita";
 "signUp_preferredPositions"="Posicions Preferides";
 "signUp_weight"="Pes";
 "signUp_height"="Alçada";
-
 "signUp_actualClub"="Club Actual";
 "signUp_photo"="Foto";
 "signUp_bio"="Biografia";
 "signUp_record"="Històric";
+
+//back button
+"back_buttom"="Enrere";
+
+//back alert
+"title_alert"="Estàs segur que vols tornar?";
+"message_alert"="Tornar netejarà la informació del formulari de registre";
+"yes_alert"="Sí";
+"no_alert"="No";
+

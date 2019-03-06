@@ -29,18 +29,24 @@
 "signUp_email"="Correo Electrónico";
 "signUp_password"="Contraseña";
 "signUp_repeatPassword"="Repetir contraseña";
-
 "signUp_sex"="Sexo";
 "signUp_bithdayDate"="Fecha de nacimiento";
 "signUp_nationality"="Nacionalidad";
 "signUp_location"="Localidad";
-
 "signUp_favoritePosition"="Poisción Favorita";
 "signUp_preferredPositions"="Posiciones Preferidas";
 "signUp_weight"="Peso";
 "signUp_height"="Altura";
-
 "signUp_actualClub"="Club Actual";
 "signUp_photo"="Foto";
 "signUp_bio"="Biografía";
 "signUp_record"="Historial";
+
+//back button
+"back_buttom"="Atrás";
+
+//back alert
+"title_alert"="¿Estás seguro de que deseas volver?";
+"message_alert"="Volver atrás limpiará la información del formulario de registro";
+"yes_alert"="Sí";
+"no_alert"="No";

@@ -29,18 +29,24 @@
 "signUp_email"="Email";
 "signUp_password"="Password";
 "signUp_repeatPassword"="Repeat Password";
-
 "signUp_sex"="Sex";
 "signUp_bithdayDate"="Birthday";
 "signUp_nationality"="Nationality";
 "signUp_location"="Location";
-
 "signUp_favoritePosition"="Favorite Position";
 "signUp_preferredPositions"="Preferred Positions";
 "signUp_weight"="Weight";
 "signUp_height"="Height";
-
 "signUp_actualClub"="Actual Club";
 "signUp_photo"="Photo";
 "signUp_bio"="Biography";
 "signUp_record"="Record";
+
+//back button
+"back_buttom"="Back";
+
+//back alert
+"title_alert"="Are you sure you want to go back?";
+"message_alert"="Going back will clean the register form information";
+"yes_alert"="Yes";
+"no_alert"="No";

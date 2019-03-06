@@ -18,6 +18,7 @@
 		9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E07662225968700F8ED17 /* UIColorExtension.swift */; };
 		9E4E076A222596C400F8ED17 /* environments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0769222596C400F8ED17 /* environments.json */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
+		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */; };
 		9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */; };
 		9EB24E842227D46A004B0C66 /* NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */; };
@@ -54,6 +55,7 @@
 		9E4E07662225968700F8ED17 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9E4E0769222596C400F8ED17 /* environments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = environments.json; sourceTree = "<group>"; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileCell.swift; sourceTree = "<group>"; };
 		9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileTableViewController.swift; sourceTree = "<group>"; };
 		9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoPasteTextField.swift; path = FootNet/Res/TextFields/NoPasteTextField.swift; sourceTree = SOURCE_ROOT; };
@@ -205,6 +207,7 @@
 		9E4E07642225966E00F8ED17 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				9EA8F822222FBDA10021C435 /* Tables */,
 				9EB24EA72227F48F004B0C66 /* Labels */,
 				9E0E86002226A3F10076BFDF /* TextFields */,
 				9E35D932222683F6008E8361 /* Buttons */,
@@ -254,6 +257,14 @@
 			children = (
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		9EA8F822222FBDA10021C435 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				9EA8F823222FBDEA0021C435 /* CustomTable.swift */,
+			);
+			path = Tables;
 			sourceTree = "<group>";
 		};
 		9EB24E952227F0F5004B0C66 /* SignUp */ = {
@@ -452,6 +463,7 @@
 				9EB24E862227E3F4004B0C66 /* CustomForgotPasswordButton.swift in Sources */,
 				9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */,
 				9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */,
+				9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,
 				9EB24EAC2227F54C004B0C66 /* SignUpSelectProfileData.swift in Sources */,

@@ -19,6 +19,7 @@
 		9E4E076A222596C400F8ED17 /* environments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0769222596C400F8ED17 /* environments.json */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
 		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
+		9EA8F826222FD66E0021C435 /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F825222FD66E0021C435 /* DateTextField.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */; };
 		9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */; };
 		9EB24E842227D46A004B0C66 /* NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */; };
@@ -56,6 +57,7 @@
 		9E4E0769222596C400F8ED17 /* environments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = environments.json; sourceTree = "<group>"; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
 		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
+		9EA8F825222FD66E0021C435 /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateTextField.swift; path = FootNet/res/TextFields/DateTextField.swift; sourceTree = SOURCE_ROOT; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileCell.swift; sourceTree = "<group>"; };
 		9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileTableViewController.swift; sourceTree = "<group>"; };
 		9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoPasteTextField.swift; path = FootNet/Res/TextFields/NoPasteTextField.swift; sourceTree = SOURCE_ROOT; };
@@ -104,6 +106,7 @@
 				9EB3A6C6222D5BB2002F244E /* EmailTextField.swift */,
 				9EB3A6C8222D60DF002F244E /* PhoneTextField.swift */,
 				9EB3A6CA222D6101002F244E /* PasswordTextField.swift */,
+				9EA8F825222FD66E0021C435 /* DateTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,
+				9EA8F826222FD66E0021C435 /* DateTextField.swift in Sources */,
 				9EB24EAC2227F54C004B0C66 /* SignUpSelectProfileData.swift in Sources */,
 				9EB3A6C7222D5BB2002F244E /* EmailTextField.swift in Sources */,
 				9EB3A6BF222D1A35002F244E /* SignUpDetailTableViewController.swift in Sources */,

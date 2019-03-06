@@ -195,7 +195,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDC-qv-cJp" userLabel="Date Text Field" customClass="PasswordTextField" customModule="FootNet" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDC-qv-cJp" userLabel="Date Text Field" customClass="DateTextField" customModule="FootNet" customModuleProvider="target">
                                             <rect key="frame" x="16" y="8" width="343" height="27.5"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -211,7 +211,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateTextField" destination="WDC-qv-cJp" id="gB8-G7-cQs"/>
-                                    <outlet property="passwordTextField" destination="WDC-qv-cJp" id="j3g-Lo-qhh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -13,17 +13,21 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
 
     var signUpDeatilSectionsData = [[SignUpDetailModel]]()
     var profileType: ProfileType?
-    private var datePicker: UIDatePicker?
     var userProfileModel = UserProfileModel()
     let userProfileTags = UserProfileTags()
-
+    var dateIndexPath : IndexPath?
     
+    @IBOutlet var datePicker : UIDatePicker!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
         DDLogInfo("Load SignUp Detail View")
         signUpDeatilSectionsData = SignUpDetailData.getAllsignUpSectionsData(profileType!)
         createBackButton()
+        
+        //Date Picker
+        datePicker = UIDatePicker()
     }
     
     private func createBackButton() {
@@ -85,7 +89,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         case userProfileTags.sex:
             return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.sex, Text: userProfileModel.sex ?? "")
         case userProfileTags.birthday:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.birthday, Text: userProfileModel.birthday ?? "")
+            return dateTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.birthday, Text: userProfileModel.birthday ?? "")
         case userProfileTags.nationality:
             return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.nationality, Text: userProfileModel.nationality ?? "")
         case userProfileTags.location:
@@ -182,6 +186,22 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
+    //return date cell
+    func dateTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            cell.dateTextField.placeholder = placeholder
+            cell.dateTextField.tag = tag
+            cell.dateTextField.text = text
+            datePicker.datePickerMode = UIDatePicker.Mode.date
+            datePicker.addTarget(self, action: #selector(setDate(_sender:)), for: .valueChanged)
+            cell.dateTextField.inputView = datePicker
+            datePicker.timeZone = TimeZone.current
+            dateIndexPath = indexPath
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
     //convert date to string
     func dateToString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -265,5 +285,18 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         default:
             break
         }
+    }
+    
+    //date picker set date
+    @objc func setDate(_sender: UIDatePicker) {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let selectedDate: String = dateFormatter.string(from: _sender.date)
+        print("Selected value \(selectedDate)")
+        userProfileModel.birthday = selectedDate
+        if let indexPath = dateIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            cell.dateTextField.text = selectedDate
+        }
+        view.endEditing(true)
     }
 }

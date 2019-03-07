@@ -224,8 +224,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    
-    
     //convert date to string
     func dateToString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -244,10 +242,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             userProfileModel.name = text
         case userProfileTags.surname:
             userProfileModel.surname = text
-        case userProfileTags.sex:
-            userProfileModel.sex = text
-        case userProfileTags.birthday:
-            userProfileModel.birthday = text
         case userProfileTags.nationality:
             userProfileModel.nationality = text
         case userProfileTags.location:
@@ -330,7 +324,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             return sexArray[row]
             }
         return ""
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -353,5 +346,4 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             view.endEditing(true)
         }
     }
-    
 }

@@ -50,3 +50,7 @@
 "message_alert"="Volver atrás limpiará la información del formulario de registro";
 "yes_alert"="Sí";
 "no_alert"="No";
+
+//sex picker view
+"male_sexPicker"="Hombre";
+"female_sexPicker"="Mujer";

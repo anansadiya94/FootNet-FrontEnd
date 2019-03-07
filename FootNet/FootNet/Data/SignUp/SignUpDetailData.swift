@@ -12,6 +12,11 @@ import CocoaLumberjack
 
 class SignUpDetailData {
     
+    static func getAllsignUpSexsData() -> [String] {
+        let sexArray = [NSLocalizedString("male_sexPicker", comment: ""), NSLocalizedString("female_sexPicker", comment: "")]
+        return sexArray
+    }
+    
     static func getAllsignUpSectionsData(_ profileType: ProfileType) -> [[SignUpDetailModel]] {
 
         var signUpSectionsData = [[SignUpDetailModel]]()

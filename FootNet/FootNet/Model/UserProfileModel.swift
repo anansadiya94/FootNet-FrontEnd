@@ -88,7 +88,7 @@ class UserProfileModel {
         self.phone = ""
         self.password = ""
         self.repeatedPassword = ""
-        self.sex = ""
+        self.sex = NSLocalizedString("male_sexPicker", comment: "")
         self.birthday = "26/07/1994"
         self.nationality = ""
         self.location = ""

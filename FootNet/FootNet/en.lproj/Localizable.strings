@@ -50,3 +50,7 @@
 "message_alert"="Going back will clean the register form information";
 "yes_alert"="Yes";
 "no_alert"="No";
+
+//sex picker view
+"male_sexPicker"="Male";
+"female_sexPicker"="Female";

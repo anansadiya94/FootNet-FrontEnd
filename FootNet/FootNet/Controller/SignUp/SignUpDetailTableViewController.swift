@@ -18,8 +18,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     let userProfileTags = UserProfileTags()
     var dateIndexPath : IndexPath?
     var sexIndexPath : IndexPath?
-    
-    let sexArray = ["Male", "Female"]
+    var sexArray: [String] = []
     
     @IBOutlet var datePicker : UIDatePicker!
     @IBOutlet var sexPicker : UIPickerView!
@@ -29,6 +28,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         setBackground()
         DDLogInfo("Load SignUp Detail View")
         signUpDeatilSectionsData = SignUpDetailData.getAllsignUpSectionsData(profileType!)
+        sexArray = SignUpDetailData.getAllsignUpSexsData()
         createBackButton()
         
         //Date Picker
@@ -197,7 +197,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             cell.dateTextField.placeholder = placeholder
             cell.dateTextField.tag = tag
-            cell.dateTextField.text = text
             datePicker.datePickerMode = UIDatePicker.Mode.date
             datePicker.addTarget(self, action: #selector(setDate(_sender:)), for: .valueChanged)
             cell.dateTextField.inputView = datePicker
@@ -213,11 +212,9 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "sexSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             cell.sexTextField.placeholder = placeholder
             cell.sexTextField.tag = tag
-            cell.sexTextField.text = text
             sexPicker.delegate = self
             sexPicker.dataSource = self
             cell.sexTextField.inputView = sexPicker
-            cell.sexTextField.text = sexArray[0]
             sexIndexPath = indexPath
             return cell
         }

@@ -9,15 +9,20 @@
 import UIKit
 import CocoaLumberjack
 
-class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate {
+class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate,UIPickerViewDataSource {
+    
 
     var signUpDeatilSectionsData = [[SignUpDetailModel]]()
     var profileType: ProfileType?
     var userProfileModel = UserProfileModel()
     let userProfileTags = UserProfileTags()
     var dateIndexPath : IndexPath?
+    var sexIndexPath : IndexPath?
+    
+    let sexArray = ["Male", "Female"]
     
     @IBOutlet var datePicker : UIDatePicker!
+    @IBOutlet var sexPicker : UIPickerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +33,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         
         //Date Picker
         datePicker = UIDatePicker()
+        sexPicker = UIPickerView()
     }
     
     private func createBackButton() {
@@ -87,7 +93,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             
         //Section 2
         case userProfileTags.sex:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.sex, Text: userProfileModel.sex ?? "")
+            return sexTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.sex, Text: userProfileModel.sex ?? "")
         case userProfileTags.birthday:
             return dateTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.birthday, Text: userProfileModel.birthday ?? "")
         case userProfileTags.nationality:
@@ -202,6 +208,24 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
+    //return sex cell
+    func sexTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "sexSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            cell.sexTextField.placeholder = placeholder
+            cell.sexTextField.tag = tag
+            cell.sexTextField.text = text
+            sexPicker.delegate = self
+            sexPicker.dataSource = self
+            cell.sexTextField.inputView = sexPicker
+            cell.sexTextField.text = sexArray[0]
+            sexIndexPath = indexPath
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    
+    
     //convert date to string
     func dateToString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -299,4 +323,35 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         }
         view.endEditing(true)
     }
+    
+    //MARK:- PickerView Delegate
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (pickerView == sexPicker) {
+            return sexArray[row]
+            }
+        return ""
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if (pickerView == sexPicker) {
+            return sexArray.count
+        }
+        return 0
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if (pickerView == sexPicker) {
+            if let indexPath = sexIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+                cell.sexTextField.text = sexArray[row]
+            }
+            view.endEditing(true)
+        }
+    }
+    
 }

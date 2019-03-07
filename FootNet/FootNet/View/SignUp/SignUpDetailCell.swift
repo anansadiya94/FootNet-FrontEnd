@@ -15,6 +15,7 @@ class SignUpDetailCell: UITableViewCell {
     @IBOutlet weak var phoneTextField: PhoneTextField!
     @IBOutlet weak var passwordTextField: PasswordTextField!
     @IBOutlet weak var dateTextField: CustomTextField!
+    @IBOutlet weak var sexTextField: SexTextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()

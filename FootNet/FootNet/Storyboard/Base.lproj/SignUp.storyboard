@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="normalSignUpDetailCell" id="yKM-3j-FoJ" userLabel="NormalSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textFieldSignUpDetailCell" id="yKM-3j-FoJ" userLabel="TextFieldSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yKM-3j-FoJ" id="TWw-qd-nOg">
@@ -86,9 +86,6 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
-                                            <connections>
-                                                <action selector="customTextFieldEditingChanged:" destination="lll-bP-5A1" eventType="editingChanged" id="X42-uZ-uzN"/>
-                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>
@@ -99,103 +96,17 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="normalTextField" destination="NFh-np-UJo" id="Ewv-dF-qQE"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emailSignUpDetailCell" id="Rjw-Gm-bhQ" userLabel="EmailSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rjw-Gm-bhQ" id="Qpi-qm-wGm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oiQ-bY-Xfy" customClass="EmailTextField" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="8" width="343" height="28"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <action selector="emailTextFieldEditingChanged:" destination="lll-bP-5A1" eventType="editingDidEnd" id="gOl-LA-uZp"/>
-                                            </connections>
-                                        </textField>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="oiQ-bY-Xfy" firstAttribute="top" secondItem="Qpi-qm-wGm" secondAttribute="top" constant="8" id="3dr-Uu-H7A"/>
-                                        <constraint firstAttribute="trailing" secondItem="oiQ-bY-Xfy" secondAttribute="trailing" constant="16" id="PF1-4z-Q2S"/>
-                                        <constraint firstItem="oiQ-bY-Xfy" firstAttribute="leading" secondItem="Qpi-qm-wGm" secondAttribute="leading" constant="16" id="nVu-MK-zMG"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="oiQ-bY-Xfy" secondAttribute="bottom" constant="8" id="saT-Xm-adC"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="emailTextField" destination="oiQ-bY-Xfy" id="ldq-DY-XQb"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="phoneSignUpDetailCell" id="c8r-NM-fqZ" userLabel="PhoneSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c8r-NM-fqZ" id="FF5-GA-5gL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZD-Hw-GKt" userLabel="Phone Text Field" customClass="PhoneTextField" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="8" width="343" height="27.5"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <action selector="phoneTextFieldEditingChanged:" destination="lll-bP-5A1" eventType="editingDidEnd" id="3Pz-8J-usq"/>
-                                            </connections>
-                                        </textField>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="lZD-Hw-GKt" firstAttribute="leading" secondItem="FF5-GA-5gL" secondAttribute="leading" constant="16" id="BD9-Na-KO7"/>
-                                        <constraint firstAttribute="bottom" secondItem="lZD-Hw-GKt" secondAttribute="bottom" constant="8" id="EsH-bf-Wh4"/>
-                                        <constraint firstItem="lZD-Hw-GKt" firstAttribute="top" secondItem="FF5-GA-5gL" secondAttribute="top" constant="8" id="NFe-9m-y36"/>
-                                        <constraint firstAttribute="trailing" secondItem="lZD-Hw-GKt" secondAttribute="trailing" constant="16" id="iV7-2Q-pZC"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="phoneTextField" destination="lZD-Hw-GKt" id="l7X-hu-KeV"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="passwordSignUpDetailCell" id="Eue-yG-0yA" userLabel="PasswordSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="160" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eue-yG-0yA" id="COS-jX-10C">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-Es-va5" userLabel="Password Text Field" customClass="PasswordTextField" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="8" width="343" height="27.5"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <action selector="passwordTextFieldEditingChanged:" destination="lll-bP-5A1" eventType="editingDidEnd" id="55d-oB-pfM"/>
-                                            </connections>
-                                        </textField>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="MqP-Es-va5" firstAttribute="leading" secondItem="COS-jX-10C" secondAttribute="leading" constant="16" id="8iq-d1-oZ7"/>
-                                        <constraint firstAttribute="trailing" secondItem="MqP-Es-va5" secondAttribute="trailing" constant="16" id="mWP-YP-opx"/>
-                                        <constraint firstAttribute="bottom" secondItem="MqP-Es-va5" secondAttribute="bottom" constant="8" id="u2R-z5-cJO"/>
-                                        <constraint firstItem="MqP-Es-va5" firstAttribute="top" secondItem="COS-jX-10C" secondAttribute="top" constant="8" id="xs6-03-Nek"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="passwordTextField" destination="MqP-Es-va5" id="PrU-ST-o3T"/>
+                                    <outlet property="normalTextField" destination="NFh-np-UJo" id="wsX-UO-gIr"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dateSignUpDetailCell" id="FcT-oe-mRY" userLabel="DateSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="204" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FcT-oe-mRY" id="HuU-Zn-Veq">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDC-qv-cJp" userLabel="Date Text Field" customClass="DateTextField" customModule="FootNet" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDC-qv-cJp" userLabel="Date Text Field" customClass="CustomTextField" customModule="FootNet" customModuleProvider="target">
                                             <rect key="frame" x="16" y="8" width="343" height="27.5"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -210,17 +121,17 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dateTextField" destination="WDC-qv-cJp" id="gB8-G7-cQs"/>
+                                    <outlet property="dateTextField" destination="WDC-qv-cJp" id="Fmj-ID-JyE"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pickerViewSignUpDetailCell" id="UAr-uO-gCg" userLabel="SexSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="248" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pickerViewSignUpDetailCell" id="UAr-uO-gCg" userLabel="PickerViewSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UAr-uO-gCg" id="X68-0j-8ZK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="picker view" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MMh-2A-r8Y" userLabel="Date Text Field" customClass="SexTextField" customModule="FootNet" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="picker view" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MMh-2A-r8Y" userLabel="Date Text Field" customClass="CustomTextField" customModule="FootNet" customModuleProvider="target">
                                             <rect key="frame" x="16" y="8" width="343" height="27.5"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -235,7 +146,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="pickerViewTextField" destination="MMh-2A-r8Y" id="9WD-0e-8ay"/>
+                                    <outlet property="pickerViewTextField" destination="MMh-2A-r8Y" id="f55-yB-MVe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

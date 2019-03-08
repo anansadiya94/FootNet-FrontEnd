@@ -12,7 +12,7 @@ import CocoaLumberjack
 class LandingController: BaseViewController, UITextFieldDelegate {
 
     //IBOutlets
-    @IBOutlet weak var textFieldEmail: EmailTextField!
+    @IBOutlet weak var textFieldEmail: CustomTextField!
     @IBOutlet weak var textFieldPassword: CustomTextField!
     @IBOutlet weak var buttonForgotPassword: CustomButton!
     @IBOutlet weak var buttonSignIn: CustomButton!
@@ -29,8 +29,9 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     private func configureOutlets() {
         //placeholders
         textFieldEmail.placeholder = NSLocalizedString("email_placeholder", comment: "")
+        textFieldEmail.keyboardType = .emailAddress
         textFieldPassword.placeholder = NSLocalizedString("password_placeholder", comment: "")
-        
+        textFieldPassword.isSecureTextEntry = true
         //buttons
         let forgotPasswordTitle = NSLocalizedString("forgotPassword_button", comment: "")
         buttonForgotPassword.setTitle(forgotPasswordTitle, for: .normal)

@@ -97,13 +97,13 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         case userProfileTags.surname:
             return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.surname, Text: userProfileModel.surname ?? "")
         case userProfileTags.phone:
-            return phoneTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.phone, Text: userProfileModel.phone)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.phone, Text: userProfileModel.phone)
         case userProfileTags.email:
-            return emailTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.email, Text: userProfileModel.email)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.email, Text: userProfileModel.email)
         case userProfileTags.password:
-            return passwordTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.password, Text: userProfileModel.password)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.password, Text: userProfileModel.password)
         case userProfileTags.repeatedPassword:
-            return passwordTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.repeatedPassword, Text: userProfileModel.repeatedPassword)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.repeatedPassword, Text: userProfileModel.repeatedPassword)
             
         //Section 2
         case userProfileTags.sex:
@@ -160,43 +160,28 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //return normal cell
     func normalTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "normalSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.normalTextField.placeholder = placeholder
-            cell.normalTextField.tag = tag
-            cell.normalTextField.text = text
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    //return email cell
-    func emailTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "emailSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.emailTextField.placeholder = placeholder
-            cell.emailTextField.tag = tag
-            cell.emailTextField.text = text
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    //return phone cell
-    func phoneTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "phoneSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.phoneTextField.placeholder = placeholder
-            cell.phoneTextField.tag = tag
-            cell.phoneTextField.text = text
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    //return password cell
-    func passwordTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "passwordSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.passwordTextField.placeholder = placeholder
-            cell.passwordTextField.tag = tag
-            cell.passwordTextField.text = text
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textFieldSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            switch tag {
+            case userProfileTags.phone:
+                cell.normalTextField.placeholder = placeholder
+                cell.normalTextField.tag = tag
+                cell.normalTextField.text = text
+                cell.normalTextField.keyboardType = .phonePad
+            case userProfileTags.email:
+                cell.normalTextField.placeholder = placeholder
+                cell.normalTextField.tag = tag
+                cell.normalTextField.text = text
+                cell.normalTextField.keyboardType = .emailAddress
+            case userProfileTags.password, userProfileTags.repeatedPassword:
+                cell.normalTextField.placeholder = placeholder
+                cell.normalTextField.tag = tag
+                cell.normalTextField.text = text
+                cell.normalTextField.isSecureTextEntry = true
+            default:
+                cell.normalTextField.placeholder = placeholder
+                cell.normalTextField.tag = tag
+                cell.normalTextField.text = text
+            }
             return cell
         }
         return UITableViewCell()
@@ -295,6 +280,14 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             userProfileModel.name = text
         case userProfileTags.surname:
             userProfileModel.surname = text
+        case userProfileTags.phone:
+            userProfileModel.phone = text
+        case userProfileTags.email:
+            userProfileModel.email = text
+        case userProfileTags.password:
+            userProfileModel.password = text
+        case userProfileTags.repeatedPassword:
+            userProfileModel.repeatedPassword = text
         case userProfileTags.weight:
             userProfileModel.weight = Double(text)
         case userProfileTags.height:
@@ -305,44 +298,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             userProfileModel.bio = text
         case userProfileTags.record:
             userProfileModel.record = text
-        default:
-            break
-        }
-    }
-    
-    @IBAction func emailTextFieldEditingChanged(_ sender: EmailTextField) {
-        guard let text = sender.text else {
-            return
-        }
-        switch sender.tag {
-        case userProfileTags.email:
-            userProfileModel.email = text
-        default:
-            break
-        }
-    }
-    
-    @IBAction func phoneTextFieldEditingChanged(_ sender: PhoneTextField) {
-        guard let text = sender.text else {
-            return
-        }
-        switch sender.tag {
-        case userProfileTags.phone:
-            userProfileModel.phone = text
-        default:
-            break
-        }
-    }
-    
-    @IBAction func passwordTextFieldEditingChanged(_ sender: PasswordTextField) {
-        guard let text = sender.text else {
-            return
-        }
-        switch sender.tag {
-        case userProfileTags.password:
-            userProfileModel.password = text
-        case userProfileTags.repeatedPassword:
-            userProfileModel.repeatedPassword = text
         default:
             break
         }

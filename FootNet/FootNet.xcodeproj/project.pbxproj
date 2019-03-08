@@ -20,7 +20,6 @@
 		9E4FA3642231A2FA00094509 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA3632231A2FA00094509 /* Constants.swift */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
 		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
-		9EA8F826222FD66E0021C435 /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F825222FD66E0021C435 /* DateTextField.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */; };
 		9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */; };
 		9EB24E842227D46A004B0C66 /* NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */; };
@@ -33,12 +32,8 @@
 		9EB3A6C1222D1B22002F244E /* SignUpDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3A6C0222D1B22002F244E /* SignUpDetailModel.swift */; };
 		9EB3A6C3222D1B80002F244E /* SignUpDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3A6C2222D1B80002F244E /* SignUpDetailCell.swift */; };
 		9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3A6C4222D2ACF002F244E /* SignUpDetailData.swift */; };
-		9EB3A6C7222D5BB2002F244E /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3A6C6222D5BB2002F244E /* EmailTextField.swift */; };
-		9EB3A6C9222D60DF002F244E /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3A6C8222D60DF002F244E /* PhoneTextField.swift */; };
-		9EB3A6CB222D6101002F244E /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3A6CA222D6101002F244E /* PasswordTextField.swift */; };
 		9EB3A6CD222D7909002F244E /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3A6CC222D7909002F244E /* UserProfileModel.swift */; };
 		9EC925562226E47B00B0E694 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EC925582226E47B00B0E694 /* Localizable.strings */; };
-		9EEC378E22310A2300BF06B9 /* SexTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC378D22310A2300BF06B9 /* SexTextField.swift */; };
 		BDD91548CA55E0379DB644C2 /* Pods_FootNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ADF54F56DB766954955BDE /* Pods_FootNet.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +55,6 @@
 		9E4FA3632231A2FA00094509 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
 		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
-		9EA8F825222FD66E0021C435 /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateTextField.swift; path = FootNet/res/TextFields/DateTextField.swift; sourceTree = SOURCE_ROOT; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileCell.swift; sourceTree = "<group>"; };
 		9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileTableViewController.swift; sourceTree = "<group>"; };
 		9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoPasteTextField.swift; path = FootNet/Res/TextFields/NoPasteTextField.swift; sourceTree = SOURCE_ROOT; };
@@ -76,9 +70,6 @@
 		9EB3A6C0222D1B22002F244E /* SignUpDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailModel.swift; sourceTree = "<group>"; };
 		9EB3A6C2222D1B80002F244E /* SignUpDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailCell.swift; sourceTree = "<group>"; };
 		9EB3A6C4222D2ACF002F244E /* SignUpDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailData.swift; sourceTree = "<group>"; };
-		9EB3A6C6222D5BB2002F244E /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmailTextField.swift; path = FootNet/res/TextFields/EmailTextField.swift; sourceTree = SOURCE_ROOT; };
-		9EB3A6C8222D60DF002F244E /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneTextField.swift; path = FootNet/res/TextFields/PhoneTextField.swift; sourceTree = SOURCE_ROOT; };
-		9EB3A6CA222D6101002F244E /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordTextField.swift; path = FootNet/res/TextFields/PasswordTextField.swift; sourceTree = SOURCE_ROOT; };
 		9EB3A6CC222D7909002F244E /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
 		9EC925512226E43A00B0E694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Landing.strings; sourceTree = "<group>"; };
 		9EC925522226E43C00B0E694 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Landing.strings; sourceTree = "<group>"; };
@@ -86,7 +77,6 @@
 		9EC925572226E47B00B0E694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EC925592226E47D00B0E694 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EC9255A2226E47E00B0E694 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9EEC378D22310A2300BF06B9 /* SexTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexTextField.swift; sourceTree = "<group>"; };
 		D1025D132B5E76E3C12FEF49 /* Pods-FootNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootNet.debug.xcconfig"; path = "Target Support Files/Pods-FootNet/Pods-FootNet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,11 +97,6 @@
 			children = (
 				9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */,
 				9E5456512226B8B7002A55F2 /* CustomTextField.swift */,
-				9EB3A6C6222D5BB2002F244E /* EmailTextField.swift */,
-				9EB3A6C8222D60DF002F244E /* PhoneTextField.swift */,
-				9EB3A6CA222D6101002F244E /* PasswordTextField.swift */,
-				9EA8F825222FD66E0021C435 /* DateTextField.swift */,
-				9EEC378D22310A2300BF06B9 /* SexTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -463,10 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */,
-				9EB3A6C9222D60DF002F244E /* PhoneTextField.swift in Sources */,
-				9EB3A6CB222D6101002F244E /* PasswordTextField.swift in Sources */,
 				9E4E074E222593B200F8ED17 /* LandingController.swift in Sources */,
-				9EEC378E22310A2300BF06B9 /* SexTextField.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
 				9E4FA3642231A2FA00094509 /* Constants.swift in Sources */,
@@ -477,9 +459,7 @@
 				9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,
-				9EA8F826222FD66E0021C435 /* DateTextField.swift in Sources */,
 				9EB24EAC2227F54C004B0C66 /* SignUpSelectProfileData.swift in Sources */,
-				9EB3A6C7222D5BB2002F244E /* EmailTextField.swift in Sources */,
 				9EB3A6BF222D1A35002F244E /* SignUpDetailTableViewController.swift in Sources */,
 				9EB24EA92227F4B5004B0C66 /* CustomLabel.swift in Sources */,
 				9EB3A6C1222D1B22002F244E /* SignUpDetailModel.swift in Sources */,

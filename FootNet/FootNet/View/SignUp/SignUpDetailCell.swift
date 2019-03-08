@@ -11,9 +11,6 @@ import UIKit
 class SignUpDetailCell: UITableViewCell {
     
     @IBOutlet weak var normalTextField: CustomTextField!
-    @IBOutlet weak var emailTextField: EmailTextField!
-    @IBOutlet weak var phoneTextField: PhoneTextField!
-    @IBOutlet weak var passwordTextField: PasswordTextField!
     @IBOutlet weak var dateTextField: CustomTextField!
     @IBOutlet weak var pickerViewTextField: CustomTextField!
     

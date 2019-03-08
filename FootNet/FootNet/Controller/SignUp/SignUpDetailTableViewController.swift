@@ -10,30 +10,44 @@ import UIKit
 import CocoaLumberjack
 
 class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate,UIPickerViewDataSource {
-    
 
     var signUpDeatilSectionsData = [[SignUpDetailModel]]()
     var profileType: ProfileType?
     var userProfileModel = UserProfileModel()
     let userProfileTags = UserProfileTags()
     var dateIndexPath : IndexPath?
-    var sexIndexPath : IndexPath?
-    var sexArray: [String] = []
+    var sexPickerViewIndexPath : IndexPath?
+    var nationalityPickerViewIndexPath : IndexPath?
+    var locationPickerViewIndexPath : IndexPath?
+    var actualClubPickerViewIndexPath : IndexPath?
+    var favoritePositionPickerViewIndexPath : IndexPath?
+    var preferredPositionPickerViewIndexPath : IndexPath?
     
     @IBOutlet var datePicker : UIDatePicker!
-    @IBOutlet var sexPicker : UIPickerView!
+    @IBOutlet var sexPickerView : UIPickerView!
+    @IBOutlet var nationalityPickerView : UIPickerView!
+    @IBOutlet var locationPickerView : UIPickerView!
+    @IBOutlet var actualClubPickerView : UIPickerView!
+    @IBOutlet var favoritePositionPickerView : UIPickerView!
+    @IBOutlet var preferredPositionPickerView : UIPickerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
         DDLogInfo("Load SignUp Detail View")
         signUpDeatilSectionsData = SignUpDetailData.getAllsignUpSectionsData(profileType!)
-        sexArray = SignUpDetailData.getAllsignUpSexsData()
         createBackButton()
         
         //Date Picker
         datePicker = UIDatePicker()
-        sexPicker = UIPickerView()
+        
+        //Picker View
+        sexPickerView = UIPickerView()
+        nationalityPickerView = UIPickerView()
+        locationPickerView = UIPickerView()
+        actualClubPickerView = UIPickerView()
+        favoritePositionPickerView = UIPickerView()
+        preferredPositionPickerView = UIPickerView()
     }
     
     private func createBackButton() {
@@ -93,45 +107,42 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             
         //Section 2
         case userProfileTags.sex:
-            return sexTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.sex, Text: userProfileModel.sex ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.sex, Text: userProfileModel.sex ?? "")
         case userProfileTags.birthday:
             return dateTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.birthday, Text: userProfileModel.birthday ?? "")
         case userProfileTags.nationality:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.nationality, Text: userProfileModel.nationality ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.nationality, Text: userProfileModel.nationality ?? "")
         case userProfileTags.location:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.location, Text: userProfileModel.location)
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.location, Text: userProfileModel.location)
             
-        //Sesction 3
-        case userProfileTags.favoritePosition:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.favoritePosition, Text: userProfileModel.favoritePosition ?? "")
-        case userProfileTags.preferredPositions:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.preferredPositions, Text: userProfileModel.preferredPositions ?? "")
-        case userProfileTags.weight:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.weight, Text: "\(String(describing: userProfileModel.weight))")
-        case userProfileTags.height:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.height, Text: "\(String(describing: userProfileModel.height))")
-            
-        //Section 4
+        //Section 3
         case userProfileTags.actualClub:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.actualClub, Text: userProfileModel.actualClub ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.actualClub, Text: userProfileModel.actualClub ?? "")
         case userProfileTags.photo:
             return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.photo, Text: userProfileModel.photo)
         case userProfileTags.bio:
             return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.bio, Text: userProfileModel.bio)
         case userProfileTags.record:
             return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.record, Text: userProfileModel.record)
-  
+            
+        //Sesction 4
+        case userProfileTags.favoritePosition:
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.favoritePosition, Text: userProfileModel.favoritePosition ?? "")
+        case userProfileTags.preferredPositions:
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.preferredPositions, Text: userProfileModel.preferredPositions ?? "")
+        case userProfileTags.weight:
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.weight, Text: "\(String(describing: userProfileModel.weight))")
+        case userProfileTags.height:
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.height, Text: "\(String(describing: userProfileModel.height))")
         default:
             break
         }
-        
         return UITableViewCell()
     }
     
     //sections titles
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var sectionHeader = ""
-        
         switch section {
         case 0:
             sectionHeader = "1"
@@ -142,9 +153,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         case 3:
             sectionHeader = "4"
         default:
-            sectionHeader = ""
+            break
         }
-        
         return sectionHeader
     }
     
@@ -207,15 +217,61 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //return sex cell
-    func sexTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "sexSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.sexTextField.placeholder = placeholder
-            cell.sexTextField.tag = tag
-            sexPicker.delegate = self
-            sexPicker.dataSource = self
-            cell.sexTextField.inputView = sexPicker
-            sexIndexPath = indexPath
+    //return picker view cell
+    func pickerViewTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "pickerViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            switch tag {
+            case userProfileTags.sex:
+                cell.pickerViewTextField.placeholder = placeholder
+                cell.pickerViewTextField.tag = tag
+                cell.pickerViewTextField.inputView = sexPickerView
+                sexPickerView.tag = tag
+                sexPickerView.delegate = self
+                sexPickerView.dataSource = self
+                sexPickerViewIndexPath = indexPath
+            case userProfileTags.nationality:
+                cell.pickerViewTextField.placeholder = placeholder
+                cell.pickerViewTextField.tag = tag
+                cell.pickerViewTextField.inputView = nationalityPickerView
+                nationalityPickerView.tag = tag
+                nationalityPickerView.delegate = self
+                nationalityPickerView.dataSource = self
+                nationalityPickerViewIndexPath = indexPath
+            case userProfileTags.location:
+                cell.pickerViewTextField.placeholder = placeholder
+                cell.pickerViewTextField.tag = tag
+                cell.pickerViewTextField.inputView = locationPickerView
+                locationPickerView.tag = tag
+                locationPickerView.delegate = self
+                locationPickerView.dataSource = self
+                locationPickerViewIndexPath = indexPath
+            case userProfileTags.actualClub:
+                cell.pickerViewTextField.placeholder = placeholder
+                cell.pickerViewTextField.tag = tag
+                cell.pickerViewTextField.inputView = actualClubPickerView
+                actualClubPickerView.tag = tag
+                actualClubPickerView.delegate = self
+                actualClubPickerView.dataSource = self
+                actualClubPickerViewIndexPath = indexPath
+            case userProfileTags.favoritePosition:
+                cell.pickerViewTextField.placeholder = placeholder
+                cell.pickerViewTextField.tag = tag
+                cell.pickerViewTextField.inputView = favoritePositionPickerView
+                favoritePositionPickerView.tag = tag
+                favoritePositionPickerView.delegate = self
+                favoritePositionPickerView.dataSource = self
+                favoritePositionPickerViewIndexPath = indexPath
+            case userProfileTags.preferredPositions:
+                cell.pickerViewTextField.placeholder = placeholder
+                cell.pickerViewTextField.tag = tag
+                cell.pickerViewTextField.inputView = preferredPositionPickerView
+                preferredPositionPickerView.tag = tag
+                preferredPositionPickerView.delegate = self
+                preferredPositionPickerView.dataSource = self
+                preferredPositionPickerViewIndexPath = indexPath
+            default:
+                break
+            }
             return cell
         }
         return UITableViewCell()
@@ -239,20 +295,10 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             userProfileModel.name = text
         case userProfileTags.surname:
             userProfileModel.surname = text
-        case userProfileTags.nationality:
-            userProfileModel.nationality = text
-        case userProfileTags.location:
-            userProfileModel.location = text
-        case userProfileTags.favoritePosition:
-            userProfileModel.favoritePosition = text
-        case userProfileTags.preferredPositions:
-            userProfileModel.preferredPositions = text
         case userProfileTags.weight:
             userProfileModel.weight = Double(text)
         case userProfileTags.height:
             userProfileModel.height = Double(text)
-        case userProfileTags.actualClub:
-            userProfileModel.actualClub = text
         case userProfileTags.photo:
             userProfileModel.photo = text
         case userProfileTags.bio:
@@ -317,15 +363,35 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //MARK:- PickerView Delegate
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if (pickerView == sexPicker) {
-            return sexArray[row]
-            }
+        if (pickerView.tag == userProfileTags.sex) {
+            return Constants.sexLocalized[row]
+        } else if (pickerView.tag == userProfileTags.nationality) {
+            return Constants.nationalityLocalized[row]
+        } else if (pickerView.tag == userProfileTags.location) {
+            return Constants.locationLocalized[row]
+        } else if (pickerView.tag == userProfileTags.actualClub) {
+            return Constants.actualClubLocalized[row]
+        } else if (pickerView.tag == userProfileTags.favoritePosition) {
+            return Constants.favoritePositionLocalized[row]
+        } else if (pickerView.tag == userProfileTags.preferredPositions) {
+            return Constants.preferredPositionLocalized[row]
+        }
         return ""
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if (pickerView == sexPicker) {
-            return sexArray.count
+        if (pickerView.tag == userProfileTags.sex) {
+            return Constants.sexLocalized.count
+        } else if (pickerView.tag == userProfileTags.nationality) {
+            return Constants.nationalityLocalized.count
+        } else if (pickerView.tag == userProfileTags.location) {
+            return Constants.locationLocalized.count
+        } else if (pickerView.tag == userProfileTags.actualClub) {
+            return Constants.actualClubLocalized.count
+        } else if (pickerView.tag == userProfileTags.favoritePosition) {
+            return Constants.favoritePositionLocalized.count
+        } else if (pickerView.tag == userProfileTags.preferredPositions) {
+            return Constants.preferredPositionLocalized.count
         }
         return 0
     }
@@ -335,12 +401,31 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        if (pickerView == sexPicker) {
-            if let indexPath = sexIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
-                cell.sexTextField.text = sexArray[row]
+        if (pickerView.tag == userProfileTags.sex) {
+            if let indexPath = sexPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+                cell.pickerViewTextField.text = Constants.sexLocalized[row]
             }
-            view.endEditing(true)
+        } else if (pickerView.tag == userProfileTags.nationality) {
+            if let indexPath = nationalityPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+                cell.pickerViewTextField.text = Constants.nationalityLocalized[row]
+            }
+        } else if (pickerView.tag == userProfileTags.location) {
+            if let indexPath = locationPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+                cell.pickerViewTextField.text = Constants.locationLocalized[row]
+            }
+        } else if (pickerView.tag == userProfileTags.actualClub) {
+            if let indexPath = actualClubPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+                cell.pickerViewTextField.text = Constants.actualClubLocalized[row]
+            }
+        } else if (pickerView.tag == userProfileTags.favoritePosition) {
+            if let indexPath = favoritePositionPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+                cell.pickerViewTextField.text = Constants.favoritePositionLocalized[row]
+            }
+        } else if (pickerView.tag == userProfileTags.preferredPositions) {
+            if let indexPath = preferredPositionPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+                cell.pickerViewTextField.text = Constants.preferredPositionLocalized[row]
+            }
         }
+        view.endEditing(true)
     }
 }

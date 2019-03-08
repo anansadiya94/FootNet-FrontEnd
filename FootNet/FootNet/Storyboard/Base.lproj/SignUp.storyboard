@@ -213,14 +213,14 @@
                                     <outlet property="dateTextField" destination="WDC-qv-cJp" id="gB8-G7-cQs"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sexSignUpDetailCell" id="UAr-uO-gCg" userLabel="SexSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pickerViewSignUpDetailCell" id="UAr-uO-gCg" userLabel="SexSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="248" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UAr-uO-gCg" id="X68-0j-8ZK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="sex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MMh-2A-r8Y" userLabel="Date Text Field" customClass="SexTextField" customModule="FootNet" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="picker view" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MMh-2A-r8Y" userLabel="Date Text Field" customClass="SexTextField" customModule="FootNet" customModuleProvider="target">
                                             <rect key="frame" x="16" y="8" width="343" height="27.5"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -235,7 +235,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="sexTextField" destination="MMh-2A-r8Y" id="Dfy-x3-Gvp"/>
+                                    <outlet property="pickerViewTextField" destination="MMh-2A-r8Y" id="9WD-0e-8ay"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

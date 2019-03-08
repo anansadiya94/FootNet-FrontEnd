@@ -17,6 +17,7 @@
 		9E4E0753222593B300F8ED17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0752222593B300F8ED17 /* Assets.xcassets */; };
 		9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E07662225968700F8ED17 /* UIColorExtension.swift */; };
 		9E4E076A222596C400F8ED17 /* environments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0769222596C400F8ED17 /* environments.json */; };
+		9E4FA3642231A2FA00094509 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA3632231A2FA00094509 /* Constants.swift */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
 		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
 		9EA8F826222FD66E0021C435 /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F825222FD66E0021C435 /* DateTextField.swift */; };
@@ -56,6 +57,7 @@
 		9E4E0757222593B300F8ED17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E4E07662225968700F8ED17 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9E4E0769222596C400F8ED17 /* environments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = environments.json; sourceTree = "<group>"; };
+		9E4FA3632231A2FA00094509 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
 		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
 		9EA8F825222FD66E0021C435 /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateTextField.swift; path = FootNet/res/TextFields/DateTextField.swift; sourceTree = SOURCE_ROOT; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				9EB24EAA2227F542004B0C66 /* SignUp */,
+				9E4FA3632231A2FA00094509 /* Constants.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				9EEC378E22310A2300BF06B9 /* SexTextField.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
+				9E4FA3642231A2FA00094509 /* Constants.swift in Sources */,
 				9EB24E842227D46A004B0C66 /* NoPasteTextField.swift in Sources */,
 				9EB24E862227E3F4004B0C66 /* CustomForgotPasswordButton.swift in Sources */,
 				9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */,

@@ -52,5 +52,30 @@
 "no_alert"="No";
 
 //sex picker view
-"male_sexPicker"="Male";
-"female_sexPicker"="Female";
+"male"="Male";
+"female"="Female";
+
+//nationality picker view
+"ES"="Spain";
+"IT"="Italy";
+"FR"="France";
+
+//location picker vew
+"barcelona"="Barcelona";
+"santcugat"="Sant Cugat";
+"sabadell"="Sabadell";
+
+//actual club picker vew
+"ud_parc"="UD PARC";
+"atc"="Hospitalense";
+"fcb"="FC Barcleona";
+
+//favorite position picker vew
+"del"="Delantera";
+"por"="Portero";
+"def"="Defensa";
+
+//preferred position picker vew
+"del"="Delantera";
+"por"="Portero";
+"def"="Defensa";

@@ -83,22 +83,22 @@ class UserProfileModel {
     }
     
     init() {
-        self.name = ""
-        self.email = ""
-        self.phone = ""
-        self.password = ""
-        self.repeatedPassword = ""
-        self.sex = NSLocalizedString("male_sexPicker", comment: "")
-        self.birthday = "26/07/1994"
-        self.nationality = ""
-        self.location = ""
-        self.actualClub = ""
-        self.photo = ""
-        self.bio = ""
-        self.record = ""
-        self.favoritePosition = ""
-        self.preferredPositions = ""
-        self.weight = ""
-        self.height = ""
+//        self.name = ""
+//        self.email = ""
+//        self.phone = ""
+//        self.password = ""
+//        self.repeatedPassword = ""
+//        self.sex = NSLocalizedString("male_sexPicker", comment: "")
+//        self.birthday = "26/07/1994"
+//        self.nationality = ""
+//        self.location = ""
+//        self.actualClub = ""
+//        self.photo = ""
+//        self.bio = ""
+//        self.record = ""
+//        self.favoritePosition = ""
+//        self.preferredPositions = ""
+//        self.weight = ""
+//        self.height = ""
     }
 }

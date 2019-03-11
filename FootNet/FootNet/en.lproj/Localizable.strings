@@ -44,7 +44,10 @@
 "signUp_record"="Record";
 
 //back button
-"back_buttom"="Back";
+"back_button"="Back";
+
+//done button
+"done_button"="Done";
 
 //back alert
 "title_alert"="Are you sure you want to go back?";

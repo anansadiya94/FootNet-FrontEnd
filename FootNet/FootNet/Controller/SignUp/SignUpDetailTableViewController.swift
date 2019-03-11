@@ -9,7 +9,7 @@
 import UIKit
 import CocoaLumberjack
 
-class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
     var signUpDeatilSectionsData = [[SignUpDetailModel]]()
     var profileType: ProfileType?
@@ -45,6 +45,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         DDLogInfo("Load SignUp Detail View")
         signUpDeatilSectionsData = SignUpDetailData.getAllsignUpSectionsData(profileType!)
         createBackButton()
+        createNextButton()
         
         //Date Picker
         datePicker = UIDatePicker()
@@ -61,14 +62,41 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         
         //Image View Picker
         imagePicker.delegate = self
+        
+        //Default image
         chosenImage = #imageLiteral(resourceName: "defaultProfilePhoto")
     }
     
     private func createBackButton() {
         self.navigationItem.hidesBackButton = true
-        let buttonTitle = NSLocalizedString("back_buttom", comment: "")
+        let buttonTitle = "back_button".localize()
         let newBackButton = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
+    }
+    
+    private func createNextButton() {
+        let buttonTitle = "done_button".localize()
+        let rightBarButtonItem = UIBarButtonItem.init(title: buttonTitle, style: .done, target: self, action: #selector(SignUpDetailTableViewController.nextTapped(sender:)))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        
+    }
+    
+    @objc private func nextTapped(sender: UIBarButtonItem) {
+        
+        let alertTitle = NSLocalizedString("title_alert", comment: "")
+        let alertMessage = NSLocalizedString("message_alert", comment: "")
+        let alertYesTitle = NSLocalizedString("yes_alert", comment: "")
+        let alertNoTitle =  NSLocalizedString("no_alert", comment: "")
+        // Create alert
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        //add yes action
+        alert.addAction(UIAlertAction(title: alertYesTitle, style: .default, handler: { action in
+            _ = self.navigationController?.popViewController(animated: true)
+        }))
+        //add no action
+        alert.addAction(UIAlertAction(title: alertNoTitle, style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+        
     }
     
     @objc func back(sender: UIBarButtonItem) {
@@ -97,12 +125,9 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return signUpDeatilSectionsData[section].count
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath == imagePickerViewIndexPath {
-//            return 200
-//        }
-//        return UITableView.automaticDimension
-//    }
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellType = signUpDeatilSectionsData[indexPath.section][indexPath.row].tag
@@ -110,47 +135,47 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         switch cellType {
         //Section1
         case userProfileTags.name:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.name, Text: userProfileModel.name)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.name)
         case userProfileTags.surname:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.surname, Text: userProfileModel.surname ?? "")
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.surname)
         case userProfileTags.phone:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.phone, Text: userProfileModel.phone)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.phone)
         case userProfileTags.email:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.email, Text: userProfileModel.email)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.email)
         case userProfileTags.password:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.password, Text: userProfileModel.password)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.password)
         case userProfileTags.repeatedPassword:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.repeatedPassword, Text: userProfileModel.repeatedPassword)
+            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.repeatedPassword)
             
         //Section 2
         case userProfileTags.sex:
-            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.sex, Text: userProfileModel.sex ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.sex)
         case userProfileTags.birthday:
-            return dateTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.birthday, Text: userProfileModel.birthday ?? "")
+            return dateTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.birthday)
         case userProfileTags.nationality:
-            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.nationality, Text: userProfileModel.nationality ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.nationality)
         case userProfileTags.location:
-            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.location, Text: userProfileModel.location)
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.location)
             
         //Section 3
         case userProfileTags.actualClub:
-            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.actualClub, Text: userProfileModel.actualClub ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.actualClub)
         case userProfileTags.photo:
-            return imageViewCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.photo, Text: userProfileModel.photo)
+            return imageViewCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.photo)
         case userProfileTags.bio:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.bio, Text: userProfileModel.bio)
+            return textViewCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.bio)
         case userProfileTags.record:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.record, Text: userProfileModel.record)
+            return textViewCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.record)
             
         //Sesction 4
         case userProfileTags.favoritePosition:
-            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.favoritePosition, Text: userProfileModel.favoritePosition ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.favoritePosition)
         case userProfileTags.preferredPositions:
-            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.preferredPositions, Text: userProfileModel.preferredPositions ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.preferredPositions)
         case userProfileTags.weight:
-            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.weight, Text: userProfileModel.weight ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.weight)
         case userProfileTags.height:
-            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.height, Text: userProfileModel.height ?? "")
+            return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.height)
         default:
             break
         }
@@ -176,34 +201,38 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     //return normal cell
-    func normalTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+    func normalTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textFieldSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             switch tag {
             case userProfileTags.phone:
                 cell.normalTextField.placeholder = placeholder
                 cell.normalTextField.tag = tag
-                cell.normalTextField.text = text
+                
+                cell.normalTextField.text = userProfileModel.phone
+//                if userProfileModel.name != nil {
+//                    cell.normalTextField.text = userProfileModel.name
+//                }
                 cell.normalTextField.keyboardType = .phonePad
                 cell.normalTextField.clearButtonMode = .whileEditing
                 cell.normalTextField.delegate = self
             case userProfileTags.email:
                 cell.normalTextField.placeholder = placeholder
                 cell.normalTextField.tag = tag
-                cell.normalTextField.text = text
+                cell.normalTextField.text = userProfileModel.email
                 cell.normalTextField.keyboardType = .emailAddress
                 cell.normalTextField.clearButtonMode = .whileEditing
                 cell.normalTextField.delegate = self
             case userProfileTags.password, userProfileTags.repeatedPassword:
                 cell.normalTextField.placeholder = placeholder
                 cell.normalTextField.tag = tag
-                cell.normalTextField.text = text
+                //cell.normalTextField.text = text
                 cell.normalTextField.isSecureTextEntry = true
                 cell.normalTextField.clearButtonMode = .whileEditing
                 cell.normalTextField.delegate = self
             default:
                 cell.normalTextField.placeholder = placeholder
                 cell.normalTextField.tag = tag
-                cell.normalTextField.text = text
+                //cell.normalTextField.text = text
                 cell.normalTextField.clearButtonMode = .whileEditing
                 cell.normalTextField.delegate = self
             }
@@ -213,7 +242,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     //return date cell
-    func dateTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+    func dateTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             cell.dateTextField.placeholder = placeholder
             cell.dateTextField.tag = tag
@@ -228,7 +257,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     //return image cell
-    func imageViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+    func imageViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "imageViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             cell.imgView.image = chosenImage
             cell.profileLabelImageView.text = "signUp_photo_label".localize()
@@ -239,19 +268,45 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             cell.imgView.layer.borderColor = UIColor.black.cgColor
             cell.imgView.layer.cornerRadius = cell.imgView.frame.height/2
             cell.imgView.clipsToBounds = true
+            cell.imgView.tag = tag
             return cell
         }
         return UITableViewCell()
     }
     
+    //return text view cell
+    func textViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            cell.textView.text = placeholder
+            cell.textView.delegate = self
+            cell.backgroundColor = .red
+            cell.textView.textColor = .black
+            cell.textView.tag = tag
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        switch textView.tag {
+        case userProfileTags.record:
+            userProfileModel.record = textView.text
+        case userProfileTags.bio:
+            userProfileModel.bio = textView.text
+        default:
+            break
+        }
+    }
+    
     //return picker view cell
-    func pickerViewTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+    func pickerViewTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "pickerViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             switch tag {
             case userProfileTags.sex:
                 cell.pickerViewTextField.placeholder = placeholder
                 cell.pickerViewTextField.tag = tag
                 cell.pickerViewTextField.inputView = sexPickerView
+                cell.pickerViewTextField.text = userProfileModel.sex
                 sexPickerView.tag = tag
                 sexPickerView.delegate = self
                 sexPickerView.dataSource = self
@@ -352,12 +407,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             userProfileModel.password = text
         case userProfileTags.repeatedPassword:
             userProfileModel.repeatedPassword = text
-        case userProfileTags.photo:
-            userProfileModel.photo = text
-        case userProfileTags.bio:
-            userProfileModel.bio = text
-        case userProfileTags.record:
-            userProfileModel.record = text
         default:
             break
         }
@@ -479,6 +528,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         dismiss(animated: true, completion: nil)
         tableView.reloadData()
     }
+    
 }
 
 // Helper function inserted by Swift 4.2 migrator.

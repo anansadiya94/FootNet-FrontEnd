@@ -211,6 +211,45 @@
                                     <outlet property="profileLabelImageView" destination="kmE-lB-Pkk" id="REj-7k-aOM"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textViewSignUpDetailCell" rowHeight="164" id="x6G-8k-Lsu" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="360" width="375" height="164"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x6G-8k-Lsu" id="Png-FZ-uHK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWZ-WX-4IH">
+                                            <rect key="frame" x="8" y="8.5" width="359" height="150"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yRG-33-Uw5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="150"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="8oa-rd-OH0"/>
+                                                <constraint firstAttribute="trailing" secondItem="yRG-33-Uw5" secondAttribute="trailing" id="DJn-v6-8EC" userLabel="trailing = Text View.trailing "/>
+                                                <constraint firstAttribute="bottom" secondItem="yRG-33-Uw5" secondAttribute="bottom" id="GFb-ab-zRT" userLabel="bottom = Text View.bottom "/>
+                                                <constraint firstItem="yRG-33-Uw5" firstAttribute="top" secondItem="VWZ-WX-4IH" secondAttribute="top" id="LEs-RS-MA4"/>
+                                                <constraint firstItem="yRG-33-Uw5" firstAttribute="leading" secondItem="VWZ-WX-4IH" secondAttribute="leading" id="NUw-Fj-vc8"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="VWZ-WX-4IH" secondAttribute="trailing" constant="8" id="48I-3Y-RAq" userLabel="trailing = View.trailing + 8"/>
+                                        <constraint firstAttribute="bottom" secondItem="VWZ-WX-4IH" secondAttribute="bottom" constant="8" id="8tO-gh-j45" userLabel="bottom = View.bottom + 8"/>
+                                        <constraint firstItem="VWZ-WX-4IH" firstAttribute="leading" secondItem="Png-FZ-uHK" secondAttribute="leading" constant="8" id="Ng1-tb-7Nz" userLabel="View.leading = leading + 8"/>
+                                        <constraint firstItem="VWZ-WX-4IH" firstAttribute="top" secondItem="Png-FZ-uHK" secondAttribute="top" constant="8" id="Wba-b8-070" userLabel="View.top = top + 8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textView" destination="yRG-33-Uw5" id="foE-Xb-pRk"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="lll-bP-5A1" id="trz-Ct-tcJ"/>

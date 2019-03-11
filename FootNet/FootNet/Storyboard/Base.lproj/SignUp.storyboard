@@ -152,6 +152,65 @@
                                     <outlet property="pickerViewTextField" destination="MMh-2A-r8Y" id="f55-yB-MVe"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageViewSignUpDetailCell" rowHeight="200" id="0Qr-3L-wVE" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="160" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Qr-3L-wVE" id="fdM-6L-8zj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv1-1Z-WLT">
+                                            <rect key="frame" x="16" y="8" width="343" height="183.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmE-lB-Pkk">
+                                                    <rect key="frame" x="122.5" y="8" width="98" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ull-lp-1yA">
+                                                    <rect key="frame" x="121.5" y="36.5" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="FC2-wn-9cT"/>
+                                                        <constraint firstAttribute="height" constant="100" id="gjr-MK-mPQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4B-d4-7ho">
+                                                    <rect key="frame" x="101" y="144.5" width="141" height="39"/>
+                                                    <state key="normal" title="Click here to change"/>
+                                                    <connections>
+                                                        <action selector="choosePhotoTapped:" destination="lll-bP-5A1" eventType="touchUpInside" id="PqK-lK-uRU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="ull-lp-1yA" firstAttribute="centerX" secondItem="Gv1-1Z-WLT" secondAttribute="centerX" id="JuW-RP-QEq"/>
+                                                <constraint firstItem="kmE-lB-Pkk" firstAttribute="centerX" secondItem="Gv1-1Z-WLT" secondAttribute="centerX" id="Ofz-0p-wYj"/>
+                                                <constraint firstItem="ull-lp-1yA" firstAttribute="top" secondItem="kmE-lB-Pkk" secondAttribute="bottom" constant="8" id="Ynm-2Y-Q0j"/>
+                                                <constraint firstItem="kmE-lB-Pkk" firstAttribute="top" secondItem="Gv1-1Z-WLT" secondAttribute="top" constant="8" id="dTx-us-zyn"/>
+                                                <constraint firstItem="O4B-d4-7ho" firstAttribute="centerX" secondItem="Gv1-1Z-WLT" secondAttribute="centerX" id="hJn-BO-fSh"/>
+                                                <constraint firstItem="O4B-d4-7ho" firstAttribute="top" secondItem="ull-lp-1yA" secondAttribute="bottom" constant="8" id="kcT-pU-3rp"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Gv1-1Z-WLT" firstAttribute="leading" secondItem="fdM-6L-8zj" secondAttribute="leading" constant="16" id="09X-hQ-0bZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gv1-1Z-WLT" secondAttribute="bottom" constant="8" id="1HF-c3-qpV" userLabel="bottom = View.bottom"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gv1-1Z-WLT" secondAttribute="trailing" constant="16" id="8aZ-XL-7Yj"/>
+                                        <constraint firstItem="Gv1-1Z-WLT" firstAttribute="top" secondItem="fdM-6L-8zj" secondAttribute="top" constant="8" id="CDO-Nr-nah"/>
+                                        <constraint firstAttribute="bottom" secondItem="O4B-d4-7ho" secondAttribute="bottom" constant="8" id="r2b-za-Yde"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="kmE-lB-Pkk" firstAttribute="centerX" secondItem="0Qr-3L-wVE" secondAttribute="centerX" id="h2O-Pd-nf2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="changeImageButton" destination="O4B-d4-7ho" id="ztS-BB-n4z"/>
+                                    <outlet property="imgView" destination="ull-lp-1yA" id="GQf-c2-U2I"/>
+                                    <outlet property="profileLabelImageView" destination="kmE-lB-Pkk" id="REj-7k-aOM"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="lll-bP-5A1" id="trz-Ct-tcJ"/>
@@ -180,4 +239,7 @@
             <point key="canvasLocation" x="-279" y="338"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultProfilePhoto" width="600" height="600"/>
+    </resources>
 </document>

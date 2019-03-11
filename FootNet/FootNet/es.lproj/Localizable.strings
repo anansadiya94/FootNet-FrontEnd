@@ -38,7 +38,8 @@
 "signUp_weight"="Peso";
 "signUp_height"="Altura";
 "signUp_actualClub"="Club Actual";
-"signUp_photo"="Foto";
+"signUp_photo_label"="Foto de perfil";
+"signUp_photo_button"="Toca aquí para cambiarla";
 "signUp_bio"="Biografía";
 "signUp_record"="Historial";
 

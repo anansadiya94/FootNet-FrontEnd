@@ -37,4 +37,8 @@ extension UIColor {
         get { return UIColor(hexString: "#29CB97") }
     }
     
+    static var textFieldPlaceHolderDefault : UIColor {
+        get { return UIColor(hexString: "#C7C7CD") }
+    }
+    
 }

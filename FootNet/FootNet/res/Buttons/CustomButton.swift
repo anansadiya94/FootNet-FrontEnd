@@ -22,14 +22,10 @@ class CustomButton : UIButton {
     private func setup() {
         let color = UIColor.kDarkGreen
         let disabledColor = color.withAlphaComponent(0.3)
-        
         let btnFont = UIFont.buttonFontOfSize
-        
         layer.cornerRadius = 5.0
         clipsToBounds = true
-        
         layer.borderColor = color.cgColor
-        
         setTitleColor(color, for: .normal)
         setTitleColor(disabledColor, for: .disabled)
         titleLabel?.font = btnFont

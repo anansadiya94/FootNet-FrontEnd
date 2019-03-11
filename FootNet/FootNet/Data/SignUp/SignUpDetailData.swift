@@ -40,7 +40,7 @@ class SignUpDetailData {
             
             //Section3
             section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_actualClub", comment: ""), tag: userProfileTags.actualClub))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo", comment: ""), tag: userProfileTags.photo))
+            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo_label", comment: ""), tag: userProfileTags.photo))
             section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_bio", comment: ""), tag: userProfileTags.bio))
             section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_record", comment: ""), tag: userProfileTags.record))
             
@@ -66,7 +66,7 @@ class SignUpDetailData {
             
             //Section3
             section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_actualClub", comment: ""), tag: userProfileTags.actualClub))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo", comment: ""), tag: userProfileTags.photo))
+            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo_label", comment: ""), tag: userProfileTags.photo))
             section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_bio", comment: ""), tag: userProfileTags.bio))
             section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_record", comment: ""), tag: userProfileTags.record))
             
@@ -84,7 +84,7 @@ class SignUpDetailData {
             section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_location", comment: ""), tag: userProfileTags.location))
             
             //Section3
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo", comment: ""), tag: userProfileTags.photo))
+            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo_label", comment: ""), tag: userProfileTags.photo))
             section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_bio", comment: ""), tag: userProfileTags.bio))
             section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_record", comment: ""), tag: userProfileTags.record))
             

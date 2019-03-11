@@ -38,7 +38,8 @@
 "signUp_weight"="Weight";
 "signUp_height"="Height";
 "signUp_actualClub"="Actual Club";
-"signUp_photo"="Photo";
+"signUp_photo_label"="Profile Photo";
+"signUp_photo_button"="Tap here to change it";
 "signUp_bio"="Biography";
 "signUp_record"="Record";
 
@@ -79,3 +80,5 @@
 "del"="Delantera";
 "por"="Portero";
 "def"="Defensa";
+
+"choose_photo"="This is the default profile photo, click here to change it";

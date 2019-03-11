@@ -9,7 +9,7 @@
 import UIKit
 import CocoaLumberjack
 
-class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate,UIPickerViewDataSource {
+class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var signUpDeatilSectionsData = [[SignUpDetailModel]]()
     var profileType: ProfileType?
@@ -24,6 +24,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     var preferredPositionPickerViewIndexPath : IndexPath?
     var weightPickerViewIndexPath : IndexPath?
     var heightPickerViewIndexPath : IndexPath?
+    var imagePickerViewIndexPath : IndexPath?
     
     @IBOutlet var datePicker : UIDatePicker!
     @IBOutlet var sexPickerView : UIPickerView!
@@ -34,6 +35,9 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     @IBOutlet var preferredPositionPickerView : UIPickerView!
     @IBOutlet var weightPickerView : UIPickerView!
     @IBOutlet var heightPickerView : UIPickerView!
+    
+    let imagePicker = UIImagePickerController()
+    var chosenImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +58,10 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         preferredPositionPickerView = UIPickerView()
         weightPickerView = UIPickerView()
         heightPickerView = UIPickerView()
+        
+        //Image View Picker
+        imagePicker.delegate = self
+        chosenImage = #imageLiteral(resourceName: "defaultProfilePhoto")
     }
     
     private func createBackButton() {
@@ -89,6 +97,13 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return signUpDeatilSectionsData[section].count
     }
     
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath == imagePickerViewIndexPath {
+//            return 200
+//        }
+//        return UITableView.automaticDimension
+//    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellType = signUpDeatilSectionsData[indexPath.section][indexPath.row].tag
         let placeholder = signUpDeatilSectionsData[indexPath.section][indexPath.row].placeholder
@@ -121,7 +136,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         case userProfileTags.actualClub:
             return pickerViewTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.actualClub, Text: userProfileModel.actualClub ?? "")
         case userProfileTags.photo:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.photo, Text: userProfileModel.photo)
+            return imageViewCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.photo, Text: userProfileModel.photo)
         case userProfileTags.bio:
             return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.bio, Text: userProfileModel.bio)
         case userProfileTags.record:
@@ -207,6 +222,23 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             datePicker.addTarget(self, action: #selector(setDate(_sender:)), for: .valueChanged)
             datePicker.timeZone = TimeZone.current
             dateIndexPath = indexPath
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    //return image cell
+    func imageViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int, Text text: String) -> UITableViewCell {
+        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "imageViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+            cell.imgView.image = chosenImage
+            cell.profileLabelImageView.text = "signUp_photo_label".localize()
+            cell.changeImageButton.setTitle("signUp_photo_button".localize(), for: .normal)
+            imagePickerViewIndexPath = indexPath
+            cell.imgView.layer.borderWidth = 1
+            cell.imgView.layer.masksToBounds = false
+            cell.imgView.layer.borderColor = UIColor.black.cgColor
+            cell.imgView.layer.cornerRadius = cell.imgView.frame.height/2
+            cell.imgView.clipsToBounds = true
             return cell
         }
         return UITableViewCell()
@@ -427,4 +459,34 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         }
         view.endEditing(true)
     }
+    
+    @IBAction func choosePhotoTapped(_ sender: AnyObject) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    //MARK: - Delegate methods
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Local variable inserted by Swift 4.2 migrator.
+        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+        chosenImage = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+    return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+    return input.rawValue
 }

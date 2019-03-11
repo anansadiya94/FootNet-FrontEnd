@@ -20,6 +20,10 @@ extension UIFont {
         get { return UIFont(name: "Noteworthy", size: 13)! }
     }
     
+    static var choosePhotoFontOfSize : UIFont {
+        get { return UIFont(name: "Noteworthy", size: 20)! }
+    }
+    
     static var textFieldFontOfSize : UIFont {
         get { return UIFont(name: "Noteworthy", size: 20)! }
     }

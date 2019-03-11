@@ -32,4 +32,7 @@ struct Constants{
     
     static let preferredPosition = ["del", "por", "def"]
     static let preferredPositionLocalized = preferredPosition.map({$0.localize()})
+    
+    static let weightLocalized = (40...140).map { String($0) + " kg" }
+    static let heightLocalized = (150...240).map { String($0) + " cm" }
 }

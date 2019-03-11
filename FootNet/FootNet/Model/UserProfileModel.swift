@@ -22,15 +22,15 @@ struct UserProfileTags {
     let nationality = 8
     let location = 9
     
-    let favoritePosition = 10
-    let preferredPositions = 11
-    let weight = 12
-    let height = 13
+    let actualClub = 10
+    let photo = 11
+    let bio = 12
+    let record = 13
     
-    let actualClub = 14
-    let photo = 15
-    let bio = 16
-    let record = 17
+    let favoritePosition = 14
+    let preferredPositions = 15
+    let weight = 16
+    let height = 17
 }
 
 class UserProfileModel {
@@ -50,17 +50,17 @@ class UserProfileModel {
     var nationality: String?
     var location: String!
     
-    var favoritePosition: String?
-    var preferredPositions: String?
-    var weight: Double?
-    var height: Double?
-    
     var actualClub: String?
     var photo: String!
     var bio: String!
     var record: String!
     
-    init(token: String!, userId: Int!, name: String!, surname: String?, email: String!, phone: String!, password: String!, repeatedPassword: String!, sex: String?, birthday: String?, nationality: String?, location: String!, favoritePosition: String?, preferredPositions: String?, weight: Double?, height: Double?, actualClub: String?, photo: String!, bio: String!, record: String!) {
+    var favoritePosition: String?
+    var preferredPositions: String?
+    var weight: String?
+    var height: String?
+    
+    init(token: String!, userId: Int!, name: String!, surname: String?, email: String!, phone: String!, password: String!, repeatedPassword: String!, sex: String?, birthday: String?, nationality: String?, location: String!, actualClub: String?, photo: String!, bio: String!, record: String!, favoritePosition: String?, preferredPositions: String?, weight: String?, height: String?) {
         self.token = token
         self.userId = userId
         self.name = name
@@ -72,14 +72,14 @@ class UserProfileModel {
         self.birthday = birthday
         self.nationality = nationality
         self.location = location
-        self.favoritePosition = favoritePosition
-        self.preferredPositions = preferredPositions
-        self.weight = weight
-        self.height = height
         self.actualClub = actualClub
         self.photo = photo
         self.bio = bio
         self.record = record
+        self.favoritePosition = favoritePosition
+        self.preferredPositions = preferredPositions
+        self.weight = weight
+        self.height = height
     }
     
     init() {
@@ -92,13 +92,13 @@ class UserProfileModel {
         self.birthday = "26/07/1994"
         self.nationality = ""
         self.location = ""
-        self.favoritePosition = ""
-        self.preferredPositions = ""
-        self.weight = 0.0
-        self.height = 0.0
         self.actualClub = ""
         self.photo = ""
         self.bio = ""
         self.record = ""
+        self.favoritePosition = ""
+        self.preferredPositions = ""
+        self.weight = ""
+        self.height = ""
     }
 }

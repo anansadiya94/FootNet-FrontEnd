@@ -27,7 +27,6 @@ class CustomTextField: NoPasteTextField {
         self.spellCheckingType = .no
         self.keyboardType = .default
         self.keyboardAppearance = .dark
-        self.clearButtonMode = .whileEditing
         self.endEditing(true)
     }
 }

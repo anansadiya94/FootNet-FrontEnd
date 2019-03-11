@@ -86,6 +86,9 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                                            <connections>
+                                                <action selector="customTextFieldEditingChanged:" destination="lll-bP-5A1" eventType="editingDidEnd" id="UiO-bc-jLA"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>

@@ -256,7 +256,11 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     //Return date cell
     func dateTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.dateTextField.placeholder = placeholder
+            if cell.dateTextField.text != nil {
+                cell.dateTextField.text = userProfileModel.birthday
+            } else {
+                cell.dateTextField.placeholder = placeholder
+            }
             cell.dateTextField.tag = tag
             cell.dateTextField.inputView = datePicker
             datePicker.datePickerMode = UIDatePicker.Mode.date

@@ -196,7 +196,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Gv1-1Z-WLT" firstAttribute="leading" secondItem="fdM-6L-8zj" secondAttribute="leading" constant="16" id="09X-hQ-0bZ"/>
-                                        <constraint firstAttribute="bottom" secondItem="Gv1-1Z-WLT" secondAttribute="bottom" constant="8" id="1HF-c3-qpV" userLabel="bottom = View.bottom"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gv1-1Z-WLT" secondAttribute="bottom" constant="8" id="1HF-c3-qpV"/>
                                         <constraint firstAttribute="trailing" secondItem="Gv1-1Z-WLT" secondAttribute="trailing" constant="16" id="8aZ-XL-7Yj"/>
                                         <constraint firstItem="Gv1-1Z-WLT" firstAttribute="top" secondItem="fdM-6L-8zj" secondAttribute="top" constant="8" id="CDO-Nr-nah"/>
                                         <constraint firstAttribute="bottom" secondItem="O4B-d4-7ho" secondAttribute="bottom" constant="8" id="r2b-za-Yde"/>
@@ -219,12 +219,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWZ-WX-4IH">
-                                            <rect key="frame" x="8" y="8.5" width="359" height="150"/>
+                                            <rect key="frame" x="16" y="8.5" width="343" height="150"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yRG-33-Uw5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -240,10 +240,10 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="VWZ-WX-4IH" secondAttribute="trailing" constant="8" id="48I-3Y-RAq" userLabel="trailing = View.trailing + 8"/>
-                                        <constraint firstAttribute="bottom" secondItem="VWZ-WX-4IH" secondAttribute="bottom" constant="8" id="8tO-gh-j45" userLabel="bottom = View.bottom + 8"/>
-                                        <constraint firstItem="VWZ-WX-4IH" firstAttribute="leading" secondItem="Png-FZ-uHK" secondAttribute="leading" constant="8" id="Ng1-tb-7Nz" userLabel="View.leading = leading + 8"/>
-                                        <constraint firstItem="VWZ-WX-4IH" firstAttribute="top" secondItem="Png-FZ-uHK" secondAttribute="top" constant="8" id="Wba-b8-070" userLabel="View.top = top + 8"/>
+                                        <constraint firstAttribute="bottom" secondItem="VWZ-WX-4IH" secondAttribute="bottom" constant="8" id="Msx-xe-BAG"/>
+                                        <constraint firstItem="VWZ-WX-4IH" firstAttribute="top" secondItem="Png-FZ-uHK" secondAttribute="top" constant="8" id="Uc4-2z-piq"/>
+                                        <constraint firstAttribute="trailing" secondItem="VWZ-WX-4IH" secondAttribute="trailing" constant="16" id="Urg-7X-MBP"/>
+                                        <constraint firstItem="VWZ-WX-4IH" firstAttribute="leading" secondItem="Png-FZ-uHK" secondAttribute="leading" constant="16" id="XWR-u2-noO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

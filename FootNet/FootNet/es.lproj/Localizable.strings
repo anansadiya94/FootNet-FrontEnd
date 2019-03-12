@@ -41,7 +41,9 @@
 "signUp_photo_label"="Foto de perfil";
 "signUp_photo_button"="Toca aquí para cambiarla";
 "signUp_bio"="Biografía";
+"signUp_edit_bio"="Edita para añadir tu biografía";
 "signUp_record"="Historial";
+"signUp_edit_record"="Edita para añadir tu historial";
 
 //back button
 "back_buttom"="Atrás";

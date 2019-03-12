@@ -271,15 +271,16 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     func imageViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "imageViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             cell.imgView.image = chosenImage
-            cell.profileLabelImageView.text = "signUp_photo_label".localize()
-            cell.changeImageButton.setTitle("signUp_photo_button".localize(), for: .normal)
-            imagePickerViewIndexPath = indexPath
             cell.imgView.layer.borderWidth = 1
             cell.imgView.layer.masksToBounds = false
             cell.imgView.layer.borderColor = UIColor.black.cgColor
             cell.imgView.layer.cornerRadius = cell.imgView.frame.height/2
             cell.imgView.clipsToBounds = true
             cell.imgView.tag = tag
+            cell.profileLabelImageView.text = "signUp_photo_label".localize()
+            cell.profileLabelImageView.font = UIFont.textFieldFontOfSize
+            cell.changeImageButton.setTitle("signUp_photo_button".localize(), for: .normal)
+            imagePickerViewIndexPath = indexPath
             return cell
         }
         return UITableViewCell()
@@ -288,25 +289,35 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     //return text view cell
     func textViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            cell.textView.text = placeholder
-            cell.textView.delegate = self
-            cell.backgroundColor = .red
-            cell.textView.textColor = .black
-            cell.textView.tag = tag
+            switch tag {
+            case userProfileTags.bio:
+                if cell.textView.text.isEmpty {
+                    cell.textView.text = "signUp_edit_bio".localize()
+                    cell.textView.textColor = UIColor.textFieldPlaceHolderDefault
+                } else {
+                    cell.textView.text = userProfileModel.bio
+                    cell.textView.textColor = .black
+                }
+                cell.textView.font = UIFont.textFieldFontOfSize
+                cell.textView.delegate = self
+                cell.textView.tag = tag
+            case userProfileTags.record:
+                if cell.textView.text.isEmpty {
+                    cell.textView.text = "signUp_edit_record".localize()
+                    cell.textView.textColor = UIColor.textFieldPlaceHolderDefault
+                } else {
+                    cell.textView.text = userProfileModel.record
+                    cell.textView.textColor = .black
+                }
+                cell.textView.font = UIFont.textFieldFontOfSize
+                cell.textView.delegate = self
+                cell.textView.tag = tag
+            default:
+                break
+            }
             return cell
         }
         return UITableViewCell()
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        switch textView.tag {
-        case userProfileTags.record:
-            userProfileModel.record = textView.text
-        case userProfileTags.bio:
-            userProfileModel.bio = textView.text
-        default:
-            break
-        }
     }
     
     //return picker view cell
@@ -553,6 +564,17 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         chosenImage = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
         dismiss(animated: true, completion: nil)
         tableView.reloadData()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        switch textView.tag {
+        case userProfileTags.record:
+            userProfileModel.record = textView.text
+        case userProfileTags.bio:
+            userProfileModel.bio = textView.text
+        default:
+            break
+        }
     }
     
 }

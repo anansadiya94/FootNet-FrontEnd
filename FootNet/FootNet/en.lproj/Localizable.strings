@@ -41,7 +41,9 @@
 "signUp_photo_label"="Profile Photo";
 "signUp_photo_button"="Tap here to change it";
 "signUp_bio"="Biography";
+"signUp_edit_bio"="Edit to add your biografia";
 "signUp_record"="Record";
+"signUp_edit_record"="Edit to add your record";
 
 //back button
 "back_button"="Back";
@@ -83,5 +85,3 @@
 "del"="Delantera";
 "por"="Portero";
 "def"="Defensa";
-
-"choose_photo"="This is the default profile photo, click here to change it";

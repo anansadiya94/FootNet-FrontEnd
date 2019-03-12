@@ -14,9 +14,9 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     //IBOutlets
     @IBOutlet weak var textFieldEmail: CustomTextField!
     @IBOutlet weak var textFieldPassword: CustomTextField!
-    @IBOutlet weak var buttonForgotPassword: CustomButton!
-    @IBOutlet weak var buttonSignIn: CustomButton!
-    @IBOutlet weak var buttonSignUp: CustomButton!
+    @IBOutlet weak var buttonForgotPassword: CustomSignInSignUpButton!
+    @IBOutlet weak var buttonSignIn: CustomSignInSignUpButton!
+    @IBOutlet weak var buttonSignUp: CustomSignInSignUpButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -28,16 +28,16 @@ extension UIColor {
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
-    
-    static var kDarkBlack : UIColor {
+
+    static var colorDarkBlack : UIColor {
         get { return UIColor(hexString: "#1E2227") }
     }
     
-    static var kDarkGreen : UIColor {
+    static var colorDarkGreen : UIColor {
         get { return UIColor(hexString: "#29CB97") }
     }
     
-    static var textFieldPlaceHolderDefault : UIColor {
+    static var colorPlaceHolderDefault : UIColor {
         get { return UIColor(hexString: "#C7C7CD") }
     }
     

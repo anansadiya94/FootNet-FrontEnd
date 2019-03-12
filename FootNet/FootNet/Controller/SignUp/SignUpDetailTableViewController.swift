@@ -115,7 +115,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         //add no action
         alert.addAction(UIAlertAction(title: alertNoTitle, style: .cancel, handler: nil))
         self.present(alert, animated: true)
-        
     }
 
     // MARK: - Table view data source
@@ -137,17 +136,17 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         switch cellType {
         //Section1
         case userProfileTags.name:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.name)
+            return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.name)
         case userProfileTags.surname:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.surname)
+            return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.surname)
         case userProfileTags.phone:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.phone)
+            return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.phone)
         case userProfileTags.email:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.email)
+            return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.email)
         case userProfileTags.password:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.password)
+            return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.password)
         case userProfileTags.repeatedPassword:
-            return normalTextFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.repeatedPassword)
+            return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.repeatedPassword)
             
         //Section 2
         case userProfileTags.sex:
@@ -203,49 +202,49 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     //Return textfield cell
-    func normalTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
+    func textFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textFieldSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             switch tag {
             case userProfileTags.phone:
-                cell.normalTextField.placeholder = placeholder
-                cell.normalTextField.tag = tag
-                cell.normalTextField.text = userProfileModel.phone
-                cell.normalTextField.keyboardType = .phonePad
-                cell.normalTextField.clearButtonMode = .whileEditing
-                cell.normalTextField.delegate = self
+                cell.textField.placeholder = placeholder
+                cell.textField.tag = tag
+                cell.textField.text = userProfileModel.phone
+                cell.textField.keyboardType = .phonePad
+                cell.textField.clearButtonMode = .whileEditing
+                cell.textField.delegate = self
             case userProfileTags.email:
-                cell.normalTextField.placeholder = placeholder
-                cell.normalTextField.tag = tag
-                cell.normalTextField.text = userProfileModel.email
-                cell.normalTextField.keyboardType = .emailAddress
-                cell.normalTextField.clearButtonMode = .whileEditing
-                cell.normalTextField.delegate = self
+                cell.textField.placeholder = placeholder
+                cell.textField.tag = tag
+                cell.textField.text = userProfileModel.email
+                cell.textField.keyboardType = .emailAddress
+                cell.textField.clearButtonMode = .whileEditing
+                cell.textField.delegate = self
             case userProfileTags.password:
-                cell.normalTextField.placeholder = placeholder
-                cell.normalTextField.tag = tag
-                cell.normalTextField.text = userProfileModel.password
-                cell.normalTextField.isSecureTextEntry = true
-                cell.normalTextField.clearButtonMode = .whileEditing
-                cell.normalTextField.delegate = self
+                cell.textField.placeholder = placeholder
+                cell.textField.tag = tag
+                cell.textField.text = userProfileModel.password
+                cell.textField.isSecureTextEntry = true
+                cell.textField.clearButtonMode = .whileEditing
+                cell.textField.delegate = self
             case userProfileTags.repeatedPassword:
-                cell.normalTextField.placeholder = placeholder
-                cell.normalTextField.tag = tag
-                cell.normalTextField.text = userProfileModel.repeatedPassword
-                cell.normalTextField.isSecureTextEntry = true
-                cell.normalTextField.clearButtonMode = .whileEditing
-                cell.normalTextField.delegate = self
+                cell.textField.placeholder = placeholder
+                cell.textField.tag = tag
+                cell.textField.text = userProfileModel.repeatedPassword
+                cell.textField.isSecureTextEntry = true
+                cell.textField.clearButtonMode = .whileEditing
+                cell.textField.delegate = self
             case userProfileTags.name:
-                cell.normalTextField.placeholder = placeholder
-                cell.normalTextField.tag = tag
-                cell.normalTextField.text = userProfileModel.name
-                cell.normalTextField.clearButtonMode = .whileEditing
-                cell.normalTextField.delegate = self
+                cell.textField.placeholder = placeholder
+                cell.textField.tag = tag
+                cell.textField.text = userProfileModel.name
+                cell.textField.clearButtonMode = .whileEditing
+                cell.textField.delegate = self
             case userProfileTags.surname:
-                cell.normalTextField.placeholder = placeholder
-                cell.normalTextField.tag = tag
-                cell.normalTextField.text = userProfileModel.surname
-                cell.normalTextField.clearButtonMode = .whileEditing
-                cell.normalTextField.delegate = self
+                cell.textField.placeholder = placeholder
+                cell.textField.tag = tag
+                cell.textField.text = userProfileModel.surname
+                cell.textField.clearButtonMode = .whileEditing
+                cell.textField.delegate = self
             default:
                 break
             }
@@ -273,14 +272,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     func imageViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "imageViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             cell.imgView.image = chosenImage
-            cell.imgView.layer.borderWidth = 1
-            cell.imgView.layer.masksToBounds = false
-            cell.imgView.layer.borderColor = UIColor.black.cgColor
-            cell.imgView.layer.cornerRadius = cell.imgView.frame.height/2
-            cell.imgView.clipsToBounds = true
             cell.imgView.tag = tag
             cell.profileLabelImageView.text = "signUp_photo_label".localize()
-            cell.profileLabelImageView.font = UIFont.textFieldFontOfSize
             cell.changeImageButton.setTitle("signUp_photo_button".localize(), for: .normal)
             imagePickerViewIndexPath = indexPath
             return cell
@@ -293,23 +286,21 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             switch tag {
             case userProfileTags.bio:
-                if cell.textView.text.isEmpty {
-                    cell.textView.text = "signUp_edit_bio".localize()
-                    cell.textView.textColor = UIColor.textFieldPlaceHolderDefault
-                } else {
+                if userProfileModel.bio != nil{
                     cell.textView.text = userProfileModel.bio
+                } else {
+                    cell.textView.text = "signUp_edit_bio".localize()
+                    cell.textView.textColor = UIColor.colorPlaceHolderDefault
                 }
-                cell.textView.font = UIFont.textFieldFontOfSize
                 cell.textView.delegate = self
                 cell.textView.tag = tag
             case userProfileTags.record:
-                if cell.textView.text.isEmpty {
-                    cell.textView.text = "signUp_edit_record".localize()
-                    cell.textView.textColor = UIColor.textFieldPlaceHolderDefault
-                } else {
+                if userProfileModel.record != nil{
                     cell.textView.text = userProfileModel.record
+                } else {
+                    cell.textView.text = "signUp_edit_record".localize()
+                    cell.textView.textColor = UIColor.colorPlaceHolderDefault
                 }
-                cell.textView.font = UIFont.textFieldFontOfSize
                 cell.textView.delegate = self
                 cell.textView.tag = tag
             default:

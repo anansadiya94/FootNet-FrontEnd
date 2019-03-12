@@ -1,14 +1,14 @@
 //
-//  CustomForgotPasswordButton.swift
+//  CustomButton.swift
 //  FootNet
 //
-//  Created by Anan Sadiya on 28/02/2019.
+//  Created by Anan Sadiya on 27/02/2019.
 //  Copyright © 2019 FootNet. All rights reserved.
 //
 
 import UIKit
 
-class CustomForgotPasswordButton : UIButton {
+class CustomSignInSignUpButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -20,12 +20,18 @@ class CustomForgotPasswordButton : UIButton {
     }
     
     private func setup() {
-        let btnFont = UIFont.fontNoteworthyS13
         let color = UIColor.colorDarkGreen
         let disabledColor = color.withAlphaComponent(0.3)
+        let btnFont = UIFont.fontNoteworthyS26
         clipsToBounds = true
+        layer.cornerRadius = 5.0
+        layer.borderColor = color.cgColor
+        layer.borderWidth = 1
         setTitleColor(color, for: .normal)
         setTitleColor(disabledColor, for: .disabled)
         titleLabel?.font = btnFont
     }
 }
+
+
+

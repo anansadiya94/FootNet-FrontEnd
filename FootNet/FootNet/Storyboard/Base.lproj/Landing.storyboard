@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LandingController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="F8O-FT-7vB" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="F8O-FT-7vB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -37,19 +37,16 @@
                                 <rect key="frame" x="244" y="366" width="115" height="30"/>
                                 <state key="normal" title="Forget password"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0E-wH-gML" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0E-wH-gML" customClass="CustomSignInSignUpButton" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="16" y="428" width="343" height="30"/>
                                 <state key="normal" title="Sign in"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsG-vG-gCV" userLabel="Button Register" customClass="CustomButton" customModule="FootNet" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsG-vG-gCV" userLabel="Button Register" customClass="CustomSignInSignUpButton" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="637" width="375" height="30"/>
                                 <state key="normal" title="New? Register"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="ehj-aA-y6C" kind="show" id="bSM-mv-iHV"/>
                                 </connections>

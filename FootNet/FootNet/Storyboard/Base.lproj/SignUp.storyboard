@@ -99,7 +99,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="normalTextField" destination="NFh-np-UJo" id="wsX-UO-gIr"/>
+                                    <outlet property="textField" destination="NFh-np-UJo" id="wsX-UO-gIr"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dateSignUpDetailCell" id="FcT-oe-mRY" userLabel="DateSignUpDetailCell" customClass="SignUpDetailCell" customModule="FootNet" customModuleProvider="target">
@@ -162,20 +162,20 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv1-1Z-WLT">
                                             <rect key="frame" x="16" y="8" width="343" height="183.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmE-lB-Pkk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmE-lB-Pkk" customClass="CustomLabel" customModule="FootNet" customModuleProvider="target">
                                                     <rect key="frame" x="122.5" y="8" width="98" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ull-lp-1yA">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ull-lp-1yA" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
                                                     <rect key="frame" x="121.5" y="36.5" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="FC2-wn-9cT"/>
                                                         <constraint firstAttribute="height" constant="100" id="gjr-MK-mPQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4B-d4-7ho">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4B-d4-7ho" customClass="CustomChoosePhotoButton" customModule="FootNet" customModuleProvider="target">
                                                     <rect key="frame" x="101" y="144.5" width="141" height="39"/>
                                                     <state key="normal" title="Click here to change"/>
                                                     <connections>
@@ -206,7 +206,7 @@
                                     <constraint firstItem="kmE-lB-Pkk" firstAttribute="centerX" secondItem="0Qr-3L-wVE" secondAttribute="centerX" id="h2O-Pd-nf2"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="changeImageButton" destination="O4B-d4-7ho" id="ztS-BB-n4z"/>
+                                    <outlet property="changeImageButton" destination="O4B-d4-7ho" id="3fq-tu-dBD"/>
                                     <outlet property="imgView" destination="ull-lp-1yA" id="GQf-c2-U2I"/>
                                     <outlet property="profileLabelImageView" destination="kmE-lB-Pkk" id="REj-7k-aOM"/>
                                 </connections>
@@ -221,7 +221,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWZ-WX-4IH">
                                             <rect key="frame" x="16" y="8.5" width="343" height="150"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yRG-33-Uw5">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yRG-33-Uw5" customClass="CustomTextView" customModule="FootNet" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>

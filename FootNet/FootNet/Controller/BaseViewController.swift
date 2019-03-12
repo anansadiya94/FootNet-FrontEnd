@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .kDarkBlack
+        view.backgroundColor = .colorDarkBlack
         DDLogInfo("Load Base View")
     }
 }
@@ -21,6 +21,6 @@ class BaseViewController: UIViewController {
 extension UIViewController {
     
     func setBackground() {
-        view.backgroundColor = .kDarkBlack
+        view.backgroundColor = .colorDarkBlack
     }
 }

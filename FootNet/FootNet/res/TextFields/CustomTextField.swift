@@ -9,7 +9,6 @@
 import UIKit
 
 class CustomTextField: NoPasteTextField {
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -21,8 +20,8 @@ class CustomTextField: NoPasteTextField {
     }
     
     private func setup() {
-        self.font = UIFont.textFieldFontOfSize
-        self.textColor = UIColor.kDarkBlack
+        self.font = UIFont.fontNoteworthyS20
+        self.textColor = UIColor.colorDarkBlack
         self.autocorrectionType = .no
         self.spellCheckingType = .no
         self.keyboardType = .default

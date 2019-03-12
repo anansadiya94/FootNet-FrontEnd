@@ -12,19 +12,15 @@ import UIKit
 
 extension UIFont {
     
-    static var buttonFontOfSize : UIFont {
+    static var fontNoteworthyS26 : UIFont {
         get { return UIFont(name: "Noteworthy", size: 26)! }
     }
     
-    static var buttonForgotPasswordFontOfSize : UIFont {
+    static var fontNoteworthyS13 : UIFont {
         get { return UIFont(name: "Noteworthy", size: 13)! }
     }
     
-    static var choosePhotoFontOfSize : UIFont {
-        get { return UIFont(name: "Noteworthy", size: 20)! }
-    }
-    
-    static var textFieldFontOfSize : UIFont {
+    static var fontNoteworthyS20 : UIFont {
         get { return UIFont(name: "Noteworthy", size: 20)! }
     }
     

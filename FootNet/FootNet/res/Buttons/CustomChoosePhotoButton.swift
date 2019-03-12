@@ -1,14 +1,14 @@
 //
-//  CustomButton.swift
+//  CustomChoosePhotoButton.swift
 //  FootNet
 //
-//  Created by Anan Sadiya on 27/02/2019.
+//  Created by Anan Sadiya on 12/03/2019.
 //  Copyright © 2019 FootNet. All rights reserved.
 //
 
 import UIKit
 
-class CustomButton : UIButton {
+class CustomChoosePhotoButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -20,17 +20,12 @@ class CustomButton : UIButton {
     }
     
     private func setup() {
-        let color = UIColor.kDarkGreen
+        let color = UIColor.colorDarkGreen
         let disabledColor = color.withAlphaComponent(0.3)
-        let btnFont = UIFont.buttonFontOfSize
-        layer.cornerRadius = 5.0
+        let btnFont = UIFont.fontNoteworthyS20
         clipsToBounds = true
-        layer.borderColor = color.cgColor
         setTitleColor(color, for: .normal)
         setTitleColor(disabledColor, for: .disabled)
         titleLabel?.font = btnFont
     }
 }
-
-
-

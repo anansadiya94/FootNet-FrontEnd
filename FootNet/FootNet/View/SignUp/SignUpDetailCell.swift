@@ -25,7 +25,11 @@ class SignUpDetailCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        if pickerViewTextField != nil {
+        if normalTextField != nil {
+            normalTextField?.text = ""
+        } else if dateTextField != nil {
+            dateTextField?.text = ""
+        } else if pickerViewTextField != nil {
             pickerViewTextField?.text = ""
         }
     }

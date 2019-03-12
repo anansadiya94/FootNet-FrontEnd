@@ -207,11 +207,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             case userProfileTags.phone:
                 cell.normalTextField.placeholder = placeholder
                 cell.normalTextField.tag = tag
-                
                 cell.normalTextField.text = userProfileModel.phone
-//                if userProfileModel.name != nil {
-//                    cell.normalTextField.text = userProfileModel.name
-//                }
                 cell.normalTextField.keyboardType = .phonePad
                 cell.normalTextField.clearButtonMode = .whileEditing
                 cell.normalTextField.delegate = self
@@ -222,19 +218,34 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.normalTextField.keyboardType = .emailAddress
                 cell.normalTextField.clearButtonMode = .whileEditing
                 cell.normalTextField.delegate = self
-            case userProfileTags.password, userProfileTags.repeatedPassword:
+            case userProfileTags.password:
                 cell.normalTextField.placeholder = placeholder
                 cell.normalTextField.tag = tag
-                //cell.normalTextField.text = text
+                cell.normalTextField.text = userProfileModel.password
                 cell.normalTextField.isSecureTextEntry = true
                 cell.normalTextField.clearButtonMode = .whileEditing
                 cell.normalTextField.delegate = self
-            default:
+            case userProfileTags.repeatedPassword:
                 cell.normalTextField.placeholder = placeholder
                 cell.normalTextField.tag = tag
-                //cell.normalTextField.text = text
+                cell.normalTextField.text = userProfileModel.repeatedPassword
+                cell.normalTextField.isSecureTextEntry = true
                 cell.normalTextField.clearButtonMode = .whileEditing
                 cell.normalTextField.delegate = self
+            case userProfileTags.name:
+                cell.normalTextField.placeholder = placeholder
+                cell.normalTextField.tag = tag
+                cell.normalTextField.text = userProfileModel.name
+                cell.normalTextField.clearButtonMode = .whileEditing
+                cell.normalTextField.delegate = self
+            case userProfileTags.surname:
+                cell.normalTextField.placeholder = placeholder
+                cell.normalTextField.tag = tag
+                cell.normalTextField.text = userProfileModel.surname
+                cell.normalTextField.clearButtonMode = .whileEditing
+                cell.normalTextField.delegate = self
+            default:
+                break
             }
             return cell
         }
@@ -315,6 +326,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.pickerViewTextField.placeholder = placeholder
                 cell.pickerViewTextField.tag = tag
                 cell.pickerViewTextField.inputView = nationalityPickerView
+                cell.pickerViewTextField.text = userProfileModel.nationality
                 nationalityPickerView.tag = tag
                 nationalityPickerView.delegate = self
                 nationalityPickerView.dataSource = self
@@ -323,6 +335,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.pickerViewTextField.placeholder = placeholder
                 cell.pickerViewTextField.tag = tag
                 cell.pickerViewTextField.inputView = locationPickerView
+                cell.pickerViewTextField.text = userProfileModel.location
                 locationPickerView.tag = tag
                 locationPickerView.delegate = self
                 locationPickerView.dataSource = self
@@ -331,6 +344,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.pickerViewTextField.placeholder = placeholder
                 cell.pickerViewTextField.tag = tag
                 cell.pickerViewTextField.inputView = actualClubPickerView
+                cell.pickerViewTextField.text = userProfileModel.actualClub
                 actualClubPickerView.tag = tag
                 actualClubPickerView.delegate = self
                 actualClubPickerView.dataSource = self
@@ -339,6 +353,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.pickerViewTextField.placeholder = placeholder
                 cell.pickerViewTextField.tag = tag
                 cell.pickerViewTextField.inputView = favoritePositionPickerView
+                cell.pickerViewTextField.text = userProfileModel.favoritePosition
                 favoritePositionPickerView.tag = tag
                 favoritePositionPickerView.delegate = self
                 favoritePositionPickerView.dataSource = self
@@ -347,6 +362,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.pickerViewTextField.placeholder = placeholder
                 cell.pickerViewTextField.tag = tag
                 cell.pickerViewTextField.inputView = preferredPositionPickerView
+                cell.pickerViewTextField.text = userProfileModel.preferredPositions
                 preferredPositionPickerView.tag = tag
                 preferredPositionPickerView.delegate = self
                 preferredPositionPickerView.dataSource = self
@@ -355,6 +371,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.pickerViewTextField.placeholder = placeholder
                 cell.pickerViewTextField.tag = tag
                 cell.pickerViewTextField.inputView = weightPickerView
+                cell.pickerViewTextField.text = userProfileModel.weight
                 weightPickerView.tag = tag
                 weightPickerView.delegate = self
                 weightPickerView.dataSource = self
@@ -363,6 +380,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.pickerViewTextField.placeholder = placeholder
                 cell.pickerViewTextField.tag = tag
                 cell.pickerViewTextField.inputView = heightPickerView
+                cell.pickerViewTextField.text = userProfileModel.height
                 heightPickerView.tag = tag
                 heightPickerView.delegate = self
                 heightPickerView.dataSource = self
@@ -476,34 +494,42 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         if (pickerView.tag == userProfileTags.sex) {
             if let indexPath = sexPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
                 cell.pickerViewTextField.text = Constants.sexLocalized[row]
+                userProfileModel.sex = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.nationality) {
             if let indexPath = nationalityPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
                 cell.pickerViewTextField.text = Constants.nationalityLocalized[row]
+                userProfileModel.nationality = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.location) {
             if let indexPath = locationPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
                 cell.pickerViewTextField.text = Constants.locationLocalized[row]
+                userProfileModel.location = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.actualClub) {
             if let indexPath = actualClubPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
                 cell.pickerViewTextField.text = Constants.actualClubLocalized[row]
+                userProfileModel.actualClub = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.favoritePosition) {
             if let indexPath = favoritePositionPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
                 cell.pickerViewTextField.text = Constants.favoritePositionLocalized[row]
+                userProfileModel.favoritePosition = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.preferredPositions) {
             if let indexPath = preferredPositionPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
                 cell.pickerViewTextField.text = Constants.preferredPositionLocalized[row]
+                userProfileModel.preferredPositions = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.weight) {
             if let indexPath = weightPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
                 cell.pickerViewTextField.text = Constants.weightLocalized[row]
+                userProfileModel.weight = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.height) {
             if let indexPath = heightPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
                 cell.pickerViewTextField.text = Constants.heightLocalized[row]
+                userProfileModel.height = cell.pickerViewTextField.text
             }
         }
         view.endEditing(true)

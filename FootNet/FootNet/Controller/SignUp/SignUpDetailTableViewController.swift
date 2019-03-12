@@ -44,6 +44,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         setBackground()
         DDLogInfo("Load SignUp Detail View")
         signUpDeatilSectionsData = SignUpDetailData.getAllsignUpSectionsData(profileType!)
+        
+        //Navigation bar buttons
         createBackButton()
         createNextButton()
         
@@ -67,6 +69,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         chosenImage = #imageLiteral(resourceName: "defaultProfilePhoto")
     }
     
+    //Back button navigationbar
     private func createBackButton() {
         self.navigationItem.hidesBackButton = true
         let buttonTitle = "back_button".localize()
@@ -74,15 +77,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         self.navigationItem.leftBarButtonItem = newBackButton
     }
     
-    private func createNextButton() {
-        let buttonTitle = "done_button".localize()
-        let rightBarButtonItem = UIBarButtonItem.init(title: buttonTitle, style: .done, target: self, action: #selector(SignUpDetailTableViewController.nextTapped(sender:)))
-        self.navigationItem.rightBarButtonItem = rightBarButtonItem
-        
-    }
-    
-    @objc private func nextTapped(sender: UIBarButtonItem) {
-        
+    @objc func back(sender: UIBarButtonItem) {
         let alertTitle = NSLocalizedString("title_alert", comment: "")
         let alertMessage = NSLocalizedString("message_alert", comment: "")
         let alertYesTitle = NSLocalizedString("yes_alert", comment: "")
@@ -96,10 +91,17 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         //add no action
         alert.addAction(UIAlertAction(title: alertNoTitle, style: .cancel, handler: nil))
         self.present(alert, animated: true)
+    }
+    
+    //Next button navigationbar
+    private func createNextButton() {
+        let buttonTitle = "done_button".localize()
+        let rightBarButtonItem = UIBarButtonItem.init(title: buttonTitle, style: .done, target: self, action: #selector(SignUpDetailTableViewController.nextTapped(sender:)))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
         
     }
     
-    @objc func back(sender: UIBarButtonItem) {
+    @objc private func nextTapped(sender: UIBarButtonItem) {
         let alertTitle = NSLocalizedString("title_alert", comment: "")
         let alertMessage = NSLocalizedString("message_alert", comment: "")
         let alertYesTitle = NSLocalizedString("yes_alert", comment: "")
@@ -182,7 +184,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //sections titles
+    //Cections titles
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var sectionHeader = ""
         switch section {
@@ -200,7 +202,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return sectionHeader
     }
     
-    //return normal cell
+    //Return textfield cell
     func normalTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textFieldSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             switch tag {
@@ -252,7 +254,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //return date cell
+    //Return date cell
     func dateTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             cell.dateTextField.placeholder = placeholder
@@ -267,7 +269,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //return image cell
+    //Return image cell
     func imageViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "imageViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             cell.imgView.image = chosenImage
@@ -286,7 +288,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //return text view cell
+    //Return text view cell
     func textViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             switch tag {
@@ -296,7 +298,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                     cell.textView.textColor = UIColor.textFieldPlaceHolderDefault
                 } else {
                     cell.textView.text = userProfileModel.bio
-                    cell.textView.textColor = .black
                 }
                 cell.textView.font = UIFont.textFieldFontOfSize
                 cell.textView.delegate = self
@@ -307,7 +308,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                     cell.textView.textColor = UIColor.textFieldPlaceHolderDefault
                 } else {
                     cell.textView.text = userProfileModel.record
-                    cell.textView.textColor = .black
                 }
                 cell.textView.font = UIFont.textFieldFontOfSize
                 cell.textView.delegate = self
@@ -320,7 +320,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //return picker view cell
+    //Return picker view cell
     func pickerViewTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "pickerViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
             switch tag {
@@ -404,7 +404,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //convert date to string
+    //Convert date to string
     func dateToString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .full
@@ -412,7 +412,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return dateFormatter.string(from: date)
     }
     
-    //hide keyboard when return button clicked
+    //Hide keyboard when return button clicked
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -441,7 +441,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         }
     }
     
-    //date picker set date
+    //Date picker set date
     @objc func setDate(_sender: UIDatePicker) {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
@@ -454,7 +454,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         view.endEditing(true)
     }
     
-    //MARK:- PickerView Delegate
+    //MARK:- PickerView Delegate pickerview
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView.tag == userProfileTags.sex) {
             return Constants.sexLocalized[row]
@@ -546,6 +546,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         view.endEditing(true)
     }
     
+    //Choose photo action
     @IBAction func choosePhotoTapped(_ sender: AnyObject) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
@@ -553,7 +554,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         present(imagePicker, animated: true, completion: nil)
     }
     
-    //MARK: - Delegate methods
+    //MARK: - Delegate methods image picker
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
@@ -575,6 +576,10 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         default:
             break
         }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.textColor = .black
     }
     
 }

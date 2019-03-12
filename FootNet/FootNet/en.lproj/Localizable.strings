@@ -48,14 +48,14 @@
 //back button
 "back_button"="Back";
 
-//done button
-"done_button"="Done";
-
 //back alert
 "title_alert"="Are you sure you want to go back?";
 "message_alert"="Going back will clean the register form information";
 "yes_alert"="Yes";
 "no_alert"="No";
+
+//done button
+"done_button"="Done";
 
 //sex picker view
 "male"="Male";

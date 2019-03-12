@@ -46,13 +46,16 @@
 "signUp_edit_record"="Edita para añadir tu historial";
 
 //back button
-"back_buttom"="Atrás";
+"back_button"="Atrás";
 
 //back alert
 "title_alert"="¿Estás seguro de que deseas volver?";
 "message_alert"="Volver atrás limpiará la información del formulario de registro";
 "yes_alert"="Sí";
 "no_alert"="No";
+
+//done button
+"done_button"="Hecho";
 
 //sex picker view
 "male"="Hombre";

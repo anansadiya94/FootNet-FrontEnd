@@ -38,6 +38,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     let imagePicker = UIImagePickerController()
     var chosenImage: UIImage?
+    
+    var validateSignUpForm = ValidateSignUpForm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,8 +104,9 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     @objc private func nextTapped(sender: UIBarButtonItem) {
+        let signUpFormErrors = validateSignUpForm.CheckSignUpForm(userProfileModel: userProfileModel)
         let alertTitle = NSLocalizedString("title_alert", comment: "")
-        let alertMessage = NSLocalizedString("message_alert", comment: "")
+        let alertMessage = NSLocalizedString(signUpFormErrors, comment: "")
         let alertYesTitle = NSLocalizedString("yes_alert", comment: "")
         let alertNoTitle =  NSLocalizedString("no_alert", comment: "")
         // Create alert
@@ -116,7 +119,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         alert.addAction(UIAlertAction(title: alertNoTitle, style: .cancel, handler: nil))
         self.present(alert, animated: true)
     }
-
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return signUpDeatilSectionsData.count
@@ -441,7 +444,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         let selectedDate: String = dateFormatter.string(from: _sender.date)
-        print("Selected value \(selectedDate)")
         userProfileModel.birthday = selectedDate
         if let indexPath = dateIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
             cell.dateTextField.text = selectedDate

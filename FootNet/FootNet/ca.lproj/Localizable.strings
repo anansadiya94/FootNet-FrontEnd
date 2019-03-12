@@ -47,13 +47,16 @@
 "signUp_edit_record"="Edita per afegir el teu historial";
 
 //back button
-"back_buttom"="Enrere";
+"back_button"="Enrere";
 
 //back alert
 "title_alert"="Estàs segur que vols tornar?";
 "message_alert"="Tornar netejarà la informació del formulari de registre";
 "yes_alert"="Sí";
 "no_alert"="No";
+
+//done button
+"done_button"="Fet";
 
 //sex picker view
 "male"="Home";

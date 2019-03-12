@@ -58,6 +58,10 @@
 //done button
 "done_button"="Fet";
 
+//error sign up form alert
+"title_alert"="Error en el formulari de registre!";
+"fix_alert"="Arregla-ho";
+
 //sex picker view
 "male"="Home";
 "female"="Dona";

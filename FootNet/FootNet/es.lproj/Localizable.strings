@@ -57,6 +57,10 @@
 //done button
 "done_button"="Hecho";
 
+//error sign up form alert
+"title_alert"="Error en el formulario de registro!";
+"fix_alert"="Arréglalo";
+
 //sex picker view
 "male"="Hombre";
 "female"="Mujer";

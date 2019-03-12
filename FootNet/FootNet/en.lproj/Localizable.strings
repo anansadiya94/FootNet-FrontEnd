@@ -57,6 +57,23 @@
 //done button
 "done_button"="Done";
 
+//error sign up form alert
+"title_alert"="Sign Up Form Error!";
+"fix_alert"="Fix It";
+
+//sign up form errors
+"emptyName_error"="Name can't be empty!\n";
+"invalidName_error"="The name must have between 3 and 18 characters, space allowed!\n";
+"emptySurname_error"="Surname can't be empty!\n ";
+"invalidSurname_error"="The surnename must have between 3 and 18 characters, space allowed!\n";
+"emptyPhone_error"="Phone can't be empty!\n";
+"invalidPhone_error"="Invalid phone format!\n";
+"emptyEmail_error"="Email can't be empty!\n";
+"invalidEmail_error"="Invalid email format!\n";
+"emptyPassword_error"="Password can't be empty!\n";
+"emptyRepeatedPassword_error"="Repeated Password can't be empty!\n";
+
+
 //sex picker view
 "male"="Male";
 "female"="Female";

@@ -80,10 +80,10 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     @objc func back(sender: UIBarButtonItem) {
-        let alertTitle = NSLocalizedString("title_alert", comment: "")
-        let alertMessage = NSLocalizedString("message_alert", comment: "")
-        let alertYesTitle = NSLocalizedString("yes_alert", comment: "")
-        let alertNoTitle =  NSLocalizedString("no_alert", comment: "")
+        let alertTitle = "title_alert".localize()
+        let alertMessage = "message_alert".localize()
+        let alertYesTitle = "yes_alert".localize()
+        let alertNoTitle =  "no_alert".localize()
         // Create alert
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
         //add yes action
@@ -105,19 +105,23 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     @objc private func nextTapped(sender: UIBarButtonItem) {
         let signUpFormErrors = validateSignUpForm.CheckSignUpForm(userProfileModel: userProfileModel)
-        let alertTitle = NSLocalizedString("title_alert", comment: "")
-        let alertMessage = NSLocalizedString(signUpFormErrors, comment: "")
-        let alertYesTitle = NSLocalizedString("yes_alert", comment: "")
-        let alertNoTitle =  NSLocalizedString("no_alert", comment: "")
-        // Create alert
-        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-        //add yes action
-        alert.addAction(UIAlertAction(title: alertYesTitle, style: .default, handler: { action in
-            _ = self.navigationController?.popViewController(animated: true)
-        }))
-        //add no action
-        alert.addAction(UIAlertAction(title: alertNoTitle, style: .cancel, handler: nil))
-        self.present(alert, animated: true)
+        if signUpFormErrors.isEmpty {
+            // Create alert
+            let alert = UIAlertController(title: "Perfect", message: "", preferredStyle: .alert)
+            //add yes action
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        } else {
+            let alertTitle = "title_alert".localize()
+            let alertMessage = signUpFormErrors
+            let alertFixTitle = "fix_alert".localize()
+            // Create alert
+            let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+            //add fix action
+            alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
+            self.present(alert, animated: true)
+            }
+        
     }
     
     // MARK: - Table view data source

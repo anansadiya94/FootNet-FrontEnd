@@ -13,12 +13,12 @@
 		9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93822268801008E8361 /* UIFontExtension.swift */; };
 		9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074B222593B200F8ED17 /* AppDelegate.swift */; };
 		9E4E074E222593B200F8ED17 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074D222593B200F8ED17 /* LandingController.swift */; };
-		9E4E0751222593B200F8ED17 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E074F222593B200F8ED17 /* Landing.storyboard */; };
 		9E4E0753222593B300F8ED17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0752222593B300F8ED17 /* Assets.xcassets */; };
 		9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E07662225968700F8ED17 /* UIColorExtension.swift */; };
 		9E4E076A222596C400F8ED17 /* environments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0769222596C400F8ED17 /* environments.json */; };
 		9E4FA3642231A2FA00094509 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA3632231A2FA00094509 /* Constants.swift */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
+		9E79C38922391F9700A9C292 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* Landing.storyboard */; };
 		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */; };
 		9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */; };
@@ -51,13 +51,14 @@
 		9E4E0748222593B200F8ED17 /* FootNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4E074B222593B200F8ED17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E4E074D222593B200F8ED17 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
-		9E4E0750222593B200F8ED17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Landing.storyboard; sourceTree = "<group>"; };
 		9E4E0752222593B300F8ED17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E4E0757222593B300F8ED17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E4E07662225968700F8ED17 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9E4E0769222596C400F8ED17 /* environments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = environments.json; sourceTree = "<group>"; };
 		9E4FA3632231A2FA00094509 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		9E79C38822391F9700A9C292 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
+		9E79C3902239244700A9C292 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileCell.swift; sourceTree = "<group>"; };
 		9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -65,9 +66,6 @@
 		9EB24E852227E3F4004B0C66 /* CustomForgotPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomForgotPasswordButton.swift; path = FootNet/res/Buttons/CustomForgotPasswordButton.swift; sourceTree = SOURCE_ROOT; };
 		9EB24E982227F1EB004B0C66 /* SignUpSelectProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpSelectProfileModel.swift; path = FootNet/Model/SignUp/SignUpSelectProfileModel.swift; sourceTree = SOURCE_ROOT; };
 		9EB24E9F2227F27D004B0C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignUp.storyboard; sourceTree = "<group>"; };
-		9EB24EA22227F280004B0C66 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SignUp.strings; sourceTree = "<group>"; };
-		9EB24EA42227F283004B0C66 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/SignUp.strings; sourceTree = "<group>"; };
-		9EB24EA62227F284004B0C66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SignUp.strings; sourceTree = "<group>"; };
 		9EB24EA82227F4B5004B0C66 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomLabel.swift; path = FootNet/res/Labels/CustomLabel.swift; sourceTree = SOURCE_ROOT; };
 		9EB24EAB2227F54C004B0C66 /* SignUpSelectProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileData.swift; sourceTree = "<group>"; };
 		9EB3A6BE222D1A35002F244E /* SignUpDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -75,11 +73,7 @@
 		9EB3A6C2222D1B80002F244E /* SignUpDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailCell.swift; sourceTree = "<group>"; };
 		9EB3A6C4222D2ACF002F244E /* SignUpDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailData.swift; sourceTree = "<group>"; };
 		9EB3A6CC222D7909002F244E /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
-		9EC925512226E43A00B0E694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Landing.strings; sourceTree = "<group>"; };
-		9EC925522226E43C00B0E694 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Landing.strings; sourceTree = "<group>"; };
-		9EC925532226E43E00B0E694 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Landing.strings; sourceTree = "<group>"; };
 		9EC925572226E47B00B0E694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9EC925592226E47D00B0E694 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EC9255A2226E47E00B0E694 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EF232BC2237EF01004BF61F /* CustomChoosePhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomChoosePhotoButton.swift; path = FootNet/res/Buttons/CustomChoosePhotoButton.swift; sourceTree = SOURCE_ROOT; };
 		9EF232BF2237F277004BF61F /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomImageView.swift; path = FootNet/res/ImageViews/CustomImageView.swift; sourceTree = SOURCE_ROOT; };
@@ -201,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				9E35D930222681B4008E8361 /* LaunchScreen.storyboard */,
-				9E4E074F222593B200F8ED17 /* Landing.storyboard */,
+				9E79C38822391F9700A9C292 /* Landing.storyboard */,
 				9EB24EA02227F27D004B0C66 /* SignUp.storyboard */,
 			);
 			path = Storyboard;
@@ -393,9 +387,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
-				es,
 				ca,
 				en,
+				"es-ES",
 			);
 			mainGroup = 9E4E073F222593B200F8ED17;
 			productRefGroup = 9E4E0749222593B200F8ED17 /* Products */;
@@ -412,11 +406,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E79C38922391F9700A9C292 /* Landing.storyboard in Resources */,
 				9EC925562226E47B00B0E694 /* Localizable.strings in Resources */,
 				9E4E076A222596C400F8ED17 /* environments.json in Resources */,
 				9EB24E9E2227F27D004B0C66 /* SignUp.storyboard in Resources */,
 				9E4E0753222593B300F8ED17 /* Assets.xcassets in Resources */,
-				9E4E0751222593B200F8ED17 /* Landing.storyboard in Resources */,
 				9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,24 +500,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9E4E074F222593B200F8ED17 /* Landing.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E4E0750222593B200F8ED17 /* Base */,
-				9EC925512226E43A00B0E694 /* en */,
-				9EC925522226E43C00B0E694 /* es */,
-				9EC925532226E43E00B0E694 /* ca */,
-			);
-			name = Landing.storyboard;
-			sourceTree = "<group>";
-		};
 		9EB24EA02227F27D004B0C66 /* SignUp.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9EB24E9F2227F27D004B0C66 /* Base */,
-				9EB24EA22227F280004B0C66 /* es */,
-				9EB24EA42227F283004B0C66 /* ca */,
-				9EB24EA62227F284004B0C66 /* en */,
 			);
 			name = SignUp.storyboard;
 			sourceTree = "<group>";
@@ -532,8 +512,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9EC925572226E47B00B0E694 /* en */,
-				9EC925592226E47D00B0E694 /* es */,
 				9EC9255A2226E47E00B0E694 /* ca */,
+				9E79C3902239244700A9C292 /* es-ES */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

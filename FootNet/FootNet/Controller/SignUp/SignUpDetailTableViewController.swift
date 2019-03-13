@@ -80,7 +80,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     @objc func back(sender: UIBarButtonItem) {
-        let alertTitle = "title_alert".localize()
+        let alertTitle = "title_back_alert".localize()
         let alertMessage = "message_alert".localize()
         let alertYesTitle = "yes_alert".localize()
         let alertNoTitle =  "no_alert".localize()
@@ -112,7 +112,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
         } else {
-            let alertTitle = "title_alert".localize()
+            let alertTitle = "title_done_alert".localize()
             let alertMessage = signUpFormErrors
             let alertFixTitle = "fix_alert".localize()
             // Create alert

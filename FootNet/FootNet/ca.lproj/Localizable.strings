@@ -50,7 +50,7 @@
 "back_button"="Enrere";
 
 //back alert
-"title_alert"="Estàs segur que vols tornar?";
+"title_back_alert"="Estàs segur que vols tornar?";
 "message_alert"="Tornar netejarà la informació del formulari de registre";
 "yes_alert"="Sí";
 "no_alert"="No";
@@ -59,7 +59,7 @@
 "done_button"="Fet";
 
 //error sign up form alert
-"title_alert"="Error en el formulari de registre!";
+"title_done_alert"="Error en el formulari de registre!";
 "fix_alert"="Arregla-ho";
 
 //sign up form errors

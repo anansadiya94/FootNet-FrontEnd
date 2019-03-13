@@ -49,7 +49,7 @@
 "back_button"="Atrás";
 
 //back alert
-"title_alert"="¿Estás seguro de que deseas volver?";
+"title_back_alert"="¿Estás seguro de que deseas volver?";
 "message_alert"="Volver atrás limpiará la información del formulario de registro";
 "yes_alert"="Sí";
 "no_alert"="No";
@@ -58,7 +58,7 @@
 "done_button"="Hecho";
 
 //error sign up form alert
-"title_alert"="Error en el formulario de registro!";
+"title_done_alert"="Error en el formulario de registro!";
 "fix_alert"="Arréglalo";
 
 //sign up form errors

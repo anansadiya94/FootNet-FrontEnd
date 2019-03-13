@@ -49,7 +49,7 @@
 "back_button"="Back";
 
 //back alert
-"title_alert"="Are you sure you want to go back?";
+"title_back_alert"="Are you sure you want to go back?";
 "message_alert"="Going back will clean the register form information";
 "yes_alert"="Yes";
 "no_alert"="No";
@@ -58,7 +58,7 @@
 "done_button"="Done";
 
 //error sign up form alert
-"title_alert"="Sign Up Form Error!";
+"title_done_alert"="Sign Up Form Error!";
 "fix_alert"="Fix It";
 
 //sign up form errors

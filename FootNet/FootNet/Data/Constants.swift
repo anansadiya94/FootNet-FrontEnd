@@ -8,12 +8,6 @@
 
 import Foundation
 
-extension String {
-    func localize() -> String {
-        return NSLocalizedString(self, comment: "")
-    }
-}
-
 struct Constants{
     static let sex = ["male", "female"]
     static let sexLocalized = sex.map({$0.localize()})

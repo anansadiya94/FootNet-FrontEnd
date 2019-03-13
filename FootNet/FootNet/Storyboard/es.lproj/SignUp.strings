@@ -1,0 +1,27 @@
+
+/* Class = "UITextField"; placeholder = "picker view"; ObjectID = "MMh-2A-r8Y"; */
+"MMh-2A-r8Y.placeholder" = "picker view";
+
+/* Class = "UITextField"; placeholder = "normal"; ObjectID = "NFh-np-UJo"; */
+"NFh-np-UJo.placeholder" = "normal";
+
+/* Class = "UIButton"; normalTitle = "Click here to change"; ObjectID = "O4B-d4-7ho"; */
+"O4B-d4-7ho.normalTitle" = "Click here to change";
+
+/* Class = "UITextField"; placeholder = "date"; ObjectID = "WDC-qv-cJp"; */
+"WDC-qv-cJp.placeholder" = "date";
+
+/* Class = "UINavigationItem"; title = "Sign Up"; ObjectID = "WfW-JH-4Qu"; */
+"WfW-JH-4Qu.title" = "Sign Up";
+
+/* Class = "UILabel"; text = "Profile photo"; ObjectID = "kmE-lB-Pkk"; */
+"kmE-lB-Pkk.text" = "Profile photo";
+
+/* Class = "UINavigationController"; title = "SignUp"; ObjectID = "ppL-vL-Pkj"; */
+"ppL-vL-Pkj.title" = "SignUp";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ulz-Nu-wWb"; */
+"ulz-Nu-wWb.text" = "Label";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "yRG-33-Uw5"; */
+"yRG-33-Uw5.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";

@@ -22,7 +22,7 @@ class SignUpSelectProfileTableViewController: UITableViewController {
         createBackButton()
         
         // navigationController Configuration
-        navigationController?.navigationBar.topItem?.title = NSLocalizedString("signUp_navBarTitle", comment: "")
+        navigationController?.navigationBar.topItem?.title = "signUp_navBarTitle".localize()
 
         DDLogInfo("Load SignUp View")
         signUpSelectProfileData = SignUpSelectProfileData.getAllSignUpSelectProfileData()
@@ -63,7 +63,7 @@ class SignUpSelectProfileTableViewController: UITableViewController {
     
     //section title
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = NSLocalizedString("signUp_sectionHeader", comment: "")
+        let section = "signUp_sectionHeader".localize()
         return section
     }
     

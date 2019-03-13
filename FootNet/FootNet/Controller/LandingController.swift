@@ -12,11 +12,17 @@ import CocoaLumberjack
 class LandingController: BaseViewController, UITextFieldDelegate {
 
     //IBOutlets
-    @IBOutlet weak var textFieldEmail: CustomTextField!
-    @IBOutlet weak var textFieldPassword: CustomTextField!
-    @IBOutlet weak var buttonForgotPassword: CustomSignInSignUpButton!
-    @IBOutlet weak var buttonSignIn: CustomSignInSignUpButton!
-    @IBOutlet weak var buttonSignUp: CustomSignInSignUpButton!
+    @IBOutlet weak var emailTextField: CustomTextField!
+    @IBOutlet weak var passwordTextField: CustomTextField!
+    @IBOutlet weak var forgotPasswordButton: CustomSignInSignUpButton!
+    @IBOutlet weak var signInButton: CustomSignInSignUpButton!
+    @IBOutlet weak var signUpButton: CustomSignInSignUpButton!
+    
+    
+    @IBOutlet weak var changeLanguageLabel: CustomLabel!
+    @IBOutlet weak var englishButton: UIButton!
+    @IBOutlet weak var spanishButton: UIButton!
+    @IBOutlet weak var catalanButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,33 +31,72 @@ class LandingController: BaseViewController, UITextFieldDelegate {
         configureDismissKeyboard()
     }
     
+    
+    @IBAction func changeToEnglish(_ sender: Any) {
+        if LocalizationSystem.sharedInstance.getLanguage() == "en" {
+            print("ESTOY EN EN")
+        } else {
+            LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
+        }
+        let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
+        let appDlg = UIApplication.shared.delegate as? AppDelegate
+        appDlg?.window?.rootViewController = landing
+    }
+    
+    @IBAction func changeToSpanish(_ sender: Any) {
+        if LocalizationSystem.sharedInstance.getLanguage() == "es" {
+            print("ESTOY EN ES")
+        } else {
+            LocalizationSystem.sharedInstance.setLanguage(languageCode: "es")
+        }
+        let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
+        let appDlg = UIApplication.shared.delegate as? AppDelegate
+        appDlg?.window?.rootViewController = landing
+    }
+    
+    
+    @IBAction func changeToCatalan(_ sender: Any) {
+        if LocalizationSystem.sharedInstance.getLanguage() == "ca" {
+            print("ESTOY EN CA")
+        } else {
+            LocalizationSystem.sharedInstance.setLanguage(languageCode: "ca")
+        }
+        let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
+        let appDlg = UIApplication.shared.delegate as? AppDelegate
+        appDlg?.window?.rootViewController = landing
+    }
+    
+    
     // MARK: UI Configurations
     private func configureOutlets() {
         //placeholders
-        textFieldEmail.placeholder = NSLocalizedString("email_placeholder", comment: "")
-        textFieldEmail.keyboardType = .emailAddress
-        textFieldPassword.placeholder = NSLocalizedString("password_placeholder", comment: "")
-        textFieldPassword.isSecureTextEntry = true
+        emailTextField.placeholder = "email_placeholder".localize()
+        emailTextField.keyboardType = .emailAddress
+        passwordTextField.placeholder = "password_placeholder".localize()
+        passwordTextField.isSecureTextEntry = true
         //buttons
-        let forgotPasswordTitle = NSLocalizedString("forgotPassword_button", comment: "")
-        buttonForgotPassword.setTitle(forgotPasswordTitle, for: .normal)
-        let signInTitle = NSLocalizedString("signIn_button", comment: "")
-        buttonSignIn.setTitle(signInTitle, for: .normal)
-        let signUpTitle = NSLocalizedString("signUp_button", comment: "")
-        buttonSignUp.setTitle(signUpTitle, for: .normal)
+        let forgotPasswordTitle = "forgotPassword_button".localize()
+        forgotPasswordButton.setTitle(forgotPasswordTitle, for: .normal)
+        let signInTitle = "signIn_button".localize()
+        signInButton.setTitle(signInTitle, for: .normal)
+        let signUpTitle = "signUp_button".localize()
+        signUpButton.setTitle(signUpTitle, for: .normal)
+        
+        //Change language
+        changeLanguageLabel.text = "changeLanguage_label".localize()
     }
     
     //dismiss keyboad configuration
     private func configureDismissKeyboard() {
-        textFieldEmail.delegate = self
-        textFieldPassword.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         self.setupHideKeyboardOnTap()
     }
     
     //dismiss keyboard by tapping on the return button
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textFieldEmail.resignFirstResponder()
-        textFieldPassword.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         return true
     }
 }

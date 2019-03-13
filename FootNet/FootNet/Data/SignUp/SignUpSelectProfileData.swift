@@ -16,11 +16,11 @@ class SignUpSelectProfileData {
         var signUpSelectProfileData = [SignUpSelectProfileModel]()
         
         signUpSelectProfileData = [
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("player_label", comment: ""), type: .Player ),
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("coach_label", comment: ""), type: .Coach),
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("sportDirector_label", comment: ""), type: .SportDirector),
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("team_label", comment: ""), type: .Team),
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: NSLocalizedString("fan_label", comment: ""), type: .Fan)
+            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "player_label".localize(), type: .Player ),
+            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "coach_label".localize(), type: .Coach),
+            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "sportDirector_label".localize(), type: .SportDirector),
+            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "team_label".localize(), type: .Team),
+            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "fan_label".localize(), type: .Fan)
         ]
         
         return signUpSelectProfileData

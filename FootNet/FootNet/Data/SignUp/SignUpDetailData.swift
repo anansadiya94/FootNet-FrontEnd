@@ -25,67 +25,67 @@ class SignUpDetailData {
         switch profileType {
         case .Player:
             //Section 1
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_name", comment: ""), tag: userProfileTags.name))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_surname", comment: ""), tag: userProfileTags.surname))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_phone", comment: ""), tag: userProfileTags.phone))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_email", comment: ""), tag: userProfileTags.email))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_password", comment: ""), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatPassword))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
             
             //Section 2
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_sex", comment: ""), tag: userProfileTags.sex))
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_bithdayDate", comment: ""), tag: userProfileTags.birthday))
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_nationality", comment: ""), tag: userProfileTags.nationality))
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_location", comment: ""), tag: userProfileTags.location))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
             
             //Section3
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_actualClub", comment: ""), tag: userProfileTags.actualClub))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo_label", comment: ""), tag: userProfileTags.photo))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_bio", comment: ""), tag: userProfileTags.bio))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_record", comment: ""), tag: userProfileTags.record))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_actualClub".localize(), tag: userProfileTags.actualClub))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
             
             //Section 4
-            section4Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_favoritePosition", comment: ""), tag: userProfileTags.favoritePosition))
-            section4Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_preferredPositions", comment: ""), tag: userProfileTags.preferredPositions))
-            section4Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_weight", comment: ""), tag: userProfileTags.weight))
-            section4Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_height", comment: ""), tag: userProfileTags.height))
+            section4Data.append(SignUpDetailModel(placeholder: "signUp_favoritePosition".localize(), tag: userProfileTags.favoritePosition))
+            section4Data.append(SignUpDetailModel(placeholder: "signUp_preferredPositions".localize(), tag: userProfileTags.preferredPositions))
+            section4Data.append(SignUpDetailModel(placeholder: "signUp_weight".localize(), tag: userProfileTags.weight))
+            section4Data.append(SignUpDetailModel(placeholder: "signUp_height".localize(), tag: userProfileTags.height))
         case .Coach, .SportDirector, .Fan:
             //Section 1
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_name", comment: ""), tag: userProfileTags.name))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_surname", comment: ""), tag: userProfileTags.surname))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_phone", comment: ""), tag: userProfileTags.phone))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_email", comment: ""), tag: userProfileTags.email))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_password", comment: ""), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatPassword))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
             
             //Section 2
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_sex", comment: ""), tag: userProfileTags.sex))
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_bithdayDate", comment: ""), tag: userProfileTags.birthday))
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_nationality", comment: ""), tag: userProfileTags.nationality))
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_location", comment: ""), tag: userProfileTags.location))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
             
             //Section3
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_actualClub", comment: ""), tag: userProfileTags.actualClub))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo_label", comment: ""), tag: userProfileTags.photo))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_bio", comment: ""), tag: userProfileTags.bio))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_record", comment: ""), tag: userProfileTags.record))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_actualClub".localize(), tag: userProfileTags.actualClub))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
             
             //Section 4
         case .Team:
             //Section 1
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_name", comment: ""), tag: userProfileTags.name))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_phone", comment: ""), tag: userProfileTags.phone))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_email", comment: ""), tag: userProfileTags.email))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_password", comment: ""), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatPassword))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
             
             //Section 2
-            section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_location", comment: ""), tag: userProfileTags.location))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
             
             //Section3
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_photo_label", comment: ""), tag: userProfileTags.photo))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_bio", comment: ""), tag: userProfileTags.bio))
-            section3Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_record", comment: ""), tag: userProfileTags.record))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
             
             //Section 4
         }

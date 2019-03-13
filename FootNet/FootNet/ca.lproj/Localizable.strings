@@ -12,6 +12,7 @@
 "forgotPassword_button"="Heu perdut la contrasenya?";
 "signIn_button"="Inicia sessió";
 "signUp_button"="No tens un compte? Registra't";
+"changeLanguage_label"="Tria l'idioma que vulguis:";
 
 //Sign Up Select Profile Type
 "signUp_navBarTitle"="Registrar-se";

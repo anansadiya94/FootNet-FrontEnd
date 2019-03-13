@@ -104,7 +104,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     @objc private func nextTapped(sender: UIBarButtonItem) {
-        let signUpFormErrors = validateSignUpForm.CheckSignUpForm(userProfileModel: userProfileModel)
+        let signUpFormErrors = validateSignUpForm.CheckSignUpForm(UserProfileModel: userProfileModel, ProfileType: profileType!)
         if signUpFormErrors.isEmpty {
             // Create alert
             let alert = UIAlertController(title: "Perfect", message: "", preferredStyle: .alert)
@@ -152,8 +152,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.email)
         case userProfileTags.password:
             return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.password)
-        case userProfileTags.repeatedPassword:
-            return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.repeatedPassword)
+        case userProfileTags.repeatPassword:
+            return textFieldCell(TableView: tableView, IndexPath: indexPath, Placeholder: placeholder, Tag: userProfileTags.repeatPassword)
             
         //Section 2
         case userProfileTags.sex:
@@ -233,10 +233,10 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 cell.textField.isSecureTextEntry = true
                 cell.textField.clearButtonMode = .whileEditing
                 cell.textField.delegate = self
-            case userProfileTags.repeatedPassword:
+            case userProfileTags.repeatPassword:
                 cell.textField.placeholder = placeholder
                 cell.textField.tag = tag
-                cell.textField.text = userProfileModel.repeatedPassword
+                cell.textField.text = userProfileModel.repeatPassword
                 cell.textField.isSecureTextEntry = true
                 cell.textField.clearButtonMode = .whileEditing
                 cell.textField.delegate = self
@@ -436,8 +436,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             userProfileModel.email = text
         case userProfileTags.password:
             userProfileModel.password = text
-        case userProfileTags.repeatedPassword:
-            userProfileModel.repeatedPassword = text
+        case userProfileTags.repeatPassword:
+            userProfileModel.repeatPassword = text
         default:
             break
         }

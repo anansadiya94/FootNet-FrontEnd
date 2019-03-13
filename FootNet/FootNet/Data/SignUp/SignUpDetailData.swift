@@ -30,7 +30,7 @@ class SignUpDetailData {
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_phone", comment: ""), tag: userProfileTags.phone))
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_email", comment: ""), tag: userProfileTags.email))
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_password", comment: ""), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatedPassword))
+            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatPassword))
             
             //Section 2
             section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_sex", comment: ""), tag: userProfileTags.sex))
@@ -56,7 +56,7 @@ class SignUpDetailData {
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_phone", comment: ""), tag: userProfileTags.phone))
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_email", comment: ""), tag: userProfileTags.email))
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_password", comment: ""), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatedPassword))
+            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatPassword))
             
             //Section 2
             section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_sex", comment: ""), tag: userProfileTags.sex))
@@ -74,11 +74,10 @@ class SignUpDetailData {
         case .Team:
             //Section 1
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_name", comment: ""), tag: userProfileTags.name))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_surname", comment: ""), tag: userProfileTags.surname))
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_phone", comment: ""), tag: userProfileTags.phone))
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_email", comment: ""), tag: userProfileTags.email))
             section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_password", comment: ""), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatedPassword))
+            section1Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_repeatPassword", comment: ""), tag: userProfileTags.repeatPassword))
             
             //Section 2
             section2Data.append(SignUpDetailModel(placeholder: NSLocalizedString("signUp_location", comment: ""), tag: userProfileTags.location))

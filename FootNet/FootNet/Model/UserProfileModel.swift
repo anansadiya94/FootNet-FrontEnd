@@ -15,7 +15,7 @@ struct UserProfileTags {
     let phone = 2
     let email = 3
     let password = 4
-    let repeatedPassword = 5
+    let repeatPassword = 5
     
     let sex = 6
     let birthday = 7
@@ -43,7 +43,7 @@ class UserProfileModel {
     var email: String!
     var phone: String!
     var password: String!
-    var repeatedPassword: String!
+    var repeatPassword: String!
     
     var sex: String?
     var birthday: String?
@@ -60,14 +60,14 @@ class UserProfileModel {
     var weight: String?
     var height: String?
     
-    init(token: String!, userId: Int!, name: String!, surname: String?, email: String!, phone: String!, password: String!, repeatedPassword: String!, sex: String?, birthday: String?, nationality: String?, location: String!, actualClub: String?, photo: String!, bio: String!, record: String!, favoritePosition: String?, preferredPositions: String?, weight: String?, height: String?) {
+    init(token: String!, userId: Int!, name: String!, surname: String?, email: String!, phone: String!, password: String!, repeatPassword: String!, sex: String?, birthday: String?, nationality: String?, location: String!, actualClub: String?, photo: String!, bio: String!, record: String!, favoritePosition: String?, preferredPositions: String?, weight: String?, height: String?) {
         self.token = token
         self.userId = userId
         self.name = name
         self.email = email
         self.phone = phone
         self.password = password
-        self.repeatedPassword = repeatedPassword
+        self.repeatPassword = repeatPassword
         self.sex = sex
         self.birthday = birthday
         self.nationality = nationality

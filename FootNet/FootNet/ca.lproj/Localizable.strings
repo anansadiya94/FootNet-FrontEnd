@@ -62,6 +62,21 @@
 "title_alert"="Error en el formulari de registre!";
 "fix_alert"="Arregla-ho";
 
+//sign up form errors
+"emptyName_error"="Nom obligatori!\n";
+"invalidName_error"="El nom ha de tenir entre 3 i 18 caràcters, espai permès!\n";
+"emptySurname_error"="Cognoms obligatoris!\n ";
+"invalidSurname_error"="Els cognoms han de tenir entre 3 i 18 caràcters, espai permès!\n";
+"emptyPhone_error"="Mòbil obligatori!\n";
+"invalidPhone_error"="Format de telèfon no vàlid!\n";
+"emptyEmail_error"="Correu electrònic obligatori!\n";
+"invalidEmail_error"="Format de correu electrònic no vàlid!\n";
+"emptyPassword_error"="Contrasenya obligatòria!\n";
+"invalidPassword_error"="La contrasenya ha de tenir almenys una lletra majúscula, una lletra minúscula, un nombre i una longitud de 8 caràcters!\n";
+"emptyRepeatPassword_error"="Repetir contrasenya obligatòria!\n";
+"invalidRepeatPassword_error"="La contrasenya repetida ha de tenir almenys una lletra majúscula, una lletra minúscula, un nombre i una longitud de 8 caràcters!\n";
+"matchPasswords_error"="La contrasenya i la contrasenya repetida no coincideixen!\n";
+
 //sex picker view
 "male"="Home";
 "female"="Dona";

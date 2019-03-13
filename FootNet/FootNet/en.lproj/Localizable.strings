@@ -72,7 +72,7 @@
 "invalidEmail_error"="Invalid email format!\n";
 "emptyPassword_error"="Password required!\n";
 "invalidPassword_error"="Password should be at least one capital letter, one small letter, one number and 8 character length!\n";
-"emptyRepeatPassword_error"="Repeat required!\n";
+"emptyRepeatPassword_error"="Repeat password required!\n";
 "invalidRepeatPassword_error"="Repeat password should be at least one capital letter, one small letter, one number and 8 character length!\n";
 "matchPasswords_error"="Password and repeat password don't match!\n";
 

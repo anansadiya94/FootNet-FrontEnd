@@ -75,6 +75,10 @@
 "emptyRepeatPassword_error"="Repetir contraseña obligatorio!\n";
 "invalidRepeatPassword_error"="La contraseña repetida debe tener al menos una letra mayúscula, una letra minúscula, un número y una longitud de 8 caracteres!\n";
 "matchPasswords_error"="La contraseña y la contraseña repetida no coinciden!\n";
+"emptySex_error"="Sexo obligatorio!\n";
+"emptyBirthday_error"="Fecha de nacimiento obligatoria!\n";
+"emptyNationality_error"="Nacionalidad obligatoria!\n";
+"emptyLocation_error"="Localidad obligatorio!\n";
 
 //sex picker view
 "male"="Hombre";

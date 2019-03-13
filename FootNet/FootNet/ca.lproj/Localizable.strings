@@ -33,7 +33,7 @@
 "signUp_bithdayDate"="Data de naixement";
 "signUp_nationality"="Nacionalitat";
 "signUp_location"="Localitat";
-"signUp_favoritePosition"="Poisción Favorita";
+"signUp_favoritePosition"="Poisció Preferida";
 "signUp_preferredPositions"="Posicions Preferides";
 "signUp_weight"="Pes";
 "signUp_height"="Alçada";
@@ -76,6 +76,10 @@
 "emptyRepeatPassword_error"="Repetir contrasenya obligatòria!\n";
 "invalidRepeatPassword_error"="La contrasenya repetida ha de tenir almenys una lletra majúscula, una lletra minúscula, un nombre i una longitud de 8 caràcters!\n";
 "matchPasswords_error"="La contrasenya i la contrasenya repetida no coincideixen!\n";
+"emptySex_error"="Sexo obligatori!\n";
+"emptyBirthday_error"="Data de naixement obligatòria!\n";
+"emptyNationality_error"="Nacionalitat obligatòria!\n";
+"emptyLocation_error"="Localitat obligatòria!\n";
 
 //sex picker view
 "male"="Home";

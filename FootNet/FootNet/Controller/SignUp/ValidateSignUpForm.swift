@@ -24,6 +24,10 @@ class ValidateSignUpForm {
         signUpFormErrors += checkPassword(userProfileModel.password)
         signUpFormErrors += checkRepeatPassword(userProfileModel.repeatPassword)
         signUpFormErrors += checkRPasswordsMatch(userProfileModel.password, userProfileModel.repeatPassword)
+        signUpFormErrors += checkSex(userProfileModel.sex, profileType)
+        signUpFormErrors += checkBirthday(userProfileModel.birthday, profileType)
+        signUpFormErrors += checkNationality(userProfileModel.nationality, profileType)
+        signUpFormErrors += checkLocation(userProfileModel.location)
         
         return signUpFormErrors
     }
@@ -62,7 +66,6 @@ class ValidateSignUpForm {
                 return "invalidSurname_error".localize()
             }
         }
-        
     }
     
     private func checkPhone(_ phone: String?) -> String {
@@ -150,5 +153,49 @@ class ValidateSignUpForm {
         }
         return ""
     }
+    
+    private func checkSex(_ sex: String?, _ profileType: ProfileType) -> String {
+        switch profileType {
+        case .Team:
+            return ""
+        default:
+            if sex == nil {
+                return "emptySex_error".localize()
+            }
+        }
+        return ""
+    }
+    
+    private func checkBirthday(_ birthday: String?, _ profileType: ProfileType) -> String {
+        switch profileType {
+        case .Team:
+            return ""
+        default:
+            if birthday == nil {
+                return "emptyBirthday_error".localize()
+            }
+        }
+        return ""
+    }
+    
+    private func checkNationality(_ nationality: String?, _ profileType: ProfileType) -> String {
+        switch profileType {
+        case .Team:
+            return ""
+        default:
+            if nationality == nil {
+                return "emptyNationality_error".localize()
+            }
+        }
+        return ""
+    }
+    
+    private func checkLocation(_ Location: String?) -> String {
+        if Location == nil {
+            return "emptyLocation_error".localize()
+        }
+        return ""
+    }
+    
     
 }

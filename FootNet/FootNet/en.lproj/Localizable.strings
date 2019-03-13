@@ -75,7 +75,10 @@
 "emptyRepeatPassword_error"="Repeat password required!\n";
 "invalidRepeatPassword_error"="Repeat password should be at least one capital letter, one small letter, one number and 8 character length!\n";
 "matchPasswords_error"="Password and repeat password don't match!\n";
-
+"emptySex_error"="Sex required!\n";
+"emptyBirthday_error"="Birthday required!\n";
+"emptyNationality_error"="Nationality required!\n";
+"emptyLocation_error"="Location required!\n";
 
 //sex picker view
 "male"="Male";

@@ -263,10 +263,11 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     //Return date cell
     func dateTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
         if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
-            if cell.dateTextField.text != nil {
+            if userProfileModel.birthday != nil {
                 cell.dateTextField.text = userProfileModel.birthday
             } else {
-                cell.dateTextField.placeholder = placeholder
+                cell.dateTextField.textColor = UIColor.colorPlaceHolderDefault
+                cell.dateTextField.text = placeholder
             }
             cell.dateTextField.tag = tag
             cell.dateTextField.inputView = datePicker
@@ -451,6 +452,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         userProfileModel.birthday = selectedDate
         if let indexPath = dateIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
             cell.dateTextField.text = selectedDate
+            cell.dateTextField.textColor = .black
         }
         view.endEditing(true)
     }
@@ -582,7 +584,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.textColor = .black
     }
-    
 }
 
 // Helper function inserted by Swift 4.2 migrator.

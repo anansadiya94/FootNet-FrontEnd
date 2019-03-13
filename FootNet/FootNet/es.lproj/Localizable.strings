@@ -79,6 +79,11 @@
 "emptyBirthday_error"="Fecha de nacimiento obligatoria!\n";
 "emptyNationality_error"="Nacionalidad obligatoria!\n";
 "emptyLocation_error"="Localidad obligatorio!\n";
+"emptyClubActual_error"="Club actual obligatoro!\n";
+"emptyFavoritePosition_error"="Poisción favorita obligatoria!\n";
+"emptyPreferredPositions_error"="Posiciones preferidas obligatorias!\n";
+"emptyWeight_error"="Peso obligatorio!\n";
+"emptyHeight_error"="Altura obligatoria!\n";
 
 //sex picker view
 "male"="Hombre";

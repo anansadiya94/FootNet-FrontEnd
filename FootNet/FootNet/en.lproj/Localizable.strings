@@ -79,6 +79,13 @@
 "emptyBirthday_error"="Birthday required!\n";
 "emptyNationality_error"="Nationality required!\n";
 "emptyLocation_error"="Location required!\n";
+"emptyClubActual_error"="Club actual required!\n";
+"empty_error"="Club Actual required!\n";
+"emptyClubActual_error"="Club actual required!\n";
+"emptyFavoritePosition_error"="Favorite position required!\n";
+"emptyPreferredPositions_error"="Preferred positions required!\n";
+"emptyWeight_error"="Weight required!\n";
+"emptyHeight_error"="Height required!\n";
 
 //sex picker view
 "male"="Male";

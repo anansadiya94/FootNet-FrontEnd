@@ -80,6 +80,11 @@
 "emptyBirthday_error"="Data de naixement obligatòria!\n";
 "emptyNationality_error"="Nacionalitat obligatòria!\n";
 "emptyLocation_error"="Localitat obligatòria!\n";
+"emptyClubActual_error"="Club actual obligatorio!\n";
+"emptyFavoritePosition_error"="Poisción favorita obligatoria!\n";
+"emptyPreferredPositions_error"="Posicions preferides obligatòries!\n";
+"emptyWeight_error"="Pes obligatori!\n";
+"emptyHeight_error"="Alçada obligatòria!\n";
 
 //sex picker view
 "male"="Home";

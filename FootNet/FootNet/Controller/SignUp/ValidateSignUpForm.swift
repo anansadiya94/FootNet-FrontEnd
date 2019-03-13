@@ -28,6 +28,11 @@ class ValidateSignUpForm {
         signUpFormErrors += checkBirthday(userProfileModel.birthday, profileType)
         signUpFormErrors += checkNationality(userProfileModel.nationality, profileType)
         signUpFormErrors += checkLocation(userProfileModel.location)
+        signUpFormErrors += checkClubActual(userProfileModel.actualClub, profileType)
+        signUpFormErrors += checkFavoritePosition(userProfileModel.favoritePosition, profileType)
+        signUpFormErrors += checkPreferredPositions(userProfileModel.preferredPositions, profileType)
+        signUpFormErrors += checkWeight(userProfileModel.weight, profileType)
+        signUpFormErrors += checkHeight(userProfileModel.height, profileType)
         
         return signUpFormErrors
     }
@@ -193,6 +198,66 @@ class ValidateSignUpForm {
     private func checkLocation(_ Location: String?) -> String {
         if Location == nil {
             return "emptyLocation_error".localize()
+        }
+        return ""
+    }
+    
+    private func checkClubActual(_ clubActual: String?, _ profileType: ProfileType) -> String {
+        switch profileType {
+        case .Team:
+            return ""
+        default:
+            if clubActual == nil {
+                return "emptyClubActual_error".localize()
+            }
+        }
+        return ""
+    }
+    
+    private func checkFavoritePosition(_ favoritePosition: String?, _ profileType: ProfileType) -> String {
+        switch profileType {
+        case .Player:
+            if favoritePosition == nil {
+                return "emptyFavoritePosition_error".localize()
+            }
+        default:
+            return ""
+        }
+        return ""
+    }
+    
+    private func checkPreferredPositions(_ preferredPositions: String?, _ profileType: ProfileType) -> String {
+        switch profileType {
+        case .Player:
+            if preferredPositions == nil {
+                return "emptyPreferredPositions_error".localize()
+            }
+        default:
+            return ""
+        }
+        return ""
+    }
+    
+    private func checkWeight(_ weight: String?, _ profileType: ProfileType) -> String {
+        switch profileType {
+        case .Player:
+            if weight == nil {
+                return "emptyWeight_error".localize()
+            }
+        default:
+            return ""
+        }
+        return ""
+    }
+    
+    private func checkHeight(_ height: String?, _ profileType: ProfileType) -> String {
+        switch profileType {
+        case .Player:
+            if height == nil {
+                return "emptyHeight_error".localize()
+            }
+        default:
+            return ""
         }
         return ""
     }

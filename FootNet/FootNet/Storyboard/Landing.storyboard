@@ -121,12 +121,15 @@
                         <viewLayoutGuide key="safeArea" id="wGB-Iy-jwD"/>
                     </view>
                     <connections>
-                        <outlet property="changeLanguageLabel" destination="IdF-hx-9sK" id="Yhz-UN-NeG"/>
+                        <outlet property="catalanButton" destination="UVV-25-NBO" id="En4-X6-uch"/>
+                        <outlet property="changeLanguageLabel" destination="IdF-hx-9sK" id="B3H-Qq-K3C"/>
                         <outlet property="emailTextField" destination="2yV-b4-KOt" id="RMo-Rl-L4z"/>
+                        <outlet property="englishButton" destination="0gJ-cB-95d" id="OCd-dj-qhp"/>
                         <outlet property="forgotPasswordButton" destination="IrD-0Q-Ixg" id="zmn-hu-DBp"/>
                         <outlet property="passwordTextField" destination="vDo-uV-Heh" id="Eua-3q-JLC"/>
                         <outlet property="signInButton" destination="c0E-wH-gML" id="gkA-Xb-55l"/>
                         <outlet property="signUpButton" destination="BsG-vG-gCV" id="gij-SF-Yvv"/>
+                        <outlet property="spanishButton" destination="osY-zf-lwK" id="QWv-1q-mmH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

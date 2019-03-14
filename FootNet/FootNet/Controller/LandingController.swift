@@ -84,6 +84,25 @@ class LandingController: BaseViewController, UITextFieldDelegate {
         
         //Change language
         changeLanguageLabel.text = "changeLanguage_label".localize()
+        enablaDisableButtons()
+    }
+    
+    //enable or disable language buttons
+    private func enablaDisableButtons() {
+        let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
+        switch currentLanguage {
+        case "en":
+            englishButton.isEnabled = false
+            break
+        case "es":
+            spanishButton.isEnabled = false
+            break
+        case "ca":
+            catalanButton.isEnabled = false
+            break
+        default:
+            break
+        }
     }
     
     //dismiss keyboad configuration

@@ -38,6 +38,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     let imagePicker = UIImagePickerController()
     var chosenImage: UIImage?
+    var activityIndicator = UIActivityIndicatorView()
     
     var validateSignUpForm = ValidateSignUpForm()
 
@@ -50,6 +51,9 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         //Navigation bar buttons
         createBackButton()
         createNextButton()
+        
+        //create spinner
+        createSpinner()
         
         //Date Picker
         datePicker = UIDatePicker()
@@ -106,11 +110,22 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     @objc private func nextTapped(sender: UIBarButtonItem) {
         let signUpFormErrors = validateSignUpForm.CheckSignUpForm(UserProfileModel: userProfileModel, ProfileType: profileType!)
         if signUpFormErrors.isEmpty {
-            // Create alert
-            let alert = UIAlertController(title: "Perfect", message: "", preferredStyle: .alert)
-            //add yes action
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            // Start the loading animation
+            activityIndicator.startAnimating()
+            
+            //TODO - API CALL WITH ALL USER INFO
+            
+            let error = false
+            if !error {
+                // Create alert
+                let alert = UIAlertController(title: "ERROR", message: "", preferredStyle: .alert)
+                //add yes action
+                alert.addAction(UIAlertAction(title: "ERROR API OR INTERNET CONECTION ", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            } else {
+                // To remove it, just call removeFromSuperview()
+                activityIndicator.removeFromSuperview()
+            }
         } else {
             let alertTitle = "title_done_alert".localize()
             let alertMessage = signUpFormErrors
@@ -121,7 +136,18 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
             self.present(alert, animated: true)
             }
-        
+    }
+    
+    private func createSpinner() {
+        // Create the Activity Indicator
+        activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator.transform = CGAffineTransform(scaleX: 4, y: 4)
+    
+        // Add it to the view where you want it to appear
+        view.addSubview(activityIndicator)
+    
+        // Set up its size (the super view bounds usually)
+        activityIndicator.frame = view.bounds
     }
     
     // MARK: - Table view data source

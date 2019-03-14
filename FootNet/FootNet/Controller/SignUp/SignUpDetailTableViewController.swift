@@ -145,7 +145,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     private func stopSpinner(){
         activityIndicator.removeFromSuperview()
-        self.navigationItem.backBarButtonItem?.isEnabled = true
+        self.navigationItem.leftBarButtonItem?.isEnabled = true
         self.navigationItem.rightBarButtonItem?.isEnabled = true
     }
     

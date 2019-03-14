@@ -84,6 +84,9 @@ class LandingController: BaseViewController, UITextFieldDelegate {
         
         //Change language
         changeLanguageLabel.text = "changeLanguage_label".localize()
+        englishButton.setTitle("English", for: .normal)
+        spanishButton.setTitle("Español", for: .normal)
+        catalanButton.setTitle("Català", for: .normal)
         enablaDisableButtons()
     }
     

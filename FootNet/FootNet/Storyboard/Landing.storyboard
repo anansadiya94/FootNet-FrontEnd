@@ -52,31 +52,31 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWG-N6-DUn" customClass="CustomView" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osY-zf-lwK" userLabel="Spanish">
-                                        <rect key="frame" x="160" y="62" width="55" height="30"/>
+                                        <rect key="frame" x="160" y="52" width="55" height="30"/>
                                         <state key="normal" title="Spanish"/>
                                         <connections>
                                             <action selector="changeToSpanish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3B-mc-bnx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVV-25-NBO" userLabel="Catalan">
-                                        <rect key="frame" x="231" y="62" width="52" height="30"/>
+                                        <rect key="frame" x="231" y="52" width="52" height="30"/>
                                         <state key="normal" title="Catalan"/>
                                         <connections>
                                             <action selector="changeToCatalan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IN4-CU-leo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="landing" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gJ-cB-95d" userLabel="English">
-                                        <rect key="frame" x="94" y="62" width="50" height="30"/>
+                                        <rect key="frame" x="94" y="52" width="50" height="30"/>
                                         <state key="normal" title="English"/>
                                         <connections>
                                             <action selector="changeToEnglish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rsv-dX-Q22"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdF-hx-9sK" customClass="CustomLabel" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="157.5" y="25" width="60" height="21"/>
+                                        <rect key="frame" x="157.5" y="23" width="60" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -84,10 +84,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="osY-zf-lwK" secondAttribute="bottom" constant="8" id="1eJ-sE-hAJ"/>
-                                    <constraint firstAttribute="height" constant="100" id="H9q-D8-Fsd"/>
+                                    <constraint firstAttribute="height" constant="90" id="H9q-D8-Fsd"/>
                                     <constraint firstItem="osY-zf-lwK" firstAttribute="centerX" secondItem="FWG-N6-DUn" secondAttribute="centerX" id="ZeH-yb-TkF"/>
                                     <constraint firstAttribute="bottom" secondItem="0gJ-cB-95d" secondAttribute="bottom" constant="8" id="aVO-YY-Qkj"/>
-                                    <constraint firstItem="osY-zf-lwK" firstAttribute="top" secondItem="IdF-hx-9sK" secondAttribute="bottom" constant="16" id="ao4-MX-dap"/>
+                                    <constraint firstItem="osY-zf-lwK" firstAttribute="top" secondItem="IdF-hx-9sK" secondAttribute="bottom" constant="8" id="ao4-MX-dap"/>
                                     <constraint firstItem="IdF-hx-9sK" firstAttribute="centerX" secondItem="FWG-N6-DUn" secondAttribute="centerX" id="jiX-98-Dvq"/>
                                     <constraint firstAttribute="bottom" secondItem="UVV-25-NBO" secondAttribute="bottom" constant="8" id="r3r-Ru-cxV"/>
                                     <constraint firstItem="UVV-25-NBO" firstAttribute="leading" secondItem="osY-zf-lwK" secondAttribute="trailing" constant="16" id="tij-Q5-iFc"/>

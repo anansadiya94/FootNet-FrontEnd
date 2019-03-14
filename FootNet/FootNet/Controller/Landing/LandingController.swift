@@ -23,6 +23,9 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var englishButton: UIButton!
     @IBOutlet weak var spanishButton: UIButton!
     @IBOutlet weak var catalanButton: UIButton!
+
+    var validateSignInForm = ValidateSignInForm()
+    var signInFormErrors: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,54 @@ class LandingController: BaseViewController, UITextFieldDelegate {
         configureDismissKeyboard()
     }
     
+    @IBAction func signIn(_ sender: Any) {
+        if validateSignIn() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
+            self.present(viewController, animated: true, completion: nil)
+        } else {
+            //alert with the errors
+            signInErrorAlert()
+        }
+    }
+    
+    private func validateSignIn() -> Bool {
+        signInFormErrors = validateSignInForm.CheckSignInForm(Email: (emailTextField.text ?? ""), Password: (passwordTextField.text ?? ""))
+        if signInFormErrors.isEmpty {
+            //API CALL + api error alert
+            print("ok")
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    private func signInErrorAlert() {
+        let alertTitle = "error"
+        let alertMessage = signInFormErrors
+        let alertFixTitle = "fix_alert".localize()
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    //enable or disable language buttons
+    private func enablaDisableButtons() {
+        let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
+        switch currentLanguage {
+        case "en":
+            englishButton.isEnabled = false
+            break
+        case "es":
+            spanishButton.isEnabled = false
+            break
+        case "ca":
+            catalanButton.isEnabled = false
+            break
+        default:
+            break
+        }
+    }
     
     @IBAction func changeToEnglish(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
@@ -76,24 +127,6 @@ class LandingController: BaseViewController, UITextFieldDelegate {
         spanishButton.setTitle("Español", for: .normal)
         catalanButton.setTitle("Català", for: .normal)
         enablaDisableButtons()
-    }
-    
-    //enable or disable language buttons
-    private func enablaDisableButtons() {
-        let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
-        switch currentLanguage {
-        case "en":
-            englishButton.isEnabled = false
-            break
-        case "es":
-            spanishButton.isEnabled = false
-            break
-        case "ca":
-            catalanButton.isEnabled = false
-            break
-        default:
-            break
-        }
     }
     
     //dismiss keyboad configuration

@@ -47,7 +47,7 @@
 "signUp_edit_record"="Edit to add your record";
 
 //back button
-"back_button"="Back";
+"left_button"="Back";
 
 //back alert
 "title_back_alert"="Are you sure you want to go back?";
@@ -56,7 +56,7 @@
 "no_alert"="No";
 
 //done button
-"done_button"="Done";
+"right_button"="Done";
 
 //error sign up form alert
 "title_done_alert"="Sign Up Form Error!";

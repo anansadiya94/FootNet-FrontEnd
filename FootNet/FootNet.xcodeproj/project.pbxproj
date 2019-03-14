@@ -21,6 +21,7 @@
 		9E79C38922391F9700A9C292 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* Landing.storyboard */; };
 		9E8D8D1A223AAE1400A8A880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D8D19223AAE1400A8A880 /* Main.storyboard */; };
 		9E8D8D1D223AB08C00A8A880 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D1C223AB08C00A8A880 /* MainController.swift */; };
+		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
 		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */; };
 		9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */; };
@@ -64,6 +65,7 @@
 		9E79C38822391F9700A9C292 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		9E8D8D19223AAE1400A8A880 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9E8D8D1C223AB08C00A8A880 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignInForm.swift; sourceTree = "<group>"; };
 		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileCell.swift; sourceTree = "<group>"; };
 		9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -184,10 +186,10 @@
 		9E4E075F222593DD00F8ED17 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9E8D8D1B223AB08200A8A880 /* Main */,
-				9E1B1E1F2225A55600C82019 /* BaseViewController.swift */,
-				9E4E074D222593B200F8ED17 /* LandingController.swift */,
+				9E8D8D1F223AB87100A8A880 /* Base */,
+				9E8D8D20223AB87D00A8A880 /* Landing */,
 				9EB24E952227F0F5004B0C66 /* SignUp */,
+				9E8D8D1B223AB08200A8A880 /* Main */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +278,23 @@
 				9E8D8D1C223AB08C00A8A880 /* MainController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9E8D8D1F223AB87100A8A880 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B1E1F2225A55600C82019 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9E8D8D20223AB87D00A8A880 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				9E4E074D222593B200F8ED17 /* LandingController.swift */,
+				9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */,
+			);
+			path = Landing;
 			sourceTree = "<group>";
 		};
 		9EA8F822222FBDA10021C435 /* Tables */ = {
@@ -515,6 +534,7 @@
 				9EF232C02237F277004BF61F /* CustomImageView.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
+				9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */,
 				9E8D8D1D223AB08C00A8A880 /* MainController.swift in Sources */,
 				9E4FA3642231A2FA00094509 /* Constants.swift in Sources */,
 				9EB24E842227D46A004B0C66 /* NoPasteTextField.swift in Sources */,

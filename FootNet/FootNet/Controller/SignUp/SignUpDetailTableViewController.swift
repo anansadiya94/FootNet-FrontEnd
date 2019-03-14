@@ -49,8 +49,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         signUpDeatilSectionsData = SignUpDetailData.getAllsignUpSectionsData(profileType!)
         
         //Navigation bar buttons
-        createBackButton()
-        createNextButton()
+        createLeftButton()
+        createRightButton()
         
         //create spinner
         createSpinner()
@@ -76,14 +76,14 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     //Back button navigationbar
-    private func createBackButton() {
+    private func createLeftButton() {
         self.navigationItem.hidesBackButton = true
-        let buttonTitle = "back_button".localize()
-        let newBackButton = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.back(sender:)))
+        let buttonTitle = "left_button".localize()
+        let newBackButton = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.leftTapped(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
     }
     
-    @objc func back(sender: UIBarButtonItem) {
+    @objc func leftTapped(sender: UIBarButtonItem) {
         let alertTitle = "title_back_alert".localize()
         let alertMessage = "message_alert".localize()
         let alertYesTitle = "yes_alert".localize()
@@ -100,13 +100,13 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     //Next button navigationbar
-    private func createNextButton() {
-        let buttonTitle = "done_button".localize()
-        let rightBarButtonItem = UIBarButtonItem.init(title: buttonTitle, style: .done, target: self, action: #selector(SignUpDetailTableViewController.nextTapped(sender:)))
+    private func createRightButton() {
+        let buttonTitle = "right_button".localize()
+        let rightBarButtonItem = UIBarButtonItem.init(title: buttonTitle, style: .done, target: self, action: #selector(SignUpDetailTableViewController.rightTapped(sender:)))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
-    @objc private func nextTapped(sender: UIBarButtonItem) {
+    @objc private func rightTapped(sender: UIBarButtonItem) {
         let signUpFormErrors = validateSignUpForm.CheckSignUpForm(UserProfileModel: userProfileModel, ProfileType: profileType!)
         if signUpFormErrors.isEmpty {
             // Start the loading animation
@@ -127,8 +127,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
                 navigationController?.pushViewController(viewController, animated: true)
-                
-                
             }
         } else {
             let alertTitle = "title_done_alert".localize()

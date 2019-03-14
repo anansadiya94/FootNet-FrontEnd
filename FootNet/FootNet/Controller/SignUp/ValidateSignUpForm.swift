@@ -261,6 +261,4 @@ class ValidateSignUpForm {
         }
         return ""
     }
-    
-    
 }

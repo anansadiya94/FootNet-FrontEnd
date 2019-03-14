@@ -48,7 +48,7 @@
 "signUp_edit_record"="Edita per afegir el teu historial";
 
 //back button
-"back_button"="Enrere";
+"left_button"="Enrere";
 
 //back alert
 "title_back_alert"="Estàs segur que vols tornar?";
@@ -57,7 +57,7 @@
 "no_alert"="No";
 
 //done button
-"done_button"="Fet";
+"right_button"="Fet";
 
 //error sign up form alert
 "title_done_alert"="Error en el formulari de registre!";

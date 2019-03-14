@@ -19,7 +19,7 @@ class SignUpSelectProfileTableViewController: UITableViewController {
         setBackground()
         
         //Navigation bar buttons
-        createBackButton()
+        createLeftButton()
         
         // navigationController Configuration
         navigationController?.navigationBar.topItem?.title = "signUp_navBarTitle".localize()
@@ -29,9 +29,9 @@ class SignUpSelectProfileTableViewController: UITableViewController {
     }
     
     //Back button navigationbar
-    private func createBackButton() {
+    private func createLeftButton() {
         self.navigationItem.hidesBackButton = true
-        let buttonTitle = "back_button".localize()
+        let buttonTitle = "left_button".localize()
         let newBackButton = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(SignUpSelectProfileTableViewController.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
     }

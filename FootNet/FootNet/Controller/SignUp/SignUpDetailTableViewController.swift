@@ -113,7 +113,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             startSpinner()
             
             //TODO - API CALL WITH ALL USER INFO
-            let error = false
+            let error = true
             if !error {
                 // Create alert
                 let alert = UIAlertController(title: "ERROR", message: "", preferredStyle: .alert)
@@ -124,6 +124,11 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             } else {
                 // To remove it, just call removeFromSuperview()
                 stopSpinner()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
+                navigationController?.pushViewController(viewController, animated: true)
+                
+                
             }
         } else {
             let alertTitle = "title_done_alert".localize()

@@ -104,17 +104,15 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         let buttonTitle = "done_button".localize()
         let rightBarButtonItem = UIBarButtonItem.init(title: buttonTitle, style: .done, target: self, action: #selector(SignUpDetailTableViewController.nextTapped(sender:)))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
-        
     }
     
     @objc private func nextTapped(sender: UIBarButtonItem) {
         let signUpFormErrors = validateSignUpForm.CheckSignUpForm(UserProfileModel: userProfileModel, ProfileType: profileType!)
         if signUpFormErrors.isEmpty {
             // Start the loading animation
-            activityIndicator.startAnimating()
+            startSpinner()
             
             //TODO - API CALL WITH ALL USER INFO
-            
             let error = false
             if !error {
                 // Create alert
@@ -122,9 +120,10 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 //add yes action
                 alert.addAction(UIAlertAction(title: "ERROR API OR INTERNET CONECTION ", style: .default, handler: nil))
                 self.present(alert, animated: true)
+                stopSpinner()
             } else {
                 // To remove it, just call removeFromSuperview()
-                activityIndicator.removeFromSuperview()
+                stopSpinner()
             }
         } else {
             let alertTitle = "title_done_alert".localize()
@@ -136,6 +135,18 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
             self.present(alert, animated: true)
             }
+    }
+    
+    private func startSpinner(){
+        activityIndicator.startAnimating()
+        self.navigationItem.leftBarButtonItem?.isEnabled = false
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+    }
+    
+    private func stopSpinner(){
+        activityIndicator.removeFromSuperview()
+        self.navigationItem.backBarButtonItem?.isEnabled = true
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
     }
     
     private func createSpinner() {

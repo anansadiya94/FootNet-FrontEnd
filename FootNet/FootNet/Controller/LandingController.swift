@@ -33,22 +33,14 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     
     
     @IBAction func changeToEnglish(_ sender: Any) {
-        if LocalizationSystem.sharedInstance.getLanguage() == "en" {
-            print("ESTOY EN EN")
-        } else {
-            LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
-        }
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
         let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = landing
     }
     
     @IBAction func changeToSpanish(_ sender: Any) {
-        if LocalizationSystem.sharedInstance.getLanguage() == "es" {
-            print("ESTOY EN ES")
-        } else {
-            LocalizationSystem.sharedInstance.setLanguage(languageCode: "es")
-        }
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: "es")
         let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = landing
@@ -56,11 +48,7 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     
     
     @IBAction func changeToCatalan(_ sender: Any) {
-        if LocalizationSystem.sharedInstance.getLanguage() == "ca" {
-            print("ESTOY EN CA")
-        } else {
-            LocalizationSystem.sharedInstance.setLanguage(languageCode: "ca")
-        }
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: "ca")
         let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = landing

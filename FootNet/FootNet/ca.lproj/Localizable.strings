@@ -6,7 +6,7 @@
   Copyright © 2019 FootNet. All rights reserved.
 */
 
-//Landing Page
+//SignIn Page
 "email_placeholder"="Correu electrònic";
 "password_placeholder"="Contrasenya";
 "forgotPassword_button"="Heu perdut la contrasenya?";

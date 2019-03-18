@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Landing Controller-->
+        <!--Sign In Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="landing" id="BYZ-38-t0r" customClass="LandingController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SignInController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F8O-FT-7vB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,37 +55,38 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWG-N6-DUn" customClass="CustomView" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="582" width="375" height="85"/>
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdF-hx-9sK" customClass="CustomLabel" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="157.5" y="8" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osY-zf-lwK" userLabel="Spanish" customClass="CustomLanguagesButton" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="160" y="47" width="55" height="30"/>
+                                        <rect key="frame" x="160" y="37" width="55" height="30"/>
                                         <state key="normal" title="Spanish"/>
                                         <connections>
                                             <action selector="changeToSpanish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3B-mc-bnx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVV-25-NBO" userLabel="Catalan" customClass="CustomLanguagesButton" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="231" y="47" width="52" height="30"/>
+                                        <rect key="frame" x="231" y="37" width="52" height="30"/>
                                         <state key="normal" title="Catalan"/>
                                         <connections>
                                             <action selector="changeToCatalan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IN4-CU-leo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="landing" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gJ-cB-95d" userLabel="English" customClass="CustomLanguagesButton" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="94" y="47" width="50" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="signIn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gJ-cB-95d" userLabel="English" customClass="CustomLanguagesButton" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="37" width="50" height="30"/>
                                         <state key="normal" title="English"/>
                                         <connections>
                                             <action selector="changeToEnglish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rsv-dX-Q22"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdF-hx-9sK" customClass="CustomLabel" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="157.5" y="18" width="60" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="IdF-hx-9sK" firstAttribute="top" secondItem="FWG-N6-DUn" secondAttribute="top" constant="8" id="0u9-Pu-Hh6"/>
                                     <constraint firstAttribute="bottom" secondItem="osY-zf-lwK" secondAttribute="bottom" constant="8" id="1eJ-sE-hAJ"/>
                                     <constraint firstItem="osY-zf-lwK" firstAttribute="centerX" secondItem="FWG-N6-DUn" secondAttribute="centerX" id="ZeH-yb-TkF"/>
                                     <constraint firstAttribute="bottom" secondItem="0gJ-cB-95d" secondAttribute="bottom" constant="8" id="aVO-YY-Qkj"/>
@@ -94,7 +95,6 @@
                                     <constraint firstItem="osY-zf-lwK" firstAttribute="top" secondItem="IdF-hx-9sK" secondAttribute="bottom" constant="8" id="sJs-4I-nR8"/>
                                     <constraint firstItem="UVV-25-NBO" firstAttribute="leading" secondItem="osY-zf-lwK" secondAttribute="trailing" constant="16" id="tij-Q5-iFc"/>
                                     <constraint firstItem="osY-zf-lwK" firstAttribute="leading" secondItem="0gJ-cB-95d" secondAttribute="trailing" constant="16" id="wPo-KX-4t8"/>
-                                    <constraint firstAttribute="height" constant="85" id="zyg-un-i3i"/>
                                 </constraints>
                             </view>
                         </subviews>

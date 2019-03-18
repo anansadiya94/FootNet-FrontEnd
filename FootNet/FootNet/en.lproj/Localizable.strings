@@ -6,7 +6,7 @@
   Copyright © 2019 FootNet. All rights reserved.
 */
 
-//Landing Page
+//SignIn Page
 "email_placeholder"="Email";
 "password_placeholder"="Password";
 "forgotPassword_button"="Did you forget your password?";

@@ -9,7 +9,7 @@
 import UIKit
 import CocoaLumberjack
 
-class LandingController: BaseViewController, UITextFieldDelegate {
+class SignInController: BaseViewController, UITextFieldDelegate {
 
     //IBOutlets
     @IBOutlet weak var emailTextField: CustomTextField!
@@ -30,7 +30,7 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DDLogInfo("Load Landing View")
+        DDLogInfo("Load SignIn View")
         configureOutlets()
         configureDismissKeyboard()
     }
@@ -85,24 +85,24 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     
     @IBAction func changeToEnglish(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
-        let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
-        appDlg?.window?.rootViewController = landing
+        appDlg?.window?.rootViewController = signIn
     }
     
     @IBAction func changeToSpanish(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "es")
-        let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
-        appDlg?.window?.rootViewController = landing
+        appDlg?.window?.rootViewController = signIn
     }
     
     
     @IBAction func changeToCatalan(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "ca")
-        let landing = self.storyboard?.instantiateViewController(withIdentifier: "landing") as! LandingController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
-        appDlg?.window?.rootViewController = landing
+        appDlg?.window?.rootViewController = signIn
     }
     
     

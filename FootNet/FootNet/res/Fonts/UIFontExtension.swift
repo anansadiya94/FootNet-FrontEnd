@@ -7,21 +7,22 @@
 //
 
 import Foundation
-
 import UIKit
 
 extension UIFont {
     
-    static var fontNoteworthyS26 : UIFont {
-        get { return UIFont(name: "Noteworthy", size: 26)! }
+    static var fontSystemS26 : UIFont {
+        //get { return UIFont(name: ".SFUIText-Medium", size: 26)! }
+        get { return UIFont.systemFont(ofSize: 26) }
     }
     
-    static var fontNoteworthyS13 : UIFont {
-        get { return UIFont(name: "Noteworthy", size: 13)! }
+    static var fontSystemS20 : UIFont {
+        //get { return UIFont(name: ".SFUIText-Medium", size: 20)! }
+        get { return UIFont.systemFont(ofSize: 20) }
     }
     
-    static var fontNoteworthyS20 : UIFont {
-        get { return UIFont(name: "Noteworthy", size: 20)! }
+    static var fontSystemS13 : UIFont {
+        //get { return UIFont(name: ".SFUIText-Medium", size: 13)! }
+        get { return UIFont.systemFont(ofSize: 13) }
     }
-    
 }

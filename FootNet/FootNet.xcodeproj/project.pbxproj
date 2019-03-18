@@ -18,10 +18,17 @@
 		9E4E076A222596C400F8ED17 /* environments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0769222596C400F8ED17 /* environments.json */; };
 		9E4FA3642231A2FA00094509 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA3632231A2FA00094509 /* Constants.swift */; };
 		9E5420C9223F8F930098AC44 /* CustomLanuagesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420C8223F8F930098AC44 /* CustomLanuagesButton.swift */; };
+		9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420CF223F9FA60098AC44 /* AppNavigationDrawerController.swift */; };
+		9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
+		9E5420D4223FA3270098AC44 /* RightHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D3223FA3270098AC44 /* RightHome.storyboard */; };
+		9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */; };
+		9E5420D8223FA4110098AC44 /* LeftHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D7223FA4110098AC44 /* LeftHomeViewController.swift */; };
+		9E5420DB223FA47E0098AC44 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420DA223FA47E0098AC44 /* StoryboardExtension.swift */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
+		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* Landing.storyboard */; };
-		9E8D8D1A223AAE1400A8A880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D8D19223AAE1400A8A880 /* Main.storyboard */; };
-		9E8D8D1D223AB08C00A8A880 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D1C223AB08C00A8A880 /* MainController.swift */; };
+		9E8D8D1A223AAE1400A8A880 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D8D19223AAE1400A8A880 /* Home.storyboard */; };
+		9E8D8D1D223AB08C00A8A880 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D1C223AB08C00A8A880 /* HomeViewController.swift */; };
 		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
 		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */; };
@@ -63,10 +70,17 @@
 		9E4E0769222596C400F8ED17 /* environments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = environments.json; sourceTree = "<group>"; };
 		9E4FA3632231A2FA00094509 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E5420C8223F8F930098AC44 /* CustomLanuagesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomLanuagesButton.swift; path = FootNet/res/Buttons/CustomLanuagesButton.swift; sourceTree = SOURCE_ROOT; };
+		9E5420CF223F9FA60098AC44 /* AppNavigationDrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawerController.swift; sourceTree = "<group>"; };
+		9E5420D1223FA3190098AC44 /* LeftHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeftHome.storyboard; sourceTree = "<group>"; };
+		9E5420D3223FA3270098AC44 /* RightHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RightHome.storyboard; sourceTree = "<group>"; };
+		9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeViewController.swift; sourceTree = "<group>"; };
+		9E5420D7223FA4110098AC44 /* LeftHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHomeViewController.swift; sourceTree = "<group>"; };
+		9E5420DA223FA47E0098AC44 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoryboardExtension.swift; path = FootNet/res/Storyborads/StoryboardExtension.swift; sourceTree = SOURCE_ROOT; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
-		9E8D8D19223AAE1400A8A880 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		9E8D8D1C223AB08C00A8A880 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		9E8D8D19223AAE1400A8A880 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		9E8D8D1C223AB08C00A8A880 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignInForm.swift; sourceTree = "<group>"; };
 		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileCell.swift; sourceTree = "<group>"; };
@@ -189,10 +203,10 @@
 		9E4E075F222593DD00F8ED17 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9E5420CA223F9F500098AC44 /* NavigationDrawer */,
 				9E8D8D1F223AB87100A8A880 /* Base */,
 				9E8D8D20223AB87D00A8A880 /* Landing */,
 				9EB24E952227F0F5004B0C66 /* SignUp */,
-				9E8D8D1B223AB08200A8A880 /* Main */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,7 +225,9 @@
 				9E35D930222681B4008E8361 /* LaunchScreen.storyboard */,
 				9E79C38822391F9700A9C292 /* Landing.storyboard */,
 				9EB24EA02227F27D004B0C66 /* SignUp.storyboard */,
-				9E8D8D19223AAE1400A8A880 /* Main.storyboard */,
+				9E8D8D19223AAE1400A8A880 /* Home.storyboard */,
+				9E5420D1223FA3190098AC44 /* LeftHome.storyboard */,
+				9E5420D3223FA3270098AC44 /* RightHome.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -219,6 +235,7 @@
 		9E4E07642225966E00F8ED17 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				9E5420D9223FA45F0098AC44 /* Storyborads */,
 				9EBD4FBE22398833008604EB /* Views */,
 				9EBD4FB62239708A008604EB /* LocalizationSystem */,
 				9EF232C12237F3ED004BF61F /* TextViews */,
@@ -275,12 +292,24 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
-		9E8D8D1B223AB08200A8A880 /* Main */ = {
+		9E5420CA223F9F500098AC44 /* NavigationDrawer */ = {
 			isa = PBXGroup;
 			children = (
-				9E8D8D1C223AB08C00A8A880 /* MainController.swift */,
+				9E5420CF223F9FA60098AC44 /* AppNavigationDrawerController.swift */,
+				9E8D8D1C223AB08C00A8A880 /* HomeViewController.swift */,
+				9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */,
+				9E5420D7223FA4110098AC44 /* LeftHomeViewController.swift */,
+				9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */,
 			);
-			path = Main;
+			path = NavigationDrawer;
+			sourceTree = "<group>";
+		};
+		9E5420D9223FA45F0098AC44 /* Storyborads */ = {
+			isa = PBXGroup;
+			children = (
+				9E5420DA223FA47E0098AC44 /* StoryboardExtension.swift */,
+			);
+			path = Storyborads;
 			sourceTree = "<group>";
 		};
 		9E8D8D1F223AB87100A8A880 /* Base */ = {
@@ -465,12 +494,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E8D8D1A223AAE1400A8A880 /* Main.storyboard in Resources */,
+				9E8D8D1A223AAE1400A8A880 /* Home.storyboard in Resources */,
 				9E79C38922391F9700A9C292 /* Landing.storyboard in Resources */,
 				9EC925562226E47B00B0E694 /* Localizable.strings in Resources */,
 				9E4E076A222596C400F8ED17 /* environments.json in Resources */,
 				9EB24E9E2227F27D004B0C66 /* SignUp.storyboard in Resources */,
 				9E4E0753222593B300F8ED17 /* Assets.xcassets in Resources */,
+				9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */,
+				9E5420D4223FA3270098AC44 /* RightHome.storyboard in Resources */,
 				9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,12 +519,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FootNet/Pods-FootNet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -529,7 +564,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5420DB223FA47E0098AC44 /* StoryboardExtension.swift in Sources */,
 				9EF232C52238074B004BF61F /* ValidateSignUpForm.swift in Sources */,
+				9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */,
 				9EBD4FB82239709B008604EB /* LocalizationSystem.swift in Sources */,
 				9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */,
 				9E4E074E222593B200F8ED17 /* LandingController.swift in Sources */,
@@ -537,13 +574,15 @@
 				9EF232C02237F277004BF61F /* CustomImageView.swift in Sources */,
 				9E5420C9223F8F930098AC44 /* CustomLanuagesButton.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
+				9E5420D8223FA4110098AC44 /* LeftHomeViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
 				9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */,
-				9E8D8D1D223AB08C00A8A880 /* MainController.swift in Sources */,
+				9E8D8D1D223AB08C00A8A880 /* HomeViewController.swift in Sources */,
 				9E4FA3642231A2FA00094509 /* Constants.swift in Sources */,
 				9EB24E842227D46A004B0C66 /* NoPasteTextField.swift in Sources */,
 				9EB24E862227E3F4004B0C66 /* CustomForgotPasswordButton.swift in Sources */,
 				9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */,
+				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
 				9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */,
 				9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
@@ -558,6 +597,7 @@
 				9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */,
 				9E35D93422268440008E8361 /* CustomSignInSignUpButton.swift in Sources */,
 				9EB3A6CD222D7909002F244E /* UserProfileModel.swift in Sources */,
+				9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */,
 				9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

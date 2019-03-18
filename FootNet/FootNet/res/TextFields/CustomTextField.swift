@@ -20,7 +20,7 @@ class CustomTextField: NoPasteTextField {
     }
     
     private func setup() {
-        self.font = UIFont.fontNoteworthyS20
+        self.font = UIFont.fontSystemS20
         self.textColor = UIColor.colorDarkBlack
         self.autocorrectionType = .no
         self.spellCheckingType = .no

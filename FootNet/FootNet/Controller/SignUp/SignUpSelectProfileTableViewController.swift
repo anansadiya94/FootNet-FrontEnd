@@ -17,27 +17,33 @@ class SignUpSelectProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
-        
-        //Navigation bar buttons
-        createLeftButton()
-        
-        // navigationController Configuration
-        navigationController?.navigationBar.topItem?.title = "signUp_navBarTitle".localize()
+        setNavigationBar()
 
         DDLogInfo("Load SignUp View")
         signUpSelectProfileData = SignUpSelectProfileData.getAllSignUpSelectProfileData()
     }
     
+    private func setNavigationBar() {
+        //Navigation bar buttons
+        createLeftButton()
+        
+        // navigationController Configuration
+        navigationController?.navigationBar.topItem?.title = "signUp_navBarTitle".localize()
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = UIColor.black
+    }
+    
     //Back button navigationbar
     private func createLeftButton() {
         self.navigationItem.hidesBackButton = true
-        let buttonTitle = "left_button".localize()
-        let newBackButton = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(SignUpSelectProfileTableViewController.back(sender:)))
-        self.navigationItem.leftBarButtonItem = newBackButton
+        let imageName = "backButton"
+        let image = UIImage(named: imageName)
+        let newLeftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(SignUpSelectProfileTableViewController.back(sender:)))
+        newLeftBarButtonItem.tintColor = UIColor.white
+        self.navigationItem.leftBarButtonItem = newLeftBarButtonItem
     }
     
     @objc func back(sender: UIBarButtonItem) {
-        //_ = self.navigationController?.popViewController(animated: true)
         _ = self.dismiss(animated: true, completion: nil)
     }
     

@@ -16,7 +16,7 @@ class CustomTextView: UITextView {
     
     private func setup() {
         keyboardAppearance = .dark
-        font = UIFont.fontNoteworthyS20
+        font = UIFont.fontSystemS20
         autocorrectionType = .no
         spellCheckingType = .no
         keyboardType = .default

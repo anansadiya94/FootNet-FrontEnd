@@ -6,4 +6,5 @@ target 'FootNet' do
 
   # Pods for FootNet
   pod 'CocoaLumberjack/Swift' #Logger
+  pod 'Material', '~> 2.16.4'
 end

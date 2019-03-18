@@ -39,8 +39,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     let imagePicker = UIImagePickerController()
     var chosenImage: UIImage?
     var activityIndicator = UIActivityIndicatorView()
-    
     var validateSignUpForm = ValidateSignUpForm()
+    let appNavigationDrawer = AppNavigationDrawer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,9 +78,11 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     //Back button navigationbar
     private func createLeftButton() {
         self.navigationItem.hidesBackButton = true
-        let buttonTitle = "left_button".localize()
-        let newBackButton = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.leftTapped(sender:)))
-        self.navigationItem.leftBarButtonItem = newBackButton
+        let imageName = "backButton"
+        let image = UIImage(named: imageName)
+        let newLeftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.leftTapped(sender:)))
+        newLeftBarButtonItem.tintColor = UIColor.white
+        self.navigationItem.leftBarButtonItem = newLeftBarButtonItem
     }
     
     @objc func leftTapped(sender: UIBarButtonItem) {
@@ -101,9 +103,11 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //Next button navigationbar
     private func createRightButton() {
-        let buttonTitle = "right_button".localize()
-        let rightBarButtonItem = UIBarButtonItem.init(title: buttonTitle, style: .done, target: self, action: #selector(SignUpDetailTableViewController.rightTapped(sender:)))
-        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        let imageName = "checkButton"
+        let image = UIImage(named: imageName)
+        let newRightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.rightTapped(sender:)))
+        newRightBarButtonItem.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = newRightBarButtonItem
     }
     
     @objc private func rightTapped(sender: UIBarButtonItem) {
@@ -124,9 +128,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             } else {
                 // To remove it, just call removeFromSuperview()
                 stopSpinner()
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
-                navigationController?.pushViewController(viewController, animated: true)
+                let viewController = appNavigationDrawer.createAppNavigationDrawer()
+                present(viewController, animated: true, completion: nil)
             }
         } else {
             let alertTitle = "title_done_alert".localize()

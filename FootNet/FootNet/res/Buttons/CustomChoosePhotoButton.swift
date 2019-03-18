@@ -22,7 +22,7 @@ class CustomChoosePhotoButton: UIButton {
     private func setup() {
         let color = UIColor.colorDarkGreen
         let disabledColor = color.withAlphaComponent(0.3)
-        let btnFont = UIFont.fontNoteworthyS20
+        let btnFont = UIFont.fontSystemS20
         clipsToBounds = true
         setTitleColor(color, for: .normal)
         setTitleColor(disabledColor, for: .disabled)

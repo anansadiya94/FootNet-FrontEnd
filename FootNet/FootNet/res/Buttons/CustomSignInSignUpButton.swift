@@ -22,7 +22,7 @@ class CustomSignInSignUpButton: UIButton {
     private func setup() {
         let color = UIColor.colorDarkGreen
         let disabledColor = color.withAlphaComponent(0.3)
-        let btnFont = UIFont.fontNoteworthyS26
+        let btnFont = UIFont.fontSystemS26
         clipsToBounds = true
         layer.cornerRadius = 5.0
         layer.borderColor = color.cgColor

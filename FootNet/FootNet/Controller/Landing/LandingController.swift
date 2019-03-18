@@ -26,21 +26,19 @@ class LandingController: BaseViewController, UITextFieldDelegate {
 
     var validateSignInForm = ValidateSignInForm()
     var signInFormErrors: String = ""
+    let appNavigationDrawer = AppNavigationDrawer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DDLogInfo("Load Landing View")
-        //Hide navigation bar
-        navigationController?.setNavigationBarHidden(true, animated: true)
         configureOutlets()
         configureDismissKeyboard()
     }
     
     @IBAction func signIn(_ sender: Any) {
         if validateSignIn() {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
-            navigationController?.pushViewController(viewController, animated: true)
+            let viewController = appNavigationDrawer.createAppNavigationDrawer()
+            present(viewController, animated: true, completion: nil)
         } else {
             //alert with the errors
             signInErrorAlert()

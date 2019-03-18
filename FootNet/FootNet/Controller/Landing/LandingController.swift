@@ -30,15 +30,20 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         DDLogInfo("Load Landing View")
+        //Hide navigation bar
+        navigationController?.setNavigationBarHidden(true, animated: true)
         configureOutlets()
         configureDismissKeyboard()
     }
     
     @IBAction func signIn(_ sender: Any) {
         if validateSignIn() {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
+//            self.present(viewController, animated: true, completion: nil)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
-            self.present(viewController, animated: true, completion: nil)
+            navigationController?.pushViewController(viewController, animated: true)
         } else {
             //alert with the errors
             signInErrorAlert()

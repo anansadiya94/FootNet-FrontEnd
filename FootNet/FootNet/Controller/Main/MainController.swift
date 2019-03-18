@@ -13,6 +13,11 @@ class MainController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
+    }
+    
+    private func setNavigationBar() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.hidesBackButton = true
         navigationItem.title = "FootNet"
     }

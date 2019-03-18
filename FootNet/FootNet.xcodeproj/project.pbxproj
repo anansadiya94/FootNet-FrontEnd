@@ -17,6 +17,7 @@
 		9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E07662225968700F8ED17 /* UIColorExtension.swift */; };
 		9E4E076A222596C400F8ED17 /* environments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0769222596C400F8ED17 /* environments.json */; };
 		9E4FA3642231A2FA00094509 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA3632231A2FA00094509 /* Constants.swift */; };
+		9E5420C9223F8F930098AC44 /* CustomLanuagesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420C8223F8F930098AC44 /* CustomLanuagesButton.swift */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
 		9E79C38922391F9700A9C292 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* Landing.storyboard */; };
 		9E8D8D1A223AAE1400A8A880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D8D19223AAE1400A8A880 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		9E4E07662225968700F8ED17 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9E4E0769222596C400F8ED17 /* environments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = environments.json; sourceTree = "<group>"; };
 		9E4FA3632231A2FA00094509 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9E5420C8223F8F930098AC44 /* CustomLanuagesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomLanuagesButton.swift; path = FootNet/res/Buttons/CustomLanuagesButton.swift; sourceTree = SOURCE_ROOT; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
 		9E79C38822391F9700A9C292 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		9E8D8D19223AAE1400A8A880 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */,
 				9EB24E852227E3F4004B0C66 /* CustomForgotPasswordButton.swift */,
 				9EF232BC2237EF01004BF61F /* CustomChoosePhotoButton.swift */,
+				9E5420C8223F8F930098AC44 /* CustomLanuagesButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				9E4E074E222593B200F8ED17 /* LandingController.swift in Sources */,
 				9EF232C32237F3F9004BF61F /* CustomTextView.swift in Sources */,
 				9EF232C02237F277004BF61F /* CustomImageView.swift in Sources */,
+				9E5420C9223F8F930098AC44 /* CustomLanuagesButton.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
 				9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */,

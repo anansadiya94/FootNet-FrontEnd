@@ -20,9 +20,9 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var changeLanguageLabel: CustomLabel!
-    @IBOutlet weak var englishButton: UIButton!
-    @IBOutlet weak var spanishButton: UIButton!
-    @IBOutlet weak var catalanButton: UIButton!
+    @IBOutlet weak var englishButton: CustomLanguagesButton!
+    @IBOutlet weak var spanishButton: CustomLanguagesButton!
+    @IBOutlet weak var catalanButton: CustomLanguagesButton!
 
     var validateSignInForm = ValidateSignInForm()
     var signInFormErrors: String = ""
@@ -38,9 +38,6 @@ class LandingController: BaseViewController, UITextFieldDelegate {
     
     @IBAction func signIn(_ sender: Any) {
         if validateSignIn() {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
-//            self.present(viewController, animated: true, completion: nil)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "main") as UIViewController
             navigationController?.pushViewController(viewController, animated: true)

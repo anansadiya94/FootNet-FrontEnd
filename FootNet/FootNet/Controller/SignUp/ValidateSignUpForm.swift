@@ -9,11 +9,9 @@
 import Foundation
 
 class ValidateSignUpForm {
-    
     var signUpFormErrors: String  = ""
     var validPassword: Bool = false
     var validRepeatPassword: Bool = false
-    
     
     func CheckSignUpForm (UserProfileModel userProfileModel: UserProfileModel, ProfileType profileType: ProfileType) -> String {
         signUpFormErrors = ""

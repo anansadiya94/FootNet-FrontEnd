@@ -9,7 +9,6 @@
 import Foundation
 
 class ValidateSignInForm {
-    
     var signInFormErrors: String  = ""
     
     func CheckSignInForm (Email email: String, Password password: String) -> String {

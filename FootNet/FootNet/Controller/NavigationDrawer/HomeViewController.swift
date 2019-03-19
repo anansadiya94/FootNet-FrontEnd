@@ -10,20 +10,42 @@ import UIKit
 import CocoaLumberjack
 import Material
 
-protocol AppNavigationDrawerDelegate : class {
-    func didTapAwesomeButton()
+protocol AppNavigationDrawerDelegate: class {
+    func didTapHomeLeftButton()
+    func didTapHomeRightButton()
 }
 
 class HomeViewController: BaseViewController {
     weak var delegate: AppNavigationDrawerDelegate?
-    @IBOutlet weak var menuButtom: UIBarButtonItem!
+    @IBOutlet weak var homeLeftButtom: UIBarButtonItem!
+    @IBOutlet weak var homeRightButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuButtom.tintColor = UIColor.white
+        setHomeLeftButton()
+        setHomeRightButton()
+    }
+    
+    private func setHomeLeftButton() {
+        homeLeftButtom.tintColor = UIColor.white
+    }
+    
+    private func setHomeRightButton() {
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(homeRightTapped), for: .touchUpInside)
+        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
+        infoBarButtonItem.customView?.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = infoBarButtonItem
     }
     
     @IBAction func homeLeftTapped(_ sender: Any) {
-        delegate?.didTapAwesomeButton()
+        delegate?.didTapHomeLeftButton()
     }
+    
+    @IBAction func homeRightTapped(_ sender: Any) {
+        delegate?.didTapHomeRightButton()
+    }
+    
 }
+    
+

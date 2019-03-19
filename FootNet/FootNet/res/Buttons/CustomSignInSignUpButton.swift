@@ -23,6 +23,8 @@ class CustomSignInSignUpButton: UIButton {
         let color = UIColor.colorDarkGreen
         let disabledColor = color.withAlphaComponent(0.3)
         let btnFont = UIFont.fontSystemS26
+        titleLabel?.numberOfLines = 1
+        titleLabel?.adjustsFontSizeToFitWidth = true
         clipsToBounds = true
         layer.cornerRadius = 5.0
         layer.borderColor = color.cgColor

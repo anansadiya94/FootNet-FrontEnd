@@ -10,16 +10,13 @@ import UIKit
 import CocoaLumberjack
 
 class BaseViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .colorDarkBlack
-        DDLogInfo("Load Base View")
     }
 }
 
 extension UIViewController {
-    
     func setBackground() {
         view.backgroundColor = .colorDarkBlack
     }

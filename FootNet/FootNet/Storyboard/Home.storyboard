@@ -26,9 +26,11 @@
                                 <action selector="homeLeftTapped:" destination="cIo-ME-JoZ" id="4yt-tG-eSp"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="infi" id="5Ue-Pf-RzP"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButtom" destination="vw8-iH-zgC" id="2Ol-hU-Qgg"/>
+                        <outlet property="homeLeftButtom" destination="vw8-iH-zgC" id="GHn-St-YXn"/>
+                        <outlet property="homeRightButton" destination="5Ue-Pf-RzP" id="xIm-4C-3GB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wfz-Px-iFo" userLabel="First Responder" sceneMemberID="firstResponder"/>

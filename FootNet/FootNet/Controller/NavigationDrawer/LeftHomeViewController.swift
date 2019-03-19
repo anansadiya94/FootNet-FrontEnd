@@ -9,7 +9,6 @@
 import UIKit
 
 class LeftHomeViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue

@@ -10,7 +10,6 @@ import UIKit
 import CocoaLumberjack
 
 class SignUpSelectProfileTableViewController: UITableViewController {
-
     var signUpSelectProfileData = [SignUpSelectProfileModel]()
     private var profileType : ProfileType?
     

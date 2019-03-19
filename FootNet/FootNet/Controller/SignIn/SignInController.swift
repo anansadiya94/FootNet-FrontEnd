@@ -10,14 +10,12 @@ import UIKit
 import CocoaLumberjack
 
 class SignInController: BaseViewController, UITextFieldDelegate {
-
     //IBOutlets
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var forgotPasswordButton: CustomSignInSignUpButton!
     @IBOutlet weak var signInButton: CustomSignInSignUpButton!
     @IBOutlet weak var signUpButton: CustomSignInSignUpButton!
-    
     
     @IBOutlet weak var changeLanguageLabel: CustomLabel!
     @IBOutlet weak var englishButton: CustomLanguagesButton!
@@ -27,19 +25,25 @@ class SignInController: BaseViewController, UITextFieldDelegate {
     var validateSignInForm = ValidateSignInForm()
     var signInFormErrors: String = ""
     let appNavigationDrawer = AppNavigationDrawer()
+    var spinner = Spinner()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DDLogInfo("Load SignIn View")
         configureOutlets()
         configureDismissKeyboard()
+        spinner.createSpinner(view: view)
     }
     
     @IBAction func signIn(_ sender: Any) {
+        //start spinner
+        spinner.startSpinner()
         if validateSignIn() {
+            spinner.stopSpinner()
             let viewController = appNavigationDrawer.createAppNavigationDrawer()
             present(viewController, animated: true, completion: nil)
         } else {
+            spinner.stopSpinner()
             //alert with the errors
             signInErrorAlert()
         }
@@ -49,7 +53,7 @@ class SignInController: BaseViewController, UITextFieldDelegate {
         signInFormErrors = validateSignInForm.CheckSignInForm(Email: (emailTextField.text ?? ""), Password: (passwordTextField.text ?? ""))
         if signInFormErrors.isEmpty {
             //API CALL + api error alert
-            print("ok")
+            DDLogInfo("Successfully signed in")
             return true
         } else {
             return false

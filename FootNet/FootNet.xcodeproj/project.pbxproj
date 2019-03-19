@@ -30,6 +30,7 @@
 		9E8D8D1A223AAE1400A8A880 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D8D19223AAE1400A8A880 /* Home.storyboard */; };
 		9E8D8D1D223AB08C00A8A880 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D1C223AB08C00A8A880 /* HomeViewController.swift */; };
 		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
+		9E93570D2240E5E60036F23A /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93570C2240E5E60036F23A /* Spinner.swift */; };
 		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */; };
 		9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */; };
@@ -82,6 +83,7 @@
 		9E8D8D19223AAE1400A8A880 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9E8D8D1C223AB08C00A8A880 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignInForm.swift; sourceTree = "<group>"; };
+		9E93570C2240E5E60036F23A /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Spinner.swift; path = FootNet/res/Spinner/Spinner.swift; sourceTree = SOURCE_ROOT; };
 		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileCell.swift; sourceTree = "<group>"; };
 		9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -175,7 +177,6 @@
 				9E4E075F222593DD00F8ED17 /* Controller */,
 				9E4E0760222593E300F8ED17 /* View */,
 				9E4E0761222593E700F8ED17 /* Storyboard */,
-				9E4E07742225978200F8ED17 /* Providers */,
 				9E4E07642225966E00F8ED17 /* Res */,
 				9EC925582226E47B00B0E694 /* Localizable.strings */,
 			);
@@ -235,6 +236,7 @@
 		9E4E07642225966E00F8ED17 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				9E93570B2240E5C50036F23A /* Spinner */,
 				9E5420D9223FA45F0098AC44 /* Storyborads */,
 				9EBD4FBE22398833008604EB /* Views */,
 				9EBD4FB62239708A008604EB /* LocalizationSystem */,
@@ -285,13 +287,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		9E4E07742225978200F8ED17 /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Providers;
-			sourceTree = "<group>";
-		};
 		9E5420CA223F9F500098AC44 /* NavigationDrawer */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +322,14 @@
 				9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		9E93570B2240E5C50036F23A /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				9E93570C2240E5E60036F23A /* Spinner.swift */,
+			);
+			path = Spinner;
 			sourceTree = "<group>";
 		};
 		9EA8F822222FBDA10021C435 /* Tables */ = {
@@ -583,6 +586,7 @@
 				9EB24E862227E3F4004B0C66 /* CustomForgotPasswordButton.swift in Sources */,
 				9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */,
 				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
+				9E93570D2240E5E60036F23A /* Spinner.swift in Sources */,
 				9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */,
 				9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,

@@ -10,7 +10,6 @@ import UIKit
 import CocoaLumberjack
 
 class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
-
     var signUpDeatilSectionsData = [[SignUpDetailModel]]()
     var profileType: ProfileType?
     var userProfileModel = UserProfileModel()
@@ -41,6 +40,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     var activityIndicator = UIActivityIndicatorView()
     var validateSignUpForm = ValidateSignUpForm()
     let appNavigationDrawer = AppNavigationDrawer()
+    var spinner = Spinner()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         createRightButton()
         
         //create spinner
-        createSpinner()
+        //createSpinner()
+        spinner.createSpinner(view: view)
         
         //Date Picker
         datePicker = UIDatePicker()
@@ -114,8 +115,9 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         let signUpFormErrors = validateSignUpForm.CheckSignUpForm(UserProfileModel: userProfileModel, ProfileType: profileType!)
         if signUpFormErrors.isEmpty {
             // Start the loading animation
-            startSpinner()
-            
+            spinner.startSpinner()
+            self.navigationItem.leftBarButtonItem?.isEnabled = false
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
             //TODO - API CALL WITH ALL USER INFO
             let error = true
             if !error {
@@ -124,10 +126,14 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 //add yes action
                 alert.addAction(UIAlertAction(title: "ERROR API OR INTERNET CONECTION ", style: .default, handler: nil))
                 self.present(alert, animated: true)
-                stopSpinner()
+                spinner.stopSpinner()
+                self.navigationItem.leftBarButtonItem?.isEnabled = true
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
             } else {
                 // To remove it, just call removeFromSuperview()
-                stopSpinner()
+                spinner.stopSpinner()
+                self.navigationItem.leftBarButtonItem?.isEnabled = true
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
                 let viewController = appNavigationDrawer.createAppNavigationDrawer()
                 present(viewController, animated: true, completion: nil)
             }
@@ -141,30 +147,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
             self.present(alert, animated: true)
             }
-    }
-    
-    private func startSpinner(){
-        activityIndicator.startAnimating()
-        self.navigationItem.leftBarButtonItem?.isEnabled = false
-        self.navigationItem.rightBarButtonItem?.isEnabled = false
-    }
-    
-    private func stopSpinner(){
-        activityIndicator.removeFromSuperview()
-        self.navigationItem.leftBarButtonItem?.isEnabled = true
-        self.navigationItem.rightBarButtonItem?.isEnabled = true
-    }
-    
-    private func createSpinner() {
-        // Create the Activity Indicator
-        activityIndicator = UIActivityIndicatorView(style: .gray)
-        activityIndicator.transform = CGAffineTransform(scaleX: 4, y: 4)
-    
-        // Add it to the view where you want it to appear
-        view.addSubview(activityIndicator)
-    
-        // Set up its size (the super view bounds usually)
-        activityIndicator.frame = view.bounds
     }
     
     // MARK: - Table view data source

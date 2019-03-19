@@ -10,13 +10,16 @@ import UIKit
 import Material
 
 extension AppNavigationDrawer : AppNavigationDrawerDelegate {
-    func didTapAwesomeButton() {
+    func didTapHomeRightButton() {
+        appNavigationDrawerController?.openRightView()
+    }
+    
+    func didTapHomeLeftButton() {
         appNavigationDrawerController?.openLeftView()
     }
 }
 
 class AppNavigationDrawer: UIViewController{
-    
     var appNavigationDrawerController : AppNavigationDrawerController?
     
     func createAppNavigationDrawer () -> AppNavigationDrawerController {

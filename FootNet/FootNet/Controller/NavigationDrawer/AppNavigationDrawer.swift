@@ -23,8 +23,8 @@ class AppNavigationDrawer: UIViewController{
     var appNavigationDrawerController : AppNavigationDrawerController?
     
     func createAppNavigationDrawer () -> AppNavigationDrawerController {
-        let homeViewController: HomeViewController = {
-            let viewController = UIStoryboard.viewController(name: "Home", identifier: "HomeViewController") as! HomeViewController
+        let homeViewController: MainTabBarViewController = {
+            let viewController = UIStoryboard.viewController(name: "MainTabBar", identifier: "MainTabBarViewController") as! MainTabBarViewController
             viewController.delegate = self
             return viewController
         }()

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="otR-Jq-fin">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cIo-ME-JoZ" customClass="HomeViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cIo-ME-JoZ" customClass="MainTabBarViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EKB-XN-7dh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -15,7 +15,7 @@ protocol AppNavigationDrawerDelegate: class {
     func didTapHomeRightButton()
 }
 
-class HomeViewController: BaseViewController {
+class MainTabBarViewController: BaseViewController {
     weak var delegate: AppNavigationDrawerDelegate?
     @IBOutlet weak var homeLeftButtom: UIBarButtonItem!
     @IBOutlet weak var homeRightButton: UIBarButtonItem!
@@ -45,7 +45,6 @@ class HomeViewController: BaseViewController {
     @IBAction func homeRightTapped(_ sender: Any) {
         delegate?.didTapHomeRightButton()
     }
-    
 }
     
 

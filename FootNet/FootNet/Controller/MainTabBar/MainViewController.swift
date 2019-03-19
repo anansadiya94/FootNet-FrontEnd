@@ -15,7 +15,7 @@ protocol AppNavigationDrawerDelegate: class {
     func didTapHomeRightButton()
 }
 
-class MainTabBarViewController: BaseViewController {
+class MainViewController: BaseViewController {
     weak var delegate: AppNavigationDrawerDelegate?
     @IBOutlet weak var homeLeftButtom: UIBarButtonItem!
     @IBOutlet weak var homeRightButton: UIBarButtonItem!
@@ -25,6 +25,8 @@ class MainTabBarViewController: BaseViewController {
         setHomeLeftButton()
         setHomeRightButton()
     }
+    
+    
     
     private func setHomeLeftButton() {
         homeLeftButtom.tintColor = UIColor.white

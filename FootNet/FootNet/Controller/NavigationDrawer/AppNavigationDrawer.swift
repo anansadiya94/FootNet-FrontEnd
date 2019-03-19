@@ -23,8 +23,8 @@ class AppNavigationDrawer: UIViewController{
     var appNavigationDrawerController : AppNavigationDrawerController?
     
     func createAppNavigationDrawer () -> AppNavigationDrawerController {
-        let homeViewController: MainTabBarViewController = {
-            let viewController = UIStoryboard.viewController(name: "MainTabBar", identifier: "MainTabBarViewController") as! MainTabBarViewController
+        let mainViewController: MainViewController = {
+            let viewController = UIStoryboard.viewController(name: "Main", identifier: "MainViewController") as! MainViewController
             viewController.delegate = self
             return viewController
         }()
@@ -37,7 +37,7 @@ class AppNavigationDrawer: UIViewController{
             return UIStoryboard.viewController(name: "RightHome", identifier: "RightHomeViewController") as! RightHomeViewController
         }()
         
-        let navigationController = UINavigationController(rootViewController: homeViewController)
+        let navigationController = UINavigationController(rootViewController: mainViewController)
         navigationController.navigationBar.topItem?.title = "FootNet"
         navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController.navigationBar.barTintColor = UIColor.black

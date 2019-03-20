@@ -9,23 +9,12 @@
 import UIKit
 import Material
 
-extension AppNavigationDrawer : AppNavigationDrawerDelegate {
-    func didTapHomeRightButton() {
-        appNavigationDrawerController?.openRightView()
-    }
-    
-    func didTapHomeLeftButton() {
-        appNavigationDrawerController?.openLeftView()
-    }
-}
-
 class AppNavigationDrawer: UIViewController{
     var appNavigationDrawerController : AppNavigationDrawerController?
     
     func createAppNavigationDrawer () -> AppNavigationDrawerController {
-        let mainViewController: MainViewController = {
-            let viewController = UIStoryboard.viewController(name: "Main", identifier: "MainViewController") as! MainViewController
-            viewController.delegate = self
+        let mainViewController: MainTabBarController = {
+            let viewController = MainTabBarController()
             return viewController
         }()
         
@@ -38,16 +27,43 @@ class AppNavigationDrawer: UIViewController{
         }()
         
         let navigationController = UINavigationController(rootViewController: mainViewController)
-        navigationController.navigationBar.topItem?.title = "FootNet"
-        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController.navigationBar.barTintColor = UIColor.black
-
+        setNavigationBar(navigationController)
+        setHomeLeftButton(mainViewController)
+        setHomeRightButton(mainViewController)
 
         appNavigationDrawerController = AppNavigationDrawerController(rootViewController: navigationController,
                                                            leftViewController: leftHomeViewController,
                                                            rightViewController: rightViewController)
     
         return appNavigationDrawerController!
+    }
+    
+    private func setNavigationBar(_ navigationController: UINavigationController) {
+        navigationController.navigationBar.topItem?.title = "FootNet"
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController.navigationBar.barTintColor = UIColor.black
+    }
+    
+    private func setHomeLeftButton(_ viewController: UIViewController) {
+        let homeLeftButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menuButton"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(homeLeftTapped))
+        homeLeftButtonItem.tintColor = UIColor.white
+        viewController.navigationItem.leftBarButtonItem = homeLeftButtonItem
+    }
+    
+    private func setHomeRightButton(_ viewController: UIViewController) {
+        let homeRightButton = UIButton(type: .infoLight)
+        homeRightButton.addTarget(self, action: #selector(homeRightTapped), for: .touchUpInside)
+        let homeRightButtonItem = UIBarButtonItem(customView: homeRightButton)
+        homeRightButtonItem.customView?.tintColor = UIColor.white
+        viewController.navigationItem.rightBarButtonItem = homeRightButtonItem
+    }
+    
+    @objc private func homeLeftTapped(_ sender: Any) {
+        appNavigationDrawerController?.openLeftView()
+    }
+    
+    @objc private func homeRightTapped(_ sender: Any) {
+        appNavigationDrawerController?.openRightView()
     }
 
 }

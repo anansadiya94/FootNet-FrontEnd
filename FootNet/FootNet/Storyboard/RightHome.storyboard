@@ -14,11 +14,40 @@
         <scene sceneID="qP1-yi-Ly0">
             <objects>
                 <viewController storyboardIdentifier="RightHomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Imw-xR-NAz" customClass="RightHomeViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aPd-Va-xD7">
+                    <view key="view" contentMode="scaleToFill" id="OLp-AB-aoB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Develoeper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPl-Ku-NYh">
+                                <rect key="frame" x="128" y="237" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeRight" translatesAutoresizingMaskIntoConstraints="NO" id="shJ-ne-rXh" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="84" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Jqi-i9-6yd"/>
+                                    <constraint firstAttribute="width" constant="100" id="n4k-ha-F01"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anan Sadiya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-Fv-O7s">
+                                <rect key="frame" x="140" y="200" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="9x8-QI-tJF"/>
+                        <constraints>
+                            <constraint firstItem="LPl-Ku-NYh" firstAttribute="top" secondItem="9gh-Fv-O7s" secondAttribute="bottom" constant="16" id="1Bu-WY-u94"/>
+                            <constraint firstItem="9gh-Fv-O7s" firstAttribute="top" secondItem="shJ-ne-rXh" secondAttribute="bottom" constant="16" id="7RK-EZ-obv"/>
+                            <constraint firstItem="shJ-ne-rXh" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="HPD-jK-YM0"/>
+                            <constraint firstItem="9gh-Fv-O7s" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="Zx1-l2-oFd"/>
+                            <constraint firstItem="shJ-ne-rXh" firstAttribute="top" secondItem="Evg-j6-zco" secondAttribute="top" constant="64" id="ejW-dD-7kr"/>
+                            <constraint firstItem="LPl-Ku-NYh" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="w1n-0T-TLp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Evg-j6-zco"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpf-d6-1gg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -26,4 +55,7 @@
             <point key="canvasLocation" x="172" y="29"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homeRight" width="350" height="350"/>
+    </resources>
 </document>

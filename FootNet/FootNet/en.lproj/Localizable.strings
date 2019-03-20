@@ -116,3 +116,11 @@
 "del"="Delantera";
 "por"="Portero";
 "def"="Defensa";
+
+//TabBar
+"homeTabBar"="Home";
+"offersTabBar"="Offers";
+"offersStatusTabBar"="Offers Status";
+"searchTabBar"="Search";
+"notificationsTabBar"="Notifications";
+

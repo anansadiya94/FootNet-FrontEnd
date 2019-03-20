@@ -14,8 +14,7 @@ class AppNavigationDrawer: UIViewController{
     
     func createAppNavigationDrawer () -> AppNavigationDrawerController {
         let mainViewController: MainTabBarController = {
-            let viewController = MainTabBarController()
-            return viewController
+            return UIStoryboard.viewController(name: "MainTabBar", identifier: "MainTabBarController") as! MainTabBarController
         }()
         
         let leftHomeViewController: LeftHomeViewController = {
@@ -65,6 +64,5 @@ class AppNavigationDrawer: UIViewController{
     @objc private func homeRightTapped(_ sender: Any) {
         appNavigationDrawerController?.openRightView()
     }
-
 }
 

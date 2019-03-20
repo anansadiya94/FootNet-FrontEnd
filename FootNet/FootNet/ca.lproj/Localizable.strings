@@ -115,3 +115,10 @@
 "del"="Delantera";
 "por"="Portero";
 "def"="Defensa";
+
+//TabBar
+"homeTabBar"="Inici";
+"offersTabBar"="Ofertes";
+"offersStatusTabBar"="Estat de ofertes";
+"searchTabBar"="Búsqueda";
+"notificationsTabBar"="Notificacions";

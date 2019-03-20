@@ -12,5 +12,10 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        setTabBar()
+    }
+    
+    private func setTabBar() {
+        tabBarItem.title = "searchTabBar".localize()
     }
 }

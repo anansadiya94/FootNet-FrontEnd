@@ -12,5 +12,10 @@ class OffersStatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
+        setTabBar()
+    }
+    
+    private func setTabBar() {
+        tabBarItem.title = "offersStatusTabBar".localize()
     }
 }

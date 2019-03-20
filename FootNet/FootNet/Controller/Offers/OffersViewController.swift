@@ -12,5 +12,10 @@ class OffersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.green
+        setTabBar()
+    }
+    
+    private func setTabBar() {
+        tabBarItem.title = "offersTabBar".localize()
     }
 }

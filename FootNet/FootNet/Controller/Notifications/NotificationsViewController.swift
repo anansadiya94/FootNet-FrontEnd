@@ -12,5 +12,10 @@ class NotificationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
+        setTabBar()
+    }
+    
+    private func setTabBar() {
+        tabBarItem.title = "notificationsTabBar".localize()
     }
 }

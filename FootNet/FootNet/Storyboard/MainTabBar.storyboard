@@ -23,7 +23,7 @@
         <scene sceneID="Oax-Ic-5Lf">
             <objects>
                 <viewControllerPlaceholder storyboardName="Offers" id="2LU-7P-UBk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Offers" image="checkButton" id="Vep-g3-XDw"/>
+                    <tabBarItem key="tabBarItem" title="Offers" id="Vep-g3-XDw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b85-Z8-Bvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,6 +39,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="homeTabBarItem" destination="7et-Ad-cJT" id="PuX-fF-Ilc"/>
+                        <outlet property="notificationsTabBarItem" destination="7et-Ad-cJT" id="bXj-yG-zoD"/>
+                        <outlet property="offerTabBarItem" destination="7et-Ad-cJT" id="uYi-45-1zk"/>
+                        <outlet property="offersStatusTabBar" destination="7et-Ad-cJT" id="sin-7i-Mah"/>
+                        <outlet property="searchTabBarItem" destination="7et-Ad-cJT" id="BBj-8t-8nh"/>
                         <segue destination="KQG-u7-Upc" kind="relationship" relationship="viewControllers" id="hJT-Nn-qXy"/>
                         <segue destination="2LU-7P-UBk" kind="relationship" relationship="viewControllers" id="kjG-Mo-VOB"/>
                         <segue destination="kfh-3H-cix" kind="relationship" relationship="viewControllers" id="Gjr-Yy-Ixq"/>
@@ -81,7 +86,4 @@
             <point key="canvasLocation" x="-246" y="396"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="checkButton" width="24" height="24"/>
-    </resources>
 </document>

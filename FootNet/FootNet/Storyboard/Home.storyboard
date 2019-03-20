@@ -20,7 +20,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cp3-aF-qYY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="homeTabBar" id="Kr2-7r-Qpe"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homeTabBar" id="Kr2-7r-Qpe">
+                        <color key="badgeColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwf-2X-Hef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

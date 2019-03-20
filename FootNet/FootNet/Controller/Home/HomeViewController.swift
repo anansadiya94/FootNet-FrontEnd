@@ -12,10 +12,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.yellow
-        setTabBar()
+        setTabBarItem()
     }
     
-    private func setTabBar() {
+    private func setTabBarItem() {
         tabBarItem.title = "homeTabBar".localize()
     }
 }

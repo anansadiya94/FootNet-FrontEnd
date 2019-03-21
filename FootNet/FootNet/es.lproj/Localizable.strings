@@ -121,3 +121,9 @@
 "offersStatusTabBar"="Estado de ofertas";
 "searchTabBar"="Búsqueda";
 "notificationsTabBar"="Notificaciones";
+
+//Right home
+"workLabel"="Desarrollador iOS";
+"doubtEmailMessageLabel"="¿Tienes alguna duda?";
+"donateEmailMessageLabel"="¿Quieres donar dinero?";
+"followLabel"="Sígueme en:";

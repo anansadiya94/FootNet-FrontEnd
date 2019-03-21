@@ -23,5 +23,4 @@ class CustomLabel: UILabel {
         self.font = UIFont.fontSystemS20
         self.textColor = UIColor.colorDarkGreen
     }
-    
 }

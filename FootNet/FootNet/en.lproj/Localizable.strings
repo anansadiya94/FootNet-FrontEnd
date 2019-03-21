@@ -124,3 +124,8 @@
 "searchTabBar"="Search";
 "notificationsTabBar"="Notifications";
 
+//Right home
+"workLabel"="iOS Developer";
+"doubtEmailMessageLabel"="Do you have any doubt?";
+"donateEmailMessageLabel"="Do you want to donate money?";
+"followLabel"="Follow me on:";

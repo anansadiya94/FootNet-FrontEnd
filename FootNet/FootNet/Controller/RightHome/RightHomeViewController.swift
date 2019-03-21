@@ -7,16 +7,55 @@
 //
 
 import UIKit
+import MessageUI
 
-class RightHomeViewController: UIViewController {
+class RightHomeViewController: UIViewController, MFMailComposeViewControllerDelegate {
+    @IBOutlet weak var workLabel: UILabel!
+    @IBOutlet weak var doubtEmailMessageLabel: UILabel!
+    @IBOutlet weak var donateEmailMessageLabel: UILabel!
+    @IBOutlet weak var followLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.colorDarkGreen
+        configureOutlets()
+        if !MFMailComposeViewController.canSendMail() {
+            print("Mail services are not available")
+            return
+        }
+    }
+    
+    private func configureOutlets() {
+        workLabel.text = "workLabel".localize()
+        doubtEmailMessageLabel.text = "doubtEmailMessageLabel".localize()
+        donateEmailMessageLabel.text = "donateEmailMessageLabel".localize()
+        followLabel.text = "followLabel".localize()
+    }
+    
+    @IBAction func sendAnEmailButton(_ sender: Any) {
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+        
+        // Configure the fields of the interface.
+        composeVC.setToRecipients(["anansadiya@gmail.com"])
+        composeVC.setSubject("[FootNet]")
+        composeVC.setMessageBody("Message content.", isHTML: false)
+        
+        // Present the view controller modally.
+        self.present(composeVC, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        // Check the result or perform other tasks.
+        
+        // Dismiss the mail compose view controller.
+        controller.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func linkedInButton(_ sender: Any) {
-        let webURL = URL(string: "https://www.linkedin.com/in/anan-sadiya-26071994/")!
-        let appURL = URL(string: "linkedin://profile/anan-sadiya-26071994/")!
+        let username =  "anan-sadiya-26071994"
+        let webURL = URL(string: "https://www.linkedin.com/in/\(username)/")!
+        let appURL = URL(string: "linkedin://profile/\(username)/")!
         
         if UIApplication.shared.canOpenURL(appURL) {
             UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
@@ -26,15 +65,15 @@ class RightHomeViewController: UIViewController {
     }
     
     @IBAction func instagramButton(_ sender: Any) {
-        let Username =  "Anansadiya94" // Your Instagram Username here
-        let appURL = URL(string: "instagram://user?username=\(Username)")!
+        let username =  "Anansadiya94"
+        let appURL = URL(string: "instagram://user?username=\(username)")!
         let application = UIApplication.shared
         
         if application.canOpenURL(appURL) {
             application.open(appURL)
         } else {
             // if Instagram app is not installed, open URL inside Safari
-            let webURL = URL(string: "https://instagram.com/\(Username)")!
+            let webURL = URL(string: "https://instagram.com/\(username)")!
             application.open(webURL)
         }
     }

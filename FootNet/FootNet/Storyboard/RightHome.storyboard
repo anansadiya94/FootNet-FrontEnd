@@ -51,7 +51,7 @@
                                 </constraints>
                                 <state key="normal" title="Instagram" image="linkedinButton"/>
                                 <connections>
-                                    <action selector="instagramButton:" destination="Imw-xR-NAz" eventType="touchUpInside" id="81W-kv-HeR"/>
+                                    <action selector="linkedInButton:" destination="Imw-xR-NAz" eventType="touchUpInside" id="f3d-y7-OAs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIS-5o-bGZ">
@@ -68,7 +68,7 @@
                                 </constraints>
                                 <state key="normal" title="LinkedIn" image="instagramButton"/>
                                 <connections>
-                                    <action selector="linkedInButton:" destination="Imw-xR-NAz" eventType="touchUpInside" id="Lpa-Cv-eXh"/>
+                                    <action selector="instagramButton:" destination="Imw-xR-NAz" eventType="touchUpInside" id="Vml-mf-QGy"/>
                                 </connections>
                             </button>
                         </subviews>

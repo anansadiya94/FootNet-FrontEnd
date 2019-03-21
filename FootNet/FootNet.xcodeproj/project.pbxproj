@@ -22,7 +22,6 @@
 		9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
 		9E5420D4223FA3270098AC44 /* RightHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D3223FA3270098AC44 /* RightHome.storyboard */; };
 		9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */; };
-		9E5420D8223FA4110098AC44 /* LeftHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D7223FA4110098AC44 /* LeftHomeViewController.swift */; };
 		9E5420DB223FA47E0098AC44 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420DA223FA47E0098AC44 /* StoryboardExtension.swift */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
@@ -51,6 +50,7 @@
 		9EB3A6CD222D7909002F244E /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3A6CC222D7909002F244E /* UserProfileModel.swift */; };
 		9EBD4FB82239709B008604EB /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBD4FB72239709B008604EB /* LocalizationSystem.swift */; };
 		9EBD4FC02239883F008604EB /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBD4FBF2239883F008604EB /* CustomView.swift */; };
+		9EC4A3932243F8CD003030ED /* LeftHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4A3922243F8CD003030ED /* LeftHomeTableViewController.swift */; };
 		9EC925562226E47B00B0E694 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EC925582226E47B00B0E694 /* Localizable.strings */; };
 		9EF232BD2237EF01004BF61F /* CustomChoosePhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF232BC2237EF01004BF61F /* CustomChoosePhotoButton.swift */; };
 		9EF232C02237F277004BF61F /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF232BF2237F277004BF61F /* CustomImageView.swift */; };
@@ -85,7 +85,6 @@
 		9E5420D1223FA3190098AC44 /* LeftHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeftHome.storyboard; sourceTree = "<group>"; };
 		9E5420D3223FA3270098AC44 /* RightHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RightHome.storyboard; sourceTree = "<group>"; };
 		9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeViewController.swift; sourceTree = "<group>"; };
-		9E5420D7223FA4110098AC44 /* LeftHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHomeViewController.swift; sourceTree = "<group>"; };
 		9E5420DA223FA47E0098AC44 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoryboardExtension.swift; path = FootNet/res/Storyborads/StoryboardExtension.swift; sourceTree = SOURCE_ROOT; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		9EBD4FB72239709B008604EB /* LocalizationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
 		9EBD4FBC22397D73008604EB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EBD4FBF2239883F008604EB /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		9EC4A3922243F8CD003030ED /* LeftHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHomeTableViewController.swift; sourceTree = "<group>"; };
 		9EC925572226E47B00B0E694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EC9255A2226E47E00B0E694 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EF232BC2237EF01004BF61F /* CustomChoosePhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomChoosePhotoButton.swift; path = FootNet/res/Buttons/CustomChoosePhotoButton.swift; sourceTree = SOURCE_ROOT; };
@@ -373,7 +373,7 @@
 		9E93570F22410B7B0036F23A /* LeftHome */ = {
 			isa = PBXGroup;
 			children = (
-				9E5420D7223FA4110098AC44 /* LeftHomeViewController.swift */,
+				9EC4A3922243F8CD003030ED /* LeftHomeTableViewController.swift */,
 			);
 			path = LeftHome;
 			sourceTree = "<group>";
@@ -676,9 +676,9 @@
 				9EF232C32237F3F9004BF61F /* CustomTextView.swift in Sources */,
 				9EF232C02237F277004BF61F /* CustomImageView.swift in Sources */,
 				9E5420C9223F8F930098AC44 /* CustomLanuagesButton.swift in Sources */,
+				9EC4A3932243F8CD003030ED /* LeftHomeTableViewController.swift in Sources */,
 				9E93571E224111940036F23A /* SearchViewController.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
-				9E5420D8223FA4110098AC44 /* LeftHomeViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
 				9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */,
 				9E4FA3642231A2FA00094509 /* Constants.swift in Sources */,

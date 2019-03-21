@@ -8,9 +8,10 @@
 
 import UIKit
 
-class LeftHomeViewController: UIViewController {
+class LeftHomeTableViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.colorDarkGreen
     }
 }

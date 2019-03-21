@@ -17,8 +17,8 @@ class AppNavigationDrawer: UIViewController{
             return UIStoryboard.viewController(name: "MainTabBar", identifier: "MainTabBarController") as! MainTabBarController
         }()
         
-        let leftHomeViewController: LeftHomeViewController = {
-            return UIStoryboard.viewController(name: "LeftHome", identifier: "LeftHomeViewController") as! LeftHomeViewController
+        let leftHomeTableViewController: LeftHomeTableViewController = {
+            return UIStoryboard.viewController(name: "LeftHome", identifier: "LeftHomeTableViewController") as! LeftHomeTableViewController
         }()
         
         let rightViewController: RightHomeViewController = {
@@ -31,7 +31,7 @@ class AppNavigationDrawer: UIViewController{
         setHomeRightButton(mainViewController)
 
         appNavigationDrawerController = AppNavigationDrawerController(rootViewController: navigationController,
-                                                           leftViewController: leftHomeViewController,
+                                                           leftViewController: leftHomeTableViewController,
                                                            rightViewController: rightViewController)
     
         return appNavigationDrawerController!

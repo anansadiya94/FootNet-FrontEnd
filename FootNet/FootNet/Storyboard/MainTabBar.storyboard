@@ -39,11 +39,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <outlet property="homeTabBarItem" destination="7et-Ad-cJT" id="PuX-fF-Ilc"/>
-                        <outlet property="notificationsTabBarItem" destination="7et-Ad-cJT" id="bXj-yG-zoD"/>
-                        <outlet property="offerTabBarItem" destination="7et-Ad-cJT" id="uYi-45-1zk"/>
-                        <outlet property="offersStatusTabBar" destination="7et-Ad-cJT" id="sin-7i-Mah"/>
-                        <outlet property="searchTabBarItem" destination="7et-Ad-cJT" id="BBj-8t-8nh"/>
+                        <outlet property="homeTabBar" destination="7et-Ad-cJT" id="PuX-fF-Ilc"/>
+                        <outlet property="notificationsTabBar" destination="7et-Ad-cJT" id="bXj-yG-zoD"/>
+                        <outlet property="offerTabBar" destination="7et-Ad-cJT" id="uYi-45-1zk"/>
+                        <outlet property="offersStatusTab" destination="7et-Ad-cJT" id="sin-7i-Mah"/>
+                        <outlet property="searchTabBar" destination="7et-Ad-cJT" id="BBj-8t-8nh"/>
                         <segue destination="KQG-u7-Upc" kind="relationship" relationship="viewControllers" id="hJT-Nn-qXy"/>
                         <segue destination="2LU-7P-UBk" kind="relationship" relationship="viewControllers" id="kjG-Mo-VOB"/>
                         <segue destination="kfh-3H-cix" kind="relationship" relationship="viewControllers" id="Gjr-Yy-Ixq"/>

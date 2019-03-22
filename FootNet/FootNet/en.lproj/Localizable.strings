@@ -129,3 +129,8 @@
 "doubtEmailMessageLabel"="Do you have any doubt?";
 "donateEmailMessageLabel"="Do you want to donate money?";
 "followLabel"="Follow me on:";
+
+//Left home
+"myProfileButton"="My profile";
+"signOutButton"="Sign out";
+"deactivateAccoutButton"="Deactivate account";

@@ -117,6 +117,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqw-0p-hqT" customClass="CustomLeftHomeButton" customModule="FootNet" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <state key="normal" title="Sign Out"/>
+                                                    <connections>
+                                                        <action selector="signOut:" destination="5Bc-jh-0Bm" eventType="touchUpInside" id="QXG-gh-dX1"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

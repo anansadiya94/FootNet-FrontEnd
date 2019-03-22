@@ -8,8 +8,12 @@
 
 import UIKit
 
+protocol AppNavigationDrawerDelegate: class {
+    func didTapSignOutButton()
+}
+
 class LeftHomeTableViewController: UITableViewController {
-    
+    weak var delegate: AppNavigationDrawerDelegate?
     @IBOutlet weak var img: CustomImageView!
     @IBOutlet weak var nameSurnameLabel: UILabel!
     @IBOutlet weak var profileTypeLabel: UILabel!
@@ -32,10 +36,22 @@ class LeftHomeTableViewController: UITableViewController {
         nameSurnameLabel.textColor = UIColor.white
         
         //TODO Account profile type
-        profileTypeLabel.text = "Gay"
+        profileTypeLabel.text = "Jugador"
         profileTypeLabel.textColor = UIColor.white
         
         //TODO Localize buttons
+        myProfileButton.setTitle("myProfileButton".localize(), for: .normal)
+        signOutButton.setTitle("signOutButton".localize(), for: .normal)
+        deactivateAccoutButton.setTitle("deactivateAccoutButton".localize(), for: .normal)
+    }
+    
+    
+    @IBAction func signOut(_ sender: Any) {
+        //TODO ALERT
+        //IF NO DISMISS
+        //IF YES
+        //Closeleft and push signin storyboard
+        delegate?.didTapSignOutButton()
     }
     
     /*

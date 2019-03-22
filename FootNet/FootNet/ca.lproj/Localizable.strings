@@ -128,3 +128,8 @@
 "doubtEmailMessageLabel"="Tens algun dubte?";
 "donateEmailMessageLabel"="Vols donar diners?";
 "followLabel"="Segueix-me a:";
+
+//Left home
+"myProfileButton"="El meu perfil";
+"signOutButton"="Tancar sessió";
+"deactivateAccoutButton"="Desactivar compte";

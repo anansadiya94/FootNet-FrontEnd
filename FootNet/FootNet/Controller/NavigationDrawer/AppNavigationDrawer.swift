@@ -9,16 +9,26 @@
 import UIKit
 import Material
 
-class AppNavigationDrawer: UIViewController{
-    var appNavigationDrawerController : AppNavigationDrawerController?
+extension AppNavigationDrawer: AppNavigationDrawerDelegate {
+    func didTapSignOutButton() {
+        appNavigationDrawerController?.closeLeftView()
+        //GO TO SIGN IN SCREEN
+    }
+}
+
+class AppNavigationDrawer: UIViewController {
+    var appNavigationDrawerController: AppNavigationDrawerController?
     
     func createAppNavigationDrawer () -> AppNavigationDrawerController {
         let mainViewController: MainTabBarController = {
-            return UIStoryboard.viewController(name: "MainTabBar", identifier: "MainTabBarController") as! MainTabBarController
+            let viewController = UIStoryboard.viewController(name: "MainTabBar", identifier: "MainTabBarController") as! MainTabBarController
+            return viewController
         }()
         
         let leftHomeTableViewController: LeftHomeTableViewController = {
-            return UIStoryboard.viewController(name: "LeftHome", identifier: "LeftHomeTableViewController") as! LeftHomeTableViewController
+            let viewController = UIStoryboard.viewController(name: "LeftHome", identifier: "LeftHomeTableViewController") as! LeftHomeTableViewController
+            viewController.delegate = self
+            return viewController
         }()
         
         let rightViewController: RightHomeViewController = {

@@ -9,14 +9,35 @@
 import UIKit
 
 class LeftHomeTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var img: CustomImageView!
+    @IBOutlet weak var nameSurnameLabel: UILabel!
+    @IBOutlet weak var profileTypeLabel: UILabel!
+    @IBOutlet weak var myProfileButton: CustomLeftHomeButton!
+    @IBOutlet weak var signOutButton: CustomLeftHomeButton!
+    @IBOutlet weak var deactivateAccoutButton: CustomLeftHomeButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.colorDarkGreen
-        // Do any additional setup after loading the view.
+        configureOutlets()
     }
     
-
+    private func configureOutlets() {
+        //TODO Account profile photo
+        img.image = #imageLiteral(resourceName: "joanet")
+        
+        //TODO Account name surname
+        nameSurnameLabel.text = "Joan Menéndez Alaminos"
+        nameSurnameLabel.textColor = UIColor.white
+        
+        //TODO Account profile type
+        profileTypeLabel.text = "Gay"
+        profileTypeLabel.textColor = UIColor.white
+        
+        //TODO Localize buttons
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -117,19 +117,44 @@ class LeftHomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 3:
+            
             delegate?.closeLeftView()
             NotificationCenter.default.post(name: Notification.Name("myProfileTapped"), object: self)
         case 4:
             delegate?.closeLeftView()
             NotificationCenter.default.post(name: Notification.Name("editProfileTapped"), object: self)
         case 5:
-            delegate?.closeLeftView()
-            NotificationCenter.default.post(name: Notification.Name("signOutTapped"), object: self)
+            signOutTapped()
         case 6:
-            delegate?.closeLeftView()
-            NotificationCenter.default.post(name: Notification.Name("deactivateAccountTapped"), object: self)
+            deactivateAccoutTapped()
         default:
             break
         }
+    }
+    
+    private func signOutTapped() {
+        let alertTitle = "signOut_alert".localize()
+        let alertYesTitle = "yes_alert".localize()
+        let alertNoTitle =  "no_alert".localize()
+        let alert = UIAlertController(title: alertTitle, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: alertYesTitle, style: .default, handler: { action in
+            self.delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("signOutTapped"), object: self)
+        }))
+        alert.addAction(UIAlertAction(title: alertNoTitle, style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    private func deactivateAccoutTapped() {
+        let alertTitle = "deactivateAccout_alert".localize()
+        let alertYesTitle = "yes_alert".localize()
+        let alertNoTitle =  "no_alert".localize()
+        let alert = UIAlertController(title: alertTitle, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: alertYesTitle, style: .default, handler: { action in
+            self.delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("deactivateAccountTapped"), object: self)
+        }))
+        alert.addAction(UIAlertAction(title: alertNoTitle, style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
 }

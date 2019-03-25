@@ -133,4 +133,6 @@
 "myProfileLabel"="El meu perfil";
 "editProfileLabel"="Editar perfil";
 "signOutLabel"="Tancar sessió";
+"signOut_alert"="Estàs segur que vols tancar sessió?";
 "deactivateAccoutLabel"="Desactivar compte";
+"deactivateAccout_alert"="Estàs segur que vols desactivar el teu compte?";

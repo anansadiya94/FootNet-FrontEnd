@@ -134,4 +134,8 @@
 "myProfileLabel"="My profile";
 "editProfileLabel"="Edit profile";
 "signOutLabel"="Sign out";
+"signOut_alert"="Are you sure you want to sign out?";
 "deactivateAccoutLabel"="Deactivate account";
+"deactivateAccout_alert"="Are you sure you want to deactivate your account?";
+
+

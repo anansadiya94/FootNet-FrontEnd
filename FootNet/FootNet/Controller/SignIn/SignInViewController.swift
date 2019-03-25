@@ -89,14 +89,14 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     
     @IBAction func changeToEnglish(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
-        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as! SignInViewController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = signIn
     }
     
     @IBAction func changeToSpanish(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "es")
-        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as! SignInViewController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = signIn
     }
@@ -104,7 +104,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     
     @IBAction func changeToCatalan(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "ca")
-        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as! SignInViewController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = signIn
     }

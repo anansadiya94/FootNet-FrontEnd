@@ -38,7 +38,10 @@ class AppNavigationDrawer: UIViewController {
         setNavigationBar(navigationController)
         setHomeLeftButton(mainViewController)
         setHomeRightButton(mainViewController)
-
+        navigationController.navigationBar.tintColor = UIColor.white
+        let backItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        navigationController.navigationItem.backBarButtonItem = backItem
+        appNavigationDrawerController?.navigationItem.backBarButtonItem = backItem
         appNavigationDrawerController = AppNavigationDrawerController(rootViewController: navigationController,
                                                            leftViewController: leftHomeTableViewController,
                                                            rightViewController: rightViewController)

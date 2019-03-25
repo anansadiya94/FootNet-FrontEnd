@@ -117,10 +117,11 @@ class LeftHomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 3:
-            print("My profile was clicked")
-            
+            delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("myProfileTapped"), object: self)
         case 4:
-            print("Edit profile was clicked")
+            delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("editProfileTapped"), object: self)
         case 5:
             delegate?.closeLeftView()
             NotificationCenter.default.post(name: Notification.Name("signOutTapped"), object: self)

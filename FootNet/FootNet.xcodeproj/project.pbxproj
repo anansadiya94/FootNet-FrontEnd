@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
 		9E1EC84E22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC84D22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift */; };
+		9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */; };
+		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
+		9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
+		9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
 		9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
 		9E35D93422268440008E8361 /* CustomSignInSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */; };
 		9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93822268801008E8361 /* UIFontExtension.swift */; };
@@ -72,6 +76,10 @@
 		97ADF54F56DB766954955BDE /* Pods_FootNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1B1E1F2225A55600C82019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E1EC84D22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomLeftHomeLabel.swift; path = FootNet/res/Labels/CustomLeftHomeLabel.swift; sourceTree = SOURCE_ROOT; };
+		9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfleViewController.swift; sourceTree = "<group>"; };
+		9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
+		9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		9E35D930222681B4008E8361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInSignUpButton.swift; sourceTree = "<group>"; };
 		9E35D93822268801008E8361 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
@@ -155,6 +163,22 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
+		9E1EC84F2249213500E5B2E7 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		9E1EC8502249214300E5B2E7 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
 		9E35D932222683F6008E8361 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +256,8 @@
 				9E5420CA223F9F500098AC44 /* NavigationDrawer */,
 				9E93571022410B830036F23A /* RightHome */,
 				9E93570F22410B7B0036F23A /* LeftHome */,
+				9E1EC84F2249213500E5B2E7 /* MyProfile */,
+				9E1EC8502249214300E5B2E7 /* EditProfile */,
 				9E93570E22410B700036F23A /* MainTabBar */,
 				9E93571522410FFC0036F23A /* Home */,
 				9E93571122410F3D0036F23A /* Offers */,
@@ -261,6 +287,8 @@
 				9E79C38822391F9700A9C292 /* SignIn.storyboard */,
 				9EB24EA02227F27D004B0C66 /* SignUp.storyboard */,
 				9E5420D1223FA3190098AC44 /* LeftHome.storyboard */,
+				9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */,
+				9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */,
 				9E5420D3223FA3270098AC44 /* RightHome.storyboard */,
 				9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */,
 				9E935721224116540036F23A /* Home.storyboard */,
@@ -601,10 +629,12 @@
 				9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */,
 				9EFEA4B622424536002C9EB0 /* MainTabBar.storyboard in Resources */,
 				9EFEA4B8224247B4002C9EB0 /* OffersStatus.storyboard in Resources */,
+				9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */,
 				9EC925562226E47B00B0E694 /* Localizable.strings in Resources */,
 				9E4E076A222596C400F8ED17 /* environments.json in Resources */,
 				9EB24E9E2227F27D004B0C66 /* SignUp.storyboard in Resources */,
 				9E4E0753222593B300F8ED17 /* Assets.xcassets in Resources */,
+				9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */,
 				9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */,
 				9EFEA4B422424513002C9EB0 /* Offers.storyboard in Resources */,
 				9E5420D4223FA3270098AC44 /* RightHome.storyboard in Resources */,
@@ -695,9 +725,11 @@
 				9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */,
 				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
 				9E93571C224111870036F23A /* OffersStatusViewController.swift in Sources */,
+				9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */,
 				9E93570D2240E5E60036F23A /* Spinner.swift in Sources */,
 				9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */,
 				9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */,
+				9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,
 				9EB24EAC2227F54C004B0C66 /* SignUpSelectProfileData.swift in Sources */,

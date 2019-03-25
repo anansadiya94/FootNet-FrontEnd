@@ -10,9 +10,8 @@ import UIKit
 import Material
 
 extension AppNavigationDrawer: AppNavigationDrawerDelegate {
-    func didTapSignOutButton() {
+    func closeLeftView() {
         appNavigationDrawerController?.closeLeftView()
-        //GO TO SIGN IN SCREEN
     }
 }
 

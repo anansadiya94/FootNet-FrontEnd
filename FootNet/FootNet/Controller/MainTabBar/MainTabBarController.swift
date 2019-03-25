@@ -15,8 +15,6 @@ class MainTabBarController: UITabBarController {
     @IBOutlet weak var searchTabBar: UITabBar!
     @IBOutlet weak var notificationsTabBar: UITabBar!
 
-    let home = HomeViewController()
-    let offers = OffersViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         //Load all view
@@ -24,6 +22,30 @@ class MainTabBarController: UITabBarController {
             _ = viewController.view
         }
         setTabBar()
+        addObservers()
+    }
+    
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.signOutTapped), name: Notification.Name("signOutTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.deactivateAccountTapped), name: Notification.Name("deactivateAccountTapped"), object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func signOutTapped() {
+        //TODO - Close session!
+        let signInStoryboard = UIStoryboard(name: "SignIn", bundle: nil)
+        let signInViewController = signInStoryboard.instantiateViewController(withIdentifier: "SignIn")
+        self.present(signInViewController, animated: true, completion: nil)
+    }
+    
+    @objc func deactivateAccountTapped() {
+        //TODO - POST -> Deactivate account
+        let signInStoryboard = UIStoryboard(name: "SignIn", bundle: nil)
+        let signInViewController = signInStoryboard.instantiateViewController(withIdentifier: "SignIn")
+        self.present(signInViewController, animated: true, completion: nil)
     }
     
     private func setTabBar() {

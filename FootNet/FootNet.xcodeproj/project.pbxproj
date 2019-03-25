@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
+		9E1EC84E22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC84D22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift */; };
 		9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
 		9E35D93422268440008E8361 /* CustomSignInSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */; };
 		9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93822268801008E8361 /* UIFontExtension.swift */; };
 		9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074B222593B200F8ED17 /* AppDelegate.swift */; };
-		9E4E074E222593B200F8ED17 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074D222593B200F8ED17 /* SignInController.swift */; };
+		9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074D222593B200F8ED17 /* SignInViewController.swift */; };
 		9E4E0753222593B300F8ED17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0752222593B300F8ED17 /* Assets.xcassets */; };
 		9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E07662225968700F8ED17 /* UIColorExtension.swift */; };
 		9E4E076A222596C400F8ED17 /* environments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E0769222596C400F8ED17 /* environments.json */; };
@@ -36,7 +37,6 @@
 		9E935722224116540036F23A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E935721224116540036F23A /* Home.storyboard */; };
 		9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */; };
 		9EA25A9D2244C6DB00027A31 /* CustomLeftHomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA25A9C2244C6DB00027A31 /* CustomLeftHomeButton.swift */; };
-		9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8F823222FBDEA0021C435 /* CustomTable.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */; };
 		9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */; };
 		9EB24E842227D46A004B0C66 /* NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */; };
@@ -71,12 +71,13 @@
 		17C24D91D019369570032E0C /* Pods-FootNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootNet.release.xcconfig"; path = "Target Support Files/Pods-FootNet/Pods-FootNet.release.xcconfig"; sourceTree = "<group>"; };
 		97ADF54F56DB766954955BDE /* Pods_FootNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1B1E1F2225A55600C82019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9E1EC84D22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomLeftHomeLabel.swift; path = FootNet/res/Labels/CustomLeftHomeLabel.swift; sourceTree = SOURCE_ROOT; };
 		9E35D930222681B4008E8361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInSignUpButton.swift; sourceTree = "<group>"; };
 		9E35D93822268801008E8361 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		9E4E0748222593B200F8ED17 /* FootNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4E074B222593B200F8ED17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E4E074D222593B200F8ED17 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		9E4E074D222593B200F8ED17 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9E4E0752222593B300F8ED17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E4E0757222593B300F8ED17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E4E07662225968700F8ED17 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		9E935721224116540036F23A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHomeTableViewCell.swift; sourceTree = "<group>"; };
 		9EA25A9C2244C6DB00027A31 /* CustomLeftHomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomLeftHomeButton.swift; path = FootNet/res/Buttons/CustomLeftHomeButton.swift; sourceTree = SOURCE_ROOT; };
-		9EA8F823222FBDEA0021C435 /* CustomTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTable.swift; path = FootNet/res/Tables/CustomTable.swift; sourceTree = SOURCE_ROOT; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileCell.swift; sourceTree = "<group>"; };
 		9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileTableViewController.swift; sourceTree = "<group>"; };
 		9EB24E832227D46A004B0C66 /* NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoPasteTextField.swift; path = FootNet/Res/TextFields/NoPasteTextField.swift; sourceTree = SOURCE_ROOT; };
@@ -281,7 +281,6 @@
 				9EBD4FB62239708A008604EB /* LocalizationSystem */,
 				9EF232C12237F3ED004BF61F /* TextViews */,
 				9EF232BE2237F267004BF61F /* ImageViews */,
-				9EA8F822222FBDA10021C435 /* Tables */,
 				9EB24EA72227F48F004B0C66 /* Labels */,
 				9E0E86002226A3F10076BFDF /* TextFields */,
 				9E35D932222683F6008E8361 /* Buttons */,
@@ -354,7 +353,7 @@
 		9E8D8D20223AB87D00A8A880 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				9E4E074D222593B200F8ED17 /* SignInController.swift */,
+				9E4E074D222593B200F8ED17 /* SignInViewController.swift */,
 				9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */,
 			);
 			path = SignIn;
@@ -440,14 +439,6 @@
 			path = LeftHome;
 			sourceTree = "<group>";
 		};
-		9EA8F822222FBDA10021C435 /* Tables */ = {
-			isa = PBXGroup;
-			children = (
-				9EA8F823222FBDEA0021C435 /* CustomTable.swift */,
-			);
-			path = Tables;
-			sourceTree = "<group>";
-		};
 		9EB24E952227F0F5004B0C66 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				9EB24EA82227F4B5004B0C66 /* CustomLabel.swift */,
+				9E1EC84D22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -683,11 +675,12 @@
 				9E5420DB223FA47E0098AC44 /* StoryboardExtension.swift in Sources */,
 				9EF232C52238074B004BF61F /* ValidateSignUpForm.swift in Sources */,
 				9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */,
+				9E1EC84E22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift in Sources */,
 				9EA25A9D2244C6DB00027A31 /* CustomLeftHomeButton.swift in Sources */,
 				9E935718224111700036F23A /* HomeViewController.swift in Sources */,
 				9EBD4FB82239709B008604EB /* LocalizationSystem.swift in Sources */,
 				9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */,
-				9E4E074E222593B200F8ED17 /* SignInController.swift in Sources */,
+				9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */,
 				9EF232C32237F3F9004BF61F /* CustomTextView.swift in Sources */,
 				9EF232C02237F277004BF61F /* CustomImageView.swift in Sources */,
 				9E5420C9223F8F930098AC44 /* CustomLanuagesButton.swift in Sources */,
@@ -704,7 +697,6 @@
 				9E93571C224111870036F23A /* OffersStatusViewController.swift in Sources */,
 				9E93570D2240E5E60036F23A /* Spinner.swift in Sources */,
 				9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */,
-				9EA8F824222FBDEA0021C435 /* CustomTable.swift in Sources */,
 				9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,

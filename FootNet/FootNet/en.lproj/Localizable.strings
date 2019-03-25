@@ -131,6 +131,7 @@
 "followLabel"="Follow me on:";
 
 //Left home
-"myProfileButton"="My profile";
-"signOutButton"="Sign out";
-"deactivateAccoutButton"="Deactivate account";
+"myProfileLabel"="My profile";
+"editProfileLabel"="Edit profile";
+"signOutLabel"="Sign out";
+"deactivateAccoutLabel"="Deactivate account";

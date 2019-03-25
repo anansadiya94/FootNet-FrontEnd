@@ -13,160 +13,242 @@
         <scene sceneID="dKi-S7-tN0">
             <objects>
                 <tableViewController storyboardIdentifier="LeftHomeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Bc-jh-0Bm" customClass="LeftHomeTableViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y7j-fN-q4K">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y7j-fN-q4K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <sections>
-                            <tableViewSection id="jVa-YV-cbF">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageLeftHomeCell" rowHeight="120" id="QVL-6j-H8B" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QVL-6j-H8B" id="dTi-Kw-6zv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="sNW-qG-0gA" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
-                                                    <rect key="frame" x="137.5" y="10" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="7cx-nX-nfQ"/>
-                                                        <constraint firstAttribute="width" constant="100" id="oLU-xG-k9y"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageLeftHomeCell" rowHeight="120" id="QVL-6j-H8B" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QVL-6j-H8B" id="dTi-Kw-6zv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="sNW-qG-0gA" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="137.5" y="10" width="100" height="100"/>
                                             <constraints>
-                                                <constraint firstItem="sNW-qG-0gA" firstAttribute="centerY" secondItem="dTi-Kw-6zv" secondAttribute="centerY" id="HcA-H1-eEw"/>
-                                                <constraint firstItem="sNW-qG-0gA" firstAttribute="centerX" secondItem="dTi-Kw-6zv" secondAttribute="centerX" id="u9l-2g-ymu"/>
+                                                <constraint firstAttribute="height" constant="100" id="7cx-nX-nfQ"/>
+                                                <constraint firstAttribute="width" constant="100" id="oLU-xG-k9y"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameSurnameRightHomeCell" id="vRf-ZL-Kze" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vRf-ZL-Kze" id="HP2-Qk-k7q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUl-Ez-IaB">
-                                                    <rect key="frame" x="124.5" y="8" width="126.5" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sNW-qG-0gA" firstAttribute="centerY" secondItem="dTi-Kw-6zv" secondAttribute="centerY" id="HcA-H1-eEw"/>
+                                        <constraint firstItem="sNW-qG-0gA" firstAttribute="centerX" secondItem="dTi-Kw-6zv" secondAttribute="centerX" id="u9l-2g-ymu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="img" destination="sNW-qG-0gA" id="Z1C-0H-NTn"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="nameSurnameLeftHomeCell" id="vRf-ZL-Kze" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="148" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vRf-ZL-Kze" id="HP2-Qk-k7q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUl-Ez-IaB" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="124.5" y="8" width="126.5" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="MUl-Ez-IaB" secondAttribute="bottom" constant="8" id="p5L-uj-Y2H"/>
+                                        <constraint firstItem="MUl-Ez-IaB" firstAttribute="centerX" secondItem="HP2-Qk-k7q" secondAttribute="centerX" id="va2-XQ-tk9"/>
+                                        <constraint firstItem="MUl-Ez-IaB" firstAttribute="top" secondItem="HP2-Qk-k7q" secondAttribute="top" constant="8" id="yF0-Ui-aEG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nameSurnameLabel" destination="MUl-Ez-IaB" id="kDL-N5-eL9"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="profileTypeLeftHomeCell" id="sfG-z8-lqm" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="192" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sfG-z8-lqm" id="VQ6-YK-JBR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porfile Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-HH-cAv" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="142" y="8" width="91.5" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sQc-HH-cAv" firstAttribute="top" secondItem="VQ6-YK-JBR" secondAttribute="top" constant="8" id="C2C-6a-534"/>
+                                        <constraint firstAttribute="bottom" secondItem="sQc-HH-cAv" secondAttribute="bottom" constant="8" id="eVa-58-cPH"/>
+                                        <constraint firstItem="sQc-HH-cAv" firstAttribute="centerX" secondItem="VQ6-YK-JBR" secondAttribute="centerX" id="iVE-VD-pUn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="profileTypeLabel" destination="sQc-HH-cAv" id="sCz-iJ-IKm"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myProfileLeftHomeCell" id="dVR-qQ-suo" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="236" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dVR-qQ-suo" id="dhl-ZU-xkz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="eVr-lU-1Kg">
+                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="MUl-Ez-IaB" secondAttribute="bottom" constant="8" id="p5L-uj-Y2H"/>
-                                                <constraint firstItem="MUl-Ez-IaB" firstAttribute="centerX" secondItem="HP2-Qk-k7q" secondAttribute="centerX" id="va2-XQ-tk9"/>
-                                                <constraint firstItem="MUl-Ez-IaB" firstAttribute="top" secondItem="HP2-Qk-k7q" secondAttribute="top" constant="8" id="yF0-Ui-aEG"/>
+                                                <constraint firstAttribute="height" constant="44" id="GqB-bo-bCv"/>
+                                                <constraint firstAttribute="width" constant="44" id="Qol-tD-olT"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileTypeRightHomeCell" id="sfG-z8-lqm" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="164" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sfG-z8-lqm" id="VQ6-YK-JBR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porfile Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-HH-cAv">
-                                                    <rect key="frame" x="142" y="8" width="91.5" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWi-4b-Z3c" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="76" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JWi-4b-Z3c" secondAttribute="trailing" constant="16" id="8ZE-Is-gOj"/>
+                                        <constraint firstAttribute="bottom" secondItem="eVr-lU-1Kg" secondAttribute="bottom" id="D5G-cW-kWW"/>
+                                        <constraint firstItem="eVr-lU-1Kg" firstAttribute="leading" secondItem="dhl-ZU-xkz" secondAttribute="leading" constant="16" id="QXF-to-jCb"/>
+                                        <constraint firstItem="eVr-lU-1Kg" firstAttribute="top" secondItem="dhl-ZU-xkz" secondAttribute="top" id="gcJ-kq-Yt6"/>
+                                        <constraint firstAttribute="bottom" secondItem="JWi-4b-Z3c" secondAttribute="bottom" constant="8" id="kQe-9o-5dK"/>
+                                        <constraint firstItem="JWi-4b-Z3c" firstAttribute="leading" secondItem="eVr-lU-1Kg" secondAttribute="trailing" constant="16" id="lmH-Qb-k6S"/>
+                                        <constraint firstItem="JWi-4b-Z3c" firstAttribute="top" secondItem="dhl-ZU-xkz" secondAttribute="top" constant="8" id="uGd-RB-lhh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="myProfileLabel" destination="JWi-4b-Z3c" id="6px-KN-Q9R"/>
+                                    <outlet property="myProfilePhoto" destination="eVr-lU-1Kg" id="7OE-qU-WHn"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="editProfileLeftHomeCell" id="11r-NQ-yMX" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="280" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="11r-NQ-yMX" id="Vwe-i8-GQ9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="C77-aE-77f">
+                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
                                             <constraints>
-                                                <constraint firstItem="sQc-HH-cAv" firstAttribute="top" secondItem="VQ6-YK-JBR" secondAttribute="top" constant="8" id="C2C-6a-534"/>
-                                                <constraint firstAttribute="bottom" secondItem="sQc-HH-cAv" secondAttribute="bottom" constant="8" id="eVa-58-cPH"/>
-                                                <constraint firstItem="sQc-HH-cAv" firstAttribute="centerX" secondItem="VQ6-YK-JBR" secondAttribute="centerX" id="iVE-VD-pUn"/>
+                                                <constraint firstAttribute="width" constant="44" id="1tf-zP-rPf"/>
+                                                <constraint firstAttribute="height" constant="44" id="5KF-uV-BuJ"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myProfileRightHomeCell" id="8E3-VY-Gd0" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8E3-VY-Gd0" id="YTy-xD-ZVb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-gi-U4i" customClass="CustomLeftHomeButton" customModule="FootNet" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                    <state key="normal" title="My profile"/>
-                                                </button>
-                                            </subviews>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYl-Rn-n0F" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="83" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="C77-aE-77f" firstAttribute="leading" secondItem="Vwe-i8-GQ9" secondAttribute="leading" constant="16" id="1Y2-VT-q1f"/>
+                                        <constraint firstAttribute="bottom" secondItem="C77-aE-77f" secondAttribute="bottom" id="JLU-1B-Oee"/>
+                                        <constraint firstItem="EYl-Rn-n0F" firstAttribute="top" secondItem="Vwe-i8-GQ9" secondAttribute="top" constant="8" id="NEU-EH-qgT"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EYl-Rn-n0F" secondAttribute="trailing" constant="16" id="Ybj-w9-DaK"/>
+                                        <constraint firstItem="C77-aE-77f" firstAttribute="top" secondItem="Vwe-i8-GQ9" secondAttribute="top" id="mT2-Wo-pgw"/>
+                                        <constraint firstAttribute="bottom" secondItem="EYl-Rn-n0F" secondAttribute="bottom" constant="8" id="qmu-LR-vvQ"/>
+                                        <constraint firstItem="EYl-Rn-n0F" firstAttribute="leading" secondItem="C77-aE-77f" secondAttribute="trailing" constant="16" id="s9I-Rq-kzU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="editProfileLabel" destination="EYl-Rn-n0F" id="UVy-XK-2Yd"/>
+                                    <outlet property="editProfilePhoto" destination="C77-aE-77f" id="g3r-Ih-xEz"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="signOutLeftHomeCell" id="4Cx-7D-hbr" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="324" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Cx-7D-hbr" id="MZX-xx-bJ9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signOutLeft" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-ts-Vcz">
+                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="ovU-gi-U4i" secondAttribute="bottom" id="7Rj-K3-Tz9"/>
-                                                <constraint firstItem="ovU-gi-U4i" firstAttribute="leading" secondItem="YTy-xD-ZVb" secondAttribute="leading" id="HjR-o3-JOZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="ovU-gi-U4i" secondAttribute="trailing" id="Iv9-oH-43U"/>
-                                                <constraint firstItem="ovU-gi-U4i" firstAttribute="top" secondItem="YTy-xD-ZVb" secondAttribute="top" id="dyK-eH-nYr"/>
+                                                <constraint firstAttribute="width" constant="44" id="BVn-ts-4uQ"/>
+                                                <constraint firstAttribute="height" constant="44" id="fyh-6v-6Ug"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="signOutRightHomeCell" id="aTH-iQ-cja" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="252" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aTH-iQ-cja" id="BSN-vJ-KB5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqw-0p-hqT" customClass="CustomLeftHomeButton" customModule="FootNet" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                    <state key="normal" title="Sign Out"/>
-                                                    <connections>
-                                                        <action selector="signOut:" destination="5Bc-jh-0Bm" eventType="touchUpInside" id="QXG-gh-dX1"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dB-zQ-ZbE" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="64" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xs3-ts-Vcz" secondAttribute="bottom" id="GR6-lV-eoU"/>
+                                        <constraint firstItem="xs3-ts-Vcz" firstAttribute="top" secondItem="MZX-xx-bJ9" secondAttribute="top" id="HBw-tQ-1v8"/>
+                                        <constraint firstItem="3dB-zQ-ZbE" firstAttribute="leading" secondItem="xs3-ts-Vcz" secondAttribute="trailing" constant="16" id="KVy-e7-wAY"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3dB-zQ-ZbE" secondAttribute="trailing" constant="16" id="OUQ-5S-NdT"/>
+                                        <constraint firstItem="3dB-zQ-ZbE" firstAttribute="top" secondItem="MZX-xx-bJ9" secondAttribute="top" constant="8" id="uDE-Z4-9hQ"/>
+                                        <constraint firstItem="xs3-ts-Vcz" firstAttribute="leading" secondItem="MZX-xx-bJ9" secondAttribute="leading" constant="16" id="x5C-gB-v87"/>
+                                        <constraint firstAttribute="bottom" secondItem="3dB-zQ-ZbE" secondAttribute="bottom" constant="8" id="ziV-ud-T2x"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="signOutLabel" destination="3dB-zQ-ZbE" id="1lG-aL-YKO"/>
+                                    <outlet property="signOutPhoto" destination="xs3-ts-Vcz" id="D6G-Ht-Ubm"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="deactivateLeftHomeCell" id="QfJ-8M-b55" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="368" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QfJ-8M-b55" id="ldf-zQ-JUi">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deactivateAccountLeft" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-9u-bwZ">
+                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="mqw-0p-hqT" secondAttribute="trailing" id="3ya-RJ-eWW"/>
-                                                <constraint firstItem="mqw-0p-hqT" firstAttribute="top" secondItem="BSN-vJ-KB5" secondAttribute="top" id="KK2-og-3MZ"/>
-                                                <constraint firstItem="mqw-0p-hqT" firstAttribute="leading" secondItem="BSN-vJ-KB5" secondAttribute="leading" id="mo4-mn-srs"/>
-                                                <constraint firstAttribute="bottom" secondItem="mqw-0p-hqT" secondAttribute="bottom" id="oXi-h1-YT0"/>
+                                                <constraint firstAttribute="height" constant="44" id="Rjj-y9-Ku8"/>
+                                                <constraint firstAttribute="width" constant="44" id="gTb-VF-yWV"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeactivateRightHomeCell" id="VEx-5u-5RL" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="296" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VEx-5u-5RL" id="SXF-Oe-ta9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkd-AW-E9P" customClass="CustomLeftHomeButton" customModule="FootNet" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                    <state key="normal" title="Deactivate accout"/>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gkd-AW-E9P" secondAttribute="bottom" id="CsF-7E-IX2"/>
-                                                <constraint firstItem="gkd-AW-E9P" firstAttribute="leading" secondItem="SXF-Oe-ta9" secondAttribute="leading" id="HbJ-6a-HvH"/>
-                                                <constraint firstItem="gkd-AW-E9P" firstAttribute="top" secondItem="SXF-Oe-ta9" secondAttribute="top" id="Znq-tL-gsd"/>
-                                                <constraint firstAttribute="trailing" secondItem="gkd-AW-E9P" secondAttribute="trailing" id="zxS-gO-hwh"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deactivate account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvE-9u-xBb" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="148" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="LvE-9u-xBb" secondAttribute="bottom" constant="8" id="9jS-FE-vwY"/>
+                                        <constraint firstItem="eb9-9u-bwZ" firstAttribute="leading" secondItem="ldf-zQ-JUi" secondAttribute="leading" constant="16" id="BsL-K1-V7f"/>
+                                        <constraint firstItem="LvE-9u-xBb" firstAttribute="leading" secondItem="eb9-9u-bwZ" secondAttribute="trailing" constant="16" id="CSw-g2-f24"/>
+                                        <constraint firstItem="eb9-9u-bwZ" firstAttribute="top" secondItem="ldf-zQ-JUi" secondAttribute="top" id="CYQ-y1-o7z"/>
+                                        <constraint firstItem="LvE-9u-xBb" firstAttribute="top" secondItem="ldf-zQ-JUi" secondAttribute="top" constant="8" id="bnN-Ic-R8c"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LvE-9u-xBb" secondAttribute="trailing" constant="16" id="eDv-fH-Hit"/>
+                                        <constraint firstAttribute="bottom" secondItem="eb9-9u-bwZ" secondAttribute="bottom" id="ids-e7-Wxk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="deactivateAccountLabel" destination="LvE-9u-xBb" id="Wre-RP-A2U"/>
+                                    <outlet property="deactivateAccountPhoto" destination="eb9-9u-bwZ" id="jlJ-BS-Qzq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="delegate" destination="5Bc-jh-0Bm" id="21L-4o-Guj"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="deactivateAccoutButton" destination="gkd-AW-E9P" id="cmz-bN-SoE"/>
-                        <outlet property="img" destination="sNW-qG-0gA" id="5Cd-zq-TU5"/>
-                        <outlet property="myProfileButton" destination="ovU-gi-U4i" id="aEo-K7-uA4"/>
-                        <outlet property="nameSurnameLabel" destination="MUl-Ez-IaB" id="qBm-A1-g8i"/>
-                        <outlet property="profileTypeLabel" destination="sQc-HH-cAv" id="NdW-T1-KN3"/>
-                        <outlet property="signOutButton" destination="mqw-0p-hqT" id="Bab-Ea-hlK"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etI-FS-gv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,6 +256,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="deactivateAccountLeft" width="100" height="100"/>
         <image name="defaultProfilePhoto" width="600" height="600"/>
+        <image name="editProfileLeft" width="100" height="100"/>
+        <image name="myProfileLeft" width="100" height="100"/>
+        <image name="signOutLeft" width="100" height="100"/>
     </resources>
 </document>

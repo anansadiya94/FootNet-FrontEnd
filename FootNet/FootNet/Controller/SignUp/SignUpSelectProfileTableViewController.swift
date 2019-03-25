@@ -17,7 +17,6 @@ class SignUpSelectProfileTableViewController: UITableViewController {
         super.viewDidLoad()
         setBackground()
         setNavigationBar()
-
         DDLogInfo("Load SignUp View")
         signUpSelectProfileData = SignUpSelectProfileData.getAllSignUpSelectProfileData()
     }
@@ -53,11 +52,9 @@ class SignUpSelectProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "signUpSelectProfileCell", for: indexPath) as! SignUpSelectProfileCell
-
         // Configure the cell...
         cell.img.image = signUpSelectProfileData[indexPath.row].img
         cell.lbl.text = signUpSelectProfileData[indexPath.row].title
-        
         return cell
     }
     

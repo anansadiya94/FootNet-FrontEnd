@@ -11,7 +11,6 @@ import CocoaLumberjack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     
     //Logger
@@ -25,6 +24,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DDLogInfo("App starts, let's have some fun!")
         return true
     }
-    
 }
 

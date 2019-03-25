@@ -130,6 +130,7 @@
 "followLabel"="Segueix-me a:";
 
 //Left home
-"myProfileButton"="El meu perfil";
-"signOutButton"="Tancar sessió";
-"deactivateAccoutButton"="Desactivar compte";
+"myProfileLabel"="El meu perfil";
+"editProfileLabel"="Editar perfil";
+"signOutLabel"="Tancar sessió";
+"deactivateAccoutLabel"="Desactivar compte";

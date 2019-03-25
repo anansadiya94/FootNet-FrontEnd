@@ -9,59 +9,126 @@
 import UIKit
 
 protocol AppNavigationDrawerDelegate: class {
-    func didTapSignOutButton()
+    func closeLeftView()
 }
 
 class LeftHomeTableViewController: UITableViewController {
     weak var delegate: AppNavigationDrawerDelegate?
-    @IBOutlet weak var img: CustomImageView!
-    @IBOutlet weak var nameSurnameLabel: UILabel!
-    @IBOutlet weak var profileTypeLabel: UILabel!
-    @IBOutlet weak var myProfileButton: CustomLeftHomeButton!
-    @IBOutlet weak var signOutButton: CustomLeftHomeButton!
-    @IBOutlet weak var deactivateAccoutButton: CustomLeftHomeButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.colorDarkGreen
-        configureOutlets()
+        tableView.tableFooterView = UIView(frame: .zero)
     }
     
-    private func configureOutlets() {
-        //TODO Account profile photo
-        img.image = #imageLiteral(resourceName: "joanet")
-        
-        //TODO Account name surname
-        nameSurnameLabel.text = "Joan Menéndez Alaminos"
-        nameSurnameLabel.textColor = UIColor.white
-        
-        //TODO Account profile type
-        profileTypeLabel.text = "Jugador"
-        profileTypeLabel.textColor = UIColor.white
-        
-        //TODO Localize buttons
-        myProfileButton.setTitle("myProfileButton".localize(), for: .normal)
-        signOutButton.setTitle("signOutButton".localize(), for: .normal)
-        deactivateAccoutButton.setTitle("deactivateAccoutButton".localize(), for: .normal)
+    // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
     }
     
-    
-    @IBAction func signOut(_ sender: Any) {
-        //TODO ALERT
-        //IF NO DISMISS
-        //IF YES
-        //Closeleft and push signin storyboard
-        delegate?.didTapSignOutButton()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            return imageLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 1:
+            return nameSurnameLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 2:
+            return profileTypeLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 3:
+            return myProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 4:
+            return editProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 5:
+            return signOutLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 6:
+            return deactivateLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        default:
+            break
+        }
+        return UITableViewCell()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func imageLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "imageLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.img.image = #imageLiteral(resourceName: "joanet")
+            return cell
+        }
+        return UITableViewCell()
     }
-    */
-
+    
+    func nameSurnameLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "nameSurnameLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.nameSurnameLabel.text = "Joan Menéndez Alaminos"
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func profileTypeLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "profileTypeLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.profileTypeLabel.text = "Jugador"
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func myProfileLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myProfileLabel.text = "myProfileLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func editProfileLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "editProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.editProfileLabel.text = "editProfileLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func signOutLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "signOutLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.signOutLabel.text = "signOutLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func deactivateLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "deactivateLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.deactivateAccountLabel.text = "deactivateAccoutLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    //cell height
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 100
+        default:
+            return 44
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 3:
+            print("My profile was clicked")
+            
+        case 4:
+            print("Edit profile was clicked")
+        case 5:
+            delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("signOutTapped"), object: self)
+        case 6:
+            delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("deactivateAccountTapped"), object: self)
+        default:
+            break
+        }
+    }
 }

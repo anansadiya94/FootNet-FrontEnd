@@ -9,7 +9,7 @@
 import UIKit
 import CocoaLumberjack
 
-class SignInController: BaseViewController, UITextFieldDelegate {
+class SignInViewController: BaseViewController, UITextFieldDelegate {
     //IBOutlets
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
@@ -89,14 +89,14 @@ class SignInController: BaseViewController, UITextFieldDelegate {
     
     @IBAction func changeToEnglish(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
-        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as! SignInViewController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = signIn
     }
     
     @IBAction func changeToSpanish(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "es")
-        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as! SignInViewController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = signIn
     }
@@ -104,11 +104,10 @@ class SignInController: BaseViewController, UITextFieldDelegate {
     
     @IBAction func changeToCatalan(_ sender: Any) {
         LocalizationSystem.sharedInstance.setLanguage(languageCode: "ca")
-        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInController
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as! SignInViewController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = signIn
     }
-    
     
     // MARK: UI Configurations
     private func configureOutlets() {

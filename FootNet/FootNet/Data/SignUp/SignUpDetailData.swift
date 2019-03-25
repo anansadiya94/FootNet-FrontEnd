@@ -11,9 +11,7 @@ import UIKit
 import CocoaLumberjack
 
 class SignUpDetailData {
-    
     static func getAllsignUpSectionsData(_ profileType: ProfileType) -> [[SignUpDetailModel]] {
-
         var signUpSectionsData = [[SignUpDetailModel]]()
         let userProfileTags = UserProfileTags()
         

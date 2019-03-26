@@ -106,7 +106,7 @@ class ValidateSignUpForm {
         }
         let text = email!
         do {
-            let regex = try NSRegularExpression(pattern: "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$", options: .caseInsensitive)
+            let regex = try NSRegularExpression(pattern: "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}${5,45}", options: .caseInsensitive)
             let textRange = NSRange(location: 0, length: text.count)
             if regex.firstMatch(in: text, options: [], range: textRange) != nil {
                 return ""
@@ -121,7 +121,7 @@ class ValidateSignUpForm {
     private func checkPassword(_ password: String?) -> String {
         guard password != nil else { return "emptyPassword_error".localize() }
         let text = password!
-        let regEx = "^(?=.{8,})(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*$"
+        let regEx = "^(?=.{8,})(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*${8,24}"
         
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         if pred.evaluate(with: text) {
@@ -135,7 +135,7 @@ class ValidateSignUpForm {
     private func checkRepeatPassword(_ repeatPassword: String?) -> String {
         guard repeatPassword != nil else { return "emptyRepeatPassword_error".localize() }
         let text = repeatPassword!
-        let regEx = "^(?=.{8,})(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*$"
+        let regEx = "^(?=.{8,})(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*${8,24}"
         
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         if pred.evaluate(with: text) {

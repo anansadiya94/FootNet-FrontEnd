@@ -10,6 +10,7 @@
 "email_placeholder"="Correo electrónico" ;
 "password_placeholder"="Contraseña";
 "forgotPassword_button"="¿Olvidaste tu contraseña?";
+"forgotPassword_navBarTitle"="Recuperar contraseña";
 "signIn_button"="Iniciar Sesión";
 "signUp_button"="¿No tienes una cuenta? Regístrate";
 "changeLanguage_label"="Elige el idioma que quieras:";

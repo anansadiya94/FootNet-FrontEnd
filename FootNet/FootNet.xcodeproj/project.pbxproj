@@ -29,6 +29,8 @@
 		9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */; };
 		9E5420DB223FA47E0098AC44 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420DA223FA47E0098AC44 /* StoryboardExtension.swift */; };
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
+		9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
+		9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
@@ -114,6 +116,8 @@
 		9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeViewController.swift; sourceTree = "<group>"; };
 		9E5420DA223FA47E0098AC44 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoryboardExtension.swift; path = FootNet/res/Storyborads/StoryboardExtension.swift; sourceTree = SOURCE_ROOT; };
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
+		9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignInForm.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 				9E93571422410FBE0036F23A /* Notifications */,
 				9EB24E952227F0F5004B0C66 /* SignUp */,
 				9E8D8D20223AB87D00A8A880 /* SignIn */,
+				9E5DEE7A224B81360091CECB /* ForgotPassword */,
 				9E8D8D1F223AB87100A8A880 /* Base */,
 			);
 			path = Controller;
@@ -315,6 +320,7 @@
 			children = (
 				9E35D930222681B4008E8361 /* LaunchScreen.storyboard */,
 				9E79C38822391F9700A9C292 /* SignIn.storyboard */,
+				9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */,
 				9EB24EA02227F27D004B0C66 /* SignUp.storyboard */,
 				9E5420D1223FA3190098AC44 /* LeftHome.storyboard */,
 				9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */,
@@ -398,6 +404,14 @@
 				9E5420DA223FA47E0098AC44 /* StoryboardExtension.swift */,
 			);
 			path = Storyborads;
+			sourceTree = "<group>";
+		};
+		9E5DEE7A224B81360091CECB /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		9E8D8D1F223AB87100A8A880 /* Base */ = {
@@ -704,6 +718,7 @@
 				9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */,
 				9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */,
 				9EFEA4B422424513002C9EB0 /* Offers.storyboard in Resources */,
+				9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */,
 				9E5420D4223FA3270098AC44 /* RightHome.storyboard in Resources */,
 				9EFEA4BC224247D0002C9EB0 /* Notifications.storyboard in Resources */,
 				9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */,
@@ -824,6 +839,7 @@
 				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
 				9E93571C224111870036F23A /* OffersStatusViewController.swift in Sources */,
 				9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */,
+				9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */,
 				9E93570D2240E5E60036F23A /* Spinner.swift in Sources */,
 				9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */,
 				9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */,

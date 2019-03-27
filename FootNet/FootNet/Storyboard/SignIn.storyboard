@@ -35,6 +35,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrD-0Q-Ixg" userLabel="Forgot password" customClass="CustomForgotPasswordButton" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="244" y="366" width="115" height="30"/>
                                 <state key="normal" title="Forget password"/>
+                                <connections>
+                                    <segue destination="giI-Ag-tza" kind="show" identifier="signInForgotPasswordSegue" id="NUy-44-LYo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0E-wH-gML" customClass="CustomSignInSignUpButton" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="16" y="428" width="343" height="30"/>
@@ -138,6 +141,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="-0.44977511244377816"/>
+        </scene>
+        <!--ForgotPassword-->
+        <scene sceneID="QuG-fE-d49">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ForgotPasswordScene" storyboardName="ForgotPassword" id="giI-Ag-tza" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3q-RC-VKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="-1"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="Z9p-YN-Iem">

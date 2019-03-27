@@ -10,6 +10,7 @@
 "email_placeholder"="Correu electrònic";
 "password_placeholder"="Contrasenya";
 "forgotPassword_button"="Heu perdut la contrasenya?";
+"forgotPassword_navBarTitle"="Recuperar contrasenya";
 "signIn_button"="Inicia sessió";
 "signUp_button"="No tens un compte? Registra't";
 "changeLanguage_label"="Tria l'idioma que vulguis:";

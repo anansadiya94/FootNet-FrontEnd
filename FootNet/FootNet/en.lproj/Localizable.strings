@@ -10,9 +10,11 @@
 "email_placeholder"="Email";
 "password_placeholder"="Password";
 "forgotPassword_button"="Did you forget your password?";
+"forgotPassword_navBarTitle"="Recover password";
 "signIn_button"="Sign In";
 "signUp_button"="Don't you have an account? Sign Up";
 "changeLanguage_label"="Choose the language you want:";
+
 
 //Sign Up Select Profile Type
 "signUp_navBarTitle"="SignUp";

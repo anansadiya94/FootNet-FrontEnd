@@ -75,6 +75,15 @@ class SignInTests: XCTestCase {
         XCTAssertEqual(signInVC.signInFormErrors, expectedErrors)
     }
     
+    // Sign In Form Case 5
+    // invalid Email + invalid Password
+    func testSignInFormCase6() {
+        testCreateSignInScreen()
+        signInVC.signInButton.sendActions(for: .touchUpInside)
+        let expectedErrors = "emptyEmail_error".localize() + "emptyPassword_error".localize()
+        XCTAssertEqual(signInVC.signInFormErrors, expectedErrors)
+    }
+    
     // Forgot password Button
     func testForgotPasswordButtonCase() {
         testCreateSignInScreen()
@@ -87,28 +96,6 @@ class SignInTests: XCTestCase {
         testCreateSignInScreen()
         let targetViewController = signInSB.instantiateViewController(withIdentifier: "signUpScene")
         let _: UIStoryboardSegue = UIStoryboardSegue(identifier: "signInSignUpSegue", source: signInVC, destination: targetViewController)
-    }
-    
-    // Change To English Button
-    func testChangeToEnglishButtonCase() {
-        testCreateSignInScreen()
-        expectedLanguage = "en"
-        
-        currentLanguage = "en"
-        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
-        signInVC.englishButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
-        
-        currentLanguage = "es"
-        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
-        signInVC.englishButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
-        
-        //testCreateSignInScreen()
-        currentLanguage = "ca"
-        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
-        signInVC.englishButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
     }
     
     // Change to Spanish Button
@@ -150,6 +137,27 @@ class SignInTests: XCTestCase {
         currentLanguage = "ca"
         LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
         signInVC.catalanButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
+    }
+    
+    // Change To English Button
+    func testChangeToEnglishButtonCase() {
+        testCreateSignInScreen()
+        expectedLanguage = "en"
+        
+        currentLanguage = "en"
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
+        signInVC.englishButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
+        
+        currentLanguage = "es"
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
+        signInVC.englishButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
+        
+        currentLanguage = "ca"
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
+        signInVC.englishButton.sendActions(for: .touchUpInside)
         XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
     }
 }

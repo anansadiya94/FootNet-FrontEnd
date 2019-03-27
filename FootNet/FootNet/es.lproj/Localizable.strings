@@ -15,6 +15,10 @@
 "signUp_button"="¿No tienes una cuenta? Regístrate";
 "changeLanguage_label"="Elige el idioma que quieras:";
 
+//error sign in form alert
+"signIn_formError_alert"="Error en el formulario de iniciar sesión!";
+"fix_alert"="Arréglalo";
+
 //SignUp Select Profile Type
 "signUp_navBarTitle"="Registrarse";
 "signUp_sectionHeader"="Elige tu perfil:";
@@ -60,7 +64,7 @@
 "right_button"="Hecho";
 
 //error sign up form alert
-"title_done_alert"="Error en el formulario de registro!";
+"signUp_formError_alert"="Error en el formulario de registro!";
 "fix_alert"="Arréglalo";
 
 //sign up form errors

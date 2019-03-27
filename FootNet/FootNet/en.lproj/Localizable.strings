@@ -15,6 +15,10 @@
 "signUp_button"="Don't you have an account? Sign Up";
 "changeLanguage_label"="Choose the language you want:";
 
+//error sign in form alert
+"signIn_formError_alert"="Sign In Form Error!";
+"fix_alert"="Fix It";
+
 
 //Sign Up Select Profile Type
 "signUp_navBarTitle"="SignUp";
@@ -61,7 +65,7 @@
 "right_button"="Done";
 
 //error sign up form alert
-"title_done_alert"="Sign Up Form Error!";
+"signUp_formError_alert"="Sign Up Form Error!";
 "fix_alert"="Fix It";
 
 //sign up form errors

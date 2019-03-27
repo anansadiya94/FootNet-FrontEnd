@@ -50,18 +50,17 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     }
     
     private func validateSignIn() -> Bool {
-        signInFormErrors = validateSignInForm.CheckSignInForm(Email: (emailTextField.text ?? ""), Password: (passwordTextField.text ?? ""))
+        signInFormErrors = validateSignInForm.CheckSignInForm(Email: emailTextField.text!, Password: passwordTextField.text!)
         if signInFormErrors.isEmpty {
             //API CALL + api error alert
             DDLogInfo("Successfully signed in")
             return true
-        } else {
-            return false
         }
+        return false
     }
     
     private func signInErrorAlert() {
-        let alertTitle = "error"
+        let alertTitle = "signIn_formError_alert".localize()
         let alertMessage = signInFormErrors
         let alertFixTitle = "fix_alert".localize()
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
@@ -72,18 +71,12 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     //enable or disable language buttons
     private func enablaDisableButtons() {
         let currentLanguage = LocalizationSystem.sharedInstance.getLanguage()
-        switch currentLanguage {
-        case "en":
+        if (currentLanguage == "en") {
             englishButton.isEnabled = false
-            break
-        case "es":
+        } else if (currentLanguage == "es") {
             spanishButton.isEnabled = false
-            break
-        case "ca":
+        } else if (currentLanguage == "ca") {
             catalanButton.isEnabled = false
-            break
-        default:
-            break
         }
     }
     

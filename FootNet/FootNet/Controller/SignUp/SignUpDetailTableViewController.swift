@@ -138,7 +138,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
                 present(viewController, animated: true, completion: nil)
             }
         } else {
-            let alertTitle = "title_done_alert".localize()
+            let alertTitle = "signUp_formError_alert".localize()
             let alertMessage = signUpFormErrors
             let alertFixTitle = "fix_alert".localize()
             // Create alert

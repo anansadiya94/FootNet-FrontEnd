@@ -49,6 +49,16 @@
                ReferencedContainer = "container:FootNet.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9E5DEE81224B986A0091CECB"
+               BuildableName = "FootNetUITests.xctest"
+               BlueprintName = "FootNetUITests"
+               ReferencedContainer = "container:FootNet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

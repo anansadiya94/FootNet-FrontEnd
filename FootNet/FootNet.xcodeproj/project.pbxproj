@@ -32,6 +32,7 @@
 		9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
 		9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */; };
 		9E5DEE7D224B87F60091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
+		9E5DEE85224B986A0091CECB /* FootNetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE84224B986A0091CECB /* FootNetUITests.swift */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
@@ -79,6 +80,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9E5DEE87224B986A0091CECB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E4E0740222593B200F8ED17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E4E0747222593B200F8ED17;
+			remoteInfo = FootNet;
+		};
 		9EC7FE67224A76EF00ACD562 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9E4E0740222593B200F8ED17 /* Project object */;
@@ -119,6 +127,9 @@
 		9E5456512226B8B7002A55F2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = FootNet/res/TextFields/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
 		9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9E5DEE82224B986A0091CECB /* FootNetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootNetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E5DEE84224B986A0091CECB /* FootNetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootNetUITests.swift; sourceTree = "<group>"; };
+		9E5DEE86224B986A0091CECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignInForm.swift; sourceTree = "<group>"; };
@@ -173,6 +184,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD91548CA55E0379DB644C2 /* Pods_FootNet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E5DEE7F224B986A0091CECB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +255,7 @@
 			children = (
 				9E4E074A222593B200F8ED17 /* FootNet */,
 				9EC7FE63224A76EF00ACD562 /* FootNetTests */,
+				9E5DEE83224B986A0091CECB /* FootNetUITests */,
 				9E4E0749222593B200F8ED17 /* Products */,
 				F09DBDB1709DEAD94AC8024A /* Pods */,
 				DA4CA0CA16CC5CF290EF2EC9 /* Frameworks */,
@@ -248,6 +267,7 @@
 			children = (
 				9E4E0748222593B200F8ED17 /* FootNet.app */,
 				9EC7FE62224A76EF00ACD562 /* FootNetTests.xctest */,
+				9E5DEE82224B986A0091CECB /* FootNetUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -413,6 +433,15 @@
 				9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		9E5DEE83224B986A0091CECB /* FootNetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9E5DEE84224B986A0091CECB /* FootNetUITests.swift */,
+				9E5DEE86224B986A0091CECB /* Info.plist */,
+			);
+			path = FootNetUITests;
 			sourceTree = "<group>";
 		};
 		9E8D8D1F223AB87100A8A880 /* Base */ = {
@@ -641,6 +670,24 @@
 			productReference = 9E4E0748222593B200F8ED17 /* FootNet.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9E5DEE81224B986A0091CECB /* FootNetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E5DEE8B224B986A0091CECB /* Build configuration list for PBXNativeTarget "FootNetUITests" */;
+			buildPhases = (
+				9E5DEE7E224B986A0091CECB /* Sources */,
+				9E5DEE7F224B986A0091CECB /* Frameworks */,
+				9E5DEE80224B986A0091CECB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E5DEE88224B986A0091CECB /* PBXTargetDependency */,
+			);
+			name = FootNetUITests;
+			productName = FootNetUITests;
+			productReference = 9E5DEE82224B986A0091CECB /* FootNetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9EC7FE61224A76EF00ACD562 /* FootNetTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EC7FE6B224A76EF00ACD562 /* Build configuration list for PBXNativeTarget "FootNetTests" */;
@@ -673,6 +720,10 @@
 					9E4E0747222593B200F8ED17 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					9E5DEE81224B986A0091CECB = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 9E4E0747222593B200F8ED17;
+					};
 					9EC7FE61224A76EF00ACD562 = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
@@ -698,6 +749,7 @@
 			targets = (
 				9E4E0747222593B200F8ED17 /* FootNet */,
 				9EC7FE61224A76EF00ACD562 /* FootNetTests */,
+				9E5DEE81224B986A0091CECB /* FootNetUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -724,6 +776,13 @@
 				9EFEA4BC224247D0002C9EB0 /* Notifications.storyboard in Resources */,
 				9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */,
 				9EFEA4BA224247C5002C9EB0 /* Search.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E5DEE80224B986A0091CECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,6 +925,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E5DEE7E224B986A0091CECB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E5DEE85224B986A0091CECB /* FootNetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EC7FE5E224A76EF00ACD562 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -877,6 +944,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9E5DEE88224B986A0091CECB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E4E0747222593B200F8ED17 /* FootNet */;
+			targetProxy = 9E5DEE87224B986A0091CECB /* PBXContainerItemProxy */;
+		};
 		9EC7FE68224A76EF00ACD562 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9E4E0747222593B200F8ED17 /* FootNet */;
@@ -1068,6 +1140,46 @@
 			};
 			name = Release;
 		};
+		9E5DEE89224B986A0091CECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2UZU6ZLJE;
+				INFOPLIST_FILE = FootNetUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = FootNet.demo.FootNetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FootNet;
+			};
+			name = Debug;
+		};
+		9E5DEE8A224B986A0091CECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2UZU6ZLJE;
+				INFOPLIST_FILE = FootNetUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = FootNet.demo.FootNetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FootNet;
+			};
+			name = Release;
+		};
 		9EC7FE69224A76EF00ACD562 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6F72AC55FBCEA05D461F02A /* Pods-FootNetTests.debug.xcconfig */;
@@ -1132,6 +1244,15 @@
 			buildConfigurations = (
 				9E4E075B222593B300F8ED17 /* Debug */,
 				9E4E075C222593B300F8ED17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E5DEE8B224B986A0091CECB /* Build configuration list for PBXNativeTarget "FootNetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E5DEE89224B986A0091CECB /* Debug */,
+				9E5DEE8A224B986A0091CECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -105,17 +105,12 @@ class ValidateSignUpForm {
             return "emptyEmail_error".localize()
         }
         let text = email!
-        do {
-            let regex = try NSRegularExpression(pattern: "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}${5,45}", options: .caseInsensitive)
-            let textRange = NSRange(location: 0, length: text.count)
-            if regex.firstMatch(in: text, options: [], range: textRange) != nil {
-                return ""
-            } else {
-                return "invalidEmail_error".localize()
-            }
-        } catch  {
-             return "invalidEmail_error".localize()
+        let regEx = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}${5,45}"
+        let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
+        if pred.evaluate(with: text) {
+            return ""
         }
+        return "invalidEmail_error".localize()
     }
     
     private func checkPassword(_ password: String?) -> String {

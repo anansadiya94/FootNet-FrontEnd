@@ -15,6 +15,11 @@
 "signUp_button"="No tens un compte? Registra't";
 "changeLanguage_label"="Tria l'idioma que vulguis:";
 
+//error sign in form alert
+"signIn_formError_alert"="Error en el formulari d'iniciar sessió!";
+"fix_alert"="Arregla-ho";
+
+
 //Sign Up Select Profile Type
 "signUp_navBarTitle"="Registrar-se";
 "signUp_sectionHeader"="Tria el perfil:";
@@ -61,7 +66,7 @@
 "right_button"="Fet";
 
 //error sign up form alert
-"title_done_alert"="Error en el formulari de registre!";
+"signUp_formError_alert"="Error en el formulari de registre!";
 "fix_alert"="Arregla-ho";
 
 //sign up form errors

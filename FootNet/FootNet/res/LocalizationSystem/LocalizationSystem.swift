@@ -77,7 +77,4 @@ class LocalizationSystem:NSObject {
         }
         return prefferedLanguage
     }
-    
 }
-
-

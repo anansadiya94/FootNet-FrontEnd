@@ -13,4 +13,9 @@ target 'FootNet' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  target 'FootNetUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 end

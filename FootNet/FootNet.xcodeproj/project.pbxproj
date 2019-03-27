@@ -31,6 +31,7 @@
 		9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5456512226B8B7002A55F2 /* CustomTextField.swift */; };
 		9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
 		9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */; };
+		9E5DEE7D224B87F60091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
@@ -731,6 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EC7FE6F224A7E6B00ACD562 /* SignUp.storyboard in Resources */,
+				9E5DEE7D224B87F60091CECB /* ForgotPassword.storyboard in Resources */,
 				9EC7FE6E224A78C200ACD562 /* SignIn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

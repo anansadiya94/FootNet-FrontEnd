@@ -29,7 +29,8 @@ class SignInTests: XCTestCase {
         signInVC = signInSB.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
         _ = signInVC.view
     }
-
+    
+    // Sign in button
     // Sign In Form Case 1
     // Empty Email + Empty Password
     func testSignInFormCase1() {
@@ -72,6 +73,13 @@ class SignInTests: XCTestCase {
         signInVC.signInButton.sendActions(for: .touchUpInside)
         let expectedErrors = ""
         XCTAssertEqual(signInVC.signInFormErrors, expectedErrors)
+    }
+    
+    // Forgot password Button
+    func testForgotPasswordButtonCase() {
+        testCreateSignInScreen()
+        let targetViewController = signInSB.instantiateViewController(withIdentifier: "forgotPasswordScene")
+        let _: UIStoryboardSegue = UIStoryboardSegue(identifier: "signInForgotPasswordSegue", source: signInVC, destination: targetViewController)
     }
     
     // Sign Up Button

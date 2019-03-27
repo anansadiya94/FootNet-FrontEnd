@@ -98,6 +98,27 @@ class SignInTests: XCTestCase {
         let _: UIStoryboardSegue = UIStoryboardSegue(identifier: "signInSignUpSegue", source: signInVC, destination: targetViewController)
     }
     
+    // Change To English Button
+    func testChangeToEnglishButtonCase() {
+        testCreateSignInScreen()
+        expectedLanguage = "en"
+        
+        currentLanguage = "en"
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
+        signInVC.englishButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
+        
+        currentLanguage = "es"
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
+        signInVC.englishButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
+        
+        currentLanguage = "ca"
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
+        signInVC.englishButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
+    }
+    
     // Change to Spanish Button
     func testChangeToSpanishButtonCase() {
         testCreateSignInScreen()
@@ -137,27 +158,6 @@ class SignInTests: XCTestCase {
         currentLanguage = "ca"
         LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
         signInVC.catalanButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
-    }
-    
-    // Change To English Button
-    func testChangeToEnglishButtonCase() {
-        testCreateSignInScreen()
-        expectedLanguage = "en"
-        
-        currentLanguage = "en"
-        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
-        signInVC.englishButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
-        
-        currentLanguage = "es"
-        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
-        signInVC.englishButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
-        
-        currentLanguage = "ca"
-        LocalizationSystem.sharedInstance.setLanguage(languageCode: currentLanguage)
-        signInVC.englishButton.sendActions(for: .touchUpInside)
         XCTAssertEqual(LocalizationSystem.sharedInstance.getLanguage(), expectedLanguage)
     }
 }

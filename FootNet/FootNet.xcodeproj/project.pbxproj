@@ -32,7 +32,7 @@
 		9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
 		9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */; };
 		9E5DEE7D224B87F60091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
-		9E5DEE85224B986A0091CECB /* FootNetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE84224B986A0091CECB /* FootNetUITests.swift */; };
+		9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE84224B986A0091CECB /* SignInUITests.swift */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
@@ -128,7 +128,7 @@
 		9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9E5DEE82224B986A0091CECB /* FootNetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootNetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E5DEE84224B986A0091CECB /* FootNetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootNetUITests.swift; sourceTree = "<group>"; };
+		9E5DEE84224B986A0091CECB /* SignInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUITests.swift; sourceTree = "<group>"; };
 		9E5DEE86224B986A0091CECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
@@ -438,7 +438,7 @@
 		9E5DEE83224B986A0091CECB /* FootNetUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9E5DEE84224B986A0091CECB /* FootNetUITests.swift */,
+				9E5DEE84224B986A0091CECB /* SignInUITests.swift */,
 				9E5DEE86224B986A0091CECB /* Info.plist */,
 			);
 			path = FootNetUITests;
@@ -929,7 +929,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E5DEE85224B986A0091CECB /* FootNetUITests.swift in Sources */,
+				9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import CocoaLumberjack
 
 class SignUpSelectProfileTableViewController: UITableViewController {
     var signUpSelectProfileData = [SignUpSelectProfileModel]()
-    private var profileType : ProfileType?
+    private var profileType: ProfileType?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -49,7 +49,7 @@
                                 <connections>
                                     <outlet property="img" destination="kzG-gN-x0V" id="KW5-Ds-XVf"/>
                                     <outlet property="lbl" destination="ulz-Nu-wWb" id="bYD-BJ-JAD"/>
-                                    <segue destination="lll-bP-5A1" kind="show" id="j7b-ZG-PRR"/>
+                                    <segue destination="lll-bP-5A1" kind="show" identifier="SignUpSelectToSignUpDetail" id="j7b-ZG-PRR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

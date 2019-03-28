@@ -42,5 +42,3 @@ class ValidateSignInForm {
         return "invalidPassword_error".localize()
     }
 }
-
-

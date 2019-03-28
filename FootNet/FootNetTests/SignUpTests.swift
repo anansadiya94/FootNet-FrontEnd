@@ -12,6 +12,9 @@ import XCTest
 class SignUpTests: XCTestCase {
     var signUpSB: UIStoryboard = UIStoryboard()
     var signUpSelectVC: SignUpSelectProfileTableViewController = SignUpSelectProfileTableViewController()
+    var signUpDetailVC: SignUpDetailTableViewController = SignUpDetailTableViewController()
+    let userProfileTags = UserProfileTags()
+    var expectedErrors: String
     
     override func setUp() {
         super.setUp()
@@ -21,9 +24,24 @@ class SignUpTests: XCTestCase {
         super.tearDown()
     }
     
-    func testCreateSignUpSelectScreen() {
+    func testCreateSignUpScreens() {
         signUpSB = UIStoryboard(name: "SignUp", bundle: nil)
         signUpSelectVC = signUpSB.instantiateViewController(withIdentifier: "SignUpSelectProfileTableViewController") as! SignUpSelectProfileTableViewController
         _ = signUpSelectVC.view
+        signUpDetailVC = signUpSB.instantiateViewController(withIdentifier: "SignUpDetailTableViewController") as! SignUpDetailTableViewController
+        _ = signUpDetailVC.view
+    }
+    
+    // Sign in button
+    // Sign In Form Case 1
+    // Empty Email + Empty Password
+    func testSignInFormCase1() {
+        testCreateSignUpScreens()
+        expectedErrors = ""
+        let emilcell = signUpDetailVC.textFieldCell(TableView: signUpDetailVC.tableView, IndexPath: NSIndexPath(row: 0, section: 0) as IndexPath, Placeholder: "signUp_name".localize(), Tag: userProfileTags.email)
+        emilcell.textLabel?.text = ""
+        expectedErrors += "emptyEmail_error".localize()
+        signUpDetailVC.navigationItem.rightBarButtonItem?.sendActions(for: .touchUpInside)
+        XCTAssertEqual(signUpDetailVC.signUpFormErrors, expectedErrors)
     }
 }

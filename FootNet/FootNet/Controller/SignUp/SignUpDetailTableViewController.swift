@@ -41,6 +41,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     var validateSignUpForm = ValidateSignUpForm()
     let appNavigationDrawer = AppNavigationDrawer()
     var spinner = Spinner()
+    var signUpFormErrors: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,7 +113,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     @objc private func rightTapped(sender: UIBarButtonItem) {
-        let signUpFormErrors = validateSignUpForm.CheckSignUpForm(UserProfileModel: userProfileModel, ProfileType: profileType!)
+        signUpFormErrors = validateSignUpForm.CheckSignUpForm(UserProfileModel: userProfileModel, ProfileType: profileType!)
         if signUpFormErrors.isEmpty {
             // Start the loading animation
             spinner.startSpinner()

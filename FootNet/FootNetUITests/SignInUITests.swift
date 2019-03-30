@@ -35,4 +35,15 @@ class SignInUITests: XCTestCase {
         app.secureTextFields["Password"].tap()
         app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"Aceptar\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
+    
+    func testForgotPasswordButtonCase() {
+        app.buttons["Did you forget your password?"].tap()
+        app.navigationBars["Recover password"].buttons["backButton"].tap()
+
+    }
+    
+    func testSignUpButtonCase() {
+        app.buttons["Don't you have an account? Sign Up"].tap()
+        app.navigationBars["SignUp"].buttons["backButton"].tap()
+    }
 }

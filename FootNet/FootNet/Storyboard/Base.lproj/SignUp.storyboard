@@ -97,6 +97,9 @@
                                         <constraint firstAttribute="bottom" secondItem="NFh-np-UJo" secondAttribute="bottom" constant="8" id="wLl-nd-iln"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="textField" destination="NFh-np-UJo" id="wsX-UO-gIr"/>
                                 </connections>
@@ -122,6 +125,9 @@
                                         <constraint firstItem="WDC-qv-cJp" firstAttribute="top" secondItem="HuU-Zn-Veq" secondAttribute="top" constant="8" id="wBt-ib-GYT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="dateTextField" destination="WDC-qv-cJp" id="Fmj-ID-JyE"/>
                                 </connections>
@@ -147,6 +153,9 @@
                                         <constraint firstItem="MMh-2A-r8Y" firstAttribute="leading" secondItem="X68-0j-8ZK" secondAttribute="leading" constant="16" id="nTu-Jh-yBh"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="pickerViewTextField" destination="MMh-2A-r8Y" id="f55-yB-MVe"/>
                                 </connections>
@@ -201,6 +210,9 @@
                                         <constraint firstAttribute="bottom" secondItem="O4B-d4-7ho" secondAttribute="bottom" constant="8" id="r2b-za-Yde"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstItem="kmE-lB-Pkk" firstAttribute="centerX" secondItem="0Qr-3L-wVE" secondAttribute="centerX" id="h2O-Pd-nf2"/>
                                 </constraints>
@@ -245,6 +257,9 @@
                                         <constraint firstItem="VWZ-WX-4IH" firstAttribute="leading" secondItem="Png-FZ-uHK" secondAttribute="leading" constant="16" id="XWR-u2-noO"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="textView" destination="yRG-33-Uw5" id="foE-Xb-pRk"/>
                                 </connections>

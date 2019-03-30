@@ -39,13 +39,11 @@ class ValidateSignUpForm {
         guard name != nil else { return "emptyName_error".localize() }
         let text = name!
         let regEx = "^[A-zÀ-ú ]{3,18}$"
-        
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         if pred.evaluate(with: text) {
             return ""
-        } else {
-            return "invalidName_error".localize()
         }
+        return "invalidEmail_error".localize()
     }
     
     private func checkSurname(_ surname: String?, _ profileType: ProfileType) -> String {
@@ -57,17 +55,12 @@ class ValidateSignUpForm {
                 return "emptySurname_error".localize()
             }
             let text = surname!
-            do {
-                let regex = try NSRegularExpression(pattern: "^[A-zÀ-ú ]{3,18}$", options: .caseInsensitive)
-                let textRange = NSRange(location: 0, length: text.count)
-                if regex.firstMatch(in: text, options: [], range: textRange) != nil {
-                    return ""
-                } else {
-                    return "invalidSurname_error".localize()
-                }
-            } catch  {
-                return "invalidSurname_error".localize()
+            let regEx = "^[A-zÀ-ú ]{3,18}$"
+            let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
+            if pred.evaluate(with: text) {
+                return ""
             }
+            return "invalidSurname_error".localize()
         }
     }
     
@@ -91,13 +84,11 @@ class ValidateSignUpForm {
         guard phone != nil else { return "emptyPhone_error".localize() }
         let text = phone!
         let regEx = "^\\s*(?:\\+?(\\d{1,3}))?([-. (]*(\\d{3})[-. )]*)?((\\d{3})[-. ]*(\\d{2,4})(?:[-.x ]*(\\d+))?)\\s*$"
-        
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         if pred.evaluate(with: text) {
             return ""
-        } else {
-            return "invalidPhone_error".localize()
         }
+        return "invalidPhone_error".localize()
     }
     
     private func checkEmail(_ email: String?) -> String {
@@ -117,28 +108,24 @@ class ValidateSignUpForm {
         guard password != nil else { return "emptyPassword_error".localize() }
         let text = password!
         let regEx = "^(?=.{8,})(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*${8,24}"
-        
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         if pred.evaluate(with: text) {
             validPassword = true
             return ""
-        } else {
-            return "invalidPassword_error".localize()
         }
+        return "invalidPassword_error".localize()
     }
     
     private func checkRepeatPassword(_ repeatPassword: String?) -> String {
         guard repeatPassword != nil else { return "emptyRepeatPassword_error".localize() }
         let text = repeatPassword!
         let regEx = "^(?=.{8,})(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*${8,24}"
-        
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         if pred.evaluate(with: text) {
             validRepeatPassword = true
             return ""
-        } else {
-            return "invalidRepeatPassword_error".localize()
         }
+        return "invalidRepeatPassword_error".localize()
     }
     
     private func checkRPasswordsMatch(_ password: String?, _ repeatPassword: String?) -> String {

@@ -130,10 +130,8 @@ class ValidateSignUpForm {
     
     private func checkRPasswordsMatch(_ password: String?, _ repeatPassword: String?) -> String {
         if (validPassword && validRepeatPassword) {
-            if (password == repeatPassword) {
-                return ""
-            } else {
-                return "matchPasswords_error".localize()
+            if (password != repeatPassword) {
+               return "matchPasswords_error".localize()
             }
         }
         return ""

@@ -21,10 +21,10 @@ struct Constants{
     static let actualClub = ["ud_parc", "atc", "fcb"]
     static let actualClubLocalized = actualClub.map({$0.localize()})
     
-    static let favoritePosition = ["del", "por", "def"]
+    static let favoritePosition = ["pos1", "pos2", "pos3", "pos4", "pos5", "pos6", "pos7", "pos8", "pos9", "pos10", "pos11"]
     static let favoritePositionLocalized = favoritePosition.map({$0.localize()})
     
-    static let preferredPosition = ["del", "por", "def"]
+    static let preferredPosition = ["pos1", "pos2", "pos3", "pos4", "pos5", "pos6", "pos7", "pos8", "pos9", "pos10", "pos11"]
     static let preferredPositionLocalized = preferredPosition.map({$0.localize()})
     
     static let weightLocalized = (40...140).map { String($0) + " kg" }

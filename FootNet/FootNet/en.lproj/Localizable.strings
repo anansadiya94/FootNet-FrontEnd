@@ -114,14 +114,30 @@
 "fcb"="FC Barcleona";
 
 //favorite position picker vew
-"del"="Delantera";
-"por"="Portero";
-"def"="Defensa";
+"pos1"="Goalkeeper";
+"pos2"="Left back";
+"pos3"="Centre back";
+"pos4"="Right back";
+"pos5"="Centre medfield";
+"pos6"="Left midfield";
+"pos7"="Playmaker";
+"pos8"="Right midfield";
+"pos9"="Left forward";
+"pos10"="Striker";
+"pos11"="Right forward";
 
 //preferred position picker vew
-"del"="Delantera";
-"por"="Portero";
-"def"="Defensa";
+"pos1"="Goalkeeper";
+"pos2"="Left back";
+"pos3"="Centre back";
+"pos4"="Right back";
+"pos5"="Centre medfield";
+"pos6"="Left midfield";
+"pos7"="Playmaker";
+"pos8"="Right midfield";
+"pos9"="Left forward";
+"pos10"="Striker";
+"pos11"="Right forward";
 
 //TabBar
 "homeTabBar"="Home";

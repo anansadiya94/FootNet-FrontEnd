@@ -65,17 +65,4 @@ class SignUpTests: XCTestCase {
         signUpDetailVC.profileType = ProfileType.Fan
         _ = signUpDetailVC.view
     }
-
-//     Sign Up Form Case 1
-//     Empty Email + Empty Password
-//    func testSignUpFormCase1() {
-//        testCreateSignUpDetailPlayerScreen()
-//        expectedErrors = ""
-//        let emilcell = signUpDetailVC.textFieldCell(TableView: signUpDetailVC.tableView, IndexPath: NSIndexPath(row: 0, section: 0) as IndexPath, Placeholder: "signUp_name".localize(), Tag: userProfileTags.email)
-//        emilcell.textLabel?.text = ""
-//        expectedErrors += "emptyEmail_error".localize()
-//        app/*@START_MENU_TOKEN@*/.buttons["Next:"]/*[[".keyboards",".buttons[\"Siguiente\"]",".buttons[\"Next:\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-//        //signUpDetailVC.navigationItem.rightBarButtonItem?.sendActions(for: .touchUpInside)
-//        XCTAssertEqual(signUpDetailVC.signUpFormErrors, expectedErrors)
-//    }
 }

@@ -156,3 +156,11 @@
 "signOut_alert"="¿Estás seguro de que quieres cerrar sesión?";
 "deactivateAccoutLabel"="Desactivar cuenta";
 "deactivateAccout_alert"="¿Estás seguro de que quieres desactivar tu cuenta?";
+
+//Offers status
+"acceptedOffers"="Aceptadas";
+"pendingOffers"="Pendientes";
+"rejectedOffers"="Rechazadas";
+"acceptedOffers_detail"="ha aceptado tu petición a la oferta";
+"pendingOffers_detail"="no ha reaccionado aún a tu petición a la oferta";
+"rejectedOffers_detail"="ha rechazado tu petición a la oferta";

@@ -8,8 +8,7 @@
 
 import UIKit
 
-class SignUpDetailCell: UITableViewCell {
-    
+class SignUpDetailViewCell: UITableViewCell {
     @IBOutlet weak var textField: CustomTextField!
     @IBOutlet weak var dateTextField: CustomTextField!
     @IBOutlet weak var pickerViewTextField: CustomTextField!

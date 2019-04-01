@@ -161,4 +161,10 @@
 "deactivateAccoutLabel"="Deactivate account";
 "deactivateAccout_alert"="Are you sure you want to deactivate your account?";
 
-
+//Offers status
+"acceptedOffers_scTitle"="Accepted";
+"pendingOffers_scTitle"="Pending";
+"rejectedOffers_scTitle"="Rejected";
+"acceptedOffers_detail"="has not accepted you request to the offer ";
+"pendingOffers_detail"="has not reacted yet to your request to the offer";
+"rejectedOffers_detail"="has rejected your request to the offer";

@@ -26,5 +26,6 @@ class CustomImageView: UIImageView {
         layer.borderColor = color.cgColor
         layer.cornerRadius = frame.height/2
         clipsToBounds = true
+        contentMode = .scaleToFill
     }
 }

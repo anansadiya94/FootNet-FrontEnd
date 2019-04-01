@@ -238,7 +238,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //Return textfield cell
     func textFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textFieldSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+        if let cell: SignUpDetailViewCell = tableView.dequeueReusableCell(withIdentifier: "textFieldSignUpDetailCell", for: indexPath) as? SignUpDetailViewCell {
             switch tag {
             case userProfileTags.phone:
                 cell.textField.placeholder = placeholder
@@ -290,7 +290,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //Return date cell
     func dateTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+        if let cell: SignUpDetailViewCell = tableView.dequeueReusableCell(withIdentifier: "dateSignUpDetailCell", for: indexPath) as? SignUpDetailViewCell {
             if userProfileModel.birthday != nil {
                 cell.dateTextField.text = userProfileModel.birthday
             } else {
@@ -310,7 +310,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //Return image cell
     func imageViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "imageViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+        if let cell: SignUpDetailViewCell = tableView.dequeueReusableCell(withIdentifier: "imageViewSignUpDetailCell", for: indexPath) as? SignUpDetailViewCell {
             cell.imgView.image = chosenImage
             cell.imgView.tag = tag
             cell.profileLabelImageView.text = "signUp_photo_label".localize()
@@ -323,7 +323,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //Return text view cell
     func textViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "textViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+        if let cell: SignUpDetailViewCell = tableView.dequeueReusableCell(withIdentifier: "textViewSignUpDetailCell", for: indexPath) as? SignUpDetailViewCell {
             switch tag {
             case userProfileTags.bio:
                 if userProfileModel.bio != nil{
@@ -353,7 +353,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //Return picker view cell
     func pickerViewTextFieldCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, Placeholder placeholder: String, Tag tag: Int) -> UITableViewCell {
-        if let cell: SignUpDetailCell = tableView.dequeueReusableCell(withIdentifier: "pickerViewSignUpDetailCell", for: indexPath) as? SignUpDetailCell {
+        if let cell: SignUpDetailViewCell = tableView.dequeueReusableCell(withIdentifier: "pickerViewSignUpDetailCell", for: indexPath) as? SignUpDetailViewCell {
             switch tag {
             case userProfileTags.sex:
                 cell.pickerViewTextField.placeholder = placeholder
@@ -478,7 +478,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         dateFormatter.dateFormat = "MM/dd/yyyy"
         let selectedDate: String = dateFormatter.string(from: _sender.date)
         userProfileModel.birthday = selectedDate
-        if let indexPath = dateIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+        if let indexPath = dateIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
             cell.dateTextField.text = selectedDate
             cell.dateTextField.textColor = .black
         }
@@ -534,42 +534,42 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView.tag == userProfileTags.sex) {
-            if let indexPath = sexPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            if let indexPath = sexPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
                 cell.pickerViewTextField.text = Constants.sexLocalized[row]
                 userProfileModel.sex = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.nationality) {
-            if let indexPath = nationalityPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            if let indexPath = nationalityPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
                 cell.pickerViewTextField.text = Constants.nationalityLocalized[row]
                 userProfileModel.nationality = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.location) {
-            if let indexPath = locationPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            if let indexPath = locationPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
                 cell.pickerViewTextField.text = Constants.locationLocalized[row]
                 userProfileModel.location = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.actualClub) {
-            if let indexPath = actualClubPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            if let indexPath = actualClubPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
                 cell.pickerViewTextField.text = Constants.actualClubLocalized[row]
                 userProfileModel.actualClub = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.favoritePosition) {
-            if let indexPath = favoritePositionPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            if let indexPath = favoritePositionPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
                 cell.pickerViewTextField.text = Constants.favoritePositionLocalized[row]
                 userProfileModel.favoritePosition = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.preferredPositions) {
-            if let indexPath = preferredPositionPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            if let indexPath = preferredPositionPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
                 cell.pickerViewTextField.text = Constants.preferredPositionLocalized[row]
                 userProfileModel.preferredPositions = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.weight) {
-            if let indexPath = weightPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            if let indexPath = weightPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
                 cell.pickerViewTextField.text = Constants.weightLocalized[row]
                 userProfileModel.weight = cell.pickerViewTextField.text
             }
         } else if (pickerView.tag == userProfileTags.height) {
-            if let indexPath = heightPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailCell {
+            if let indexPath = heightPickerViewIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
                 cell.pickerViewTextField.text = Constants.heightLocalized[row]
                 userProfileModel.height = cell.pickerViewTextField.text
             }

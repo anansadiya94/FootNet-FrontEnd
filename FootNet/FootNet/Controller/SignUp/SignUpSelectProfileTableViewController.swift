@@ -51,7 +51,7 @@ class SignUpSelectProfileTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "signUpSelectProfileCell", for: indexPath) as! SignUpSelectProfileCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "signUpSelectProfileCell", for: indexPath) as! SignUpSelectProfileViewCell
         // Configure the cell...
         cell.img.image = signUpSelectProfileData[indexPath.row].img
         cell.lbl.text = signUpSelectProfileData[indexPath.row].title

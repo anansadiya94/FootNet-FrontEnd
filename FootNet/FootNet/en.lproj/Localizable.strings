@@ -168,3 +168,8 @@
 "acceptedOffers_detail"="has not accepted you request to the offer ";
 "pendingOffers_detail"="has not reacted yet to your request to the offer";
 "rejectedOffers_detail"="has rejected your request to the offer";
+
+//Notifications
+"notificationsPost_detail"="has reacted to your post";
+"notificationsPhoto_detail"="has reacted to your photo";
+"notificationsVideo_detail"="has reacted to your video";

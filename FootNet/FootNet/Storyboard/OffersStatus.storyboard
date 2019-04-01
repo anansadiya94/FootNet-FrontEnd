@@ -31,7 +31,7 @@
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Whu-MN-ljT">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="offersStatusCell" rowHeight="100" id="7cz-GH-fmf" customClass="OffersStatusTableViewCell" customModule="FootNet" customModuleProvider="target">
@@ -48,14 +48,8 @@
                                                         <constraint firstAttribute="height" constant="50" id="NJb-o0-ZNs"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIb-WY-QJg">
-                                                    <rect key="frame" x="66" y="8" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7G-ff-RiK">
-                                                    <rect key="frame" x="8" y="66" width="42" height="25.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIb-WY-QJg">
+                                                    <rect key="frame" x="66" y="8" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -63,22 +57,18 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="D7G-ff-RiK" firstAttribute="leading" secondItem="xNc-u8-plJ" secondAttribute="leading" constant="8" id="7GE-qD-glX"/>
-                                                <constraint firstItem="D7G-ff-RiK" firstAttribute="top" secondItem="FVS-8k-KQj" secondAttribute="bottom" constant="8" id="EOB-yq-MoE"/>
                                                 <constraint firstItem="KIb-WY-QJg" firstAttribute="leading" secondItem="FVS-8k-KQj" secondAttribute="trailing" constant="8" id="Eft-ns-NSw"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FVS-8k-KQj" secondAttribute="bottom" constant="8" id="aXb-ub-o2L"/>
                                                 <constraint firstItem="FVS-8k-KQj" firstAttribute="leading" secondItem="xNc-u8-plJ" secondAttribute="leading" constant="8" id="eMa-ZH-Wvx"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KIb-WY-QJg" secondAttribute="trailing" constant="16" id="gkN-Bh-7Yk"/>
                                                 <constraint firstItem="KIb-WY-QJg" firstAttribute="top" secondItem="xNc-u8-plJ" secondAttribute="top" constant="8" id="ohP-AI-MP5"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D7G-ff-RiK" secondAttribute="trailing" constant="8" id="qhu-Bg-ZPK"/>
-                                                <constraint firstAttribute="bottom" secondItem="D7G-ff-RiK" secondAttribute="bottom" constant="8" id="r33-Xp-ETn"/>
                                                 <constraint firstItem="FVS-8k-KQj" firstAttribute="top" secondItem="xNc-u8-plJ" secondAttribute="top" constant="8" id="sCK-df-VuF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="offerStatus" destination="D7G-ff-RiK" id="QkV-kG-bMU"/>
+                                            <outlet property="offerStatusDetail" destination="KIb-WY-QJg" id="jLr-9a-r7O"/>
                                             <outlet property="userImage" destination="FVS-8k-KQj" id="rFp-Nt-txp"/>
-                                            <outlet property="userName" destination="KIb-WY-QJg" id="5Zp-di-MrQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -88,7 +78,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Zfe-4Y-AcC" firstAttribute="trailing" secondItem="vje-Xv-rZM" secondAttribute="trailing" constant="8" id="4eC-Io-Vsp"/>
                             <constraint firstItem="Zfe-4Y-AcC" firstAttribute="trailing" secondItem="Whu-MN-ljT" secondAttribute="trailing" id="5xZ-hd-IKM"/>
@@ -102,9 +92,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Offers Status" image="offersStatusTabBar" id="Ipo-UZ-IEG"/>
                     <connections>
-                        <outlet property="offersStatusTable" destination="Whu-MN-ljT" id="g7h-fG-Dmq"/>
+                        <outlet property="offersStatusTableView" destination="Whu-MN-ljT" id="g7h-fG-Dmq"/>
                         <outlet property="scSegment" destination="vje-Xv-rZM" id="WzQ-tP-0Ea"/>
-                        <outlet property="viewview" destination="ghw-tZ-gUN" id="0hp-7j-6vL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSi-n2-jMh" userLabel="First Responder" sceneMemberID="firstResponder"/>

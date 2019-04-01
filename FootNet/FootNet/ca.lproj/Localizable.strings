@@ -167,3 +167,8 @@
 "acceptedOffers_detail"="ha acceptat la teva petició a l'oferta";
 "pendingOffers_detail"="no ha reaccionat encara a la teva petició a l'oferta";
 "rejectedOffers_detail"="ha rebutjat la teva petició a l'oferta";
+
+//Notifications
+"notificationsPost_detail"="ha reaccionat al teu post";
+"notificationsPhoto_detail"="ha reaccionat a la teva foto";
+"notificationsVideo_detail"="ha reaccionat al teu vídeo";

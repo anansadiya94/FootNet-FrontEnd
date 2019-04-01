@@ -136,6 +136,7 @@
 "pos9"="Extremo izquierdo";
 "pos10"="Punta";
 "pos11"="Extremo derecho";
+
 //TabBar
 "homeTabBar"="Inicio";
 "offersTabBar"="Ofertas";
@@ -164,3 +165,8 @@
 "acceptedOffers_detail"="ha aceptado tu petición a la oferta";
 "pendingOffers_detail"="no ha reaccionado aún a tu petición a la oferta";
 "rejectedOffers_detail"="ha rechazado tu petición a la oferta";
+
+//Notifications
+"notificationsPost_detail"="ha reaccionado a tu post";
+"notificationsPhoto_detail"="ha reaccionado a tu foto";
+"notificationsVideo_detail"="ha reaccionado a tu vídeo";

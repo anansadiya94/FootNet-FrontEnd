@@ -1,5 +1,5 @@
 //
-//  OffersStatusTableViewCell.swift
+//  NotificationsTableViewCell.swift
 //  FootNet
 //
 //  Created by Anan Sadiya on 01/04/2019.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class OffersStatusTableViewCell: UITableViewCell {
+class NotificationsTableViewCell: UITableViewCell {
     @IBOutlet weak var userImage: CustomImageView!
-    @IBOutlet weak var offerStatusDetail: UILabel!
+    @IBOutlet weak var notificationDetail: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

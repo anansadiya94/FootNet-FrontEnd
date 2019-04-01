@@ -14,8 +14,8 @@ class OffersStatusData {
         var offersStatusData = [OffersStatusModel]()
         let acceptedOffersDetail = "acceptedOffers_detail".localize()
         offersStatusData = [
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "defaultProfilePhoto"), userName: "Default", offerTitle: "Default \(acceptedOffersDetail) 'se busca portero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "defaultProfilePhoto"), userName: "Default", offerTitle: "Default \(acceptedOffersDetail) 'se busca portero'.")
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "defaultProfilePhoto"), offerStatusDetail: "Default \(acceptedOffersDetail) 'se busca portero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "defaultProfilePhoto"), offerStatusDetail: "Default \(acceptedOffersDetail) 'se busca portero'.")
         ]
         return offersStatusData
     }
@@ -24,11 +24,11 @@ class OffersStatusData {
         var pendingStatusData = [OffersStatusModel]()
         let pendingOffersDetail = "pendingOffers_detail".localize()
         pendingStatusData = [
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), userName: "Joan Menendez", offerTitle: "Joan Menendez \(pendingOffersDetail) 'se busca portero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), userName: "Joan Menendez", offerTitle: "Joan Menendez \(pendingOffersDetail) 'se busca portero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), userName: "Joan Menendez", offerTitle: "Joan Menendez \(pendingOffersDetail) 'se busca portero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), userName: "Joan Menendez", offerTitle: "Joan Menendez \(pendingOffersDetail) 'se busca portero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), userName: "Joan Menendez", offerTitle: "Joan Menendez \(pendingOffersDetail) 'se busca portero'.")
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), offerStatusDetail: "Joan Menendez \(pendingOffersDetail) 'se busca portero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), offerStatusDetail: "Joan Menendez \(pendingOffersDetail) 'se busca portero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), offerStatusDetail: "Joan Menendez \(pendingOffersDetail) 'se busca portero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), offerStatusDetail: "Joan Menendez \(pendingOffersDetail) 'se busca portero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "joanet"), offerStatusDetail: "Joan Menendez \(pendingOffersDetail) 'se busca portero'.")
         ]
         return pendingStatusData
     }
@@ -37,9 +37,9 @@ class OffersStatusData {
         var rejectedStatusData = [OffersStatusModel]()
         let rejectedOffersDetail = "rejectedOffers_detail".localize()
         rejectedStatusData = [
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), userName: "Anan Sadiya", offerTitle: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), userName: "Anan Sadiya", offerTitle: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), userName: "Anan Sadiya", offerTitle: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'.")
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'.")
         ]
         return rejectedStatusData
     }

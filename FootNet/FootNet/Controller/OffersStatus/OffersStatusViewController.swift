@@ -12,15 +12,13 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
     var acceptedOffersData = [OffersStatusModel]()
     var pendingOffersData = [OffersStatusModel]()
     var rejectedOffersData = [OffersStatusModel]()
-    private var dataSource : [OffersStatusModel]?
+    private var dataSource: [OffersStatusModel]?
 
     @IBOutlet weak var scSegment: UISegmentedControl!
-    @IBOutlet var viewview: UIView!
-    @IBOutlet weak var offersStatusTable: UITableView!
+    @IBOutlet weak var offersStatusTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        offersStatusTable.backgroundColor = .clear
         setBackground()
         setTabBarItem()
         getOffersStatusData()
@@ -38,7 +36,7 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
         scSegment.setTitle("rejectedOffers_scTitle".localize(), forSegmentAt: 2)
         scSegment.selectedSegmentIndex = 1
         dataSource = pendingOffersData
-        offersStatusTable.reloadData()
+        offersStatusTableView.reloadData()
     }
     
     private func getOffersStatusData() {
@@ -58,7 +56,7 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
         default:
             break
         }
-        offersStatusTable.reloadData()
+        offersStatusTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,10 +68,8 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
         guard dataSource != nil else { return OffersStatusTableViewCell() }
         let model = dataSource![indexPath.row]
         cell.userImage.image = model.userImage
-        cell.userName.text = model.userName
-        cell.userName.textColor = UIColor.white
-        cell.offerStatus.text = model.offerTitle
-        cell.offerStatus.textColor = UIColor.white
+        cell.offerStatusDetail.text = model.offerStatusDetail
+        cell.offerStatusDetail.textColor = UIColor.white
         return cell
     }
 }

@@ -30,21 +30,22 @@
 "fan_label"="Fan";
 
 //SignUp Detail
-"signUp_name"="Name";
-"signUp_surname"="Surname";
-"signUp_phone"="Phone";
-"signUp_email"="Email";
-"signUp_password"="Password";
-"signUp_repeatPassword"="Repeat Password";
-"signUp_sex"="Sex";
-"signUp_bithdayDate"="Birthday";
-"signUp_nationality"="Nationality";
-"signUp_location"="Location";
-"signUp_favoritePosition"="Favorite Position";
-"signUp_preferredPositions"="Preferred Positions";
-"signUp_weight"="Weight";
-"signUp_height"="Height";
-"signUp_actualClub"="Actual Club";
+"obligatoryField"="obligatory field";
+"signUp_name"="Name*";
+"signUp_surname"="Surname*";
+"signUp_phone"="Phone*";
+"signUp_email"="Email*";
+"signUp_password"="Password*";
+"signUp_repeatPassword"="Repeat Password*";
+"signUp_sex"="Sex*";
+"signUp_bithdayDate"="Birthday*";
+"signUp_nationality"="Nationality*";
+"signUp_location"="Location*";
+"signUp_favoritePosition"="Favorite Position*";
+"signUp_preferredPositions"="Preferred Positions*";
+"signUp_weight"="Weight*";
+"signUp_height"="Height*";
+"signUp_actualClub"="Actual Club*";
 "signUp_photo_label"="Profile Photo";
 "signUp_photo_button"="Tap here to change it";
 "signUp_bio"="Biography";

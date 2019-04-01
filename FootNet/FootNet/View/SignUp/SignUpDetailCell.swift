@@ -17,7 +17,7 @@ class SignUpDetailCell: UITableViewCell {
     @IBOutlet weak var profileLabelImageView: CustomLabel!
     @IBOutlet weak var changeImageButton: CustomChoosePhotoButton!
     @IBOutlet weak var textView: CustomTextView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear

@@ -75,6 +75,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         
         //Default image
         chosenImage = #imageLiteral(resourceName: "defaultProfilePhoto")
+
     }
     
     //Back button navigationbar
@@ -216,12 +217,13 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //Cections titles
+    //Sections titles
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var sectionHeader = ""
+        let obligatoryField = "obligatoryField".localize()
         switch section {
         case 0:
-            sectionHeader = "1"
+            sectionHeader = "1 *\(obligatoryField)"
         case 1:
             sectionHeader = "2"
         case 2:

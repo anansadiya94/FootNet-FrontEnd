@@ -30,21 +30,22 @@
 "fan_label"="Aficionat";
 
 //SignUp Detail
-"signUp_name"="Nom";
-"signUp_surname"="Cognoms";
-"signUp_phone"="Mòbil";
-"signUp_email"="Correu electrònic";
-"signUp_password"="Contrasenya";
-"signUp_repeatPassword"="Repetir contrasenya";
-"signUp_sex"="Sexe";
-"signUp_bithdayDate"="Data de naixement";
-"signUp_nationality"="Nacionalitat";
-"signUp_location"="Localitat";
-"signUp_favoritePosition"="Poisció Preferida";
-"signUp_preferredPositions"="Posicions Preferides";
-"signUp_weight"="Pes";
-"signUp_height"="Alçada";
-"signUp_actualClub"="Club Actual";
+"obligatoryField"="camp obligatori";
+"signUp_name"="Nom*";
+"signUp_surname"="Cognoms*";
+"signUp_phone"="Mòbil*";
+"signUp_email"="Correu electrònic*";
+"signUp_password"="Contrasenya*";
+"signUp_repeatPassword"="Repetir contrasenya*";
+"signUp_sex"="Sexe*";
+"signUp_bithdayDate"="Data de naixement*";
+"signUp_nationality"="Nacionalitat*";
+"signUp_location"="Localitat*";
+"signUp_favoritePosition"="Poisció Preferida*";
+"signUp_preferredPositions"="Posicions Preferides*";
+"signUp_weight"="Pes*";
+"signUp_height"="Alçada*";
+"signUp_actualClub"="Club Actual*";
 "signUp_photo_label"="Foto de perfil";
 "signUp_photo_button"="Toca aquí per canviar-la";
 "signUp_bio"="Biografia";

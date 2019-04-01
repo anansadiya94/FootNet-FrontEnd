@@ -29,21 +29,22 @@
 "fan_label"="Aficionado";
 
 //SignUp Detail
-"signUp_name"="Nombre";
-"signUp_surname"="Apellidos";
-"signUp_phone"="Móvil";
-"signUp_email"="Correo Electrónico";
-"signUp_password"="Contraseña";
-"signUp_repeatPassword"="Repetir contraseña";
-"signUp_sex"="Sexo";
-"signUp_bithdayDate"="Fecha de nacimiento";
-"signUp_nationality"="Nacionalidad";
-"signUp_location"="Localidad";
-"signUp_favoritePosition"="Poisción Favorita";
-"signUp_preferredPositions"="Posiciones Preferidas";
-"signUp_weight"="Peso";
-"signUp_height"="Altura";
-"signUp_actualClub"="Club Actual";
+"obligatoryField"="campo obligatorio";
+"signUp_name"="Nombre*";
+"signUp_surname"="Apellidos*";
+"signUp_phone"="Móvil*";
+"signUp_email"="Correo Electrónico*";
+"signUp_password"="Contraseña*";
+"signUp_repeatPassword"="Repetir contraseña*";
+"signUp_sex"="Sexo*";
+"signUp_bithdayDate"="Fecha de nacimiento*";
+"signUp_nationality"="Nacionalidad*";
+"signUp_location"="Localidad*";
+"signUp_favoritePosition"="Poisción Favorita*";
+"signUp_preferredPositions"="Posiciones Preferidas*";
+"signUp_weight"="Peso*";
+"signUp_height"="Altura*";
+"signUp_actualClub"="Club Actual*";
 "signUp_photo_label"="Foto de perfil";
 "signUp_photo_button"="Toca aquí para cambiarla";
 "signUp_bio"="Biografía";

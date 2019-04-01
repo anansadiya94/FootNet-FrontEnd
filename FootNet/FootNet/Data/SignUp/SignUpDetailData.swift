@@ -14,7 +14,7 @@ class SignUpDetailData {
     static func getAllsignUpSectionsData(_ profileType: ProfileType) -> [[SignUpDetailModel]] {
         var signUpSectionsData = [[SignUpDetailModel]]()
         let userProfileTags = UserProfileTags()
-        
+    
         var section1Data = [SignUpDetailModel]()
         var section2Data = [SignUpDetailModel]()
         var section3Data = [SignUpDetailModel]()

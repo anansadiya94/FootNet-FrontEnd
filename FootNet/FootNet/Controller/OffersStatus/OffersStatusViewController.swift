@@ -30,7 +30,7 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     private func setSegmentControl() {
-        scSegment.tintColor = UIColor.colorDarkGreen
+        scSegment.tintColor = UIColor.colorSecondary
         scSegment.setTitle("acceptedOffers_scTitle".localize(), forSegmentAt: 0)
         scSegment.setTitle("pendingOffers_scTitle".localize(), forSegmentAt: 1)
         scSegment.setTitle("rejectedOffers_scTitle".localize(), forSegmentAt: 2)
@@ -69,7 +69,7 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
         let model = dataSource![indexPath.row]
         cell.userImage.image = model.userImage
         cell.offerStatusDetail.text = model.offerStatusDetail
-        cell.offerStatusDetail.textColor = UIColor.white
+        cell.offerStatusDetail.textColor = UIColor.colorText
         return cell
     }
 }

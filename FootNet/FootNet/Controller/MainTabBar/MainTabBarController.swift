@@ -31,17 +31,17 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setTabBar() {
-        tabBar.barTintColor = UIColor.black
-        homeTabBar.tintColor = UIColor.colorDarkGreen
-        homeTabBar.unselectedItemTintColor = UIColor.white
-        offerTabBar.tintColor = UIColor.colorDarkGreen
-        offerTabBar.unselectedItemTintColor = UIColor.white
-        offersStatusTab.tintColor = UIColor.colorDarkGreen
-        offersStatusTab.unselectedItemTintColor = UIColor.white
-        searchTabBar.tintColor = UIColor.colorDarkGreen
-        searchTabBar.unselectedItemTintColor = UIColor.white
-        notificationsTabBar.tintColor = UIColor.colorDarkGreen
-        notificationsTabBar.unselectedItemTintColor = UIColor.white
+        tabBar.barTintColor = UIColor.colorBars
+        homeTabBar.tintColor = UIColor.colorSecondary
+        homeTabBar.unselectedItemTintColor = UIColor.colorText
+        offerTabBar.tintColor = UIColor.colorSecondary
+        offerTabBar.unselectedItemTintColor = UIColor.colorText
+        offersStatusTab.tintColor = UIColor.colorSecondary
+        offersStatusTab.unselectedItemTintColor = UIColor.colorText
+        searchTabBar.tintColor = UIColor.colorSecondary
+        searchTabBar.unselectedItemTintColor = UIColor.colorText
+        notificationsTabBar.tintColor = UIColor.colorSecondary
+        notificationsTabBar.unselectedItemTintColor = UIColor.colorText
     }
     
     private func addObservers() {

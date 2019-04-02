@@ -27,8 +27,8 @@ class SignUpSelectProfileTableViewController: UITableViewController {
         
         // navigationController Configuration
         navigationController?.navigationBar.topItem?.title = "signUp_navBarTitle".localize()
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.colorText]
+        navigationController?.navigationBar.barTintColor = UIColor.colorBars
     }
     
     //Back button navigationbar
@@ -37,7 +37,7 @@ class SignUpSelectProfileTableViewController: UITableViewController {
         let imageName = "backButton"
         let image = UIImage(named: imageName)
         let newLeftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(SignUpSelectProfileTableViewController.back(sender:)))
-        newLeftBarButtonItem.tintColor = UIColor.white
+        newLeftBarButtonItem.tintColor = UIColor.colorText
         self.navigationItem.leftBarButtonItem = newLeftBarButtonItem
     }
     

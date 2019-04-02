@@ -21,6 +21,6 @@ class CustomLabel: UILabel {
     
     private func setup() {
         self.font = UIFont.fontSystemS20
-        self.textColor = UIColor.colorDarkGreen
+        self.textColor = UIColor.colorSecondary
     }
 }

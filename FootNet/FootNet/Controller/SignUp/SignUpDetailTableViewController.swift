@@ -84,7 +84,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         let imageName = "backButton"
         let image = UIImage(named: imageName)
         let newLeftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.leftTapped(sender:)))
-        newLeftBarButtonItem.tintColor = UIColor.white
+        newLeftBarButtonItem.tintColor = UIColor.colorText
         self.navigationItem.leftBarButtonItem = newLeftBarButtonItem
     }
     
@@ -109,7 +109,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         let imageName = "checkButton"
         let image = UIImage(named: imageName)
         let newRightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(SignUpDetailTableViewController.rightTapped(sender:)))
-        newRightBarButtonItem.tintColor = UIColor.white
+        newRightBarButtonItem.tintColor = UIColor.colorText
         self.navigationItem.rightBarButtonItem = newRightBarButtonItem
     }
     

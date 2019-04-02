@@ -21,7 +21,7 @@ class CustomTextField: NoPasteTextField {
     
     private func setup() {
         self.font = UIFont.fontSystemS20
-        self.textColor = UIColor.colorDarkBlack
+        self.textColor = UIColor.colorPrimary
         self.autocorrectionType = .no
         self.spellCheckingType = .no
         self.keyboardType = .default

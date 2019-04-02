@@ -17,7 +17,7 @@ class RightHomeViewController: UIViewController, MFMailComposeViewControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.colorDarkGreen
+        view.backgroundColor = UIColor.colorSecondary
         configureOutlets()
         if !MFMailComposeViewController.canSendMail() {
             print("Mail services are not available")

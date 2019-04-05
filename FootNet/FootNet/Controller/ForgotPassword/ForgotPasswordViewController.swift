@@ -23,8 +23,8 @@ class ForgotPasswordViewController: UIViewController {
         
         // navigationController Configuration
         navigationController?.navigationBar.topItem?.title = "forgotPassword_navBarTitle".localize()
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.colorText]
+        navigationController?.navigationBar.barTintColor = UIColor.colorBars
     }
     
     //Back button navigationbar
@@ -33,7 +33,7 @@ class ForgotPasswordViewController: UIViewController {
         let imageName = "backButton"
         let image = UIImage(named: imageName)
         let newLeftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(ForgotPasswordViewController.back(sender:)))
-        newLeftBarButtonItem.tintColor = UIColor.white
+        newLeftBarButtonItem.tintColor = UIColor.colorText
         self.navigationItem.leftBarButtonItem = newLeftBarButtonItem
     }
     

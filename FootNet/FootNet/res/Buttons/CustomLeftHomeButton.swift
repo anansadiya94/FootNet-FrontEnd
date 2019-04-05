@@ -20,7 +20,7 @@ class CustomLeftHomeButton: UIButton {
     }
     
     private func setup() {
-        let color = UIColor.white
+        let color = UIColor.colorText
         let disabledColor = color.withAlphaComponent(0.3)
         let btnFont = UIFont.fontSystemS20
         titleLabel?.numberOfLines = 1

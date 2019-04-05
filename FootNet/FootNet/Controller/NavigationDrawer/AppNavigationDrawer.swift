@@ -38,7 +38,7 @@ class AppNavigationDrawer: UIViewController {
         setNavigationBar(navigationController)
         setHomeLeftButton(mainViewController)
         setHomeRightButton(mainViewController)
-        navigationController.navigationBar.tintColor = UIColor.white
+        navigationController.navigationBar.tintColor = UIColor.colorText
         let backItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
         navigationController.navigationItem.backBarButtonItem = backItem
         appNavigationDrawerController?.navigationItem.backBarButtonItem = backItem
@@ -51,13 +51,13 @@ class AppNavigationDrawer: UIViewController {
     
     private func setNavigationBar(_ navigationController: UINavigationController) {
         navigationController.navigationBar.topItem?.title = "FootNet"
-        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController.navigationBar.barTintColor = UIColor.black
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.colorText]
+        navigationController.navigationBar.barTintColor = UIColor.colorBars
     }
     
     private func setHomeLeftButton(_ viewController: UIViewController) {
         let homeLeftButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menuButton"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(homeLeftTapped))
-        homeLeftButtonItem.tintColor = UIColor.white
+        homeLeftButtonItem.tintColor = UIColor.colorText
         viewController.navigationItem.leftBarButtonItem = homeLeftButtonItem
     }
     
@@ -65,7 +65,7 @@ class AppNavigationDrawer: UIViewController {
         let homeRightButton = UIButton(type: .infoLight)
         homeRightButton.addTarget(self, action: #selector(homeRightTapped), for: .touchUpInside)
         let homeRightButtonItem = UIBarButtonItem(customView: homeRightButton)
-        homeRightButtonItem.customView?.tintColor = UIColor.white
+        homeRightButtonItem.customView?.tintColor = UIColor.colorText
         viewController.navigationItem.rightBarButtonItem = homeRightButtonItem
     }
     

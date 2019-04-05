@@ -29,12 +29,20 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
 
-    static var colorDarkBlack : UIColor {
+    static var colorPrimary: UIColor {
         get { return UIColor(hexString: "#1E2227") }
     }
     
-    static var colorDarkGreen : UIColor {
+    static var colorSecondary : UIColor {
         get { return UIColor(hexString: "#29CB97") }
+    }
+    
+    static var colorBars : UIColor {
+        get { return UIColor.black }
+    }
+    
+    static var colorText : UIColor {
+        get { return UIColor.white }
     }
     
     static var colorPlaceHolderDefault : UIColor {

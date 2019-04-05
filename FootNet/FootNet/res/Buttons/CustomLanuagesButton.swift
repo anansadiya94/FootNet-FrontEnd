@@ -20,7 +20,7 @@ class CustomLanguagesButton: UIButton {
     }
     
     private func setup() {
-        let color = UIColor.colorDarkGreen
+        let color = UIColor.colorSecondary
         let disabledColor = color.withAlphaComponent(0.3)
         let btnFont = UIFont.fontSystemS20
         clipsToBounds = true

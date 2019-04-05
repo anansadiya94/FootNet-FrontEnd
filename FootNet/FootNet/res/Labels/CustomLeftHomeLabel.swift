@@ -21,6 +21,6 @@ class CustomLeftHomeLabel: UILabel {
     
     private func setup() {
         self.font = UIFont.fontSystemS20
-        self.textColor = UIColor.white
+        self.textColor = UIColor.colorText
     }
 }

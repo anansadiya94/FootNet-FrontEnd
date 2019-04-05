@@ -21,7 +21,7 @@ class CustomForgotPasswordButton : UIButton {
     
     private func setup() {
         let btnFont = UIFont.fontSystemS13
-        let color = UIColor.colorDarkGreen
+        let color = UIColor.colorSecondary
         let disabledColor = color.withAlphaComponent(0.3)
         clipsToBounds = true
         setTitleColor(color, for: .normal)

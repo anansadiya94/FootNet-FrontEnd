@@ -20,7 +20,7 @@ class CustomImageView: UIImageView {
     }
     
     private func setup() {
-        let color = UIColor.colorDarkGreen
+        let color = UIColor.colorSecondary
         layer.borderWidth = 1
         layer.masksToBounds = false
         layer.borderColor = color.cgColor

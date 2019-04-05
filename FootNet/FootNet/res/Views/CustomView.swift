@@ -15,7 +15,7 @@ class CustomView: UIView {
     }
     
     private func setup() {
-        let color = UIColor.colorDarkGreen
+        let color = UIColor.colorSecondary
         layer.cornerRadius = 5.0
         layer.borderColor = color.cgColor
         layer.borderWidth = 1

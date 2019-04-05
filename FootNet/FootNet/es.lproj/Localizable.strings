@@ -76,7 +76,7 @@
 "emptyPhone_error"="Móvil obligatorio!\n";
 "invalidPhone_error"="Formato de teléfono no válido!\n";
 "emptyEmail_error"="Correo electrónico obligatorio!\n";
-"invalidEmail_error"="Formato de correo electrónic no válido!\n";
+"invalidEmail_error"="Formato de correo electrónico no válido!\n";
 "emptyPassword_error"="Contraseña obligatoria!\n";
 "invalidPassword_error"="La contraseña debe tener al menos una letra mayúscula, una letra minúscula, un número y una longitud de 8 caracteres!\n";
 "emptyRepeatPassword_error"="Repetir contraseña obligatorio!\n";

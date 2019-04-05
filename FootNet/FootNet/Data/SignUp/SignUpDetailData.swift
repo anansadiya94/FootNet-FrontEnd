@@ -47,7 +47,7 @@ class SignUpDetailData {
             section4Data.append(SignUpDetailModel(placeholder: "signUp_preferredPositions".localize(), tag: userProfileTags.preferredPositions))
             section4Data.append(SignUpDetailModel(placeholder: "signUp_weight".localize(), tag: userProfileTags.weight))
             section4Data.append(SignUpDetailModel(placeholder: "signUp_height".localize(), tag: userProfileTags.height))
-        case .Coach, .SportDirector, .Fan:
+        case .Coach, .SportDirector:
             //Section 1
             section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
             section1Data.append(SignUpDetailModel(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
@@ -86,6 +86,24 @@ class SignUpDetailData {
             section3Data.append(SignUpDetailModel(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
             
             //Section 4
+            
+        case .Fan:
+            //Section 1
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
+            section1Data.append(SignUpDetailModel(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
+            
+            //Section 2
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
+            section2Data.append(SignUpDetailModel(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
+            
+            //Section3
+            section3Data.append(SignUpDetailModel(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
         }
         
         //Adding sections

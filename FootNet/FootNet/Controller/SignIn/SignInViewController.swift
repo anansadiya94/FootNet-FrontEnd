@@ -105,11 +105,11 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     // MARK: UI Configurations
     private func configureOutlets() {
         //placeholders
-        //emailTextField.placeholder = "email_placeholder".localize()
-        emailTextField.text = "hello@world.com"
+        emailTextField.placeholder = "email_placeholder".localize()
+        //emailTextField.text = "hello@world.com"
         emailTextField.keyboardType = .emailAddress
-        //passwordTextField.placeholder = "password_placeholder".localize()
-        passwordTextField.text = "Anan1234"
+        passwordTextField.placeholder = "password_placeholder".localize()
+        //passwordTextField.text = "Anan1234"
         passwordTextField.isSecureTextEntry = true
         //buttons
         let forgotPasswordTitle = "forgotPassword_button".localize()

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E07D97F225E2CA1004A73A8 /* LeftHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D97E225E2CA1004A73A8 /* LeftHomeUITests.swift */; };
+		9E07D981225E3063004A73A8 /* RightHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D980225E3063004A73A8 /* RightHomeUITests.swift */; };
+		9E07D983225E3412004A73A8 /* MainTabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */; };
 		9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
 		9E1EC84E22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC84D22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift */; };
 		9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */; };
@@ -114,6 +117,9 @@
 		2207E03A1E5628DE9F619939 /* Pods-FootNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootNetTests.release.xcconfig"; path = "Target Support Files/Pods-FootNetTests/Pods-FootNetTests.release.xcconfig"; sourceTree = "<group>"; };
 		923DDA28B04519C2C59EF293 /* Pods_FootNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		982E46C3B458AAE9A91D5C1C /* Pods-FootNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootNetTests.debug.xcconfig"; path = "Target Support Files/Pods-FootNetTests/Pods-FootNetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9E07D97E225E2CA1004A73A8 /* LeftHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHomeUITests.swift; sourceTree = "<group>"; };
+		9E07D980225E3063004A73A8 /* RightHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeUITests.swift; sourceTree = "<group>"; };
+		9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarUITests.swift; sourceTree = "<group>"; };
 		9E1B1E1F2225A55600C82019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E1EC84D22490F7C00E5B2E7 /* CustomLeftHomeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomLeftHomeLabel.swift; path = FootNet/res/Labels/CustomLeftHomeLabel.swift; sourceTree = SOURCE_ROOT; };
 		9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -471,6 +477,9 @@
 				9E5DEE86224B986A0091CECB /* Info.plist */,
 				9E5DEE84224B986A0091CECB /* SignInUITests.swift */,
 				9EF07904224CCBF20034FA1C /* SignUpUITests.swift */,
+				9E07D97E225E2CA1004A73A8 /* LeftHomeUITests.swift */,
+				9E07D980225E3063004A73A8 /* RightHomeUITests.swift */,
+				9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */,
 			);
 			path = FootNetUITests;
 			sourceTree = "<group>";
@@ -1098,8 +1107,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E07D983225E3412004A73A8 /* MainTabBarUITests.swift in Sources */,
 				9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */,
+				9E07D981225E3063004A73A8 /* RightHomeUITests.swift in Sources */,
 				9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */,
+				9E07D97F225E2CA1004A73A8 /* LeftHomeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

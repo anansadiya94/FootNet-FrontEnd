@@ -1,14 +1,14 @@
 //
-//  FootNetUITests.swift
+//  RightHomeUITests.swift
 //  FootNetUITests
 //
-//  Created by Anan Sadiya on 27/03/2019.
+//  Created by Anan Sadiya on 10/04/2019.
 //  Copyright © 2019 FootNet. All rights reserved.
 //
 
 import XCTest
 
-class SignInUITests: XCTestCase {
+class RightHomeUITests: XCTestCase {
     private var app: XCUIApplication!
     
     override func setUp() {
@@ -28,26 +28,8 @@ class SignInUITests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-
-    func testTextFieldShouldReturnCase() {
-        app.textFields["Email"].tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Next:"]/*[[".keyboards",".buttons[\"Siguiente\"]",".buttons[\"Next:\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.secureTextFields["Password"].tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"Aceptar\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-    }
     
-    func testForgotPasswordButtonCase() {
-        app.buttons["Did you forget your password?"].tap()
-        app.navigationBars["Recover password"].buttons["backButton"].tap()
-
-    }
-    
-    func testSignUpButtonCase() {
-        app.buttons["Don't you have an account? Sign Up"].tap()
-        app.navigationBars["SignUp"].buttons["backButton"].tap()
-    }
-    
-    func testValidSignIn () {
+    func testOpenRightHomeCase() {
         app.textFields["Email"].tap()
         app.keys["a"].tap()
         app.keys["n"].tap()
@@ -82,5 +64,29 @@ class SignInUITests: XCTestCase {
         app.keys["4"].tap()
         app.keys["more"].tap()
         app.buttons["Sign In"].tap()
+        app.navigationBars["FootNet"].buttons["More Info"].tap()
+    }
+    
+    func testCloseRightHome() {
+        testOpenRightHomeCase()
+        app.children(matching: .window).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+    }
+    
+    //It's not working with the simulator
+//    func testSendAnEmailRightHome() {
+//        testOpenRightHomeCase()
+//        app.buttons["Send an email"].tap()
+//    }
+    
+    func testOpenInstagramRightHome() {
+        testOpenRightHomeCase()
+        app.buttons["LinkedIn"].tap()
+    }
+    
+    func testOpenLinkedInRightHome() {
+        testOpenRightHomeCase()
+        app.buttons["Instagram"].tap()
     }
 }
+
+

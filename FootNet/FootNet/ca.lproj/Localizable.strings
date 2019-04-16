@@ -161,9 +161,9 @@
 "deactivateAccout_alert"="Estàs segur que vols desactivar el teu compte?";
 
 //Offers status
-"acceptedOffers"="Acceptades";
-"pendingOffers"="Pendents";
-"rejectedOffers"="Rebutjades";
+"acceptedOffers_scTitle"="Acceptades";
+"pendingOffers_scTitle"="Pendents";
+"rejectedOffers_scTitle"="Rebutjades";
 "acceptedOffers_detail"="ha acceptat la teva petició a l'oferta";
 "pendingOffers_detail"="no ha reaccionat encara a la teva petició a l'oferta";
 "rejectedOffers_detail"="ha rebutjat la teva petició a l'oferta";

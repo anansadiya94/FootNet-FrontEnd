@@ -21,6 +21,5 @@ class NotificationsData {
             NotificationsModel(userImage: #imageLiteral(resourceName: "homeRightImage"), notificationDetail: "Anan Sadiya \(notificationsVideoDetail).")
         ]
         return notificationsData
-        
     }
 }

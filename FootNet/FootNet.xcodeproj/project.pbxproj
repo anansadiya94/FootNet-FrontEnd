@@ -305,6 +305,10 @@
 		9E4E074A222593B200F8ED17 /* FootNet */ = {
 			isa = PBXGroup;
 			children = (
+				9E9E598F2265D2F6002816B6 /* API */,
+				9E9E598E2265D2A9002816B6 /* JSONMocks */,
+				9E9E598D2265D275002816B6 /* DAO */,
+				9E9E598C2265D25F002816B6 /* Services */,
 				9E4E07732225976700F8ED17 /* Main */,
 				9E4E075D222593CE00F8ED17 /* Data */,
 				9E4E075E222593D800F8ED17 /* Model */,
@@ -571,6 +575,34 @@
 				9E935717224111700036F23A /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		9E9E598C2265D25F002816B6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9E9E598D2265D275002816B6 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		9E9E598E2265D2A9002816B6 /* JSONMocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSONMocks;
+			sourceTree = "<group>";
+		};
+		9E9E598F2265D2F6002816B6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		9EA25A992244C3AA00027A31 /* LeftHome */ = {

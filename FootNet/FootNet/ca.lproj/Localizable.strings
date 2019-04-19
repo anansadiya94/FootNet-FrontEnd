@@ -16,8 +16,9 @@
 "changeLanguage_label"="Tria l'idioma que vulguis:";
 
 //error sign in form alert
-"signIn_formError_alert"="Error en el formulari d'iniciar sessió!";
-"fix_alert"="Arregla-ho";
+"signIn_formError_alert"="Error en el formulari d'iniciar sessió.";
+"signIn_dataError_alert"="Nom d'usuari / contrasenya desconegut.";
+"fix_alert"="Intenta-ho de nou.";
 
 
 //Sign Up Select Profile Type

@@ -16,8 +16,9 @@
 "changeLanguage_label"="Elige el idioma que quieras:";
 
 //error sign in form alert
-"signIn_formError_alert"="Error en el formulario de iniciar sesión!";
-"fix_alert"="Arréglalo";
+"signIn_formError_alert"="Error en el formulario de iniciar sesión.";
+"signIn_dataError_alert"="Nombre de usuario/contraseña desconocido.";
+"fix_alert"="Inténtalo de nuevo.";
 
 //SignUp Select Profile Type
 "signUp_navBarTitle"="Registrarse";

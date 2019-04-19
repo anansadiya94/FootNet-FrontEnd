@@ -16,6 +16,9 @@
 		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
 		9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
 		9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
+		9E22EC842269EC3E006B1BF1 /* LogInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22EC832269EC3E006B1BF1 /* LogInService.swift */; };
+		9E22EC862269EE1E006B1BF1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22EC852269EE1E006B1BF1 /* APIManager.swift */; };
+		9E22EC882269F3F5006B1BF1 /* LogInJsonMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22EC872269F3F5006B1BF1 /* LogInJsonMocks.swift */; };
 		9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
 		9E35D93422268440008E8361 /* CustomSignInSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */; };
 		9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93822268801008E8361 /* UIFontExtension.swift */; };
@@ -126,6 +129,9 @@
 		9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfleViewController.swift; sourceTree = "<group>"; };
 		9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
 		9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		9E22EC832269EC3E006B1BF1 /* LogInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInService.swift; path = FootNet/Res/LocalizationSystem/LogInService.swift; sourceTree = SOURCE_ROOT; };
+		9E22EC852269EE1E006B1BF1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = FootNet/Res/LocalizationSystem/APIManager.swift; sourceTree = SOURCE_ROOT; };
+		9E22EC872269F3F5006B1BF1 /* LogInJsonMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInJsonMocks.swift; path = FootNet/Res/LocalizationSystem/LogInJsonMocks.swift; sourceTree = SOURCE_ROOT; };
 		9E35D930222681B4008E8361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInSignUpButton.swift; sourceTree = "<group>"; };
 		9E35D93822268801008E8361 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
@@ -313,9 +319,8 @@
 		9E4E074A222593B200F8ED17 /* FootNet */ = {
 			isa = PBXGroup;
 			children = (
-				9E9E598F2265D2F6002816B6 /* API */,
 				9E9E598E2265D2A9002816B6 /* JSONMocks */,
-				9E9E598D2265D275002816B6 /* DAO */,
+				9E9E598F2265D2F6002816B6 /* API */,
 				9E9E598C2265D25F002816B6 /* Services */,
 				9E4E07732225976700F8ED17 /* Main */,
 				9E4E075D222593CE00F8ED17 /* Data */,
@@ -588,20 +593,15 @@
 		9E9E598C2265D25F002816B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9E22EC832269EC3E006B1BF1 /* LogInService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		9E9E598D2265D275002816B6 /* DAO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DAO;
 			sourceTree = "<group>";
 		};
 		9E9E598E2265D2A9002816B6 /* JSONMocks */ = {
 			isa = PBXGroup;
 			children = (
+				9E22EC872269F3F5006B1BF1 /* LogInJsonMocks.swift */,
 			);
 			path = JSONMocks;
 			sourceTree = "<group>";
@@ -609,6 +609,7 @@
 		9E9E598F2265D2F6002816B6 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9E22EC852269EE1E006B1BF1 /* APIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1062,6 +1063,7 @@
 				9E935718224111700036F23A /* HomeViewController.swift in Sources */,
 				9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */,
 				9ECF074F225242600082FC1F /* NotificationsTableViewCell.swift in Sources */,
+				9E22EC882269F3F5006B1BF1 /* LogInJsonMocks.swift in Sources */,
 				9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */,
 				9EF232C32237F3F9004BF61F /* CustomTextView.swift in Sources */,
 				9EF232C02237F277004BF61F /* CustomImageView.swift in Sources */,
@@ -1083,6 +1085,7 @@
 				9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */,
 				9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */,
 				9E93570D2240E5E60036F23A /* Spinner.swift in Sources */,
+				9E22EC862269EE1E006B1BF1 /* APIManager.swift in Sources */,
 				9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */,
 				9ECF074022521D7E0082FC1F /* OffersStatusModel.swift in Sources */,
 				9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */,
@@ -1096,6 +1099,7 @@
 				9EB3A6C1222D1B22002F244E /* SignUpDetailModel.swift in Sources */,
 				9EF232BD2237EF01004BF61F /* CustomChoosePhotoButton.swift in Sources */,
 				9EBD4FC02239883F008604EB /* CustomView.swift in Sources */,
+				9E22EC842269EC3E006B1BF1 /* LogInService.swift in Sources */,
 				9EB3A6C3222D1B80002F244E /* SignUpDetailViewCell.swift in Sources */,
 				9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */,
 				9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */,

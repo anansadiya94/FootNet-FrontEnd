@@ -50,11 +50,22 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     }
     
     private func validateSignIn() -> Bool {
-        signInFormErrors = validateSignInForm.CheckSignInForm(Email: emailTextField.text!, Password: passwordTextField.text!)
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        signInFormErrors = validateSignInForm.CheckSignInForm(Email: email, Password: password)
         if signInFormErrors.isEmpty {
             //API CALL + api error alert
-            DDLogInfo("Successfully signed in")
-            return true
+            let logInResponseStruct = LogInService.LogInAction(Email: email, Password: password)
+            switch logInResponseStruct.code {
+            case 1:
+                DDLogInfo("Successfully signed in")
+                //Should use the logInResponseStruct.id to recuperate user information
+                return true
+            case 2:
+                return false
+            default:
+                break
+            }
         }
         return false
     }

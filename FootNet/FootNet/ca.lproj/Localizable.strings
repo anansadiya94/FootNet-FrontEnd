@@ -17,7 +17,7 @@
 
 //error sign in form alert
 "signIn_formError_alert"="Error en el formulari d'iniciar sessió.";
-"signIn_dataError_alert"="Nom d'usuari / contrasenya desconegut.";
+"signIn_dataError_alert"="Nom d'usuari/contrasenya desconegut.";
 "fix_alert"="Intenta-ho de nou.";
 
 

@@ -1,16 +1,16 @@
 //
-//  LogInJsonMocks.swift
+//  SignUpJsonMocks.swift
 //  FootNet
 //
-//  Created by Anan Sadiya on 19/04/2019.
+//  Created by Anan Sadiya on 22/04/2019.
 //  Copyright © 2019 FootNet. All rights reserved.
 //
 
 import Foundation
 
-func LogInJsonMocks(Email email:String, Password password: String) -> Data {
-    switch email {
-    case "anansadiya@gmail.com":
+func SignUpJsonMocks(SignUpRequestStruct signUpRequestStruct:SignUpRequestStruct) -> Data {
+    let isConnectedToNetwork = Reachability.isConnectedToNetwork()
+    if (isConnectedToNetwork) {
         let jsonResponseData = """
         [
             {
@@ -21,7 +21,7 @@ func LogInJsonMocks(Email email:String, Password password: String) -> Data {
         ]
         """.data(using: .utf8)!
         return jsonResponseData
-    default:
+    } else {
         let jsonResponseData = """
         [
             {

@@ -6,6 +6,8 @@
   Copyright © 2019 FootNet. All rights reserved.
 */
 
+"connectionError_alert"="No hi ha connexió a internet";
+
 //SignIn Page
 "email_placeholder"="Correu electrònic";
 "password_placeholder"="Contrasenya";

@@ -55,7 +55,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         signInFormErrors = validateSignInForm.CheckSignInForm(Email: email, Password: password)
         if signInFormErrors.isEmpty {
             //API CALL + api error alert
-            let logInResponseStruct = LogInService.LogInAction(Email: email, Password: password)
+            let logInResponseStruct = SignInService.SignInAction(Email: email, Password: password)
             switch logInResponseStruct.code {
             case 1:
                 DDLogInfo("Successfully signed in")
@@ -63,6 +63,9 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
                 return true
             case 2:
                 signInErrorAlert("signIn_dataError_alert".localize())
+                return false
+            case 3:
+                signInErrorAlert("connectionError_alert".localize())
                 return false
             default:
                 break

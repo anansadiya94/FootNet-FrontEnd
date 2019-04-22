@@ -16,9 +16,9 @@
 		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
 		9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
 		9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
-		9E22EC842269EC3E006B1BF1 /* LogInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22EC832269EC3E006B1BF1 /* LogInService.swift */; };
+		9E22EC842269EC3E006B1BF1 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22EC832269EC3E006B1BF1 /* SignInService.swift */; };
 		9E22EC862269EE1E006B1BF1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22EC852269EE1E006B1BF1 /* APIManager.swift */; };
-		9E22EC882269F3F5006B1BF1 /* LogInJsonMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22EC872269F3F5006B1BF1 /* LogInJsonMocks.swift */; };
+		9E22EC882269F3F5006B1BF1 /* SignInJsonMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22EC872269F3F5006B1BF1 /* SignInJsonMocks.swift */; };
 		9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
 		9E35D93422268440008E8361 /* CustomSignInSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */; };
 		9E35D93922268801008E8361 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35D93822268801008E8361 /* UIFontExtension.swift */; };
@@ -42,6 +42,9 @@
 		9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE84224B986A0091CECB /* SignInUITests.swift */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
+		9E8A68E8226DC8B70052A217 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68E7226DC8B70052A217 /* SignUpService.swift */; };
+		9E8A68EA226DCA0F0052A217 /* SignUpJsonMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */; };
+		9E8A68EC226DD5890052A217 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68EB226DD5890052A217 /* Reachability.swift */; };
 		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
 		9E912FB0224CBDC000BF3390 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E912FB1224CBDC300BF3390 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
@@ -129,9 +132,9 @@
 		9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfleViewController.swift; sourceTree = "<group>"; };
 		9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
 		9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
-		9E22EC832269EC3E006B1BF1 /* LogInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInService.swift; path = FootNet/Res/LocalizationSystem/LogInService.swift; sourceTree = SOURCE_ROOT; };
+		9E22EC832269EC3E006B1BF1 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInService.swift; path = FootNet/Res/LocalizationSystem/SignInService.swift; sourceTree = SOURCE_ROOT; };
 		9E22EC852269EE1E006B1BF1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = FootNet/Res/LocalizationSystem/APIManager.swift; sourceTree = SOURCE_ROOT; };
-		9E22EC872269F3F5006B1BF1 /* LogInJsonMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInJsonMocks.swift; path = FootNet/Res/LocalizationSystem/LogInJsonMocks.swift; sourceTree = SOURCE_ROOT; };
+		9E22EC872269F3F5006B1BF1 /* SignInJsonMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInJsonMocks.swift; path = FootNet/Res/LocalizationSystem/SignInJsonMocks.swift; sourceTree = SOURCE_ROOT; };
 		9E35D930222681B4008E8361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E35D93322268440008E8361 /* CustomSignInSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInSignUpButton.swift; sourceTree = "<group>"; };
 		9E35D93822268801008E8361 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
@@ -158,6 +161,9 @@
 		9E5DEE86224B986A0091CECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		9E8A68E7226DC8B70052A217 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpService.swift; path = FootNet/Res/LocalizationSystem/SignUpService.swift; sourceTree = SOURCE_ROOT; };
+		9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpJsonMocks.swift; path = FootNet/Res/LocalizationSystem/SignUpJsonMocks.swift; sourceTree = SOURCE_ROOT; };
+		9E8A68EB226DD5890052A217 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignInForm.swift; sourceTree = "<group>"; };
 		9E93570C2240E5E60036F23A /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Spinner.swift; path = FootNet/res/Spinner/Spinner.swift; sourceTree = SOURCE_ROOT; };
 		9E935717224111700036F23A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -426,6 +432,7 @@
 				9E35D937222687F0008E8361 /* Fonts */,
 				9E4E07652225967500F8ED17 /* Colors */,
 				9E4E0768222596A900F8ED17 /* Conf */,
+				9E8A68EB226DD5890052A217 /* Reachability.swift */,
 			);
 			path = Res;
 			sourceTree = "<group>";
@@ -593,7 +600,8 @@
 		9E9E598C2265D25F002816B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9E22EC832269EC3E006B1BF1 /* LogInService.swift */,
+				9E22EC832269EC3E006B1BF1 /* SignInService.swift */,
+				9E8A68E7226DC8B70052A217 /* SignUpService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -601,7 +609,8 @@
 		9E9E598E2265D2A9002816B6 /* JSONMocks */ = {
 			isa = PBXGroup;
 			children = (
-				9E22EC872269F3F5006B1BF1 /* LogInJsonMocks.swift */,
+				9E22EC872269F3F5006B1BF1 /* SignInJsonMocks.swift */,
+				9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */,
 			);
 			path = JSONMocks;
 			sourceTree = "<group>";
@@ -1063,7 +1072,7 @@
 				9E935718224111700036F23A /* HomeViewController.swift in Sources */,
 				9E5456522226B8B7002A55F2 /* CustomTextField.swift in Sources */,
 				9ECF074F225242600082FC1F /* NotificationsTableViewCell.swift in Sources */,
-				9E22EC882269F3F5006B1BF1 /* LogInJsonMocks.swift in Sources */,
+				9E22EC882269F3F5006B1BF1 /* SignInJsonMocks.swift in Sources */,
 				9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */,
 				9EF232C32237F3F9004BF61F /* CustomTextView.swift in Sources */,
 				9EF232C02237F277004BF61F /* CustomImageView.swift in Sources */,
@@ -1090,7 +1099,10 @@
 				9ECF074022521D7E0082FC1F /* OffersStatusModel.swift in Sources */,
 				9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */,
 				9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */,
+				9E8A68EC226DD5890052A217 /* Reachability.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
+				9E8A68E8226DC8B70052A217 /* SignUpService.swift in Sources */,
+				9E8A68EA226DCA0F0052A217 /* SignUpJsonMocks.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,
 				9EB24EAC2227F54C004B0C66 /* SignUpSelectProfileData.swift in Sources */,
 				9EB3A6BF222D1A35002F244E /* SignUpDetailTableViewController.swift in Sources */,
@@ -1099,7 +1111,7 @@
 				9EB3A6C1222D1B22002F244E /* SignUpDetailModel.swift in Sources */,
 				9EF232BD2237EF01004BF61F /* CustomChoosePhotoButton.swift in Sources */,
 				9EBD4FC02239883F008604EB /* CustomView.swift in Sources */,
-				9E22EC842269EC3E006B1BF1 /* LogInService.swift in Sources */,
+				9E22EC842269EC3E006B1BF1 /* SignInService.swift in Sources */,
 				9EB3A6C3222D1B80002F244E /* SignUpDetailViewCell.swift in Sources */,
 				9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */,
 				9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */,

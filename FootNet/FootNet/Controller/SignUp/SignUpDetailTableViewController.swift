@@ -120,35 +120,37 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             spinner.startSpinner()
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             self.navigationItem.rightBarButtonItem?.isEnabled = false
-            //TODO - API CALL WITH ALL USER INFO
-            let error = true
-            if !error {
-                // Create alert
-                let alert = UIAlertController(title: "ERROR", message: "", preferredStyle: .alert)
-                //add yes action
-                alert.addAction(UIAlertAction(title: "ERROR API OR INTERNET CONECTION ", style: .default, handler: nil))
-                self.present(alert, animated: true)
+            //TODO - API CALL POST + api error alert
+            let logUpResponseStruct = SignUpService.SignUpAction(UserProfileModel: userProfileModel)
+            switch logUpResponseStruct.code {
+            case 1:
+                DDLogInfo("Successfully signed up")
                 spinner.stopSpinner()
-                self.navigationItem.leftBarButtonItem?.isEnabled = true
-                self.navigationItem.rightBarButtonItem?.isEnabled = true
-            } else {
-                // To remove it, just call removeFromSuperview()
-                spinner.stopSpinner()
+                //Should use the logInResponseStruct.id to recuperate user information
                 self.navigationItem.leftBarButtonItem?.isEnabled = true
                 self.navigationItem.rightBarButtonItem?.isEnabled = true
                 let viewController = appNavigationDrawer.createAppNavigationDrawer()
                 present(viewController, animated: true, completion: nil)
+            case 2:
+                //CONNECTION ERROR
+                spinner.stopSpinner()
+                signUpErrorAlert("connectionError_alert".localize())
+            default:
+                break
             }
         } else {
-            let alertTitle = "signUp_formError_alert".localize()
-            let alertMessage = signUpFormErrors
-            let alertFixTitle = "fix_alert_signUp".localize()
-            // Create alert
-            let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-            //add fix action
-            alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
-            self.present(alert, animated: true)
-            }
+            signUpErrorAlert("signUp_formError_alert".localize())
+        }
+    }
+    
+    private func signUpErrorAlert(_ alertTitle: String) {
+        let alertMessage = signUpFormErrors
+        let alertFixTitle = "fix_alert_signUp".localize()
+        // Create alert
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        //add fix action
+        alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     // MARK: - Table view data source

@@ -21,15 +21,18 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setBackground()
         setTabBarItem()
-        setSearchBarDelegate()
+        setSearchBar()
     }
     
     private func setTabBarItem() {
         tabBarItem.title = "searchTabBar".localize()
     }
     
-    private func setSearchBarDelegate() {
+    private func setSearchBar() {
         searchBar.delegate = self as UISearchBarDelegate
+        searchBar.tintColor = UIColor.colorPrimary
+        searchBar.barTintColor = UIColor.colorSecondary
+        searchBar.keyboardAppearance = .dark
     }
 }
 
@@ -43,13 +46,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchTableViewCell
+        cell.searchedProfileLabel.textColor = UIColor.colorText
+        CustomFollowButton.setup(cell.seachedProfileStatusButton as! CustomFollowButton, true)
+        cell.searchedProfileImage.image = #imageLiteral(resourceName: "homeRightInstagramButton")
         if searching {
-            cell?.textLabel?.text = searchedCountry[indexPath.row]
+            cell.searchedProfileLabel.text = searchedCountry[indexPath.row]
         } else {
-            cell?.textLabel?.text = countryNameArr[indexPath.row]
+            cell.searchedProfileLabel.text = countryNameArr[indexPath.row]
         }
-        return cell!
+        return cell
     }
 }
 

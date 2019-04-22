@@ -24,15 +24,53 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YIZ-vH-yW8">
                                 <rect key="frame" x="0.0" y="76" width="375" height="591"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="2iE-EY-EEZ">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="100" id="yYO-K1-hcj" customClass="SearchTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2iE-EY-EEZ" id="ell-R8-hg2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yYO-K1-hcj" id="LNr-n9-I0b">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="HCO-5Y-pDQ" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="j32-n6-o3K"/>
+                                                        <constraint firstAttribute="height" constant="50" id="qcd-QU-21r"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha6-za-x3d">
+                                                    <rect key="frame" x="66" y="23" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4n-ed-dr1" customClass="CustomFollowButton" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="321" y="18" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="E4n-ed-dr1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ha6-za-x3d" secondAttribute="trailing" constant="8" id="1De-cf-WRE"/>
+                                                <constraint firstItem="HCO-5Y-pDQ" firstAttribute="top" secondItem="LNr-n9-I0b" secondAttribute="top" constant="8" id="2f9-kq-FXx"/>
+                                                <constraint firstItem="ha6-za-x3d" firstAttribute="leading" secondItem="HCO-5Y-pDQ" secondAttribute="trailing" constant="8" id="35g-yj-P2i"/>
+                                                <constraint firstItem="ha6-za-x3d" firstAttribute="centerY" secondItem="HCO-5Y-pDQ" secondAttribute="centerY" id="B0T-l4-odR"/>
+                                                <constraint firstAttribute="trailing" secondItem="E4n-ed-dr1" secondAttribute="trailing" constant="8" id="dbl-x8-0WB"/>
+                                                <constraint firstItem="E4n-ed-dr1" firstAttribute="centerY" secondItem="HCO-5Y-pDQ" secondAttribute="centerY" id="sxm-3Z-4Cd"/>
+                                                <constraint firstItem="HCO-5Y-pDQ" firstAttribute="leading" secondItem="LNr-n9-I0b" secondAttribute="leading" constant="8" id="tEG-h2-UvE"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HCO-5Y-pDQ" secondAttribute="bottom" constant="8" id="vK8-FL-2dr"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="seachedProfileStatusButton" destination="E4n-ed-dr1" id="12Q-aI-4MR"/>
+                                            <outlet property="searchedProfileImage" destination="HCO-5Y-pDQ" id="4Q7-7j-0pm"/>
+                                            <outlet property="searchedProfileLabel" destination="ha6-za-x3d" id="xpB-ej-Z6I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -66,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="defaultProfilePhoto" width="300" height="300"/>
         <image name="searchTabBar" width="24" height="24"/>
     </resources>
 </document>

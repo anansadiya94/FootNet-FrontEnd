@@ -142,7 +142,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         } else {
             let alertTitle = "signUp_formError_alert".localize()
             let alertMessage = signUpFormErrors
-            let alertFixTitle = "fix_alert".localize()
+            let alertFixTitle = "fix_alert_signUp".localize()
             // Create alert
             let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
             //add fix action

@@ -73,7 +73,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     
     private func signInErrorAlert(_ alertTitle: String) {
         let alertMessage = signInFormErrors
-        let alertFixTitle = "fix_alert".localize()
+        let alertFixTitle = "fix_alert_signIn".localize()
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
         self.present(alert, animated: true)

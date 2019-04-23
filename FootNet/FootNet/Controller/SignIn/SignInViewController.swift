@@ -11,7 +11,7 @@ import CocoaLumberjack
 
 class SignInViewController: BaseViewController, UITextFieldDelegate {
     //IBOutlets
-    @IBOutlet weak var emailTextField: CustomTextField!
+    @IBOutlet weak private var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var forgotPasswordButton: CustomSignInSignUpButton!
     @IBOutlet weak var signInButton: CustomSignInSignUpButton!
@@ -23,6 +23,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var catalanButton: CustomLanguagesButton!
 
     var validateSignInForm = ValidateSignInForm()
+    var signInService = SignInService()
     var signInFormErrors: String = ""
     let appNavigationDrawer = AppNavigationDrawer()
     var spinner = Spinner()
@@ -52,11 +53,13 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     private func validateSignIn() -> Bool {
         let email = emailTextField.text!
         let password = passwordTextField.text!
+        //TODO: REFACTOR
         signInFormErrors = validateSignInForm.CheckSignInForm(Email: email, Password: password)
         if signInFormErrors.isEmpty {
             //API CALL + api error alert
-            let logInResponseStruct = SignInService.SignInAction(Email: email, Password: password)
-            switch logInResponseStruct.code {
+            //SWINJECT
+            let signInResponse = signInService.signInAction(email: email, password: password)
+            switch signInResponse.code {
             case 1:
                 DDLogInfo("Successfully signed in")
                 //Should use the logInResponseStruct.id to recuperate user information
@@ -75,11 +78,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     }
     
     private func signInErrorAlert(_ alertTitle: String) {
-        let alertMessage = signInFormErrors
-        let alertFixTitle = "fix_alert_signIn".localize()
-        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
-        self.present(alert, animated: true)
+        showErrorMessageWithoutActionHandler(title: "fix_alert_signIn".localize(), message: signInFormErrors)
     }
     
     //enable or disable language buttons
@@ -172,4 +171,11 @@ extension UIViewController {
     }
 }
 
-
+extension UIViewController {
+    func showErrorMessageWithoutActionHandler(title : String, message : String)  {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: title, style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+}

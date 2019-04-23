@@ -9,10 +9,10 @@
 import Foundation
 
 class SignInService {
-    class func SignInAction(Email email: String, Password password: String) -> SignInResponseStruct {
-        let signInRequestStruct = SignInRequestStruct(email: email, password: password)
-        let encodedSignInRequest = try! JSONEncoder().encode(signInRequestStruct) 
-        let signInResponseStruct = APIManager.SignInRequest(encodedSignInRequest)
-        return signInResponseStruct
+    let apiManager = APIManager()
+    func signInAction(email: String, password: String) -> SignInResponse {
+        let signInRequest = SignInRequest(email: email, password: password)
+        let signInResponse = apiManager.signInRequest(signInRequest)
+        return signInResponse
     }
 }

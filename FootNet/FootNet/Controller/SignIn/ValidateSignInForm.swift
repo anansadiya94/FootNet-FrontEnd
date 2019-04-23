@@ -10,6 +10,7 @@ import Foundation
 
 class ValidateSignInForm {
     var signInFormErrors: String  = ""
+    let mailRegexp = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}${5,45}"
     
     func CheckSignInForm (Email email: String, Password password: String) -> String {
         signInFormErrors = ""
@@ -41,4 +42,9 @@ class ValidateSignInForm {
         }
         return "invalidPassword_error".localize()
     }
+    
+    
+//    func isEmailValid(email : String) -> Bool {
+//        return NSPredicate(format:"SELF MATCHES %@", mailRegexp).evaluate(with: email)
+//    }
 }

@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct SignInRequestStruct: Codable {
+struct SignInRequest: Codable {
     let email, password: String
 }
 
-struct SignInResponseStruct: Codable {
+struct SignInResponse: Codable {
     let id, code: Int
     let status: String
 }
@@ -44,16 +44,14 @@ struct SignUpResponseStruct: Codable {
 }
 
 class APIManager {
-    class func SignInRequest(_ jsonRequestData: Data) -> SignInResponseStruct {
-        let decodedSignInRequest = try! JSONDecoder().decode(SignInRequestStruct.self, from: jsonRequestData)
-        let jsonResponseData = SignInJsonMocks(Email: decodedSignInRequest.email, Password: decodedSignInRequest.password)
-        let decodedSignInResponse = try! JSONDecoder().decode([SignInResponseStruct].self, from: jsonResponseData)
+    func signInRequest(_ signInRequestStruct: SignInRequest) -> SignInResponse {
+        let jsonResponseData = SignInJsonMocks(Email: signInRequestStruct.email, Password: signInRequestStruct.password)
+        let decodedSignInResponse = try! JSONDecoder().decode([SignInResponse].self, from: jsonResponseData)
         return decodedSignInResponse.first!
     }
     
-    class func SignUpRequest(_ jsonRequestData: Data) -> SignUpResponseStruct {
-        let decodedSignUpRequest = try! JSONDecoder().decode(SignUpRequestStruct.self, from: jsonRequestData)
-        let jsonResponseData = SignUpJsonMocks(SignUpRequestStruct: decodedSignUpRequest)
+    func signUpRequest(_ signUpRequestStruct: SignUpRequestStruct) -> SignUpResponseStruct {
+        let jsonResponseData = SignUpJsonMocks(SignUpRequestStruct: signUpRequestStruct)
         let decodedSignUpResponse = try! JSONDecoder().decode([SignUpResponseStruct].self, from: jsonResponseData)
         return decodedSignUpResponse.first!
     }

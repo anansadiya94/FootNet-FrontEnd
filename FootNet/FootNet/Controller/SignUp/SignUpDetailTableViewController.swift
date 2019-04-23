@@ -36,12 +36,13 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     @IBOutlet var heightPickerView : UIPickerView!
     
     let imagePicker = UIImagePickerController()
-    var chosenImage: UIImage?
-    var activityIndicator = UIActivityIndicatorView()
-    var validateSignUpForm = ValidateSignUpForm()
+    let signUpService = SignUpService()
     let appNavigationDrawer = AppNavigationDrawer()
     var spinner = Spinner()
     var signUpFormErrors: String = ""
+    var chosenImage: UIImage?
+    var activityIndicator = UIActivityIndicatorView()
+    var validateSignUpForm = ValidateSignUpForm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,7 +122,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             self.navigationItem.rightBarButtonItem?.isEnabled = false
             //TODO - API CALL POST + api error alert
-            let logUpResponseStruct = SignUpService.SignUpAction(UserProfileModel: userProfileModel)
+            let logUpResponseStruct = signUpService.signUpAction(userProfileModel: userProfileModel)
             switch logUpResponseStruct.code {
             case 1:
                 DDLogInfo("Successfully signed up")

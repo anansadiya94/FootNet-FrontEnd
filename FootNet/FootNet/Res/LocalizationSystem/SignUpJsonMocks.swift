@@ -8,7 +8,7 @@
 
 import Foundation
 
-func SignUpJsonMocks(SignUpRequestStruct signUpRequestStruct:SignUpRequestStruct) -> Data {
+func SignUpJsonMocks(signUpRequest: SignUpRequest) -> Data {
     let isConnectedToNetwork = Reachability.isConnectedToNetwork()
     if (isConnectedToNetwork) {
         let jsonResponseData = """

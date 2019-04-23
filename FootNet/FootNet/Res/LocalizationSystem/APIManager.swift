@@ -17,7 +17,7 @@ struct SignInResponse: Codable {
     let status: String
 }
 
-struct SignUpRequestStruct: Codable {
+struct SignUpRequest: Codable {
     let userId: Int
     let name: String
     let surname: String
@@ -38,21 +38,21 @@ struct SignUpRequestStruct: Codable {
     let height: String
 }
 
-struct SignUpResponseStruct: Codable {
+struct SignUpResponse: Codable {
     let id, code: Int
     let status: String
 }
 
 class APIManager {
-    func signInRequest(_ signInRequestStruct: SignInRequest) -> SignInResponse {
-        let jsonResponseData = SignInJsonMocks(Email: signInRequestStruct.email, Password: signInRequestStruct.password)
+    func signInRequest(_ signInRequest: SignInRequest) -> SignInResponse {
+        let jsonResponseData = SignInJsonMocks(Email: signInRequest.email, Password: signInRequest.password)
         let decodedSignInResponse = try! JSONDecoder().decode([SignInResponse].self, from: jsonResponseData)
         return decodedSignInResponse.first!
     }
     
-    func signUpRequest(_ signUpRequestStruct: SignUpRequestStruct) -> SignUpResponseStruct {
-        let jsonResponseData = SignUpJsonMocks(SignUpRequestStruct: signUpRequestStruct)
-        let decodedSignUpResponse = try! JSONDecoder().decode([SignUpResponseStruct].self, from: jsonResponseData)
+    func signUpRequest(_ signUpRequest: SignUpRequest) -> SignUpResponse {
+        let jsonResponseData = SignUpJsonMocks(signUpRequest: signUpRequest)
+        let decodedSignUpResponse = try! JSONDecoder().decode([SignUpResponse].self, from: jsonResponseData)
         return decodedSignUpResponse.first!
     }
 }

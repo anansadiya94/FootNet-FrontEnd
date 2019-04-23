@@ -122,8 +122,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             self.navigationItem.rightBarButtonItem?.isEnabled = false
             //TODO - API CALL POST + api error alert
-            let logUpResponseStruct = signUpService.signUpAction(userProfileModel: userProfileModel)
-            switch logUpResponseStruct.code {
+            let signUpResponse = signUpService.signUpAction(userProfileModel: userProfileModel)
+            switch signUpResponse.code {
             case 1:
                 DDLogInfo("Successfully signed up")
                 spinner.stopSpinner()

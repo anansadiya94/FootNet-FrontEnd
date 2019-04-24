@@ -20,7 +20,7 @@
 //error sign in form alert
 "signIn_formError_alert"="Error en el formulari d'iniciar sessió.";
 "signIn_dataError_alert"="Nom d'usuari/contrasenya desconegut.";
-"fix_alert_signIn"="Intenta-ho de nou.";
+"tryAgian_alert"="Intenta-ho de nou.";
 
 
 //Sign Up Select Profile Type
@@ -71,7 +71,7 @@
 
 //error sign up form alert
 "signUp_formError_alert"="Error en el formulari de registre!";
-"fix_alert_signUp"="Arregla-ho";
+"fixIt_alert"="Arregla-ho";
 
 //sign up form errors
 "emptyName_error"="Nom obligatori!\n";

@@ -46,7 +46,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         } else {
             spinner.stopSpinner()
             //alert with the errors
-            signInErrorAlert("signIn_formError_alert".localize())
+            signInErrorAlert("signIn_formError_alert".localize(), signInFormErrors)
         }
     }
     
@@ -65,10 +65,10 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
                 //Should use the logInResponseStruct.id to recuperate user information
                 return true
             case 2:
-                signInErrorAlert("signIn_dataError_alert".localize())
+                signInErrorAlert("signIn_dataError_alert".localize(), "")
                 return false
             case 3:
-                signInErrorAlert("connectionError_alert".localize())
+                signInErrorAlert("connectionError_alert".localize(), "")
                 return false
             default:
                 break
@@ -77,8 +77,8 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         return false
     }
     
-    private func signInErrorAlert(_ alertTitle: String) {
-        showErrorMessageWithoutActionHandler(title: "fix_alert_signIn".localize(), message: signInFormErrors)
+    private func signInErrorAlert(_ alertTitle: String, _ alertMessage: String) {
+        showErrorMessageWithoutActionHandler(alertTitle: alertTitle, alertMessage: alertMessage, actionTitle: "tryAgian_alert".localize())
     }
     
     //enable or disable language buttons
@@ -168,14 +168,5 @@ extension UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
         tap.cancelsTouchesInView = false
         return tap
-    }
-}
-
-extension UIViewController {
-    func showErrorMessageWithoutActionHandler(title : String, message : String)  {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: title, style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true)
     }
 }

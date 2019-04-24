@@ -135,23 +135,17 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             case 2:
                 //CONNECTION ERROR
                 spinner.stopSpinner()
-                signUpErrorAlert("connectionError_alert".localize())
+                signUpErrorAlert("connectionError_alert".localize(), "", "tryAgian_alert".localize())
             default:
                 break
             }
         } else {
-            signUpErrorAlert("signUp_formError_alert".localize())
+            signUpErrorAlert("signUp_formError_alert".localize(), signUpFormErrors, "fixIt_alert".localize())
         }
     }
     
-    private func signUpErrorAlert(_ alertTitle: String) {
-        let alertMessage = signUpFormErrors
-        let alertFixTitle = "fix_alert_signUp".localize()
-        // Create alert
-        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-        //add fix action
-        alert.addAction(UIAlertAction(title: alertFixTitle, style: .default, handler: nil))
-        self.present(alert, animated: true)
+    private func signUpErrorAlert(_ alertTitle: String, _ alertMessage: String, _ actionTitle: String) {
+        showErrorMessageWithoutActionHandler(alertTitle: alertTitle, alertMessage: alertMessage, actionTitle: actionTitle)
     }
     
     // MARK: - Table view data source

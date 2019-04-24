@@ -20,7 +20,7 @@
 //error sign in form alert
 "signIn_formError_alert"="Sign In Form Error.";
 "signIn_dataError_alert"="Unknown username/password.";
-"fix_alert_signIn"="Please try again.";
+"tryAgian_alert"="Please try again.";
 
 
 //Sign Up Select Profile Type
@@ -70,7 +70,7 @@
 
 //error sign up form alert
 "signUp_formError_alert"="Sign Up Form Error!";
-"fix_alert_signUp"="Fix It";
+"fixIt_alert"="Fix It";
 
 //sign up form errors
 "emptyName_error"="Name required!\n";

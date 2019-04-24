@@ -20,7 +20,7 @@
 //error sign in form alert
 "signIn_formError_alert"="Error en el formulario de iniciar sesión.";
 "signIn_dataError_alert"="Nombre de usuario/contraseña desconocido.";
-"fix_alert_signIn"="Inténtalo de nuevo.";
+"tryAgian_alert"="Inténtalo de nuevo.";
 
 //SignUp Select Profile Type
 "signUp_navBarTitle"="Registrarse";
@@ -69,7 +69,7 @@
 
 //error sign up form alert
 "signUp_formError_alert"="Error en el formulario de registro!";
-"fix_alert_signUp"="Arréglalo";
+"fixIt_alert"="Arréglalo";
 
 //sign up form errors
 "emptyName_error"="Nombre obligatorio!\n";

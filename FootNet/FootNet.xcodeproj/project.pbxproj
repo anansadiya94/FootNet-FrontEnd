@@ -83,6 +83,7 @@
 		9ECF074922523FB70082FC1F /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074822523FB70082FC1F /* NotificationsModel.swift */; };
 		9ECF074C22523FCE0082FC1F /* NotificationsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074B22523FCE0082FC1F /* NotificationsData.swift */; };
 		9ECF074F225242600082FC1F /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074E225242600082FC1F /* NotificationsTableViewCell.swift */; };
+		9EE75DE4227091D2003897BF /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE75DE3227091D2003897BF /* AlertExtension.swift */; };
 		9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07904224CCBF20034FA1C /* SignUpUITests.swift */; };
 		9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07906224CE96C0034FA1C /* SignUpTests.swift */; };
 		9EF232BD2237EF01004BF61F /* CustomChoosePhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF232BC2237EF01004BF61F /* CustomChoosePhotoButton.swift */; };
@@ -201,6 +202,7 @@
 		9ECF074822523FB70082FC1F /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
 		9ECF074B22523FCE0082FC1F /* NotificationsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsData.swift; sourceTree = "<group>"; };
 		9ECF074E225242600082FC1F /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
+		9EE75DE3227091D2003897BF /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		9EF07904224CCBF20034FA1C /* SignUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
 		9EF07906224CE96C0034FA1C /* SignUpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		9EF232BC2237EF01004BF61F /* CustomChoosePhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomChoosePhotoButton.swift; path = FootNet/res/Buttons/CustomChoosePhotoButton.swift; sourceTree = SOURCE_ROOT; };
@@ -419,6 +421,7 @@
 		9E4E07642225966E00F8ED17 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				9EE75DE2227091AA003897BF /* Alerts */,
 				9E49C8DA2268E36C003AFE62 /* LocalizationSystem */,
 				9E93570B2240E5C50036F23A /* Spinner */,
 				9E5420D9223FA45F0098AC44 /* Storyborads */,
@@ -741,6 +744,14 @@
 				9ECF074E225242600082FC1F /* NotificationsTableViewCell.swift */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		9EE75DE2227091AA003897BF /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				9EE75DE3227091D2003897BF /* AlertExtension.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		9EF232BE2237F267004BF61F /* ImageViews */ = {
@@ -1110,6 +1121,7 @@
 				9EB24EA92227F4B5004B0C66 /* CustomLabel.swift in Sources */,
 				9EB3A6C1222D1B22002F244E /* SignUpDetailModel.swift in Sources */,
 				9EF232BD2237EF01004BF61F /* CustomChoosePhotoButton.swift in Sources */,
+				9EE75DE4227091D2003897BF /* AlertExtension.swift in Sources */,
 				9EBD4FC02239883F008604EB /* CustomView.swift in Sources */,
 				9E22EC842269EC3E006B1BF1 /* SignInService.swift in Sources */,
 				9EB3A6C3222D1B80002F244E /* SignUpDetailViewCell.swift in Sources */,

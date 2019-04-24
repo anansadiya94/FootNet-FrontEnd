@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sS8-Ug-Zfr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sS8-Ug-Zfr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,10 +17,86 @@
                     <view key="view" contentMode="scaleToFill" id="Vkk-nR-fcb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZGD-Uk-dIK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YIZ-vH-yW8">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="100" id="yYO-K1-hcj" customClass="SearchTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yYO-K1-hcj" id="LNr-n9-I0b">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="HCO-5Y-pDQ" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="j32-n6-o3K"/>
+                                                        <constraint firstAttribute="height" constant="50" id="qcd-QU-21r"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha6-za-x3d">
+                                                    <rect key="frame" x="66" y="23" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4n-ed-dr1" customClass="CustomFollowButton" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="321" y="18" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="E4n-ed-dr1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ha6-za-x3d" secondAttribute="trailing" constant="8" id="1De-cf-WRE"/>
+                                                <constraint firstItem="HCO-5Y-pDQ" firstAttribute="top" secondItem="LNr-n9-I0b" secondAttribute="top" constant="8" id="2f9-kq-FXx"/>
+                                                <constraint firstItem="ha6-za-x3d" firstAttribute="leading" secondItem="HCO-5Y-pDQ" secondAttribute="trailing" constant="8" id="35g-yj-P2i"/>
+                                                <constraint firstItem="ha6-za-x3d" firstAttribute="centerY" secondItem="HCO-5Y-pDQ" secondAttribute="centerY" id="B0T-l4-odR"/>
+                                                <constraint firstAttribute="trailing" secondItem="E4n-ed-dr1" secondAttribute="trailing" constant="8" id="dbl-x8-0WB"/>
+                                                <constraint firstItem="E4n-ed-dr1" firstAttribute="centerY" secondItem="HCO-5Y-pDQ" secondAttribute="centerY" id="sxm-3Z-4Cd"/>
+                                                <constraint firstItem="HCO-5Y-pDQ" firstAttribute="leading" secondItem="LNr-n9-I0b" secondAttribute="leading" constant="8" id="tEG-h2-UvE"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HCO-5Y-pDQ" secondAttribute="bottom" constant="8" id="vK8-FL-2dr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="seachedProfileStatusButton" destination="E4n-ed-dr1" id="12Q-aI-4MR"/>
+                                            <outlet property="searchedProfileImage" destination="HCO-5Y-pDQ" id="4Q7-7j-0pm"/>
+                                            <outlet property="searchedProfileLabel" destination="ha6-za-x3d" id="xpB-ej-Z6I"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sS8-Ug-Zfr" id="L2w-LE-U86"/>
+                                    <outlet property="delegate" destination="sS8-Ug-Zfr" id="OlD-vO-XBe"/>
+                                    <outlet property="prefetchDataSource" destination="sS8-Ug-Zfr" id="nUq-EN-H4u"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YIZ-vH-yW8" firstAttribute="top" secondItem="ZGD-Uk-dIK" secondAttribute="bottom" id="93L-PR-RCd"/>
+                            <constraint firstItem="Oit-dB-F17" firstAttribute="trailing" secondItem="YIZ-vH-yW8" secondAttribute="trailing" id="HzR-bG-oez"/>
+                            <constraint firstItem="ZGD-Uk-dIK" firstAttribute="top" secondItem="Oit-dB-F17" secondAttribute="top" id="JTz-fi-SY7"/>
+                            <constraint firstItem="ZGD-Uk-dIK" firstAttribute="leading" secondItem="Oit-dB-F17" secondAttribute="leading" id="OaR-O2-SeW"/>
+                            <constraint firstItem="Oit-dB-F17" firstAttribute="bottom" secondItem="YIZ-vH-yW8" secondAttribute="bottom" id="QVP-LD-iqi"/>
+                            <constraint firstItem="YIZ-vH-yW8" firstAttribute="leading" secondItem="Oit-dB-F17" secondAttribute="leading" id="eB3-VN-ayS"/>
+                            <constraint firstItem="ZGD-Uk-dIK" firstAttribute="trailing" secondItem="Oit-dB-F17" secondAttribute="trailing" id="l8Y-gA-W3z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Oit-dB-F17"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="searchTabBar" id="Mid-EG-1eh"/>
+                    <connections>
+                        <outlet property="resultsTableView" destination="YIZ-vH-yW8" id="xmR-t0-JZj"/>
+                        <outlet property="searchBar" destination="ZGD-Uk-dIK" id="dVS-Bd-mIW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg7-bv-0By" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -28,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="defaultProfilePhoto" width="300" height="300"/>
         <image name="searchTabBar" width="24" height="24"/>
     </resources>
 </document>

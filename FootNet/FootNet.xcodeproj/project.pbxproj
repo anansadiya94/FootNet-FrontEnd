@@ -42,6 +42,8 @@
 		9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE84224B986A0091CECB /* SignInUITests.swift */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
+		9E7CBACB226E151300F84197 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */; };
+		9E7CBACD226E1D2100F84197 /* CustomFollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACC226E1D2100F84197 /* CustomFollowButton.swift */; };
 		9E8A68E8226DC8B70052A217 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68E7226DC8B70052A217 /* SignUpService.swift */; };
 		9E8A68EA226DCA0F0052A217 /* SignUpJsonMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */; };
 		9E8A68EC226DD5890052A217 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68EB226DD5890052A217 /* Reachability.swift */; };
@@ -162,6 +164,8 @@
 		9E5DEE86224B986A0091CECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		9E7CBACC226E1D2100F84197 /* CustomFollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFollowButton.swift; sourceTree = "<group>"; };
 		9E8A68E7226DC8B70052A217 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpService.swift; path = FootNet/Res/LocalizationSystem/SignUpService.swift; sourceTree = SOURCE_ROOT; };
 		9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpJsonMocks.swift; path = FootNet/Res/LocalizationSystem/SignUpJsonMocks.swift; sourceTree = SOURCE_ROOT; };
 		9E8A68EB226DD5890052A217 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 				9EF232BC2237EF01004BF61F /* CustomChoosePhotoButton.swift */,
 				9E5420C8223F8F930098AC44 /* CustomLanuagesButton.swift */,
 				9EA25A9C2244C6DB00027A31 /* CustomLeftHomeButton.swift */,
+				9E7CBACC226E1D2100F84197 /* CustomFollowButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 		9E4E0760222593E300F8ED17 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9E7CBAC9226E14A700F84197 /* Search */,
 				9ECF074D2252424C0082FC1F /* Notifications */,
 				9ECF0744225224550082FC1F /* OffersStatus */,
 				9EA25A992244C3AA00027A31 /* LeftHome */,
@@ -509,6 +515,14 @@
 				9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */,
 			);
 			path = FootNetUITests;
+			sourceTree = "<group>";
+		};
+		9E7CBAC9226E14A700F84197 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		9E8D8D1F223AB87100A8A880 /* Base */ = {
@@ -1115,9 +1129,11 @@
 				9E8A68E8226DC8B70052A217 /* SignUpService.swift in Sources */,
 				9E8A68EA226DCA0F0052A217 /* SignUpJsonMocks.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,
+				9E7CBACD226E1D2100F84197 /* CustomFollowButton.swift in Sources */,
 				9EB24EAC2227F54C004B0C66 /* SignUpSelectProfileData.swift in Sources */,
 				9EB3A6BF222D1A35002F244E /* SignUpDetailTableViewController.swift in Sources */,
 				9E9357202241119F0036F23A /* NotificationsViewController.swift in Sources */,
+				9E7CBACB226E151300F84197 /* SearchTableViewCell.swift in Sources */,
 				9EB24EA92227F4B5004B0C66 /* CustomLabel.swift in Sources */,
 				9EB3A6C1222D1B22002F244E /* SignUpDetailModel.swift in Sources */,
 				9EF232BD2237EF01004BF61F /* CustomChoosePhotoButton.swift in Sources */,

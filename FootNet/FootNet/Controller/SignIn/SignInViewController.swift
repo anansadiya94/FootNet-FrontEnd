@@ -26,27 +26,27 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     var signInService = SignInService()
     var signInFormErrors: String = ""
     let appNavigationDrawer = AppNavigationDrawer()
-    var spinner = Spinner()
+    
+    var lottieAnimation = LottieAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DDLogInfo("Load SignIn View")
         configureOutlets()
         configureDismissKeyboard()
-        spinner.createSpinner(view: view)
+        lottieAnimation.createLottieAnimation(view: view)
     }
     
     @IBAction func signIn(_ sender: Any) {
-        //start spinner
-        spinner.startSpinner()
-        if validateSignIn() {
-            spinner.stopSpinner()
-            let viewController = appNavigationDrawer.createAppNavigationDrawer()
-            present(viewController, animated: true, completion: nil)
-        } else {
-            spinner.stopSpinner()
-            //alert with the errors
-            signInErrorAlert("signIn_formError_alert".localize(), signInFormErrors)
+        lottieAnimation.startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            self.lottieAnimation.stopLottieAnimation()
+            if self.validateSignIn() {
+                let viewController = self.appNavigationDrawer.createAppNavigationDrawer()
+                self.present(viewController, animated: true, completion: nil)
+            } else {
+                self.signInErrorAlert("signIn_formError_alert".localize(), self.signInFormErrors)
+            }
         }
     }
     

@@ -44,6 +44,10 @@
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E7CBACB226E151300F84197 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */; };
 		9E7CBACD226E1D2100F84197 /* CustomFollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACC226E1D2100F84197 /* CustomFollowButton.swift */; };
+		9E82E786227200C100267820 /* LottieLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E82E785227200C100267820 /* LottieLaunchScreen.storyboard */; };
+		9E82E7892272011200267820 /* LottieLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E7882272011200267820 /* LottieLaunchScreenViewController.swift */; };
+		9E82E78B2272014600267820 /* soccer.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E82E78A2272014600267820 /* soccer.json */; };
+		9E82E78E2272055E00267820 /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E78D2272055E00267820 /* LottieAnimation.swift */; };
 		9E8A68E8226DC8B70052A217 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68E7226DC8B70052A217 /* SignUpService.swift */; };
 		9E8A68EA226DCA0F0052A217 /* SignUpJsonMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */; };
 		9E8A68EC226DD5890052A217 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A68EB226DD5890052A217 /* Reachability.swift */; };
@@ -166,6 +170,10 @@
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		9E7CBACC226E1D2100F84197 /* CustomFollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFollowButton.swift; sourceTree = "<group>"; };
+		9E82E785227200C100267820 /* LottieLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LottieLaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E82E7882272011200267820 /* LottieLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieLaunchScreenViewController.swift; sourceTree = "<group>"; };
+		9E82E78A2272014600267820 /* soccer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = soccer.json; sourceTree = "<group>"; };
+		9E82E78D2272055E00267820 /* LottieAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimation.swift; sourceTree = "<group>"; };
 		9E8A68E7226DC8B70052A217 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpService.swift; path = FootNet/Res/LocalizationSystem/SignUpService.swift; sourceTree = SOURCE_ROOT; };
 		9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpJsonMocks.swift; path = FootNet/Res/LocalizationSystem/SignUpJsonMocks.swift; sourceTree = SOURCE_ROOT; };
 		9E8A68EB226DD5890052A217 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -372,6 +380,7 @@
 		9E4E075F222593DD00F8ED17 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9E82E787227200FB00267820 /* LottieLaunchScreen */,
 				9E5420CA223F9F500098AC44 /* NavigationDrawer */,
 				9E93571022410B830036F23A /* RightHome */,
 				9E93570F22410B7B0036F23A /* LeftHome */,
@@ -407,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				9E35D930222681B4008E8361 /* LaunchScreen.storyboard */,
+				9E82E785227200C100267820 /* LottieLaunchScreen.storyboard */,
 				9E79C38822391F9700A9C292 /* SignIn.storyboard */,
 				9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */,
 				9EB24EA02227F27D004B0C66 /* SignUp.storyboard */,
@@ -427,6 +437,7 @@
 		9E4E07642225966E00F8ED17 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				9E82E78C2272055100267820 /* LottieAnimation */,
 				9EE75DE2227091AA003897BF /* Alerts */,
 				9E49C8DA2268E36C003AFE62 /* LocalizationSystem */,
 				9E93570B2240E5C50036F23A /* Spinner */,
@@ -523,6 +534,23 @@
 				9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		9E82E787227200FB00267820 /* LottieLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9E82E78A2272014600267820 /* soccer.json */,
+				9E82E7882272011200267820 /* LottieLaunchScreenViewController.swift */,
+			);
+			path = LottieLaunchScreen;
+			sourceTree = "<group>";
+		};
+		9E82E78C2272055100267820 /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				9E82E78D2272055E00267820 /* LottieAnimation.swift */,
+			);
+			path = LottieAnimation;
 			sourceTree = "<group>";
 		};
 		9E8D8D1F223AB87100A8A880 /* Base */ = {
@@ -924,11 +952,13 @@
 				9E935722224116540036F23A /* Home.storyboard in Resources */,
 				9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */,
 				9EFEA4B622424536002C9EB0 /* MainTabBar.storyboard in Resources */,
+				9E82E78B2272014600267820 /* soccer.json in Resources */,
 				9EFEA4B8224247B4002C9EB0 /* OffersStatus.storyboard in Resources */,
 				9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */,
 				9EC925562226E47B00B0E694 /* Localizable.strings in Resources */,
 				9E4E076A222596C400F8ED17 /* environments.json in Resources */,
 				9EB24E9E2227F27D004B0C66 /* SignUp.storyboard in Resources */,
+				9E82E786227200C100267820 /* LottieLaunchScreen.storyboard in Resources */,
 				9E4E0753222593B300F8ED17 /* Assets.xcassets in Resources */,
 				9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */,
 				9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */,
@@ -1135,11 +1165,13 @@
 				9E9357202241119F0036F23A /* NotificationsViewController.swift in Sources */,
 				9E7CBACB226E151300F84197 /* SearchTableViewCell.swift in Sources */,
 				9EB24EA92227F4B5004B0C66 /* CustomLabel.swift in Sources */,
+				9E82E78E2272055E00267820 /* LottieAnimation.swift in Sources */,
 				9EB3A6C1222D1B22002F244E /* SignUpDetailModel.swift in Sources */,
 				9EF232BD2237EF01004BF61F /* CustomChoosePhotoButton.swift in Sources */,
 				9EE75DE4227091D2003897BF /* AlertExtension.swift in Sources */,
 				9EBD4FC02239883F008604EB /* CustomView.swift in Sources */,
 				9E22EC842269EC3E006B1BF1 /* SignInService.swift in Sources */,
+				9E82E7892272011200267820 /* LottieLaunchScreenViewController.swift in Sources */,
 				9EB3A6C3222D1B80002F244E /* SignUpDetailViewCell.swift in Sources */,
 				9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */,
 				9E4E07672225968700F8ED17 /* UIColorExtension.swift in Sources */,

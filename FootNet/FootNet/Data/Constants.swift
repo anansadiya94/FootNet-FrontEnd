@@ -30,5 +30,5 @@ struct Constants{
     static let weightLocalized = (40...140).map { String($0) + " kg" }
     static let heightLocalized = (150...240).map { String($0) + " cm" }
     
-    static let animationDelay = 1
+    static let animationDelay = 1.0
 }

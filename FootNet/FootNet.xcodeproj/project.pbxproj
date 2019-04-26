@@ -15,6 +15,7 @@
 		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
 		9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
 		9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
+		9E2DE5872272E0450093470F /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DE5862272E0450093470F /* LocalizationSystem.swift */; };
 		9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
 		9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074B222593B200F8ED17 /* AppDelegate.swift */; };
 		9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074D222593B200F8ED17 /* SignInViewController.swift */; };
@@ -55,7 +56,6 @@
 		9E82E83522720F2400267820 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E80C22720F2400267820 /* StoryboardExtension.swift */; };
 		9E82E83622720F2400267820 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E80E22720F2400267820 /* UIColorExtension.swift */; };
 		9E82E83722720F2400267820 /* SignUpJsonMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81022720F2400267820 /* SignUpJsonMocks.swift */; };
-		9E82E83822720F2400267820 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81122720F2400267820 /* LocalizationSystem.swift */; };
 		9E82E83922720F2400267820 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81222720F2400267820 /* APIManager.swift */; };
 		9E82E83A22720F2400267820 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81322720F2400267820 /* SignUpService.swift */; };
 		9E82E83B22720F2400267820 /* SignInJsonMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81422720F2400267820 /* SignInJsonMocks.swift */; };
@@ -143,9 +143,7 @@
 		9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfleViewController.swift; sourceTree = "<group>"; };
 		9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
 		9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
-		9E22EC832269EC3E006B1BF1 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInService.swift; path = FootNet/Res/LocalizationSystem/SignInService.swift; sourceTree = SOURCE_ROOT; };
-		9E22EC852269EE1E006B1BF1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = FootNet/Res/LocalizationSystem/APIManager.swift; sourceTree = SOURCE_ROOT; };
-		9E22EC872269F3F5006B1BF1 /* SignInJsonMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInJsonMocks.swift; path = FootNet/Res/LocalizationSystem/SignInJsonMocks.swift; sourceTree = SOURCE_ROOT; };
+		9E2DE5862272E0450093470F /* LocalizationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
 		9E35D930222681B4008E8361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E4E0748222593B200F8ED17 /* FootNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4E074B222593B200F8ED17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 		9E82E80C22720F2400267820 /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		9E82E80E22720F2400267820 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9E82E81022720F2400267820 /* SignUpJsonMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpJsonMocks.swift; sourceTree = "<group>"; };
-		9E82E81122720F2400267820 /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
 		9E82E81222720F2400267820 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9E82E81322720F2400267820 /* SignUpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		9E82E81422720F2400267820 /* SignInJsonMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInJsonMocks.swift; sourceTree = "<group>"; };
@@ -200,8 +197,6 @@
 		9E82E81D22720F2400267820 /* environments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = environments.json; sourceTree = "<group>"; };
 		9E82E81F22720F2400267820 /* CustomTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		9E82E82122720F2400267820 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
-		9E8A68E7226DC8B70052A217 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpService.swift; path = FootNet/Res/LocalizationSystem/SignUpService.swift; sourceTree = SOURCE_ROOT; };
-		9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpJsonMocks.swift; path = FootNet/Res/LocalizationSystem/SignUpJsonMocks.swift; sourceTree = SOURCE_ROOT; };
 		9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignInForm.swift; sourceTree = "<group>"; };
 		9E935717224111700036F23A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E9357192241117C0036F23A /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
@@ -585,12 +580,7 @@
 		9E82E80F22720F2400267820 /* LocalizationSystem */ = {
 			isa = PBXGroup;
 			children = (
-				9E82E81022720F2400267820 /* SignUpJsonMocks.swift */,
-				9E82E81122720F2400267820 /* LocalizationSystem.swift */,
-				9E82E81222720F2400267820 /* APIManager.swift */,
-				9E82E81322720F2400267820 /* SignUpService.swift */,
-				9E82E81422720F2400267820 /* SignInJsonMocks.swift */,
-				9E82E81522720F2400267820 /* SignInService.swift */,
+				9E2DE5862272E0450093470F /* LocalizationSystem.swift */,
 			);
 			path = LocalizationSystem;
 			sourceTree = "<group>";
@@ -727,8 +717,8 @@
 		9E9E598C2265D25F002816B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9E22EC832269EC3E006B1BF1 /* SignInService.swift */,
-				9E8A68E7226DC8B70052A217 /* SignUpService.swift */,
+				9E82E81322720F2400267820 /* SignUpService.swift */,
+				9E82E81522720F2400267820 /* SignInService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -736,8 +726,8 @@
 		9E9E598E2265D2A9002816B6 /* JSONMocks */ = {
 			isa = PBXGroup;
 			children = (
-				9E22EC872269F3F5006B1BF1 /* SignInJsonMocks.swift */,
-				9E8A68E9226DCA0F0052A217 /* SignUpJsonMocks.swift */,
+				9E82E81022720F2400267820 /* SignUpJsonMocks.swift */,
+				9E82E81422720F2400267820 /* SignInJsonMocks.swift */,
 			);
 			path = JSONMocks;
 			sourceTree = "<group>";
@@ -745,7 +735,7 @@
 		9E9E598F2265D2F6002816B6 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				9E22EC852269EE1E006B1BF1 /* APIManager.swift */,
+				9E82E81222720F2400267820 /* APIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1170,8 +1160,8 @@
 				9EF232C52238074B004BF61F /* ValidateSignUpForm.swift in Sources */,
 				9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */,
 				9E935718224111700036F23A /* HomeViewController.swift in Sources */,
+				9E2DE5872272E0450093470F /* LocalizationSystem.swift in Sources */,
 				9E82E82F22720F2400267820 /* AlertExtension.swift in Sources */,
-				9E82E83822720F2400267820 /* LocalizationSystem.swift in Sources */,
 				9ECF074F225242600082FC1F /* NotificationsTableViewCell.swift in Sources */,
 				9E82E82922720F2400267820 /* NoPasteTextField.swift in Sources */,
 				9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */,

@@ -25,7 +25,7 @@ class LottieAnimation {
 
     func createLottieAnimation(view: UIView) {
         lottieAnimationView.isHidden = true
-        lottieAnimationView.animation = Animation.named("soccer")
+        lottieAnimationView.animation = Animation.named("ball")
         lottieAnimationView.translatesAutoresizingMaskIntoConstraints = false
         lottieAnimationView.loopMode = .loop
         lottieAnimationView.contentMode = .scaleAspectFit

@@ -16,6 +16,9 @@
 		9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
 		9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
 		9E2DE5872272E0450093470F /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DE5862272E0450093470F /* LocalizationSystem.swift */; };
+		9E2DE58F2272FEBF0093470F /* ball.aep in Resources */ = {isa = PBXBuildFile; fileRef = 9E2DE58B2272FEBF0093470F /* ball.aep */; };
+		9E2DE5902272FEBF0093470F /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2DE58D2272FEBF0093470F /* img_0.png */; };
+		9E2DE5912272FEBF0093470F /* ball.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E2DE58E2272FEBF0093470F /* ball.json */; };
 		9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
 		9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074B222593B200F8ED17 /* AppDelegate.swift */; };
 		9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074D222593B200F8ED17 /* SignInViewController.swift */; };
@@ -144,6 +147,9 @@
 		9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
 		9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		9E2DE5862272E0450093470F /* LocalizationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
+		9E2DE58B2272FEBF0093470F /* ball.aep */ = {isa = PBXFileReference; lastKnownFileType = file; path = ball.aep; sourceTree = "<group>"; };
+		9E2DE58D2272FEBF0093470F /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
+		9E2DE58E2272FEBF0093470F /* ball.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ball.json; sourceTree = "<group>"; };
 		9E35D930222681B4008E8361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E4E0748222593B200F8ED17 /* FootNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4E074B222593B200F8ED17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -285,6 +291,24 @@
 				9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */,
 			);
 			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		9E2DE58A2272FEBF0093470F /* 2668-ball */ = {
+			isa = PBXGroup;
+			children = (
+				9E2DE58B2272FEBF0093470F /* ball.aep */,
+				9E2DE58C2272FEBF0093470F /* images */,
+				9E2DE58E2272FEBF0093470F /* ball.json */,
+			);
+			path = "2668-ball";
+			sourceTree = "<group>";
+		};
+		9E2DE58C2272FEBF0093470F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9E2DE58D2272FEBF0093470F /* img_0.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		9E40E85322721008006C664B /* UserProfile */ = {
@@ -588,6 +612,7 @@
 		9E82E81622720F2400267820 /* LottieAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				9E2DE58A2272FEBF0093470F /* 2668-ball */,
 				9E82E81722720F2400267820 /* LottieAnimation.swift */,
 			);
 			path = LottieAnimation;
@@ -980,13 +1005,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E2DE5902272FEBF0093470F /* img_0.png in Resources */,
 				9E935722224116540036F23A /* Home.storyboard in Resources */,
 				9E82E83122720F2400267820 /* EN.strings in Resources */,
 				9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */,
+				9E2DE58F2272FEBF0093470F /* ball.aep in Resources */,
 				9EFEA4B622424536002C9EB0 /* MainTabBar.storyboard in Resources */,
 				9E82E83322720F2400267820 /* ES.strings in Resources */,
 				9E82E83022720F2400267820 /* ES.strings in Resources */,
 				9E82E78B2272014600267820 /* soccer.json in Resources */,
+				9E2DE5912272FEBF0093470F /* ball.json in Resources */,
 				9EFEA4B8224247B4002C9EB0 /* OffersStatus.storyboard in Resources */,
 				9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */,
 				9EC925562226E47B00B0E694 /* Localizable.strings in Resources */,

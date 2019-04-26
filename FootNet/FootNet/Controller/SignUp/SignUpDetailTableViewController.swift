@@ -38,7 +38,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     let imagePicker = UIImagePickerController()
     let signUpService = SignUpService()
     let appNavigationDrawer = AppNavigationDrawer()
-    var spinner = Spinner()
+    let lottieAnimation = LottieAnimation()
     var signUpFormErrors: String = ""
     var chosenImage: UIImage?
     var activityIndicator = UIActivityIndicatorView()
@@ -54,9 +54,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         createLeftButton()
         createRightButton()
         
-        //create spinner
-        //createSpinner()
-        spinner.createSpinner(view: view)
+        //create lottie animation Spinner
+        lottieAnimation.createLottieAnimation(view: view)
         
         //Date Picker
         datePicker = UIDatePicker()
@@ -117,27 +116,31 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     @objc private func rightTapped(sender: UIBarButtonItem) {
         signUpFormErrors = validateSignUpForm.CheckSignUpForm(UserProfileModel: userProfileModel, ProfileType: profileType!)
         if signUpFormErrors.isEmpty {
-            // Start the loading animation
-            spinner.startSpinner()
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             self.navigationItem.rightBarButtonItem?.isEnabled = false
-            //TODO - API CALL POST + api error alert
-            let signUpResponse = signUpService.signUpAction(userProfileModel: userProfileModel)
-            switch signUpResponse.code {
-            case 1:
-                DDLogInfo("Successfully signed up")
-                spinner.stopSpinner()
-                //Should use the logInResponseStruct.id to recuperate user information
-                self.navigationItem.leftBarButtonItem?.isEnabled = true
-                self.navigationItem.rightBarButtonItem?.isEnabled = true
-                let viewController = appNavigationDrawer.createAppNavigationDrawer()
-                present(viewController, animated: true, completion: nil)
-            case 2:
-                //CONNECTION ERROR
-                spinner.stopSpinner()
-                signUpErrorAlert("connectionError_alert".localize(), "", "tryAgian_alert".localize())
-            default:
-                break
+            // Start the loading animation, SCROLL UP SCREEN BEFORE STARTING THE ANIMATION
+            tableView.setContentOffset(.zero, animated: true)
+            lottieAnimation.startLottieAnimation()
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+                self.lottieAnimation.stopLottieAnimation()
+                //TODO - API CALL POST + api error alert
+                let signUpResponse = self.signUpService.signUpAction(userProfileModel: self.userProfileModel)
+                switch signUpResponse.code {
+                case 1:
+                    DDLogInfo("Successfully signed up")
+                    //Should use the logInResponseStruct.id to recuperate user information
+                    self.navigationItem.leftBarButtonItem?.isEnabled = true
+                    self.navigationItem.rightBarButtonItem?.isEnabled = true
+                    let viewController = self.appNavigationDrawer.createAppNavigationDrawer()
+                    self.present(viewController, animated: true, completion: nil)
+                case 2:
+                    //CONNECTION ERROR
+                    self.signUpErrorAlert("connectionError_alert".localize(), "", "tryAgian_alert".localize())
+                    self.navigationItem.leftBarButtonItem?.isEnabled = true
+                    self.navigationItem.rightBarButtonItem?.isEnabled = true
+                default:
+                    break
+                }
             }
         } else {
             signUpErrorAlert("signUp_formError_alert".localize(), signUpFormErrors, "fixIt_alert".localize())

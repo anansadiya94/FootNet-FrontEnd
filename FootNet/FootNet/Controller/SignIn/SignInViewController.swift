@@ -21,13 +21,13 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var englishButton: CustomLanguagesButton!
     @IBOutlet weak var spanishButton: CustomLanguagesButton!
     @IBOutlet weak var catalanButton: CustomLanguagesButton!
-
+    
+    let appNavigationDrawer = AppNavigationDrawer()
+    let lottieAnimation = LottieAnimation()
     var validateSignInForm = ValidateSignInForm()
     var signInService = SignInService()
     var signInFormErrors: String = ""
-    let appNavigationDrawer = AppNavigationDrawer()
     
-    var lottieAnimation = LottieAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()

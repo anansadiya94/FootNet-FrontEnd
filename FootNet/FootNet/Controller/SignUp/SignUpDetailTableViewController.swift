@@ -118,8 +118,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         if signUpFormErrors.isEmpty {
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             self.navigationItem.rightBarButtonItem?.isEnabled = false
-            // Start the loading animation, SCROLL UP SCREEN BEFORE STARTING THE ANIMATION
-            tableView.setContentOffset(.zero, animated: true)
+            // Start the loading animation
+            self.scrollToFirstRow()
             lottieAnimation.startLottieAnimation()
             DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
                 self.lottieAnimation.stopLottieAnimation()
@@ -145,6 +145,11 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         } else {
             signUpErrorAlert("signUp_formError_alert".localize(), signUpFormErrors, "fixIt_alert".localize())
         }
+    }
+    
+    func scrollToFirstRow() {
+        let indexPath = NSIndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
     }
     
     private func signUpErrorAlert(_ alertTitle: String, _ alertMessage: String, _ actionTitle: String) {

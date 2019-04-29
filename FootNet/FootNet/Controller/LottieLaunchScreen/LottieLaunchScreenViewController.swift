@@ -9,12 +9,13 @@
 import UIKit
 import Lottie
 
-class LottieLaunchScreenViewController: UIViewController {
+class LottieLaunchScreenViewController: BaseViewController {
 
     @IBOutlet weak var lottieAnimationView: AnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackground()
         animationView()
     }
     
@@ -23,13 +24,16 @@ class LottieLaunchScreenViewController: UIViewController {
         lottieAnimationView.translatesAutoresizingMaskIntoConstraints = false
         lottieAnimationView.loopMode = .loop
         lottieAnimationView.contentMode = .scaleAspectFit
-        
+        lottieAnimationView.backgroundColor = UIColor.colorPrimary
         lottieAnimationView.isHidden = false
         lottieAnimationView.play()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.lottieAnimationView.stop()
             self.lottieAnimationView.isHidden = true
+            let signInStoryboard = UIStoryboard(name: "SignIn", bundle: nil)
+            let signInViewController = signInStoryboard.instantiateViewController(withIdentifier: "SignInViewController")
+            self.present(signInViewController, animated: true, completion: nil)
         }
     }
 }

@@ -29,6 +29,7 @@ class LottieAnimation {
         lottieAnimationView.translatesAutoresizingMaskIntoConstraints = false
         lottieAnimationView.loopMode = .loop
         lottieAnimationView.contentMode = .scaleAspectFit
+        //lottieAnimationView.backgroundColor = UIColor.colorSecondary
         view.addSubview(lottieAnimationView)
         let horizontalConstraint = lottieAnimationView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         let verticalConstraint = lottieAnimationView.centerYAnchor.constraint(equalTo: view.centerYAnchor)

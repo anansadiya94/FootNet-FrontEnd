@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Bc-jh-0Bm">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,21 +10,21 @@
             <objects>
                 <tableViewController storyboardIdentifier="LeftHomeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Bc-jh-0Bm" customClass="LeftHomeTableViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y7j-fN-q4K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageLeftHomeCell" rowHeight="120" id="QVL-6j-H8B" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QVL-6j-H8B" id="dTi-Kw-6zv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="sNW-qG-0gA" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="137.5" y="10" width="100" height="100"/>
+                                            <rect key="frame" x="250" y="10" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="7cx-nX-nfQ"/>
                                                 <constraint firstAttribute="width" constant="100" id="oLU-xG-k9y"/>
@@ -46,14 +42,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="nameSurnameLeftHomeCell" id="vRf-ZL-Kze" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="148" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="148" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vRf-ZL-Kze" id="HP2-Qk-k7q">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUl-Ez-IaB" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="124.5" y="8" width="126.5" height="27.5"/>
+                                            <rect key="frame" x="237" y="8" width="126.5" height="27.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -71,14 +67,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="profileTypeLeftHomeCell" id="sfG-z8-lqm" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="192" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="192" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sfG-z8-lqm" id="VQ6-YK-JBR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porfile Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-HH-cAv" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="142" y="8" width="91.5" height="27.5"/>
+                                            <rect key="frame" x="254.5" y="8" width="91.5" height="27.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -96,10 +92,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myProfileLeftHomeCell" id="dVR-qQ-suo" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="236" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="236" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dVR-qQ-suo" id="dhl-ZU-xkz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="eVr-lU-1Kg">
@@ -128,15 +124,15 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="myProfileImageView" destination="eVr-lU-1Kg" id="7OE-qU-WHn"/>
                                     <outlet property="myProfileLabel" destination="JWi-4b-Z3c" id="6px-KN-Q9R"/>
-                                    <outlet property="myProfilePhoto" destination="eVr-lU-1Kg" id="7OE-qU-WHn"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="editProfileLeftHomeCell" id="11r-NQ-yMX" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="280" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="280" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="11r-NQ-yMX" id="Vwe-i8-GQ9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="C77-aE-77f">
@@ -165,15 +161,15 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="editProfileImageView" destination="C77-aE-77f" id="g3r-Ih-xEz"/>
                                     <outlet property="editProfileLabel" destination="EYl-Rn-n0F" id="UVy-XK-2Yd"/>
-                                    <outlet property="editProfilePhoto" destination="C77-aE-77f" id="g3r-Ih-xEz"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="signOutLeftHomeCell" id="4Cx-7D-hbr" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="324" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="324" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Cx-7D-hbr" id="MZX-xx-bJ9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signOutLeft" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-ts-Vcz">
@@ -202,15 +198,15 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="signOutImageView" destination="xs3-ts-Vcz" id="D6G-Ht-Ubm"/>
                                     <outlet property="signOutLabel" destination="3dB-zQ-ZbE" id="1lG-aL-YKO"/>
-                                    <outlet property="signOutPhoto" destination="xs3-ts-Vcz" id="D6G-Ht-Ubm"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="deactivateLeftHomeCell" id="QfJ-8M-b55" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="368" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="368" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QfJ-8M-b55" id="ldf-zQ-JUi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deactivateAccountLeft" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-9u-bwZ">
@@ -239,8 +235,8 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="deactivateAccountImageView" destination="eb9-9u-bwZ" id="jlJ-BS-Qzq"/>
                                     <outlet property="deactivateAccountLabel" destination="LvE-9u-xBb" id="Wre-RP-A2U"/>
-                                    <outlet property="deactivateAccountPhoto" destination="eb9-9u-bwZ" id="jlJ-BS-Qzq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

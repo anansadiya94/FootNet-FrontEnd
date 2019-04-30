@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EOw-hq-53r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EOw-hq-53r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,10 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="kG9-3g-B2u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCg-7o-Ccc">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er2-Mj-JGX">
+                                        <rect key="frame" x="8" y="8" width="359" height="34"/>
+                                        <state key="normal" title="Filter"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1mx-QE-dzh"/>
+                                    <constraint firstAttribute="trailing" secondItem="er2-Mj-JGX" secondAttribute="trailing" constant="8" id="hXj-Nz-yaI"/>
+                                    <constraint firstItem="er2-Mj-JGX" firstAttribute="leading" secondItem="eCg-7o-Ccc" secondAttribute="leading" constant="8" id="tXe-4b-iKp"/>
+                                    <constraint firstAttribute="bottom" secondItem="er2-Mj-JGX" secondAttribute="bottom" constant="8" id="wes-eu-FYs"/>
+                                    <constraint firstItem="er2-Mj-JGX" firstAttribute="top" secondItem="eCg-7o-Ccc" secondAttribute="top" constant="8" id="wrF-hM-WUK"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-a9-FYf">
+                                <rect key="frame" x="0.0" y="78" width="375" height="589"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EOw-hq-53r" id="blI-bj-JLv"/>
+                                    <outlet property="delegate" destination="EOw-hq-53r" id="bJJ-hL-FJH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eCg-7o-Ccc" firstAttribute="leading" secondItem="CcZ-oa-AcK" secondAttribute="leading" id="9xL-zM-Cfk"/>
+                            <constraint firstItem="CcZ-oa-AcK" firstAttribute="trailing" secondItem="IdT-a9-FYf" secondAttribute="trailing" id="Jjh-OU-PFv"/>
+                            <constraint firstItem="IdT-a9-FYf" firstAttribute="top" secondItem="eCg-7o-Ccc" secondAttribute="bottom" id="MiG-WF-cXM"/>
+                            <constraint firstItem="CcZ-oa-AcK" firstAttribute="bottom" secondItem="IdT-a9-FYf" secondAttribute="bottom" id="TJX-t2-jYE"/>
+                            <constraint firstItem="CcZ-oa-AcK" firstAttribute="trailing" secondItem="eCg-7o-Ccc" secondAttribute="trailing" id="Yws-pb-0DL"/>
+                            <constraint firstItem="eCg-7o-Ccc" firstAttribute="top" secondItem="CcZ-oa-AcK" secondAttribute="top" constant="8" id="tx4-So-jOL"/>
+                            <constraint firstItem="IdT-a9-FYf" firstAttribute="leading" secondItem="CcZ-oa-AcK" secondAttribute="leading" id="xpM-nB-DI0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CcZ-oa-AcK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Offers" image="offersTabBar" id="6SF-Rh-ncO"/>
+                    <connections>
+                        <outlet property="tableView" destination="IdT-a9-FYf" id="tjC-jG-m06"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFT-a1-AMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

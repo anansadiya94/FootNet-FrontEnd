@@ -9,16 +9,18 @@
 import UIKit
 
 class OfferTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var userImageView: CustomImageView!
+    @IBOutlet weak var nameSurnameLabel: UILabel!
+    @IBOutlet weak var offerImageView: UIImageView!
+    @IBOutlet weak var offerDetailLabel: UILabel!
+    @IBOutlet weak var seeMoreButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        self.backgroundColor = .clear
+        nameSurnameLabel.textColor = UIColor.colorText
+        offerDetailLabel.textColor = UIColor.colorText
     }
 
 }

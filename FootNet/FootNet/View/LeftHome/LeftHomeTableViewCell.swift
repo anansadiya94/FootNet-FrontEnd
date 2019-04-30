@@ -12,13 +12,13 @@ class LeftHomeTableViewCell: UITableViewCell {
     @IBOutlet weak var img: CustomImageView!
     @IBOutlet weak var nameSurnameLabel: CustomLeftHomeLabel!
     @IBOutlet weak var profileTypeLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var myProfilePhoto: UIImageView!
+    @IBOutlet weak var myProfileImageView: UIImageView!
     @IBOutlet weak var myProfileLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var editProfilePhoto: UIImageView!
+    @IBOutlet weak var editProfileImageView: UIImageView!
     @IBOutlet weak var editProfileLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var signOutPhoto: UIImageView!
+    @IBOutlet weak var signOutImageView: UIImageView!
     @IBOutlet weak var signOutLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var deactivateAccountPhoto: UIImageView!
+    @IBOutlet weak var deactivateAccountImageView: UIImageView!
     @IBOutlet weak var deactivateAccountLabel: CustomLeftHomeLabel!
     
     override func awakeFromNib() {

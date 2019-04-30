@@ -9,8 +9,8 @@
 import UIKit
 
 class OffersStatusTableViewCell: UITableViewCell {
-    @IBOutlet weak var userImage: CustomImageView!
-    @IBOutlet weak var offerStatusDetail: UILabel!
+    @IBOutlet weak var userImageView: CustomImageView!
+    @IBOutlet weak var offerStatusDetailLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

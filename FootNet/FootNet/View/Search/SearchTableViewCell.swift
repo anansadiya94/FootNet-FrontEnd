@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchTableViewCell: UITableViewCell {
-    @IBOutlet weak var searchedProfileImage: CustomImageView!
+    @IBOutlet weak var searchedProfileImageView: CustomImageView!
     @IBOutlet weak var searchedProfileLabel: UILabel!
     @IBOutlet weak var seachedProfileStatusButton: UIButton!
     

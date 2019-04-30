@@ -67,9 +67,9 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "offersStatusCell", for: indexPath) as! OffersStatusTableViewCell
         guard dataSource != nil else { return OffersStatusTableViewCell() }
         let model = dataSource![indexPath.row]
-        cell.userImage.image = model.userImage
-        cell.offerStatusDetail.text = model.offerStatusDetail
-        cell.offerStatusDetail.textColor = UIColor.colorText
+        cell.userImageView.image = model.userImage
+        cell.offerStatusDetailLabel.text = model.offerStatusDetail
+        cell.offerStatusDetailLabel.textColor = UIColor.colorText
         return cell
     }
 }

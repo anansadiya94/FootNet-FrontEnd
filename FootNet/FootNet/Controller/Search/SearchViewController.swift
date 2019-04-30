@@ -49,7 +49,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchTableViewCell
         cell.searchedProfileLabel.textColor = UIColor.colorText
         CustomFollowButton.setup(cell.seachedProfileStatusButton as! CustomFollowButton, true)
-        cell.searchedProfileImage.image = #imageLiteral(resourceName: "homeRightInstagramButton")
+        cell.searchedProfileImageView.image = #imageLiteral(resourceName: "homeRightInstagramButton")
         if searching {
             cell.searchedProfileLabel.text = searchedCountry[indexPath.row]
         } else {

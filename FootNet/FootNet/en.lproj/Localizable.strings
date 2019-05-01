@@ -180,3 +180,7 @@
 //Search
 "follow_button"="Follow";
 "following_button"="Following";
+
+//Offers
+"filter_button"="Filter";
+"seeMore_button"="See more";

@@ -9,17 +9,27 @@
 import UIKit
 
 class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var filterButton: CustomFilterButton!
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
         setTabBarItem()
-        tableView.register(UINib(nibName: "OfferCustomCell", bundle: nil), forCellReuseIdentifier: "offerCustomCell")
-        tableView.backgroundColor = .clear
+        setFilterButton()
+        registerNib()
     }
     
     private func setTabBarItem() {
         tabBarItem.title = "offersTabBar".localize()
+    }
+    
+    private func setFilterButton() {
+        filterButton.setTitle("filter_button".localize(), for: .normal)
+    }
+    
+    private func registerNib() {
+        tableView.register(UINib(nibName: "OfferCustomCell", bundle: nil), forCellReuseIdentifier: "offerCustomCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,10 +39,10 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "offerCustomCell") as! OfferTableViewCell
         cell.userImageView.image = #imageLiteral(resourceName: "defaultProfilePhoto")
-        cell.nameSurnameLabel.text = "ANAN"
-        cell.offerImageView.image = #imageLiteral(resourceName: "joanet")
-        cell.offerDetailLabel.text = "Se busca ..."
-        cell.seeMoreButton.setTitle("See more", for: .normal)
+        cell.nameSurnameLabel.text = "Alex Lopez"
+        cell.offerImageView.image = #imageLiteral(resourceName: "offerPhoto")
+        cell.offerDetailLabel.text = "Se busca un jugador para tercera catalana"
+        cell.seeMoreButton.setTitle("seeMore_button".localize(), for: .normal)
         return cell
     }
 }

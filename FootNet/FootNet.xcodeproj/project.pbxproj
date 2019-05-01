@@ -107,6 +107,7 @@
 		9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07906224CE96C0034FA1C /* SignUpTests.swift */; };
 		9EF232C52238074B004BF61F /* ValidateSignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF232C42238074B004BF61F /* ValidateSignUpForm.swift */; };
 		9EFE51D222799E14002DB0BB /* CustomFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFE51D122799E14002DB0BB /* CustomFilterButton.swift */; };
+		9EFE51D42279A441002DB0BB /* CustomSeeMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFE51D32279A441002DB0BB /* CustomSeeMoreButton.swift */; };
 		9EFEA4B222422D99002C9EB0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B122422D99002C9EB0 /* MainTabBarController.swift */; };
 		9EFEA4B422424513002C9EB0 /* Offers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B322424513002C9EB0 /* Offers.storyboard */; };
 		9EFEA4B622424536002C9EB0 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */; };
@@ -243,6 +244,7 @@
 		9EF07906224CE96C0034FA1C /* SignUpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		9EF232C42238074B004BF61F /* ValidateSignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignUpForm.swift; sourceTree = "<group>"; };
 		9EFE51D122799E14002DB0BB /* CustomFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFilterButton.swift; sourceTree = "<group>"; };
+		9EFE51D32279A441002DB0BB /* CustomSeeMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSeeMoreButton.swift; sourceTree = "<group>"; };
 		9EFEA4B122422D99002C9EB0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9EFEA4B322424513002C9EB0 /* Offers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offers.storyboard; sourceTree = "<group>"; };
 		9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
@@ -398,8 +400,8 @@
 				9E93570E22410B700036F23A /* MainTabBar */,
 				9E93571522410FFC0036F23A /* Home */,
 				9E93571122410F3D0036F23A /* Offers */,
-				9E93571322410F8F0036F23A /* OffersStatus */,
 				9E93571222410F5D0036F23A /* Search */,
+				9E93571322410F8F0036F23A /* OffersStatus */,
 				9E93571422410FBE0036F23A /* Notifications */,
 				9EB24E952227F0F5004B0C66 /* SignUp */,
 				9E8D8D20223AB87D00A8A880 /* SignIn */,
@@ -437,8 +439,8 @@
 				9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */,
 				9E935721224116540036F23A /* Home.storyboard */,
 				9EFEA4B322424513002C9EB0 /* Offers.storyboard */,
-				9EFEA4B7224247B4002C9EB0 /* OffersStatus.storyboard */,
 				9EFEA4B9224247C5002C9EB0 /* Search.storyboard */,
+				9EFEA4B7224247B4002C9EB0 /* OffersStatus.storyboard */,
 				9EFEA4BB224247D0002C9EB0 /* Notifications.storyboard */,
 				9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */,
 			);
@@ -506,11 +508,11 @@
 			children = (
 				9E4FA3632231A2FA00094509 /* Constants.swift */,
 				9E82E7FD22720F2400267820 /* Reachability.swift */,
+				9E82E7FF22720F2400267820 /* Assets.xcassets */,
 				9E82E7EE22720F2400267820 /* Buttons */,
 				9E82E7F522720F2400267820 /* TextFields */,
 				9E82E7F822720F2400267820 /* Labels */,
 				9E82E7FB22720F2400267820 /* Spinner */,
-				9E82E7FE22720F2400267820 /* img */,
 				9E82E80022720F2400267820 /* Alerts */,
 				9E82E80222720F2400267820 /* Lang */,
 				9E82E80B22720F2400267820 /* Storyborads */,
@@ -531,11 +533,12 @@
 			children = (
 				9E82E7EF22720F2400267820 /* CustomFollowButton.swift */,
 				9E82E7F022720F2400267820 /* CustomLanuagesButton.swift */,
+				9E82E7F322720F2400267820 /* CustomSignInSignUpButton.swift */,
 				9E82E7F122720F2400267820 /* CustomChoosePhotoButton.swift */,
 				9E82E7F222720F2400267820 /* CustomForgotPasswordButton.swift */,
-				9E82E7F322720F2400267820 /* CustomSignInSignUpButton.swift */,
 				9E82E7F422720F2400267820 /* CustomLeftHomeButton.swift */,
 				9EFE51D122799E14002DB0BB /* CustomFilterButton.swift */,
+				9EFE51D32279A441002DB0BB /* CustomSeeMoreButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -564,14 +567,6 @@
 				9E82E7FC22720F2400267820 /* Spinner.swift */,
 			);
 			path = Spinner;
-			sourceTree = "<group>";
-		};
-		9E82E7FE22720F2400267820 /* img */ = {
-			isa = PBXGroup;
-			children = (
-				9E82E7FF22720F2400267820 /* Assets.xcassets */,
-			);
-			path = img;
 			sourceTree = "<group>";
 		};
 		9E82E80022720F2400267820 /* Alerts */ = {
@@ -1235,6 +1230,7 @@
 				9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */,
 				9ECF074022521D7E0082FC1F /* OffersStatusModel.swift in Sources */,
 				9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */,
+				9EFE51D42279A441002DB0BB /* CustomSeeMoreButton.swift in Sources */,
 				9EFE51D222799E14002DB0BB /* CustomFilterButton.swift in Sources */,
 				9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,

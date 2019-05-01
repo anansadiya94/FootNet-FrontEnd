@@ -11,8 +11,8 @@ import UIKit
 class MainTabBarController: UITabBarController {
     @IBOutlet weak var homeTabBar: UITabBar!
     @IBOutlet weak var offerTabBar: UITabBar!
-    @IBOutlet weak var offersStatusTab: UITabBar!
     @IBOutlet weak var searchTabBar: UITabBar!
+    @IBOutlet weak var offersStatusTab: UITabBar!
     @IBOutlet weak var notificationsTabBar: UITabBar!
 
     override func viewDidLoad() {
@@ -36,10 +36,10 @@ class MainTabBarController: UITabBarController {
         homeTabBar.unselectedItemTintColor = UIColor.colorText
         offerTabBar.tintColor = UIColor.colorSecondary
         offerTabBar.unselectedItemTintColor = UIColor.colorText
-        offersStatusTab.tintColor = UIColor.colorSecondary
-        offersStatusTab.unselectedItemTintColor = UIColor.colorText
         searchTabBar.tintColor = UIColor.colorSecondary
         searchTabBar.unselectedItemTintColor = UIColor.colorText
+        offersStatusTab.tintColor = UIColor.colorSecondary
+        offersStatusTab.unselectedItemTintColor = UIColor.colorText
         notificationsTabBar.tintColor = UIColor.colorSecondary
         notificationsTabBar.unselectedItemTintColor = UIColor.colorText
     }

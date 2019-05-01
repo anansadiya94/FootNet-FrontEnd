@@ -59,6 +59,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Offers" image="offersTabBar" id="6SF-Rh-ncO"/>
                     <connections>
+                        <outlet property="filterButton" destination="er2-Mj-JGX" id="R6a-9H-2up"/>
                         <outlet property="tableView" destination="IdT-a9-FYf" id="tjC-jG-m06"/>
                     </connections>
                 </viewController>

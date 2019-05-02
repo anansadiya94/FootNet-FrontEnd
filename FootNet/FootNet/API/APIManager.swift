@@ -43,7 +43,7 @@ struct SignUpResponse: Codable {
     let status: String
 }
 
-class APIManager {
+class APIManager : ApiManagerProtocol {
     func signInRequest(_ signInRequest: SignInRequest) -> SignInResponse {
         let jsonResponseData = SignInJsonMocks(Email: signInRequest.email, Password: signInRequest.password)
         let decodedSignInResponse = try! JSONDecoder().decode([SignInResponse].self, from: jsonResponseData)
@@ -55,4 +55,10 @@ class APIManager {
         let decodedSignUpResponse = try! JSONDecoder().decode([SignUpResponse].self, from: jsonResponseData)
         return decodedSignUpResponse.first!
     }
+}
+
+
+protocol ApiManagerProtocol {
+    func signInRequest(_ signInRequest: SignInRequest) -> SignInResponse
+    func signUpRequest(_ signUpRequest: SignUpRequest) -> SignUpResponse
 }

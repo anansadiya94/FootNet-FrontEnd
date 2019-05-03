@@ -184,3 +184,6 @@
 //Offers
 "filter_button"="Filter";
 "seeMore_button"="See more";
+
+//home
+"publish_button"="Publish";

@@ -183,3 +183,6 @@
 //Offers
 "filter_button"="Filtrar";
 "seeMore_button"="Veure més";
+
+//home
+"publish_button"="Publicar";

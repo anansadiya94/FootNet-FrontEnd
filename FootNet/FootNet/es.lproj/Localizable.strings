@@ -181,3 +181,6 @@
 //Offers
 "filter_button"="Filtrar";
 "seeMore_button"="Ver más";
+
+//home
+"publish_button"="Publicar";

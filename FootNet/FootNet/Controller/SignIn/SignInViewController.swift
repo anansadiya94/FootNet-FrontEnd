@@ -25,7 +25,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     let appNavigationDrawer = AppNavigationDrawer()
     let lottieAnimation = LottieAnimation()
     var validateSignInForm = ValidateSignInForm()
-    var signInService = SignInService()
+    private var signInService = DependencyManager.resolve(interface: SignInServiceProtocol.self)
     var signInFormErrors: String = ""
     
     
@@ -57,8 +57,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         signInFormErrors = validateSignInForm.CheckSignInForm(Email: email, Password: password)
         if signInFormErrors.isEmpty {
             //API CALL + api error alert
-            //SWINJECT
-            let signInResponse = signInService.signInAction(email: email, password: password)
+            let signInResponse = signInService!.signInAction(email: email, password: password)
             switch signInResponse.code {
             case 1:
                 DDLogInfo("Successfully signed in")

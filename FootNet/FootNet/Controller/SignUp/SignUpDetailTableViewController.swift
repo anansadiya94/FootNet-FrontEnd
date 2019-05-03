@@ -36,13 +36,13 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     @IBOutlet var heightPickerView : UIPickerView!
     
     let imagePicker = UIImagePickerController()
-    let signUpService = SignUpService()
     let appNavigationDrawer = AppNavigationDrawer()
     let lottieAnimation = LottieAnimation()
     var signUpFormErrors: String = ""
     var chosenImage: UIImage?
     var activityIndicator = UIActivityIndicatorView()
     var validateSignUpForm = ValidateSignUpForm()
+    private var signUpService = DependencyManager.resolve(interface: SignUpServiceProtocol.self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,7 +124,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
                 self.lottieAnimation.stopLottieAnimation()
                 //TODO - API CALL POST + api error alert
-                let signUpResponse = self.signUpService.signUpAction(userProfileModel: self.userProfileModel)
+                let signUpResponse = self.signUpService!.signUpAction(userProfileModel: self.userProfileModel)
                 switch signUpResponse.code {
                 case 1:
                     DDLogInfo("Successfully signed up")

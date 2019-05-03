@@ -8,11 +8,15 @@
 
 import Foundation
 
-class SignUpService {
-    let apiManager = APIManager()
+class SignUpService: SignUpServiceProtocol {
+    private let apiManager = DependencyManager.resolve(interface: ApiManagerProtocol.self)
     func signUpAction(userProfileModel: UserProfileModel) -> SignUpResponse {
         let signUpRequest = SignUpRequest(userId: 0, name: userProfileModel.name, surname: userProfileModel.surname ?? "", email: userProfileModel.email, phone: userProfileModel.phone, password: userProfileModel.password, sex: userProfileModel.sex ?? "", birthday: userProfileModel.birthday ?? "", nationality: userProfileModel.nationality ?? "", location: userProfileModel.location, actualClub: userProfileModel.actualClub ?? "", photo: "PHOTO", bio: userProfileModel.bio ?? "", record: userProfileModel.record ?? "", favoritePosition: userProfileModel.favoritePosition ?? "", preferredPositions: userProfileModel.preferredPositions ?? "", weight: userProfileModel.weight ?? "", height: userProfileModel.height ?? "")
-        let signUpResponse = apiManager.signUpRequest(signUpRequest)
+        let signUpResponse = apiManager!.signUpRequest(signUpRequest)
         return signUpResponse
     }
+}
+
+protocol SignUpServiceProtocol {
+    func signUpAction(userProfileModel: UserProfileModel) -> SignUpResponse
 }

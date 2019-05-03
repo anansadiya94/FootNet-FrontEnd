@@ -8,11 +8,15 @@
 
 import Foundation
 
-class SignInService {
-    let apiManager = APIManager()
+class SignInService: SignInServiceProtocol {
+    private let apiManager = DependencyManager.resolve(interface: ApiManagerProtocol.self)
     func signInAction(email: String, password: String) -> SignInResponse {
         let signInRequest = SignInRequest(email: email, password: password)
-        let signInResponse = apiManager.signInRequest(signInRequest)
+        let signInResponse = apiManager!.signInRequest(signInRequest)
         return signInResponse
     }
+}
+
+protocol SignInServiceProtocol {
+    func signInAction(email: String, password: String) -> SignInResponse
 }

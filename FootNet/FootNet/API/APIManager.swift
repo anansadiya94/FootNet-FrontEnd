@@ -57,7 +57,6 @@ class APIManager : ApiManagerProtocol {
     }
 }
 
-
 protocol ApiManagerProtocol {
     func signInRequest(_ signInRequest: SignInRequest) -> SignInResponse
     func signUpRequest(_ signUpRequest: SignUpRequest) -> SignUpResponse

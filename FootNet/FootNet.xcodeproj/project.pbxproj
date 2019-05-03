@@ -103,6 +103,7 @@
 		9ECF074F225242600082FC1F /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074E225242600082FC1F /* NotificationsTableViewCell.swift */; };
 		9ED9BF34227848C9004F4D13 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9BF33227848C9004F4D13 /* OfferTableViewCell.swift */; };
 		9ED9BF36227848F3004F4D13 /* OfferCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */; };
+		9EDD673D227C8F360082074C /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD673C227C8F360082074C /* DependencyManager.swift */; };
 		9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07904224CCBF20034FA1C /* SignUpUITests.swift */; };
 		9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07906224CE96C0034FA1C /* SignUpTests.swift */; };
 		9EF232C52238074B004BF61F /* ValidateSignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF232C42238074B004BF61F /* ValidateSignUpForm.swift */; };
@@ -240,6 +241,7 @@
 		9ECF074E225242600082FC1F /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		9ED9BF33227848C9004F4D13 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
 		9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCustomCell.xib; sourceTree = "<group>"; };
+		9EDD673C227C8F360082074C /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		9EF07904224CCBF20034FA1C /* SignUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
 		9EF07906224CE96C0034FA1C /* SignUpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		9EF232C42238074B004BF61F /* ValidateSignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignUpForm.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		9E4E074A222593B200F8ED17 /* FootNet */ = {
 			isa = PBXGroup;
 			children = (
+				9EDD673B227C8F0E0082074C /* Dependency */,
 				9E9E598E2265D2A9002816B6 /* JSONMocks */,
 				9E9E598F2265D2F6002816B6 /* API */,
 				9E9E598C2265D25F002816B6 /* Services */,
@@ -880,6 +883,14 @@
 			path = Offers;
 			sourceTree = "<group>";
 		};
+		9EDD673B227C8F0E0082074C /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				9EDD673C227C8F360082074C /* DependencyManager.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
 		B8F01E06171DCB5CD3E8BE14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1210,6 +1221,7 @@
 				9E82E83922720F2400267820 /* APIManager.swift in Sources */,
 				9ECF07462252246D0082FC1F /* OffersStatusTableViewCell.swift in Sources */,
 				9EC4A3932243F8CD003030ED /* LeftHomeTableViewController.swift in Sources */,
+				9EDD673D227C8F360082074C /* DependencyManager.swift in Sources */,
 				9E82E82C22720F2400267820 /* Spinner.swift in Sources */,
 				9E93571E224111940036F23A /* SearchViewController.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,

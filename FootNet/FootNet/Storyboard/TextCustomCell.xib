@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OfferTableViewCell" customModule="FootNet" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FootNet" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="offerCustomCell" rowHeight="400" id="7Mm-fm-LwL" customClass="OfferTableViewCell" customModule="FootNet" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCustomCell" rowHeight="400" id="7Mm-fm-LwL" customClass="TextTableViewCell" customModule="FootNet" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Mm-fm-LwL" id="N6e-lR-cL9">
@@ -31,50 +31,40 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offerPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="BDB-sK-jBV">
-                        <rect key="frame" x="8" y="66" width="398" height="100"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="100" id="fuc-UB-6Cz"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmM-rY-uUj">
-                        <rect key="frame" x="8" y="174" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLC-F7-OnK">
+                        <rect key="frame" x="8" y="66" width="41.666666666666664" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpz-4h-d9l" customClass="CustomSeeMoreButton" customModule="FootNet" customModuleProvider="target">
-                        <rect key="frame" x="360" y="203" width="46" height="30"/>
+                        <rect key="frame" x="360" y="241.66666666666663" width="46" height="30"/>
                         <state key="normal" title="Button"/>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="BDB-sK-jBV" secondAttribute="trailing" constant="8" id="0nb-55-gnf"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YLC-F7-OnK" secondAttribute="trailing" constant="8" id="0DM-Y3-DUj"/>
                     <constraint firstItem="fv3-Dj-Zw3" firstAttribute="leading" secondItem="aya-eR-tdv" secondAttribute="trailing" constant="8" id="5rD-Kh-Z9d"/>
+                    <constraint firstItem="YLC-F7-OnK" firstAttribute="leading" secondItem="N6e-lR-cL9" secondAttribute="leading" constant="8" id="DRF-13-mBw"/>
                     <constraint firstItem="aya-eR-tdv" firstAttribute="leading" secondItem="N6e-lR-cL9" secondAttribute="leading" constant="8" id="FcA-Ma-iO1"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dpz-4h-d9l" secondAttribute="bottom" constant="8" id="IJr-b7-WFs"/>
-                    <constraint firstItem="dpz-4h-d9l" firstAttribute="top" secondItem="NmM-rY-uUj" secondAttribute="bottom" constant="8" id="TgO-U7-NF1"/>
+                    <constraint firstAttribute="bottom" secondItem="dpz-4h-d9l" secondAttribute="bottom" constant="8" id="IJr-b7-WFs"/>
+                    <constraint firstItem="dpz-4h-d9l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YLC-F7-OnK" secondAttribute="bottom" constant="8" id="Qsn-Ib-uJd"/>
+                    <constraint firstItem="YLC-F7-OnK" firstAttribute="top" secondItem="aya-eR-tdv" secondAttribute="bottom" constant="8" id="TuB-TG-IPR"/>
                     <constraint firstItem="aya-eR-tdv" firstAttribute="top" secondItem="N6e-lR-cL9" secondAttribute="top" constant="8" id="U3Z-vt-Frt"/>
-                    <constraint firstItem="BDB-sK-jBV" firstAttribute="leading" secondItem="N6e-lR-cL9" secondAttribute="leading" constant="8" id="U9a-Lm-cgd"/>
-                    <constraint firstItem="NmM-rY-uUj" firstAttribute="top" secondItem="BDB-sK-jBV" secondAttribute="bottom" constant="8" id="Uaa-KR-JkD"/>
-                    <constraint firstItem="BDB-sK-jBV" firstAttribute="top" secondItem="aya-eR-tdv" secondAttribute="bottom" constant="8" id="gZO-Ec-jJH"/>
                     <constraint firstAttribute="trailing" secondItem="dpz-4h-d9l" secondAttribute="trailing" constant="8" id="k3i-aC-mhK"/>
-                    <constraint firstItem="NmM-rY-uUj" firstAttribute="leading" secondItem="N6e-lR-cL9" secondAttribute="leading" constant="8" id="n7p-7T-kXg"/>
                     <constraint firstItem="fv3-Dj-Zw3" firstAttribute="centerY" secondItem="aya-eR-tdv" secondAttribute="centerY" id="zif-dp-oOD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="nameSurnameLabel" destination="fv3-Dj-Zw3" id="Ozx-3f-k8B"/>
-                <outlet property="offerDetailLabel" destination="NmM-rY-uUj" id="2QO-ij-2IW"/>
-                <outlet property="offerImageView" destination="BDB-sK-jBV" id="emb-yY-CeI"/>
-                <outlet property="seeMoreButton" destination="dpz-4h-d9l" id="IcV-rJ-CZW"/>
-                <outlet property="userImageView" destination="aya-eR-tdv" id="zRe-tN-S7V"/>
+                <outlet property="nameSurnameLabel" destination="fv3-Dj-Zw3" id="Z23-ew-5zJ"/>
+                <outlet property="seeMoreButton" destination="dpz-4h-d9l" id="QrS-TH-027"/>
+                <outlet property="textPostLabel" destination="YLC-F7-OnK" id="U5j-hM-B1q"/>
+                <outlet property="userImageView" destination="aya-eR-tdv" id="mdQ-r2-hTN"/>
             </connections>
         </tableViewCell>
     </objects>
     <resources>
         <image name="defaultProfilePhoto" width="200" height="200"/>
-        <image name="offerPhoto" width="76" height="39.666667938232422"/>
     </resources>
 </document>

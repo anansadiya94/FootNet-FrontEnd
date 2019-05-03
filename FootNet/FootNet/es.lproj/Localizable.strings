@@ -424,3 +424,6 @@
 "UZB" = "Uzbekistán";
 "VUT" = "Vanuatu";
 "VEN" = "Venezuela (República Bolivariana de)";
+
+//home
+"publish_button"="Publicar";

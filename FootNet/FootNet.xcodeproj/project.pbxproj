@@ -104,6 +104,13 @@
 		9ED9BF34227848C9004F4D13 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9BF33227848C9004F4D13 /* OfferTableViewCell.swift */; };
 		9ED9BF36227848F3004F4D13 /* OfferCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */; };
 		9EDD673D227C8F360082074C /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD673C227C8F360082074C /* DependencyManager.swift */; };
+		9EDD674E227CA2750082074C /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
+		9EDD674F227CA2750082074C /* TextCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674C227CA2750082074C /* TextCustomCell.xib */; };
+		9EDD6750227CA2750082074C /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674D227CA2750082074C /* PhotoCustomCell.xib */; };
+		9EDD6752227CA3100082074C /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6751227CA3100082074C /* TextTableViewCell.swift */; };
+		9EDD6754227CA3190082074C /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6753227CA3190082074C /* PhotoTableViewCell.swift */; };
+		9EDD6756227CA3200082074C /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6755227CA3200082074C /* VideoTableViewCell.swift */; };
+		9EDD6758227CA6230082074C /* CustomPublishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6757227CA6230082074C /* CustomPublishButton.swift */; };
 		9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07904224CCBF20034FA1C /* SignUpUITests.swift */; };
 		9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07906224CE96C0034FA1C /* SignUpTests.swift */; };
 		9EF232C52238074B004BF61F /* ValidateSignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF232C42238074B004BF61F /* ValidateSignUpForm.swift */; };
@@ -242,6 +249,13 @@
 		9ED9BF33227848C9004F4D13 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
 		9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCustomCell.xib; sourceTree = "<group>"; };
 		9EDD673C227C8F360082074C /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		9EDD674B227CA2750082074C /* VideoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCustomCell.xib; sourceTree = "<group>"; };
+		9EDD674C227CA2750082074C /* TextCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCustomCell.xib; sourceTree = "<group>"; };
+		9EDD674D227CA2750082074C /* PhotoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCustomCell.xib; sourceTree = "<group>"; };
+		9EDD6751227CA3100082074C /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		9EDD6753227CA3190082074C /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		9EDD6755227CA3200082074C /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		9EDD6757227CA6230082074C /* CustomPublishButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPublishButton.swift; sourceTree = "<group>"; };
 		9EF07904224CCBF20034FA1C /* SignUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
 		9EF07906224CE96C0034FA1C /* SignUpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		9EF232C42238074B004BF61F /* ValidateSignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignUpForm.swift; sourceTree = "<group>"; };
@@ -417,6 +431,7 @@
 		9E4E0760222593E300F8ED17 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9EDD6746227CA1E60082074C /* Home */,
 				9ED9BF322278486B004F4D13 /* Offers */,
 				9E7CBAC9226E14A700F84197 /* Search */,
 				9ECF074D2252424C0082FC1F /* Notifications */,
@@ -446,6 +461,9 @@
 				9EFEA4B7224247B4002C9EB0 /* OffersStatus.storyboard */,
 				9EFEA4BB224247D0002C9EB0 /* Notifications.storyboard */,
 				9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */,
+				9EDD674C227CA2750082074C /* TextCustomCell.xib */,
+				9EDD674D227CA2750082074C /* PhotoCustomCell.xib */,
+				9EDD674B227CA2750082074C /* VideoCustomCell.xib */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -542,6 +560,7 @@
 				9E82E7F422720F2400267820 /* CustomLeftHomeButton.swift */,
 				9EFE51D122799E14002DB0BB /* CustomFilterButton.swift */,
 				9EFE51D32279A441002DB0BB /* CustomSeeMoreButton.swift */,
+				9EDD6757227CA6230082074C /* CustomPublishButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -891,6 +910,16 @@
 			path = Dependency;
 			sourceTree = "<group>";
 		};
+		9EDD6746227CA1E60082074C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9EDD6751227CA3100082074C /* TextTableViewCell.swift */,
+				9EDD6753227CA3190082074C /* PhotoTableViewCell.swift */,
+				9EDD6755227CA3200082074C /* VideoTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		B8F01E06171DCB5CD3E8BE14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1033,6 +1062,7 @@
 				9E82E83122720F2400267820 /* EN.strings in Resources */,
 				9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */,
 				9E2DE58F2272FEBF0093470F /* ball.aep in Resources */,
+				9EDD674F227CA2750082074C /* TextCustomCell.xib in Resources */,
 				9EFEA4B622424536002C9EB0 /* MainTabBar.storyboard in Resources */,
 				9E82E83322720F2400267820 /* ES.strings in Resources */,
 				9E82E83022720F2400267820 /* ES.strings in Resources */,
@@ -1043,10 +1073,12 @@
 				9EC925562226E47B00B0E694 /* Localizable.strings in Resources */,
 				9EB24E9E2227F27D004B0C66 /* SignUp.storyboard in Resources */,
 				9E82E786227200C100267820 /* LottieLaunchScreen.storyboard in Resources */,
+				9EDD6750227CA2750082074C /* PhotoCustomCell.xib in Resources */,
 				9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */,
 				9ED9BF36227848F3004F4D13 /* OfferCustomCell.xib in Resources */,
 				9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */,
 				9EFEA4B422424513002C9EB0 /* Offers.storyboard in Resources */,
+				9EDD674E227CA2750082074C /* VideoCustomCell.xib in Resources */,
 				9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */,
 				9E5420D4223FA3270098AC44 /* RightHome.storyboard in Resources */,
 				9E82E84022720F2400267820 /* environments.json in Resources */,
@@ -1208,12 +1240,14 @@
 			files = (
 				9E82E82722720F2400267820 /* CustomLeftHomeButton.swift in Sources */,
 				9E82E83D22720F2400267820 /* LottieAnimation.swift in Sources */,
+				9EDD6754227CA3190082074C /* PhotoTableViewCell.swift in Sources */,
 				9E82E82322720F2400267820 /* CustomLanuagesButton.swift in Sources */,
 				9EF232C52238074B004BF61F /* ValidateSignUpForm.swift in Sources */,
 				9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */,
 				9E935718224111700036F23A /* HomeViewController.swift in Sources */,
 				9E2DE5872272E0450093470F /* LocalizationSystem.swift in Sources */,
 				9E82E82F22720F2400267820 /* AlertExtension.swift in Sources */,
+				9EDD6756227CA3200082074C /* VideoTableViewCell.swift in Sources */,
 				9ECF074F225242600082FC1F /* NotificationsTableViewCell.swift in Sources */,
 				9E82E82922720F2400267820 /* NoPasteTextField.swift in Sources */,
 				9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */,
@@ -1236,6 +1270,7 @@
 				9E82E83622720F2400267820 /* UIColorExtension.swift in Sources */,
 				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
 				9E82E83C22720F2400267820 /* SignInService.swift in Sources */,
+				9EDD6752227CA3100082074C /* TextTableViewCell.swift in Sources */,
 				9E82E83B22720F2400267820 /* SignInJsonMocks.swift in Sources */,
 				9E93571C224111870036F23A /* OffersStatusViewController.swift in Sources */,
 				9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */,
@@ -1251,6 +1286,7 @@
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,
 				9ED9BF34227848C9004F4D13 /* OfferTableViewCell.swift in Sources */,
 				9E82E82422720F2400267820 /* CustomChoosePhotoButton.swift in Sources */,
+				9EDD6758227CA6230082074C /* CustomPublishButton.swift in Sources */,
 				9EB24EAC2227F54C004B0C66 /* SignUpSelectProfileData.swift in Sources */,
 				9EB3A6BF222D1A35002F244E /* SignUpDetailTableViewController.swift in Sources */,
 				9E82E82B22720F2400267820 /* CustomLabel.swift in Sources */,

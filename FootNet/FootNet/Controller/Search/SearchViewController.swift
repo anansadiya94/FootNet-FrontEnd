@@ -17,7 +17,7 @@ class SearchViewController: UIViewController {
     ]
     
     var filteredDisplayUsers = [DisplaySearchedUser]()
-    var searching = false
+    var searching: Bool = false
     var searchTextString: String = ""
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -84,9 +84,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredDisplayUsers = generatefilteredDisplayUsers(displayUsers, searchText)
-        searchTextString = searchText
         searching = true
+        searchTextString = searchText
+        filteredDisplayUsers = generatefilteredDisplayUsers(displayUsers, searchTextString)
         resultsTableView.reloadData()
     }
     

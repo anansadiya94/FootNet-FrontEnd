@@ -27,6 +27,8 @@
 		9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
 		9E5420D4223FA3270098AC44 /* RightHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D3223FA3270098AC44 /* RightHome.storyboard */; };
 		9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */; };
+		9E56289D22840D4A003B4FE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289C22840D4A003B4FE2 /* User.swift */; };
+		9E56289F22840EAE003B4FE2 /* DisplaySearchedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */; };
 		9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
 		9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */; };
 		9E5DEE7D224B87F60091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
@@ -172,6 +174,8 @@
 		9E5420D1223FA3190098AC44 /* LeftHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeftHome.storyboard; sourceTree = "<group>"; };
 		9E5420D3223FA3270098AC44 /* RightHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RightHome.storyboard; sourceTree = "<group>"; };
 		9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeViewController.swift; sourceTree = "<group>"; };
+		9E56289C22840D4A003B4FE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySearchedUser.swift; sourceTree = "<group>"; };
 		9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9E5DEE82224B986A0091CECB /* FootNetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootNetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -401,6 +405,7 @@
 				9ECF074722523FAB0082FC1F /* Notifications */,
 				9ECF073E22521D590082FC1F /* OffersStatus */,
 				9EB24E9A2227F215004B0C66 /* SignUp */,
+				9E56289C22840D4A003B4FE2 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -737,6 +742,7 @@
 			isa = PBXGroup;
 			children = (
 				9E93571D224111940036F23A /* SearchViewController.swift */,
+				9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -1266,9 +1272,11 @@
 				9E4FA3642231A2FA00094509 /* Constants.swift in Sources */,
 				9ECF074322521DE30082FC1F /* OffersStatusData.swift in Sources */,
 				9ECF074922523FB70082FC1F /* NotificationsModel.swift in Sources */,
+				9E56289D22840D4A003B4FE2 /* User.swift in Sources */,
 				9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */,
 				9E82E83622720F2400267820 /* UIColorExtension.swift in Sources */,
 				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
+				9E56289F22840EAE003B4FE2 /* DisplaySearchedUser.swift in Sources */,
 				9E82E83C22720F2400267820 /* SignInService.swift in Sources */,
 				9EDD6752227CA3100082074C /* TextTableViewCell.swift in Sources */,
 				9E82E83B22720F2400267820 /* SignInJsonMocks.swift in Sources */,

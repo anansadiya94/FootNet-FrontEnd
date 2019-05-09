@@ -11,11 +11,19 @@ import UIKit
 class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var searchedProfileImageView: CustomImageView!
     @IBOutlet weak var searchedProfileLabel: UILabel!
-    @IBOutlet weak var seachedProfileStatusButton: UIButton!
+    @IBOutlet weak var seachedProfileStatusButton: CustomFollowButton!
+    
+    var following: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        searchedProfileLabel.textColor = .colorText
     }
-
+    
+    func setUp(img: String, fullName: String, amIFollowing: Bool) {
+        searchedProfileImageView.image = UIImage(named: img)
+        searchedProfileLabel.text = fullName
+        CustomFollowButton.setup(seachedProfileStatusButton, amIFollowing)
+        following = amIFollowing
+    }
 }

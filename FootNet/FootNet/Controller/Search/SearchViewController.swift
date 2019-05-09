@@ -31,15 +31,7 @@ class SearchViewController: UIViewController {
         setSearchBar()
         generateDisplayUsers()
     }
-    
-    private func generateDisplayUsers() {
-        for user in Constants.users {
-            displayUsers.append(
-                DisplaySearchedUser(id: user.id, fullName: user.name + " " + user.surname , photo: user.photo, amIFollowing: user.amIFollowing)
-            )
-        }
-    }
-    
+
     private func setTabBarItem() {
         tabBarItem.title = "searchTabBar".localize()
     }
@@ -49,6 +41,15 @@ class SearchViewController: UIViewController {
         searchBar.tintColor = UIColor.colorPrimary
         searchBar.barTintColor = UIColor.colorSecondary
         searchBar.keyboardAppearance = .dark
+    }
+    
+    private func generateDisplayUsers() {
+        for user in Constants.users {
+            displayUsers.append(
+                DisplaySearchedUser(id: user.id, fullName: user.name + " " + user.surname , photo: user.photo, amIFollowing: user.amIFollowing)
+            )
+        }
+        displayUsers.sort() { $0.fullName.lowercased() < $1.fullName.lowercased() }
     }
     
     @IBAction func customFollowButtonTapped(_ sender: CustomFollowButton) {

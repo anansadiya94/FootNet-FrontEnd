@@ -51,6 +51,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4n-ed-dr1" customClass="CustomFollowButton" customModule="FootNet" customModuleProvider="target">
                                                     <rect key="frame" x="360" y="18" width="46" height="30"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="customFollowButtonTapped:" destination="sS8-Ug-Zfr" eventType="touchUpInside" id="HHt-ee-bWX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

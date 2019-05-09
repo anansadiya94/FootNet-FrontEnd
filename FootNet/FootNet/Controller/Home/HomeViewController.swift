@@ -42,7 +42,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.userImageView.image = #imageLiteral(resourceName: "defaultProfilePhoto")
         cell.nameSurnameLabel.text = "Alex Lopez"
         cell.textPostLabel.text = "Mañana jugamos a las 12. Venid a vernos!"
-        cell.seeMoreButton.setTitle("seeMore_button".localize(), for: .normal)
         return cell
     }
+    
+    
 }

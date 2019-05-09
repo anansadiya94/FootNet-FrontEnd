@@ -9,13 +9,14 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    var displayUsers = [
-        DisplaySearchedUser(id: 1, fullName: "Anan", photo: "homeRightImage", amIFollowing: true),
-        DisplaySearchedUser(id: 2, fullName: "marcos", photo: "homeRightImage", amIFollowing: true),
-        DisplaySearchedUser(id: 3, fullName: "hola", photo: "homeRightImage", amIFollowing: false),
-        DisplaySearchedUser(id: 4, fullName: "adios", photo: "homeRightImage", amIFollowing: false)
-    ]
+//    var displayUsers = [
+//        DisplaySearchedUser(id: 1, fullName: "Anan", photo: "homeRightImage", amIFollowing: true),
+//        DisplaySearchedUser(id: 2, fullName: "marcos", photo: "homeRightImage", amIFollowing: true),
+//        DisplaySearchedUser(id: 3, fullName: "hola", photo: "homeRightImage", amIFollowing: false),
+//        DisplaySearchedUser(id: 4, fullName: "adios", photo: "homeRightImage", amIFollowing: false)
+//    ]
     
+    var displayUsers = [DisplaySearchedUser]()
     var filteredDisplayUsers = [DisplaySearchedUser]()
     var searching: Bool = false
     var searchTextString: String = ""
@@ -28,6 +29,15 @@ class SearchViewController: UIViewController {
         setBackground()
         setTabBarItem()
         setSearchBar()
+        generateDisplayUsers()
+    }
+    
+    private func generateDisplayUsers() {
+        for user in Constants.users {
+            displayUsers.append(
+                DisplaySearchedUser(id: user.id, fullName: user.name + " " + user.surname , photo: user.photo, amIFollowing: user.amIFollowing)
+            )
+        }
     }
     
     private func setTabBarItem() {

@@ -9,7 +9,8 @@
 import Foundation
 
 struct User {
-    let id: String
+    let id: Int
+    let profileType: ProfileType
     let name: String
     let surname: String
     let email: String

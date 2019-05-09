@@ -27,10 +27,13 @@
 		9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
 		9E5420D4223FA3270098AC44 /* RightHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D3223FA3270098AC44 /* RightHome.storyboard */; };
 		9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */; };
+		9E56289D22840D4A003B4FE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289C22840D4A003B4FE2 /* User.swift */; };
+		9E56289F22840EAE003B4FE2 /* DisplaySearchedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */; };
 		9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
 		9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */; };
 		9E5DEE7D224B87F60091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
 		9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE84224B986A0091CECB /* SignInUITests.swift */; };
+		9E68047E228497BD0039F808 /* TextCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E68047D228497BD0039F808 /* TextCustomCell.xib */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E7CBACB226E151300F84197 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */; };
@@ -105,7 +108,6 @@
 		9ED9BF36227848F3004F4D13 /* OfferCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */; };
 		9EDD673D227C8F360082074C /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD673C227C8F360082074C /* DependencyManager.swift */; };
 		9EDD674E227CA2750082074C /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
-		9EDD674F227CA2750082074C /* TextCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674C227CA2750082074C /* TextCustomCell.xib */; };
 		9EDD6750227CA2750082074C /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674D227CA2750082074C /* PhotoCustomCell.xib */; };
 		9EDD6752227CA3100082074C /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6751227CA3100082074C /* TextTableViewCell.swift */; };
 		9EDD6754227CA3190082074C /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6753227CA3190082074C /* PhotoTableViewCell.swift */; };
@@ -172,11 +174,14 @@
 		9E5420D1223FA3190098AC44 /* LeftHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeftHome.storyboard; sourceTree = "<group>"; };
 		9E5420D3223FA3270098AC44 /* RightHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RightHome.storyboard; sourceTree = "<group>"; };
 		9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeViewController.swift; sourceTree = "<group>"; };
+		9E56289C22840D4A003B4FE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySearchedUser.swift; sourceTree = "<group>"; };
 		9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		9E5DEE7B224B814F0091CECB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9E5DEE82224B986A0091CECB /* FootNetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootNetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5DEE84224B986A0091CECB /* SignInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUITests.swift; sourceTree = "<group>"; };
 		9E5DEE86224B986A0091CECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E68047D228497BD0039F808 /* TextCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCustomCell.xib; sourceTree = "<group>"; };
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -250,7 +255,6 @@
 		9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCustomCell.xib; sourceTree = "<group>"; };
 		9EDD673C227C8F360082074C /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		9EDD674B227CA2750082074C /* VideoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCustomCell.xib; sourceTree = "<group>"; };
-		9EDD674C227CA2750082074C /* TextCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCustomCell.xib; sourceTree = "<group>"; };
 		9EDD674D227CA2750082074C /* PhotoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCustomCell.xib; sourceTree = "<group>"; };
 		9EDD6751227CA3100082074C /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		9EDD6753227CA3190082074C /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -401,6 +405,7 @@
 				9ECF074722523FAB0082FC1F /* Notifications */,
 				9ECF073E22521D590082FC1F /* OffersStatus */,
 				9EB24E9A2227F215004B0C66 /* SignUp */,
+				9E56289C22840D4A003B4FE2 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,7 +466,7 @@
 				9EFEA4B7224247B4002C9EB0 /* OffersStatus.storyboard */,
 				9EFEA4BB224247D0002C9EB0 /* Notifications.storyboard */,
 				9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */,
-				9EDD674C227CA2750082074C /* TextCustomCell.xib */,
+				9E68047D228497BD0039F808 /* TextCustomCell.xib */,
 				9EDD674D227CA2750082074C /* PhotoCustomCell.xib */,
 				9EDD674B227CA2750082074C /* VideoCustomCell.xib */,
 			);
@@ -737,6 +742,7 @@
 			isa = PBXGroup;
 			children = (
 				9E93571D224111940036F23A /* SearchViewController.swift */,
+				9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -1059,10 +1065,10 @@
 			files = (
 				9E2DE5902272FEBF0093470F /* img_0.png in Resources */,
 				9E935722224116540036F23A /* Home.storyboard in Resources */,
+				9E68047E228497BD0039F808 /* TextCustomCell.xib in Resources */,
 				9E82E83122720F2400267820 /* EN.strings in Resources */,
 				9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */,
 				9E2DE58F2272FEBF0093470F /* ball.aep in Resources */,
-				9EDD674F227CA2750082074C /* TextCustomCell.xib in Resources */,
 				9EFEA4B622424536002C9EB0 /* MainTabBar.storyboard in Resources */,
 				9E82E83322720F2400267820 /* ES.strings in Resources */,
 				9E82E83022720F2400267820 /* ES.strings in Resources */,
@@ -1266,9 +1272,11 @@
 				9E4FA3642231A2FA00094509 /* Constants.swift in Sources */,
 				9ECF074322521DE30082FC1F /* OffersStatusData.swift in Sources */,
 				9ECF074922523FB70082FC1F /* NotificationsModel.swift in Sources */,
+				9E56289D22840D4A003B4FE2 /* User.swift in Sources */,
 				9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */,
 				9E82E83622720F2400267820 /* UIColorExtension.swift in Sources */,
 				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
+				9E56289F22840EAE003B4FE2 /* DisplaySearchedUser.swift in Sources */,
 				9E82E83C22720F2400267820 /* SignInService.swift in Sources */,
 				9EDD6752227CA3100082074C /* TextTableViewCell.swift in Sources */,
 				9E82E83B22720F2400267820 /* SignInJsonMocks.swift in Sources */,

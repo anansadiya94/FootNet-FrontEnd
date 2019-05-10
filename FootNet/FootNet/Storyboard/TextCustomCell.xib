@@ -32,13 +32,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZx-mr-BeN">
-                        <rect key="frame" x="8" y="66" width="42" height="83"/>
+                        <rect key="frame" x="8" y="66" width="42" height="117"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-c7-W8V">
-                        <rect key="frame" x="28" y="157" width="358" height="70"/>
+                        <rect key="frame" x="28" y="191" width="358" height="70"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02y-Fc-7O1" userLabel="View 1">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>

@@ -16,14 +16,8 @@ class TextTableViewCell: UITableViewCell {
     @IBOutlet weak var fireButtonLabel: UILabel!
     @IBOutlet weak var trophyButtonLabel: UILabel!
     @IBOutlet weak var medalButtonLabel: UILabel!
-    
     @IBOutlet var reactionButtonCollection: [UIButton]!
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        reactionButtonCollection.forEach { (button) in
-            button.isEnabled = button == sender
-        }
-    }
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
@@ -34,4 +28,11 @@ class TextTableViewCell: UITableViewCell {
         trophyButtonLabel.textColor = UIColor.colorText
         medalButtonLabel.textColor = UIColor.colorText
     }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        reactionButtonCollection.forEach { (button) in
+            button.isEnabled = button == sender
+        }
+    }
+    
 }

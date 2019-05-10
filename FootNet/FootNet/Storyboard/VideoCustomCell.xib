@@ -64,13 +64,6 @@
                     <constraint firstItem="fv3-Dj-Zw3" firstAttribute="centerY" secondItem="aya-eR-tdv" secondAttribute="centerY" id="zif-dp-oOD"/>
                 </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="nameSurnameLabel" destination="fv3-Dj-Zw3" id="Ozx-3f-k8B"/>
-                <outlet property="offerDetailLabel" destination="NmM-rY-uUj" id="2QO-ij-2IW"/>
-                <outlet property="offerImageView" destination="BDB-sK-jBV" id="emb-yY-CeI"/>
-                <outlet property="seeMoreButton" destination="dpz-4h-d9l" id="IcV-rJ-CZW"/>
-                <outlet property="userImageView" destination="aya-eR-tdv" id="zRe-tN-S7V"/>
-            </connections>
         </tableViewCell>
     </objects>
     <resources>

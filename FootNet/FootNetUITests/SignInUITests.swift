@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import FootNet
 
 class SignInUITests: XCTestCase {
     private var app: XCUIApplication!
@@ -23,10 +24,6 @@ class SignInUITests: XCTestCase {
             "en_US"
         ]
         app.launch()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
     }
 
     func testTextFieldShouldReturnCase() {

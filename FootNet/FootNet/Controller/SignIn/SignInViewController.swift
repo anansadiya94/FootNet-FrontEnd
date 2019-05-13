@@ -117,10 +117,8 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     private func configureOutlets() {
         //placeholders
         emailTextField.placeholder = "email_placeholder".localize()
-//        emailTextField.text = "anansadiya@gmail.com"
         emailTextField.keyboardType = .emailAddress
         passwordTextField.placeholder = "password_placeholder".localize()
-//        passwordTextField.text = "Anan1234"
         passwordTextField.isSecureTextEntry = true
         //buttons
         let forgotPasswordTitle = "forgotPassword_button".localize()
@@ -136,6 +134,10 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         spanishButton.setTitle("Español", for: .normal)
         catalanButton.setTitle("Català", for: .normal)
         enablaDisableButtons()
+        
+        //Comment for testing
+        emailTextField.text = "anansadiya@gmail.com"
+        passwordTextField.text = "Anan1234"
     }
     
     //dismiss keyboad configuration

@@ -69,7 +69,7 @@ class LeftHomeUITests: XCTestCase {
     
     func testCloseLeftHome() {
         testOpenLeftHomeCase()
-        app.children(matching: .window).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        app.navigationBars["FootNet"].buttons["More Info"].tap()
     }
     
     func testMyProfileLeftHome() {

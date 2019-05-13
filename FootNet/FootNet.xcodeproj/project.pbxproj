@@ -10,6 +10,38 @@
 		9E07D97F225E2CA1004A73A8 /* LeftHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D97E225E2CA1004A73A8 /* LeftHomeUITests.swift */; };
 		9E07D981225E3063004A73A8 /* RightHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D980225E3063004A73A8 /* RightHomeUITests.swift */; };
 		9E07D983225E3412004A73A8 /* MainTabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */; };
+		9E1493C1228952C50035C6DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
+		9E1493C2228952C50035C6DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
+		9E1493C3228952C80035C6DD /* LottieLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E82E785227200C100267820 /* LottieLaunchScreen.storyboard */; };
+		9E1493C4228952C80035C6DD /* LottieLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E82E785227200C100267820 /* LottieLaunchScreen.storyboard */; };
+		9E1493C5228952D10035C6DD /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
+		9E1493C6228952D10035C6DD /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
+		9E1493C7228952D40035C6DD /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
+		9E1493C8228952D40035C6DD /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
+		9E1493C9228952D60035C6DD /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
+		9E1493CA228952D70035C6DD /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
+		9E1493CB228952D90035C6DD /* RightHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D3223FA3270098AC44 /* RightHome.storyboard */; };
+		9E1493CC228952D90035C6DD /* RightHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D3223FA3270098AC44 /* RightHome.storyboard */; };
+		9E1493CD228952DB0035C6DD /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */; };
+		9E1493CE228952DB0035C6DD /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */; };
+		9E1493CF228952DD0035C6DD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E935721224116540036F23A /* Home.storyboard */; };
+		9E1493D0228952DE0035C6DD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E935721224116540036F23A /* Home.storyboard */; };
+		9E1493D1228952E10035C6DD /* Offers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B322424513002C9EB0 /* Offers.storyboard */; };
+		9E1493D2228952E10035C6DD /* Offers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B322424513002C9EB0 /* Offers.storyboard */; };
+		9E1493D3228952E30035C6DD /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B9224247C5002C9EB0 /* Search.storyboard */; };
+		9E1493D4228952E40035C6DD /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B9224247C5002C9EB0 /* Search.storyboard */; };
+		9E1493D5228952E60035C6DD /* OffersStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B7224247B4002C9EB0 /* OffersStatus.storyboard */; };
+		9E1493D6228952E60035C6DD /* OffersStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4B7224247B4002C9EB0 /* OffersStatus.storyboard */; };
+		9E1493D7228952E90035C6DD /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4BB224247D0002C9EB0 /* Notifications.storyboard */; };
+		9E1493D8228952E90035C6DD /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEA4BB224247D0002C9EB0 /* Notifications.storyboard */; };
+		9E1493D9228952EC0035C6DD /* OfferCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */; };
+		9E1493DA228952EC0035C6DD /* OfferCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */; };
+		9E1493DB228952EE0035C6DD /* TextCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC3CCE02284A3C5002F13A3 /* TextCustomCell.xib */; };
+		9E1493DC228952EE0035C6DD /* TextCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC3CCE02284A3C5002F13A3 /* TextCustomCell.xib */; };
+		9E1493DD228952F10035C6DD /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674D227CA2750082074C /* PhotoCustomCell.xib */; };
+		9E1493DE228952F10035C6DD /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674D227CA2750082074C /* PhotoCustomCell.xib */; };
+		9E1493DF228952F30035C6DD /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
+		9E1493E0228952F30035C6DD /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
 		9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
 		9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */; };
 		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
@@ -1112,9 +1144,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1493C4228952C80035C6DD /* LottieLaunchScreen.storyboard in Resources */,
+				9E1493DA228952EC0035C6DD /* OfferCustomCell.xib in Resources */,
+				9E1493D0228952DE0035C6DD /* Home.storyboard in Resources */,
+				9E1493DC228952EE0035C6DD /* TextCustomCell.xib in Resources */,
+				9E1493CE228952DB0035C6DD /* MainTabBar.storyboard in Resources */,
+				9E1493E0228952F30035C6DD /* VideoCustomCell.xib in Resources */,
 				9E912FB1224CBDC300BF3390 /* ForgotPassword.storyboard in Resources */,
+				9E1493C6228952D10035C6DD /* LeftHome.storyboard in Resources */,
+				9E1493C2228952C50035C6DD /* LaunchScreen.storyboard in Resources */,
+				9E1493D8228952E90035C6DD /* Notifications.storyboard in Resources */,
+				9E1493DD228952F10035C6DD /* PhotoCustomCell.xib in Resources */,
+				9E1493CA228952D70035C6DD /* EditProfile.storyboard in Resources */,
+				9E1493C8228952D40035C6DD /* MyProfile.storyboard in Resources */,
 				9E912FB0224CBDC000BF3390 /* SignIn.storyboard in Resources */,
+				9E1493D2228952E10035C6DD /* Offers.storyboard in Resources */,
+				9E1493CC228952D90035C6DD /* RightHome.storyboard in Resources */,
 				9E912FB2224CBDC700BF3390 /* SignUp.storyboard in Resources */,
+				9E1493D4228952E40035C6DD /* Search.storyboard in Resources */,
+				9E1493D6228952E60035C6DD /* OffersStatus.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,9 +1170,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1493C3228952C80035C6DD /* LottieLaunchScreen.storyboard in Resources */,
+				9E1493D9228952EC0035C6DD /* OfferCustomCell.xib in Resources */,
+				9E1493CF228952DD0035C6DD /* Home.storyboard in Resources */,
+				9E1493DB228952EE0035C6DD /* TextCustomCell.xib in Resources */,
+				9E1493CD228952DB0035C6DD /* MainTabBar.storyboard in Resources */,
+				9E1493DF228952F30035C6DD /* VideoCustomCell.xib in Resources */,
 				9EC7FE6F224A7E6B00ACD562 /* SignUp.storyboard in Resources */,
+				9E1493C5228952D10035C6DD /* LeftHome.storyboard in Resources */,
+				9E1493C1228952C50035C6DD /* LaunchScreen.storyboard in Resources */,
+				9E1493D7228952E90035C6DD /* Notifications.storyboard in Resources */,
+				9E1493DE228952F10035C6DD /* PhotoCustomCell.xib in Resources */,
+				9E1493C9228952D60035C6DD /* EditProfile.storyboard in Resources */,
+				9E1493C7228952D40035C6DD /* MyProfile.storyboard in Resources */,
 				9E5DEE7D224B87F60091CECB /* ForgotPassword.storyboard in Resources */,
+				9E1493D1228952E10035C6DD /* Offers.storyboard in Resources */,
+				9E1493CB228952D90035C6DD /* RightHome.storyboard in Resources */,
 				9EC7FE6E224A78C200ACD562 /* SignIn.storyboard in Resources */,
+				9E1493D3228952E30035C6DD /* Search.storyboard in Resources */,
+				9E1493D5228952E60035C6DD /* OffersStatus.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

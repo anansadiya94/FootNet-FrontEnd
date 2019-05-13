@@ -39,7 +39,9 @@ class SignInTests: XCTestCase {
         signInVC.passwordTextField!.text = ""
         signInVC.signInButton.sendActions(for: .touchUpInside)
         let expectedErrors = "emptyEmail_error".localize() + "emptyPassword_error".localize()
-        XCTAssertEqual(signInVC.signInFormErrors, expectedErrors)
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            XCTAssertEqual(self.signInVC.signInFormErrors, expectedErrors)
+        }
     }
     
     // Sign In Form Case 2
@@ -50,7 +52,9 @@ class SignInTests: XCTestCase {
         signInVC.passwordTextField!.text = ""
         signInVC.signInButton.sendActions(for: .touchUpInside)
         let expectedErrors = "invalidEmail_error".localize() + "emptyPassword_error".localize()
-        XCTAssertEqual(signInVC.signInFormErrors, expectedErrors)
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            XCTAssertEqual(self.signInVC.signInFormErrors, expectedErrors)
+        }
     }
     
     // Sign In Form Case 3
@@ -61,7 +65,9 @@ class SignInTests: XCTestCase {
         signInVC.passwordTextField!.text = "A"
         signInVC.signInButton.sendActions(for: .touchUpInside)
         let expectedErrors = "emptyEmail_error".localize() + "invalidPassword_error".localize()
-        XCTAssertEqual(signInVC.signInFormErrors, expectedErrors)
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            XCTAssertEqual(self.signInVC.signInFormErrors, expectedErrors)
+        }
     }
     
     // Sign In Form Case 4

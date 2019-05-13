@@ -28,7 +28,6 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     private var signInService = DependencyManager.resolve(interface: SignInServiceProtocol.self)
     var signInFormErrors: String = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         DDLogInfo("Load SignIn View")

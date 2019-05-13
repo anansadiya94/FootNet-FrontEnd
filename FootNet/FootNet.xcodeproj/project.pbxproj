@@ -573,6 +573,7 @@
 			children = (
 				9E4FA3632231A2FA00094509 /* Constants.swift */,
 				9E82E7FD22720F2400267820 /* Reachability.swift */,
+				9E1493E5228982E60035C6DD /* Common.swift */,
 				9E82E7FF22720F2400267820 /* Assets.xcassets */,
 				9E82E7EE22720F2400267820 /* Buttons */,
 				9E82E7F522720F2400267820 /* TextFields */,
@@ -589,7 +590,6 @@
 				9E82E81C22720F2400267820 /* conf */,
 				9E82E81E22720F2400267820 /* TextViews */,
 				9E82E82022720F2400267820 /* ImageViews */,
-				9E1493E5228982E60035C6DD /* Common.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

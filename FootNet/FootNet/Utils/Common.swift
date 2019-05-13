@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DisplayUserInfo {
+struct DisplayUserBasicInfo {
     let id: Int
     let fullName: String
     let photo: String

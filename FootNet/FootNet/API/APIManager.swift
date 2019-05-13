@@ -43,6 +43,12 @@ struct SignUpResponse: Codable {
     let status: String
 }
 
+struct TexHomeCellResponse {
+    let id: Int
+    let publicationText: String
+    var publicationReaction: PublicationReaction
+}
+
 class APIManager : ApiManagerProtocol {
     func signInRequest(_ signInRequest: SignInRequest) -> SignInResponse {
         let jsonResponseData = SignInJsonMocks(Email: signInRequest.email, Password: signInRequest.password)

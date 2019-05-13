@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var displayTexHomeCells = [DisplayTextHomeCell]()
-    var usersInfo = [DisplayUserInfo]()
+    var usersBasicInfo = [DisplayUserInfo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +27,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func generateUsersInfo() {
         for user in Constants.users {
-            usersInfo.append(DisplayUserInfo(id: user.id, fullName: user.name + " " + user.surname
-                , photo: user.photo))
+            usersBasicInfo.append(DisplayUserInfo(id: user.id, fullName: user.name + " " + user.surname, photo: user.photo))
         }
     }
     
     private func generateDisplayTextHomeCells() {
         for texHomeCellResponse in Constants.texHomeCellsResponse {
-            if let user = usersInfo.filter({$0.id == texHomeCellResponse.id}).first {
+            if let user = usersBasicInfo.filter({$0.id == texHomeCellResponse.id}).first {
                 displayTexHomeCells.append(
                     DisplayTextHomeCell(id: texHomeCellResponse.id, fullName: user.fullName, photo: user.photo, publicationText: texHomeCellResponse.publicationText, publicationReaction: texHomeCellResponse.publicationReaction)
                 )

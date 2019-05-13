@@ -43,6 +43,7 @@
 		9E1493DF228952F30035C6DD /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
 		9E1493E0228952F30035C6DD /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
 		9E1493E422897AA20035C6DD /* DisplayTextHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */; };
+		9E1493E6228982E60035C6DD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E5228982E60035C6DD /* Common.swift */; };
 		9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
 		9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */; };
 		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
@@ -190,6 +191,7 @@
 		9E07D980225E3063004A73A8 /* RightHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeUITests.swift; sourceTree = "<group>"; };
 		9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarUITests.swift; sourceTree = "<group>"; };
 		9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextHomeCell.swift; sourceTree = "<group>"; };
+		9E1493E5228982E60035C6DD /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		9E1B1E1F2225A55600C82019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfleViewController.swift; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 				9E82E81C22720F2400267820 /* conf */,
 				9E82E81E22720F2400267820 /* TextViews */,
 				9E82E82022720F2400267820 /* ImageViews */,
+				9E1493E5228982E60035C6DD /* Common.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1394,6 +1397,7 @@
 				9EFEA4B222422D99002C9EB0 /* MainTabBarController.swift in Sources */,
 				9ECF074C22523FCE0082FC1F /* NotificationsData.swift in Sources */,
 				9EB3A6CD222D7909002F244E /* UserProfileModel.swift in Sources */,
+				9E1493E6228982E60035C6DD /* Common.swift in Sources */,
 				9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */,
 				9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileViewCell.swift in Sources */,
 				9E82E83A22720F2400267820 /* SignUpService.swift in Sources */,

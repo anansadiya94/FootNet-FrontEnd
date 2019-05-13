@@ -7,11 +7,7 @@
 //
 
 import Foundation
-struct TexHomeCellResponse {
-    let id: Int
-    let publicationText: String
-    var publicationReaction: PublicationReaction
-}
+
 
 struct DisplayTextHomeCell {
     let id: Int
@@ -28,9 +24,5 @@ struct PublicationReaction {
     var fourthReactionCount: Int
 }
 
-struct DisplayUserInfo {
-    let id: Int
-    let fullName: String
-    let photo: String
-}
+
 

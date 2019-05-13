@@ -45,4 +45,17 @@ struct Constants{
         User(id: 10, profileType: .Player, name: "Pau", surname: "Carreño", email: "marcos@gmail.com", phone: "12121212", sex: "male".localize(), birthday: "12/02/1990", nationality: "AFG".localize(), location: "barcelona".localize(), actualClub: "ud_parc".localize(), photo: "joanet", bio: "Hola, soy el puto amo", record: "2010 barca", favoritePosition: "pos2".localize(), preferredPositions: "pos3".localize(), weight: "90 kg", height: "198 cm", amIFollowing: true),
         User(id: 11, profileType: .Player, name: "Marc", surname: "Jordana", email: "marcos@gmail.com", phone: "12121212", sex: "male".localize(), birthday: "12/02/1990", nationality: "AFG".localize(), location: "barcelona".localize(), actualClub: "ud_parc".localize(), photo: "joanet", bio: "Hola, soy el puto amo", record: "2010 barca", favoritePosition: "pos2".localize(), preferredPositions: "pos3".localize(), weight: "90 kg", height: "198 cm", amIFollowing: true)
     ]
+    
+    static var texHomeCellsResponse = [
+        TexHomeCellResponse(id: 2, publicationText: "Mañana jugamos a l2, venid a vernos",
+                            publicationReaction: PublicationReaction(firstReactionCount: 23, secondReactionCount: 13, thirdReactionCount: 12, fourthReactionCount: 123)),
+        TexHomeCellResponse(id: 4, publicationText: "He marcado 3 goles hoy, que bueno soy",
+                            publicationReaction: PublicationReaction(firstReactionCount: 3, secondReactionCount: 123, thirdReactionCount: 12, fourthReactionCount: 1223)),
+        TexHomeCellResponse(id: 5, publicationText: "Vaya golaso de Messi, D10S",
+                            publicationReaction: PublicationReaction(firstReactionCount: 3, secondReactionCount: 13, thirdReactionCount: 12, fourthReactionCount: 123)),
+        TexHomeCellResponse(id: 2, publicationText: "holiuiii",
+                            publicationReaction: PublicationReaction(firstReactionCount: 3, secondReactionCount: 1213, thirdReactionCount: 122, fourthReactionCount: 123)),
+        TexHomeCellResponse(id: 7, publicationText: "holiuasdasdiii",
+                            publicationReaction: PublicationReaction(firstReactionCount: 34, secondReactionCount: 112, thirdReactionCount: 1122, fourthReactionCount: 13323)),
+    ]
 }

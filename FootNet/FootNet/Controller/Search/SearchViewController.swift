@@ -9,13 +9,6 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-//    var displayUsers = [
-//        DisplaySearchedUser(id: 1, fullName: "Anan", photo: "homeRightImage", amIFollowing: true),
-//        DisplaySearchedUser(id: 2, fullName: "marcos", photo: "homeRightImage", amIFollowing: true),
-//        DisplaySearchedUser(id: 3, fullName: "hola", photo: "homeRightImage", amIFollowing: false),
-//        DisplaySearchedUser(id: 4, fullName: "adios", photo: "homeRightImage", amIFollowing: false)
-//    ]
-    
     var displayUsers = [DisplaySearchedUser]()
     var filteredDisplayUsers = [DisplaySearchedUser]()
     var searching: Bool = false

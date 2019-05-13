@@ -16,7 +16,7 @@ class TextTableViewCell: UITableViewCell {
     @IBOutlet weak var fireButtonLabel: UILabel!
     @IBOutlet weak var trophyButtonLabel: UILabel!
     @IBOutlet weak var medalButtonLabel: UILabel!
-    @IBOutlet var reactionButtonCollection: [UIButton]!
+    @IBOutlet var reactionButtonCollection: [MySuperCustomButton]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,9 +29,20 @@ class TextTableViewCell: UITableViewCell {
         medalButtonLabel.textColor = UIColor.colorText
     }
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
+    @IBAction func buttonPressed(_ sender: MySuperCustomButton) {
         reactionButtonCollection.forEach { (button) in
-            button.isEnabled = button == sender
+            button.isSelected = button == sender
+        }
+        sender.isSelected = true
+    }
+}
+
+
+class MySuperCustomButton : UIButton {
+    
+    override var isSelected: Bool {
+        didSet {
+            backgroundColor = self.isSelected ? .yellow : .clear
         }
     }
     

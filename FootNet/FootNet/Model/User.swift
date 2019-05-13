@@ -9,7 +9,7 @@
 import Foundation
 
 struct User {
-    let id: Int
+    var id: Int
     let profileType: ProfileType
     let name: String
     let surname: String

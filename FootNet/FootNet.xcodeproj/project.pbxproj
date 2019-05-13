@@ -42,6 +42,7 @@
 		9E1493DE228952F10035C6DD /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674D227CA2750082074C /* PhotoCustomCell.xib */; };
 		9E1493DF228952F30035C6DD /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
 		9E1493E0228952F30035C6DD /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
+		9E1493E422897AA20035C6DD /* DisplayTextHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */; };
 		9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
 		9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */; };
 		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
@@ -188,6 +189,7 @@
 		9E07D97E225E2CA1004A73A8 /* LeftHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHomeUITests.swift; sourceTree = "<group>"; };
 		9E07D980225E3063004A73A8 /* RightHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeUITests.swift; sourceTree = "<group>"; };
 		9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarUITests.swift; sourceTree = "<group>"; };
+		9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextHomeCell.swift; sourceTree = "<group>"; };
 		9E1B1E1F2225A55600C82019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfleViewController.swift; sourceTree = "<group>"; };
@@ -802,6 +804,7 @@
 			isa = PBXGroup;
 			children = (
 				9E935717224111700036F23A /* HomeViewController.swift */,
+				9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1335,6 +1338,7 @@
 				9E82E83522720F2400267820 /* StoryboardExtension.swift in Sources */,
 				9EC3CCDD22849E0E002F13A3 /* TextTableViewCell.swift in Sources */,
 				9E82E83922720F2400267820 /* APIManager.swift in Sources */,
+				9E1493E422897AA20035C6DD /* DisplayTextHomeCell.swift in Sources */,
 				9ECF07462252246D0082FC1F /* OffersStatusTableViewCell.swift in Sources */,
 				9EC4A3932243F8CD003030ED /* LeftHomeTableViewController.swift in Sources */,
 				9EDD673D227C8F360082074C /* DependencyManager.swift in Sources */,

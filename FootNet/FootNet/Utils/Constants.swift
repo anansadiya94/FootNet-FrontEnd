@@ -46,6 +46,15 @@ struct Constants{
         User(id: 11, profileType: .Player, name: "Marc", surname: "Jordana", email: "marcos@gmail.com", phone: "12121212", sex: "male".localize(), birthday: "12/02/1990", nationality: "AFG".localize(), location: "barcelona".localize(), actualClub: "ud_parc".localize(), photo: "joanet", bio: "Hola, soy el puto amo", record: "2010 barca", favoritePosition: "pos2".localize(), preferredPositions: "pos3".localize(), weight: "90 kg", height: "198 cm", amIFollowing: true)
     ]
     
+    static var usersBasicInfo : [DisplayUserBasicInfo] = {
+        var usersBasicInfo = [DisplayUserBasicInfo]()
+        for user in Constants.users {
+            let item = DisplayUserBasicInfo(id: user.id, fullName: user.name + " " + user.surname, photo: user.photo)
+            usersBasicInfo.append(item)
+        }
+        return usersBasicInfo
+    }()
+    
     static var texHomeCellsResponse = [
         TexHomeCellResponse(id: 2, publicationText: "Mañana jugamos a l2, venid a vernos",
                             publicationReaction: PublicationReaction(firstReactionCount: 23, secondReactionCount: 13, thirdReactionCount: 12, fourthReactionCount: 123)),

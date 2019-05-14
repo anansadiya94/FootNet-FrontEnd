@@ -13,7 +13,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var displayTexHomeCells = [DisplayTextHomeCell]()
-    var usersBasicInfo = [DisplayUserBasicInfo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +20,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         setTabBarItem()
         setPublishButton()
         registerNib()
-        generateUsersInfo()
         generateDisplayTextHomeCells()
     }
-    
-    private func generateUsersInfo() {
-        for user in Constants.users {
-            usersBasicInfo.append(DisplayUserBasicInfo(id: user.id, fullName: user.name + " " + user.surname, photo: user.photo))
-        }
-    }
-    
+
     private func generateDisplayTextHomeCells() {
         for texHomeCellResponse in Constants.texHomeCellsResponse {
-            if let user = usersBasicInfo.filter({$0.id == texHomeCellResponse.id}).first {
+            if let user = Constants.usersBasicInfo.filter({$0.id == texHomeCellResponse.id}).first {
                 displayTexHomeCells.append(
                     DisplayTextHomeCell(id: texHomeCellResponse.id, fullName: user.fullName, photo: user.photo, publicationText: texHomeCellResponse.publicationText, publicationReaction: texHomeCellResponse.publicationReaction)
                 )

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TexHomeCellDelegate : class {
-    func increaseCounter(publicationId: Int, buttonTag: Int, textTableViewCell: TextTableViewCell)
+    func increaseCounter(publicationId: Int, selectedButtonTag: Int, toBeSelectedButtonTag: Int, textTableViewCell: TextTableViewCell)
 }
 
 class TextTableViewCell: UITableViewCell {
@@ -23,6 +23,9 @@ class TextTableViewCell: UITableViewCell {
     @IBOutlet var reactionButtonCollection: [MySuperCustomButton]!
     weak var texHomeCellDelegate : TexHomeCellDelegate?
     var publicationIdD: Int = 0
+    
+    var selectedButtonTag: Int = 0
+    var toBeSelectedButtonTag: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,19 +51,20 @@ class TextTableViewCell: UITableViewCell {
         self.texHomeCellDelegate = texHomeCellDelegate
     }
     
-    func updateValues(first : Int) {
-        
-    }
-    
     @IBAction func buttonPressed(_ sender: MySuperCustomButton) {
+        if let selectedButton = reactionButtonCollection.filter({$0.isSelected == true}).first {
+            selectedButtonTag = selectedButton.tag
+        }
+        
         //Button selected or not
         reactionButtonCollection.forEach { (button) in
             button.isSelected = button == sender
         }
         sender.isSelected = true
         
+        toBeSelectedButtonTag = sender.tag
         //change count
-        texHomeCellDelegate?.increaseCounter(publicationId: publicationIdD, buttonTag: sender.tag, textTableViewCell: self)
+        texHomeCellDelegate?.increaseCounter(publicationId: publicationIdD, selectedButtonTag: selectedButtonTag, toBeSelectedButtonTag: toBeSelectedButtonTag, textTableViewCell: self)
     }
 }
 

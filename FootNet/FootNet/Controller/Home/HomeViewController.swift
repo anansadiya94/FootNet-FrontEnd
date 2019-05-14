@@ -60,12 +60,27 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
 extension HomeViewController: TexHomeCellDelegate {
-    func increaseCounter(publicationId: Int, buttonTag: Int, textTableViewCell: TextTableViewCell) {
-        
+    func increaseCounter(publicationId: Int, selectedButtonTag: Int, toBeSelectedButtonTag: Int, textTableViewCell: TextTableViewCell) {
         self.displayTexHomeCells = displayTexHomeCells.map { (model: DisplayTextHomeCell) -> DisplayTextHomeCell in
             var mutableModel = model
             if mutableModel.publicationId == publicationId {
-                switch buttonTag {
+                switch selectedButtonTag {
+                case 0:
+                    break
+                case 1:
+                    mutableModel.publicationReaction.firstReactionCount -= 1
+                case 2:
+                    mutableModel.publicationReaction.secondReactionCount -= 1
+                case 3:
+                    mutableModel.publicationReaction.thirdReactionCount -= 1
+                case 4:
+                    mutableModel.publicationReaction.fourthReactionCount -= 1
+                default:
+                    break
+                }
+                switch toBeSelectedButtonTag {
+                case 0:
+                    break
                 case 1:
                     mutableModel.publicationReaction.firstReactionCount += 1
                 case 2:

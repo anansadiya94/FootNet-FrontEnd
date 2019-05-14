@@ -56,15 +56,17 @@ class TextTableViewCell: UITableViewCell {
             selectedButtonTag = selectedButton.tag
         }
         
-        //Button selected or not
         reactionButtonCollection.forEach { (button) in
             button.isSelected = button == sender
         }
         sender.isSelected = true
-        
         toBeSelectedButtonTag = sender.tag
-        //change count
         texHomeCellDelegate?.increaseCounter(publicationId: publicationIdD, selectedButtonTag: selectedButtonTag, toBeSelectedButtonTag: toBeSelectedButtonTag, textTableViewCell: self)
+        
+        print("----------")
+        print("Selected: \(selectedButtonTag)")
+        print("To be Selected: \(toBeSelectedButtonTag)")
+        print("----------")
     }
 }
 
@@ -73,7 +75,7 @@ class TextTableViewCell: UITableViewCell {
 class MySuperCustomButton : UIButton {
     override var isSelected: Bool {
         didSet {
-            backgroundColor = self.isSelected ? .yellow : .clear
+            backgroundColor = self.isSelected ? .clear : .clear
         }
     }
 }

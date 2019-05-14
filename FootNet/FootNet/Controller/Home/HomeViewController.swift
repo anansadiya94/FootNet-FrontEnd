@@ -95,6 +95,10 @@ extension HomeViewController: TexHomeCellDelegate {
             }
             return mutableModel
         }
+        
+        //TODO: FIX RELOAD ROWS AT
+//        guard let indexPath = self.tableView.indexPath(for: textTableViewCell) else {return}
+//        tableView.reloadRows(at: [indexPath], with: .none)
         tableView.reloadData()
     }
 }

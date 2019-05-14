@@ -33,7 +33,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
     private func setTabBarItem() {
         tabBarItem.title = "homeTabBar".localize()
     }
@@ -57,7 +56,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 }
-
 
 extension HomeViewController: TexHomeCellDelegate {
     func increaseCounter(publicationId: Int, selectedButtonTag: Int, toBeSelectedButtonTag: Int, textTableViewCell: TextTableViewCell) {

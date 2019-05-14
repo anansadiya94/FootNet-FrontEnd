@@ -28,12 +28,12 @@ class LottieLaunchScreenViewController: BaseViewController {
         lottieAnimationView.isHidden = false
         lottieAnimationView.play()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.lottieAnimationView.stop()
-            self.lottieAnimationView.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+            self?.lottieAnimationView.stop()
+            self?.lottieAnimationView.isHidden = true
             let signInStoryboard = UIStoryboard(name: "SignIn", bundle: nil)
             let signInViewController = signInStoryboard.instantiateViewController(withIdentifier: "SignInViewController")
-            self.present(signInViewController, animated: true, completion: nil)
+            self?.present(signInViewController, animated: true, completion: nil)
         }
     }
 }

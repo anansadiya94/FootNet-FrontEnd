@@ -49,22 +49,22 @@ struct Constants{
     static var usersBasicInfo : [DisplayUserBasicInfo] = {
         var usersBasicInfo = [DisplayUserBasicInfo]()
         for user in Constants.users {
-            let item = DisplayUserBasicInfo(id: user.id, fullName: user.name + " " + user.surname, photo: user.photo)
+            let item = DisplayUserBasicInfo(id: user.id, fullName: user.name + " " + user.surname, photo: user.photo, amIFollowing: user.amIFollowing)
             usersBasicInfo.append(item)
         }
         return usersBasicInfo
     }()
     
     static var texHomeCellsResponse = [
-        TexHomeCellResponse(id: 2, publicationText: "Mañana jugamos a l2, venid a vernos",
+        TexHomeCellResponse(userId: 2, publicationId: 1, publicationText: "Mañana jugamos a l2, venid a vernos",
                             publicationReaction: PublicationReaction(firstReactionCount: 23, secondReactionCount: 13, thirdReactionCount: 12, fourthReactionCount: 123)),
-        TexHomeCellResponse(id: 4, publicationText: "He marcado 3 goles hoy, que bueno soy",
+        TexHomeCellResponse(userId: 4, publicationId: 2, publicationText: "He marcado 3 goles hoy, que bueno soy",
                             publicationReaction: PublicationReaction(firstReactionCount: 3, secondReactionCount: 123, thirdReactionCount: 12, fourthReactionCount: 1223)),
-        TexHomeCellResponse(id: 5, publicationText: "Vaya golaso de Messi, D10S",
+        TexHomeCellResponse(userId: 5, publicationId: 3, publicationText: "Vaya golaso de Messi, D10S",
                             publicationReaction: PublicationReaction(firstReactionCount: 3, secondReactionCount: 13, thirdReactionCount: 12, fourthReactionCount: 123)),
-        TexHomeCellResponse(id: 2, publicationText: "holiuiii",
+        TexHomeCellResponse(userId: 2, publicationId: 4, publicationText: "holiuiii",
                             publicationReaction: PublicationReaction(firstReactionCount: 3, secondReactionCount: 1213, thirdReactionCount: 122, fourthReactionCount: 123)),
-        TexHomeCellResponse(id: 7, publicationText: "holiuasdasdiii",
+        TexHomeCellResponse(userId: 7, publicationId: 5, publicationText: "holiuasdasdiii",
                             publicationReaction: PublicationReaction(firstReactionCount: 34, secondReactionCount: 112, thirdReactionCount: 1122, fourthReactionCount: 13323)),
     ]
 }

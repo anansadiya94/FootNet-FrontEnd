@@ -12,4 +12,5 @@ struct DisplayUserBasicInfo {
     let id: Int
     let fullName: String
     let photo: String
+    var amIFollowing: Bool
 }

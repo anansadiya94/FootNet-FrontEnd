@@ -10,7 +10,8 @@ import Foundation
 
 
 struct DisplayTextHomeCell {
-    let id: Int
+    let userId: Int
+    let publicationId: Int
     let fullName: String
     let photo: String
     let publicationText: String

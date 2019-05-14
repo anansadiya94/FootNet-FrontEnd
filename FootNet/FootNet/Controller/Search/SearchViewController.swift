@@ -46,7 +46,7 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func customFollowButtonTapped(_ sender: CustomFollowButton) {
-        displayUsers = displayUsers.map{
+        displayUsers = displayUsers.map {
             var displayUser = $0
             if $0.id == sender.tag {
                 displayUser.amIFollowing = !displayUser.amIFollowing

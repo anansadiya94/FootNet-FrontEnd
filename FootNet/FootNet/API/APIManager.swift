@@ -44,7 +44,8 @@ struct SignUpResponse: Codable {
 }
 
 struct TexHomeCellResponse {
-    let id: Int
+    let userId: Int
+    let publicationId: Int
     let publicationText: String
     var publicationReaction: PublicationReaction
 }

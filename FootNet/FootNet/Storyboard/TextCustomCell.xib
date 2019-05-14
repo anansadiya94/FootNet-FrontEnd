@@ -43,7 +43,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02y-Fc-7O1" userLabel="View 1">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jia-mS-8jH" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jia-mS-8jH" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="CfI-A9-Rhg"/>
@@ -54,7 +54,7 @@
                                             <action selector="buttonPressed:" destination="2NQ-5W-AWl" eventType="touchUpInside" id="rJx-Nt-jiE"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsm-oc-48R">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsm-oc-48R">
                                         <rect key="frame" x="16" y="50" width="18" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="kAv-Xh-sOS"/>
@@ -78,7 +78,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYH-gm-6qz" userLabel="View 2">
                                 <rect key="frame" x="102.5" y="0.0" width="50" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuc-l9-zXa" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuc-l9-zXa" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="5rY-5P-RnD"/>
@@ -89,7 +89,7 @@
                                             <action selector="buttonPressed:" destination="2NQ-5W-AWl" eventType="touchUpInside" id="HuU-PW-M2h"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ab-0g-otB">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ab-0g-otB">
                                         <rect key="frame" x="15" y="50" width="20.5" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="x1g-ax-skP"/>
@@ -113,7 +113,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRe-tR-6Dq" userLabel="View 3">
                                 <rect key="frame" x="205.5" y="0.0" width="50" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3a-dD-HEo" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3a-dD-HEo" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Qer-Ku-79E"/>
@@ -124,7 +124,7 @@
                                             <action selector="buttonPressed:" destination="2NQ-5W-AWl" eventType="touchUpInside" id="Pia-1w-J56"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfw-k7-iR7">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfw-k7-iR7">
                                         <rect key="frame" x="14.5" y="50" width="21" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="ZNc-f3-e3O"/>
@@ -148,7 +148,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4M-VP-pLQ" userLabel="View 4">
                                 <rect key="frame" x="308" y="0.0" width="50" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASP-jF-jJh" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASP-jF-jJh" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="TUp-J8-zOB"/>
@@ -159,7 +159,7 @@
                                             <action selector="buttonPressed:" destination="2NQ-5W-AWl" eventType="touchUpInside" id="u9e-Cd-i3w"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA9-Lk-nc8">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA9-Lk-nc8">
                                         <rect key="frame" x="14.5" y="50" width="21" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="wCk-0r-EGx"/>
@@ -198,12 +198,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="fireButtonLabel" destination="0ab-0g-otB" id="P13-XA-J0h"/>
-                <outlet property="medalButtonLabel" destination="cA9-Lk-nc8" id="C0d-ML-AsX"/>
-                <outlet property="nameSurnameLabel" destination="Vgj-an-flX" id="mRh-By-2o3"/>
-                <outlet property="textPostLabel" destination="wZx-mr-BeN" id="MpF-QO-Cf0"/>
-                <outlet property="topButtonLabel" destination="fsm-oc-48R" id="Zbc-3q-5xF"/>
-                <outlet property="trophyButtonLabel" destination="hfw-k7-iR7" id="OZI-oW-e1l"/>
+                <outlet property="firstReactionCountLabel" destination="fsm-oc-48R" id="fbx-NI-xp5"/>
+                <outlet property="fourthReactionCountLabel" destination="cA9-Lk-nc8" id="ZRB-uw-5Is"/>
+                <outlet property="fullNameLabel" destination="Vgj-an-flX" id="mRh-By-2o3"/>
+                <outlet property="publicationTextLabel" destination="wZx-mr-BeN" id="MpF-QO-Cf0"/>
+                <outlet property="secondReactionCountLabel" destination="0ab-0g-otB" id="FC0-Df-M0j"/>
+                <outlet property="thirdReactionCountLabel" destination="hfw-k7-iR7" id="Dmx-PZ-MKN"/>
                 <outlet property="userImageView" destination="mqk-c9-E5j" id="KJF-oe-9I0"/>
                 <outletCollection property="reactionButtonCollection" destination="jia-mS-8jH" collectionClass="NSMutableArray" id="rnd-BL-hIC"/>
                 <outletCollection property="reactionButtonCollection" destination="Xuc-l9-zXa" collectionClass="NSMutableArray" id="Moj-im-Pzx"/>

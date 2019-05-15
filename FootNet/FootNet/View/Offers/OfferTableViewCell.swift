@@ -21,5 +21,12 @@ class OfferTableViewCell: UITableViewCell {
         nameSurnameLabel.textColor = UIColor.colorText
         offerDetailLabel.textColor = UIColor.colorText
     }
-
+    
+    func setUp(img: String, fullName: String, offerImg: String, offerTitle: String) {
+        userImageView.image = UIImage(named: img)
+        nameSurnameLabel.text = fullName
+        offerImageView.image = UIImage(named: offerImg)
+        offerDetailLabel.text = offerTitle
+        seeMoreButton.setTitle("seeMore_button".localize(), for: .normal)
+    }
 }

@@ -64,7 +64,8 @@ struct OfferCellResponse {
     let offerId: Int
     let offerTitle: String
     let offerText: String
-    let publicationDate: Date
+    let offerPhoto: String
+    let publicationDate: String
 }
 
 class APIManager : ApiManagerProtocol {

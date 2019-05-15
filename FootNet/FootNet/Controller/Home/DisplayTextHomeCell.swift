@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct DisplayTextHomeCell {
     let homeCellType: HomeCellType
     let userId: Int

@@ -13,6 +13,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var displayTexHomeCells = [DisplayTextHomeCell]()
+    var displayOfferCells = [DisplayOffercell]()
+    var offersViewController = OffersViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +22,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         setTabBarItem()
         setPublishButton()
         registerNib()
-        generateDisplayTextHomeCells()
+        displayTexHomeCells = generateDisplayTextHomeCells()
+        displayOfferCells = offersViewController.generateDisplayOfferCells()
     }
 
-    private func generateDisplayTextHomeCells() {
+    func generateDisplayTextHomeCells() -> [DisplayTextHomeCell] {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         for texHomeCellResponse in Constants.texHomeCellsResponse {
@@ -34,6 +37,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         displayTexHomeCells = displayTexHomeCells.sorted(by: { $0.publicationDate.compare($1.publicationDate) == .orderedDescending })
+        return displayTexHomeCells
     }
     
     private func setTabBarItem() {

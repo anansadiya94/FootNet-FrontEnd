@@ -24,13 +24,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     private func generateDisplayTextHomeCells() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         for texHomeCellResponse in Constants.texHomeCellsResponse {
             if let user = Constants.usersBasicInfo.filter({$0.id == texHomeCellResponse.userId && $0.amIFollowing == true}).first {
                 displayTexHomeCells.append(
-                    DisplayTextHomeCell(homeCellType: texHomeCellResponse.homeCellType, userId: texHomeCellResponse.userId, publicationId: texHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: texHomeCellResponse.publicationText, publicationReaction: texHomeCellResponse.publicationReaction)
+                    DisplayTextHomeCell(homeCellType: texHomeCellResponse.homeCellType, userId: texHomeCellResponse.userId, publicationId: texHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: texHomeCellResponse.publicationText, publicationDate: dateFormatter.date(from: texHomeCellResponse.publicationDate)!, publicationReaction: texHomeCellResponse.publicationReaction)
                 )
             }
         }
+        displayTexHomeCells = displayTexHomeCells.sorted(by: { $0.publicationDate.compare($1.publicationDate) == .orderedDescending })
     }
     
     private func setTabBarItem() {

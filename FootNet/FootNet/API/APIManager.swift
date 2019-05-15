@@ -54,7 +54,7 @@ struct TexHomeCellResponse {
     let userId: Int
     let publicationId: Int
     let publicationText: String
-    //let publicationDate: Date
+    let publicationDate: String
     var publicationReaction: PublicationReaction
 }
 
@@ -64,7 +64,7 @@ struct OfferCellResponse {
     let offerId: Int
     let offerTitle: String
     let offerText: String
-    //let publicationDate: Date
+    let publicationDate: Date
 }
 
 class APIManager : ApiManagerProtocol {

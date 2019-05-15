@@ -43,11 +43,28 @@ struct SignUpResponse: Codable {
     let status: String
 }
 
+enum HomeCellType {
+    case Offer
+    case Text
+    case Photo
+}
+
 struct TexHomeCellResponse {
+    let homeCellType: HomeCellType
     let userId: Int
     let publicationId: Int
     let publicationText: String
+    //let publicationDate: Date
     var publicationReaction: PublicationReaction
+}
+
+struct OfferCellResponse {
+    let homeCellType: HomeCellType
+    let userId: Int
+    let offerId: Int
+    let offerTitle: String
+    let offerText: String
+    //let publicationDate: Date
 }
 
 class APIManager : ApiManagerProtocol {

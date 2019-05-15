@@ -27,7 +27,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         for texHomeCellResponse in Constants.texHomeCellsResponse {
             if let user = Constants.usersBasicInfo.filter({$0.id == texHomeCellResponse.userId && $0.amIFollowing == true}).first {
                 displayTexHomeCells.append(
-                    DisplayTextHomeCell(userId: texHomeCellResponse.userId, publicationId: texHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: texHomeCellResponse.publicationText, publicationReaction: texHomeCellResponse.publicationReaction)
+                    DisplayTextHomeCell(homeCellType: texHomeCellResponse.homeCellType, userId: texHomeCellResponse.userId, publicationId: texHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: texHomeCellResponse.publicationText, publicationReaction: texHomeCellResponse.publicationReaction)
                 )
             }
         }

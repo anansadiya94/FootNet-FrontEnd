@@ -10,6 +10,7 @@ import Foundation
 
 
 struct DisplayTextHomeCell {
+    let homeCellType: HomeCellType
     let userId: Int
     let publicationId: Int
     let fullName: String

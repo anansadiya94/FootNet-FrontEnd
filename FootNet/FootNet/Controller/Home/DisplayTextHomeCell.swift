@@ -19,10 +19,15 @@ struct DisplayTextHomeCell {
 }
 
 struct PublicationReaction {
-    var firstReactionCount: Int
-    var secondReactionCount: Int
-    var thirdReactionCount: Int
-    var fourthReactionCount: Int
+    var firstReactionCount: Reaction
+    var secondReactionCount: Reaction
+    var thirdReactionCount: Reaction
+    var fourthReactionCount: Reaction
+}
+
+struct Reaction {
+    var reactionCount: Int
+    var reactionStatus: Bool
 }
 
 

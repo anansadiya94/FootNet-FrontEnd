@@ -44,10 +44,24 @@ class TextTableViewCell: UITableViewCell {
         userImageView.image = UIImage(named: img)
         fullNameLabel.text = fullName
         publicationTextLabel.text = publicationText
-        firstReactionCountLabel.text = String(publicationReaction.firstReactionCount)
-        secondReactionCountLabel.text = String(publicationReaction.secondReactionCount)
-        thirdReactionCountLabel.text = String(publicationReaction.thirdReactionCount)
-        fourthReactionCountLabel.text = String(publicationReaction.fourthReactionCount)
+        firstReactionCountLabel.text = String(publicationReaction.firstReactionCount.reactionCount)
+        secondReactionCountLabel.text = String(publicationReaction.secondReactionCount.reactionCount)
+        thirdReactionCountLabel.text = String(publicationReaction.thirdReactionCount.reactionCount)
+        fourthReactionCountLabel.text = String(publicationReaction.fourthReactionCount.reactionCount)
+        reactionButtonCollection.forEach { (button) in
+            switch button.tag {
+            case 1:
+                button.isSelected = publicationReaction.firstReactionCount.reactionStatus
+            case 2:
+                button.isSelected = publicationReaction.secondReactionCount.reactionStatus
+            case 3:
+                button.isSelected = publicationReaction.thirdReactionCount.reactionStatus
+            case 4:
+                button.isSelected = publicationReaction.fourthReactionCount.reactionStatus
+            default:
+                break
+            }
+        }
         self.texHomeCellDelegate = texHomeCellDelegate
     }
     

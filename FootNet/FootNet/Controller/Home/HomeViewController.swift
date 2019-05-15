@@ -66,13 +66,17 @@ extension HomeViewController: TexHomeCellDelegate {
                 case 0:
                     break
                 case 1:
-                    mutableModel.publicationReaction.firstReactionCount -= 1
+                    mutableModel.publicationReaction.firstReactionCount.reactionCount -= 1
+                    mutableModel.publicationReaction.firstReactionCount.reactionStatus = false
                 case 2:
-                    mutableModel.publicationReaction.secondReactionCount -= 1
+                    mutableModel.publicationReaction.secondReactionCount.reactionCount -= 1
+                    mutableModel.publicationReaction.secondReactionCount.reactionStatus = false
                 case 3:
-                    mutableModel.publicationReaction.thirdReactionCount -= 1
+                    mutableModel.publicationReaction.thirdReactionCount.reactionCount -= 1
+                    mutableModel.publicationReaction.thirdReactionCount.reactionStatus = false
                 case 4:
-                    mutableModel.publicationReaction.fourthReactionCount -= 1
+                    mutableModel.publicationReaction.fourthReactionCount.reactionCount -= 1
+                    mutableModel.publicationReaction.fourthReactionCount.reactionStatus = false
                 default:
                     break
                 }
@@ -80,13 +84,17 @@ extension HomeViewController: TexHomeCellDelegate {
                 case 0:
                     break
                 case 1:
-                    mutableModel.publicationReaction.firstReactionCount += 1
+                    mutableModel.publicationReaction.firstReactionCount.reactionCount += 1
+                    mutableModel.publicationReaction.firstReactionCount.reactionStatus = true
                 case 2:
-                    mutableModel.publicationReaction.secondReactionCount += 1
+                    mutableModel.publicationReaction.secondReactionCount.reactionCount += 1
+                    mutableModel.publicationReaction.secondReactionCount.reactionStatus = true
                 case 3:
-                    mutableModel.publicationReaction.thirdReactionCount += 1
+                    mutableModel.publicationReaction.thirdReactionCount.reactionCount += 1
+                    mutableModel.publicationReaction.thirdReactionCount.reactionStatus = true
                 case 4:
-                    mutableModel.publicationReaction.fourthReactionCount += 1
+                    mutableModel.publicationReaction.fourthReactionCount.reactionCount += 1
+                    mutableModel.publicationReaction.fourthReactionCount.reactionStatus = true
                 default:
                     break
                 }
@@ -94,9 +102,9 @@ extension HomeViewController: TexHomeCellDelegate {
             return mutableModel
         }
         
-        //TODO: FIX RELOAD ROWS AT
-//        guard let indexPath = self.tableView.indexPath(for: textTableViewCell) else {return}
-//        tableView.reloadRows(at: [indexPath], with: .none)
-        tableView.reloadData()
+        guard let indexPath = self.tableView.indexPath(for: textTableViewCell) else {return}
+        UIView.performWithoutAnimation {
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
     }
 }

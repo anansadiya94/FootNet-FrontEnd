@@ -49,15 +49,6 @@ enum HomeCellType {
     case Photo
 }
 
-struct TexHomeCellResponse {
-    let homeCellType: HomeCellType
-    let userId: Int
-    let publicationId: Int
-    let publicationText: String
-    let publicationDate: String
-    var publicationReaction: PublicationReaction
-}
-
 struct OfferCellResponse {
     let homeCellType: HomeCellType
     let userId: Int
@@ -66,6 +57,24 @@ struct OfferCellResponse {
     let offerText: String
     let offerPhoto: String
     let publicationDate: String
+}
+
+struct TextHomeCellResponse {
+    let homeCellType: HomeCellType
+    let userId: Int
+    let publicationId: Int
+    let publicationText: String
+    let publicationDate: String
+    var publicationReaction: PublicationReaction
+}
+
+struct PhotoHomeCellResponse {
+    let homeCellType: HomeCellType
+    let userId: Int
+    let publicationId: Int
+    let publicationPhoto: String
+    let publicationDate: String
+    var publicationReaction: PublicationReaction
 }
 
 class APIManager : ApiManagerProtocol {

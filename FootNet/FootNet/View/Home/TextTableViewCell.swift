@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TexHomeCellDelegate : class {
+protocol TextHomeCellDelegate : class {
     func increaseCounter(publicationId: Int, selectedButtonTag: Int, toBeSelectedButtonTag: Int, textTableViewCell: TextTableViewCell)
 }
 
@@ -21,7 +21,7 @@ class TextTableViewCell: UITableViewCell {
     @IBOutlet weak var thirdReactionCountLabel: UILabel!
     @IBOutlet weak var fourthReactionCountLabel: UILabel!
     @IBOutlet var reactionButtonCollection: [MySuperCustomButton]!
-    weak var texHomeCellDelegate : TexHomeCellDelegate?
+    weak var textHomeCellDelegate : TextHomeCellDelegate?
     var publicationIdD: Int = 0
     
     var selectedButtonTag: Int = 0
@@ -39,7 +39,7 @@ class TextTableViewCell: UITableViewCell {
         
     }
     
-    func setUp(publicationId: Int, img: String, fullName: String, publicationText: String, publicationReaction: PublicationReaction, texHomeCellDelegate : TexHomeCellDelegate) {
+    func setUp(publicationId: Int, img: String, fullName: String, publicationText: String, publicationReaction: PublicationReaction, textHomeCellDelegate : TextHomeCellDelegate) {
         publicationIdD = publicationId
         userImageView.image = UIImage(named: img)
         fullNameLabel.text = fullName
@@ -62,7 +62,7 @@ class TextTableViewCell: UITableViewCell {
                 break
             }
         }
-        self.texHomeCellDelegate = texHomeCellDelegate
+        self.textHomeCellDelegate = textHomeCellDelegate
     }
     
     @IBAction func buttonPressed(_ sender: MySuperCustomButton) {
@@ -75,7 +75,7 @@ class TextTableViewCell: UITableViewCell {
         }
         sender.isSelected = true
         toBeSelectedButtonTag = sender.tag
-        texHomeCellDelegate?.increaseCounter(publicationId: publicationIdD, selectedButtonTag: selectedButtonTag, toBeSelectedButtonTag: toBeSelectedButtonTag, textTableViewCell: self)
+        textHomeCellDelegate?.increaseCounter(publicationId: publicationIdD, selectedButtonTag: selectedButtonTag, toBeSelectedButtonTag: toBeSelectedButtonTag, textTableViewCell: self)
     }
 }
 

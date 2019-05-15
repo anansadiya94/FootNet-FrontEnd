@@ -76,11 +76,6 @@ class TextTableViewCell: UITableViewCell {
         sender.isSelected = true
         toBeSelectedButtonTag = sender.tag
         texHomeCellDelegate?.increaseCounter(publicationId: publicationIdD, selectedButtonTag: selectedButtonTag, toBeSelectedButtonTag: toBeSelectedButtonTag, textTableViewCell: self)
-        
-        print("----------")
-        print("Selected: \(selectedButtonTag)")
-        print("To be Selected: \(toBeSelectedButtonTag)")
-        print("----------")
     }
 }
 

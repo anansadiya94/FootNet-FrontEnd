@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var displayTextHomeCells = [DisplayTextHomeCell]()
     var displayPhotoHomeCells = [DisplayPhotoHomeCell]()
     var displayOfferCells = [DisplayOffercell]()
-    var homeCells = [homeCell]()
+    var homeCells = [HomeCell]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,22 +27,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         displayTextHomeCells = generateDisplayTextHomeCells()
         displayPhotoHomeCells = generateDisplayPhotoHomeCells()
         displayOfferCells = offersViewController.generateDisplayOfferCells()
-
-        for displayTextHomeCell in displayTextHomeCells {
-            homeCells.append(homeCell(homeCellType: displayTextHomeCell.homeCellType, cellId: displayTextHomeCell.publicationId, date: displayTextHomeCell.publicationDate))
-        }
-        
-        for displayPhotoHomeCell in displayPhotoHomeCells {
-            homeCells.append(homeCell(homeCellType: displayPhotoHomeCell.homeCellType, cellId: displayPhotoHomeCell.publicationId, date: displayPhotoHomeCell.publicationDate))
-        }
-        
-        
-        for displayOfferCell in displayOfferCells {
-            homeCells.append(homeCell(homeCellType: displayOfferCell.homeCellType, cellId: displayOfferCell.offerId, date: displayOfferCell.publicationDate))
-        }
-        
-        homeCells = homeCells.sorted(by: { $0.date.compare($1.date) == .orderedDescending })
-        
+        homeCells = generateHomeCells()
     }
 
     func generateDisplayTextHomeCells() -> [DisplayTextHomeCell] {
@@ -71,6 +56,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         displayPhotoHomeCells = displayPhotoHomeCells.sorted(by: { $0.publicationDate.compare($1.publicationDate) == .orderedDescending })
         return displayPhotoHomeCells
+    }
+    
+    func generateHomeCells() -> [HomeCell] {
+        for displayTextHomeCell in displayTextHomeCells {
+            homeCells.append(HomeCell(homeCellType: displayTextHomeCell.homeCellType, cellId: displayTextHomeCell.publicationId, date: displayTextHomeCell.publicationDate))
+        }
+        for displayPhotoHomeCell in displayPhotoHomeCells {
+            homeCells.append(HomeCell(homeCellType: displayPhotoHomeCell.homeCellType, cellId: displayPhotoHomeCell.publicationId, date: displayPhotoHomeCell.publicationDate))
+        }
+        for displayOfferCell in displayOfferCells {
+            homeCells.append(HomeCell(homeCellType: displayOfferCell.homeCellType, cellId: displayOfferCell.offerId, date: displayOfferCell.publicationDate))
+        }
+        homeCells = homeCells.sorted(by: { $0.date.compare($1.date) == .orderedDescending })
+        return homeCells
     }
     
     private func setTabBarItem() {

@@ -31,7 +31,7 @@ struct Reaction {
     var reactionStatus: Bool
 }
 
-struct homeCell {
+struct HomeCell {
     let homeCellType: HomeCellType
     let cellId: Int
     let date: Date

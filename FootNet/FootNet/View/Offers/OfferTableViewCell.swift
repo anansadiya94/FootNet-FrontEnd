@@ -8,12 +8,19 @@
 
 import UIKit
 
+protocol OfferCellDelegate : class {
+    func seeMoreButtonTapped(offerId: Int)
+}
+
 class OfferTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: CustomImageView!
     @IBOutlet weak var nameSurnameLabel: UILabel!
     @IBOutlet weak var offerImageView: UIImageView!
     @IBOutlet weak var offerDetailLabel: UILabel!
     @IBOutlet weak var seeMoreButton: UIButton!
+    weak var offerCellDelegate : OfferCellDelegate?
+    
+    var offerIdD: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,11 +29,17 @@ class OfferTableViewCell: UITableViewCell {
         offerDetailLabel.textColor = UIColor.colorText
     }
     
-    func setUp(img: String, fullName: String, offerImg: String, offerTitle: String) {
+    func setUp(offerId: Int, img: String, fullName: String, offerImg: String, offerTitle: String, offerCellDelegate : OfferCellDelegate) {
+        offerIdD = offerId
         userImageView.image = UIImage(named: img)
         nameSurnameLabel.text = fullName
         offerImageView.image = UIImage(named: offerImg)
         offerDetailLabel.text = offerTitle
         seeMoreButton.setTitle("seeMore_button".localize(), for: .normal)
+        self.offerCellDelegate = offerCellDelegate
+    }
+    
+    @IBAction func SeeMoreButtonTapped(_ sender: Any) {
+        offerCellDelegate?.seeMoreButtonTapped(offerId: offerIdD)
     }
 }

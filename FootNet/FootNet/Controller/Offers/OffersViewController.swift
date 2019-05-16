@@ -55,7 +55,19 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "offerCustomCell") as! OfferTableViewCell
-        cell.setUp(img: displayOfferCells[indexPath.row].photo, fullName: displayOfferCells[indexPath.row].fullName, offerImg: displayOfferCells[indexPath.row].offerPhoto, offerTitle: displayOfferCells[indexPath.row].offerTitle)
+        cell.setUp(offerId: displayOfferCells[indexPath.row].offerId, img: displayOfferCells[indexPath.row].photo, fullName: displayOfferCells[indexPath.row].fullName, offerImg: displayOfferCells[indexPath.row].offerPhoto, offerTitle: displayOfferCells[indexPath.row].offerTitle, offerCellDelegate: self)
         return cell
+    }
+}
+
+extension OffersViewController: OfferCellDelegate {
+    func seeMoreButtonTapped(offerId: Int) {
+        if let displayOfferCell = displayOfferCells.filter({$0.offerId == offerId}).first {
+            let offerDetailStoryboard = UIStoryboard(name: "OfferDetail", bundle: nil)
+            let offerDetailViewController = offerDetailStoryboard.instantiateViewController(withIdentifier: "OfferDetailViewController") as! OfferDetailViewController
+            offerDetailViewController.id = displayOfferCell.offerId
+            title = " "
+            self.navigationController?.pushViewController(offerDetailViewController, animated: true)
+        }
     }
 }

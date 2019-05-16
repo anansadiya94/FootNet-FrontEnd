@@ -105,6 +105,8 @@
 		9E82E84022720F2400267820 /* environments.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E82E81D22720F2400267820 /* environments.json */; };
 		9E82E84122720F2400267820 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81F22720F2400267820 /* CustomTextView.swift */; };
 		9E82E84222720F2400267820 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E82122720F2400267820 /* CustomImageView.swift */; };
+		9E8CB802228D893F00D285A0 /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CB801228D893F00D285A0 /* OfferDetailViewController.swift */; };
+		9E8CB804228D896300D285A0 /* OfferDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8CB803228D896300D285A0 /* OfferDetail.storyboard */; };
 		9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */; };
 		9E912FB0224CBDC000BF3390 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E912FB1224CBDC300BF3390 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
@@ -259,6 +261,8 @@
 		9E82E81D22720F2400267820 /* environments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = environments.json; sourceTree = "<group>"; };
 		9E82E81F22720F2400267820 /* CustomTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		9E82E82122720F2400267820 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		9E8CB801228D893F00D285A0 /* OfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
+		9E8CB803228D896300D285A0 /* OfferDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfferDetail.storyboard; sourceTree = "<group>"; };
 		9E8D8D21223AB90700A8A880 /* ValidateSignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignInForm.swift; sourceTree = "<group>"; };
 		9E935717224111700036F23A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E9357192241117C0036F23A /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
@@ -505,6 +509,7 @@
 				9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */,
 				9E935721224116540036F23A /* Home.storyboard */,
 				9EFEA4B322424513002C9EB0 /* Offers.storyboard */,
+				9E8CB803228D896300D285A0 /* OfferDetail.storyboard */,
 				9EFEA4B9224247C5002C9EB0 /* Search.storyboard */,
 				9EFEA4B7224247B4002C9EB0 /* OffersStatus.storyboard */,
 				9EFEA4BB224247D0002C9EB0 /* Notifications.storyboard */,
@@ -778,6 +783,7 @@
 			isa = PBXGroup;
 			children = (
 				9E9357192241117C0036F23A /* OffersViewController.swift */,
+				9E8CB801228D893F00D285A0 /* OfferDetailViewController.swift */,
 				9EE37000228CA12B00CBEF53 /* DisplayOfferCell.swift */,
 			);
 			path = Offers;
@@ -1136,6 +1142,7 @@
 				9E82E786227200C100267820 /* LottieLaunchScreen.storyboard in Resources */,
 				9EDD6750227CA2750082074C /* PhotoCustomCell.xib in Resources */,
 				9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */,
+				9E8CB804228D896300D285A0 /* OfferDetail.storyboard in Resources */,
 				9ED9BF36227848F3004F4D13 /* OfferCustomCell.xib in Resources */,
 				9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */,
 				9EFEA4B422424513002C9EB0 /* Offers.storyboard in Resources */,
@@ -1383,6 +1390,7 @@
 				9E82E82D22720F2400267820 /* Reachability.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* SignUpSelectProfileModel.swift in Sources */,
 				9ED9BF34227848C9004F4D13 /* OfferTableViewCell.swift in Sources */,
+				9E8CB802228D893F00D285A0 /* OfferDetailViewController.swift in Sources */,
 				9E82E82422720F2400267820 /* CustomChoosePhotoButton.swift in Sources */,
 				9EDD6758227CA6230082074C /* CustomPublishButton.swift in Sources */,
 				9EB24EAC2227F54C004B0C66 /* SignUpSelectProfileData.swift in Sources */,

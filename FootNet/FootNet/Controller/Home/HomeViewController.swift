@@ -134,7 +134,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func OfferTableViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, id: Int) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "offerCustomCell") as! OfferTableViewCell
         if let displayOfferCell = displayOfferCells.filter({$0.offerId == id}).first {
-            cell.setUp(img: displayOfferCell.photo, fullName: displayOfferCell.fullName, offerImg: displayOfferCell.offerPhoto, offerTitle: displayOfferCell.offerTitle)
+            cell.setUp(offerId: displayOfferCell.offerId, img: displayOfferCell.photo, fullName: displayOfferCell.fullName, offerImg: displayOfferCell.offerPhoto, offerTitle: displayOfferCell.offerTitle, offerCellDelegate: self as OfferCellDelegate)
         }
         return cell
     }
@@ -243,9 +243,16 @@ extension HomeViewController: PhotoHomeCellDelegate {
             tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
-    
-    
-    private func test() {
-        
+}
+
+extension HomeViewController: OfferCellDelegate {
+    func seeMoreButtonTapped(offerId: Int) {
+        if let displayOfferCell = displayOfferCells.filter({$0.offerId == offerId}).first {
+            let offerDetailStoryboard = UIStoryboard(name: "OfferDetail", bundle: nil)
+            let offerDetailViewController = offerDetailStoryboard.instantiateViewController(withIdentifier: "OfferDetailViewController") as! OfferDetailViewController
+            offerDetailViewController.id = displayOfferCell.offerId
+            title = " "
+            self.navigationController?.pushViewController(offerDetailViewController, animated: true)
+        }
     }
 }

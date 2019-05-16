@@ -12,7 +12,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var publishButton: CustomPublishButton!
     @IBOutlet weak var tableView: UITableView!
     
-    var offersViewController = OffersViewController()
     var displayTextHomeCells = [DisplayTextHomeCell]()
     var displayPhotoHomeCells = [DisplayPhotoHomeCell]()
     var displayOfferCells = [DisplayOffercell]()
@@ -26,7 +25,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         registerNib()
         displayTextHomeCells = generateDisplayTextHomeCells()
         displayPhotoHomeCells = generateDisplayPhotoHomeCells()
-        displayOfferCells = offersViewController.generateDisplayOfferCells()
+        displayOfferCells = generateDisplayOfferCells()
         homeCells = generateHomeCells()
     }
 
@@ -56,6 +55,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         displayPhotoHomeCells = displayPhotoHomeCells.sorted(by: { $0.publicationDate.compare($1.publicationDate) == .orderedDescending })
         return displayPhotoHomeCells
+    }
+    
+    //TODO: REFACTOR FUNCTION WITH OFFERSVIEWCONTROLLER
+    func generateDisplayOfferCells() -> [DisplayOffercell] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        for offerCellResponse in Constants.offerCellsResponse {
+            if let user = Constants.usersBasicInfo.filter({$0.id == offerCellResponse.userId && $0.amIFollowing == true}).first {
+                displayOfferCells.append(
+                    DisplayOffercell(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, publicationDate: dateFormatter.date(from: offerCellResponse.publicationDate)!)
+                )
+            }
+        }
+        displayOfferCells = displayOfferCells.sorted(by: { $0.publicationDate.compare($1.publicationDate) == .orderedDescending })
+        return displayOfferCells
     }
     
     func generateHomeCells() -> [HomeCell] {

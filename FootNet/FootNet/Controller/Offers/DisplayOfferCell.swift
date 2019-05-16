@@ -9,7 +9,7 @@
 import Foundation
 
 struct DisplayOffercell {
-    let homeCellType: HomeCellType
+    let homeCellType: HomeCellType = .Offer
     let userId: Int
     let offerId: Int
     let fullName: String

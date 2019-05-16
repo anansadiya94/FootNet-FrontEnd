@@ -9,7 +9,7 @@
 import Foundation
 
 struct DisplayPhotoHomeCell {
-    let homeCellType: HomeCellType
+    let homeCellType: HomeCellType = .Photo
     let userId: Int
     let publicationId: Int
     let fullName: String

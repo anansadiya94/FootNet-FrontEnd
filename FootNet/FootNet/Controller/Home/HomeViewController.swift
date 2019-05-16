@@ -12,10 +12,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var publishButton: CustomPublishButton!
     @IBOutlet weak var tableView: UITableView!
     
-    var displayTextHomeCells = [DisplayTextHomeCell]()
-    var displayOfferCells = [DisplayOffercell]()
-    var displayPhotoHomeCells = [DisplayPhotoHomeCell]()
     var offersViewController = OffersViewController()
+    var displayTextHomeCells = [DisplayTextHomeCell]()
+    var displayPhotoHomeCells = [DisplayPhotoHomeCell]()
+    var displayOfferCells = [DisplayOffercell]()
+    var homeCells = [homeCell]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         displayTextHomeCells = generateDisplayTextHomeCells()
         displayPhotoHomeCells = generateDisplayPhotoHomeCells()
         displayOfferCells = offersViewController.generateDisplayOfferCells()
+
+        for displayTextHomeCell in displayTextHomeCells {
+            homeCells.append(homeCell(homeCellType: displayTextHomeCell.homeCellType, cellId: displayTextHomeCell.publicationId, date: displayTextHomeCell.publicationDate))
+        }
+        
+        for displayPhotoHomeCell in displayPhotoHomeCells {
+            homeCells.append(homeCell(homeCellType: displayPhotoHomeCell.homeCellType, cellId: displayPhotoHomeCell.publicationId, date: displayPhotoHomeCell.publicationDate))
+        }
+        
+        
+        for displayOfferCell in displayOfferCells {
+            homeCells.append(homeCell(homeCellType: displayOfferCell.homeCellType, cellId: displayOfferCell.offerId, date: displayOfferCell.publicationDate))
+        }
+        
+        homeCells = homeCells.sorted(by: { $0.date.compare($1.date) == .orderedDescending })
         
     }
 
@@ -35,7 +51,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         for textHomeCellResponse in Constants.textHomeCellsResponse {
             if let user = Constants.usersBasicInfo.filter({$0.id == textHomeCellResponse.userId && $0.amIFollowing == true}).first {
                 displayTextHomeCells.append(
-                    DisplayTextHomeCell(homeCellType: textHomeCellResponse.homeCellType, userId: textHomeCellResponse.userId, publicationId: textHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: textHomeCellResponse.publicationText, publicationDate: dateFormatter.date(from: textHomeCellResponse.publicationDate)!, publicationReaction: textHomeCellResponse.publicationReaction)
+                    DisplayTextHomeCell(userId: textHomeCellResponse.userId, publicationId: textHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: textHomeCellResponse.publicationText, publicationDate: dateFormatter.date(from: textHomeCellResponse.publicationDate)!, publicationReaction: textHomeCellResponse.publicationReaction)
                 )
             }
         }
@@ -49,7 +65,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         for photoHomeCellResponse in Constants.photoHomeCellsResponse {
             if let user = Constants.usersBasicInfo.filter({$0.id == photoHomeCellResponse.userId && $0.amIFollowing == true}).first {
                 displayPhotoHomeCells.append(
-                    DisplayPhotoHomeCell(homeCellType: photoHomeCellResponse.homeCellType, userId: photoHomeCellResponse.userId, publicationId: photoHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationPhoto: photoHomeCellResponse.publicationPhoto, publicationDate: dateFormatter.date(from: photoHomeCellResponse.publicationDate)!, publicationReaction: photoHomeCellResponse.publicationReaction)
+                    DisplayPhotoHomeCell(userId: photoHomeCellResponse.userId, publicationId: photoHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationPhoto: photoHomeCellResponse.publicationPhoto, publicationDate: dateFormatter.date(from: photoHomeCellResponse.publicationDate)!, publicationReaction: photoHomeCellResponse.publicationReaction)
                 )
             }
         }
@@ -66,21 +82,47 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func registerNib() {
-        tableView.register(UINib(nibName: "OfferCustomCell", bundle: nil), forCellReuseIdentifier: "offerCustomCell")
         tableView.register(UINib(nibName: "TextCustomCell", bundle: nil), forCellReuseIdentifier: "textCustomCell")
         tableView.register(UINib(nibName: "PhotoCustomCell", bundle: nil), forCellReuseIdentifier: "photoCustomCell")
+        tableView.register(UINib(nibName: "OfferCustomCell", bundle: nil), forCellReuseIdentifier: "offerCustomCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return displayTextHomeCells.count
-        return displayPhotoHomeCells.count
+        return homeCells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "textCustomCell") as! TextTableViewCell
-//        cell.setUp(publicationId: displayTextHomeCells[indexPath.row].publicationId, img: displayTextHomeCells[indexPath.row].photo, fullName: displayTextHomeCells[indexPath.row].fullName, publicationText: displayTextHomeCells[indexPath.row].publicationText, publicationReaction: displayTextHomeCells[indexPath.row].publicationReaction, textHomeCellDelegate: self)
+        switch homeCells[indexPath.row].homeCellType {
+        case HomeCellType.Text:
+            return TextTableViewCell(TableView: tableView, IndexPath: indexPath, id: homeCells[indexPath.row].cellId)
+        case HomeCellType.Photo:
+            return PhotoTableViewCell(TableView: tableView, IndexPath: indexPath, id: homeCells[indexPath.row].cellId)
+        case HomeCellType.Offer:
+            return OfferTableViewCell(TableView: tableView, IndexPath: indexPath, id: homeCells[indexPath.row].cellId)
+        }
+    }
+    
+    func TextTableViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, id: Int) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "textCustomCell") as! TextTableViewCell
+        if let displayTextHomeCell = displayTextHomeCells.filter({$0.publicationId == id}).first {
+            cell.setUp(publicationId: displayTextHomeCell.publicationId, img: displayTextHomeCell.photo, fullName: displayTextHomeCell.fullName, publicationText: displayTextHomeCell.publicationText, publicationReaction: displayTextHomeCell.publicationReaction, textHomeCellDelegate: self as TextHomeCellDelegate)
+        }
+        return cell
+    }
+    
+    func PhotoTableViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, id: Int)-> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "photoCustomCell") as! PhotoTableViewCell
-        cell.setUp(publicationId: displayPhotoHomeCells[indexPath.row].publicationId, img: displayPhotoHomeCells[indexPath.row].photo, fullName: displayPhotoHomeCells[indexPath.row].fullName, publicationPhoto: displayPhotoHomeCells[indexPath.row].publicationPhoto, publicationReaction: displayPhotoHomeCells[indexPath.row].publicationReaction, photoHomeCellDelegate: self)
+        if let displayPhotoHomeCell = displayPhotoHomeCells.filter({$0.publicationId == id}).first {
+            cell.setUp(publicationId: displayPhotoHomeCell.publicationId, img: displayPhotoHomeCell.photo, fullName: displayPhotoHomeCell.fullName, publicationPhoto: displayPhotoHomeCell.publicationPhoto, publicationReaction: displayPhotoHomeCell.publicationReaction, photoHomeCellDelegate: self as PhotoHomeCellDelegate)
+        }
+        return cell
+    }
+    
+    func OfferTableViewCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath, id: Int) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "offerCustomCell") as! OfferTableViewCell
+        if let displayOfferCell = displayOfferCells.filter({$0.offerId == id}).first {
+            cell.setUp(img: displayOfferCell.photo, fullName: displayOfferCell.fullName, offerImg: displayOfferCell.offerPhoto, offerTitle: displayOfferCell.offerTitle)
+        }
         return cell
     }
 }

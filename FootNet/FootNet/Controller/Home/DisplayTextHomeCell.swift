@@ -9,7 +9,7 @@
 import Foundation
 
 struct DisplayTextHomeCell {
-    let homeCellType: HomeCellType
+    let homeCellType: HomeCellType = .Text
     let userId: Int
     let publicationId: Int
     let fullName: String
@@ -29,6 +29,12 @@ struct PublicationReaction {
 struct Reaction {
     var reactionCount: Int
     var reactionStatus: Bool
+}
+
+struct homeCell {
+    let homeCellType: HomeCellType
+    let cellId: Int
+    let date: Date
 }
 
 

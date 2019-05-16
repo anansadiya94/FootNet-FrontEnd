@@ -127,6 +127,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
 
 extension HomeViewController: TextHomeCellDelegate {
+    //TODO: SEPARATE THIS FUNCTION
     func increaseCounter(publicationId: Int, selectedButtonTag: Int, toBeSelectedButtonTag: Int, textTableViewCell: TextTableViewCell) {
         self.displayTextHomeCells = displayTextHomeCells.map { (model: DisplayTextHomeCell) -> DisplayTextHomeCell in
             var mutableModel = model
@@ -227,5 +228,10 @@ extension HomeViewController: PhotoHomeCellDelegate {
         UIView.performWithoutAnimation {
             tableView.reloadRows(at: [indexPath], with: .none)
         }
+    }
+    
+    
+    private func test() {
+        
     }
 }

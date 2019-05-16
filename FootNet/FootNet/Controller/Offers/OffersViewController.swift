@@ -65,7 +65,13 @@ extension OffersViewController: OfferCellDelegate {
         if let displayOfferCell = displayOfferCells.filter({$0.offerId == offerId}).first {
             let offerDetailStoryboard = UIStoryboard(name: "OfferDetail", bundle: nil)
             let offerDetailViewController = offerDetailStoryboard.instantiateViewController(withIdentifier: "OfferDetailViewController") as! OfferDetailViewController
-            offerDetailViewController.id = displayOfferCell.offerId
+            offerDetailViewController.userId = displayOfferCell.userId
+            offerDetailViewController.offerId = displayOfferCell.offerId
+            offerDetailViewController.fullName = displayOfferCell.fullName
+            offerDetailViewController.photo = displayOfferCell.photo
+            offerDetailViewController.offerPhoto = displayOfferCell.offerPhoto
+            offerDetailViewController.offerTitle = displayOfferCell.offerTitle
+            offerDetailViewController.offerText = displayOfferCell.offerText
             title = " "
             self.navigationController?.pushViewController(offerDetailViewController, animated: true)
         }

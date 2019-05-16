@@ -14,6 +14,7 @@ class OfferDetailViewController: UIViewController {
     @IBOutlet weak var offerImageView: UIImageView!
     @IBOutlet weak var offerTitleLabel: UILabel!
     @IBOutlet weak var offerTextLabel: UILabel!
+    @IBOutlet weak var offerRequestButton: CustomRequestButton!
 
     var offersViewController = OffersViewController()
     var displayOfferCells = [DisplayOffercell]()
@@ -24,6 +25,8 @@ class OfferDetailViewController: UIViewController {
     var offerPhoto: String = ""
     var offerTitle: String = ""
     var offerText: String = ""
+    var offerRequested: Bool = false
+    var offerStatus: OfferStatus = .NotRequested
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,12 @@ class OfferDetailViewController: UIViewController {
         offerTitleLabel.textColor = UIColor.colorText
         offerTextLabel.text = offerText
         offerTextLabel.textColor = UIColor.colorText
+        CustomRequestButton.setup(offerRequestButton, offerRequested)
+    }
+    
+    @IBAction func offerRequestButtonTapped(_ sender: CustomRequestButton) {
+        offerRequested = !offerRequested
+        CustomRequestButton.setup(offerRequestButton, offerRequested)
     }
 }
 

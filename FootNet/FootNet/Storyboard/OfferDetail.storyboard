@@ -49,26 +49,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGH-WE-M9W" customClass="CustomRequestButton" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="8" y="698" width="398" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="offerRequestButtonTapped:" destination="cFK-vG-AbO" eventType="touchUpInside" id="Pu6-oG-QOq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TaU-OW-iK2" firstAttribute="bottom" secondItem="OGH-WE-M9W" secondAttribute="bottom" constant="8" id="1e9-cz-HRX"/>
                             <constraint firstItem="jtr-xh-hZf" firstAttribute="leading" secondItem="TaU-OW-iK2" secondAttribute="leading" constant="8" id="4fB-fY-7ww"/>
                             <constraint firstItem="e2u-sP-5r6" firstAttribute="leading" secondItem="TaU-OW-iK2" secondAttribute="leading" constant="8" id="7NN-qH-9CI"/>
                             <constraint firstItem="1YJ-Wf-7VA" firstAttribute="leading" secondItem="TaU-OW-iK2" secondAttribute="leading" constant="8" id="AAV-1K-eOa"/>
                             <constraint firstItem="JIR-qb-D84" firstAttribute="leading" secondItem="TaU-OW-iK2" secondAttribute="leading" constant="8" id="FgM-N7-CH0"/>
                             <constraint firstItem="JIR-qb-D84" firstAttribute="top" secondItem="1YJ-Wf-7VA" secondAttribute="bottom" constant="8" id="LPd-G8-fjn"/>
                             <constraint firstItem="jxh-EO-qGy" firstAttribute="leading" secondItem="jtr-xh-hZf" secondAttribute="trailing" constant="8" id="Qy1-QE-7P8"/>
+                            <constraint firstItem="TaU-OW-iK2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JIR-qb-D84" secondAttribute="trailing" constant="8" id="WUc-BD-wGP"/>
                             <constraint firstItem="jtr-xh-hZf" firstAttribute="top" secondItem="TaU-OW-iK2" secondAttribute="top" constant="8" id="YeC-Tc-5oP"/>
                             <constraint firstItem="jxh-EO-qGy" firstAttribute="centerY" secondItem="jtr-xh-hZf" secondAttribute="centerY" id="ZHa-GU-mQC"/>
+                            <constraint firstItem="TaU-OW-iK2" firstAttribute="trailing" secondItem="OGH-WE-M9W" secondAttribute="trailing" constant="8" id="hiz-nk-lPh"/>
                             <constraint firstItem="e2u-sP-5r6" firstAttribute="top" secondItem="jtr-xh-hZf" secondAttribute="bottom" constant="8" id="kwc-MX-fqK"/>
                             <constraint firstItem="TaU-OW-iK2" firstAttribute="trailing" secondItem="e2u-sP-5r6" secondAttribute="trailing" constant="8" id="pN7-wT-AM9"/>
                             <constraint firstItem="1YJ-Wf-7VA" firstAttribute="top" secondItem="e2u-sP-5r6" secondAttribute="bottom" constant="8" id="s1v-cr-asu"/>
+                            <constraint firstItem="OGH-WE-M9W" firstAttribute="leading" secondItem="TaU-OW-iK2" secondAttribute="leading" constant="8" id="ujm-KS-vg7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TaU-OW-iK2"/>
                     </view>
                     <connections>
                         <outlet property="fullNameLabel" destination="jxh-EO-qGy" id="hQj-fN-JXc"/>
                         <outlet property="offerImageView" destination="e2u-sP-5r6" id="RuK-6q-A8P"/>
+                        <outlet property="offerRequestButton" destination="OGH-WE-M9W" id="sSP-3d-xk5"/>
                         <outlet property="offerTextLabel" destination="JIR-qb-D84" id="lht-SC-JhN"/>
                         <outlet property="offerTitleLabel" destination="1YJ-Wf-7VA" id="Mh6-kB-x15"/>
                         <outlet property="userImageView" destination="jtr-xh-hZf" id="n5m-Sd-C22"/>

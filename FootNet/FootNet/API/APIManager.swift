@@ -57,6 +57,15 @@ struct OfferCellResponse {
     let offerText: String
     let offerPhoto: String
     let publicationDate: String
+    var offerRequested: Bool
+    var offerStatus: OfferStatus
+}
+
+enum OfferStatus {
+    case NotRequested
+    case Accepted
+    case Pending
+    case Rejected
 }
 
 struct TextHomeCellResponse {

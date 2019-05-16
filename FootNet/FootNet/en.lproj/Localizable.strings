@@ -185,6 +185,10 @@
 "filter_button"="Filter";
 "seeMore_button"="See more";
 
+//Offer detail
+"request_button"="Request";
+"requested_button"="Requested";
+
 //Countries
 "AFG" = "Afghanistan";
 "ALA" = "Åland Islands";
@@ -430,3 +434,4 @@
 
 //home
 "publish_button"="Publish";
+

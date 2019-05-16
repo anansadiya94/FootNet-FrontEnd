@@ -18,4 +18,6 @@ struct DisplayOffercell {
     let offerText: String
     let offerPhoto: String
     let publicationDate: Date
+    var offerRequested: Bool
+    var offerStatus: OfferStatus
 }

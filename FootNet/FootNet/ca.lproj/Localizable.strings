@@ -184,6 +184,10 @@
 "filter_button"="Filtrar";
 "seeMore_button"="Veure més";
 
+//Offer detail
+"request_button"="Sol·licitud";
+"requested_button"="Sol·licitat";
+
 //Countries
 "AFG" = "Afganistan";
 "ALA" = "Illes Åland";

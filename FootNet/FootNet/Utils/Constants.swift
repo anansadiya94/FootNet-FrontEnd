@@ -89,8 +89,8 @@ struct Constants{
     ]
     
     static var offerCellsResponse = [
-        OfferCellResponse(homeCellType: .Offer, userId: 2, offerId: 1, offerTitle: "Se busca equipo en BCN", offerText: "Hola, soy Marcos, y busco un equipo en el centro", offerPhoto: "offerPhoto", publicationDate: "16-05-2019 23:59"),
-        OfferCellResponse(homeCellType: .Offer, userId: 5, offerId: 2, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy Gustavo, y busco un equipo en el centro de sabadell! llamadme", offerPhoto: "offerPhoto", publicationDate: "01-05-2019 23:59")
+        OfferCellResponse(homeCellType: .Offer, userId: 2, offerId: 1, offerTitle: "Se busca equipo en BCN", offerText: "Hola, soy Marcos, y busco un equipo en el centro", offerPhoto: "offerPhoto", publicationDate: "16-05-2019 23:59", offerRequested: false, offerStatus: .NotRequested),
+        OfferCellResponse(homeCellType: .Offer, userId: 5, offerId: 2, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy Gustavo, y busco un equipo en el centro de sabadell! llamadme", offerPhoto: "offerPhoto", publicationDate: "01-05-2019 23:59", offerRequested: false, offerStatus: .NotRequested)
     ]
     
     static var photoHomeCellsResponse = [

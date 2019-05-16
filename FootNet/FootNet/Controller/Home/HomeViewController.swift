@@ -64,7 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         for offerCellResponse in Constants.offerCellsResponse {
             if let user = Constants.usersBasicInfo.filter({$0.id == offerCellResponse.userId && $0.amIFollowing == true}).first {
                 displayOfferCells.append(
-                    DisplayOffercell(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, publicationDate: dateFormatter.date(from: offerCellResponse.publicationDate)!)
+                    DisplayOffercell(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, publicationDate: dateFormatter.date(from: offerCellResponse.publicationDate)!, offerRequested: offerCellResponse.offerRequested, offerStatus: offerCellResponse.offerStatus)
                 )
             }
         }
@@ -257,6 +257,7 @@ extension HomeViewController: OfferCellDelegate {
             offerDetailViewController.offerPhoto = displayOfferCell.offerPhoto
             offerDetailViewController.offerTitle = displayOfferCell.offerTitle
             offerDetailViewController.offerText = displayOfferCell.offerText
+            offerDetailViewController.offerRequested = displayOfferCell.offerRequested
             title = " "
             self.navigationController?.pushViewController(offerDetailViewController, animated: true)
         }

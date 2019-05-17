@@ -14,7 +14,7 @@ protocol OfferCellDelegate : class {
 
 class OfferTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: CustomImageView!
-    @IBOutlet weak var nameSurnameLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var offerImageView: UIImageView!
     @IBOutlet weak var offerDetailLabel: UILabel!
     @IBOutlet weak var seeMoreButton: UIButton!
@@ -25,14 +25,14 @@ class OfferTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
-        nameSurnameLabel.textColor = UIColor.colorText
+        fullNameLabel.textColor = UIColor.colorText
         offerDetailLabel.textColor = UIColor.colorText
     }
     
     func setUp(offerId: Int, img: String, fullName: String, offerImg: String, offerTitle: String, offerCellDelegate : OfferCellDelegate) {
         offerIdD = offerId
         userImageView.image = UIImage(named: img)
-        nameSurnameLabel.text = fullName
+        fullNameLabel.text = fullName
         offerImageView.image = UIImage(named: offerImg)
         offerDetailLabel.text = offerTitle
         seeMoreButton.setTitle("seeMore_button".localize(), for: .normal)

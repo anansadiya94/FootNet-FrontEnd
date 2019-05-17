@@ -10,7 +10,7 @@ import UIKit
 
 class LeftHomeTableViewCell: UITableViewCell {
     @IBOutlet weak var img: CustomImageView!
-    @IBOutlet weak var nameSurnameLabel: CustomLeftHomeLabel!
+    @IBOutlet weak var fullNameLabel: CustomLeftHomeLabel!
     @IBOutlet weak var profileTypeLabel: CustomLeftHomeLabel!
     @IBOutlet weak var myProfileImageView: UIImageView!
     @IBOutlet weak var myProfileLabel: CustomLeftHomeLabel!

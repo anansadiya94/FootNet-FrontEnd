@@ -42,7 +42,7 @@ class LeftHomeTableViewController: UITableViewController {
         case 0:
             return imageLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 1:
-            return nameSurnameLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+            return fullNameLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 2:
             return myProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 3:
@@ -65,9 +65,9 @@ class LeftHomeTableViewController: UITableViewController {
         return UITableViewCell()
     }
     
-    func nameSurnameLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
-        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "nameSurnameLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.nameSurnameLabel.text = userFullName
+    func fullNameLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "fullNameLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.fullNameLabel.text = userFullName
             return cell
         }
         return UITableViewCell()

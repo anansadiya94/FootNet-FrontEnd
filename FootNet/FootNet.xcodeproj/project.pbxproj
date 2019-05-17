@@ -16,8 +16,8 @@
 		9E1493C4228952C80035C6DD /* LottieLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E82E785227200C100267820 /* LottieLaunchScreen.storyboard */; };
 		9E1493C5228952D10035C6DD /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
 		9E1493C6228952D10035C6DD /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
-		9E1493C7228952D40035C6DD /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
-		9E1493C8228952D40035C6DD /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
+		9E1493C7228952D40035C6DD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* Profile.storyboard */; };
+		9E1493C8228952D40035C6DD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* Profile.storyboard */; };
 		9E1493C9228952D60035C6DD /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
 		9E1493CA228952D70035C6DD /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
 		9E1493CB228952D90035C6DD /* RightHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D3223FA3270098AC44 /* RightHome.storyboard */; };
@@ -44,10 +44,10 @@
 		9E1493E0228952F30035C6DD /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
 		9E1493E422897AA20035C6DD /* DisplayTextHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */; };
 		9E1493E6228982E60035C6DD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E5228982E60035C6DD /* Common.swift */; };
+		9E1B1368228F2021003908AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1367228F2021003908AE /* ProfileViewController.swift */; };
 		9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
-		9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */; };
 		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
-		9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */; };
+		9E1EC8562249219300E5B2E7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC8552249219300E5B2E7 /* Profile.storyboard */; };
 		9E1EC858224921AC00E5B2E7 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */; };
 		9E2DE5872272E0450093470F /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DE5862272E0450093470F /* LocalizationSystem.swift */; };
 		9E2DE58F2272FEBF0093470F /* ball.aep in Resources */ = {isa = PBXBuildFile; fileRef = 9E2DE58B2272FEBF0093470F /* ball.aep */; };
@@ -197,10 +197,10 @@
 		9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarUITests.swift; sourceTree = "<group>"; };
 		9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextHomeCell.swift; sourceTree = "<group>"; };
 		9E1493E5228982E60035C6DD /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		9E1B1367228F2021003908AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9E1B1E1F2225A55600C82019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfleViewController.swift; sourceTree = "<group>"; };
-		9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
+		9E1EC8552249219300E5B2E7 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		9E2DE5862272E0450093470F /* LocalizationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
 		9E2DE58B2272FEBF0093470F /* ball.aep */ = {isa = PBXFileReference; lastKnownFileType = file; path = ball.aep; sourceTree = "<group>"; };
@@ -353,12 +353,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9E1EC84F2249213500E5B2E7 /* MyProfile */ = {
+		9E1EC84F2249213500E5B2E7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				9E1EC8512249216200E5B2E7 /* MyProfileViewController.swift */,
+				9E1B1367228F2021003908AE /* ProfileViewController.swift */,
 			);
-			path = MyProfile;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		9E1EC8502249214300E5B2E7 /* EditProfile */ = {
@@ -466,7 +466,7 @@
 				9E5420CA223F9F500098AC44 /* NavigationDrawer */,
 				9E93571022410B830036F23A /* RightHome */,
 				9E93570F22410B7B0036F23A /* LeftHome */,
-				9E1EC84F2249213500E5B2E7 /* MyProfile */,
+				9E1EC84F2249213500E5B2E7 /* Profile */,
 				9E1EC8502249214300E5B2E7 /* EditProfile */,
 				9E93570E22410B700036F23A /* MainTabBar */,
 				9E93571522410FFC0036F23A /* Home */,
@@ -505,7 +505,7 @@
 				9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */,
 				9EB24EA02227F27D004B0C66 /* SignUp.storyboard */,
 				9E5420D1223FA3190098AC44 /* LeftHome.storyboard */,
-				9E1EC8552249219300E5B2E7 /* MyProfile.storyboard */,
+				9E1EC8552249219300E5B2E7 /* Profile.storyboard */,
 				9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */,
 				9E5420D3223FA3270098AC44 /* RightHome.storyboard */,
 				9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */,
@@ -1144,7 +1144,7 @@
 				9EB24E9E2227F27D004B0C66 /* SignUp.storyboard in Resources */,
 				9E82E786227200C100267820 /* LottieLaunchScreen.storyboard in Resources */,
 				9EDD6750227CA2750082074C /* PhotoCustomCell.xib in Resources */,
-				9E1EC8562249219300E5B2E7 /* MyProfile.storyboard in Resources */,
+				9E1EC8562249219300E5B2E7 /* Profile.storyboard in Resources */,
 				9E8CB804228D896300D285A0 /* OfferDetail.storyboard in Resources */,
 				9ED9BF36227848F3004F4D13 /* OfferCustomCell.xib in Resources */,
 				9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */,
@@ -1178,7 +1178,7 @@
 				9E1493D8228952E90035C6DD /* Notifications.storyboard in Resources */,
 				9E1493DD228952F10035C6DD /* PhotoCustomCell.xib in Resources */,
 				9E1493CA228952D70035C6DD /* EditProfile.storyboard in Resources */,
-				9E1493C8228952D40035C6DD /* MyProfile.storyboard in Resources */,
+				9E1493C8228952D40035C6DD /* Profile.storyboard in Resources */,
 				9E912FB0224CBDC000BF3390 /* SignIn.storyboard in Resources */,
 				9E1493D2228952E10035C6DD /* Offers.storyboard in Resources */,
 				9E1493CC228952D90035C6DD /* RightHome.storyboard in Resources */,
@@ -1204,7 +1204,7 @@
 				9E1493D7228952E90035C6DD /* Notifications.storyboard in Resources */,
 				9E1493DE228952F10035C6DD /* PhotoCustomCell.xib in Resources */,
 				9E1493C9228952D60035C6DD /* EditProfile.storyboard in Resources */,
-				9E1493C7228952D40035C6DD /* MyProfile.storyboard in Resources */,
+				9E1493C7228952D40035C6DD /* Profile.storyboard in Resources */,
 				9E5DEE7D224B87F60091CECB /* ForgotPassword.storyboard in Resources */,
 				9E1493D1228952E10035C6DD /* Offers.storyboard in Resources */,
 				9E1493CB228952D90035C6DD /* RightHome.storyboard in Resources */,
@@ -1363,6 +1363,7 @@
 				9EC4A3932243F8CD003030ED /* LeftHomeTableViewController.swift in Sources */,
 				9EDD673D227C8F360082074C /* DependencyManager.swift in Sources */,
 				9EE37003228CB02800CBEF53 /* DisplayPhotoHomeCell.swift in Sources */,
+				9E1B1368228F2021003908AE /* ProfileViewController.swift in Sources */,
 				9E82E82C22720F2400267820 /* Spinner.swift in Sources */,
 				9E93571E224111940036F23A /* SearchViewController.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
@@ -1388,7 +1389,6 @@
 				9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */,
 				9EFE51D42279A441002DB0BB /* CustomSeeMoreButton.swift in Sources */,
 				9EFE51D222799E14002DB0BB /* CustomFilterButton.swift in Sources */,
-				9E1EC8522249216200E5B2E7 /* MyProfileViewController.swift in Sources */,
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
 				9E82E83F22720F2400267820 /* CustomView.swift in Sources */,
 				9E82E82D22720F2400267820 /* Reachability.swift in Sources */,

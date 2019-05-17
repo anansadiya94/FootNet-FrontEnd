@@ -75,7 +75,7 @@ class LeftHomeTableViewController: UITableViewController {
     
     func myProfileLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
         if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.myProfileLabel.text = "myProfileLabel".localize()
+            cell.myProfileLabel.text = "profileLabel".localize()
             return cell
         }
         return UITableViewCell()

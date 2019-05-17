@@ -154,7 +154,7 @@
 "followLabel"="Sígueme en:";
 
 //Left home
-"myProfileLabel"="Mi perfil";
+"profileLabel"="Perfil";
 "editProfileLabel"="Editar perfil";
 "signOutLabel"="Cerrar sesión";
 "signOut_alert"="¿Estás seguro de que quieres cerrar sesión?";

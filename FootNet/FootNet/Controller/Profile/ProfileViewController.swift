@@ -1,20 +1,26 @@
 //
-//  MyProfileViewController.swift
+//  ProfileViewController.swift
 //  FootNet
 //
-//  Created by Anan Sadiya on 25/03/2019.
+//  Created by Anan Sadiya on 17/05/2019.
 //  Copyright © 2019 FootNet. All rights reserved.
 //
 
 import UIKit
 
-class MyProfileViewController: UIViewController {
+class ProfileViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.purple
-        title = "myProfileLabel".localize()
+        setBackground()
+        setTabBarItem()
     }
     
+    private func setTabBarItem() {
+        title = "editProfileLabel".localize()
+    }
+    
+
     /*
     // MARK: - Navigation
 

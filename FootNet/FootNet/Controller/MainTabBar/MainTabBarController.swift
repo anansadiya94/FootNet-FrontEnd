@@ -58,10 +58,10 @@ class MainTabBarController: UITabBarController {
     @objc func myProfileTapped() {
         //TODO - GET -> Profile detail
         //TODO - PUSH My profile
-        let myProfileStoryboard = UIStoryboard(name: "MyProfile", bundle: nil)
-        let myProfileViewController = myProfileStoryboard.instantiateViewController(withIdentifier: "MyProfileViewController")
+        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
         title = " "
-        self.navigationController?.pushViewController(myProfileViewController, animated: true)
+        self.navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     @objc func editProfileTapped() {

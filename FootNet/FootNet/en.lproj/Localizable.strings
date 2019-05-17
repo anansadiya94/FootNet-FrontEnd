@@ -157,7 +157,7 @@
 "followLabel"="Follow me on:";
 
 //Left home
-"myProfileLabel"="My profile";
+"profileLabel"="Profile";
 "editProfileLabel"="Edit profile";
 "signOutLabel"="Sign out";
 "signOut_alert"="Are you sure you want to sign out?";

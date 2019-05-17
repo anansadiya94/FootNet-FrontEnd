@@ -61,6 +61,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
             case 1:
                 DDLogInfo("Successfully signed in")
                 //Should use the logInResponseStruct.id to recuperate user information
+                UserDefaults.standard.set(signInResponse.id, forKey: "signUserId")
                 return true
             case 2:
                 signInErrorAlert("signIn_dataError_alert".localize(), "")
@@ -136,7 +137,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         enablaDisableButtons()
         
         //Comment for testing
-        emailTextField.text = "anansadiya@gmail.com"
+        emailTextField.text = "henry@gmail.com"
         passwordTextField.text = "Anan1234"
     }
     

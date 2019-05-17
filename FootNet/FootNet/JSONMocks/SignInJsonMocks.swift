@@ -23,6 +23,17 @@ func SignInJsonMocks(Email email:String, Password password: String) -> Data {
             ]
             """.data(using: .utf8)!
             return jsonResponseData
+        case "henry@gmail.com":
+            let jsonResponseData = """
+            [
+                {
+                    "id": 12,
+                    "code": 1,
+                    "status": "OK"
+                }
+            ]
+            """.data(using: .utf8)!
+            return jsonResponseData
         default:
             let jsonResponseData = """
             [

@@ -15,15 +15,26 @@ protocol AppNavigationDrawerDelegate: class {
 class LeftHomeTableViewController: UITableViewController {
     weak var delegate: AppNavigationDrawerDelegate?
     
+    var userFullName: String = ""
+    var userPhoto: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.colorSecondary
         tableView.tableFooterView = UIView(frame: .zero)
+        generateUserInfo()
     }
     
+    private func generateUserInfo() {
+        let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
+        if let user = Constants.usersBasicInfo.filter({$0.id == userId}).first {
+            userFullName = user.fullName
+            userPhoto = user.photo
+        }
+    }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 6
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,14 +44,12 @@ class LeftHomeTableViewController: UITableViewController {
         case 1:
             return nameSurnameLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 2:
-            return profileTypeLeftHomeCell(TableView: tableView, IndexPath: indexPath)
-        case 3:
             return myProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
-        case 4:
+        case 3:
             return editProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
-        case 5:
+        case 4:
             return signOutLeftHomeCell(TableView: tableView, IndexPath: indexPath)
-        case 6:
+        case 5:
             return deactivateLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         default:
             break
@@ -50,7 +59,7 @@ class LeftHomeTableViewController: UITableViewController {
     
     func imageLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
         if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "imageLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.img.image = #imageLiteral(resourceName: "joanet")
+            cell.img.image = UIImage(named: userPhoto)
             return cell
         }
         return UITableViewCell()
@@ -58,15 +67,7 @@ class LeftHomeTableViewController: UITableViewController {
     
     func nameSurnameLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
         if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "nameSurnameLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.nameSurnameLabel.text = "Joan Menéndez Alaminos"
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    func profileTypeLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
-        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "profileTypeLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.profileTypeLabel.text = "Jugador"
+            cell.nameSurnameLabel.text = userFullName
             return cell
         }
         return UITableViewCell()
@@ -116,15 +117,15 @@ class LeftHomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 3:
+        case 2:
             delegate?.closeLeftView()
             NotificationCenter.default.post(name: Notification.Name("myProfileTapped"), object: self)
-        case 4:
+        case 3:
             delegate?.closeLeftView()
             NotificationCenter.default.post(name: Notification.Name("editProfileTapped"), object: self)
-        case 5:
+        case 4:
             signOutTapped()
-        case 6:
+        case 5:
             deactivateAccoutTapped()
         default:
             break

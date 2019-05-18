@@ -45,13 +45,25 @@ class PublishTableViewController: UITableViewController {
         return section
     }
     
-//    //sending the profile type to the next storyboard
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? SignUpDetailTableViewController {
-//            if let path = tableView.indexPathForSelectedRow {
-//                let clickedProfileType = signUpSelectProfileData[path.row].type
-//                destination.profileType = clickedProfileType
-//            }
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let publishOfferStoryboard = UIStoryboard(name: "PublishOffer", bundle: nil)
+            let publishOfferTableViewController = publishOfferStoryboard.instantiateViewController(withIdentifier: "PublishOfferTableViewController")
+            title = " "
+            navigationController?.pushViewController(publishOfferTableViewController, animated: true)
+        case 1:
+            let publishOfferStoryboard = UIStoryboard(name: "PublishText", bundle: nil)
+            let publishOfferTableViewController = publishOfferStoryboard.instantiateViewController(withIdentifier: "PublishTextTableViewController")
+            title = " "
+            navigationController?.pushViewController(publishOfferTableViewController, animated: true)
+        case 2:
+            let publishOfferStoryboard = UIStoryboard(name: "PublishPhoto", bundle: nil)
+            let publishOfferTableViewController = publishOfferStoryboard.instantiateViewController(withIdentifier: "PublishPhotoTableViewController")
+            title = " "
+            navigationController?.pushViewController(publishOfferTableViewController, animated: true)
+        default:
+            return
+        }
+    }
 }

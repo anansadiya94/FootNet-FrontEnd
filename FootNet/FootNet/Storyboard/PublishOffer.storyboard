@@ -20,74 +20,140 @@
                         <sections>
                             <tableViewSection id="0Bq-vZ-5Dt">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="offerTitle" id="aps-2h-Qaa">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textViewSignUpDetailCell" rowHeight="164" id="OGa-9Z-6uV" userLabel="offerTitle">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aps-2h-Qaa" id="aF9-Hg-3oe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OGa-9Z-6uV" id="4LM-a3-dLQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="163.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Offer Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQq-If-Wcy">
-                                                    <rect key="frame" x="8" y="8.0000000000000018" width="398" height="27.666666666666671"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
-                                                </textField>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-sO-1Cb">
+                                                    <rect key="frame" x="16" y="8.3333333333333286" width="382" height="150"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nH2-rU-ZYh" customClass="CustomTextView" customModule="FootNet" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="150"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="nH2-rU-ZYh" secondAttribute="trailing" id="34B-vq-HBg" userLabel="trailing = Text View.trailing "/>
+                                                        <constraint firstItem="nH2-rU-ZYh" firstAttribute="leading" secondItem="ID6-sO-1Cb" secondAttribute="leading" id="Oo4-5y-Dku"/>
+                                                        <constraint firstItem="nH2-rU-ZYh" firstAttribute="top" secondItem="ID6-sO-1Cb" secondAttribute="top" id="a4j-is-zbP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nH2-rU-ZYh" secondAttribute="bottom" id="sv2-cg-Cim" userLabel="bottom = Text View.bottom "/>
+                                                        <constraint firstAttribute="height" constant="150" id="vkE-Ng-5Z7"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="TQq-If-Wcy" secondAttribute="trailing" constant="8" id="4DK-Oj-F2U"/>
-                                                <constraint firstItem="TQq-If-Wcy" firstAttribute="top" secondItem="aF9-Hg-3oe" secondAttribute="top" constant="8" id="7tE-GL-5KZ"/>
-                                                <constraint firstItem="TQq-If-Wcy" firstAttribute="leading" secondItem="aF9-Hg-3oe" secondAttribute="leading" constant="8" id="IOr-Nu-wFf"/>
-                                                <constraint firstAttribute="bottom" secondItem="TQq-If-Wcy" secondAttribute="bottom" constant="8" id="bla-KU-ugX"/>
+                                                <constraint firstAttribute="bottom" secondItem="ID6-sO-1Cb" secondAttribute="bottom" constant="8" id="0O3-5c-vHn"/>
+                                                <constraint firstAttribute="trailing" secondItem="ID6-sO-1Cb" secondAttribute="trailing" constant="16" id="8P5-C2-oW6"/>
+                                                <constraint firstItem="ID6-sO-1Cb" firstAttribute="top" secondItem="4LM-a3-dLQ" secondAttribute="top" constant="8" id="NN0-JY-7iA"/>
+                                                <constraint firstItem="ID6-sO-1Cb" firstAttribute="leading" secondItem="4LM-a3-dLQ" secondAttribute="leading" constant="16" id="YCY-rr-GOV"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="offerText" id="JZd-4d-zfv">
-                                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textViewSignUpDetailCell" rowHeight="164" id="DWu-ZG-ZsE" userLabel="offerText">
+                                        <rect key="frame" x="0.0" y="164" width="414" height="164"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JZd-4d-zfv" id="9la-Wl-2mI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DWu-ZG-ZsE" id="c3K-Ft-ZdK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="163.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Offer Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YHn-eE-3BC">
-                                                    <rect key="frame" x="8" y="8.0000000000000018" width="398" height="27.666666666666671"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
-                                                </textField>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxw-mx-ewj">
+                                                    <rect key="frame" x="16" y="8.3333333333333286" width="382" height="150"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fgh-rU-UdG" customClass="CustomTextView" customModule="FootNet" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="150"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="fgh-rU-UdG" secondAttribute="trailing" id="Aex-5J-tCR" userLabel="trailing = Text View.trailing "/>
+                                                        <constraint firstAttribute="bottom" secondItem="fgh-rU-UdG" secondAttribute="bottom" id="GcJ-wQ-LML" userLabel="bottom = Text View.bottom "/>
+                                                        <constraint firstItem="fgh-rU-UdG" firstAttribute="top" secondItem="Nxw-mx-ewj" secondAttribute="top" id="cUo-eE-an7"/>
+                                                        <constraint firstAttribute="height" constant="150" id="dEI-GS-jvq"/>
+                                                        <constraint firstItem="fgh-rU-UdG" firstAttribute="leading" secondItem="Nxw-mx-ewj" secondAttribute="leading" id="t0a-0T-4bY"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YHn-eE-3BC" firstAttribute="leading" secondItem="9la-Wl-2mI" secondAttribute="leading" constant="8" id="Kaj-R9-0CB"/>
-                                                <constraint firstItem="YHn-eE-3BC" firstAttribute="top" secondItem="9la-Wl-2mI" secondAttribute="top" constant="8" id="bxC-GP-xW5"/>
-                                                <constraint firstAttribute="bottom" secondItem="YHn-eE-3BC" secondAttribute="bottom" constant="8" id="iVb-gL-TcV"/>
-                                                <constraint firstAttribute="trailing" secondItem="YHn-eE-3BC" secondAttribute="trailing" constant="8" id="jpH-S9-gPQ"/>
+                                                <constraint firstItem="Nxw-mx-ewj" firstAttribute="top" secondItem="c3K-Ft-ZdK" secondAttribute="top" constant="8" id="NwK-PD-RNa"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nxw-mx-ewj" secondAttribute="trailing" constant="16" id="bV0-iY-pCq"/>
+                                                <constraint firstAttribute="bottom" secondItem="Nxw-mx-ewj" secondAttribute="bottom" constant="8" id="qWr-Vm-dMy"/>
+                                                <constraint firstItem="Nxw-mx-ewj" firstAttribute="leading" secondItem="c3K-Ft-ZdK" secondAttribute="leading" constant="16" id="w5v-Ry-KcF"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="offerPhoto" id="lVE-lk-jSh">
-                                        <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageViewSignUpDetailCell" rowHeight="200" id="2vg-SK-MCz" userLabel="offerPhoto">
+                                        <rect key="frame" x="0.0" y="328" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lVE-lk-jSh" id="QLs-cz-WgH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2vg-SK-MCz" id="X3o-2D-r18">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Offer Photo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQ7-5H-ved">
-                                                    <rect key="frame" x="8" y="8.0000000000000018" width="398" height="27.666666666666671"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBm-G3-PbY">
+                                                    <rect key="frame" x="16" y="8" width="382" height="183.66666666666666"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg8-3U-Z37" customClass="CustomLabel" customModule="FootNet" customModuleProvider="target">
+                                                            <rect key="frame" x="146.66666666666666" y="8" width="89" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offerPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="fEB-Ml-3b0">
+                                                            <rect key="frame" x="91" y="37" width="200" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="AqY-Ev-yed"/>
+                                                                <constraint firstAttribute="width" constant="200" id="zOw-dI-LZO"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll1-Oi-xEL" customClass="CustomChoosePhotoButton" customModule="FootNet" customModuleProvider="target">
+                                                            <rect key="frame" x="120.66666666666666" y="145" width="140.99999999999997" height="38.666666666666657"/>
+                                                            <state key="normal" title="Click here to change"/>
+                                                            <connections>
+                                                                <action selector="choosePhotoTapped:" destination="IBD-Os-ubl" eventType="touchUpInside" id="8Ln-gJ-uyX"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="qg8-3U-Z37" firstAttribute="top" secondItem="CBm-G3-PbY" secondAttribute="top" constant="8" id="6gq-9y-KiJ"/>
+                                                        <constraint firstItem="qg8-3U-Z37" firstAttribute="centerX" secondItem="CBm-G3-PbY" secondAttribute="centerX" id="AVH-Bt-aR4"/>
+                                                        <constraint firstItem="fEB-Ml-3b0" firstAttribute="top" secondItem="qg8-3U-Z37" secondAttribute="bottom" constant="8" id="BwF-tJ-Aj7"/>
+                                                        <constraint firstItem="fEB-Ml-3b0" firstAttribute="centerX" secondItem="CBm-G3-PbY" secondAttribute="centerX" id="CLJ-8k-nfp"/>
+                                                        <constraint firstItem="ll1-Oi-xEL" firstAttribute="centerX" secondItem="CBm-G3-PbY" secondAttribute="centerX" id="nHM-pH-ErH"/>
+                                                        <constraint firstItem="ll1-Oi-xEL" firstAttribute="top" secondItem="fEB-Ml-3b0" secondAttribute="bottom" constant="8" id="rBe-Yt-wRD"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LQ7-5H-ved" firstAttribute="top" secondItem="QLs-cz-WgH" secondAttribute="top" constant="8" id="59f-4W-J8V"/>
-                                                <constraint firstItem="LQ7-5H-ved" firstAttribute="leading" secondItem="QLs-cz-WgH" secondAttribute="leading" constant="8" id="F6q-kS-Mm8"/>
-                                                <constraint firstAttribute="bottom" secondItem="LQ7-5H-ved" secondAttribute="bottom" constant="8" id="S17-ek-HAT"/>
-                                                <constraint firstAttribute="trailing" secondItem="LQ7-5H-ved" secondAttribute="trailing" constant="8" id="c15-cj-xav"/>
+                                                <constraint firstItem="CBm-G3-PbY" firstAttribute="top" secondItem="X3o-2D-r18" secondAttribute="top" constant="8" id="EDV-6g-VIf"/>
+                                                <constraint firstAttribute="trailing" secondItem="CBm-G3-PbY" secondAttribute="trailing" constant="16" id="Szw-DH-GMo"/>
+                                                <constraint firstAttribute="bottom" secondItem="ll1-Oi-xEL" secondAttribute="bottom" constant="8" id="V5t-el-Yvd"/>
+                                                <constraint firstItem="CBm-G3-PbY" firstAttribute="leading" secondItem="X3o-2D-r18" secondAttribute="leading" constant="16" id="WtD-TF-YAL"/>
+                                                <constraint firstAttribute="bottom" secondItem="CBm-G3-PbY" secondAttribute="bottom" constant="8" id="YqX-rH-ag8"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="qg8-3U-Z37" firstAttribute="centerX" secondItem="2vg-SK-MCz" secondAttribute="centerX" id="ydi-Kb-r2a"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -97,10 +163,20 @@
                             <outlet property="delegate" destination="IBD-Os-ubl" id="Td3-dC-GMJ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="offerPublicationChangePhotoButton" destination="ll1-Oi-xEL" id="QXV-Lc-nIz"/>
+                        <outlet property="offerPublicationPhotoImageView" destination="fEB-Ml-3b0" id="EvU-G4-AkH"/>
+                        <outlet property="offerPublicationPhotoLabel" destination="qg8-3U-Z37" id="H3V-PA-VAN"/>
+                        <outlet property="offerPublicationTextTextView" destination="fgh-rU-UdG" id="4J9-tX-aF7"/>
+                        <outlet property="offerPublicationTitleTextView" destination="nH2-rU-ZYh" id="Par-WN-Jol"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0d-qK-e3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7.2463768115942031" y="-101.08695652173914"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="offerPhoto" width="76" height="39.666667938232422"/>
+    </resources>
 </document>

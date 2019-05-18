@@ -20,28 +20,44 @@
                         <sections>
                             <tableViewSection id="vWQ-JA-xCM">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="offerTitle" id="peH-Eb-z3r" userLabel="text">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textViewSignUpDetailCell" rowHeight="164" id="Tp5-Ao-q0u" userLabel="publication text">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="peH-Eb-z3r" id="tSN-C6-2bX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tp5-Ao-q0u" id="b3k-1w-C0E">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="163.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g58-nT-c0R">
-                                                    <rect key="frame" x="8" y="8.0000000000000018" width="398" height="27.666666666666671"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
-                                                </textField>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zo-8s-4R5">
+                                                    <rect key="frame" x="16" y="8.3333333333333286" width="382" height="150"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gND-ot-mqN" customClass="CustomTextView" customModule="FootNet" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="150"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="gND-ot-mqN" firstAttribute="leading" secondItem="7zo-8s-4R5" secondAttribute="leading" id="8gx-CP-gzs"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gND-ot-mqN" secondAttribute="trailing" id="Q60-AI-Jfj" userLabel="trailing = Text View.trailing "/>
+                                                        <constraint firstAttribute="height" constant="150" id="TrW-0S-SNa"/>
+                                                        <constraint firstItem="gND-ot-mqN" firstAttribute="top" secondItem="7zo-8s-4R5" secondAttribute="top" id="WS3-iF-lUi"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gND-ot-mqN" secondAttribute="bottom" id="eYq-M7-8Td" userLabel="bottom = Text View.bottom "/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="g58-nT-c0R" firstAttribute="top" secondItem="tSN-C6-2bX" secondAttribute="top" constant="8" id="2Fz-p6-Cch"/>
-                                                <constraint firstAttribute="trailing" secondItem="g58-nT-c0R" secondAttribute="trailing" constant="8" id="ZXd-a2-w84"/>
-                                                <constraint firstAttribute="bottom" secondItem="g58-nT-c0R" secondAttribute="bottom" constant="8" id="c3Z-uy-c76"/>
-                                                <constraint firstItem="g58-nT-c0R" firstAttribute="leading" secondItem="tSN-C6-2bX" secondAttribute="leading" constant="8" id="t4M-kA-Tiw"/>
+                                                <constraint firstItem="7zo-8s-4R5" firstAttribute="top" secondItem="b3k-1w-C0E" secondAttribute="top" constant="8" id="NKc-aJ-Sd7"/>
+                                                <constraint firstItem="7zo-8s-4R5" firstAttribute="leading" secondItem="b3k-1w-C0E" secondAttribute="leading" constant="16" id="NiF-K0-lEd"/>
+                                                <constraint firstAttribute="trailing" secondItem="7zo-8s-4R5" secondAttribute="trailing" constant="16" id="XUA-qa-iBn"/>
+                                                <constraint firstAttribute="bottom" secondItem="7zo-8s-4R5" secondAttribute="bottom" constant="8" id="XeA-ba-VTr"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -51,6 +67,9 @@
                             <outlet property="delegate" destination="iNc-zA-Ugc" id="xYx-HY-oHN"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="textPublicationTextView" destination="gND-ot-mqN" id="DhH-VB-9Ie"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PE-O1-vAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 */
 
 "connectionError_alert"="There is no Internet conection";
+"changePhoto_buttonText"="Click here to change the default photo";
 
 //SignIn Page
 "email_placeholder"="Email";
@@ -49,7 +50,6 @@
 "signUp_height"="Height*";
 "signUp_actualClub"="Actual Club*";
 "signUp_photo_label"="Profile Photo";
-"signUp_photo_button"="Tap here to change it";
 "signUp_bio"="Biography";
 "signUp_edit_bio"="Edit to add your biografia";
 "signUp_record"="Record";
@@ -453,3 +453,15 @@
 "publish_offer"="Offer";
 "publish_text"="Text";
 "publish_photo"="Photo";
+
+//publish offer
+"publishOffer_title"="Edit to add your offer title";
+"publishOffer_text"="Edit to add your offer text";
+"publishOffer_photoLabel"="Offer Photo";
+"publishOffer_PhotoButton"="Click here to change the default photo";
+
+//publish text
+"publishText_title"="Edit to add your publication text";
+
+//publish photo
+"publishPhoto_photoLabel"="Publication Photo";

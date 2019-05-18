@@ -319,7 +319,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
             cell.imgView.image = chosenImage
             cell.imgView.tag = tag
             cell.profileLabelImageView.text = "signUp_photo_label".localize()
-            cell.changeImageButton.setTitle("signUp_photo_button".localize(), for: .normal)
+            cell.changeImageButton.setTitle("changePhoto_buttonText".localize(), for: .normal)
             imagePickerViewIndexPath = indexPath
             return cell
         }

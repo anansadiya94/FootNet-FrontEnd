@@ -7,6 +7,7 @@
 */
 
 "connectionError_alert"="No hay conexión a internet";
+"changePhoto_buttonText"="Clica aquí para cambiar la foto por defecto";
 
 //SignIn Page
 "email_placeholder"="Correo electrónico";
@@ -49,7 +50,6 @@
 "signUp_height"="Altura*";
 "signUp_actualClub"="Club Actual*";
 "signUp_photo_label"="Foto de perfil";
-"signUp_photo_button"="Toca aquí para cambiarla";
 "signUp_bio"="Biografía";
 "signUp_edit_bio"="Edita para añadir tu biografía";
 "signUp_record"="Historial";
@@ -451,3 +451,16 @@
 "publish_offer"="Oferta";
 "publish_text"="Texto";
 "publish_photo"="Foto";
+
+//publish offer
+"publishOffer_title"="Edita para agregar el título de tu oferta";
+"publishOffer_text"="Edita para agregar el texto de tu oferta";
+"publishOffer_photoLabel"="La Foto de la oferta";
+"publishOffer_button"="Clica aquí para cambiar la foto por defecto";
+
+//publish text
+"publishText_title"="Editar para agregar tu texto de publicación";
+
+//publish photo
+"publishPhoto_photoLabel"="La foto de la publicació";
+

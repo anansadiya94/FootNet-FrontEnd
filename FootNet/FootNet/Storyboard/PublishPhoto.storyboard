@@ -20,28 +20,62 @@
                         <sections>
                             <tableViewSection id="5WP-lc-QLG">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Photo" id="NXa-o9-bBo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageViewSignUpDetailCell" rowHeight="200" id="ozu-OX-p63" userLabel="publication photo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NXa-o9-bBo" id="gj1-pf-hU0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ozu-OX-p63" id="zCP-CH-Sbc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Offer Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GaV-iA-mUo">
-                                                    <rect key="frame" x="8" y="8.0000000000000018" width="398" height="27.666666666666671"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
-                                                </textField>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jq-3E-sMZ">
+                                                    <rect key="frame" x="16" y="8" width="382" height="183.66666666666666"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publication Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-SF-af4" customClass="CustomLabel" customModule="FootNet" customModuleProvider="target">
+                                                            <rect key="frame" x="123.66666666666666" y="8" width="134.99999999999997" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offerPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="4zi-Se-H19">
+                                                            <rect key="frame" x="91" y="37" width="200" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="9vT-h3-kDW"/>
+                                                                <constraint firstAttribute="height" constant="100" id="bkU-6f-rgT"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVd-DV-57I" customClass="CustomChoosePhotoButton" customModule="FootNet" customModuleProvider="target">
+                                                            <rect key="frame" x="120.66666666666666" y="145" width="140.99999999999997" height="38.666666666666657"/>
+                                                            <state key="normal" title="Click here to change"/>
+                                                            <connections>
+                                                                <action selector="changePhotoTapped:" destination="tGr-t7-sld" eventType="touchUpInside" id="qcK-1t-XFG"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="4zi-Se-H19" firstAttribute="centerX" secondItem="7jq-3E-sMZ" secondAttribute="centerX" id="7do-ep-NYf"/>
+                                                        <constraint firstItem="jVd-DV-57I" firstAttribute="centerX" secondItem="7jq-3E-sMZ" secondAttribute="centerX" id="Arv-wZ-I8F"/>
+                                                        <constraint firstItem="kgg-SF-af4" firstAttribute="centerX" secondItem="7jq-3E-sMZ" secondAttribute="centerX" id="B3n-Kp-5qL"/>
+                                                        <constraint firstItem="jVd-DV-57I" firstAttribute="top" secondItem="4zi-Se-H19" secondAttribute="bottom" constant="8" id="XYU-NE-WCL"/>
+                                                        <constraint firstItem="kgg-SF-af4" firstAttribute="top" secondItem="7jq-3E-sMZ" secondAttribute="top" constant="8" id="cvX-oG-mc6"/>
+                                                        <constraint firstItem="4zi-Se-H19" firstAttribute="top" secondItem="kgg-SF-af4" secondAttribute="bottom" constant="8" id="kOy-7g-3Nc"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="GaV-iA-mUo" firstAttribute="top" secondItem="gj1-pf-hU0" secondAttribute="top" constant="8" id="C2i-Ll-QxN"/>
-                                                <constraint firstAttribute="bottom" secondItem="GaV-iA-mUo" secondAttribute="bottom" constant="8" id="Q8i-WX-aCf"/>
-                                                <constraint firstAttribute="trailing" secondItem="GaV-iA-mUo" secondAttribute="trailing" constant="8" id="ezF-Iv-r8C"/>
-                                                <constraint firstItem="GaV-iA-mUo" firstAttribute="leading" secondItem="gj1-pf-hU0" secondAttribute="leading" constant="8" id="ojd-eA-mfh"/>
+                                                <constraint firstItem="7jq-3E-sMZ" firstAttribute="leading" secondItem="zCP-CH-Sbc" secondAttribute="leading" constant="16" id="0Jl-ib-Hfd"/>
+                                                <constraint firstAttribute="bottom" secondItem="jVd-DV-57I" secondAttribute="bottom" constant="8" id="78a-TV-yfp"/>
+                                                <constraint firstAttribute="trailing" secondItem="7jq-3E-sMZ" secondAttribute="trailing" constant="16" id="H0k-iE-ips"/>
+                                                <constraint firstItem="7jq-3E-sMZ" firstAttribute="top" secondItem="zCP-CH-Sbc" secondAttribute="top" constant="8" id="u3d-XG-Q7r"/>
+                                                <constraint firstAttribute="bottom" secondItem="7jq-3E-sMZ" secondAttribute="bottom" constant="8" id="vd3-eI-ifB"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="kgg-SF-af4" firstAttribute="centerX" secondItem="ozu-OX-p63" secondAttribute="centerX" id="wT2-oy-9w5"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -51,10 +85,18 @@
                             <outlet property="delegate" destination="tGr-t7-sld" id="4TD-Da-enG"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="photoPublicationChangePhotoButton" destination="jVd-DV-57I" id="Mlk-Yz-4eP"/>
+                        <outlet property="photoPublicationImageView" destination="4zi-Se-H19" id="Y8V-qo-aBc"/>
+                        <outlet property="photoPublicationPhotoLabel" destination="kgg-SF-af4" id="g4f-Uz-9tD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zH-dB-04Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="235" y="-261"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="offerPhoto" width="76" height="39.666667938232422"/>
+    </resources>
 </document>

@@ -445,3 +445,9 @@
 "favoritePosition_label"="Poisción Favorita: ";
 "bio_label"="Biografía: ";
 "record_label"="Historial: ";
+
+//publish
+"publish_sectionHeader"="¿Qué te gustaría publicar?";
+"publish_offer"="Oferta";
+"publish_text"="Texto";
+"publish_photo"="Foto";

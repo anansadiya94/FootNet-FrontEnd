@@ -24,6 +24,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81w-iD-dkB" customClass="CustomPublishButton" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="29"/>
                                         <state key="normal" title="Publish"/>
+                                        <connections>
+                                            <segue destination="hyC-J4-Bza" kind="show" identifier="publishSegue" id="F8M-YL-tC9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,6 +71,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwf-2X-Hef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-31" y="44"/>
+        </scene>
+        <!--Publish-->
+        <scene sceneID="cAu-1Y-Qev">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Publish" id="hyC-J4-Bza" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6g-zA-MgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="-69"/>
         </scene>
     </scenes>
     <resources>

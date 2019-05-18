@@ -448,3 +448,8 @@
 "bio_label"="Biography: ";
 "record_label"="Record: ";
 
+//publish
+"publish_sectionHeader"="What would you like to publish?";
+"publish_offer"="Offer";
+"publish_text"="Text";
+"publish_photo"="Photo";

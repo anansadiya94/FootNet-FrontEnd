@@ -443,3 +443,8 @@
 "location_label"="Location: ";
 "height_label"="Height: ";
 "weight_label"="Weight: ";
+"actualClub_label"="Actual Club: ";
+"favoritePosition_label"="Favorite Position: ";
+"bio_label"="Biography: ";
+"record_label"="Record: ";
+

@@ -441,3 +441,7 @@
 "location_label"="Localidad: ";
 "height_label"="Altura: ";
 "weight_label"="Peso: ";
+"actualClub_label"="Club Actual: ";
+"favoritePosition_label"="Poisción Favorita: ";
+"bio_label"="Biografía: ";
+"record_label"="Historial: ";

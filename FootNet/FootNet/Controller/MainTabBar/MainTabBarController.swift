@@ -61,7 +61,7 @@ class MainTabBarController: UITabBarController {
         let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
         let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
         title = " "
-        self.navigationController?.pushViewController(profileViewController, animated: true)
+        navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     @objc func editProfileTapped() {
@@ -69,7 +69,7 @@ class MainTabBarController: UITabBarController {
         let editProfileStoryboard = UIStoryboard(name: "EditProfile", bundle: nil)
         let editProfileViewController = editProfileStoryboard.instantiateViewController(withIdentifier: "EditProfleViewController")
         title = " "
-        self.navigationController?.pushViewController(editProfileViewController, animated: true)
+        navigationController?.pushViewController(editProfileViewController, animated: true)
     }
     
     @objc func signOutTapped() {

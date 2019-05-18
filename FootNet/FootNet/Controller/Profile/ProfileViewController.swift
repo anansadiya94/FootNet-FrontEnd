@@ -20,6 +20,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var actualClubLabel: UILabel!
+    @IBOutlet weak var favoritePositionLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var recordLabel: UILabel!
     
     var userPhoto: String = ""
     var userFullName: String = ""
@@ -32,6 +36,10 @@ class ProfileViewController: UIViewController {
     var userLocation: String = ""
     var userHeight: String = ""
     var userWeight: String = ""
+    var userActualClub: String = ""
+    var userFavoritePosition: String = ""
+    var userBio: String = ""
+    var userRecord: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +50,14 @@ class ProfileViewController: UIViewController {
     }
     
     private func setTabBarItem() {
-        title = "editProfileLabel".localize()
+        title = "profileLabel".localize()
     }
     
     private func generateUserInfo() {
         let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
         if let user = Constants.users.filter({$0.id == userId}).first {
             userPhoto = user.photo
-            userFullName = user.name + " " + userFullName
+            userFullName = user.name + " " + user.surname
             userProfileType = user.profileType
             userEmail = user.email
             userPhone = user.phone
@@ -59,6 +67,10 @@ class ProfileViewController: UIViewController {
             userLocation = user.location
             userHeight = user.height
             userWeight = user.weight
+            userActualClub = user.actualClub
+            userFavoritePosition = user.favoritePosition
+            userBio = user.bio
+            userRecord = user.record
         }
     }
     
@@ -74,6 +86,10 @@ class ProfileViewController: UIViewController {
         configureUserLocation()
         configureUserHeight()
         configureUserWeight()
+        configureUserActualClub()
+        configureUserFavoritePosition()
+        configureUserBio()
+        configureUserRecord()
     }
     
     private func configureUserPhoto() {
@@ -128,6 +144,26 @@ class ProfileViewController: UIViewController {
     private func configureUserWeight() {
         weightLabel.text = "weight_label".localize() + userWeight + "kg"
         weightLabel.textColor = UIColor.colorText
+    }
+    
+    private func configureUserActualClub() {
+        actualClubLabel.text = "actualClub_label".localize() + "userActualClub"
+        actualClubLabel.textColor = UIColor.colorText
+    }
+    
+    private func configureUserFavoritePosition() {
+        favoritePositionLabel.text = "favoritePosition_label".localize() + userFavoritePosition
+        favoritePositionLabel.textColor = UIColor.colorText
+    }
+    
+    private func configureUserBio() {
+        bioLabel.text = "bio_label".localize() + userBio
+        bioLabel.textColor = UIColor.colorText
+    }
+    
+    private func configureUserRecord() {
+        recordLabel.text = "record_label".localize() + userRecord
+        recordLabel.textColor = UIColor.colorText
     }
     
     private func profileTypeToString (profileType: ProfileType) -> String {

@@ -9,7 +9,7 @@
 "connectionError_alert"="No hay conexión a internet";
 
 //SignIn Page
-"email_placeholder"="Correo electrónico" ;
+"email_placeholder"="Correo electrónico";
 "password_placeholder"="Contraseña";
 "forgotPassword_button"="¿Olvidaste tu contraseña?";
 "forgotPassword_navBarTitle"="Recuperar contraseña";
@@ -431,3 +431,13 @@
 
 //home
 "publish_button"="Publicar";
+
+//profile
+"email_label"="Correo electrónico: ";
+"phone_label"="Móvil: ";
+"sex_label"="Sexo: ";
+"birthday_label"="Fecha de nacimiento: ";
+"nationality_label"="Nacionalidad: ";
+"location_label"="Localidad: ";
+"height_label"="Altura: ";
+"weight_label"="Peso: ";

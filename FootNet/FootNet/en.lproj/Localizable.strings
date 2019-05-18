@@ -22,7 +22,6 @@
 "signIn_dataError_alert"="Unknown username/password.";
 "tryAgian_alert"="Please try again.";
 
-
 //Sign Up Select Profile Type
 "signUp_navBarTitle"="SignUp";
 "signUp_sectionHeader"="Choose your profile:";
@@ -435,3 +434,12 @@
 //home
 "publish_button"="Publish";
 
+//profile
+"email_label"="Email: ";
+"phone_label"="Phone: ";
+"sex_label"="Sex: ";
+"birthday_label"="Birthday: ";
+"nationality_label"="Nationality: ";
+"location_label"="Location: ";
+"height_label"="Height: ";
+"weight_label"="Weight: ";

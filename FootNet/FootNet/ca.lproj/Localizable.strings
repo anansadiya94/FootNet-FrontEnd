@@ -433,3 +433,13 @@
 
 //home
 "publish_button"="Publicar";
+
+//profile
+"email_label"="Correu electrònic: ";
+"phone_label"="Mòbi: ";
+"sex_label"="Sexe: ";
+"birthday_label"="Data de naixement: ";
+"nationality_label"="Nacionalitat: ";
+"location_label"="Localitat: ";
+"height_label"="Alçada: ";
+"weight_label"="Pes: ";

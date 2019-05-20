@@ -147,7 +147,7 @@ class ProfileViewController: UIViewController {
     }
     
     private func configureUserActualClub() {
-        actualClubLabel.text = "actualClub_label".localize() + "userActualClub"
+        actualClubLabel.text = "actualClub_label".localize() + userActualClub
         actualClubLabel.textColor = UIColor.colorText
     }
     

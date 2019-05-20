@@ -16,40 +16,43 @@ class OfferDetailViewController: UIViewController {
     @IBOutlet weak var offerTextLabel: UILabel!
     @IBOutlet weak var offerRequestButton: CustomRequestButton!
 
-    var offersViewController = OffersViewController()
-    var displayOfferCells = [DisplayOffercell]()
-    var userId: Int = 0
     var offerId: Int = 0
-    var fullName: String = ""
-    var photo: String = ""
-    var offerPhoto: String = ""
-    var offerTitle: String = ""
-    var offerText: String = ""
-    var offerRequested: Bool = false
-    var offerStatus: OfferStatus = .NotRequested
+    var offerDetails = DisplayOfferDetail(userId: 0, offerId: 0, fullName: " ", photo: " ", offerTitle: " ", offerText: " ", offerPhoto: " ", offerRequested: false, offerStatus: OfferStatus.NotRequested)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
-        displayOfferCells = offersViewController.generateDisplayOfferCells()
         configureUI()
     }
     
+    private func generateOfferDetails() -> DisplayOfferDetail? {
+        for offerCellResponse in ConstantsManager.shared.requestOffers() {
+            if offerId == offerCellResponse.offerId {
+                if let user = Constants.usersBasicInfo.filter({$0.id == offerCellResponse.userId}).first {
+                    return DisplayOfferDetail(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, offerRequested: offerCellResponse.offerRequested, offerStatus: offerCellResponse.offerStatus)
+                }
+            }
+        }
+        return nil
+    }
+    
     private func configureUI() {
-        userImageView.image = UIImage(named: photo)
-        fullNameLabel.text = fullName
+        offerDetails = generateOfferDetails()!
+        userImageView.image = UIImage(named: offerDetails.photo)
+        fullNameLabel.text = offerDetails.fullName
         fullNameLabel.textColor = UIColor.colorText
-        offerImageView.image = UIImage(named: offerPhoto)
-        offerTitleLabel.text = offerTitle
+        offerImageView.image = UIImage(named: offerDetails.offerPhoto)
+        offerTitleLabel.text = offerDetails.offerTitle
         offerTitleLabel.textColor = UIColor.colorText
-        offerTextLabel.text = offerText
+        offerTextLabel.text = offerDetails.offerText
         offerTextLabel.textColor = UIColor.colorText
-        CustomRequestButton.setup(offerRequestButton, offerRequested)
+        CustomRequestButton.setup(offerRequestButton, offerDetails.offerRequested)
     }
     
     @IBAction func offerRequestButtonTapped(_ sender: CustomRequestButton) {
-        offerRequested = !offerRequested
-        CustomRequestButton.setup(offerRequestButton, offerRequested)
+        offerDetails.offerRequested = !offerDetails.offerRequested
+        CustomRequestButton.setup(offerRequestButton, offerDetails.offerRequested)
+        ConstantsManager.shared.modifyOfferRequested(offerId: offerId, offerRequested: offerDetails.offerRequested)
     }
 }
 

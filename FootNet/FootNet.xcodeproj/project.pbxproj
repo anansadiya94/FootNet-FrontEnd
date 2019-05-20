@@ -118,6 +118,8 @@
 		9E93571E224111940036F23A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571D224111940036F23A /* SearchViewController.swift */; };
 		9E9357202241119F0036F23A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571F2241119F0036F23A /* NotificationsViewController.swift */; };
 		9E935722224116540036F23A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E935721224116540036F23A /* Home.storyboard */; };
+		9E9FBAB52292CE8300786A78 /* ConstantsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB42292CE8300786A78 /* ConstantsManager.swift */; };
+		9E9FBAB72292D94300786A78 /* DisplayOfferDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB62292D94300786A78 /* DisplayOfferDetail.swift */; };
 		9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */; };
 		9EADBAAD224A881700C949DD /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EADBAAC224A881700C949DD /* SignInTests.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileViewCell.swift */; };
@@ -282,6 +284,8 @@
 		9E93571D224111940036F23A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9E93571F2241119F0036F23A /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		9E935721224116540036F23A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		9E9FBAB42292CE8300786A78 /* ConstantsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsManager.swift; sourceTree = "<group>"; };
+		9E9FBAB62292D94300786A78 /* DisplayOfferDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOfferDetail.swift; sourceTree = "<group>"; };
 		9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHomeTableViewCell.swift; sourceTree = "<group>"; };
 		9EADBAAC224A881700C949DD /* SignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTests.swift; sourceTree = "<group>"; };
 		9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectProfileViewCell.swift; sourceTree = "<group>"; };
@@ -608,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				9E4FA3632231A2FA00094509 /* Constants.swift */,
+				9E9FBAB42292CE8300786A78 /* ConstantsManager.swift */,
 				9E82E7FD22720F2400267820 /* Reachability.swift */,
 				9E1493E5228982E60035C6DD /* Common.swift */,
 				9E82E7FF22720F2400267820 /* Assets.xcassets */,
@@ -813,6 +818,7 @@
 				9E9357192241117C0036F23A /* OffersViewController.swift */,
 				9E8CB801228D893F00D285A0 /* OfferDetailViewController.swift */,
 				9EE37000228CA12B00CBEF53 /* DisplayOfferCell.swift */,
+				9E9FBAB62292D94300786A78 /* DisplayOfferDetail.swift */,
 			);
 			path = Offers;
 			sourceTree = "<group>";
@@ -1425,6 +1431,7 @@
 				9E56289F22840EAE003B4FE2 /* DisplaySearchedUser.swift in Sources */,
 				9E82E83C22720F2400267820 /* SignInService.swift in Sources */,
 				9EDD6752227CA3100082074C /* (null) in Sources */,
+				9E9FBAB52292CE8300786A78 /* ConstantsManager.swift in Sources */,
 				9E82E83B22720F2400267820 /* SignInJsonMocks.swift in Sources */,
 				9E93571C224111870036F23A /* OffersStatusViewController.swift in Sources */,
 				9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */,
@@ -1460,6 +1467,7 @@
 				9E82E7892272011200267820 /* LottieLaunchScreenViewController.swift in Sources */,
 				9E82E82A22720F2400267820 /* CustomLeftHomeLabel.swift in Sources */,
 				9EB3A6C3222D1B80002F244E /* SignUpDetailViewCell.swift in Sources */,
+				9E9FBAB72292D94300786A78 /* DisplayOfferDetail.swift in Sources */,
 				9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */,
 				9EFEA4B222422D99002C9EB0 /* MainTabBarController.swift in Sources */,
 				9ECF074C22523FCE0082FC1F /* NotificationsData.swift in Sources */,

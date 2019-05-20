@@ -28,4 +28,5 @@ struct User {
     let weight: String
     let height: String
     let amIFollowing: Bool
+    let active: Bool
 }

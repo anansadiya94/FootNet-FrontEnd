@@ -16,9 +16,9 @@ class NotificationsData {
         let notificationsPhotoDetail = "notificationsPhoto_detail".localize()
         let notificationsVideoDetail = "notificationsVideo_detail".localize()
         notificationsData = [
-            NotificationsModel(userImage: #imageLiteral(resourceName: "homeRightImage"), notificationDetail: "Anan Sadiya \(notificationsPostDetail)."),
-            NotificationsModel(userImage: #imageLiteral(resourceName: "homeRightImage"), notificationDetail: "Anan Sadiya \(notificationsPhotoDetail)."),
-            NotificationsModel(userImage: #imageLiteral(resourceName: "homeRightImage"), notificationDetail: "Anan Sadiya \(notificationsVideoDetail).")
+            NotificationsModel(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPostDetail)."),
+            NotificationsModel(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPhotoDetail)."),
+            NotificationsModel(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsVideoDetail).")
         ]
         return notificationsData
     }

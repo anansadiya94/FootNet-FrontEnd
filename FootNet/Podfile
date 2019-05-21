@@ -6,7 +6,7 @@ target 'FootNet' do
   
   # Pods for FootNet
   pod 'CocoaLumberjack/Swift' #Logger
-  pod 'Material', '~> 2.16.4'
+  pod 'Material'
   pod 'lottie-ios'
   pod 'Swinject'
   
@@ -14,7 +14,7 @@ target 'FootNet' do
     inherit! :search_paths
     # Pods for testing
     pod 'CocoaLumberjack/Swift' #Logger
-    pod 'Material', '~> 2.16.4'
+    pod 'Material'
     pod 'lottie-ios'
     pod 'Swinject'
   end
@@ -23,7 +23,7 @@ target 'FootNet' do
     inherit! :search_paths
     # Pods for testing
     pod 'CocoaLumberjack/Swift' #Logger
-    pod 'Material', '~> 2.16.4'
+    pod 'Material'
     pod 'lottie-ios'
     pod 'Swinject'
   end

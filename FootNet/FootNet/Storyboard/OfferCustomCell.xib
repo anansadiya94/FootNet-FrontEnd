@@ -37,14 +37,14 @@
                             <constraint firstAttribute="height" constant="100" id="Rxk-4p-n7D"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-AR-AMk" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                        <rect key="frame" x="8" y="174" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-AR-AMk" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                        <rect key="frame" x="8" y="174" width="398" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8J-9u-PPO" customClass="CustomSeeMoreButton" customModule="FootNet" customModuleProvider="target">
-                        <rect key="frame" x="360" y="203" width="46" height="30"/>
+                        <rect key="frame" x="360" y="202.5" width="46" height="30"/>
                         <state key="normal" title="Button"/>
                         <connections>
                             <action selector="SeeMoreButtonTapped:" destination="HoP-aM-gBd" eventType="touchUpInside" id="utK-MV-t1r"/>
@@ -60,6 +60,7 @@
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="c8J-9u-PPO" secondAttribute="bottom" constant="8" id="K57-jo-P3g"/>
                     <constraint firstItem="Dpa-hI-Avw" firstAttribute="leading" secondItem="8xM-Zt-0EB" secondAttribute="leading" constant="8" id="KpO-Og-ScQ"/>
                     <constraint firstItem="ag5-AR-AMk" firstAttribute="top" secondItem="Dpa-hI-Avw" secondAttribute="bottom" constant="8" id="LTe-7g-MlF"/>
+                    <constraint firstAttribute="trailing" secondItem="ag5-AR-AMk" secondAttribute="trailing" constant="8" id="MqX-IW-owK"/>
                     <constraint firstItem="PRf-zS-cqk" firstAttribute="centerY" secondItem="ZX1-jG-ydW" secondAttribute="centerY" id="TKV-pp-O4R"/>
                     <constraint firstAttribute="trailing" secondItem="Dpa-hI-Avw" secondAttribute="trailing" constant="8" id="YSU-aN-l2w"/>
                     <constraint firstItem="Dpa-hI-Avw" firstAttribute="top" secondItem="ZX1-jG-ydW" secondAttribute="bottom" constant="8" id="cyb-IY-soK"/>

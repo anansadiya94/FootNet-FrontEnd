@@ -37,9 +37,9 @@ class OffersStatusData {
         var rejectedStatusData = [OffersStatusModel]()
         let rejectedOffersDetail = "rejectedOffers_detail".localize()
         rejectedStatusData = [
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'."),
-            OffersStatusModel(userImage: #imageLiteral(resourceName: "homeRightImage"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'.")
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "anan"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "anan"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'."),
+            OffersStatusModel(userImage: #imageLiteral(resourceName: "anan"), offerStatusDetail: "Anan Sadiya \(rejectedOffersDetail) 'se busca delantero'.")
         ]
         return rejectedStatusData
     }

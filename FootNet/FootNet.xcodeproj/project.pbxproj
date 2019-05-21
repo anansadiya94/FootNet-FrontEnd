@@ -447,7 +447,6 @@
 		9E4E074A222593B200F8ED17 /* FootNet */ = {
 			isa = PBXGroup;
 			children = (
-				9EDD673B227C8F0E0082074C /* Dependency */,
 				9E9E598E2265D2A9002816B6 /* JSONMocks */,
 				9E9E598F2265D2F6002816B6 /* API */,
 				9E9E598C2265D25F002816B6 /* Services */,
@@ -613,6 +612,7 @@
 		9E82E7ED22720F2400267820 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9EDD673C227C8F360082074C /* DependencyManager.swift */,
 				9E4FA3632231A2FA00094509 /* Constants.swift */,
 				9E9FBAB42292CE8300786A78 /* ConstantsManager.swift */,
 				9E82E7FD22720F2400267820 /* Reachability.swift */,
@@ -1016,14 +1016,6 @@
 				9ED9BF33227848C9004F4D13 /* OfferTableViewCell.swift */,
 			);
 			path = Offers;
-			sourceTree = "<group>";
-		};
-		9EDD673B227C8F0E0082074C /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				9EDD673C227C8F360082074C /* DependencyManager.swift */,
-			);
-			path = Dependency;
 			sourceTree = "<group>";
 		};
 		9EDD6746227CA1E60082074C /* Home */ = {

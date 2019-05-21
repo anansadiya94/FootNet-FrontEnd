@@ -14,9 +14,9 @@ protocol OfferCellDelegate : class {
 
 class OfferTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: CustomImageView!
-    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: CustomContentLabel!
     @IBOutlet weak var offerImageView: UIImageView!
-    @IBOutlet weak var offerDetailLabel: UILabel!
+    @IBOutlet weak var offerDetailLabel: CustomContentLabel!
     @IBOutlet weak var seeMoreButton: UIButton!
     weak var offerCellDelegate : OfferCellDelegate?
     
@@ -25,8 +25,6 @@ class OfferTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
-        fullNameLabel.textColor = UIColor.colorText
-        offerDetailLabel.textColor = UIColor.colorText
     }
     
     func setUp(offerId: Int, img: String, fullName: String, offerImg: String, offerTitle: String, offerCellDelegate : OfferCellDelegate) {

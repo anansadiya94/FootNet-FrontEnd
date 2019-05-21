@@ -10,20 +10,20 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePhotoImageView: CustomImageView!
-    @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var profileTypeLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var sexLabel: UILabel!
-    @IBOutlet weak var birthdayLabel: UILabel!
-    @IBOutlet weak var nationalityLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var actualClubLabel: UILabel!
-    @IBOutlet weak var favoritePositionLabel: UILabel!
-    @IBOutlet weak var bioLabel: UILabel!
-    @IBOutlet weak var recordLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: CustomContentLabel!
+    @IBOutlet weak var profileTypeLabel: CustomContentLabel!
+    @IBOutlet weak var emailLabel: CustomContentLabel!
+    @IBOutlet weak var phoneLabel: CustomContentLabel!
+    @IBOutlet weak var sexLabel: CustomContentLabel!
+    @IBOutlet weak var birthdayLabel: CustomContentLabel!
+    @IBOutlet weak var nationalityLabel: CustomContentLabel!
+    @IBOutlet weak var locationLabel: CustomContentLabel!
+    @IBOutlet weak var heightLabel: CustomContentLabel!
+    @IBOutlet weak var weightLabel: CustomContentLabel!
+    @IBOutlet weak var actualClubLabel: CustomContentLabel!
+    @IBOutlet weak var favoritePositionLabel: CustomContentLabel!
+    @IBOutlet weak var bioLabel: CustomContentLabel!
+    @IBOutlet weak var recordLabel: CustomContentLabel!
     
     var userPhoto: String = ""
     var userFullName: String = ""
@@ -98,72 +98,58 @@ class ProfileViewController: UIViewController {
     
     private func configureUserFullName() {
         fullNameLabel.text = userFullName
-        fullNameLabel.textColor = UIColor.colorText
     }
     
     private func configureUserProfileType() {
         profileTypeLabel.text = profileTypeToString(profileType: userProfileType)
-        profileTypeLabel.textColor = UIColor.colorText
     }
     
     private func configureUserEmail() {
         emailLabel.text = "email_label".localize() + userEmail
-        emailLabel.textColor = UIColor.colorText
     }
     
     private func configureUserPhone() {
         phoneLabel.text = "phone_label".localize() + userPhone
-        phoneLabel.textColor = UIColor.colorText
     }
     
     private func configureUserSex() {
         sexLabel.text = "sex_label".localize() + userSex
-        sexLabel.textColor = UIColor.colorText
     }
     
     private func configureUserBirthday() {
         birthdayLabel.text = "birthday_label".localize() + userBirthday
-        birthdayLabel.textColor = UIColor.colorText
     }
     
     private func configureUserNationality() {
         nationalityLabel.text = "nationality_label".localize() + userNationality
-        nationalityLabel.textColor = UIColor.colorText
     }
     
     private func configureUserLocation() {
         locationLabel.text = "location_label".localize() + userLocation
-        locationLabel.textColor = UIColor.colorText
     }
     
     private func configureUserHeight() {
         heightLabel.text = "height_label".localize() + userHeight + "cm"
-        heightLabel.textColor = UIColor.colorText
     }
     
     private func configureUserWeight() {
         weightLabel.text = "weight_label".localize() + userWeight + "kg"
-        weightLabel.textColor = UIColor.colorText
     }
     
     private func configureUserActualClub() {
         actualClubLabel.text = "actualClub_label".localize() + userActualClub
-        actualClubLabel.textColor = UIColor.colorText
     }
     
     private func configureUserFavoritePosition() {
         favoritePositionLabel.text = "favoritePosition_label".localize() + userFavoritePosition
-        favoritePositionLabel.textColor = UIColor.colorText
     }
     
     private func configureUserBio() {
         bioLabel.text = "bio_label".localize() + userBio
-        bioLabel.textColor = UIColor.colorText
     }
     
     private func configureUserRecord() {
         recordLabel.text = "record_label".localize() + userRecord
-        recordLabel.textColor = UIColor.colorText
     }
     
     private func profileTypeToString (profileType: ProfileType) -> String {

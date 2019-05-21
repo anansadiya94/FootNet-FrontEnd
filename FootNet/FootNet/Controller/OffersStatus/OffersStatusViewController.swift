@@ -69,7 +69,6 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
         let model = dataSource![indexPath.row]
         cell.userImageView.image = model.userImage
         cell.offerStatusDetailLabel.text = model.offerStatusDetail
-        cell.offerStatusDetailLabel.textColor = UIColor.colorText
         return cell
     }
 }

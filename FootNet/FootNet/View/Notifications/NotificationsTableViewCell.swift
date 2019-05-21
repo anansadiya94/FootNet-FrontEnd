@@ -10,7 +10,7 @@ import UIKit
 
 class NotificationsTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: CustomImageView!
-    @IBOutlet weak var notificationDetailLabel: UILabel!
+    @IBOutlet weak var notificationDetailLabel: CustomContentLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

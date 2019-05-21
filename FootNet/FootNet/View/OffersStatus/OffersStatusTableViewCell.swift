@@ -10,7 +10,7 @@ import UIKit
 
 class OffersStatusTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: CustomImageView!
-    @IBOutlet weak var offerStatusDetailLabel: UILabel!
+    @IBOutlet weak var offerStatusDetailLabel: CustomContentLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

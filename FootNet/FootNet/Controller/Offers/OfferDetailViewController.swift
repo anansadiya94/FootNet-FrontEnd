@@ -10,10 +10,10 @@ import UIKit
 
 class OfferDetailViewController: UIViewController {
     @IBOutlet weak var userImageView: CustomImageView!
-    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: CustomContentLabel!
     @IBOutlet weak var offerImageView: UIImageView!
-    @IBOutlet weak var offerTitleLabel: UILabel!
-    @IBOutlet weak var offerTextLabel: UILabel!
+    @IBOutlet weak var offerTitleLabel: CustomContentLabel!
+    @IBOutlet weak var offerTextLabel: CustomContentLabel!
     @IBOutlet weak var offerRequestButton: CustomRequestButton!
 
     var offerId: Int = 0
@@ -40,12 +40,9 @@ class OfferDetailViewController: UIViewController {
         offerDetails = generateOfferDetails()!
         userImageView.image = UIImage(named: offerDetails.photo)
         fullNameLabel.text = offerDetails.fullName
-        fullNameLabel.textColor = UIColor.colorText
         offerImageView.image = UIImage(named: offerDetails.offerPhoto)
         offerTitleLabel.text = offerDetails.offerTitle
-        offerTitleLabel.textColor = UIColor.colorText
         offerTextLabel.text = offerDetails.offerText
-        offerTextLabel.textColor = UIColor.colorText
         CustomRequestButton.setup(offerRequestButton, offerDetails.offerRequested)
     }
     

@@ -34,7 +34,6 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "notificationsCell", for: indexPath) as! NotificationsTableViewCell
         cell.userImageView.image = notificationsData[indexPath.row].userImage
         cell.notificationDetailLabel.text = notificationsData[indexPath.row].notificationDetail
-        cell.notificationDetailLabel.textColor = UIColor.colorText
         return cell
     }
 }

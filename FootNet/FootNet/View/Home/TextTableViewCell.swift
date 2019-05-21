@@ -14,12 +14,12 @@ protocol TextHomeCellDelegate : class {
 
 class TextTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: CustomImageView!
-    @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var publicationTextLabel: UILabel!
-    @IBOutlet weak var firstReactionCountLabel: UILabel!
-    @IBOutlet weak var secondReactionCountLabel: UILabel!
-    @IBOutlet weak var thirdReactionCountLabel: UILabel!
-    @IBOutlet weak var fourthReactionCountLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: CustomContentLabel!
+    @IBOutlet weak var publicationTextLabel: CustomContentLabel!
+    @IBOutlet weak var firstReactionCountLabel: CustomContentLabel!
+    @IBOutlet weak var secondReactionCountLabel: CustomContentLabel!
+    @IBOutlet weak var thirdReactionCountLabel: CustomContentLabel!
+    @IBOutlet weak var fourthReactionCountLabel: CustomContentLabel!
     @IBOutlet var reactionButtonCollection: [MySuperCustomButton]!
     weak var textHomeCellDelegate : TextHomeCellDelegate?
     var publicationIdD: Int = 0
@@ -30,12 +30,6 @@ class TextTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
-        fullNameLabel.textColor = UIColor.colorText
-        publicationTextLabel.textColor = UIColor.colorText
-        firstReactionCountLabel.textColor = UIColor.colorText
-        secondReactionCountLabel.textColor = UIColor.colorText
-        thirdReactionCountLabel.textColor = UIColor.colorText
-        fourthReactionCountLabel.textColor = UIColor.colorText
         
     }
     

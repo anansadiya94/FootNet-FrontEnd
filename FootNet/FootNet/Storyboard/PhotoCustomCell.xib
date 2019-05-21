@@ -25,7 +25,7 @@
                             <constraint firstAttribute="height" constant="50" id="exh-dl-Jdk"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv3-Dj-Zw3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv3-Dj-Zw3" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
                         <rect key="frame" x="66" y="23" width="41.666666666666657" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -54,7 +54,7 @@
                                             <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="MgM-kk-Y2r"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM7-nn-aKd">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM7-nn-aKd" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="16" y="50" width="18" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Nrv-IK-vcr"/>
@@ -89,7 +89,7 @@
                                             <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="KGv-om-apj"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Qs-sD2">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Qs-sD2" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="14.999999999999998" y="50" width="20.333333333333329" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="SgE-K4-kPd"/>
@@ -124,7 +124,7 @@
                                             <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="LS1-pK-oRL"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmm-Sa-01F">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmm-Sa-01F" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="14.666666666666659" y="50" width="20.666666666666671" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Wgf-bk-cre"/>
@@ -159,7 +159,7 @@
                                             <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="B4C-rO-hQi"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImP-BR-rOU">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImP-BR-rOU" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
                                         <rect key="frame" x="14.666666666666686" y="50" width="21" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="ePM-ny-Jsj"/>

@@ -37,7 +37,7 @@ class SearchViewController: UIViewController {
     }
     
     private func generateDisplayUsers() {
-        for user in Constants.users {
+        for user in StaticDBManager.shared.requestUsers() {
             displayUsers.append(
                 DisplaySearchedUser(id: user.id, fullName: user.name + " " + user.surname , photo: user.photo, amIFollowing: user.amIFollowing)
             )

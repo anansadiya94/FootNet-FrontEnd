@@ -26,9 +26,9 @@ class OfferDetailViewController: UIViewController {
     }
     
     private func generateOfferDetails() -> DisplayOfferDetail? {
-        for offerCellResponse in ConstantsManager.shared.requestOffers() {
+        for offerCellResponse in StaticDBManager.shared.requestOffers() {
             if offerId == offerCellResponse.offerId {
-                if let user = Constants.usersBasicInfo.filter({$0.id == offerCellResponse.userId}).first {
+                if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == offerCellResponse.userId}).first {
                     return DisplayOfferDetail(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, offerRequested: offerCellResponse.offerRequested, offerStatus: offerCellResponse.offerStatus)
                 }
             }
@@ -49,7 +49,7 @@ class OfferDetailViewController: UIViewController {
     @IBAction func offerRequestButtonTapped(_ sender: CustomRequestButton) {
         offerDetails.offerRequested = !offerDetails.offerRequested
         CustomRequestButton.setup(offerRequestButton, offerDetails.offerRequested)
-        ConstantsManager.shared.modifyOfferRequested(offerId: offerId, offerRequested: offerDetails.offerRequested)
+        StaticDBManager.shared.modifyOfferRequested(offerId: offerId, offerRequested: offerDetails.offerRequested)
     }
 }
 

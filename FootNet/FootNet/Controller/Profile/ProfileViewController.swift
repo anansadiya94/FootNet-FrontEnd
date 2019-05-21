@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController {
     
     private func generateUserInfo() {
         let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
-        if let user = Constants.users.filter({$0.id == userId}).first {
+        if let user = StaticDBManager.shared.requestUsers().filter({$0.id == userId}).first {
             userPhoto = user.photo
             userFullName = user.name + " " + user.surname
             userProfileType = user.profileType

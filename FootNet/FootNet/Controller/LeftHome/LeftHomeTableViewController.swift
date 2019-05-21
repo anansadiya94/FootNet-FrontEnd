@@ -27,7 +27,7 @@ class LeftHomeTableViewController: UITableViewController {
     
     private func generateUserInfo() {
         let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
-        if let user = Constants.usersBasicInfo.filter({$0.id == userId}).first {
+        if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == userId}).first {
             userFullName = user.fullName
             userPhoto = user.photo
         }

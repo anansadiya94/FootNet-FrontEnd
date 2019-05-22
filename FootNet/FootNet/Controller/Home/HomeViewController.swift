@@ -16,7 +16,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var displayPhotoHomeCells = [DisplayPhotoHomeCell]()
     var displayOfferCells = [DisplayOffercell]()
     var homeCells = [HomeCell]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
@@ -140,6 +139,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 }
 
+extension HomeViewController {
+    func animateButtonText(buttonLabelText: String) {
+        print("hola!")
+//        customView.frame = CGRect.init(x: 0, y: 0, width: 100, height: 200)
+//        customView.backgroundColor = UIColor.black     //give color to the view
+//        customView.center = self.view.center
+//        self.view.superview?.addSubview(customView)
+    }
+}
+
 extension HomeViewController: TextHomeCellDelegate {
     //TODO: SEPARATE THIS FUNCTION
     func increaseCounter(publicationId: Int, selectedButtonTag: Int, toBeSelectedButtonTag: Int, textTableViewCell: TextTableViewCell) {
@@ -255,4 +264,30 @@ extension HomeViewController: OfferCellDelegate {
             self.navigationController?.pushViewController(offerDetailViewController, animated: true)
         }
     }
+}
+
+public extension UIView {
+    
+    /**
+     Fade in a view with a duration
+     
+     - parameter duration: custom animation duration
+     */
+    func fadeIn(duration: TimeInterval = 1.0) {
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 1.0
+        })
+    }
+    
+    /**
+     Fade out a view with a duration
+     
+     - parameter duration: custom animation duration
+     */
+    func fadeOut(duration: TimeInterval = 1.0) {
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 0.0
+        })
+    }
+    
 }

@@ -30,7 +30,6 @@ class TextTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
-        
     }
     
     func setUp(publicationId: Int, img: String, fullName: String, publicationText: String, publicationReaction: PublicationReaction, textHomeCellDelegate : TextHomeCellDelegate) {
@@ -60,19 +59,50 @@ class TextTableViewCell: UITableViewCell {
     }
     
     @IBAction func buttonPressed(_ sender: MySuperCustomButton) {
-        if let selectedButton = reactionButtonCollection.filter({$0.isSelected == true}).first {
-            selectedButtonTag = selectedButton.tag
+        animateReactedButton(tag: sender.tag)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if let selectedButton = self.reactionButtonCollection.filter({$0.isSelected == true}).first {
+                self.selectedButtonTag = selectedButton.tag
+            }
+            
+            self.reactionButtonCollection.forEach { (button) in
+                button.isSelected = button == sender
+            }
+            sender.isSelected = true
+            self.toBeSelectedButtonTag = sender.tag
+            self.textHomeCellDelegate?.increaseCounter(publicationId: self.publicationIdD, selectedButtonTag: self.selectedButtonTag, toBeSelectedButtonTag: self.toBeSelectedButtonTag, textTableViewCell: self)
         }
-        
-        reactionButtonCollection.forEach { (button) in
-            button.isSelected = button == sender
-        }
-        sender.isSelected = true
-        toBeSelectedButtonTag = sender.tag
-        textHomeCellDelegate?.increaseCounter(publicationId: publicationIdD, selectedButtonTag: selectedButtonTag, toBeSelectedButtonTag: toBeSelectedButtonTag, textTableViewCell: self)
     }
 }
 
+extension TextTableViewCell {
+    private func animateReactedButton(tag: Int) {
+        var imageName = ""
+        switch tag {
+        case 1:
+            imageName = "top.png"
+        case 2:
+            imageName = "fire.png"
+        case 3:
+            imageName = "trophy.png"
+        case 4:
+            imageName = "medal.png"
+        default:
+            break
+        }
+        
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        self.addSubview(imageView)
+        imageView.animate(inParallel: [
+            .fadeIn(duration: 2),
+            .resize(to: CGSize(width: 200, height: 200), duration: 2),
+            .move(byX: 50.0, y: 50.0, duration: 2),
+            .fadeOut(duration: 2)
+        ])
+    }
+}
 
 //TODO: Move it from here
 class MySuperCustomButton : UIButton {

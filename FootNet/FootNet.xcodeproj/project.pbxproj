@@ -45,6 +45,7 @@
 		9E1493E0228952F30035C6DD /* VideoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD674B227CA2750082074C /* VideoCustomCell.xib */; };
 		9E1493E422897AA20035C6DD /* DisplayTextHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */; };
 		9E1493E6228982E60035C6DD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E5228982E60035C6DD /* Common.swift */; };
+		9E173F132295C6CE002BB6D3 /* JSAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E173F122295C6CE002BB6D3 /* JSAnimation.swift */; };
 		9E1B1368228F2021003908AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1367228F2021003908AE /* ProfileViewController.swift */; };
 		9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
 		9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */; };
@@ -211,6 +212,7 @@
 		9E07D982225E3412004A73A8 /* MainTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarUITests.swift; sourceTree = "<group>"; };
 		9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextHomeCell.swift; sourceTree = "<group>"; };
 		9E1493E5228982E60035C6DD /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		9E173F122295C6CE002BB6D3 /* JSAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAnimation.swift; sourceTree = "<group>"; };
 		9E1B1367228F2021003908AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9E1B1E1F2225A55600C82019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E1EC8532249218300E5B2E7 /* EditProfleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfleViewController.swift; sourceTree = "<group>"; };
@@ -612,6 +614,7 @@
 		9E82E7ED22720F2400267820 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9E173F122295C6CE002BB6D3 /* JSAnimation.swift */,
 				9EDD673C227C8F360082074C /* DependencyManager.swift */,
 				9E4FA3632231A2FA00094509 /* Constants.swift */,
 				9E9FBAB42292CE8300786A78 /* StaticDBManager.swift */,
@@ -1433,6 +1436,7 @@
 				9E1EC8542249218300E5B2E7 /* EditProfleViewController.swift in Sources */,
 				9E5DEE7C224B814F0091CECB /* ForgotPasswordViewController.swift in Sources */,
 				9ECF074022521D7E0082FC1F /* OffersStatusModel.swift in Sources */,
+				9E173F132295C6CE002BB6D3 /* JSAnimation.swift in Sources */,
 				9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */,
 				9EB9A4FB229031AF00A57E25 /* PublishTableViewController.swift in Sources */,
 				9EFE51D42279A441002DB0BB /* CustomSeeMoreButton.swift in Sources */,

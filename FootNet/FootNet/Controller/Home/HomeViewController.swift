@@ -139,16 +139,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 }
 
-extension HomeViewController {
-    func animateButtonText(buttonLabelText: String) {
-        print("hola!")
-//        customView.frame = CGRect.init(x: 0, y: 0, width: 100, height: 200)
-//        customView.backgroundColor = UIColor.black     //give color to the view
-//        customView.center = self.view.center
-//        self.view.superview?.addSubview(customView)
-    }
-}
-
 extension HomeViewController: TextHomeCellDelegate {
     //TODO: SEPARATE THIS FUNCTION
     func increaseCounter(publicationId: Int, selectedButtonTag: Int, toBeSelectedButtonTag: Int, textTableViewCell: TextTableViewCell) {

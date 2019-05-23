@@ -32,13 +32,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZx-mr-BeN" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                        <rect key="frame" x="8" y="66" width="398" height="83"/>
+                        <rect key="frame" x="8" y="66" width="398" height="117"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-c7-W8V">
-                        <rect key="frame" x="28" y="157" width="358" height="70"/>
+                        <rect key="frame" x="28" y="191" width="358" height="70"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02y-Fc-7O1" userLabel="View 1">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
@@ -200,11 +200,15 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="firstReactionCountLabel" destination="fsm-oc-48R" id="fbx-NI-xp5"/>
+                <outlet property="firstReactionView" destination="02y-Fc-7O1" id="zBA-Xd-fCX"/>
                 <outlet property="fourthReactionCountLabel" destination="cA9-Lk-nc8" id="ZRB-uw-5Is"/>
+                <outlet property="fourthReactionView" destination="s4M-VP-pLQ" id="CoG-t7-s4F"/>
                 <outlet property="fullNameLabel" destination="Vgj-an-flX" id="mRh-By-2o3"/>
                 <outlet property="publicationTextLabel" destination="wZx-mr-BeN" id="MpF-QO-Cf0"/>
                 <outlet property="secondReactionCountLabel" destination="0ab-0g-otB" id="FC0-Df-M0j"/>
+                <outlet property="secondReactionView" destination="IYH-gm-6qz" id="3uG-XQ-cgw"/>
                 <outlet property="thirdReactionCountLabel" destination="hfw-k7-iR7" id="Dmx-PZ-MKN"/>
+                <outlet property="thirdReactionView" destination="QRe-tR-6Dq" id="yBs-CN-3UZ"/>
                 <outlet property="userImageView" destination="mqk-c9-E5j" id="KJF-oe-9I0"/>
                 <outletCollection property="reactionButtonCollection" destination="jia-mS-8jH" collectionClass="NSMutableArray" id="rnd-BL-hIC"/>
                 <outletCollection property="reactionButtonCollection" destination="Xuc-l9-zXa" collectionClass="NSMutableArray" id="Moj-im-Pzx"/>

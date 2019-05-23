@@ -21,9 +21,14 @@ class TextTableViewCell: UITableViewCell {
     @IBOutlet weak var thirdReactionCountLabel: CustomContentLabel!
     @IBOutlet weak var fourthReactionCountLabel: CustomContentLabel!
     @IBOutlet var reactionButtonCollection: [MySuperCustomButton]!
+    @IBOutlet weak var firstReactionView: UIView!
+    @IBOutlet weak var secondReactionView: UIView!
+    @IBOutlet weak var thirdReactionView: UIView!
+    @IBOutlet weak var fourthReactionView: UIView!
+    
+    
     weak var textHomeCellDelegate : TextHomeCellDelegate?
     var publicationIdD: Int = 0
-    
     var selectedButtonTag: Int = 0
     var toBeSelectedButtonTag: Int = 0
     
@@ -78,27 +83,37 @@ class TextTableViewCell: UITableViewCell {
 extension TextTableViewCell {
     private func animateReactedButton(tag: Int) {
         var imageName = ""
+        var x = 0
+        var y = 0
         switch tag {
         case 1:
             imageName = "top.png"
+            x = Int(self.firstReactionView.center.x)
+            y = Int(self.firstReactionView.center.y)
         case 2:
             imageName = "fire.png"
+            x = Int(self.secondReactionView.center.x)
+            y = Int(self.secondReactionView.center.y)
         case 3:
             imageName = "trophy.png"
+            x = Int(self.thirdReactionView.center.x)
+            y = Int(self.thirdReactionView.center.y)
         case 4:
             imageName = "medal.png"
+            x = Int(self.fourthReactionView.center.x)
+            y = Int(self.fourthReactionView.center.y)
         default:
             break
         }
         
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
-        imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        imageView.frame = CGRect(x: x, y: y, width: 50, height: 50)
         self.addSubview(imageView)
         imageView.animate(inParallel: [
             .fadeIn(duration: 2),
             .resize(to: CGSize(width: 200, height: 200), duration: 2),
-            .move(byX: 50.0, y: 50.0, duration: 2),
+            .move(byX: 0.0, y: 50.0, duration: 2),
             .fadeOut(duration: 2)
         ])
     }

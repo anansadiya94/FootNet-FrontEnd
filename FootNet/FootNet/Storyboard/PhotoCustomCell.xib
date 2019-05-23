@@ -200,11 +200,15 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="firstReactionCountLabel" destination="hM7-nn-aKd" id="kQn-49-lBI"/>
+                <outlet property="firstReactionView" destination="a2s-oT-6sG" id="mOy-Df-9y9"/>
                 <outlet property="fourthReactionCountLabel" destination="ImP-BR-rOU" id="Zgh-Zh-HNL"/>
+                <outlet property="fourthReactionView" destination="jAx-Ip-J1P" id="uaw-Ky-vMk"/>
                 <outlet property="fullNameLabel" destination="fv3-Dj-Zw3" id="nfc-Rh-TIt"/>
                 <outlet property="publicationPhotoImageView" destination="BDB-sK-jBV" id="mjS-1z-89L"/>
                 <outlet property="secondReactionCountLabel" destination="lhK-Qs-sD2" id="BkO-aT-VAJ"/>
+                <outlet property="secondReactionView" destination="XIN-wO-7nT" id="PKv-lU-h2h"/>
                 <outlet property="thirdReactionCountLabel" destination="Hmm-Sa-01F" id="cVo-f2-1pS"/>
+                <outlet property="thirdReactionView" destination="t3s-Qy-Twh" id="eTS-eA-fz4"/>
                 <outlet property="userImageView" destination="aya-eR-tdv" id="dqZ-mU-YIA"/>
                 <outletCollection property="reactionButtonCollection" destination="Szr-ZD-Gim" collectionClass="NSMutableArray" id="9VB-bT-r4P"/>
                 <outletCollection property="reactionButtonCollection" destination="IVC-NP-nIz" collectionClass="NSMutableArray" id="Hjx-Fh-NgC"/>

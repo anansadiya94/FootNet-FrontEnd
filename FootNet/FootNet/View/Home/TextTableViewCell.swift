@@ -26,7 +26,6 @@ class TextTableViewCell: UITableViewCell {
     @IBOutlet weak var thirdReactionView: UIView!
     @IBOutlet weak var fourthReactionView: UIView!
     
-    
     weak var textHomeCellDelegate : TextHomeCellDelegate?
     var publicationIdD: Int = 0
     var selectedButtonTag: Int = 0

@@ -18,8 +18,8 @@ class OfferTableViewCell: UITableViewCell {
     @IBOutlet weak var offerImageView: UIImageView!
     @IBOutlet weak var offerDetailLabel: CustomContentLabel!
     @IBOutlet weak var seeMoreButton: UIButton!
-    weak var offerCellDelegate : OfferCellDelegate?
     
+    weak var offerCellDelegate : OfferCellDelegate?
     var offerIdD: Int = 0
     
     override func awakeFromNib() {

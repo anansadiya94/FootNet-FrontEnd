@@ -20,7 +20,7 @@ class TextTableViewCell: UITableViewCell {
     @IBOutlet weak var secondReactionCountLabel: CustomContentLabel!
     @IBOutlet weak var thirdReactionCountLabel: CustomContentLabel!
     @IBOutlet weak var fourthReactionCountLabel: CustomContentLabel!
-    @IBOutlet var reactionButtonCollection: [MySuperCustomButton]!
+    @IBOutlet var reactionButtonCollection: [UIButton]!
     @IBOutlet weak var firstReactionView: UIView!
     @IBOutlet weak var secondReactionView: UIView!
     @IBOutlet weak var thirdReactionView: UIView!
@@ -61,7 +61,7 @@ class TextTableViewCell: UITableViewCell {
         self.textHomeCellDelegate = textHomeCellDelegate
     }
     
-    @IBAction func buttonPressed(_ sender: MySuperCustomButton) {
+    @IBAction func buttonPressed(_ sender: UIButton) {
         animateReactedButton(tag: sender.tag)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if let selectedButton = self.reactionButtonCollection.filter({$0.isSelected == true}).first {
@@ -114,14 +114,5 @@ extension TextTableViewCell {
             .move(byX: 0.0, y: 50.0, duration: 2),
             .fadeOut(duration: 2)
         ])
-    }
-}
-
-//TODO: Move it from here
-class MySuperCustomButton : UIButton {
-    override var isSelected: Bool {
-        didSet {
-            backgroundColor = self.isSelected ? .clear : .clear
-        }
     }
 }

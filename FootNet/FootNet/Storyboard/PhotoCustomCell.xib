@@ -43,7 +43,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-oT-6sG" userLabel="View 1">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szr-ZD-Gim" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szr-ZD-Gim">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="6Bo-ib-j4Z"/>
@@ -51,7 +51,7 @@
                                         </constraints>
                                         <state key="normal" title="🔝"/>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="MgM-kk-Y2r"/>
+                                            <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="J2K-J1-kS1"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM7-nn-aKd" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
@@ -78,7 +78,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIN-wO-7nT" userLabel="View 2">
                                 <rect key="frame" x="102.66666666666666" y="0.0" width="50" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVC-NP-nIz" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVC-NP-nIz">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6X0-Dg-9jk"/>
@@ -86,7 +86,7 @@
                                         </constraints>
                                         <state key="normal" title="🔥"/>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="KGv-om-apj"/>
+                                            <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="20c-tf-RiK"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Qs-sD2" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
@@ -113,7 +113,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3s-Qy-Twh" userLabel="View 3">
                                 <rect key="frame" x="205.33333333333334" y="0.0" width="50" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f21-RK-F5C" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f21-RK-F5C">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Xyh-UA-Lld"/>
@@ -121,7 +121,7 @@
                                         </constraints>
                                         <state key="normal" title="🏆"/>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="LS1-pK-oRL"/>
+                                            <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="JE9-1g-M68"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmm-Sa-01F" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
@@ -148,7 +148,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAx-Ip-J1P" userLabel="View 4">
                                 <rect key="frame" x="308" y="0.0" width="50" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjT-Nr-GrU" customClass="MySuperCustomButton" customModule="FootNet" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjT-Nr-GrU">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RL0-oX-fI6"/>
@@ -156,7 +156,7 @@
                                         </constraints>
                                         <state key="normal" title="🥇"/>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="B4C-rO-hQi"/>
+                                            <action selector="buttonPressed:" destination="7Mm-fm-LwL" eventType="touchUpInside" id="2kx-qm-Xh5"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImP-BR-rOU" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">

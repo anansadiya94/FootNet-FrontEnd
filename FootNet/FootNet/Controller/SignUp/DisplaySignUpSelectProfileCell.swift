@@ -17,7 +17,7 @@ enum ProfileType {
     case Fan
 }
 
-struct SignUpSelectProfileModel {
+struct DisplaySignUpSelectProfileCell {
     let img: UIImage
     let title: String
     let type: ProfileType

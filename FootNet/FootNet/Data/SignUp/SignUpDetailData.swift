@@ -11,99 +11,99 @@ import UIKit
 import CocoaLumberjack
 
 class SignUpDetailData {
-    static func getAllsignUpSectionsData(_ profileType: ProfileType) -> [[SignUpDetailModel]] {
-        var signUpSectionsData = [[SignUpDetailModel]]()
+    static func getAllsignUpSectionsData(_ profileType: ProfileType) -> [[DisplaySignUpDetailCell]] {
+        var signUpSectionsData = [[DisplaySignUpDetailCell]]()
         let userProfileTags = UserProfileTags()
     
-        var section1Data = [SignUpDetailModel]()
-        var section2Data = [SignUpDetailModel]()
-        var section3Data = [SignUpDetailModel]()
-        var section4Data = [SignUpDetailModel]()
+        var section1Data = [DisplaySignUpDetailCell]()
+        var section2Data = [DisplaySignUpDetailCell]()
+        var section3Data = [DisplaySignUpDetailCell]()
+        var section4Data = [DisplaySignUpDetailCell]()
 
         switch profileType {
         case .Player:
             //Section 1
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
             
             //Section 2
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
             
             //Section3
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_actualClub".localize(), tag: userProfileTags.actualClub))
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_actualClub".localize(), tag: userProfileTags.actualClub))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
             
             //Section 4
-            section4Data.append(SignUpDetailModel(placeholder: "signUp_favoritePosition".localize(), tag: userProfileTags.favoritePosition))
-            section4Data.append(SignUpDetailModel(placeholder: "signUp_preferredPositions".localize(), tag: userProfileTags.preferredPositions))
-            section4Data.append(SignUpDetailModel(placeholder: "signUp_weight".localize(), tag: userProfileTags.weight))
-            section4Data.append(SignUpDetailModel(placeholder: "signUp_height".localize(), tag: userProfileTags.height))
+            section4Data.append(DisplaySignUpDetailCell(placeholder: "signUp_favoritePosition".localize(), tag: userProfileTags.favoritePosition))
+            section4Data.append(DisplaySignUpDetailCell(placeholder: "signUp_preferredPositions".localize(), tag: userProfileTags.preferredPositions))
+            section4Data.append(DisplaySignUpDetailCell(placeholder: "signUp_weight".localize(), tag: userProfileTags.weight))
+            section4Data.append(DisplaySignUpDetailCell(placeholder: "signUp_height".localize(), tag: userProfileTags.height))
         case .Coach, .SportDirector:
             //Section 1
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
             
             //Section 2
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
             
             //Section3
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_actualClub".localize(), tag: userProfileTags.actualClub))
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_actualClub".localize(), tag: userProfileTags.actualClub))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
             
             //Section 4
         case .Team:
             //Section 1
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
             
             //Section 2
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
             
             //Section3
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_bio".localize(), tag: userProfileTags.bio))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_record".localize(), tag: userProfileTags.record))
             
             //Section 4
             
         case .Fan:
             //Section 1
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
-            section1Data.append(SignUpDetailModel(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_name".localize(), tag: userProfileTags.name))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_surname".localize(), tag: userProfileTags.surname))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_phone".localize(), tag: userProfileTags.phone))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_email".localize(), tag: userProfileTags.email))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_password".localize(), tag: userProfileTags.password))
+            section1Data.append(DisplaySignUpDetailCell(placeholder: "signUp_repeatPassword".localize(), tag: userProfileTags.repeatPassword))
             
             //Section 2
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
-            section2Data.append(SignUpDetailModel(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_sex".localize(), tag: userProfileTags.sex))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_bithdayDate".localize(), tag: userProfileTags.birthday))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_nationality".localize(), tag: userProfileTags.nationality))
+            section2Data.append(DisplaySignUpDetailCell(placeholder: "signUp_location".localize(), tag: userProfileTags.location))
             
             //Section3
-            section3Data.append(SignUpDetailModel(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
+            section3Data.append(DisplaySignUpDetailCell(placeholder: "signUp_photo_label".localize(), tag: userProfileTags.photo))
         }
         
         //Adding sections

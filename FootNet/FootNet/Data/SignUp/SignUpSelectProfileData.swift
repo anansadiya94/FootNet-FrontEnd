@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 class SignUpSelectProfileData {
-    static func getAllSignUpSelectProfileData() -> [SignUpSelectProfileModel] {
-        var signUpSelectProfileData = [SignUpSelectProfileModel]()
+    static func getAllSignUpSelectProfileData() -> [DisplaySignUpSelectProfileCell] {
+        var signUpSelectProfileData = [DisplaySignUpSelectProfileCell]()
         signUpSelectProfileData = [
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "player_label".localize(), type: .Player ),
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "coach_label".localize(), type: .Coach),
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "sportDirector_label".localize(), type: .SportDirector),
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "team_label".localize(), type: .Team),
-            SignUpSelectProfileModel(img: #imageLiteral(resourceName: "logo") , title: "fan_label".localize(), type: .Fan)
+            DisplaySignUpSelectProfileCell(img: #imageLiteral(resourceName: "logo") , title: "player_label".localize(), type: .Player ),
+            DisplaySignUpSelectProfileCell(img: #imageLiteral(resourceName: "logo") , title: "coach_label".localize(), type: .Coach),
+            DisplaySignUpSelectProfileCell(img: #imageLiteral(resourceName: "logo") , title: "sportDirector_label".localize(), type: .SportDirector),
+            DisplaySignUpSelectProfileCell(img: #imageLiteral(resourceName: "logo") , title: "team_label".localize(), type: .Team),
+            DisplaySignUpSelectProfileCell(img: #imageLiteral(resourceName: "logo") , title: "fan_label".localize(), type: .Fan)
         ]
         return signUpSelectProfileData
     }

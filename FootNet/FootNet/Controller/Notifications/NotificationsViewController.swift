@@ -9,7 +9,7 @@
 import UIKit
 
 class NotificationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var notificationsData = [NotificationsModel]()
+    var notificationsData = [DisplayNotificationCell]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

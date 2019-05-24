@@ -9,10 +9,10 @@
 import UIKit
 
 class OffersStatusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var acceptedOffersData = [OffersStatusModel]()
-    var pendingOffersData = [OffersStatusModel]()
-    var rejectedOffersData = [OffersStatusModel]()
-    private var dataSource: [OffersStatusModel]?
+    var acceptedOffersData = [DisplayOfferStatusCell]()
+    var pendingOffersData = [DisplayOfferStatusCell]()
+    var rejectedOffersData = [DisplayOfferStatusCell]()
+    private var dataSource: [DisplayOfferStatusCell]?
 
     @IBOutlet weak var scSegment: UISegmentedControl!
     @IBOutlet weak var offersStatusTableView: UITableView!

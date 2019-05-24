@@ -10,7 +10,7 @@ import UIKit
 import CocoaLumberjack
 
 class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
-    var signUpDeatilSectionsData = [[SignUpDetailModel]]()
+    var signUpDeatilSectionsData = [[DisplaySignUpDetailCell]]()
     var profileType: ProfileType?
     var userProfileModel = UserProfileModel()
     let userProfileTags = UserProfileTags()

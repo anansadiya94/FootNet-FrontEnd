@@ -1,5 +1,5 @@
 //
-//  OffersStatusModel.swift
+//  NotificationsModel.swift
 //  FootNet
 //
 //  Created by Anan Sadiya on 01/04/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct OffersStatusModel {
+struct DisplayNotificationCell {
     let userImage: UIImage
-    let offerStatusDetail: String
+    let notificationDetail: String
 }

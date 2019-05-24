@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 
 class NotificationsData {
-    static func getNotificationsData() -> [NotificationsModel] {
-        var notificationsData = [NotificationsModel]()
+    static func getNotificationsData() -> [DisplayNotificationCell] {
+        var notificationsData = [DisplayNotificationCell]()
         let notificationsPostDetail = "notificationsPost_detail".localize()
         let notificationsPhotoDetail = "notificationsPhoto_detail".localize()
         let notificationsVideoDetail = "notificationsVideo_detail".localize()
         notificationsData = [
-            NotificationsModel(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPostDetail)."),
-            NotificationsModel(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPhotoDetail)."),
-            NotificationsModel(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsVideoDetail).")
+            DisplayNotificationCell(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPostDetail)."),
+            DisplayNotificationCell(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPhotoDetail)."),
+            DisplayNotificationCell(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsVideoDetail).")
         ]
         return notificationsData
     }

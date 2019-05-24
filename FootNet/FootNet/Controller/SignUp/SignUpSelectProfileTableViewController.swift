@@ -10,7 +10,7 @@ import UIKit
 import CocoaLumberjack
 
 class SignUpSelectProfileTableViewController: UITableViewController {
-    var signUpSelectProfileData = [SignUpSelectProfileModel]()
+    var signUpSelectProfileData = [DisplaySignUpSelectProfileCell]()
     private var profileType: ProfileType?
     
     override func viewDidLoad() {

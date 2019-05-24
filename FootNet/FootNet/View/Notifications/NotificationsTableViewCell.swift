@@ -14,6 +14,5 @@ class NotificationsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .clear
     }
 }

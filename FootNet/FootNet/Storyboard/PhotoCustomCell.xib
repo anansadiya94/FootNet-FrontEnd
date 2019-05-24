@@ -198,6 +198,7 @@
                     <constraint firstItem="fv3-Dj-Zw3" firstAttribute="centerY" secondItem="aya-eR-tdv" secondAttribute="centerY" id="zif-dp-oOD"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="firstReactionCountLabel" destination="hM7-nn-aKd" id="kQn-49-lBI"/>
                 <outlet property="firstReactionView" destination="a2s-oT-6sG" id="mOy-Df-9y9"/>

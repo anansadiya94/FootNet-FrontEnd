@@ -32,13 +32,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZx-mr-BeN" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                        <rect key="frame" x="8" y="66" width="398" height="117"/>
+                        <rect key="frame" x="8" y="66" width="398" height="83"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-c7-W8V">
-                        <rect key="frame" x="28" y="191" width="358" height="70"/>
+                        <rect key="frame" x="28" y="157" width="358" height="70"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02y-Fc-7O1" userLabel="View 1">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
@@ -198,6 +198,7 @@
                     <constraint firstItem="2Xf-c7-W8V" firstAttribute="leading" secondItem="RP8-Ry-MV3" secondAttribute="leadingMargin" constant="8" id="z5v-aH-4Rl"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="firstReactionCountLabel" destination="fsm-oc-48R" id="fbx-NI-xp5"/>
                 <outlet property="firstReactionView" destination="02y-Fc-7O1" id="zBA-Xd-fCX"/>

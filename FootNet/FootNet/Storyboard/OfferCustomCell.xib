@@ -68,6 +68,7 @@
                     <constraint firstItem="ZX1-jG-ydW" firstAttribute="leading" secondItem="8xM-Zt-0EB" secondAttribute="leading" constant="8" id="sra-UM-3Sz"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="fullNameLabel" destination="PRf-zS-cqk" id="dfK-54-Vkw"/>
                 <outlet property="offerDetailLabel" destination="ag5-AR-AMk" id="a0o-7l-2pg"/>

@@ -33,7 +33,6 @@ class TextTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .clear
     }
     
     func setUp(publicationId: Int, img: String, fullName: String, publicationText: String, publicationReaction: PublicationReaction, textHomeCellDelegate : TextHomeCellDelegate) {

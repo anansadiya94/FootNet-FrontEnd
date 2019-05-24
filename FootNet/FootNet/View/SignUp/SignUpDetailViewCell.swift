@@ -19,7 +19,6 @@ class SignUpDetailViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .clear
     }
     
     override func prepareForReuse() {

@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +46,7 @@
                                         <constraint firstItem="kzG-gN-x0V" firstAttribute="top" secondItem="FxJ-LU-wE3" secondAttribute="top" id="zEz-zq-lVb"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="signUpSelectProfileCell"/>
                                 <connections>
                                     <outlet property="img" destination="kzG-gN-x0V" id="KW5-Ds-XVf"/>
@@ -97,6 +99,7 @@
                                         <constraint firstAttribute="bottom" secondItem="NFh-np-UJo" secondAttribute="bottom" constant="8" id="wLl-nd-iln"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -125,6 +128,7 @@
                                         <constraint firstItem="WDC-qv-cJp" firstAttribute="top" secondItem="HuU-Zn-Veq" secondAttribute="top" constant="8" id="wBt-ib-GYT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -153,6 +157,7 @@
                                         <constraint firstItem="MMh-2A-r8Y" firstAttribute="leading" secondItem="X68-0j-8ZK" secondAttribute="leading" constant="16" id="nTu-Jh-yBh"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -210,6 +215,7 @@
                                         <constraint firstAttribute="bottom" secondItem="O4B-d4-7ho" secondAttribute="bottom" constant="8" id="r2b-za-Yde"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -257,6 +263,7 @@
                                         <constraint firstItem="VWZ-WX-4IH" firstAttribute="leading" secondItem="Png-FZ-uHK" secondAttribute="leading" constant="16" id="XWR-u2-noO"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>

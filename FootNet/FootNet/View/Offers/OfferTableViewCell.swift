@@ -24,7 +24,6 @@ class OfferTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = .clear
     }
     
     func setUp(offerId: Int, img: String, fullName: String, offerImg: String, offerTitle: String, offerCellDelegate : OfferCellDelegate) {

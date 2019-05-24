@@ -33,7 +33,6 @@ class PhotoTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .clear
     }
 
     func setUp(publicationId: Int, img: String, fullName: String, publicationPhoto: String, publicationReaction: PublicationReaction, photoHomeCellDelegate : PhotoHomeCellDelegate) {

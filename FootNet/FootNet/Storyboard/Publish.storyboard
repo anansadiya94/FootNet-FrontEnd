@@ -46,6 +46,7 @@
                                         <constraint firstItem="pFT-Qg-Znh" firstAttribute="leading" secondItem="U3m-FN-l3Z" secondAttribute="leading" constant="16" id="vkP-wo-aZH"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="signUpSelectProfileCell"/>
                                 <connections>
                                     <outlet property="img" destination="pFT-Qg-Znh" id="ICD-re-M4o"/>

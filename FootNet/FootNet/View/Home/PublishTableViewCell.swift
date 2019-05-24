@@ -14,6 +14,5 @@ class PublishTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .clear
     }
 }

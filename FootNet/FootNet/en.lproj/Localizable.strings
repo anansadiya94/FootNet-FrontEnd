@@ -174,7 +174,6 @@
 //Notifications
 "notificationsPost_detail"="has reacted to your post";
 "notificationsPhoto_detail"="has reacted to your photo";
-"notificationsVideo_detail"="has reacted to your video";
 
 //Search
 "follow_button"="Follow";

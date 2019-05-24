@@ -14,11 +14,10 @@ class NotificationsData {
         var notificationsData = [DisplayNotificationCell]()
         let notificationsPostDetail = "notificationsPost_detail".localize()
         let notificationsPhotoDetail = "notificationsPhoto_detail".localize()
-        let notificationsVideoDetail = "notificationsVideo_detail".localize()
         notificationsData = [
             DisplayNotificationCell(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPostDetail)."),
             DisplayNotificationCell(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPhotoDetail)."),
-            DisplayNotificationCell(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsVideoDetail).")
+            DisplayNotificationCell(userImage: #imageLiteral(resourceName: "anan"), notificationDetail: "Anan Sadiya \(notificationsPhotoDetail).")
         ]
         return notificationsData
     }

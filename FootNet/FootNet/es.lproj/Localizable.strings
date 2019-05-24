@@ -172,7 +172,6 @@
 //Notifications
 "notificationsPost_detail"="ha reaccionado a tu post";
 "notificationsPhoto_detail"="ha reaccionado a tu foto";
-"notificationsVideo_detail"="ha reaccionado a tu vídeo";
 
 //Search
 "follow_button"="Seguir";

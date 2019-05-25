@@ -19,14 +19,9 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
-        setTabBarItem()
         followersData = generateDisplayFollowersData()
         followingData = generateDisplayFollowingData()
         setSegmentControl()
-    }
-    
-    private func setTabBarItem() {
-        tabBarItem.title = "offersStatusTabBar".localize()
     }
     
     private func setSegmentControl() {

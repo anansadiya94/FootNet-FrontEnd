@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Contacts View Controller-->
+        <scene sceneID="yD7-VD-grn">
+            <objects>
+                <viewController storyboardIdentifier="MyContactsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e7a-NZ-Izq" customClass="MyContactsViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="prD-Py-0Or">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1uA-e7-huR" userLabel="Contacts Table View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myContactCell" rowHeight="200" id="6Un-hZ-gcb" customClass="MyContactTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Un-hZ-gcb" id="bLF-GE-Hhn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="4Rw-pQ-nCC" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="8ek-Re-QnM"/>
+                                                        <constraint firstAttribute="height" constant="50" id="jz4-Eg-DhD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCB-3M-q5g" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="66" y="7.9999999999999982" width="41.666666666666657" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b27-rZ-bRV" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="94.333333333333329" width="398" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m6-ru-G63" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="66" width="398" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="9m6-ru-G63" firstAttribute="leading" secondItem="bLF-GE-Hhn" secondAttribute="leading" constant="8" id="0dF-AF-c0y"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hCB-3M-q5g" secondAttribute="bottom" constant="16" id="Myh-TU-a1d"/>
+                                                <constraint firstItem="4Rw-pQ-nCC" firstAttribute="top" secondItem="bLF-GE-Hhn" secondAttribute="top" constant="8" id="Py1-R4-hug"/>
+                                                <constraint firstItem="hCB-3M-q5g" firstAttribute="leading" secondItem="4Rw-pQ-nCC" secondAttribute="trailing" constant="8" id="RPk-U4-TQc"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="b27-rZ-bRV" secondAttribute="bottom" constant="8" id="S2p-yj-aWm"/>
+                                                <constraint firstItem="b27-rZ-bRV" firstAttribute="leading" secondItem="bLF-GE-Hhn" secondAttribute="leading" constant="8" id="Wz7-r7-IE4"/>
+                                                <constraint firstAttribute="trailing" secondItem="b27-rZ-bRV" secondAttribute="trailing" constant="8" id="Yfb-tL-0EA"/>
+                                                <constraint firstItem="b27-rZ-bRV" firstAttribute="top" secondItem="9m6-ru-G63" secondAttribute="bottom" constant="8" id="ci5-5I-YJO"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Rw-pQ-nCC" secondAttribute="bottom" constant="8" id="dkw-kI-pEI"/>
+                                                <constraint firstItem="hCB-3M-q5g" firstAttribute="top" secondItem="bLF-GE-Hhn" secondAttribute="top" constant="8" id="inK-ZW-XhJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="9m6-ru-G63" secondAttribute="trailing" constant="8" id="n3a-f6-ICe"/>
+                                                <constraint firstItem="4Rw-pQ-nCC" firstAttribute="leading" secondItem="bLF-GE-Hhn" secondAttribute="leading" constant="8" id="nmt-32-VSl"/>
+                                                <constraint firstItem="9m6-ru-G63" firstAttribute="top" secondItem="4Rw-pQ-nCC" secondAttribute="bottom" constant="8" id="qH7-hz-rtw"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hCB-3M-q5g" secondAttribute="trailing" constant="16" id="uWS-OR-tBJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="emailLabel" destination="9m6-ru-G63" id="sGg-I1-PJM"/>
+                                            <outlet property="fullNameLabel" destination="hCB-3M-q5g" id="40w-9E-i5s"/>
+                                            <outlet property="phoneLabel" destination="b27-rZ-bRV" id="0fA-NQ-H50"/>
+                                            <outlet property="userImageView" destination="4Rw-pQ-nCC" id="aRk-70-iPu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="e7a-NZ-Izq" id="Qct-oR-UzE"/>
+                                    <outlet property="delegate" destination="e7a-NZ-Izq" id="pYL-sI-M6Y"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1uA-e7-huR" firstAttribute="trailing" secondItem="gQ1-NF-aYv" secondAttribute="trailing" id="L0c-gr-ber"/>
+                            <constraint firstItem="1uA-e7-huR" firstAttribute="top" secondItem="prD-Py-0Or" secondAttribute="top" id="T6U-wa-7ss"/>
+                            <constraint firstItem="1uA-e7-huR" firstAttribute="leading" secondItem="gQ1-NF-aYv" secondAttribute="leading" id="jhi-Hw-5I9"/>
+                            <constraint firstItem="gQ1-NF-aYv" firstAttribute="bottom" secondItem="1uA-e7-huR" secondAttribute="bottom" id="sMB-BO-I5M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gQ1-NF-aYv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5H-g1-6KR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="62"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="defaultProfilePhoto" width="200" height="200"/>
+    </resources>
+</document>

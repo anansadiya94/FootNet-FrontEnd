@@ -19,7 +19,6 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
-        setTabBarItem()
         registerNib()
         displayTextHomeCells = generateDisplayTextHomeCells()
         displayPhotoHomeCells = generateDisplayPhotoHomeCells()
@@ -90,10 +89,6 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
         }
         myPublicationsCells = myPublicationsCells.sorted(by: { $0.date.compare($1.date) == .orderedDescending })
         return myPublicationsCells
-    }
-    
-    private func setTabBarItem() {
-        tabBarItem.title = "publicationsLabel".localize()
     }
     
     private func registerNib() {

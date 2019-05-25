@@ -60,6 +60,15 @@ class StaticDBManager {
         return usersBasicInfo
     }
     
+    func requestContacts() -> [DisplayContactCell] {
+        var contacts = [DisplayContactCell]()
+        for user in StaticDBManager.users {
+            let item = DisplayContactCell(id: user.id, fullName: user.name + " " + user.surname, photo: user.photo, email: user.email, phone: user.phone)
+            contacts.append(item)
+        }
+        return contacts
+    }
+    
     func requestOffers() -> [OfferCellResponse]  {
         return StaticDBManager.offerCellsResponse
     }

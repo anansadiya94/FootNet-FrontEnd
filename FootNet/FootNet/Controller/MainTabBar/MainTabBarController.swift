@@ -75,12 +75,10 @@ class MainTabBarController: UITabBarController {
     }
     
     @objc func myFriendsTapped() {
-        //TODO - GET -> Profile detail
-        //TODO - PUSH My profile
-        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        let myFriendsStoryboard = UIStoryboard(name: "MyFriends", bundle: nil)
+        let myFriendsViewController = myFriendsStoryboard.instantiateViewController(withIdentifier: "MyFriendsViewController")
         title = " "
-        navigationController?.pushViewController(profileViewController, animated: true)
+        navigationController?.pushViewController(myFriendsViewController, animated: true)
     }
     
     @objc func myContactsTapped() {

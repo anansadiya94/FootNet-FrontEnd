@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Friends View Controller-->
+        <scene sceneID="NVe-Bi-fet">
+            <objects>
+                <viewController storyboardIdentifier="MyFriendsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sOJ-2C-a7Z" customClass="MyFriendsViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvx-my-aVl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-b5-rcD">
+                                <rect key="frame" x="8" y="28" width="398" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="scSegmentTapped:" destination="sOJ-2C-a7Z" eventType="valueChanged" id="HBh-zm-0di"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FFd-4d-hp4">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myFriendCell" rowHeight="100" id="Sdm-1g-jhC" customClass="MyFriendTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sdm-1g-jhC" id="cEg-BS-RPZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="N6b-Ml-Nyf" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Xgp-YJ-axn"/>
+                                                        <constraint firstAttribute="width" constant="50" id="raP-is-fm6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEP-PD-vZ6" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="66" y="23" width="41.666666666666657" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzU-0c-Efu" customClass="CustomFollowButton" customModule="FootNet" customModuleProvider="target">
+                                                    <rect key="frame" x="360" y="18" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="MEP-PD-vZ6" firstAttribute="centerY" secondItem="N6b-Ml-Nyf" secondAttribute="centerY" id="2Wv-YL-aLe"/>
+                                                <constraint firstItem="N6b-Ml-Nyf" firstAttribute="top" secondItem="cEg-BS-RPZ" secondAttribute="top" constant="8" id="4mR-LU-OiS"/>
+                                                <constraint firstItem="YzU-0c-Efu" firstAttribute="centerY" secondItem="N6b-Ml-Nyf" secondAttribute="centerY" id="Fj8-4F-hWk"/>
+                                                <constraint firstItem="YzU-0c-Efu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MEP-PD-vZ6" secondAttribute="trailing" constant="8" id="NON-Ga-Hcx"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="N6b-Ml-Nyf" secondAttribute="bottom" constant="8" id="RkU-CS-DGg"/>
+                                                <constraint firstItem="MEP-PD-vZ6" firstAttribute="leading" secondItem="N6b-Ml-Nyf" secondAttribute="trailing" constant="8" id="ioX-Cf-ERV"/>
+                                                <constraint firstAttribute="trailing" secondItem="YzU-0c-Efu" secondAttribute="trailing" constant="8" id="mN8-3e-U5B"/>
+                                                <constraint firstItem="N6b-Ml-Nyf" firstAttribute="leading" secondItem="cEg-BS-RPZ" secondAttribute="leading" constant="8" id="ysi-mS-etf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="friendProfileImageView" destination="N6b-Ml-Nyf" id="nXK-DR-jpn"/>
+                                            <outlet property="friendProfileLabel" destination="MEP-PD-vZ6" id="67z-Hl-9Qq"/>
+                                            <outlet property="friendProfileStatusButton" destination="YzU-0c-Efu" id="1ae-6b-hhi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sOJ-2C-a7Z" id="9Ox-2S-rbO"/>
+                                    <outlet property="delegate" destination="sOJ-2C-a7Z" id="4nT-eR-ntT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TOi-x4-sZz" firstAttribute="trailing" secondItem="KbF-b5-rcD" secondAttribute="trailing" constant="8" id="7rV-l6-db5"/>
+                            <constraint firstItem="KbF-b5-rcD" firstAttribute="leading" secondItem="TOi-x4-sZz" secondAttribute="leading" constant="8" id="BCF-YC-cCO"/>
+                            <constraint firstItem="FFd-4d-hp4" firstAttribute="trailing" secondItem="TOi-x4-sZz" secondAttribute="trailing" id="R46-4d-eNs"/>
+                            <constraint firstItem="KbF-b5-rcD" firstAttribute="top" secondItem="TOi-x4-sZz" secondAttribute="top" constant="8" id="dfh-Pj-oae"/>
+                            <constraint firstItem="FFd-4d-hp4" firstAttribute="top" secondItem="KbF-b5-rcD" secondAttribute="bottom" constant="8" id="g96-dF-AGI"/>
+                            <constraint firstItem="FFd-4d-hp4" firstAttribute="leading" secondItem="TOi-x4-sZz" secondAttribute="leading" id="lUn-6W-2AO"/>
+                            <constraint firstAttribute="bottom" secondItem="FFd-4d-hp4" secondAttribute="bottom" id="zQr-Mv-jvB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TOi-x4-sZz"/>
+                    </view>
+                    <connections>
+                        <outlet property="myFriendsTableView" destination="FFd-4d-hp4" id="trv-ur-SSy"/>
+                        <outlet property="scSegment" destination="KbF-b5-rcD" id="tKH-HY-MOr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flL-aR-Noh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="defaultProfilePhoto" width="200" height="200"/>
+    </resources>
+</document>

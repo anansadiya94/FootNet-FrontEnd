@@ -166,6 +166,10 @@
 "deactivateAccoutLabel"="Deactivate account";
 "deactivateAccout_alert"="Are you sure you want to deactivate your account?";
 
+//My friends
+"followers_scTitle"="Followers";
+"following_scTitle"="Following";
+
 //Offers status
 "acceptedOffers_scTitle"="Accepted";
 "pendingOffers_scTitle"="Pending";

@@ -70,6 +70,9 @@
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
 		9E7CBACB226E151300F84197 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */; };
+		9E813FA22299A22F0051220C /* MyFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */; };
+		9E813FA32299A4870051220C /* MyFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */; };
+		9E813FA42299A4870051220C /* MyFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */; };
 		9E82E786227200C100267820 /* LottieLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E82E785227200C100267820 /* LottieLaunchScreen.storyboard */; };
 		9E82E7892272011200267820 /* LottieLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E7882272011200267820 /* LottieLaunchScreenViewController.swift */; };
 		9E82E78B2272014600267820 /* soccer.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E82E78A2272014600267820 /* soccer.json */; };
@@ -166,6 +169,8 @@
 		9ECBB3322299991B00E93639 /* MyPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECBB3312299991B00E93639 /* MyPhotoTableViewCell.swift */; };
 		9ECBB3342299993000E93639 /* MyTextCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ECBB3332299993000E93639 /* MyTextCustomCell.xib */; };
 		9ECBB33622999AC600E93639 /* MyPhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ECBB33522999AC600E93639 /* MyPhotoCustomCell.xib */; };
+		9ECBB33822999FDB00E93639 /* MyFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECBB33722999FDB00E93639 /* MyFriends.storyboard */; };
+		9ECBB33A2299A0A500E93639 /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECBB3392299A0A500E93639 /* MyFriendsViewController.swift */; };
 		9ECF074022521D7E0082FC1F /* DisplayOfferStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF073F22521D7E0082FC1F /* DisplayOfferStatusCell.swift */; };
 		9ECF074322521DE30082FC1F /* OffersStatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074222521DE30082FC1F /* OffersStatusData.swift */; };
 		9ECF07462252246D0082FC1F /* OffersStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF07452252246D0082FC1F /* OffersStatusTableViewCell.swift */; };
@@ -257,6 +262,7 @@
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendTableViewCell.swift; sourceTree = "<group>"; };
 		9E82E785227200C100267820 /* LottieLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LottieLaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E82E7882272011200267820 /* LottieLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieLaunchScreenViewController.swift; sourceTree = "<group>"; };
 		9E82E78A2272014600267820 /* soccer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = soccer.json; sourceTree = "<group>"; };
@@ -342,6 +348,8 @@
 		9ECBB3312299991B00E93639 /* MyPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		9ECBB3332299993000E93639 /* MyTextCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTextCustomCell.xib; sourceTree = "<group>"; };
 		9ECBB33522999AC600E93639 /* MyPhotoCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPhotoCustomCell.xib; sourceTree = "<group>"; };
+		9ECBB33722999FDB00E93639 /* MyFriends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFriends.storyboard; sourceTree = "<group>"; };
+		9ECBB3392299A0A500E93639 /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
 		9ECF073F22521D7E0082FC1F /* DisplayOfferStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOfferStatusCell.swift; sourceTree = "<group>"; };
 		9ECF074222521DE30082FC1F /* OffersStatusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersStatusData.swift; sourceTree = "<group>"; };
 		9ECF07452252246D0082FC1F /* OffersStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersStatusTableViewCell.swift; sourceTree = "<group>"; };
@@ -555,6 +563,7 @@
 				9ECBB32B2299979400E93639 /* MyOfferCustomCell.xib */,
 				9ECBB3332299993000E93639 /* MyTextCustomCell.xib */,
 				9ECBB33522999AC600E93639 /* MyPhotoCustomCell.xib */,
+				9ECBB33722999FDB00E93639 /* MyFriends.storyboard */,
 				9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */,
 				9E5420D3223FA3270098AC44 /* RightHome.storyboard */,
 				9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */,
@@ -827,6 +836,7 @@
 			children = (
 				9EC4A3922243F8CD003030ED /* LeftHomeTableViewController.swift */,
 				9ECBB3292299935300E93639 /* MyPublicationsViewController.swift */,
+				9ECBB3392299A0A500E93639 /* MyFriendsViewController.swift */,
 			);
 			path = LeftHome;
 			sourceTree = "<group>";
@@ -862,8 +872,8 @@
 		9E93571322410F8F0036F23A /* OffersStatus */ = {
 			isa = PBXGroup;
 			children = (
-				9ECF073F22521D7E0082FC1F /* DisplayOfferStatusCell.swift */,
 				9E93571B224111870036F23A /* OffersStatusViewController.swift */,
+				9ECF073F22521D7E0082FC1F /* DisplayOfferStatusCell.swift */,
 			);
 			path = OffersStatus;
 			sourceTree = "<group>";
@@ -920,6 +930,7 @@
 				9ECBB32D229997F500E93639 /* MyOfferTableViewCell.swift */,
 				9ECBB32F2299991100E93639 /* MyTextTableViewCell.swift */,
 				9ECBB3312299991B00E93639 /* MyPhotoTableViewCell.swift */,
+				9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */,
 			);
 			path = LeftHome;
 			sourceTree = "<group>";
@@ -1195,6 +1206,7 @@
 				9ECBB33622999AC600E93639 /* MyPhotoCustomCell.xib in Resources */,
 				9EDD6750227CA2750082074C /* PhotoCustomCell.xib in Resources */,
 				9E1EC8562249219300E5B2E7 /* Profile.storyboard in Resources */,
+				9ECBB33822999FDB00E93639 /* MyFriends.storyboard in Resources */,
 				9E8CB804228D896300D285A0 /* OfferDetail.storyboard in Resources */,
 				9ED9BF36227848F3004F4D13 /* OfferCustomCell.xib in Resources */,
 				9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */,
@@ -1458,6 +1470,7 @@
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
 				9E82E83F22720F2400267820 /* CustomView.swift in Sources */,
 				9E82E82D22720F2400267820 /* Reachability.swift in Sources */,
+				9E813FA22299A22F0051220C /* MyFriendTableViewCell.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* DisplaySignUpSelectProfileCell.swift in Sources */,
 				9ED9BF34227848C9004F4D13 /* OfferTableViewCell.swift in Sources */,
 				9E8CB802228D893F00D285A0 /* OfferDetailViewController.swift in Sources */,
@@ -1476,6 +1489,7 @@
 				9E82E83E22720F2400267820 /* UIFontExtension.swift in Sources */,
 				9EB9A4FD2290362C00A57E25 /* PublishTableViewCell.swift in Sources */,
 				9EB3A6C1222D1B22002F244E /* DisplaySignUpDetailCell.swift in Sources */,
+				9ECBB33A2299A0A500E93639 /* MyFriendsViewController.swift in Sources */,
 				9E82E83722720F2400267820 /* SignUpJsonMocks.swift in Sources */,
 				9EB9A4FF229036BE00A57E25 /* DisplayPublishCell.swift in Sources */,
 				9E82E7892272011200267820 /* LottieLaunchScreenViewController.swift in Sources */,
@@ -1505,6 +1519,7 @@
 				9E07D981225E3063004A73A8 /* RightHomeUITests.swift in Sources */,
 				9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */,
 				9E07D97F225E2CA1004A73A8 /* LeftHomeUITests.swift in Sources */,
+				9E813FA42299A4870051220C /* MyFriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1514,6 +1529,7 @@
 			files = (
 				9EADBAAD224A881700C949DD /* SignInTests.swift in Sources */,
 				9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */,
+				9E813FA32299A4870051220C /* MyFriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

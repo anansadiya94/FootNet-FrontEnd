@@ -88,24 +88,24 @@ class LeftHomeTableViewController: UITableViewController {
     }
     
     func myPublicationsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
-        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.myProfileLabel.text = "publicationsLabel".localize()
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myPublicationsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myPublicationsLabel.text = "publicationsLabel".localize()
             return cell
         }
         return UITableViewCell()
     }
 
     func myFriendsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
-        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.myProfileLabel.text = "friendsLabel".localize()
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myFriendsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myFriendsLabel.text = "friendsLabel".localize()
             return cell
         }
         return UITableViewCell()
     }
     
     func myContactsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
-        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.myProfileLabel.text = "contactsLabel".localize()
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myContactsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myContactsLabel.text = "contactsLabel".localize()
             return cell
         }
         return UITableViewCell()

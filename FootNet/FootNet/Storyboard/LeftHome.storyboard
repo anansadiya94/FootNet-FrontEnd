@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Bc-jh-0Bm">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="LeftHomeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Bc-jh-0Bm" customClass="LeftHomeTableViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y7j-fN-q4K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QVL-6j-H8B" id="dTi-Kw-6zv">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="sNW-qG-0gA" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
@@ -49,11 +49,11 @@
                                 <rect key="frame" x="0.0" y="148" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vRf-ZL-Kze" id="HP2-Qk-k7q">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUl-Ez-IaB" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="144" y="8" width="126.5" height="27.5"/>
+                                            <rect key="frame" x="143.66666666666666" y="8.0000000000000018" width="126.66666666666666" height="27.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -74,11 +74,11 @@
                                 <rect key="frame" x="0.0" y="192" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sfG-z8-lqm" id="VQ6-YK-JBR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porfile Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-HH-cAv" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="161.5" y="8" width="91.5" height="27.5"/>
+                                            <rect key="frame" x="161.33333333333334" y="8.0000000000000018" width="91.333333333333343" height="27.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                                 <rect key="frame" x="0.0" y="236" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dVR-qQ-suo" id="dhl-ZU-xkz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="eVr-lU-1Kg">
@@ -132,22 +132,22 @@
                                     <outlet property="myProfileLabel" destination="JWi-4b-Z3c" id="6px-KN-Q9R"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myPublicationLeftHomeCell" id="y9S-wB-gTZ" userLabel="myPublicationLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myPublicationsLeftHomeCell" id="y9S-wB-gTZ" userLabel="myPublicationLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="280" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y9S-wB-gTZ" id="pAm-L3-QaN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="F66-ox-Lfc">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offersTabBar" translatesAutoresizingMaskIntoConstraints="NO" id="F66-ox-Lfc">
                                             <rect key="frame" x="16" y="0.0" width="44" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="44" id="ABH-oV-MFz"/>
                                                 <constraint firstAttribute="height" constant="44" id="hEW-Wm-t93"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KT-g8-yMU" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="76" y="8" width="76" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Publications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KT-g8-yMU" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="121" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -165,15 +165,15 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="myProfileImageView" destination="F66-ox-Lfc" id="chR-4u-oo7"/>
-                                    <outlet property="myProfileLabel" destination="9KT-g8-yMU" id="ed9-3r-YmK"/>
+                                    <outlet property="myPublicationsImageView" destination="F66-ox-Lfc" id="4ab-fN-8Id"/>
+                                    <outlet property="myPublicationsLabel" destination="9KT-g8-yMU" id="fuE-kK-ptR"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myFriendsLeftHomeCell" id="0J0-qy-YKU" userLabel="myFriendsLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="324" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0J0-qy-YKU" id="LYb-P8-cCt">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="rOZ-4r-kUh">
@@ -183,8 +183,8 @@
                                                 <constraint firstAttribute="width" constant="44" id="gsI-se-ZW2"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klv-FU-rhy" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="76" y="8" width="76" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klv-FU-rhy" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="85" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -202,15 +202,15 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="myProfileImageView" destination="rOZ-4r-kUh" id="bST-JW-njX"/>
-                                    <outlet property="myProfileLabel" destination="Klv-FU-rhy" id="TyU-jF-yrO"/>
+                                    <outlet property="myFriendsImageView" destination="rOZ-4r-kUh" id="pbD-bk-CjW"/>
+                                    <outlet property="myFriendsLabel" destination="Klv-FU-rhy" id="oAi-LK-BBe"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myContactsLeftHomeCell" id="ehj-J6-1M4" userLabel="myContactsLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="368" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ehj-J6-1M4" id="Taq-4N-gQm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="Zay-pm-pDw">
@@ -220,8 +220,8 @@
                                                 <constraint firstAttribute="width" constant="44" id="RhC-t5-Hr7"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-cu-Cht" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="76" y="8" width="76" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-cu-Cht" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="97" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -239,15 +239,15 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="myProfileImageView" destination="Zay-pm-pDw" id="uCa-P8-oDb"/>
-                                    <outlet property="myProfileLabel" destination="dxZ-cu-Cht" id="lHN-ry-KRS"/>
+                                    <outlet property="myContactsImageView" destination="Zay-pm-pDw" id="HW1-ud-lBy"/>
+                                    <outlet property="myContactsLabel" destination="dxZ-cu-Cht" id="w1f-OJ-NCN"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="editProfileLeftHomeCell" id="11r-NQ-yMX" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="412" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="11r-NQ-yMX" id="Vwe-i8-GQ9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="C77-aE-77f">
@@ -284,7 +284,7 @@
                                 <rect key="frame" x="0.0" y="456" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Cx-7D-hbr" id="MZX-xx-bJ9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signOutLeft" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-ts-Vcz">
@@ -321,7 +321,7 @@
                                 <rect key="frame" x="0.0" y="500" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QfJ-8M-b55" id="ldf-zQ-JUi">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deactivateAccountLeft" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-9u-bwZ">
@@ -367,10 +367,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="deactivateAccountLeft" width="50" height="50"/>
-        <image name="defaultProfilePhoto" width="300" height="300"/>
-        <image name="editProfileLeft" width="50" height="50"/>
-        <image name="myProfileLeft" width="50" height="50"/>
-        <image name="signOutLeft" width="50" height="50"/>
+        <image name="deactivateAccountLeft" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="defaultProfilePhoto" width="200" height="200"/>
+        <image name="editProfileLeft" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="myProfileLeft" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="offersTabBar" width="24" height="24"/>
+        <image name="signOutLeft" width="33.333332061767578" height="33.333332061767578"/>
     </resources>
 </document>

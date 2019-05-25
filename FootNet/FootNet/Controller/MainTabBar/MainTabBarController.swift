@@ -48,6 +48,9 @@ class MainTabBarController: UITabBarController {
         NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.signOutTapped), name: Notification.Name("signOutTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.deactivateAccountTapped), name: Notification.Name("deactivateAccountTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.myProfileTapped), name: Notification.Name("myProfileTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.myPublicationsTapped), name: Notification.Name("myPublicationsTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.myFriendsTapped), name: Notification.Name("myFriendsTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.myContactsTapped), name: Notification.Name("myContactsTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.editProfileTapped), name: Notification.Name("editProfileTapped"), object: nil)
     }
     
@@ -56,6 +59,31 @@ class MainTabBarController: UITabBarController {
     }
     
     @objc func myProfileTapped() {
+        //TODO - GET -> Profile detail
+        //TODO - PUSH My profile
+        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        title = " "
+        navigationController?.pushViewController(profileViewController, animated: true)
+    }
+    
+    @objc func myPublicationsTapped() {
+        let myPublicationsStoryboard = UIStoryboard(name: "MyPublications", bundle: nil)
+        let myPublicationsViewController = myPublicationsStoryboard.instantiateViewController(withIdentifier: "MyPublicationsViewController")
+        title = " "
+        navigationController?.pushViewController(myPublicationsViewController, animated: true)
+    }
+    
+    @objc func myFriendsTapped() {
+        //TODO - GET -> Profile detail
+        //TODO - PUSH My profile
+        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        title = " "
+        navigationController?.pushViewController(profileViewController, animated: true)
+    }
+    
+    @objc func myContactsTapped() {
         //TODO - GET -> Profile detail
         //TODO - PUSH My profile
         let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)

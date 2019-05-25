@@ -28,9 +28,9 @@ class SignInUITests: XCTestCase {
 
     func testTextFieldShouldReturnCase() {
         app.textFields["Email"].tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Next:"]/*[[".keyboards",".buttons[\"Siguiente\"]",".buttons[\"Next:\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Next:"].tap()
         app.secureTextFields["Password"].tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"Aceptar\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Done"].tap()
     }
     
     func testForgotPasswordButtonCase() {

@@ -157,6 +157,9 @@
 
 //Left home
 "profileLabel"="Perfil";
+"publicationsLabel"="Els meus publicacions";
+"friendsLabel"="Els meus amics";
+"contactsLabel"="Els meus contactes";
 "editProfileLabel"="Editar perfil";
 "signOutLabel"="Tancar sessió";
 "signOut_alert"="Estàs segur que vols tancar sessió?";

@@ -34,7 +34,7 @@ class LeftHomeTableViewController: UITableViewController {
     }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 9
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,10 +46,16 @@ class LeftHomeTableViewController: UITableViewController {
         case 2:
             return myProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 3:
-            return editProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+            return myPublicationsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 4:
-            return signOutLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+            return myFriendsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 5:
+            return myContactsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 6:
+            return editProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 7:
+            return signOutLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 8:
             return deactivateLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         default:
             break
@@ -76,6 +82,30 @@ class LeftHomeTableViewController: UITableViewController {
     func myProfileLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
         if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
             cell.myProfileLabel.text = "profileLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func myPublicationsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myProfileLabel.text = "publicationsLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+
+    func myFriendsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myProfileLabel.text = "friendsLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func myContactsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myProfileLabel.text = "contactsLabel".localize()
             return cell
         }
         return UITableViewCell()
@@ -122,10 +152,19 @@ class LeftHomeTableViewController: UITableViewController {
             NotificationCenter.default.post(name: Notification.Name("myProfileTapped"), object: self)
         case 3:
             delegate?.closeLeftView()
-            NotificationCenter.default.post(name: Notification.Name("editProfileTapped"), object: self)
+            NotificationCenter.default.post(name: Notification.Name("myPublicationsTapped"), object: self)
         case 4:
-            signOutTapped()
+            delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("myFriendsTapped"), object: self)
         case 5:
+            delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("myContactsTapped"), object: self)
+        case 6:
+            delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("editProfileTapped"), object: self)
+        case 7:
+            signOutTapped()
+        case 8:
             deactivateAccoutTapped()
         default:
             break

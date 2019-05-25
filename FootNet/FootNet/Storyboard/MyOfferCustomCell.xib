@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myOfferCustomCell" rowHeight="400" id="8to-DN-eW9" customClass="MyOfferTableViewCell" customModule="FootNet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8to-DN-eW9" id="s6o-QS-RXY">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="279.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="HLK-Gg-y82" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="HBv-C7-WRh"/>
+                            <constraint firstAttribute="width" constant="50" id="a5h-id-fUD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrB-Is-VLp" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                        <rect key="frame" x="66" y="22.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offerPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="b5b-oc-gaw">
+                        <rect key="frame" x="8" y="66" width="398" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="zGc-mF-RSR"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJl-Oz-bXr" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                        <rect key="frame" x="8" y="174" width="398" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ7-QY-2ke" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                        <rect key="frame" x="8" y="210.5" width="398" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="tJ7-QY-2ke" firstAttribute="top" secondItem="RJl-Oz-bXr" secondAttribute="bottom" constant="16" id="0vX-Lk-qGA"/>
+                    <constraint firstItem="RJl-Oz-bXr" firstAttribute="leading" secondItem="s6o-QS-RXY" secondAttribute="leading" constant="8" id="5TB-3j-4bm"/>
+                    <constraint firstItem="b5b-oc-gaw" firstAttribute="top" secondItem="HLK-Gg-y82" secondAttribute="bottom" constant="8" id="9Ib-Yk-XU4"/>
+                    <constraint firstItem="RJl-Oz-bXr" firstAttribute="top" secondItem="b5b-oc-gaw" secondAttribute="bottom" constant="8" id="9XC-6U-DFb"/>
+                    <constraint firstAttribute="trailing" secondItem="b5b-oc-gaw" secondAttribute="trailing" constant="8" id="EiP-4S-7xW"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tJ7-QY-2ke" secondAttribute="bottom" constant="16" id="Gdj-l9-Cgq"/>
+                    <constraint firstItem="HLK-Gg-y82" firstAttribute="top" secondItem="s6o-QS-RXY" secondAttribute="top" constant="8" id="JYz-Qq-e7w"/>
+                    <constraint firstItem="TrB-Is-VLp" firstAttribute="leading" secondItem="HLK-Gg-y82" secondAttribute="trailing" constant="8" id="Ktb-yw-2Uy"/>
+                    <constraint firstItem="TrB-Is-VLp" firstAttribute="centerY" secondItem="HLK-Gg-y82" secondAttribute="centerY" id="Pln-Iq-xxP"/>
+                    <constraint firstAttribute="trailing" secondItem="RJl-Oz-bXr" secondAttribute="trailing" constant="8" id="XLF-6U-Hrr"/>
+                    <constraint firstItem="HLK-Gg-y82" firstAttribute="leading" secondItem="s6o-QS-RXY" secondAttribute="leading" constant="8" id="bHh-7w-4yq"/>
+                    <constraint firstAttribute="trailing" secondItem="tJ7-QY-2ke" secondAttribute="trailing" constant="8" id="hNh-JZ-bsb"/>
+                    <constraint firstItem="tJ7-QY-2ke" firstAttribute="leading" secondItem="s6o-QS-RXY" secondAttribute="leading" constant="8" id="q3x-kj-YCB"/>
+                    <constraint firstItem="b5b-oc-gaw" firstAttribute="leading" secondItem="s6o-QS-RXY" secondAttribute="leading" constant="8" id="sgH-gV-RWn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="fullNameLabel" destination="TrB-Is-VLp" id="Baf-R5-PRp"/>
+                <outlet property="offerDetailLabel" destination="RJl-Oz-bXr" id="2Jc-Vh-FWO"/>
+                <outlet property="offerImageView" destination="b5b-oc-gaw" id="9H7-Wk-5pc"/>
+                <outlet property="offerTextLabel" destination="tJ7-QY-2ke" id="tpP-Dx-HqO"/>
+                <outlet property="userImageView" destination="HLK-Gg-y82" id="gWr-gO-LHZ"/>
+            </connections>
+            <point key="canvasLocation" x="-104" y="54"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaultProfilePhoto" width="300" height="300"/>
+        <image name="offerPhoto" width="114" height="59.5"/>
+    </resources>
+</document>

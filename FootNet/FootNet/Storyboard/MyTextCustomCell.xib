@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myTextCustomCell" rowHeight="400" id="cvs-qz-T9S" customClass="MyTextTableViewCell" customModule="FootNet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvs-qz-T9S" id="5hn-Wy-Hcn">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="279.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Yur-7A-WeQ" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="GW9-ZT-Vqb"/>
+                            <constraint firstAttribute="width" constant="50" id="v1o-gu-UWU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQK-TX-dyz" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                        <rect key="frame" x="66" y="23" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R36-GV-Xg1" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                        <rect key="frame" x="8" y="66" width="398" height="117"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="xqb-aW-ZGR">
+                        <rect key="frame" x="28" y="191" width="358" height="70"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhg-bp-nbf" userLabel="View 1">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QO-Z5-Gvg">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HG6-Wi-cO1"/>
+                                            <constraint firstAttribute="width" constant="50" id="aZM-Ua-lzd"/>
+                                        </constraints>
+                                        <state key="normal" title="🔝"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuX-0h-wCE" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="50" width="18" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="zj6-Yo-bVY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3QO-Z5-Gvg" secondAttribute="trailing" id="8GA-gJ-vLG"/>
+                                    <constraint firstAttribute="width" constant="50" id="Bs1-58-s0U"/>
+                                    <constraint firstItem="JuX-0h-wCE" firstAttribute="centerX" secondItem="3QO-Z5-Gvg" secondAttribute="centerX" id="F6j-pf-kAp"/>
+                                    <constraint firstItem="3QO-Z5-Gvg" firstAttribute="leading" secondItem="Jhg-bp-nbf" secondAttribute="leading" id="Lvu-Js-jfc"/>
+                                    <constraint firstAttribute="height" constant="70" id="M5w-F9-4cr"/>
+                                    <constraint firstItem="JuX-0h-wCE" firstAttribute="top" secondItem="3QO-Z5-Gvg" secondAttribute="bottom" id="QGI-Ek-Xnf"/>
+                                    <constraint firstItem="3QO-Z5-Gvg" firstAttribute="top" secondItem="Jhg-bp-nbf" secondAttribute="top" id="fcp-Wt-13E"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tg8-Gf-r5C" userLabel="View 2">
+                                <rect key="frame" x="102.5" y="0.0" width="50" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doq-g6-lSN">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="03K-ac-TRR"/>
+                                            <constraint firstAttribute="width" constant="50" id="X6J-36-5Rb"/>
+                                        </constraints>
+                                        <state key="normal" title="🔥"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3y0-9E-8aq" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="50" width="20.5" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="4ui-8G-rhF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="OJm-HY-Pzs"/>
+                                    <constraint firstItem="3y0-9E-8aq" firstAttribute="top" secondItem="doq-g6-lSN" secondAttribute="bottom" id="am2-vP-F5d"/>
+                                    <constraint firstAttribute="trailing" secondItem="doq-g6-lSN" secondAttribute="trailing" id="ftW-94-SxO"/>
+                                    <constraint firstItem="3y0-9E-8aq" firstAttribute="centerX" secondItem="doq-g6-lSN" secondAttribute="centerX" id="jma-hP-d0a"/>
+                                    <constraint firstItem="doq-g6-lSN" firstAttribute="leading" secondItem="tg8-Gf-r5C" secondAttribute="leading" id="rQp-TP-OwS"/>
+                                    <constraint firstAttribute="width" constant="50" id="xJa-MV-5jb"/>
+                                    <constraint firstItem="doq-g6-lSN" firstAttribute="top" secondItem="tg8-Gf-r5C" secondAttribute="top" id="yXt-0M-nhP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbq-3w-oaW" userLabel="View 3">
+                                <rect key="frame" x="205.5" y="0.0" width="50" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urj-Mx-WvB">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Tuo-li-HT1"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ubl-OT-lZO"/>
+                                        </constraints>
+                                        <state key="normal" title="🏆"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aN-lk-4Go" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="14.5" y="50" width="21" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="nxf-I0-rDy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="urj-Mx-WvB" firstAttribute="top" secondItem="Pbq-3w-oaW" secondAttribute="top" id="0NL-e1-IRG"/>
+                                    <constraint firstItem="5aN-lk-4Go" firstAttribute="top" secondItem="urj-Mx-WvB" secondAttribute="bottom" id="C8Q-N9-wHD"/>
+                                    <constraint firstAttribute="trailing" secondItem="urj-Mx-WvB" secondAttribute="trailing" id="E53-AL-wdK"/>
+                                    <constraint firstAttribute="height" constant="70" id="Icf-gN-bSR"/>
+                                    <constraint firstItem="urj-Mx-WvB" firstAttribute="leading" secondItem="Pbq-3w-oaW" secondAttribute="leading" id="jKN-cd-YxY"/>
+                                    <constraint firstAttribute="width" constant="50" id="tRy-Jt-Mhc"/>
+                                    <constraint firstItem="5aN-lk-4Go" firstAttribute="centerX" secondItem="urj-Mx-WvB" secondAttribute="centerX" id="zyo-vi-4QT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8w-Xq-s10" userLabel="View 4">
+                                <rect key="frame" x="308" y="0.0" width="50" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6b-A6-eFy">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="GpP-dX-yYj"/>
+                                            <constraint firstAttribute="height" constant="50" id="Hjb-f4-SgJ"/>
+                                        </constraints>
+                                        <state key="normal" title="🥇"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F96-UK-5Hk" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="14.5" y="50" width="21" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="XQh-m8-QmI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="v6b-A6-eFy" firstAttribute="leading" secondItem="V8w-Xq-s10" secondAttribute="leading" id="4vl-eM-1qe"/>
+                                    <constraint firstAttribute="width" constant="50" id="CaH-mt-di0"/>
+                                    <constraint firstItem="F96-UK-5Hk" firstAttribute="centerX" secondItem="v6b-A6-eFy" secondAttribute="centerX" id="Tj2-xJ-KIC"/>
+                                    <constraint firstAttribute="height" constant="70" id="Z1d-PG-ydB"/>
+                                    <constraint firstAttribute="trailing" secondItem="v6b-A6-eFy" secondAttribute="trailing" id="dR6-iL-zdD"/>
+                                    <constraint firstItem="F96-UK-5Hk" firstAttribute="top" secondItem="v6b-A6-eFy" secondAttribute="bottom" id="eUC-uh-kM1"/>
+                                    <constraint firstItem="v6b-A6-eFy" firstAttribute="top" secondItem="V8w-Xq-s10" secondAttribute="top" id="uVG-iy-Dyq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="R36-GV-Xg1" secondAttribute="trailing" constant="8" id="0xw-Ix-vO8"/>
+                    <constraint firstItem="KQK-TX-dyz" firstAttribute="centerY" secondItem="Yur-7A-WeQ" secondAttribute="centerY" id="2v7-tA-zsV"/>
+                    <constraint firstItem="R36-GV-Xg1" firstAttribute="leading" secondItem="5hn-Wy-Hcn" secondAttribute="leading" constant="8" id="8CS-tB-tiv"/>
+                    <constraint firstItem="KQK-TX-dyz" firstAttribute="leading" secondItem="Yur-7A-WeQ" secondAttribute="trailing" constant="8" id="BAJ-tF-60t"/>
+                    <constraint firstItem="Yur-7A-WeQ" firstAttribute="leading" secondItem="5hn-Wy-Hcn" secondAttribute="leading" constant="8" id="DIr-s2-smf"/>
+                    <constraint firstItem="Yur-7A-WeQ" firstAttribute="top" secondItem="5hn-Wy-Hcn" secondAttribute="top" constant="8" id="GUA-YQ-wPT"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xqb-aW-ZGR" secondAttribute="bottom" constant="8" id="SRv-N1-RQM"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xqb-aW-ZGR" secondAttribute="trailing" constant="8" id="Tdn-6s-21e"/>
+                    <constraint firstItem="xqb-aW-ZGR" firstAttribute="firstBaseline" secondItem="R36-GV-Xg1" secondAttribute="baseline" constant="12.5" symbolType="layoutAnchor" id="bMm-zs-EyP"/>
+                    <constraint firstItem="R36-GV-Xg1" firstAttribute="top" secondItem="Yur-7A-WeQ" secondAttribute="bottom" constant="8" id="fRg-Lp-UmX"/>
+                    <constraint firstItem="xqb-aW-ZGR" firstAttribute="leading" secondItem="5hn-Wy-Hcn" secondAttribute="leadingMargin" constant="8" id="pga-IY-uWA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="firstReactionCountLabel" destination="JuX-0h-wCE" id="wDv-wb-9iI"/>
+                <outlet property="fourthReactionCountLabel" destination="F96-UK-5Hk" id="Tce-ut-ZyJ"/>
+                <outlet property="fullNameLabel" destination="KQK-TX-dyz" id="9xN-Bi-zxM"/>
+                <outlet property="publicationTextLabel" destination="R36-GV-Xg1" id="dMR-QD-Q40"/>
+                <outlet property="secondReactionCountLabel" destination="3y0-9E-8aq" id="CdL-LO-flV"/>
+                <outlet property="thirdReactionCountLabel" destination="5aN-lk-4Go" id="ulF-8g-loD"/>
+                <outlet property="userImageView" destination="Yur-7A-WeQ" id="VVH-V8-dPt"/>
+                <outletCollection property="reactionButtonCollection" destination="3QO-Z5-Gvg" collectionClass="NSMutableArray" id="5Lc-8k-zaN"/>
+                <outletCollection property="reactionButtonCollection" destination="doq-g6-lSN" collectionClass="NSMutableArray" id="HGM-8f-rzc"/>
+                <outletCollection property="reactionButtonCollection" destination="urj-Mx-WvB" collectionClass="NSMutableArray" id="eaK-Ov-pYL"/>
+                <outletCollection property="reactionButtonCollection" destination="v6b-A6-eFy" collectionClass="NSMutableArray" id="Y7m-bW-s4i"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="156.69642857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaultProfilePhoto" width="300" height="300"/>
+    </resources>
+</document>

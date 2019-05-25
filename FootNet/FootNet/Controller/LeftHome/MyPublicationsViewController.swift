@@ -140,4 +140,23 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
         }
         return cell
     }
+    
+    //TODO: REMOVE FROM DB
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch myPublicationsCells[indexPath.row].homeCellType {
+        case HomeCellType.Text:
+            //DELETE FROM DB
+            print("Text publication removed")
+        case HomeCellType.Photo:
+            //DELETE FROM DB
+            print("Photo publication removed")
+        case HomeCellType.Offer:
+            //DELETE FROM DB
+            print("Offer removed")
+        }
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            myPublicationsCells.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
+    }
 }

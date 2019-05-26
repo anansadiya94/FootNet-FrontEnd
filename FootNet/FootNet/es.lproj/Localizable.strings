@@ -154,11 +154,11 @@
 "followLabel"="Sígueme en:";
 
 //Left home
-"profileLabel"="Perfil";
-"publicationsLabel"="Mis publicaciones";
-"friendsLabel"="Mis amigos";
-"contactsLabel"="Mis contactos";
+"myPofileLabel"="Mi perfil";
 "editProfileLabel"="Editar perfil";
+"myPublicationsLabel"="Mis publicaciones";
+"myFriendsLabel"="Mis amigos";
+"myContactsLabel"="Mis contactos";
 "signOutLabel"="Cerrar sesión";
 "signOut_alert"="¿Estás seguro de que quieres cerrar sesión?";
 "deactivateAccoutLabel"="Desactivar cuenta";

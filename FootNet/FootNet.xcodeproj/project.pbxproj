@@ -528,6 +528,9 @@
 				9E93570F22410B7B0036F23A /* LeftHome */,
 				9E1EC84F2249213500E5B2E7 /* Profile */,
 				9E1EC8502249214300E5B2E7 /* EditProfile */,
+				9ED511F2229AA2D200D01136 /* MyPublications */,
+				9ED511F3229AA2E300D01136 /* MyFriends */,
+				9ED511F4229AA2F000D01136 /* MyContacts */,
 				9E93570E22410B700036F23A /* MainTabBar */,
 				9E93571522410FFC0036F23A /* Home */,
 				9EB9A50022903B9600A57E25 /* Publish */,
@@ -552,6 +555,9 @@
 				9ECF074D2252424C0082FC1F /* Notifications */,
 				9ECF0744225224550082FC1F /* OffersStatus */,
 				9EA25A992244C3AA00027A31 /* LeftHome */,
+				9ED511F5229AA31900D01136 /* MyPublications */,
+				9ED511F6229AA32C00D01136 /* MyFriends */,
+				9ED511F7229AA33900D01136 /* MyContacts */,
 				9EB24E9B2227F234004B0C66 /* SignUp */,
 			);
 			path = View;
@@ -567,13 +573,13 @@
 				9EB24EA02227F27D004B0C66 /* SignUp.storyboard */,
 				9E5420D1223FA3190098AC44 /* LeftHome.storyboard */,
 				9E1EC8552249219300E5B2E7 /* Profile.storyboard */,
+				9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */,
 				9ECBB3272299920600E93639 /* MyPublications.storyboard */,
 				9ECBB32B2299979400E93639 /* MyOfferCustomCell.xib */,
 				9ECBB3332299993000E93639 /* MyTextCustomCell.xib */,
 				9ECBB33522999AC600E93639 /* MyPhotoCustomCell.xib */,
 				9ECBB33722999FDB00E93639 /* MyFriends.storyboard */,
 				9E813FA52299AD170051220C /* MyContacts.storyboard */,
-				9E1EC857224921AC00E5B2E7 /* EditProfile.storyboard */,
 				9E5420D3223FA3270098AC44 /* RightHome.storyboard */,
 				9EFEA4B522424536002C9EB0 /* MainTabBar.storyboard */,
 				9E935721224116540036F23A /* Home.storyboard */,
@@ -844,10 +850,6 @@
 			isa = PBXGroup;
 			children = (
 				9EC4A3922243F8CD003030ED /* LeftHomeTableViewController.swift */,
-				9ECBB3292299935300E93639 /* MyPublicationsViewController.swift */,
-				9ECBB3392299A0A500E93639 /* MyFriendsViewController.swift */,
-				9E813FA92299AD760051220C /* MyContactsViewController.swift */,
-				9E813FAB2299AF660051220C /* DisplayContactCell.swift */,
 			);
 			path = LeftHome;
 			sourceTree = "<group>";
@@ -938,11 +940,6 @@
 			isa = PBXGroup;
 			children = (
 				9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */,
-				9ECBB32D229997F500E93639 /* MyOfferTableViewCell.swift */,
-				9ECBB32F2299991100E93639 /* MyTextTableViewCell.swift */,
-				9ECBB3312299991B00E93639 /* MyPhotoTableViewCell.swift */,
-				9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */,
-				9E813FA72299AD640051220C /* MyContactTableViewCell.swift */,
 			);
 			path = LeftHome;
 			sourceTree = "<group>";
@@ -1037,6 +1034,57 @@
 				9ECF074E225242600082FC1F /* NotificationsTableViewCell.swift */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		9ED511F2229AA2D200D01136 /* MyPublications */ = {
+			isa = PBXGroup;
+			children = (
+				9ECBB3292299935300E93639 /* MyPublicationsViewController.swift */,
+			);
+			path = MyPublications;
+			sourceTree = "<group>";
+		};
+		9ED511F3229AA2E300D01136 /* MyFriends */ = {
+			isa = PBXGroup;
+			children = (
+				9ECBB3392299A0A500E93639 /* MyFriendsViewController.swift */,
+			);
+			path = MyFriends;
+			sourceTree = "<group>";
+		};
+		9ED511F4229AA2F000D01136 /* MyContacts */ = {
+			isa = PBXGroup;
+			children = (
+				9E813FA92299AD760051220C /* MyContactsViewController.swift */,
+				9E813FAB2299AF660051220C /* DisplayContactCell.swift */,
+			);
+			path = MyContacts;
+			sourceTree = "<group>";
+		};
+		9ED511F5229AA31900D01136 /* MyPublications */ = {
+			isa = PBXGroup;
+			children = (
+				9ECBB32D229997F500E93639 /* MyOfferTableViewCell.swift */,
+				9ECBB32F2299991100E93639 /* MyTextTableViewCell.swift */,
+				9ECBB3312299991B00E93639 /* MyPhotoTableViewCell.swift */,
+			);
+			path = MyPublications;
+			sourceTree = "<group>";
+		};
+		9ED511F6229AA32C00D01136 /* MyFriends */ = {
+			isa = PBXGroup;
+			children = (
+				9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */,
+			);
+			path = MyFriends;
+			sourceTree = "<group>";
+		};
+		9ED511F7229AA33900D01136 /* MyContacts */ = {
+			isa = PBXGroup;
+			children = (
+				9E813FA72299AD640051220C /* MyContactTableViewCell.swift */,
+			);
+			path = MyContacts;
 			sourceTree = "<group>";
 		};
 		9ED9BF322278486B004F4D13 /* Offers */ = {

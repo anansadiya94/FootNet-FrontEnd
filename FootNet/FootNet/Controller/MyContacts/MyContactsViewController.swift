@@ -17,6 +17,11 @@ class MyContactsViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         setBackground()
         displayContactCells = StaticDBManager.shared.requestContacts()
+        setTabBarItem()
+    }
+    
+    private func setTabBarItem() {
+        title = "myContactsLabel".localize()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

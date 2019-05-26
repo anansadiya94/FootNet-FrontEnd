@@ -46,13 +46,13 @@ class LeftHomeTableViewController: UITableViewController {
         case 2:
             return myProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 3:
-            return myPublicationsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
-        case 4:
-            return myFriendsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
-        case 5:
-            return myContactsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
-        case 6:
             return editProfileLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 4:
+            return myPublicationsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 5:
+            return myFriendsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 6:
+            return myContactsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 7:
             return signOutLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 8:
@@ -81,31 +81,7 @@ class LeftHomeTableViewController: UITableViewController {
     
     func myProfileLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
         if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.myProfileLabel.text = "profileLabel".localize()
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    func myPublicationsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
-        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myPublicationsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.myPublicationsLabel.text = "publicationsLabel".localize()
-            return cell
-        }
-        return UITableViewCell()
-    }
-
-    func myFriendsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
-        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myFriendsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.myFriendsLabel.text = "friendsLabel".localize()
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    func myContactsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
-        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myContactsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
-            cell.myContactsLabel.text = "contactsLabel".localize()
+            cell.myProfileLabel.text = "myProfileLabel".localize()
             return cell
         }
         return UITableViewCell()
@@ -114,6 +90,30 @@ class LeftHomeTableViewController: UITableViewController {
     func editProfileLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
         if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "editProfileLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
             cell.editProfileLabel.text = "editProfileLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func myPublicationsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myPublicationsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myPublicationsLabel.text = "myPublicationsLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+
+    func myFriendsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myFriendsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myFriendsLabel.text = "myFriendsLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func myContactsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myContactsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.myContactsLabel.text = "myContactsLabel".localize()
             return cell
         }
         return UITableViewCell()
@@ -152,16 +152,16 @@ class LeftHomeTableViewController: UITableViewController {
             NotificationCenter.default.post(name: Notification.Name("myProfileTapped"), object: self)
         case 3:
             delegate?.closeLeftView()
-            NotificationCenter.default.post(name: Notification.Name("myPublicationsTapped"), object: self)
+            NotificationCenter.default.post(name: Notification.Name("editProfileTapped"), object: self)
         case 4:
             delegate?.closeLeftView()
-            NotificationCenter.default.post(name: Notification.Name("myFriendsTapped"), object: self)
+            NotificationCenter.default.post(name: Notification.Name("myPublicationsTapped"), object: self)
         case 5:
             delegate?.closeLeftView()
-            NotificationCenter.default.post(name: Notification.Name("myContactsTapped"), object: self)
+            NotificationCenter.default.post(name: Notification.Name("myFriendsTapped"), object: self)
         case 6:
             delegate?.closeLeftView()
-            NotificationCenter.default.post(name: Notification.Name("editProfileTapped"), object: self)
+            NotificationCenter.default.post(name: Notification.Name("myContactsTapped"), object: self)
         case 7:
             signOutTapped()
         case 8:

@@ -19,11 +19,16 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
+        setTabBarItem()
         registerNib()
         displayTextHomeCells = generateDisplayTextHomeCells()
         displayPhotoHomeCells = generateDisplayPhotoHomeCells()
         displayOfferCells = generateDisplayOfferCells()
         myPublicationsCells = generateMyPublicationsCells()
+    }
+    
+    private func setTabBarItem() {
+        title = "myPublicationsLabel".localize()
     }
     
     func generateDisplayTextHomeCells() -> [DisplayTextHomeCell] {

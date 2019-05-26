@@ -156,11 +156,11 @@
 "followLabel"="Segueix-me a:";
 
 //Left home
-"profileLabel"="Perfil";
-"publicationsLabel"="Els meus publicacions";
-"friendsLabel"="Els meus amics";
-"contactsLabel"="Els meus contactes";
+"myProfileLabel"="El meu perfil";
 "editProfileLabel"="Editar perfil";
+"myPublicationsLabel"="Els meus publicacions";
+"myFriendsLabel"="Els meus amics";
+"myContactsLabel"="Els meus contactes";
 "signOutLabel"="Tancar sessió";
 "signOut_alert"="Estàs segur que vols tancar sessió?";
 "deactivateAccoutLabel"="Desactivar compte";

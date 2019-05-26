@@ -21,7 +21,12 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
         setBackground()
         followersData = generateDisplayFollowersData()
         followingData = generateDisplayFollowingData()
+        setTabBarItem()
         setSegmentControl()
+    }
+    
+    private func setTabBarItem() {
+        title = "myFriendsLabel".localize()
     }
     
     private func setSegmentControl() {

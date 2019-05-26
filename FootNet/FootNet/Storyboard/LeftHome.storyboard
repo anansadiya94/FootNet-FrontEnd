@@ -128,123 +128,11 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="myProfileImageView" destination="eVr-lU-1Kg" id="7OE-qU-WHn"/>
                                     <outlet property="myProfileLabel" destination="JWi-4b-Z3c" id="6px-KN-Q9R"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myPublicationsLeftHomeCell" id="y9S-wB-gTZ" userLabel="myPublicationLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="280" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y9S-wB-gTZ" id="pAm-L3-QaN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offersTabBar" translatesAutoresizingMaskIntoConstraints="NO" id="F66-ox-Lfc">
-                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="44" id="ABH-oV-MFz"/>
-                                                <constraint firstAttribute="height" constant="44" id="hEW-Wm-t93"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Publications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KT-g8-yMU" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="76" y="8" width="121" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="F66-ox-Lfc" secondAttribute="bottom" id="7XC-Na-l5u"/>
-                                        <constraint firstAttribute="bottom" secondItem="9KT-g8-yMU" secondAttribute="bottom" constant="8" id="E35-e2-uml"/>
-                                        <constraint firstItem="F66-ox-Lfc" firstAttribute="top" secondItem="pAm-L3-QaN" secondAttribute="top" id="Gxp-J2-LLh"/>
-                                        <constraint firstItem="9KT-g8-yMU" firstAttribute="top" secondItem="pAm-L3-QaN" secondAttribute="top" constant="8" id="RgG-rG-Ic8"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9KT-g8-yMU" secondAttribute="trailing" constant="16" id="WhV-fF-xMT"/>
-                                        <constraint firstItem="F66-ox-Lfc" firstAttribute="leading" secondItem="pAm-L3-QaN" secondAttribute="leading" constant="16" id="h3Y-Vv-ueQ"/>
-                                        <constraint firstItem="9KT-g8-yMU" firstAttribute="leading" secondItem="F66-ox-Lfc" secondAttribute="trailing" constant="16" id="lAt-rE-Alt"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="myPublicationsImageView" destination="F66-ox-Lfc" id="4ab-fN-8Id"/>
-                                    <outlet property="myPublicationsLabel" destination="9KT-g8-yMU" id="fuE-kK-ptR"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myFriendsLeftHomeCell" id="0J0-qy-YKU" userLabel="myFriendsLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="324" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0J0-qy-YKU" id="LYb-P8-cCt">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="rOZ-4r-kUh">
-                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="OIU-z4-Yfn"/>
-                                                <constraint firstAttribute="width" constant="44" id="gsI-se-ZW2"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klv-FU-rhy" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="76" y="8" width="85" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="rOZ-4r-kUh" firstAttribute="leading" secondItem="LYb-P8-cCt" secondAttribute="leading" constant="16" id="1EU-vU-ueD"/>
-                                        <constraint firstItem="Klv-FU-rhy" firstAttribute="leading" secondItem="rOZ-4r-kUh" secondAttribute="trailing" constant="16" id="1R2-e7-QuJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="rOZ-4r-kUh" secondAttribute="bottom" id="EVI-yH-8Ga"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Klv-FU-rhy" secondAttribute="trailing" constant="16" id="I5a-Ki-dBm"/>
-                                        <constraint firstAttribute="bottom" secondItem="Klv-FU-rhy" secondAttribute="bottom" constant="8" id="M0X-3m-vBD"/>
-                                        <constraint firstItem="rOZ-4r-kUh" firstAttribute="top" secondItem="LYb-P8-cCt" secondAttribute="top" id="Ucg-G2-TAS"/>
-                                        <constraint firstItem="Klv-FU-rhy" firstAttribute="top" secondItem="LYb-P8-cCt" secondAttribute="top" constant="8" id="gXL-lQ-Ybg"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="myFriendsImageView" destination="rOZ-4r-kUh" id="pbD-bk-CjW"/>
-                                    <outlet property="myFriendsLabel" destination="Klv-FU-rhy" id="oAi-LK-BBe"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myContactsLeftHomeCell" id="ehj-J6-1M4" userLabel="myContactsLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="368" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ehj-J6-1M4" id="Taq-4N-gQm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myProfileLeft" translatesAutoresizingMaskIntoConstraints="NO" id="Zay-pm-pDw">
-                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="Rct-jQ-ab9"/>
-                                                <constraint firstAttribute="width" constant="44" id="RhC-t5-Hr7"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-cu-Cht" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
-                                            <rect key="frame" x="76" y="8" width="97" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Zay-pm-pDw" firstAttribute="leading" secondItem="Taq-4N-gQm" secondAttribute="leading" constant="16" id="5ke-uH-dAU"/>
-                                        <constraint firstAttribute="bottom" secondItem="dxZ-cu-Cht" secondAttribute="bottom" constant="8" id="P5E-Ra-sQr"/>
-                                        <constraint firstAttribute="bottom" secondItem="Zay-pm-pDw" secondAttribute="bottom" id="SAw-Xh-xaC"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dxZ-cu-Cht" secondAttribute="trailing" constant="16" id="gSX-70-aRt"/>
-                                        <constraint firstItem="dxZ-cu-Cht" firstAttribute="leading" secondItem="Zay-pm-pDw" secondAttribute="trailing" constant="16" id="ncI-nt-2ax"/>
-                                        <constraint firstItem="Zay-pm-pDw" firstAttribute="top" secondItem="Taq-4N-gQm" secondAttribute="top" id="rZi-1o-aX3"/>
-                                        <constraint firstItem="dxZ-cu-Cht" firstAttribute="top" secondItem="Taq-4N-gQm" secondAttribute="top" constant="8" id="w9d-gT-we4"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="myContactsImageView" destination="Zay-pm-pDw" id="HW1-ud-lBy"/>
-                                    <outlet property="myContactsLabel" destination="dxZ-cu-Cht" id="w1f-OJ-NCN"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="editProfileLeftHomeCell" id="11r-NQ-yMX" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="412" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="280" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="11r-NQ-yMX" id="Vwe-i8-GQ9">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -276,8 +164,115 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="editProfileImageView" destination="C77-aE-77f" id="g3r-Ih-xEz"/>
                                     <outlet property="editProfileLabel" destination="EYl-Rn-n0F" id="UVy-XK-2Yd"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myPublicationsLeftHomeCell" id="y9S-wB-gTZ" userLabel="myPublicationLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="324" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y9S-wB-gTZ" id="pAm-L3-QaN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myPublications" translatesAutoresizingMaskIntoConstraints="NO" id="F66-ox-Lfc">
+                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="ABH-oV-MFz"/>
+                                                <constraint firstAttribute="height" constant="44" id="hEW-Wm-t93"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Publications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KT-g8-yMU" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="121" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="F66-ox-Lfc" secondAttribute="bottom" id="7XC-Na-l5u"/>
+                                        <constraint firstAttribute="bottom" secondItem="9KT-g8-yMU" secondAttribute="bottom" constant="8" id="E35-e2-uml"/>
+                                        <constraint firstItem="F66-ox-Lfc" firstAttribute="top" secondItem="pAm-L3-QaN" secondAttribute="top" id="Gxp-J2-LLh"/>
+                                        <constraint firstItem="9KT-g8-yMU" firstAttribute="top" secondItem="pAm-L3-QaN" secondAttribute="top" constant="8" id="RgG-rG-Ic8"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9KT-g8-yMU" secondAttribute="trailing" constant="16" id="WhV-fF-xMT"/>
+                                        <constraint firstItem="F66-ox-Lfc" firstAttribute="leading" secondItem="pAm-L3-QaN" secondAttribute="leading" constant="16" id="h3Y-Vv-ueQ"/>
+                                        <constraint firstItem="9KT-g8-yMU" firstAttribute="leading" secondItem="F66-ox-Lfc" secondAttribute="trailing" constant="16" id="lAt-rE-Alt"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="myPublicationsLabel" destination="9KT-g8-yMU" id="fuE-kK-ptR"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myFriendsLeftHomeCell" id="0J0-qy-YKU" userLabel="myFriendsLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="368" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0J0-qy-YKU" id="LYb-P8-cCt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myFriends" translatesAutoresizingMaskIntoConstraints="NO" id="rOZ-4r-kUh">
+                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="OIU-z4-Yfn"/>
+                                                <constraint firstAttribute="width" constant="44" id="gsI-se-ZW2"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klv-FU-rhy" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="85" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rOZ-4r-kUh" firstAttribute="leading" secondItem="LYb-P8-cCt" secondAttribute="leading" constant="16" id="1EU-vU-ueD"/>
+                                        <constraint firstItem="Klv-FU-rhy" firstAttribute="leading" secondItem="rOZ-4r-kUh" secondAttribute="trailing" constant="16" id="1R2-e7-QuJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="rOZ-4r-kUh" secondAttribute="bottom" id="EVI-yH-8Ga"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Klv-FU-rhy" secondAttribute="trailing" constant="16" id="I5a-Ki-dBm"/>
+                                        <constraint firstAttribute="bottom" secondItem="Klv-FU-rhy" secondAttribute="bottom" constant="8" id="M0X-3m-vBD"/>
+                                        <constraint firstItem="rOZ-4r-kUh" firstAttribute="top" secondItem="LYb-P8-cCt" secondAttribute="top" id="Ucg-G2-TAS"/>
+                                        <constraint firstItem="Klv-FU-rhy" firstAttribute="top" secondItem="LYb-P8-cCt" secondAttribute="top" constant="8" id="gXL-lQ-Ybg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="myFriendsLabel" destination="Klv-FU-rhy" id="oAi-LK-BBe"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myContactsLeftHomeCell" id="ehj-J6-1M4" userLabel="myContactsLeftHomeCell" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="412" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ehj-J6-1M4" id="Taq-4N-gQm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myContacts" translatesAutoresizingMaskIntoConstraints="NO" id="Zay-pm-pDw">
+                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="Rct-jQ-ab9"/>
+                                                <constraint firstAttribute="width" constant="44" id="RhC-t5-Hr7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-cu-Cht" customClass="CustomLeftHomeLabel" customModule="FootNet" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="8" width="97" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Zay-pm-pDw" firstAttribute="leading" secondItem="Taq-4N-gQm" secondAttribute="leading" constant="16" id="5ke-uH-dAU"/>
+                                        <constraint firstAttribute="bottom" secondItem="dxZ-cu-Cht" secondAttribute="bottom" constant="8" id="P5E-Ra-sQr"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zay-pm-pDw" secondAttribute="bottom" id="SAw-Xh-xaC"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dxZ-cu-Cht" secondAttribute="trailing" constant="16" id="gSX-70-aRt"/>
+                                        <constraint firstItem="dxZ-cu-Cht" firstAttribute="leading" secondItem="Zay-pm-pDw" secondAttribute="trailing" constant="16" id="ncI-nt-2ax"/>
+                                        <constraint firstItem="Zay-pm-pDw" firstAttribute="top" secondItem="Taq-4N-gQm" secondAttribute="top" id="rZi-1o-aX3"/>
+                                        <constraint firstItem="dxZ-cu-Cht" firstAttribute="top" secondItem="Taq-4N-gQm" secondAttribute="top" constant="8" id="w9d-gT-we4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="myContactsLabel" destination="dxZ-cu-Cht" id="w1f-OJ-NCN"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="signOutLeftHomeCell" id="4Cx-7D-hbr" customClass="LeftHomeTableViewCell" customModule="FootNet" customModuleProvider="target">
@@ -313,7 +308,6 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="signOutImageView" destination="xs3-ts-Vcz" id="D6G-Ht-Ubm"/>
                                     <outlet property="signOutLabel" destination="3dB-zQ-ZbE" id="1lG-aL-YKO"/>
                                 </connections>
                             </tableViewCell>
@@ -350,7 +344,6 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="deactivateAccountImageView" destination="eb9-9u-bwZ" id="jlJ-BS-Qzq"/>
                                     <outlet property="deactivateAccountLabel" destination="LvE-9u-xBb" id="Wre-RP-A2U"/>
                                 </connections>
                             </tableViewCell>
@@ -370,8 +363,10 @@
         <image name="deactivateAccountLeft" width="33.333332061767578" height="33.333332061767578"/>
         <image name="defaultProfilePhoto" width="200" height="200"/>
         <image name="editProfileLeft" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="myContacts" width="48" height="48"/>
+        <image name="myFriends" width="48" height="48"/>
         <image name="myProfileLeft" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="offersTabBar" width="24" height="24"/>
+        <image name="myPublications" width="48" height="48"/>
         <image name="signOutLeft" width="33.333332061767578" height="33.333332061767578"/>
     </resources>
 </document>

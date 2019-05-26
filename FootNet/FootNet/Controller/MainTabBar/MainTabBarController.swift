@@ -67,6 +67,14 @@ class MainTabBarController: UITabBarController {
         navigationController?.pushViewController(profileViewController, animated: true)
     }
     
+    @objc func editProfileTapped() {
+        //TODO - PUSH Edit profile
+        let editProfileStoryboard = UIStoryboard(name: "EditProfile", bundle: nil)
+        let editProfileViewController = editProfileStoryboard.instantiateViewController(withIdentifier: "EditProfleViewController")
+        title = " "
+        navigationController?.pushViewController(editProfileViewController, animated: true)
+    }
+    
     @objc func myPublicationsTapped() {
         let myPublicationsStoryboard = UIStoryboard(name: "MyPublications", bundle: nil)
         let myPublicationsViewController = myPublicationsStoryboard.instantiateViewController(withIdentifier: "MyPublicationsViewController")
@@ -86,14 +94,6 @@ class MainTabBarController: UITabBarController {
         let myContactsViewController = myContactsStoryboard.instantiateViewController(withIdentifier: "MyContactsViewController")
         title = " "
         navigationController?.pushViewController(myContactsViewController, animated: true)
-    }
-    
-    @objc func editProfileTapped() {
-        //TODO - PUSH Edit profile
-        let editProfileStoryboard = UIStoryboard(name: "EditProfile", bundle: nil)
-        let editProfileViewController = editProfileStoryboard.instantiateViewController(withIdentifier: "EditProfleViewController")
-        title = " "
-        navigationController?.pushViewController(editProfileViewController, animated: true)
     }
     
     @objc func signOutTapped() {

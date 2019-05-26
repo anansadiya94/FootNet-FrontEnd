@@ -12,19 +12,12 @@ class LeftHomeTableViewCell: UITableViewCell {
     @IBOutlet weak var img: CustomImageView!
     @IBOutlet weak var fullNameLabel: CustomLeftHomeLabel!
     @IBOutlet weak var profileTypeLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var myProfileImageView: UIImageView!
     @IBOutlet weak var myProfileLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var myPublicationsImageView: UIImageView!
     @IBOutlet weak var myPublicationsLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var myFriendsImageView: UIImageView!
     @IBOutlet weak var myFriendsLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var myContactsImageView: UIImageView!
     @IBOutlet weak var myContactsLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var editProfileImageView: UIImageView!
     @IBOutlet weak var editProfileLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var signOutImageView: UIImageView!
     @IBOutlet weak var signOutLabel: CustomLeftHomeLabel!
-    @IBOutlet weak var deactivateAccountImageView: UIImageView!
     @IBOutlet weak var deactivateAccountLabel: CustomLeftHomeLabel!
     
     override func awakeFromNib() {
@@ -34,5 +27,4 @@ class LeftHomeTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }

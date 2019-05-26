@@ -156,11 +156,11 @@
 "followLabel"="Follow me on:";
 
 //Left home
-"profileLabel"="Profile";
-"publicationsLabel"="My Publications";
-"friendsLabel"="My Friends";
-"contactsLabel"="My Contacts";
+"myProfileLabel"="My profile";
 "editProfileLabel"="Edit profile";
+"myPublicationsLabel"="My publications";
+"myFriendsLabel"="My friends";
+"myContactsLabel"="My contacts";
 "signOutLabel"="Sign out";
 "signOut_alert"="Are you sure you want to sign out?";
 "deactivateAccoutLabel"="Deactivate account";

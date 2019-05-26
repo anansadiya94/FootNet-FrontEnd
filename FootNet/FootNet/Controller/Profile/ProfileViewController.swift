@@ -50,7 +50,7 @@ class ProfileViewController: UIViewController {
     }
     
     private func setTabBarItem() {
-        title = "profileLabel".localize()
+        title = "myProfileLabel".localize()
     }
     
     private func generateUserInfo() {

@@ -27,6 +27,6 @@ struct User {
     let preferredPositions: String
     let weight: String
     let height: String
-    let amIFollowing: Bool
+    var amIFollowing: Bool
     let active: Bool
 }

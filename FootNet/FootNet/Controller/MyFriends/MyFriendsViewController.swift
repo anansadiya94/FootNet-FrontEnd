@@ -39,20 +39,30 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     private func generateDisplayFollowersData() -> [DisplayUserBasicInfo] {
-        for user in StaticDBManager.shared.requestUsers() {
-            followersData.append(
-                DisplayUserBasicInfo(id: user.id, fullName: user.name + " " + user.surname , photo: user.photo, amIFollowing: user.amIFollowing)
-            )
+        let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
+        for friend in StaticDBManager.shared.requestFriends() {
+            if friend.followingId == userId {
+                if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == friend.followerId}).first {
+                    followersData.append(
+                        DisplayUserBasicInfo(id: user.id, fullName: user.fullName , photo: user.photo, amIFollowing: user.amIFollowing)
+                    )
+                }
+            }
         }
         followersData.sort() { $0.fullName.lowercased() < $1.fullName.lowercased() }
         return followersData
     }
     
     private func generateDisplayFollowingData() -> [DisplayUserBasicInfo] {
-        for user in StaticDBManager.shared.requestUsers() {
-            followingData.append(
-                DisplayUserBasicInfo(id: user.id, fullName: user.name + " " + user.surname , photo: user.photo, amIFollowing: user.amIFollowing)
-            )
+        let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
+        for friend in StaticDBManager.shared.requestFriends() {
+            if friend.followerId == userId {
+                if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == friend.followingId}).first {
+                    followingData.append(
+                        DisplayUserBasicInfo(id: user.id, fullName: user.fullName , photo: user.photo, amIFollowing: user.amIFollowing)
+                    )
+                }
+            }
         }
         followingData.sort() { $0.fullName.lowercased() < $1.fullName.lowercased() }
         return followingData

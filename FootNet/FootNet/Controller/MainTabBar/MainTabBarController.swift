@@ -17,12 +17,18 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cofigureUserData()
         //Load all views
         for viewController in self.viewControllers! {
             _ = viewController.view
         }
         setTabBar()
         addObservers()
+    }
+    
+    private func cofigureUserData() {
+        let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
+        StaticDBManager.shared.modifyUsers(userId: userId!)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -45,11 +45,6 @@ class StaticDBManager {
         PhotoHomeCellResponse(homeCellType: .Text, userId: 12, publicationId: 7, publicationPhoto: "photoPub2",  publicationDate: "02-05-2019 14:59", publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 13, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 81, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 12, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 81, reactionStatus: false)))
     ]
     
-    struct Relationship {
-        let followerId: Int
-        let followingId: Int
-    }
-    
     static var friends = [
         Relationship(followerId: 13, followingId: 1),
         Relationship(followerId: 13, followingId: 2),

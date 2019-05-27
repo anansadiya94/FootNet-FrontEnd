@@ -14,3 +14,8 @@ struct DisplayUserBasicInfo {
     let photo: String
     var amIFollowing: Bool
 }
+
+struct Relationship {
+    let followerId: Int
+    let followingId: Int
+}

@@ -18,11 +18,14 @@ class MyTextTableViewCell: UITableViewCell {
     @IBOutlet weak var fourthReactionCountLabel: CustomContentLabel!
     @IBOutlet var reactionButtonCollection: [UIButton]!
     
+    var publicationId = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func setUp(publicationId: Int, img: String, fullName: String, publicationText: String, publicationReaction: PublicationReaction) {
+        self.publicationId = publicationId
         userImageView.image = UIImage(named: img)
         fullNameLabel.text = fullName
         publicationTextLabel.text = publicationText

@@ -15,11 +15,14 @@ class MyOfferTableViewCell: UITableViewCell {
     @IBOutlet weak var offerDetailLabel: CustomContentLabel!
     @IBOutlet weak var offerTextLabel: CustomContentLabel!
     
+    var publicationId = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func setUp(offerId: Int, img: String, fullName: String, offerImg: String, offerTitle: String, offerText: String) {
+        publicationId = offerId
         userImageView.image = UIImage(named: img)
         fullNameLabel.text = fullName
         offerImageView.image = UIImage(named: offerImg)

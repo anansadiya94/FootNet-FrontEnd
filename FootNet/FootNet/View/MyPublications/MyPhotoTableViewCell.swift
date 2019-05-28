@@ -17,12 +17,15 @@ class MyPhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var thirdReactionCountLabel: CustomContentLabel!
     @IBOutlet weak var fourthReactionCountLabel: CustomContentLabel!
     @IBOutlet var reactionButtonCollection: [UIButton]!
+    
+    var publicationId = 0
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func setUp(publicationId: Int, img: String, fullName: String, publicationPhoto: String, publicationReaction: PublicationReaction) {
+        self.publicationId = publicationId
         userImageView.image = UIImage(named: img)
         fullNameLabel.text = fullName
         publicationPhotoImageView.image = UIImage(named: publicationPhoto)

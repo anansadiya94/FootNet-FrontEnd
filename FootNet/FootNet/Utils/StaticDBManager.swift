@@ -32,7 +32,8 @@ class StaticDBManager {
         TextHomeCellResponse(homeCellType: .Text, userId: 2, publicationId: 1, publicationText: "Mañana jugamos a las 12 en el campo de Marina, venid a vernos", publicationDate: "15-05-2019 23:59", publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 1, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 2, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 3, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 4, reactionStatus: false))),
         TextHomeCellResponse(homeCellType: .Text, userId: 4, publicationId: 2, publicationText: "He marcado 3 goles hoy, que bueno soy", publicationDate: "06-05-2019 23:59", publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 11, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 23, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 54, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 22, reactionStatus: false))),
         TextHomeCellResponse(homeCellType: .Text, userId: 5, publicationId: 3, publicationText: "Vaya golaso de Messi, D10S", publicationDate: "14-05-2019 23:59", publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 7, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 6, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 1, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 121, reactionStatus: false))),
-        TextHomeCellResponse(homeCellType: .Text, userId: 10, publicationId: 4, publicationText: "Voy a ver el partido del Juvenil, a las 14 empieza! nos vemos ahí", publicationDate: "11-05-2019 23:59", publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 33, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 54, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 12, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 11, reactionStatus: false)))
+        TextHomeCellResponse(homeCellType: .Text, userId: 10, publicationId: 4, publicationText: "Voy a ver el partido del Juvenil, a las 14 empieza! nos vemos ahí", publicationDate: "11-05-2019 23:59", publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 33, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 54, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 12, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 11, reactionStatus: false))),
+        TextHomeCellResponse(homeCellType: .Text, userId: 13, publicationId: 5, publicationText: "SOY MESSI", publicationDate: "11-05-2019 23:59", publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 33, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 54, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 12, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 11, reactionStatus: false)))
     ]
     
     static var offerCellsResponse = [
@@ -151,6 +152,11 @@ class StaticDBManager {
     
     func modifyContacts(userId: Int, contactId: Int) {
         StaticDBManager.contacts.removeAll(where: {$0.followerId == userId && $0.followingId == contactId})
+    }
+    
+    
+    func modifyTextHomeCellsResponse(userId: Int, publicationId: Int) {
+        StaticDBManager.textHomeCellsResponse.removeAll(where: {$0.userId == userId && $0.publicationId == publicationId})
     }
 }
 

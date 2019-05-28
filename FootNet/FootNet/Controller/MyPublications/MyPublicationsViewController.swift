@@ -15,9 +15,11 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
     var displayPhotoHomeCells = [DisplayPhotoHomeCell]()
     var displayOfferCells = [DisplayOffercell]()
     var myPublicationsCells = [HomeCell]()
+    var userId = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
         setTabBarItem()
         registerNib()
@@ -75,7 +77,6 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func generateMyPublicationsCells() -> [HomeCell] {
-        let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
         for displayTextHomeCell in displayTextHomeCells {
             if (displayTextHomeCell.userId == userId) {
                 myPublicationsCells.append(HomeCell(homeCellType: displayTextHomeCell.homeCellType, cellId: displayTextHomeCell.publicationId, date: displayTextHomeCell.publicationDate))
@@ -146,13 +147,15 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
         switch myPublicationsCells[indexPath.row].homeCellType {
         case HomeCellType.Text:
             //DELETE FROM DB
-            print("Text publication removed")
+            let cell = tableView.cellForRow(at: indexPath) as! MyTextTableViewCell
+            let publication = displayTextHomeCells.filter({$0.publicationId == cell.publicationId}).first
+            StaticDBManager.shared.modifyTextHomeCellsResponse(userId: userId, publicationId: publication!.publicationId)
         case HomeCellType.Photo:
             //DELETE FROM DB
-            print("Photo publication removed")
+            let cell = tableView.cellForRow(at: indexPath) as! MyPhotoTableViewCell
         case HomeCellType.Offer:
             //DELETE FROM DB
-            print("Offer removed")
+            let cell = tableView.cellForRow(at: indexPath) as! MyOfferTableViewCell
         }
         if editingStyle == UITableViewCell.EditingStyle.delete {
             myPublicationsCells.remove(at: indexPath.row)

@@ -11,9 +11,6 @@ import UIKit
 class MyFriendTableViewCell: UITableViewCell {
     @IBOutlet weak var friendProfileImageView: CustomImageView!
     @IBOutlet weak var friendProfileLabel: CustomContentLabel!
-    @IBOutlet weak var friendProfileStatusButton: CustomFollowButton!
-    
-    var following: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +19,5 @@ class MyFriendTableViewCell: UITableViewCell {
     func setUp(img: String, fullName: String, amIFollowing: Bool) {
         friendProfileImageView.image = UIImage(named: img)
         friendProfileLabel.text = fullName
-        CustomFollowButton.setup(friendProfileStatusButton, amIFollowing)
-        following = amIFollowing
     }
 }

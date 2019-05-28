@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MyFriendsViewController: UIViewController {
     var followersData = [DisplayUserBasicInfo]()
     var followingData = [DisplayUserBasicInfo]()
     private var dataSource: [DisplayUserBasicInfo]?
@@ -16,8 +16,11 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var scSegment: UISegmentedControl!
     @IBOutlet weak var myFriendsTableView: UITableView!
     
+    var userId = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
         followersData = generateDisplayFollowersData()
         followingData = generateDisplayFollowingData()
@@ -79,7 +82,9 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         myFriendsTableView.reloadData()
     }
-    
+}
+
+extension MyFriendsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource?.count ?? 0
     }

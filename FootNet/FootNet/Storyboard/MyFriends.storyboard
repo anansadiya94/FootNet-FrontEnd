@@ -53,20 +53,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzU-0c-Efu" customClass="CustomFollowButton" customModule="FootNet" customModuleProvider="target">
-                                                    <rect key="frame" x="360" y="18" width="46" height="30"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="MEP-PD-vZ6" firstAttribute="centerY" secondItem="N6b-Ml-Nyf" secondAttribute="centerY" id="2Wv-YL-aLe"/>
                                                 <constraint firstItem="N6b-Ml-Nyf" firstAttribute="top" secondItem="cEg-BS-RPZ" secondAttribute="top" constant="8" id="4mR-LU-OiS"/>
-                                                <constraint firstItem="YzU-0c-Efu" firstAttribute="centerY" secondItem="N6b-Ml-Nyf" secondAttribute="centerY" id="Fj8-4F-hWk"/>
-                                                <constraint firstItem="YzU-0c-Efu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MEP-PD-vZ6" secondAttribute="trailing" constant="8" id="NON-Ga-Hcx"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="N6b-Ml-Nyf" secondAttribute="bottom" constant="8" id="RkU-CS-DGg"/>
                                                 <constraint firstItem="MEP-PD-vZ6" firstAttribute="leading" secondItem="N6b-Ml-Nyf" secondAttribute="trailing" constant="8" id="ioX-Cf-ERV"/>
-                                                <constraint firstAttribute="trailing" secondItem="YzU-0c-Efu" secondAttribute="trailing" constant="8" id="mN8-3e-U5B"/>
                                                 <constraint firstItem="N6b-Ml-Nyf" firstAttribute="leading" secondItem="cEg-BS-RPZ" secondAttribute="leading" constant="8" id="ysi-mS-etf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -74,7 +67,6 @@
                                         <connections>
                                             <outlet property="friendProfileImageView" destination="N6b-Ml-Nyf" id="nXK-DR-jpn"/>
                                             <outlet property="friendProfileLabel" destination="MEP-PD-vZ6" id="67z-Hl-9Qq"/>
-                                            <outlet property="friendProfileStatusButton" destination="YzU-0c-Efu" id="1ae-6b-hhi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

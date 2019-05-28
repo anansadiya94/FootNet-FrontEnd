@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     var filteredDisplayUsers = [DisplaySearchedUser]()
     var searching: Bool = false
     var searchTextString: String = ""
+    var userId = 0
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultsTableView: UITableView!
@@ -37,10 +38,13 @@ class SearchViewController: UIViewController {
     }
     
     private func generateDisplayUsers() {
+        userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         for user in StaticDBManager.shared.requestUsers() {
-            displayUsers.append(
-                DisplaySearchedUser(id: user.id, fullName: user.name + " " + user.surname , photo: user.photo, amIFollowing: user.amIFollowing)
-            )
+            if user.id != userId {
+                displayUsers.append(
+                    DisplaySearchedUser(id: user.id, fullName: user.name + " " + user.surname , photo: user.photo, amIFollowing: user.amIFollowing)
+                )
+            }
         }
         displayUsers.sort() { $0.fullName.lowercased() < $1.fullName.lowercased() }
     }
@@ -50,6 +54,7 @@ class SearchViewController: UIViewController {
             var displayUser = $0
             if $0.id == sender.tag {
                 displayUser.amIFollowing = !displayUser.amIFollowing
+                StaticDBManager.shared.modifyUsersRelationship(followerId: userId, followingId: displayUser.id, followingStatus: displayUser.amIFollowing)
             }
             return displayUser
         }

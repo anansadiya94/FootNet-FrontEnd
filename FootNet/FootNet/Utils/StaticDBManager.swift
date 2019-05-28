@@ -50,12 +50,8 @@ class StaticDBManager {
         Relationship(followerId: 13, followingId: 2),
         Relationship(followerId: 13, followingId: 3),
         Relationship(followerId: 13, followingId: 4),
-        Relationship(followerId: 13, followingId: 6),
-        Relationship(followerId: 13, followingId: 7),
-        Relationship(followerId: 13, followingId: 8),
         Relationship(followerId: 13, followingId: 9),
         Relationship(followerId: 13, followingId: 10),
-        Relationship(followerId: 13, followingId: 11),
         Relationship(followerId: 13, followingId: 12),
         Relationship(followerId: 1, followingId: 13),
         Relationship(followerId: 2, followingId: 13),
@@ -112,6 +108,22 @@ class StaticDBManager {
                 }
                 return user
             }
+        }
+    }
+    
+    func modifyUsersRelationship (followerId: Int, followingId: Int, followingStatus: Bool) {
+        if followingStatus {
+            StaticDBManager.friends.append(Relationship(followerId: followerId, followingId: followingId))
+        } else {
+            StaticDBManager.friends.removeAll(where: {$0.followerId == followerId && $0.followingId == followingId})
+        }
+        
+        StaticDBManager.users = StaticDBManager.users.map {
+            var user = $0
+            if $0.id == followingId {
+                user.amIFollowing = followingStatus
+            }
+            return user
         }
     }
     

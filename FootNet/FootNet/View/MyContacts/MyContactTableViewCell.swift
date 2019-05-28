@@ -14,11 +14,14 @@ class MyContactTableViewCell: UITableViewCell {
     @IBOutlet weak var emailLabel: CustomContentLabel!
     @IBOutlet weak var phoneLabel: CustomContentLabel!
     
+    var contactdId = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    func setUp(img: String, fullName: String, email: String, phone: String) {
+    func setUp(id: Int, img: String, fullName: String, email: String, phone: String) {
+        self.contactdId = id
         userImageView.image = UIImage(named: img)
         fullNameLabel.text = fullName
         emailLabel.text = email

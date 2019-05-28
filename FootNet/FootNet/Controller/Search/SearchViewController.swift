@@ -54,7 +54,7 @@ class SearchViewController: UIViewController {
             var displayUser = $0
             if $0.id == sender.tag {
                 displayUser.amIFollowing = !displayUser.amIFollowing
-                StaticDBManager.shared.modifyUsersRelationship(followerId: userId, followingId: displayUser.id, followingStatus: displayUser.amIFollowing)
+                StaticDBManager.shared.modifyFriends(followerId: userId, followingId: displayUser.id, followingStatus: displayUser.amIFollowing)
             }
             return displayUser
         }

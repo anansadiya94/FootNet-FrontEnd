@@ -60,6 +60,21 @@ class StaticDBManager {
         Relationship(followerId: 5, followingId: 13)
     ]
     
+    static var contacts = [
+        Relationship(followerId: 13, followingId: 1),
+        Relationship(followerId: 13, followingId: 2),
+        Relationship(followerId: 13, followingId: 3),
+        Relationship(followerId: 13, followingId: 4),
+        Relationship(followerId: 13, followingId: 9),
+        Relationship(followerId: 13, followingId: 10),
+        Relationship(followerId: 13, followingId: 12),
+        Relationship(followerId: 1, followingId: 13),
+        Relationship(followerId: 2, followingId: 13),
+        Relationship(followerId: 3, followingId: 13),
+        Relationship(followerId: 4, followingId: 13),
+        Relationship(followerId: 5, followingId: 13)
+    ]
+    
     private init(){}
     
     func requestUsers() -> [User] {
@@ -73,15 +88,6 @@ class StaticDBManager {
             usersBasicInfo.append(item)
         }
         return usersBasicInfo
-    }
-    
-    func requestContacts() -> [DisplayContactCell] {
-        var contacts = [DisplayContactCell]()
-        for user in StaticDBManager.users {
-            let item = DisplayContactCell(id: user.id, fullName: user.name + " " + user.surname, photo: user.photo, email: user.email, phone: user.phone)
-            contacts.append(item)
-        }
-        return contacts
     }
     
     func requestOffers() -> [OfferCellResponse]  {
@@ -99,7 +105,7 @@ class StaticDBManager {
         }
     }
     
-    func modifyUsers (userId: Int) {
+    func modifyUsers(userId: Int) {
         for relationship in StaticDBManager.shared.requestFriends() {
             StaticDBManager.users = StaticDBManager.users.map {
                 var user = $0
@@ -111,7 +117,19 @@ class StaticDBManager {
         }
     }
     
-    func modifyUsersRelationship (followerId: Int, followingId: Int, followingStatus: Bool) {
+    func requestTextPublications() -> [TextHomeCellResponse] {
+        return StaticDBManager.textHomeCellsResponse
+    }
+    
+    func requestPhotoPublications() -> [PhotoHomeCellResponse] {
+        return StaticDBManager.photoHomeCellsResponse
+    }
+    
+    func requestFriends() -> [Relationship] {
+        return StaticDBManager.friends
+    }
+    
+    func modifyFriends(followerId: Int, followingId: Int, followingStatus: Bool) {
         if followingStatus {
             StaticDBManager.friends.append(Relationship(followerId: followerId, followingId: followingId))
         } else {
@@ -127,16 +145,12 @@ class StaticDBManager {
         }
     }
     
-    func requestTextPublications() -> [TextHomeCellResponse] {
-        return StaticDBManager.textHomeCellsResponse
+    func requestContacts() -> [Relationship] {
+        return StaticDBManager.contacts
     }
     
-    func requestPhotoPublications() -> [PhotoHomeCellResponse] {
-        return StaticDBManager.photoHomeCellsResponse
-    }
-    
-    func requestFriends() -> [Relationship] {
-        return StaticDBManager.friends
+    func modifyContacts(userId: Int, contactId: Int) {
+        StaticDBManager.contacts.removeAll(where: {$0.followerId == userId && $0.followingId == contactId})
     }
 }
 

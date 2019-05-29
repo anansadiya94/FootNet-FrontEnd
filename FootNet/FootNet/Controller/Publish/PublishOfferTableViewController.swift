@@ -19,9 +19,11 @@ class PublishOfferTableViewController: UITableViewController {
     var offerTitle: String = ""
     var offerText: String = ""
     var chosenImage: UIImage?
+    var userId = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
         createRightButton()
         configureUI()
@@ -45,7 +47,7 @@ class PublishOfferTableViewController: UITableViewController {
         offerPublicationTitleTextView.delegate = self
         offerPublicationTitleTextView.text = "publishOffer_title".localize()
         offerPublicationTitleTextView.textColor = UIColor.colorPlaceHolderDefault
-         offerPublicationTextTextView.delegate = self
+        offerPublicationTextTextView.delegate = self
         offerPublicationTextTextView.text = "publishOffer_text".localize()
         offerPublicationTextTextView.textColor = UIColor.colorPlaceHolderDefault
         offerPublicationPhotoLabel.text = "publishOffer_photoLabel".localize()
@@ -54,7 +56,10 @@ class PublishOfferTableViewController: UITableViewController {
     }
     
     @objc private func rightTapped(sender: UIBarButtonItem) {
-        //TODO: ADD OFFER AND BACK TO HOME
+        let date = Date()
+        StaticDBManager.shared.addOfferCellResponse(userId: userId, publicationTitle: offerPublicationTitleTextView.text, publicationText: offerPublicationTextTextView.text, publicationPhoto: "joanet", publicationDate: date.toString())
+        _ = self.navigationController?.popViewController(animated: true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func choosePhotoTapped(_ sender: UIButton) {

@@ -32,12 +32,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func generateDisplayTextHomeCells() -> [DisplayTextHomeCell] {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         for textHomeCellResponse in StaticDBManager.shared.requestTextPublications() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == textHomeCellResponse.userId && ($0.amIFollowing == true || $0.id == userId)}).first {
                 displayTextHomeCells.append(
-                    DisplayTextHomeCell(userId: textHomeCellResponse.userId, publicationId: textHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: textHomeCellResponse.publicationText, publicationDate: dateFormatter.date(from: textHomeCellResponse.publicationDate)!, publicationReaction: textHomeCellResponse.publicationReaction)
+                    DisplayTextHomeCell(userId: textHomeCellResponse.userId, publicationId: textHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: textHomeCellResponse.publicationText, publicationDate: textHomeCellResponse.publicationDate, publicationReaction: textHomeCellResponse.publicationReaction)
                 )
             }
         }
@@ -46,12 +44,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func generateDisplayPhotoHomeCells() -> [DisplayPhotoHomeCell] {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         for photoHomeCellResponse in StaticDBManager.shared.requestPhotoPublications() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == photoHomeCellResponse.userId && ($0.amIFollowing == true || $0.id == userId)}).first {
                 displayPhotoHomeCells.append(
-                    DisplayPhotoHomeCell(userId: photoHomeCellResponse.userId, publicationId: photoHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationPhoto: photoHomeCellResponse.publicationPhoto, publicationDate: dateFormatter.date(from: photoHomeCellResponse.publicationDate)!, publicationReaction: photoHomeCellResponse.publicationReaction)
+                    DisplayPhotoHomeCell(userId: photoHomeCellResponse.userId, publicationId: photoHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationPhoto: photoHomeCellResponse.publicationPhoto, publicationDate: photoHomeCellResponse.publicationDate, publicationReaction: photoHomeCellResponse.publicationReaction)
                 )
             }
         }
@@ -61,12 +57,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //TODO: REFACTOR FUNCTION WITH OFFERSVIEWCONTROLLER
     func generateDisplayOfferCells() -> [DisplayOffercell] {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         for offerCellResponse in StaticDBManager.shared.requestOffers() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == offerCellResponse.userId && ($0.amIFollowing == true || $0.id == userId)}).first {
                 displayOfferCells.append(
-                    DisplayOffercell(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, publicationDate: dateFormatter.date(from: offerCellResponse.publicationDate)!, offerRequested: offerCellResponse.offerRequested, offerStatus: offerCellResponse.offerStatus)
+                    DisplayOffercell(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, publicationDate: offerCellResponse.publicationDate, offerRequested: offerCellResponse.offerRequested, offerStatus: offerCellResponse.offerStatus)
                 )
             }
         }

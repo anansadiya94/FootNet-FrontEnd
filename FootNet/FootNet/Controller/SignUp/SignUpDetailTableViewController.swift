@@ -440,14 +440,6 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         return UITableViewCell()
     }
     
-    //Convert date to string
-    func dateToString(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
-        dateFormatter.timeStyle = .full
-        return dateFormatter.string(from: date)
-    }
-    
     //Hide keyboard when return button clicked
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -479,9 +471,7 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
     
     //Date picker set date
     @objc func setDate(_sender: UIDatePicker) {
-        let dateFormatter: DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        let selectedDate: String = dateFormatter.string(from: _sender.date)
+        let selectedDate = _sender.date.toString(format: "dd/MM/yyyy")
         userProfileModel.birthday = selectedDate
         if let indexPath = dateIndexPath, let cell = tableView.cellForRow(at: indexPath) as? SignUpDetailViewCell {
             cell.dateTextField.text = selectedDate

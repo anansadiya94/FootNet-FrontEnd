@@ -34,12 +34,10 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func generateDisplayTextHomeCells() -> [DisplayTextHomeCell] {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         for textHomeCellResponse in StaticDBManager.shared.requestTextPublications() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == textHomeCellResponse.userId}).first {
                 displayTextHomeCells.append(
-                    DisplayTextHomeCell(userId: textHomeCellResponse.userId, publicationId: textHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: textHomeCellResponse.publicationText, publicationDate: dateFormatter.date(from: textHomeCellResponse.publicationDate)!, publicationReaction: textHomeCellResponse.publicationReaction)
+                    DisplayTextHomeCell(userId: textHomeCellResponse.userId, publicationId: textHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationText: textHomeCellResponse.publicationText, publicationDate: textHomeCellResponse.publicationDate, publicationReaction: textHomeCellResponse.publicationReaction)
                 )
             }
         }
@@ -48,12 +46,10 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func generateDisplayPhotoHomeCells() -> [DisplayPhotoHomeCell] {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         for photoHomeCellResponse in StaticDBManager.shared.requestPhotoPublications() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == photoHomeCellResponse.userId}).first {
                 displayPhotoHomeCells.append(
-                    DisplayPhotoHomeCell(userId: photoHomeCellResponse.userId, publicationId: photoHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationPhoto: photoHomeCellResponse.publicationPhoto, publicationDate: dateFormatter.date(from: photoHomeCellResponse.publicationDate)!, publicationReaction: photoHomeCellResponse.publicationReaction)
+                    DisplayPhotoHomeCell(userId: photoHomeCellResponse.userId, publicationId: photoHomeCellResponse.publicationId, fullName: user.fullName, photo: user.photo, publicationPhoto: photoHomeCellResponse.publicationPhoto, publicationDate: photoHomeCellResponse.publicationDate, publicationReaction: photoHomeCellResponse.publicationReaction)
                 )
             }
         }
@@ -63,12 +59,10 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
     
     //TODO: REFACTOR FUNCTION WITH OFFERSVIEWCONTROLLER
     func generateDisplayOfferCells() -> [DisplayOffercell] {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         for offerCellResponse in StaticDBManager.shared.requestOffers() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == offerCellResponse.userId}).first {
                 displayOfferCells.append(
-                    DisplayOffercell(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, publicationDate: dateFormatter.date(from: offerCellResponse.publicationDate)!, offerRequested: offerCellResponse.offerRequested, offerStatus: offerCellResponse.offerStatus)
+                    DisplayOffercell(userId: offerCellResponse.userId, offerId: offerCellResponse.offerId, fullName: user.fullName, photo: user.photo, offerTitle: offerCellResponse.offerTitle, offerText: offerCellResponse.offerText, offerPhoto: offerCellResponse.offerPhoto, publicationDate: offerCellResponse.publicationDate, offerRequested: offerCellResponse.offerRequested, offerStatus: offerCellResponse.offerStatus)
                 )
             }
         }
@@ -147,15 +141,15 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
         case HomeCellType.Text:
             let cell = tableView.cellForRow(at: indexPath) as! MyTextTableViewCell
             let publication = displayTextHomeCells.filter({$0.publicationId == cell.publicationId}).first
-            StaticDBManager.shared.modifyTextHomeCellsResponse(userId: userId, publicationId: publication!.publicationId)
+            StaticDBManager.shared.removeTextHomeCellResponse(userId: userId, publicationId: publication!.publicationId)
         case HomeCellType.Photo:
             let cell = tableView.cellForRow(at: indexPath) as! MyPhotoTableViewCell
             let publication = displayPhotoHomeCells.filter({$0.publicationId == cell.publicationId}).first
-            StaticDBManager.shared.modifyPhotoHomeCellsResponse(userId: userId, publicationId: publication!.publicationId)
+            StaticDBManager.shared.removePhotoHomeCellResponse(userId: userId, publicationId: publication!.publicationId)
         case HomeCellType.Offer:
             let cell = tableView.cellForRow(at: indexPath) as! MyOfferTableViewCell
             let publication = displayOfferCells.filter({$0.offerId == cell.publicationId}).first
-            StaticDBManager.shared.modifyOfferCellsResponse(userId: userId, publicationId: publication!.offerId)
+            StaticDBManager.shared.removeOfferCellResponse(userId: userId, publicationId: publication!.offerId)
         }
         if editingStyle == UITableViewCell.EditingStyle.delete {
             myPublicationsCells.remove(at: indexPath.row)

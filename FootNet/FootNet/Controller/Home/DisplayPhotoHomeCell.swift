@@ -15,6 +15,6 @@ struct DisplayPhotoHomeCell {
     let fullName: String
     let photo: String
     let publicationPhoto: String
-    let publicationDate: Date
+    let publicationDate: String
     var publicationReaction: PublicationReaction
 }

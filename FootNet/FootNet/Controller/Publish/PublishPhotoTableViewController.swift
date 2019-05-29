@@ -15,9 +15,11 @@ class PublishPhotoTableViewController: UITableViewController {
     
     let imagePicker = UIImagePickerController()
     var chosenImage: UIImage?
+    var userId = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
         createRightButton()
         configureUI()
@@ -44,7 +46,10 @@ class PublishPhotoTableViewController: UITableViewController {
     }
     
     @objc private func rightTapped(sender: UIBarButtonItem) {
-        //TODO: ADD OFFER AND BACK TO HOME
+        let date = Date()
+        StaticDBManager.shared.addPhotoHomeCellResponse(userId: userId, publicationPhoto: "joanet", publicationDate: date.toString())
+        _ = self.navigationController?.popViewController(animated: true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func changePhotoTapped(_ sender: UIButton) {

@@ -15,7 +15,7 @@ struct DisplayTextHomeCell {
     let fullName: String
     let photo: String
     let publicationText: String
-    let publicationDate: Date
+    let publicationDate: String
     var publicationReaction: PublicationReaction
 }
 
@@ -34,7 +34,7 @@ struct Reaction {
 struct HomeCell {
     let homeCellType: HomeCellType
     let cellId: Int
-    let date: Date
+    let date: String
 }
 
 

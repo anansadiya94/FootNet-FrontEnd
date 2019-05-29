@@ -156,16 +156,28 @@ class StaticDBManager {
     }
     
     
-    func modifyTextHomeCellsResponse(userId: Int, publicationId: Int) {
+    func removeTextHomeCellResponse(userId: Int, publicationId: Int) {
         StaticDBManager.textHomeCellsResponse.removeAll(where: {$0.userId == userId && $0.publicationId == publicationId})
     }
     
-    func modifyPhotoHomeCellsResponse(userId: Int, publicationId: Int) {
+    func addTextHomeCellResponse(userId: Int, publicationText: String, publicationDate: String) {
+        StaticDBManager.textHomeCellsResponse.append(TextHomeCellResponse(homeCellType: .Text, userId: userId, publicationId: 100, publicationText: publicationText, publicationDate: publicationDate, publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 0, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 0, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 0, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 0, reactionStatus: false))))
+    }
+    
+    func removePhotoHomeCellResponse(userId: Int, publicationId: Int) {
         StaticDBManager.photoHomeCellsResponse.removeAll(where: {$0.userId == userId && $0.publicationId == publicationId})
     }
     
-    func modifyOfferCellsResponse(userId: Int, publicationId: Int) {
+    func addPhotoHomeCellResponse(userId: Int, publicationPhoto: String, publicationDate: String) {
+        StaticDBManager.photoHomeCellsResponse.append(PhotoHomeCellResponse(homeCellType: .Photo, userId: userId, publicationId: 200, publicationPhoto: publicationPhoto, publicationDate: publicationDate, publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 0, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 0, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 0, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 0, reactionStatus: false))))
+    }
+    
+    func removeOfferCellResponse(userId: Int, publicationId: Int) {
         StaticDBManager.offerCellsResponse.removeAll(where: {$0.userId == userId && $0.offerId == publicationId})
+    }
+    
+    func addOfferCellResponse(userId: Int, publicationTitle: String, publicationText: String, publicationPhoto: String, publicationDate: String) {
+        StaticDBManager.offerCellsResponse.append(OfferCellResponse(homeCellType: .Offer, userId: userId, offerId: 300, offerTitle: publicationTitle, offerText: publicationText, offerPhoto: publicationPhoto, publicationDate: publicationDate, offerRequested: false, offerStatus: .NotRequested))
     }
 }
 

@@ -54,6 +54,7 @@
 		9E2DE5902272FEBF0093470F /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2DE58D2272FEBF0093470F /* img_0.png */; };
 		9E2DE5912272FEBF0093470F /* ball.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E2DE58E2272FEBF0093470F /* ball.json */; };
 		9E35D931222681B4008E8361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E35D930222681B4008E8361 /* LaunchScreen.storyboard */; };
+		9E38FA83229EF72000503187 /* DateToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38FA82229EF72000503187 /* DateToString.swift */; };
 		9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074B222593B200F8ED17 /* AppDelegate.swift */; };
 		9E4E074E222593B200F8ED17 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E074D222593B200F8ED17 /* SignInViewController.swift */; };
 		9E4FA3642231A2FA00094509 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA3632231A2FA00094509 /* Constants.swift */; };
@@ -246,6 +247,7 @@
 		9E2DE58D2272FEBF0093470F /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
 		9E2DE58E2272FEBF0093470F /* ball.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ball.json; sourceTree = "<group>"; };
 		9E35D930222681B4008E8361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E38FA82229EF72000503187 /* DateToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToString.swift; sourceTree = "<group>"; };
 		9E4E0748222593B200F8ED17 /* FootNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4E074B222593B200F8ED17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E4E074D222593B200F8ED17 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 				9E82E81C22720F2400267820 /* conf */,
 				9E82E81E22720F2400267820 /* TextViews */,
 				9E82E82022720F2400267820 /* ImageViews */,
+				9E38FA82229EF72000503187 /* DateToString.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1513,6 +1516,7 @@
 				9E82E83622720F2400267820 /* UIColorExtension.swift in Sources */,
 				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
 				9ECBB3322299991B00E93639 /* MyPhotoTableViewCell.swift in Sources */,
+				9E38FA83229EF72000503187 /* DateToString.swift in Sources */,
 				9E56289F22840EAE003B4FE2 /* DisplaySearchedUser.swift in Sources */,
 				9E813FAC2299AF660051220C /* DisplayContactCell.swift in Sources */,
 				9E82E83C22720F2400267820 /* SignInService.swift in Sources */,

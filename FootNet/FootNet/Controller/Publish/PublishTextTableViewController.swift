@@ -12,9 +12,11 @@ class PublishTextTableViewController: UITableViewController {
     @IBOutlet weak var textPublicationTextView: CustomTextView!
     
     var textPublication: String = ""
+    var userId = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
         createRightButton()
         configureUI()
@@ -35,7 +37,10 @@ class PublishTextTableViewController: UITableViewController {
     }
     
     @objc private func rightTapped(sender: UIBarButtonItem) {
-        //TODO: ADD OFFER AND BACK TO HOME
+        let date = Date()
+        StaticDBManager.shared.addTextHomeCellResponse(userId: userId, publicationText: textPublicationTextView.text, publicationDate: date.toString())
+        _ = self.navigationController?.popViewController(animated: true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }
 

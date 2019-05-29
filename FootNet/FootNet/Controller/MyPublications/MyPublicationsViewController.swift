@@ -141,21 +141,21 @@ class MyPublicationsViewController: UIViewController, UITableViewDelegate, UITab
         }
         return cell
     }
-    
-    //TODO: REMOVE FROM DB
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch myPublicationsCells[indexPath.row].homeCellType {
         case HomeCellType.Text:
-            //DELETE FROM DB
             let cell = tableView.cellForRow(at: indexPath) as! MyTextTableViewCell
             let publication = displayTextHomeCells.filter({$0.publicationId == cell.publicationId}).first
             StaticDBManager.shared.modifyTextHomeCellsResponse(userId: userId, publicationId: publication!.publicationId)
         case HomeCellType.Photo:
-            //DELETE FROM DB
             let cell = tableView.cellForRow(at: indexPath) as! MyPhotoTableViewCell
+            let publication = displayPhotoHomeCells.filter({$0.publicationId == cell.publicationId}).first
+            StaticDBManager.shared.modifyPhotoHomeCellsResponse(userId: userId, publicationId: publication!.publicationId)
         case HomeCellType.Offer:
-            //DELETE FROM DB
             let cell = tableView.cellForRow(at: indexPath) as! MyOfferTableViewCell
+            let publication = displayOfferCells.filter({$0.offerId == cell.publicationId}).first
+            StaticDBManager.shared.modifyOfferCellsResponse(userId: userId, publicationId: publication!.offerId)
         }
         if editingStyle == UITableViewCell.EditingStyle.delete {
             myPublicationsCells.remove(at: indexPath.row)

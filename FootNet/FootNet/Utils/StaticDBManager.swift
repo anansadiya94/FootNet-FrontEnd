@@ -38,7 +38,8 @@ class StaticDBManager {
     
     static var offerCellsResponse = [
         OfferCellResponse(homeCellType: .Offer, userId: 3, offerId: 1, offerTitle: "Se busca equipo en BCN", offerText: "Hola, busco un equipo en el centro", offerPhoto: "offerPhoto", publicationDate: "16-05-2019 23:59", offerRequested: false, offerStatus: .NotRequested),
-        OfferCellResponse(homeCellType: .Offer, userId: 5, offerId: 2, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy delantero, y busco un equipo en el centro de sabadell!", offerPhoto: "offerPhoto", publicationDate: "01-05-2019 23:59", offerRequested: false, offerStatus: .NotRequested)
+        OfferCellResponse(homeCellType: .Offer, userId: 5, offerId: 2, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy delantero, y busco un equipo en el centro de sabadell!", offerPhoto: "offerPhoto", publicationDate: "01-05-2019 23:59", offerRequested: false, offerStatus: .NotRequested),
+        OfferCellResponse(homeCellType: .Offer, userId: 13, offerId: 3, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy delantero, y busco un equipo en el centro de sabadell!", offerPhoto: "offerPhoto", publicationDate: "01-05-2019 23:59", offerRequested: false, offerStatus: .NotRequested)
     ]
     
     static var photoHomeCellsResponse = [
@@ -157,6 +158,14 @@ class StaticDBManager {
     
     func modifyTextHomeCellsResponse(userId: Int, publicationId: Int) {
         StaticDBManager.textHomeCellsResponse.removeAll(where: {$0.userId == userId && $0.publicationId == publicationId})
+    }
+    
+    func modifyPhotoHomeCellsResponse(userId: Int, publicationId: Int) {
+        StaticDBManager.photoHomeCellsResponse.removeAll(where: {$0.userId == userId && $0.publicationId == publicationId})
+    }
+    
+    func modifyOfferCellsResponse(userId: Int, publicationId: Int) {
+        StaticDBManager.offerCellsResponse.removeAll(where: {$0.userId == userId && $0.offerId == publicationId})
     }
 }
 

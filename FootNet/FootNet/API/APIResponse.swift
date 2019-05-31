@@ -61,3 +61,13 @@ enum OfferStatus {
     case Rejected
 }
 
+enum NotificationCellType {
+    case Text
+    case Photo
+    case Offer
+}
+
+struct NotificationCellResponse {
+    let notificationCellType: NotificationCellType
+    let userId: Int
+}

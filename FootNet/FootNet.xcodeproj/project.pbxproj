@@ -182,7 +182,6 @@
 		9ECF074322521DE30082FC1F /* OffersStatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074222521DE30082FC1F /* OffersStatusData.swift */; };
 		9ECF07462252246D0082FC1F /* OffersStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF07452252246D0082FC1F /* OffersStatusTableViewCell.swift */; };
 		9ECF074922523FB70082FC1F /* DisplayNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074822523FB70082FC1F /* DisplayNotificationCell.swift */; };
-		9ECF074C22523FCE0082FC1F /* NotificationsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074B22523FCE0082FC1F /* NotificationsData.swift */; };
 		9ECF074F225242600082FC1F /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF074E225242600082FC1F /* NotificationsTableViewCell.swift */; };
 		9ED9BF34227848C9004F4D13 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9BF33227848C9004F4D13 /* OfferTableViewCell.swift */; };
 		9ED9BF36227848F3004F4D13 /* OfferCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */; };
@@ -368,7 +367,6 @@
 		9ECF074222521DE30082FC1F /* OffersStatusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersStatusData.swift; sourceTree = "<group>"; };
 		9ECF07452252246D0082FC1F /* OffersStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersStatusTableViewCell.swift; sourceTree = "<group>"; };
 		9ECF074822523FB70082FC1F /* DisplayNotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNotificationCell.swift; sourceTree = "<group>"; };
-		9ECF074B22523FCE0082FC1F /* NotificationsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsData.swift; sourceTree = "<group>"; };
 		9ECF074E225242600082FC1F /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		9ED9BF33227848C9004F4D13 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
 		9ED9BF35227848F3004F4D13 /* OfferCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCustomCell.xib; sourceTree = "<group>"; };
@@ -509,7 +507,6 @@
 		9E4E075D222593CE00F8ED17 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9ECF074A22523FC80082FC1F /* Notifications */,
 				9ECF074122521DD50082FC1F /* OffersStatus */,
 				9EB24EAA2227F542004B0C66 /* SignUp */,
 			);
@@ -1027,14 +1024,6 @@
 				9ECF07452252246D0082FC1F /* OffersStatusTableViewCell.swift */,
 			);
 			path = OffersStatus;
-			sourceTree = "<group>";
-		};
-		9ECF074A22523FC80082FC1F /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				9ECF074B22523FCE0082FC1F /* NotificationsData.swift */,
-			);
-			path = Notifications;
 			sourceTree = "<group>";
 		};
 		9ECF074D2252424C0082FC1F /* Notifications */ = {
@@ -1574,7 +1563,6 @@
 				9E9FBAB72292D94300786A78 /* DisplayOfferDetail.swift in Sources */,
 				9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */,
 				9EFEA4B222422D99002C9EB0 /* MainTabBarController.swift in Sources */,
-				9ECF074C22523FCE0082FC1F /* NotificationsData.swift in Sources */,
 				9ECBB32A2299935300E93639 /* MyPublicationsViewController.swift in Sources */,
 				9EB3A6CD222D7909002F244E /* UserProfileModel.swift in Sources */,
 				9E1493E6228982E60035C6DD /* Common.swift in Sources */,

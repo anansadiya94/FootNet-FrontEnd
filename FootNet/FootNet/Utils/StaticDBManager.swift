@@ -47,6 +47,22 @@ class StaticDBManager {
         PhotoHomeCellResponse(homeCellType: .Text, userId: 12, publicationId: 7, publicationPhoto: "photoPub2",  publicationDate: "02-05-2019 14:59", publicationReaction: PublicationReaction(firstReactionCount: Reaction(reactionCount: 13, reactionStatus: false), secondReactionCount: Reaction(reactionCount: 81, reactionStatus: false), thirdReactionCount: Reaction(reactionCount: 12, reactionStatus: false), fourthReactionCount: Reaction(reactionCount: 81, reactionStatus: false)))
     ]
     
+    static var notificationCellsResponse = [
+        NotificationCellResponse(notificationCellType: .Offer, userId: 1),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 1),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 3),
+        NotificationCellResponse(notificationCellType: .Text, userId: 4),
+        NotificationCellResponse(notificationCellType: .Offer, userId: 5),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 2),
+        NotificationCellResponse(notificationCellType: .Offer, userId: 3),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 2),
+        NotificationCellResponse(notificationCellType: .Text, userId: 7),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 9),
+        NotificationCellResponse(notificationCellType: .Text, userId: 7),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 2)
+        
+    ]
+    
     static var friends = [
         Relationship(followerId: 13, followingId: 1),
         Relationship(followerId: 13, followingId: 2),
@@ -155,7 +171,6 @@ class StaticDBManager {
         StaticDBManager.contacts.removeAll(where: {$0.followerId == userId && $0.followingId == contactId})
     }
     
-    
     func removeTextHomeCellResponse(userId: Int, publicationId: Int) {
         StaticDBManager.textHomeCellsResponse.removeAll(where: {$0.userId == userId && $0.publicationId == publicationId})
     }
@@ -178,6 +193,10 @@ class StaticDBManager {
     
     func addOfferCellResponse(userId: Int, publicationTitle: String, publicationText: String, publicationPhoto: String, publicationDate: String) {
         StaticDBManager.offerCellsResponse.append(OfferCellResponse(homeCellType: .Offer, userId: userId, offerId: 300, offerTitle: publicationTitle, offerText: publicationText, offerPhoto: publicationPhoto, publicationDate: publicationDate, offerRequested: false, offerStatus: .NotRequested))
+    }
+    
+    func requestNotifications() -> [NotificationCellResponse] {
+        return StaticDBManager.notificationCellsResponse
     }
 }
 

@@ -179,8 +179,9 @@
 "rejectedOffers_detail"="has rejected your request to the offer";
 
 //Notifications
-"notificationsPost_detail"="has reacted to your post";
-"notificationsPhoto_detail"="has reacted to your photo";
+"notificationsOffer_detail"=" has requested your offer";
+"notificationsPost_detail"=" has reacted to your text post";
+"notificationsPhoto_detail"=" has reacted to your photo post";
 
 //Search
 "follow_button"="Follow";

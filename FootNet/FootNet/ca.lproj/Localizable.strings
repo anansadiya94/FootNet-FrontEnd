@@ -179,8 +179,9 @@
 "rejectedOffers_detail"="ha rebutjat la teva petició a l'oferta";
 
 //Notifications
-"notificationsPost_detail"="ha reaccionat al teu post";
-"notificationsPhoto_detail"="ha reaccionat a la teva foto";
+"notificationsOffer_detail"=" ha sol·licitat la teva oferta";
+"notificationsPost_detail"=" ha reaccionat al teu post";
+"notificationsPhoto_detail"=" ha reaccionat a la teva foto";
 
 //Search
 "follow_button"="Seguir";

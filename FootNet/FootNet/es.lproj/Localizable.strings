@@ -177,8 +177,9 @@
 "rejectedOffers_detail"="ha rechazado tu petición a la oferta";
 
 //Notifications
-"notificationsPost_detail"="ha reaccionado a tu post";
-"notificationsPhoto_detail"="ha reaccionado a tu foto";
+"notificationsOffer_detail"=" ha solicitado tu oferta.";
+"notificationsPost_detail"=" ha reaccionado a tu post.";
+"notificationsPhoto_detail"=" ha reaccionado a tu foto.";
 
 //Search
 "follow_button"="Seguir";

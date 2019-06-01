@@ -472,3 +472,7 @@
 
 //publish photo
 "publishPhoto_photoLabel"="Publication Photo";
+
+//Edit profile
+"editPhoto_photoLabel"="Edit photo";
+"editProfileChanePhoto_buttonText"="Click here to change your profile photo";

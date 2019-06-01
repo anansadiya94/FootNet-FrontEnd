@@ -20,9 +20,9 @@ struct User {
     let nationality: String
     let location: String
     let actualClub: String
-    let photo: String
-    let bio: String
-    let record: String
+    var photo: String
+    var bio: String
+    var record: String
     let favoritePosition: String
     let preferredPositions: String
     let weight: String

@@ -154,7 +154,7 @@
 "followLabel"="Sígueme en:";
 
 //Left home
-"myPofileLabel"="Mi perfil";
+"myProfileLabel"="Mi perfil";
 "editProfileLabel"="Editar perfil";
 "myPublicationsLabel"="Mis publicaciones";
 "myFriendsLabel"="Mis amigos";
@@ -471,3 +471,6 @@
 //publish photo
 "publishPhoto_photoLabel"="La foto de la publicació";
 
+//Edit profile
+"editPhoto_photoLabel"="Editar foto";
+"editProfileChanePhoto_buttonText"="Clica aquí para cambiar tu foto de perfil";

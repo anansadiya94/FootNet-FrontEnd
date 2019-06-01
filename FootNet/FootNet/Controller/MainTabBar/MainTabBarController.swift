@@ -76,9 +76,9 @@ class MainTabBarController: UITabBarController {
     @objc func editProfileTapped() {
         //TODO - PUSH Edit profile
         let editProfileStoryboard = UIStoryboard(name: "EditProfile", bundle: nil)
-        let editProfileViewController = editProfileStoryboard.instantiateViewController(withIdentifier: "EditProfleViewController")
+        let editProfileTableViewController = editProfileStoryboard.instantiateViewController(withIdentifier: "EditProfileTableViewController")
         title = " "
-        navigationController?.pushViewController(editProfileViewController, animated: true)
+        navigationController?.pushViewController(editProfileTableViewController, animated: true)
     }
     
     @objc func myPublicationsTapped() {

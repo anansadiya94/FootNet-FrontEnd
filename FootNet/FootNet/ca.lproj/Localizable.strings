@@ -471,3 +471,8 @@
 
 //publish photo
 "publishPhoto_photoLabel"="La foto de la publicació";
+
+//Edit profile
+"editPhoto_photoLabel"="Editar foto";
+"editProfileChanePhoto_buttonText"="Clica aquí per canviar la teva foto de perfil";
+

@@ -199,5 +199,17 @@ class StaticDBManager {
     func requestNotifications() -> [NotificationCellResponse] {
         return StaticDBManager.notificationCellsResponse
     }
+    
+    func modifyUser(userId: Int, userPhoto: String, userBio: String, userRecord: String) {
+        StaticDBManager.users = StaticDBManager.users.map {
+            var user = $0
+            if $0.id == userId {
+                user.photo = userPhoto
+                user.bio = userBio
+                user.record = userRecord
+            }
+            return user
+        }
+    }
 }
 

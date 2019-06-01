@@ -40,10 +40,6 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     private func getOffersStatusData() {
-//        acceptedOffersData = OffersStatusData.getAcceptedOffersData()
-//        pendingOffersData = OffersStatusData.getPendingOffersData()
-//        rejectedOffersData = OffersStatusData.getRejectedOffersData()
-        
         for offerCellResponse in StaticDBManager.shared.requestOffers() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == offerCellResponse.userId}).first {
                 switch offerCellResponse.offerStatus {
@@ -54,7 +50,7 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
                 case .Pending:
                     pendingDisplayOfferStatusCell.append(DisplayOfferStatusCell(userImage: UIImage(named: user.photo)!, offerStatusDetail: user.fullName + "pendingOffers_detail".localize() + offerCellResponse.offerTitle + "."))
                 case .Rejected:
-                    rejectedDisplayOfferStatusCell.append(DisplayOfferStatusCell(userImage: UIImage(named: user.photo)!, offerStatusDetail: user.fullName + "rejectedOffers_detail".localize() + offerCellResponse.offerTitle + ".")) 
+                    rejectedDisplayOfferStatusCell.append(DisplayOfferStatusCell(userImage: UIImage(named: user.photo)!, offerStatusDetail: user.fullName + "rejectedOffers_detail".localize() + offerCellResponse.offerTitle + "."))
                 }
             }
         }

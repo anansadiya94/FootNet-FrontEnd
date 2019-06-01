@@ -35,6 +35,7 @@ class EditProfileTableViewController: UITableViewController {
         
         //create lottie animation Spinner
         lottieAnimation.createLottieAnimation(view: view)
+        
         configureUI()
     }
     

@@ -14,6 +14,7 @@ class PublishPhotoTableViewController: UITableViewController {
     @IBOutlet weak var photoPublicationChangePhotoButton: CustomChoosePhotoButton!
     
     let imagePicker = UIImagePickerController()
+    let lottieAnimation = LottieAnimation()
     var chosenImage: UIImage?
     var userId = 0
     
@@ -29,6 +30,9 @@ class PublishPhotoTableViewController: UITableViewController {
         
         //Default image
         chosenImage = #imageLiteral(resourceName: "offerPhoto")
+        
+        //create lottie animation Spinner
+        lottieAnimation.createLottieAnimation(view: view)
     }
     
     private func createRightButton() {
@@ -47,9 +51,12 @@ class PublishPhotoTableViewController: UITableViewController {
     
     @objc private func rightTapped(sender: UIBarButtonItem) {
         let date = Date()
-        StaticDBManager.shared.addPhotoHomeCellResponse(userId: userId, publicationPhoto: "joanet", publicationDate: date.toString())
-        _ = self.navigationController?.popViewController(animated: true)
-        _ = self.navigationController?.popViewController(animated: true)
+        lottieAnimation.startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            StaticDBManager.shared.addPhotoHomeCellResponse(userId: self.userId, publicationPhoto: "joanet", publicationDate: date.toString())
+            _ = self.navigationController?.popViewController(animated: true)
+            _ = self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func changePhotoTapped(_ sender: UIButton) {

@@ -16,6 +16,7 @@ class PublishOfferTableViewController: UITableViewController {
     @IBOutlet weak var offerPublicationChangePhotoButton: CustomChoosePhotoButton!
     
     let imagePicker = UIImagePickerController()
+    let lottieAnimation = LottieAnimation()
     var offerTitle: String = ""
     var offerText: String = ""
     var chosenImage: UIImage?
@@ -31,8 +32,8 @@ class PublishOfferTableViewController: UITableViewController {
         //Image View Picker
         imagePicker.delegate = self
         
-        //Default image
-        chosenImage = #imageLiteral(resourceName: "offerPhoto")
+        //create lottie animation Spinner
+        lottieAnimation.createLottieAnimation(view: view)
     }
     
     private func createRightButton() {
@@ -57,9 +58,12 @@ class PublishOfferTableViewController: UITableViewController {
     
     @objc private func rightTapped(sender: UIBarButtonItem) {
         let date = Date()
-        StaticDBManager.shared.addOfferCellResponse(userId: userId, publicationTitle: offerPublicationTitleTextView.text, publicationText: offerPublicationTextTextView.text, publicationPhoto: "joanet", publicationDate: date.toString())
-        _ = self.navigationController?.popViewController(animated: true)
-        _ = self.navigationController?.popViewController(animated: true)
+        lottieAnimation.startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            StaticDBManager.shared.addOfferCellResponse(userId: self.userId, publicationTitle: self.offerPublicationTitleTextView.text, publicationText: self.offerPublicationTextTextView.text, publicationPhoto: "offerPhoto", publicationDate: date.toString())
+            _ = self.navigationController?.popViewController(animated: true)
+            _ = self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func choosePhotoTapped(_ sender: UIButton) {

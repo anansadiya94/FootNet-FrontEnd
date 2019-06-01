@@ -476,3 +476,10 @@
 //Edit profile
 "editPhoto_photoLabel"="Edit photo";
 "editProfileChanePhoto_buttonText"="Click here to change your profile photo";
+
+//Forget password
+"recoverPassword_label"="Enter your email address, please:";
+"recoverPassword_button"="Recover password";
+"recoverPassword_subject"=" [EN] Recover password";
+"recoverPassword_content1"="Hi, \n my email is: ";
+"recoverPassword_content2"="\nI'd like to recover my password. \nThanks";

@@ -476,3 +476,9 @@
 "editPhoto_photoLabel"="Editar foto";
 "editProfileChanePhoto_buttonText"="Clica aquí per canviar la teva foto de perfil";
 
+//Forget password
+"recoverPassword_label"="Introduce tu dirección de correo electrónico, por favor:";
+"recoverPassword_button"="Recuperar contrasenya";
+"recoverPassword_subject"=" [CA] Recuperar contrasenya";
+"recoverPassword_content1"="Hola, \n El meu correu és:";
+"recoverPassword_content2"="\nM'agradaria recuperar la meva contrasenya. \nGràcies!";

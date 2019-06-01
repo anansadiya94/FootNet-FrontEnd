@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class RightHomeViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class RightHomeViewController: UIViewController {
     @IBOutlet weak var workLabel: UILabel!
     @IBOutlet weak var doubtEmailMessageLabel: UILabel!
     @IBOutlet weak var donateEmailMessageLabel: UILabel!
@@ -45,13 +45,6 @@ class RightHomeViewController: UIViewController, MFMailComposeViewControllerDele
         self.present(composeVC, animated: true, completion: nil)
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        // Check the result or perform other tasks.
-        
-        // Dismiss the mail compose view controller.
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func linkedInButton(_ sender: Any) {
         let username =  "anan-sadiya-26071994"
         let webURL = URL(string: "https://www.linkedin.com/in/\(username)/")!
@@ -76,5 +69,11 @@ class RightHomeViewController: UIViewController, MFMailComposeViewControllerDele
             let webURL = URL(string: "https://instagram.com/\(username)")!
             application.open(webURL)
         }
+    }
+}
+
+extension RightHomeViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

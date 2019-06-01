@@ -19,7 +19,7 @@ class ValidateSignInForm {
         return signInFormErrors
     }
     
-    private func checkEmail(_ email: String?) -> String {
+    func checkEmail(_ email: String?) -> String {
         if email == "" {
             return "emptyEmail_error".localize()
         }

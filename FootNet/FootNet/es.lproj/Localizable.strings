@@ -474,3 +474,10 @@
 //Edit profile
 "editPhoto_photoLabel"="Editar foto";
 "editProfileChanePhoto_buttonText"="Clica aquí para cambiar tu foto de perfil";
+
+//Forget password
+"recoverPassword_label"="Introduce tu dirección de correo electrónico, por favor:";
+"recoverPassword_button"="Recuperar contraseña";
+"recoverPassword_subject"=" [ES] Recuperar contraseña";
+"recoverPassword_content1"="Hola, \n mi correo es: ";
+"recoverPassword_content2"="\nMe gustaría recuperar mi contraseña. \n¡Gracias!";

@@ -70,6 +70,7 @@
 		9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DEE84224B986A0091CECB /* SignInUITests.swift */; };
 		9E6C4051223FADFE00265F22 /* AppNavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */; };
 		9E79C38922391F9700A9C292 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E79C38822391F9700A9C292 /* SignIn.storyboard */; };
+		9E7C582822A2E0ED001A49C1 /* CustomRecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7C582722A2E0ED001A49C1 /* CustomRecoverPassword.swift */; };
 		9E7CBACB226E151300F84197 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */; };
 		9E813FA22299A22F0051220C /* MyFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */; };
 		9E813FA32299A4870051220C /* MyFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */; };
@@ -267,6 +268,7 @@
 		9E68047D228497BD0039F808 /* TextCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCustomCell.xib; sourceTree = "<group>"; };
 		9E6C4050223FADFE00265F22 /* AppNavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawer.swift; sourceTree = "<group>"; };
 		9E79C38822391F9700A9C292 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		9E7C582722A2E0ED001A49C1 /* CustomRecoverPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecoverPassword.swift; sourceTree = "<group>"; };
 		9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		9E813FA12299A22F0051220C /* MyFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendTableViewCell.swift; sourceTree = "<group>"; };
 		9E813FA52299AD170051220C /* MyContacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyContacts.storyboard; sourceTree = "<group>"; };
@@ -696,6 +698,7 @@
 				9EFE51D122799E14002DB0BB /* CustomFilterButton.swift */,
 				9EFE51D32279A441002DB0BB /* CustomSeeMoreButton.swift */,
 				9EDD6757227CA6230082074C /* CustomPublishButton.swift */,
+				9E7C582722A2E0ED001A49C1 /* CustomRecoverPassword.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1478,6 +1481,7 @@
 				9EC4A3932243F8CD003030ED /* LeftHomeTableViewController.swift in Sources */,
 				9EDD673D227C8F360082074C /* DependencyManager.swift in Sources */,
 				9EE37003228CB02800CBEF53 /* DisplayPhotoHomeCell.swift in Sources */,
+				9E7C582822A2E0ED001A49C1 /* CustomRecoverPassword.swift in Sources */,
 				9E1B1368228F2021003908AE /* ProfileViewController.swift in Sources */,
 				9E82E82C22720F2400267820 /* Spinner.swift in Sources */,
 				9E93571E224111940036F23A /* SearchViewController.swift in Sources */,

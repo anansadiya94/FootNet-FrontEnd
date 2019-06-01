@@ -9,9 +9,9 @@
 import UIKit
 
 class OffersStatusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var acceptedOffersData = [DisplayOfferStatusCell]()
-    var pendingOffersData = [DisplayOfferStatusCell]()
-    var rejectedOffersData = [DisplayOfferStatusCell]()
+    var acceptedDisplayOfferStatusCell = [DisplayOfferStatusCell]()
+    var pendingDisplayOfferStatusCell = [DisplayOfferStatusCell]()
+    var rejectedDisplayOfferStatusCell = [DisplayOfferStatusCell]()
     private var dataSource: [DisplayOfferStatusCell]?
 
     @IBOutlet weak var scSegment: UISegmentedControl!
@@ -35,24 +35,39 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
         scSegment.setTitle("pendingOffers_scTitle".localize(), forSegmentAt: 1)
         scSegment.setTitle("rejectedOffers_scTitle".localize(), forSegmentAt: 2)
         scSegment.selectedSegmentIndex = 1
-        dataSource = pendingOffersData
+        dataSource = pendingDisplayOfferStatusCell
         offersStatusTableView.reloadData()
     }
     
     private func getOffersStatusData() {
-        acceptedOffersData = OffersStatusData.getAcceptedOffersData()
-        pendingOffersData = OffersStatusData.getPendingOffersData()
-        rejectedOffersData = OffersStatusData.getRejectedOffersData()
+//        acceptedOffersData = OffersStatusData.getAcceptedOffersData()
+//        pendingOffersData = OffersStatusData.getPendingOffersData()
+//        rejectedOffersData = OffersStatusData.getRejectedOffersData()
+        
+        for offerCellResponse in StaticDBManager.shared.requestOffers() {
+            if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == offerCellResponse.userId}).first {
+                switch offerCellResponse.offerStatus {
+                case .NotRequested:
+                    break
+                case .Accepted:
+                    acceptedDisplayOfferStatusCell.append(DisplayOfferStatusCell(userImage: UIImage(named: user.photo)!, offerStatusDetail: user.fullName + "acceptedOffers_detail".localize() + offerCellResponse.offerTitle + "."))
+                case .Pending:
+                    pendingDisplayOfferStatusCell.append(DisplayOfferStatusCell(userImage: UIImage(named: user.photo)!, offerStatusDetail: user.fullName + "pendingOffers_detail".localize() + offerCellResponse.offerTitle + "."))
+                case .Rejected:
+                    rejectedDisplayOfferStatusCell.append(DisplayOfferStatusCell(userImage: UIImage(named: user.photo)!, offerStatusDetail: user.fullName + "rejectedOffers_detail".localize() + offerCellResponse.offerTitle + ".")) 
+                }
+            }
+        }
     }
     
     @IBAction func scSegmentTapped(_ sender: Any) {
         switch scSegment.selectedSegmentIndex {
         case 0:
-            dataSource = acceptedOffersData
+            dataSource = acceptedDisplayOfferStatusCell
         case 1:
-            dataSource = pendingOffersData
+            dataSource = pendingDisplayOfferStatusCell
         case 2:
-            dataSource = rejectedOffersData
+            dataSource = rejectedDisplayOfferStatusCell
         default:
             break
         }

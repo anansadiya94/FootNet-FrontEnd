@@ -37,7 +37,7 @@ class StaticDBManager {
     ]
     
     static var offerCellsResponse = [
-        OfferCellResponse(homeCellType: .Offer, userId: 3, offerId: 1, offerTitle: "Se busca equipo en BCN", offerText: "Hola, busco un equipo en el centro", offerPhoto: "offerPhoto", publicationDate: "16-05-2019 23:59", offerRequested: true, offerStatus: .Accepted),
+        OfferCellResponse(homeCellType: .Offer, userId: 3, offerId: 1, offerTitle: "Se busca delantero para segunda catalana", offerText: "Hola, soy el directos deportivo del Prat. Nos falta un delantero centro para la siguiente temporada. ¿Estás interesado? solicita la oferta y me pondré en contacto contigo!", offerPhoto: "offerPhoto", publicationDate: "16-05-2019 23:59", offerRequested: true, offerStatus: .Accepted),
         OfferCellResponse(homeCellType: .Offer, userId: 5, offerId: 2, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy delantero, y busco un equipo en el centro de sabadell!", offerPhoto: "offerPhoto", publicationDate: "10-05-2019 23:59", offerRequested: true, offerStatus: .Pending),
         OfferCellResponse(homeCellType: .Offer, userId: 7, offerId: 3, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy delantero, y busco un equipo en el centro de sabadell!", offerPhoto: "offerPhoto", publicationDate: "14-05-2019 23:59", offerRequested: true, offerStatus: .Rejected),
         OfferCellResponse(homeCellType: .Offer, userId: 7, offerId: 4, offerTitle: "Se busca delantero para el Barça", offerText: "Hola, Se busca delantero para el Barça ya que se va mi amigo Suarez", offerPhoto: "offerPhoto", publicationDate: "16-05-2019 23:59", offerRequested: true, offerStatus: .NotRequested)

@@ -190,7 +190,7 @@
 "seeMore_button"="Ver más";
 
 //Offer detail
-"request_button"="Solicitud";
+"request_button"="Solicitar";
 "requested_button"="Solicitado";
 
 //Countries
@@ -471,7 +471,7 @@
 "publishText_title"="Editar para agregar tu texto de publicación";
 
 //publish photo
-"publishPhoto_photoLabel"="La foto de la publicació";
+"publishPhoto_photoLabel"="La foto de la publicación";
 
 //Edit profile
 "editPhoto_photoLabel"="Editar foto";

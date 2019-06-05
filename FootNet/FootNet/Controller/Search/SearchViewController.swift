@@ -9,14 +9,15 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var resultsTableView: UITableView!
+    
+    let lottieAnimation = LottieAnimation()
     var displayUsers = [DisplaySearchedUser]()
     var filteredDisplayUsers = [DisplaySearchedUser]()
     var searching: Bool = false
     var searchTextString: String = ""
     var userId = 0
-    
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var resultsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class SearchViewController: UIViewController {
         setTabBarItem()
         setSearchBar()
         generateDisplayUsers()
+        //create lottie animation Spinner
+        lottieAnimation.createLottieAnimation(view: view)
     }
 
     private func setTabBarItem() {
@@ -50,18 +53,22 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func customFollowButtonTapped(_ sender: CustomFollowButton) {
-        displayUsers = displayUsers.map {
-            var displayUser = $0
-            if $0.id == sender.tag {
-                displayUser.amIFollowing = !displayUser.amIFollowing
-                StaticDBManager.shared.modifyFriends(followerId: userId, followingId: displayUser.id, followingStatus: displayUser.amIFollowing)
+        lottieAnimation.startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            self.lottieAnimation.stopLottieAnimation()
+            self.displayUsers = self.displayUsers.map {
+                var displayUser = $0
+                if $0.id == sender.tag {
+                    displayUser.amIFollowing = !displayUser.amIFollowing
+                    StaticDBManager.shared.modifyFriends(followerId: self.userId, followingId: displayUser.id, followingStatus: displayUser.amIFollowing)
+                }
+                return displayUser
             }
-            return displayUser
+            if self.searching {
+                self.filteredDisplayUsers = self.generatefilteredDisplayUsers(self.displayUsers, self.searchTextString)
+            }
+            self.resultsTableView.reloadData()
         }
-        if searching {
-            filteredDisplayUsers = generatefilteredDisplayUsers(displayUsers, searchTextString)
-        }
-        resultsTableView.reloadData()
     }
     
     func generatefilteredDisplayUsers(_ displayUsers: [DisplaySearchedUser], _ searchText: String) -> [DisplaySearchedUser]{

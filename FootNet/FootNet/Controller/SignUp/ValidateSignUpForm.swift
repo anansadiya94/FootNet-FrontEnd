@@ -65,22 +65,6 @@ class ValidateSignUpForm {
     }
     
     private func checkPhone(_ phone: String?) -> String {
-//        if phone == nil {
-//            return "emptyPhone_error".localize()
-//        }
-//        let text = phone!
-//        do {
-//            let regex = try NSRegularExpression(pattern: "^[0-9+#*]{7,16}$", options: .caseInsensitive)
-//            let textRange = NSRange(location: 0, length: text.count)
-//            if regex.firstMatch(in: text, options: [], range: textRange) != nil {
-//                return ""
-//            } else {
-//                return "invalidPhone_error".localize()
-//            }
-//        } catch  {
-//            return "invalidPhone_error".localize()
-//        }
-        //2
         guard phone != nil else { return "emptyPhone_error".localize() }
         let text = phone!
         let regEx = "^\\s*(?:\\+?(\\d{1,3}))?([-. (]*(\\d{3})[-. )]*)?((\\d{3})[-. ]*(\\d{2,4})(?:[-.x ]*(\\d+))?)\\s*$"
@@ -182,7 +166,7 @@ class ValidateSignUpForm {
     
     private func checkClubActual(_ clubActual: String?, _ profileType: ProfileType) -> String {
         switch profileType {
-        case .Team:
+        case .Team, .Fan:
             return ""
         default:
             if clubActual == nil {

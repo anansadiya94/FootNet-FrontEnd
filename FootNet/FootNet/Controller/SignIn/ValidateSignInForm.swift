@@ -42,9 +42,4 @@ class ValidateSignInForm {
         }
         return "invalidPassword_error".localize()
     }
-    
-    
-//    func isEmailValid(email : String) -> Bool {
-//        return NSPredicate(format:"SELF MATCHES %@", mailRegexp).evaluate(with: email)
-//    }
 }

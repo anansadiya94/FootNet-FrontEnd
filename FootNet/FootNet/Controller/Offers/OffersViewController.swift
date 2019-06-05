@@ -23,6 +23,11 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
         displayOfferCells = generateDisplayOfferCells()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
+    
     func generateDisplayOfferCells() -> [DisplayOffercell] {
         for offerCellResponse in StaticDBManager.shared.requestOffers() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == offerCellResponse.userId}).first {

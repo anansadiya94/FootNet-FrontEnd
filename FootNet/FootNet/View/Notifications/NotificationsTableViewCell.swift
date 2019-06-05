@@ -11,6 +11,7 @@ import UIKit
 class NotificationsTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: CustomImageView!
     @IBOutlet weak var notificationDetailLabel: CustomContentLabel!
+    @IBOutlet weak var rightArrowImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

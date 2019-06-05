@@ -65,10 +65,12 @@ class MainTabBarController: UITabBarController {
     }
     
     @objc func myProfileTapped() {
-        //TODO - GET -> Profile detail
         //TODO - PUSH My profile
+        let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
         let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        profileViewController.userId = userId!
+        profileViewController.viewProfileType = .MyProfile
         title = " "
         navigationController?.pushViewController(profileViewController, animated: true)
     }

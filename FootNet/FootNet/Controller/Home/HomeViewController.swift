@@ -30,6 +30,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         displayOfferCells = generateDisplayOfferCells()
         homeCells = generateHomeCells()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
 
     func generateDisplayTextHomeCells() -> [DisplayTextHomeCell] {
         for textHomeCellResponse in StaticDBManager.shared.requestTextPublications() {

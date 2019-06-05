@@ -24,7 +24,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var favoritePositionLabel: CustomContentLabel!
     @IBOutlet weak var bioLabel: CustomContentLabel!
     @IBOutlet weak var recordLabel: CustomContentLabel!
+    @IBOutlet weak var requestView: UIStackView!
+    @IBOutlet weak var acceptRequestButton: CustomAcceptButton!
+    @IBOutlet weak var rejectRequestButton: CustomRejectButton!
     
+    let lottieAnimation = LottieAnimation()
+    var userId: Int = 0
+    var viewProfileType: ViewProfileType = .MyProfile
     var userPhoto: String = ""
     var userFullName: String = ""
     var userProfileType: ProfileType = .Player
@@ -47,14 +53,20 @@ class ProfileViewController: UIViewController {
         setTabBarItem()
         generateUserInfo()
         configureUI()
+        //create lottie animation Spinner
+        lottieAnimation.createLottieAnimation(view: view)
     }
     
     private func setTabBarItem() {
-        title = "myProfileLabel".localize()
+        switch viewProfileType {
+        case .MyProfile:
+            title = "myProfileLabel".localize()
+        default:
+            title = ""
+        }
     }
     
     private func generateUserInfo() {
-        let userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)
         if let user = StaticDBManager.shared.requestUsers().filter({$0.id == userId}).first {
             userPhoto = user.photo
             userFullName = user.name + " " + user.surname
@@ -90,6 +102,7 @@ class ProfileViewController: UIViewController {
         configureUserFavoritePosition()
         configureUserBio()
         configureUserRecord()
+        configureRequestView()
     }
     
     private func configureUserPhoto() {
@@ -164,6 +177,35 @@ class ProfileViewController: UIViewController {
             return "team_label".localize()
         case .Fan:
             return "fan_label".localize()
+        }
+    }
+    
+    private func configureRequestView() {
+        switch viewProfileType {
+        case .MyProfile:
+            requestView.isHidden = true
+        case .RequestedProfile:
+            requestView.isHidden = false
+        }
+        
+        acceptRequestButton.setTitle("Accept", for: .normal)
+        rejectRequestButton.setTitle("Reject", for: .normal)
+    }
+    
+    
+    @IBAction func acceptRequestButtonTapped(_ sender: Any) {
+        lottieAnimation.startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            self.lottieAnimation.stopLottieAnimation()
+            _ = self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    @IBAction func rejectRequestButtonTapepd(_ sender: Any) {
+        lottieAnimation.startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            self.lottieAnimation.stopLottieAnimation()
+            _ = self.navigationController?.popViewController(animated: true)
         }
     }
 }

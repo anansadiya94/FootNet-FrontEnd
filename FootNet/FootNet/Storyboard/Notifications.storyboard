@@ -43,12 +43,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="65W-Hz-VGT">
+                                                    <rect key="frame" x="364" y="-7" width="50" height="50.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="HgH-RO-4ae"/>
+                                                        <constraint firstAttribute="height" constant="50" id="dvr-3q-HBZ"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="NjT-bn-pGM" firstAttribute="top" secondItem="4WY-qQ-2cR" secondAttribute="top" constant="8" id="Je3-uB-g2r"/>
+                                                <constraint firstItem="65W-Hz-VGT" firstAttribute="centerY" secondItem="NjT-bn-pGM" secondAttribute="centerY" id="ZD5-Xs-GLP"/>
                                                 <constraint firstItem="EGa-wL-kgZ" firstAttribute="leading" secondItem="4WY-qQ-2cR" secondAttribute="leading" constant="8" id="dhi-Kr-Yge"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NjT-bn-pGM" secondAttribute="trailing" constant="16" id="mZ3-O4-SIr"/>
+                                                <constraint firstItem="65W-Hz-VGT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NjT-bn-pGM" secondAttribute="trailing" constant="8" id="hRR-H4-1lE"/>
+                                                <constraint firstAttribute="trailing" secondItem="65W-Hz-VGT" secondAttribute="trailing" id="myM-16-wBQ"/>
                                                 <constraint firstItem="EGa-wL-kgZ" firstAttribute="top" secondItem="4WY-qQ-2cR" secondAttribute="top" constant="8" id="no9-Rp-d2s"/>
                                                 <constraint firstItem="NjT-bn-pGM" firstAttribute="leading" secondItem="EGa-wL-kgZ" secondAttribute="trailing" constant="8" id="o6g-OH-bDI"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EGa-wL-kgZ" secondAttribute="bottom" constant="8" id="rEN-Qx-j76"/>
@@ -58,6 +67,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="notificationDetailLabel" destination="NjT-bn-pGM" id="XIZ-qr-cnW"/>
+                                            <outlet property="rightArrowImageView" destination="65W-Hz-VGT" id="dKu-TC-tod"/>
                                             <outlet property="userImageView" destination="EGa-wL-kgZ" id="06l-bk-rdP"/>
                                         </connections>
                                     </tableViewCell>
@@ -87,5 +97,6 @@
     <resources>
         <image name="defaultProfilePhoto" width="200" height="200"/>
         <image name="notificationTabBar" width="24" height="24"/>
+        <image name="rightArrow" width="48" height="48"/>
     </resources>
 </document>

@@ -250,17 +250,42 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rb0-5r-cER" userLabel="Stack View 5">
+                                <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWd-Mf-ZsO" customClass="CustomAcceptButton" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="acceptRequestButtonTapped:" destination="TWn-7O-U7f" eventType="touchUpInside" id="8Mh-4O-Q32"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhI-Rg-Vih" customClass="CustomRejectButton" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="217" y="0.0" width="197" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="rejectRequestButtonTapepd:" destination="TWn-7O-U7f" eventType="touchUpInside" id="ZNd-25-2Eu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wws-xN-slF"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="N6B-zw-4mi" firstAttribute="leading" secondItem="Alr-Rk-i2o" secondAttribute="trailing" constant="8" id="0MD-SZ-G0o"/>
+                            <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="Rb0-5r-cER" secondAttribute="trailing" id="29h-0N-BOw"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="ZFa-u3-XSB" secondAttribute="trailing" constant="8" id="2bB-AL-fJE"/>
                             <constraint firstItem="ZFa-u3-XSB" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="2g2-Wl-a2S"/>
                             <constraint firstItem="kM4-rQ-Bwh" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="3me-V5-6g2"/>
                             <constraint firstItem="kM4-rQ-Bwh" firstAttribute="top" secondItem="lwj-2a-jce" secondAttribute="bottom" constant="16" id="4NP-FQ-ZLl"/>
                             <constraint firstItem="lwj-2a-jce" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="4fz-Nl-xBa"/>
+                            <constraint firstItem="Rb0-5r-cER" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" id="E90-Wb-5yX"/>
                             <constraint firstItem="mLq-V9-zK7" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="FQs-C3-os0"/>
                             <constraint firstItem="OmZ-sK-ekb" firstAttribute="top" secondItem="Alr-Rk-i2o" secondAttribute="bottom" constant="16" id="POH-u4-elq"/>
+                            <constraint firstItem="Rb0-5r-cER" firstAttribute="centerX" secondItem="ZFa-u3-XSB" secondAttribute="centerX" id="Qa0-7n-LfA"/>
                             <constraint firstItem="lwj-2a-jce" firstAttribute="top" secondItem="nF0-sm-hVr" secondAttribute="bottom" constant="16" id="Wer-Gu-qk6"/>
                             <constraint firstItem="ZFa-u3-XSB" firstAttribute="top" secondItem="mLq-V9-zK7" secondAttribute="bottom" constant="16" id="Wrn-yL-xJr"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="kM4-rQ-Bwh" secondAttribute="trailing" constant="8" id="ZBQ-Uc-gV5"/>
@@ -271,6 +296,7 @@
                             <constraint firstItem="Alr-Rk-i2o" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="t5P-dC-HjY"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="mLq-V9-zK7" secondAttribute="trailing" constant="8" id="tIY-nW-whT"/>
                             <constraint firstItem="mLq-V9-zK7" firstAttribute="top" secondItem="kM4-rQ-Bwh" secondAttribute="bottom" constant="16" id="ua1-sI-rSe"/>
+                            <constraint firstItem="Rb0-5r-cER" firstAttribute="bottom" secondItem="A5e-IT-NHY" secondAttribute="bottom" id="v4j-Ba-iA0"/>
                             <constraint firstItem="N6B-zw-4mi" firstAttribute="top" secondItem="A5e-IT-NHY" secondAttribute="top" constant="8" id="w64-qh-T1j"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="N6B-zw-4mi" secondAttribute="trailing" constant="8" id="wcd-Jg-2k2"/>
                             <constraint firstItem="nF0-sm-hVr" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="xCL-I0-aDi"/>
@@ -279,6 +305,7 @@
                         <viewLayoutGuide key="safeArea" id="A5e-IT-NHY"/>
                     </view>
                     <connections>
+                        <outlet property="acceptRequestButton" destination="tWd-Mf-ZsO" id="6PO-7O-JpC"/>
                         <outlet property="actualClubLabel" destination="GZF-0J-ew7" id="BBd-Kl-qCe"/>
                         <outlet property="bioLabel" destination="PhY-hZ-LCt" id="BHV-8a-7dd"/>
                         <outlet property="birthdayLabel" destination="I5L-a1-Ick" id="bx0-uE-qhp"/>
@@ -292,6 +319,8 @@
                         <outlet property="profilePhotoImageView" destination="Alr-Rk-i2o" id="4U2-Ch-KnF"/>
                         <outlet property="profileTypeLabel" destination="rQt-5L-h5Y" id="8ra-Xg-1h6"/>
                         <outlet property="recordLabel" destination="Nqn-zl-8Pp" id="inW-T0-eLb"/>
+                        <outlet property="rejectRequestButton" destination="YhI-Rg-Vih" id="rxl-tj-AvE"/>
+                        <outlet property="requestView" destination="Rb0-5r-cER" id="oXs-yU-l5G"/>
                         <outlet property="sexLabel" destination="cMm-DM-egm" id="gYA-e9-6uY"/>
                         <outlet property="weightLabel" destination="Qhn-eY-6OG" id="Hnt-hi-664"/>
                     </connections>

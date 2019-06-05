@@ -18,6 +18,11 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         displayNotificationCell = generateDisplayNotificationCell()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
+    
     private func setTabBarItem() {
         tabBarItem.title = "notificationsTabBar".localize()
     }
@@ -28,14 +33,14 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
                 var notificationDetail: String = ""
                 switch notificationCellResponse.notificationCellType {
                 case .Offer:
-                    notificationDetail = user.fullName + "notificationsOffer_detail".localize()
+                    notificationDetail = user.fullName + "notificationsOffer_detail".localize() +  StaticDBManager.shared.requestOfferTitleById(offerId: notificationCellResponse.publicationId)
                 case .Text:
-                    notificationDetail = user.fullName + "notificationsPost_detail".localize()
+                    notificationDetail = user.fullName + "notificationsPost_detail".localize() +  StaticDBManager.shared.requestTexteById(textId: notificationCellResponse.publicationId)
                 case .Photo:
                     notificationDetail = user.fullName + "notificationsPhoto_detail".localize()
                 }
                 displayNotificationCell.append(
-                    DisplayNotificationCell(userImage: UIImage(named: user.photo)!, notificationDetail: notificationDetail)
+                    DisplayNotificationCell(userId: user.id, notificationType: notificationCellResponse.notificationCellType, publicationId: notificationCellResponse.publicationId, userImage: UIImage(named: user.photo)!, notificationDetail: notificationDetail)
                 )
             }
         }
@@ -51,6 +56,27 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "notificationsCell", for: indexPath) as! NotificationsTableViewCell
         cell.userImageView.image = displayNotificationCell[indexPath.row].userImage
         cell.notificationDetailLabel.text = displayNotificationCell[indexPath.row].notificationDetail
+        switch self.displayNotificationCell[indexPath.row].notificationType {
+        case .Offer:
+            cell.rightArrowImageView.isHidden = false
+        default:
+            cell.rightArrowImageView.isHidden = true
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch self.displayNotificationCell[indexPath.row].notificationType {
+        case .Offer:
+            let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+            let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            profileViewController.userId = self.displayNotificationCell[indexPath.row].userId
+            profileViewController.viewProfileType = .RequestedProfile
+            title = " "
+            navigationController?.pushViewController(profileViewController, animated: true)
+        default:
+            break
+        }
+        
     }
 }

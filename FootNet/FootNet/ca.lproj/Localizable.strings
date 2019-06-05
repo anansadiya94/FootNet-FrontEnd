@@ -179,8 +179,8 @@
 "rejectedOffers_detail"=" ha rebutjat la teva petició a l'oferta ";
 
 //Notifications
-"notificationsOffer_detail"=" ha sol·licitat la teva oferta.";
-"notificationsPost_detail"=" ha reaccionat al teu post.";
+"notificationsOffer_detail"=" ha sol·licitat la teva oferta: ";
+"notificationsPost_detail"=" ha reaccionat al teu post: ";
 "notificationsPhoto_detail"=" ha reaccionat a la teva foto.";
 
 //Search
@@ -454,6 +454,8 @@
 "favoritePosition_label"="Poisció Preferida: ";
 "bio_label"="Biografia: ";
 "record_label"="Històric: ";
+"accept_button"="Acceptar";
+"reejct_button"="Rebutjar";
 
 //publish
 "publish_sectionHeader"="Què voleu publicar?";

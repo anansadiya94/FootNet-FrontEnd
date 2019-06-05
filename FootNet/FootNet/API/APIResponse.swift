@@ -70,4 +70,5 @@ enum NotificationCellType {
 struct NotificationCellResponse {
     let notificationCellType: NotificationCellType
     let userId: Int
+    let publicationId: Int
 }

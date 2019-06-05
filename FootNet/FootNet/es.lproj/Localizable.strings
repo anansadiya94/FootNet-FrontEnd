@@ -177,8 +177,8 @@
 "rejectedOffers_detail"=" ha rechazado tu petición a la oferta ";
 
 //Notifications
-"notificationsOffer_detail"=" ha solicitado tu oferta.";
-"notificationsPost_detail"=" ha reaccionado a tu post.";
+"notificationsOffer_detail"=" ha solicitado tu oferta: ";
+"notificationsPost_detail"=" ha reaccionado a tu post: ";
 "notificationsPhoto_detail"=" ha reaccionado a tu foto.";
 
 //Search
@@ -452,6 +452,8 @@
 "favoritePosition_label"="Poisción Favorita: ";
 "bio_label"="Biografía: ";
 "record_label"="Historial: ";
+"accept_button"="Aceptar";
+"reejct_button"="Rechazar";
 
 //publish
 "publish_sectionHeader"="¿Qué te gustaría publicar?";

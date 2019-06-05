@@ -16,6 +16,7 @@ class OfferDetailViewController: UIViewController {
     @IBOutlet weak var offerTextLabel: CustomContentLabel!
     @IBOutlet weak var offerRequestButton: CustomRequestButton!
 
+    let lottieAnimation = LottieAnimation()
     var offerId: Int = 0
     var offerDetails = DisplayOfferDetail(userId: 0, offerId: 0, fullName: " ", photo: " ", offerTitle: " ", offerText: " ", offerPhoto: " ", offerRequested: false, offerStatus: OfferStatus.NotRequested)
 
@@ -23,6 +24,8 @@ class OfferDetailViewController: UIViewController {
         super.viewDidLoad()
         setBackground()
         configureUI()
+        //create lottie animation Spinner
+        lottieAnimation.createLottieAnimation(view: view)
     }
     
     private func generateOfferDetails() -> DisplayOfferDetail? {
@@ -47,9 +50,13 @@ class OfferDetailViewController: UIViewController {
     }
     
     @IBAction func offerRequestButtonTapped(_ sender: CustomRequestButton) {
-        offerDetails.offerRequested = !offerDetails.offerRequested
-        CustomRequestButton.setup(offerRequestButton, offerDetails.offerRequested)
-        StaticDBManager.shared.modifyOfferRequested(offerId: offerId, offerRequested: offerDetails.offerRequested)
+        lottieAnimation.startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            self.lottieAnimation.stopLottieAnimation()
+            self.offerDetails.offerRequested = !self.offerDetails.offerRequested
+            CustomRequestButton.setup(self.offerRequestButton, self.offerDetails.offerRequested)
+            StaticDBManager.shared.modifyOfferRequested(offerId: self.offerId, offerRequested: self.offerDetails.offerRequested)
+        }
     }
 }
 

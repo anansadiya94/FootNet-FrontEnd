@@ -190,6 +190,9 @@
 		9EDD6758227CA6230082074C /* CustomPublishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6757227CA6230082074C /* CustomPublishButton.swift */; };
 		9EE37001228CA12B00CBEF53 /* DisplayOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE37000228CA12B00CBEF53 /* DisplayOfferCell.swift */; };
 		9EE37003228CB02800CBEF53 /* DisplayPhotoHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE37002228CB02800CBEF53 /* DisplayPhotoHomeCell.swift */; };
+		9EE8917522A7BD1A0040B424 /* ViewProfileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917422A7BD1A0040B424 /* ViewProfileType.swift */; };
+		9EE8917722A7C1010040B424 /* CustomAcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917622A7C1010040B424 /* CustomAcceptButton.swift */; };
+		9EE8917922A7C10B0040B424 /* CustomRejectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917822A7C10A0040B424 /* CustomRejectButton.swift */; };
 		9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07904224CCBF20034FA1C /* SignUpUITests.swift */; };
 		9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF07906224CE96C0034FA1C /* SignUpTests.swift */; };
 		9EF232C52238074B004BF61F /* ValidateSignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF232C42238074B004BF61F /* ValidateSignUpForm.swift */; };
@@ -374,6 +377,9 @@
 		9EDD6757227CA6230082074C /* CustomPublishButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPublishButton.swift; sourceTree = "<group>"; };
 		9EE37000228CA12B00CBEF53 /* DisplayOfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOfferCell.swift; sourceTree = "<group>"; };
 		9EE37002228CB02800CBEF53 /* DisplayPhotoHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPhotoHomeCell.swift; sourceTree = "<group>"; };
+		9EE8917422A7BD1A0040B424 /* ViewProfileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileType.swift; sourceTree = "<group>"; };
+		9EE8917622A7C1010040B424 /* CustomAcceptButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAcceptButton.swift; sourceTree = "<group>"; };
+		9EE8917822A7C10A0040B424 /* CustomRejectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRejectButton.swift; sourceTree = "<group>"; };
 		9EF07904224CCBF20034FA1C /* SignUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
 		9EF07906224CE96C0034FA1C /* SignUpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		9EF232C42238074B004BF61F /* ValidateSignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSignUpForm.swift; sourceTree = "<group>"; };
@@ -423,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				9E1B1367228F2021003908AE /* ProfileViewController.swift */,
+				9EE8917422A7BD1A0040B424 /* ViewProfileType.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -699,6 +706,8 @@
 				9EFE51D32279A441002DB0BB /* CustomSeeMoreButton.swift */,
 				9EDD6757227CA6230082074C /* CustomPublishButton.swift */,
 				9E7C582722A2E0ED001A49C1 /* CustomRecoverPassword.swift */,
+				9EE8917622A7C1010040B424 /* CustomAcceptButton.swift */,
+				9EE8917822A7C10A0040B424 /* CustomRejectButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1481,6 +1490,7 @@
 				9EC4A3932243F8CD003030ED /* LeftHomeTableViewController.swift in Sources */,
 				9EDD673D227C8F360082074C /* DependencyManager.swift in Sources */,
 				9EE37003228CB02800CBEF53 /* DisplayPhotoHomeCell.swift in Sources */,
+				9EE8917922A7C10B0040B424 /* CustomRejectButton.swift in Sources */,
 				9E7C582822A2E0ED001A49C1 /* CustomRecoverPassword.swift in Sources */,
 				9E1B1368228F2021003908AE /* ProfileViewController.swift in Sources */,
 				9E82E82C22720F2400267820 /* Spinner.swift in Sources */,
@@ -1495,6 +1505,7 @@
 				9E4FA3642231A2FA00094509 /* Constants.swift in Sources */,
 				9ECF074922523FB70082FC1F /* DisplayNotificationCell.swift in Sources */,
 				9E56289D22840D4A003B4FE2 /* User.swift in Sources */,
+				9EE8917522A7BD1A0040B424 /* ViewProfileType.swift in Sources */,
 				9EB3A6C5222D2ACF002F244E /* SignUpDetailData.swift in Sources */,
 				9E82E83622720F2400267820 /* UIColorExtension.swift in Sources */,
 				9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */,
@@ -1520,6 +1531,7 @@
 				9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */,
 				9E82E83F22720F2400267820 /* CustomView.swift in Sources */,
 				9E82E82D22720F2400267820 /* Reachability.swift in Sources */,
+				9EE8917722A7C1010040B424 /* CustomAcceptButton.swift in Sources */,
 				9E813FA22299A22F0051220C /* MyFriendTableViewCell.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* DisplaySignUpSelectProfileCell.swift in Sources */,
 				9ED9BF34227848C9004F4D13 /* OfferTableViewCell.swift in Sources */,

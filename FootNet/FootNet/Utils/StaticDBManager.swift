@@ -40,7 +40,7 @@ class StaticDBManager {
         OfferCellResponse(homeCellType: .Offer, userId: 3, offerId: 1, offerTitle: "Se busca equipo en BCN", offerText: "Hola, busco un equipo en el centro", offerPhoto: "offerPhoto", publicationDate: "16-05-2019 23:59", offerRequested: true, offerStatus: .Accepted),
         OfferCellResponse(homeCellType: .Offer, userId: 5, offerId: 2, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy delantero, y busco un equipo en el centro de sabadell!", offerPhoto: "offerPhoto", publicationDate: "10-05-2019 23:59", offerRequested: true, offerStatus: .Pending),
         OfferCellResponse(homeCellType: .Offer, userId: 7, offerId: 3, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy delantero, y busco un equipo en el centro de sabadell!", offerPhoto: "offerPhoto", publicationDate: "14-05-2019 23:59", offerRequested: true, offerStatus: .Rejected),
-        OfferCellResponse(homeCellType: .Offer, userId: 13, offerId: 3, offerTitle: "Se busca equipo en Sabadell", offerText: "Hola, soy delantero, y busco un equipo en el centro de sabadell!", offerPhoto: "offerPhoto", publicationDate: "22-05-2019 23:59", offerRequested: false, offerStatus: .NotRequested)
+        OfferCellResponse(homeCellType: .Offer, userId: 7, offerId: 4, offerTitle: "Se busca delantero para el Barça", offerText: "Hola, Se busca delantero para el Barça ya que se va mi amigo Suarez", offerPhoto: "offerPhoto", publicationDate: "16-05-2019 23:59", offerRequested: true, offerStatus: .NotRequested)
     ]
     
     static var photoHomeCellsResponse = [
@@ -49,18 +49,18 @@ class StaticDBManager {
     ]
     
     static var notificationCellsResponse = [
-        NotificationCellResponse(notificationCellType: .Offer, userId: 1),
-        NotificationCellResponse(notificationCellType: .Photo, userId: 1),
-        NotificationCellResponse(notificationCellType: .Photo, userId: 3),
-        NotificationCellResponse(notificationCellType: .Text, userId: 4),
-        NotificationCellResponse(notificationCellType: .Offer, userId: 5),
-        NotificationCellResponse(notificationCellType: .Photo, userId: 2),
-        NotificationCellResponse(notificationCellType: .Offer, userId: 3),
-        NotificationCellResponse(notificationCellType: .Photo, userId: 2),
-        NotificationCellResponse(notificationCellType: .Text, userId: 7),
-        NotificationCellResponse(notificationCellType: .Photo, userId: 9),
-        NotificationCellResponse(notificationCellType: .Text, userId: 7),
-        NotificationCellResponse(notificationCellType: .Photo, userId: 2)
+        NotificationCellResponse(notificationCellType: .Offer, userId: 1, publicationId: 4),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 1, publicationId: 1),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 3, publicationId: 1),
+        NotificationCellResponse(notificationCellType: .Text, userId: 4, publicationId: 5),
+        NotificationCellResponse(notificationCellType: .Offer, userId: 5, publicationId: 4),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 2, publicationId: 6),
+        NotificationCellResponse(notificationCellType: .Offer, userId: 3, publicationId: 4),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 2, publicationId: 6),
+        NotificationCellResponse(notificationCellType: .Text, userId: 7, publicationId: 5),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 9, publicationId: 6),
+        NotificationCellResponse(notificationCellType: .Text, userId: 7, publicationId: 5),
+        NotificationCellResponse(notificationCellType: .Photo, userId: 2, publicationId: 6)
         
     ]
     
@@ -210,6 +210,14 @@ class StaticDBManager {
             }
             return user
         }
+    }
+    
+    func requestOfferTitleById(offerId: Int) -> String {
+        return StaticDBManager.offerCellsResponse.filter({$0.offerId == offerId}).first!.offerTitle
+    }
+    
+    func requestTexteById(textId: Int) -> String {
+        return StaticDBManager.textHomeCellsResponse.filter({$0.publicationId == textId}).first!.publicationText
     }
 }
 

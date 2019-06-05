@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 struct DisplayNotificationCell {
+    let userId: Int
+    let notificationType: NotificationCellType
+    let publicationId: Int
     let userImage: UIImage
     let notificationDetail: String
 }

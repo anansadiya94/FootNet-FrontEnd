@@ -28,7 +28,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var acceptRequestButton: CustomAcceptButton!
     @IBOutlet weak var rejectRequestButton: CustomRejectButton!
     
+    @IBOutlet weak var followView: UIStackView!
+    @IBOutlet weak var followButton: CustomFollowButton!
+    
     let lottieAnimation = LottieAnimation()
+    var myId: Int = 0
     var userId: Int = 0
     var viewProfileType: ViewProfileType = .MyProfile
     var userPhoto: String = ""
@@ -46,9 +50,11 @@ class ProfileViewController: UIViewController {
     var userFavoritePosition: String = ""
     var userBio: String = ""
     var userRecord: String = ""
+    var amIFollowing: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
         setTabBarItem()
         generateUserInfo()
@@ -83,6 +89,7 @@ class ProfileViewController: UIViewController {
             userFavoritePosition = user.favoritePosition
             userBio = user.bio
             userRecord = user.record
+            amIFollowing = user.amIFollowing
         }
     }
     
@@ -103,6 +110,7 @@ class ProfileViewController: UIViewController {
         configureUserBio()
         configureUserRecord()
         configureRequestView()
+        configureFollowView()
     }
     
     private func configureUserPhoto() {
@@ -142,11 +150,11 @@ class ProfileViewController: UIViewController {
     }
     
     private func configureUserHeight() {
-        heightLabel.text = "height_label".localize() + userHeight + "cm"
+        heightLabel.text = "height_label".localize() + userHeight
     }
     
     private func configureUserWeight() {
-        weightLabel.text = "weight_label".localize() + userWeight + "kg"
+        weightLabel.text = "weight_label".localize() + userWeight
     }
     
     private func configureUserActualClub() {
@@ -186,18 +194,32 @@ class ProfileViewController: UIViewController {
             requestView.isHidden = true
         case .RequestedProfile:
             requestView.isHidden = false
+        case .VisitProfile:
+            requestView.isHidden = true
         }
         
         acceptRequestButton.setTitle("Accept", for: .normal)
         rejectRequestButton.setTitle("Reject", for: .normal)
     }
     
+    private func configureFollowView() {
+        switch viewProfileType {
+        case .MyProfile:
+            followView.isHidden = true
+        case .RequestedProfile:
+            followView.isHidden = true
+        case .VisitProfile:
+            followView.isHidden = false
+        }
+        CustomFollowButton.setup(followButton, amIFollowing)
+    }
     
     @IBAction func acceptRequestButtonTapped(_ sender: Any) {
         lottieAnimation.startLottieAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
             self.lottieAnimation.stopLottieAnimation()
-            _ = self.navigationController?.popViewController(animated: true)
+            //_ = self.navigationController?.popViewController(animated: true)
+            self.disableRequestButtons()
         }
     }
     
@@ -205,7 +227,22 @@ class ProfileViewController: UIViewController {
         lottieAnimation.startLottieAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
             self.lottieAnimation.stopLottieAnimation()
-            _ = self.navigationController?.popViewController(animated: true)
+            //_ = self.navigationController?.popViewController(animated: true)
+            self.disableRequestButtons()
+        }
+    }
+    
+    private func disableRequestButtons() {
+        self.acceptRequestButton.isEnabled = false
+        self.rejectRequestButton.isEnabled = false
+    }
+    
+    @IBAction func followButtonTapped(_ sender: CustomFollowButton) {
+        lottieAnimation.startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
+            self.lottieAnimation.stopLottieAnimation()
+            StaticDBManager.shared.modifyFriends(followerId: self.myId, followingId: self.userId, followingStatus: !self.amIFollowing)
+            CustomFollowButton.setup(self.followButton, !self.amIFollowing)
         }
     }
 }

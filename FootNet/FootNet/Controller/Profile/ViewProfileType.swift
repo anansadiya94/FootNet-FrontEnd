@@ -11,4 +11,5 @@ import Foundation
 enum ViewProfileType {
     case MyProfile
     case RequestedProfile
+    case VisitProfile
 }

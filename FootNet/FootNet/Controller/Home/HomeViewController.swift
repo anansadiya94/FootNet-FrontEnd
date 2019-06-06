@@ -189,7 +189,7 @@ extension HomeViewController: TextHomeCellDelegate {
         
         guard let indexPath = self.tableView.indexPath(for: textTableViewCell) else {return}
         UIView.performWithoutAnimation {
-            tableView.reloadRows(at: [indexPath], with: .none)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
         }
     }
 }
@@ -241,7 +241,7 @@ extension HomeViewController: PhotoHomeCellDelegate {
         
         guard let indexPath = self.tableView.indexPath(for: photoTableViewCell) else {return}
         UIView.performWithoutAnimation {
-            tableView.reloadRows(at: [indexPath], with: .none)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
         }
     }
 }

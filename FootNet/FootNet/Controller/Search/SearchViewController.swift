@@ -18,6 +18,7 @@ class SearchViewController: UIViewController {
     var searching: Bool = false
     var searchTextString: String = ""
     var userId = 0
+    var selectedIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,17 @@ class SearchViewController: UIViewController {
         generateDisplayUsers()
         //create lottie animation Spinner
         lottieAnimation.createLottieAnimation(view: view)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+        displayUsers = []
+        generateDisplayUsers()
+        guard let selectedIndexPath = selectedIndexPath else {return}
+        resultsTableView.beginUpdates()
+        resultsTableView.reloadRows(at: [selectedIndexPath], with: .automatic)
+        resultsTableView.endUpdates()
     }
 
     private func setTabBarItem() {
@@ -98,21 +110,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
+        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         if searching {
-            let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-            let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
             profileViewController.userId = self.filteredDisplayUsers[indexPath.row].id
-            profileViewController.viewProfileType = .RequestedProfile
-            title = " "
-            navigationController?.pushViewController(profileViewController, animated: true)
+            profileViewController.viewProfileType = .VisitProfile
         } else {
-            let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-            let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
             profileViewController.userId = self.displayUsers[indexPath.row].id
-            profileViewController.viewProfileType = .RequestedProfile
-            title = " "
-            navigationController?.pushViewController(profileViewController, animated: true)
+            profileViewController.viewProfileType = .VisitProfile
         }
+        title = " "
+        navigationController?.pushViewController(profileViewController, animated: true)
     }
 }
 

@@ -80,14 +80,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DH4-OT-zPo" userLabel="Sex&amp;Birthday">
                                         <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMm-DM-egm" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="28" height="21.666666666666668"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMm-DM-egm" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="21.666666666666668"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5L-a1-Ick" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="29.666666666666686" width="64.333333333333329" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5L-a1-Ick" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="29.666666666666686" width="197" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -98,21 +98,23 @@
                                             <constraint firstItem="I5L-a1-Ick" firstAttribute="top" secondItem="cMm-DM-egm" secondAttribute="bottom" constant="8" id="4KP-fE-D2Q"/>
                                             <constraint firstItem="cMm-DM-egm" firstAttribute="leading" secondItem="DH4-OT-zPo" secondAttribute="leading" id="SkW-lE-sLi"/>
                                             <constraint firstItem="I5L-a1-Ick" firstAttribute="leading" secondItem="DH4-OT-zPo" secondAttribute="leading" id="hdw-Q3-ImA"/>
+                                            <constraint firstAttribute="trailing" secondItem="I5L-a1-Ick" secondAttribute="trailing" id="liC-zd-HXI"/>
                                             <constraint firstAttribute="bottom" secondItem="I5L-a1-Ick" secondAttribute="bottom" id="m9C-kk-opC"/>
+                                            <constraint firstAttribute="trailing" secondItem="cMm-DM-egm" secondAttribute="trailing" id="nf6-2F-rq5"/>
                                             <constraint firstItem="cMm-DM-egm" firstAttribute="top" secondItem="DH4-OT-zPo" secondAttribute="top" id="qRz-f0-K4X"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLS-fj-fPg" userLabel="Nationality&amp;Location">
                                         <rect key="frame" x="201" y="0.0" width="197" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nationality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cj-5P-3tW" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="21.666666666666668"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nationality" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cj-5P-3tW" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="21.666666666666668"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-sQ-w7B" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="29.666666666666686" width="65.666666666666671" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-sQ-w7B" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="29.666666666666686" width="197" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -121,6 +123,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="ejb-sQ-w7B" firstAttribute="top" secondItem="0Cj-5P-3tW" secondAttribute="bottom" constant="8" id="0Q5-Kq-1si"/>
+                                            <constraint firstAttribute="trailing" secondItem="ejb-sQ-w7B" secondAttribute="trailing" id="9hu-J8-g7d"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Cj-5P-3tW" secondAttribute="trailing" id="F5e-63-NbD"/>
                                             <constraint firstAttribute="bottom" secondItem="ejb-sQ-w7B" secondAttribute="bottom" id="ZOV-dA-vru"/>
                                             <constraint firstItem="0Cj-5P-3tW" firstAttribute="leading" secondItem="bLS-fj-fPg" secondAttribute="leading" id="c8e-OU-uwn"/>
                                             <constraint firstItem="ejb-sQ-w7B" firstAttribute="leading" secondItem="bLS-fj-fPg" secondAttribute="leading" id="lUC-H8-ih2"/>
@@ -135,8 +139,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XW4-rP-blo" userLabel="Height">
                                         <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-rO-dMy" userLabel="Height" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-rO-dMy" userLabel="Height" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -145,6 +149,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="gCR-rO-dMy" firstAttribute="top" secondItem="XW4-rP-blo" secondAttribute="top" id="4XE-Za-jyv"/>
+                                            <constraint firstAttribute="trailing" secondItem="gCR-rO-dMy" secondAttribute="trailing" id="CJf-Se-CDz"/>
                                             <constraint firstItem="gCR-rO-dMy" firstAttribute="leading" secondItem="XW4-rP-blo" secondAttribute="leading" id="a2v-a5-Wly"/>
                                             <constraint firstAttribute="bottom" secondItem="gCR-rO-dMy" secondAttribute="bottom" id="s2h-Pp-Dx9"/>
                                         </constraints>
@@ -152,8 +157,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oL3-NR-bCR" userLabel="Weight">
                                         <rect key="frame" x="201" y="0.0" width="197" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhn-eY-6OG" userLabel="Weight" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="54" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhn-eY-6OG" userLabel="Weight" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -164,6 +169,7 @@
                                             <constraint firstAttribute="bottom" secondItem="Qhn-eY-6OG" secondAttribute="bottom" id="Jod-9W-NJC"/>
                                             <constraint firstItem="Qhn-eY-6OG" firstAttribute="top" secondItem="oL3-NR-bCR" secondAttribute="top" id="OJy-y8-Jvt"/>
                                             <constraint firstItem="Qhn-eY-6OG" firstAttribute="leading" secondItem="oL3-NR-bCR" secondAttribute="leading" id="eVD-9K-rNk"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qhn-eY-6OG" secondAttribute="trailing" id="poa-e9-qQD"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -204,7 +210,7 @@
                                             <constraint firstAttribute="bottom" secondItem="NpV-3u-Ch8" secondAttribute="bottom" id="BLL-a0-JO2"/>
                                             <constraint firstItem="NpV-3u-Ch8" firstAttribute="leading" secondItem="3aS-Ew-hP0" secondAttribute="leading" id="Cm8-i9-pFr"/>
                                             <constraint firstItem="NpV-3u-Ch8" firstAttribute="top" secondItem="3aS-Ew-hP0" secondAttribute="top" id="grc-pP-R0r"/>
-                                            <constraint firstAttribute="trailing" secondItem="NpV-3u-Ch8" secondAttribute="trailing" id="zDU-JO-NW0"/>
+                                            <constraint firstAttribute="trailing" secondItem="NpV-3u-Ch8" secondAttribute="trailing" id="tC7-OE-fwv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -272,6 +278,22 @@
                                     <constraint firstAttribute="height" constant="50" id="Wws-xN-slF"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rvp-em-Slo" userLabel="Stack View 6">
+                                <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlB-oP-xUe" customClass="CustomFollowButton" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="followButtonTapped:" destination="TWn-7O-U7f" eventType="touchUpInside" id="mHX-lg-1J8"/>
+                                            <action selector="rejectRequestButtonTapepd:" destination="TWn-7O-U7f" eventType="touchUpInside" id="0TN-cz-LVG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="E1C-kc-wCc"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -282,16 +304,19 @@
                             <constraint firstItem="kM4-rQ-Bwh" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="3me-V5-6g2"/>
                             <constraint firstItem="kM4-rQ-Bwh" firstAttribute="top" secondItem="lwj-2a-jce" secondAttribute="bottom" constant="16" id="4NP-FQ-ZLl"/>
                             <constraint firstItem="lwj-2a-jce" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="4fz-Nl-xBa"/>
+                            <constraint firstItem="A5e-IT-NHY" firstAttribute="bottom" secondItem="Rvp-em-Slo" secondAttribute="bottom" id="Czr-EQ-OQL"/>
                             <constraint firstItem="Rb0-5r-cER" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" id="E90-Wb-5yX"/>
                             <constraint firstItem="mLq-V9-zK7" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="FQs-C3-os0"/>
                             <constraint firstItem="OmZ-sK-ekb" firstAttribute="top" secondItem="Alr-Rk-i2o" secondAttribute="bottom" constant="16" id="POH-u4-elq"/>
                             <constraint firstItem="Rb0-5r-cER" firstAttribute="centerX" secondItem="ZFa-u3-XSB" secondAttribute="centerX" id="Qa0-7n-LfA"/>
+                            <constraint firstItem="Rvp-em-Slo" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" id="TIU-9n-1uh"/>
                             <constraint firstItem="lwj-2a-jce" firstAttribute="top" secondItem="nF0-sm-hVr" secondAttribute="bottom" constant="16" id="Wer-Gu-qk6"/>
                             <constraint firstItem="ZFa-u3-XSB" firstAttribute="top" secondItem="mLq-V9-zK7" secondAttribute="bottom" constant="16" id="Wrn-yL-xJr"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="kM4-rQ-Bwh" secondAttribute="trailing" constant="8" id="ZBQ-Uc-gV5"/>
                             <constraint firstItem="N6B-zw-4mi" firstAttribute="height" secondItem="Alr-Rk-i2o" secondAttribute="height" id="aOO-qk-9io"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="lwj-2a-jce" secondAttribute="trailing" constant="8" id="dDh-et-sSR"/>
                             <constraint firstItem="nF0-sm-hVr" firstAttribute="top" secondItem="OmZ-sK-ekb" secondAttribute="bottom" constant="8" id="gM9-sq-Y3r"/>
+                            <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="Rvp-em-Slo" secondAttribute="trailing" id="lZw-vs-qcl"/>
                             <constraint firstItem="Alr-Rk-i2o" firstAttribute="top" secondItem="A5e-IT-NHY" secondAttribute="top" constant="8" id="lvE-P8-CDd"/>
                             <constraint firstItem="Alr-Rk-i2o" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="t5P-dC-HjY"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="mLq-V9-zK7" secondAttribute="trailing" constant="8" id="tIY-nW-whT"/>
@@ -311,6 +336,8 @@
                         <outlet property="birthdayLabel" destination="I5L-a1-Ick" id="bx0-uE-qhp"/>
                         <outlet property="emailLabel" destination="OmZ-sK-ekb" id="aa1-nA-caN"/>
                         <outlet property="favoritePositionLabel" destination="NpV-3u-Ch8" id="JeD-r1-sx6"/>
+                        <outlet property="followButton" destination="MlB-oP-xUe" id="1qH-kG-2uY"/>
+                        <outlet property="followView" destination="Rvp-em-Slo" id="nKg-V8-EQv"/>
                         <outlet property="fullNameLabel" destination="5vj-3a-c4b" id="ep1-Dm-3xK"/>
                         <outlet property="heightLabel" destination="gCR-rO-dMy" id="OY8-uH-hTr"/>
                         <outlet property="locationLabel" destination="ejb-sQ-w7B" id="qSU-ql-jfJ"/>

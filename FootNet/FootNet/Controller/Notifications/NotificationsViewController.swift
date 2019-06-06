@@ -77,6 +77,5 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         default:
             break
         }
-        
     }
 }

@@ -96,6 +96,24 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searching {
+            let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+            let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            profileViewController.userId = self.filteredDisplayUsers[indexPath.row].id
+            profileViewController.viewProfileType = .RequestedProfile
+            title = " "
+            navigationController?.pushViewController(profileViewController, animated: true)
+        } else {
+            let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+            let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            profileViewController.userId = self.displayUsers[indexPath.row].id
+            profileViewController.viewProfileType = .RequestedProfile
+            title = " "
+            navigationController?.pushViewController(profileViewController, animated: true)
+        }
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {

@@ -126,11 +126,23 @@ class ProfileViewController: UIViewController {
     }
     
     private func configureUserEmail() {
-        emailLabel.text = "email_label".localize() + userEmail
+        if amIFollowing {
+            emailLabel.text = "email_label".localize() + userEmail
+            emailLabel.textColor = UIColor.colorText
+        } else {
+            emailLabel.text = "email_label".localize() + "emailFollow_label".localize()
+            emailLabel.textColor = .red
+        }
     }
     
     private func configureUserPhone() {
-        phoneLabel.text = "phone_label".localize() + userPhone
+        if amIFollowing {
+            phoneLabel.text = "phone_label".localize() + userPhone
+            phoneLabel.textColor = UIColor.colorText
+        } else {
+            phoneLabel.text = "phone_label".localize() + "phoneFollow_label".localize()
+            phoneLabel.textColor = .red
+        }
     }
     
     private func configureUserSex() {
@@ -243,6 +255,8 @@ class ProfileViewController: UIViewController {
             self.lottieAnimation.stopLottieAnimation()
             StaticDBManager.shared.modifyFriends(followerId: self.myId, followingId: self.userId, followingStatus: !self.amIFollowing)
             CustomFollowButton.setup(self.followButton, !self.amIFollowing)
+            self.generateUserInfo()
+            self.configureUI()
         }
     }
 }

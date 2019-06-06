@@ -444,6 +444,8 @@
 //profile
 "email_label"="Correu electrònic: ";
 "phone_label"="Mòbi: ";
+"emailFollow_label"="Segueix-me per veure el meu correu electrònic";
+"phoneFollow_label"="Segueix-me per veure el meu número de telèfon";
 "sex_label"="Sexe: ";
 "birthday_label"="Data de naixement: ";
 "nationality_label"="Nacionalitat: ";

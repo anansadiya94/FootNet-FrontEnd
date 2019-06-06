@@ -444,6 +444,8 @@
 //profile
 "email_label"="Email: ";
 "phone_label"="Phone: ";
+"emailFollow_label"="Follow me to see my email";
+"phoneFollow_label"="Follow me to see my phone number";
 "sex_label"="Sex: ";
 "birthday_label"="Birthday: ";
 "nationality_label"="Nationality: ";

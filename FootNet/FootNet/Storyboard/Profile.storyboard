@@ -62,19 +62,28 @@
                                     <constraint firstAttribute="bottom" secondItem="wpT-TC-IWu" secondAttribute="bottom" id="tcE-5F-bn0"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmZ-sK-ekb" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="8" y="144" width="41" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF0-sm-hVr" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="7.9999999999999964" y="172.33333333333334" width="48.666666666666657" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lwj-2a-jce" userLabel="Stack View 1">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wny-4b-FJb" userLabel="Stack View 1">
+                                <rect key="frame" x="8" y="144" width="398" height="48.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmZ-sK-ekb" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF0-sm-hVr" customClass="CustomContentLabel" customModule="FootNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28.333333333333343" width="398" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OmZ-sK-ekb" secondAttribute="trailing" id="9Th-da-TgG"/>
+                                    <constraint firstAttribute="trailing" secondItem="nF0-sm-hVr" secondAttribute="trailing" id="WjF-gQ-yGP"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lwj-2a-jce" userLabel="Stack View 2">
                                 <rect key="frame" x="8" y="208.66666666666666" width="398" height="49.999999999999972"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DH4-OT-zPo" userLabel="Sex&amp;Birthday">
@@ -133,7 +142,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kM4-rQ-Bwh" userLabel="Stack View 2">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kM4-rQ-Bwh" userLabel="Stack View 3">
                                 <rect key="frame" x="8" y="274.66666666666669" width="398" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XW4-rP-blo" userLabel="Height">
@@ -174,7 +183,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mLq-V9-zK7" userLabel="Stack View 3">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mLq-V9-zK7" userLabel="Stack View 4">
                                 <rect key="frame" x="8" y="340.66666666666669" width="398" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIk-Jh-km0" userLabel="Actual Club">
@@ -215,7 +224,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZFa-u3-XSB" userLabel="Stack View 4">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZFa-u3-XSB" userLabel="Stack View 5">
                                 <rect key="frame" x="8" y="406.66666666666669" width="398" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4D-yE-UEE" userLabel="Bio">
@@ -256,7 +265,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rb0-5r-cER" userLabel="Stack View 5">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rb0-5r-cER" userLabel="Stack View 6">
                                 <rect key="frame" x="0.0" y="686" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWd-Mf-ZsO" customClass="CustomAcceptButton" customModule="FootNet" customModuleProvider="target">
@@ -278,7 +287,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Wws-xN-slF"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rvp-em-Slo" userLabel="Stack View 6">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rvp-em-Slo" userLabel="Stack View 7">
                                 <rect key="frame" x="0.0" y="686" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlB-oP-xUe" customClass="CustomFollowButton" customModule="FootNet" customModuleProvider="target">
@@ -306,16 +315,15 @@
                             <constraint firstItem="lwj-2a-jce" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="4fz-Nl-xBa"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="bottom" secondItem="Rvp-em-Slo" secondAttribute="bottom" id="Czr-EQ-OQL"/>
                             <constraint firstItem="Rb0-5r-cER" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" id="E90-Wb-5yX"/>
+                            <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="wny-4b-FJb" secondAttribute="trailing" constant="8" id="EGi-Ud-C99"/>
                             <constraint firstItem="mLq-V9-zK7" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="FQs-C3-os0"/>
-                            <constraint firstItem="OmZ-sK-ekb" firstAttribute="top" secondItem="Alr-Rk-i2o" secondAttribute="bottom" constant="16" id="POH-u4-elq"/>
                             <constraint firstItem="Rb0-5r-cER" firstAttribute="centerX" secondItem="ZFa-u3-XSB" secondAttribute="centerX" id="Qa0-7n-LfA"/>
                             <constraint firstItem="Rvp-em-Slo" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" id="TIU-9n-1uh"/>
-                            <constraint firstItem="lwj-2a-jce" firstAttribute="top" secondItem="nF0-sm-hVr" secondAttribute="bottom" constant="16" id="Wer-Gu-qk6"/>
                             <constraint firstItem="ZFa-u3-XSB" firstAttribute="top" secondItem="mLq-V9-zK7" secondAttribute="bottom" constant="16" id="Wrn-yL-xJr"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="kM4-rQ-Bwh" secondAttribute="trailing" constant="8" id="ZBQ-Uc-gV5"/>
                             <constraint firstItem="N6B-zw-4mi" firstAttribute="height" secondItem="Alr-Rk-i2o" secondAttribute="height" id="aOO-qk-9io"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="lwj-2a-jce" secondAttribute="trailing" constant="8" id="dDh-et-sSR"/>
-                            <constraint firstItem="nF0-sm-hVr" firstAttribute="top" secondItem="OmZ-sK-ekb" secondAttribute="bottom" constant="8" id="gM9-sq-Y3r"/>
+                            <constraint firstItem="wny-4b-FJb" firstAttribute="top" secondItem="Alr-Rk-i2o" secondAttribute="bottom" constant="16" id="gEu-9r-Oet"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="Rvp-em-Slo" secondAttribute="trailing" id="lZw-vs-qcl"/>
                             <constraint firstItem="Alr-Rk-i2o" firstAttribute="top" secondItem="A5e-IT-NHY" secondAttribute="top" constant="8" id="lvE-P8-CDd"/>
                             <constraint firstItem="Alr-Rk-i2o" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="t5P-dC-HjY"/>
@@ -324,8 +332,8 @@
                             <constraint firstItem="Rb0-5r-cER" firstAttribute="bottom" secondItem="A5e-IT-NHY" secondAttribute="bottom" id="v4j-Ba-iA0"/>
                             <constraint firstItem="N6B-zw-4mi" firstAttribute="top" secondItem="A5e-IT-NHY" secondAttribute="top" constant="8" id="w64-qh-T1j"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="N6B-zw-4mi" secondAttribute="trailing" constant="8" id="wcd-Jg-2k2"/>
-                            <constraint firstItem="nF0-sm-hVr" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="xCL-I0-aDi"/>
-                            <constraint firstItem="OmZ-sK-ekb" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="xbp-Q5-xLm"/>
+                            <constraint firstItem="wny-4b-FJb" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" constant="8" id="ytN-aO-MFF"/>
+                            <constraint firstItem="lwj-2a-jce" firstAttribute="top" secondItem="wny-4b-FJb" secondAttribute="bottom" constant="16" id="zzH-Da-gFN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A5e-IT-NHY"/>
                     </view>

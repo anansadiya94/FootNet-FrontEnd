@@ -442,6 +442,8 @@
 //profile
 "email_label"="Correo electrónico: ";
 "phone_label"="Móvil: ";
+"emailFollow_label"="Sígueme para ver mi correo electrónico";
+"phoneFollow_label"="Sígueme para ver mi número de teléfono";
 "sex_label"="Sexo: ";
 "birthday_label"="Fecha de nacimiento: ";
 "nationality_label"="Nacionalidad: ";

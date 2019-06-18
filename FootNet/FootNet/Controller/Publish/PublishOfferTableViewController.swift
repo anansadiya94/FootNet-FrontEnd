@@ -43,7 +43,7 @@ class PublishOfferTableViewController: UITableViewController {
     }
     
     private func setTabBarItem() {
-        self.title = "publishOffer_navTitle".localize()
+        title = "publishOffer_navTitle".localize()
     }
     
     private func createRightButton() {

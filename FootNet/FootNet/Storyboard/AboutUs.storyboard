@@ -18,21 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Develoeper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPl-Ku-NYh">
-                                <rect key="frame" x="128" y="237" width="119" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anan Sadiya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-Fv-O7s">
+                                <rect key="frame" x="140" y="36" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anan" translatesAutoresizingMaskIntoConstraints="NO" id="shJ-ne-rXh" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="84" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Jqi-i9-6yd"/>
-                                    <constraint firstAttribute="width" constant="100" id="n4k-ha-F01"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anan Sadiya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-Fv-O7s">
-                                <rect key="frame" x="140" y="200" width="95" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Develoeper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPl-Ku-NYh">
+                                <rect key="frame" x="128" y="73" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -103,18 +96,23 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anan" translatesAutoresizingMaskIntoConstraints="NO" id="shJ-ne-rXh" customClass="CustomImageView" customModule="FootNet" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="126" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Jqi-i9-6yd"/>
+                                    <constraint firstAttribute="width" constant="100" id="n4k-ha-F01"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="LPl-Ku-NYh" firstAttribute="top" secondItem="9gh-Fv-O7s" secondAttribute="bottom" constant="16" id="1Bu-WY-u94"/>
-                            <constraint firstItem="9gh-Fv-O7s" firstAttribute="top" secondItem="shJ-ne-rXh" secondAttribute="bottom" constant="16" id="7RK-EZ-obv"/>
                             <constraint firstItem="shJ-ne-rXh" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="HPD-jK-YM0"/>
                             <constraint firstItem="Xb8-ST-LEu" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="Hzp-dq-toZ"/>
                             <constraint firstItem="TIS-5o-bGZ" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="IPS-mG-Nox"/>
                             <constraint firstItem="RRU-cg-k2E" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="M4O-K8-jt0"/>
                             <constraint firstItem="RRU-cg-k2E" firstAttribute="top" secondItem="eX2-bz-lsg" secondAttribute="bottom" constant="8" id="NSW-8F-iOt"/>
+                            <constraint firstItem="eX2-bz-lsg" firstAttribute="top" secondItem="shJ-ne-rXh" secondAttribute="bottom" constant="64" id="O9n-6f-KAB"/>
                             <constraint firstItem="ggY-7P-ltB" firstAttribute="leading" secondItem="TIS-5o-bGZ" secondAttribute="trailing" constant="32" id="Ou1-Kw-IId"/>
                             <constraint firstItem="eX2-bz-lsg" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="PnH-0w-nlg"/>
-                            <constraint firstItem="eX2-bz-lsg" firstAttribute="top" secondItem="LPl-Ku-NYh" secondAttribute="bottom" constant="32" id="Raq-Bg-zwG"/>
                             <constraint firstItem="R5a-ux-chb" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="TaN-8v-kz6"/>
                             <constraint firstItem="75Y-Tv-5kt" firstAttribute="centerY" secondItem="TIS-5o-bGZ" secondAttribute="centerY" id="Vfu-Ah-837"/>
                             <constraint firstItem="TIS-5o-bGZ" firstAttribute="leading" secondItem="75Y-Tv-5kt" secondAttribute="trailing" constant="32" id="XT6-d3-1qr"/>
@@ -122,10 +120,12 @@
                             <constraint firstItem="Xb8-ST-LEu" firstAttribute="top" secondItem="RRU-cg-k2E" secondAttribute="bottom" constant="15" id="a7r-qk-aZP"/>
                             <constraint firstItem="ggY-7P-ltB" firstAttribute="centerY" secondItem="TIS-5o-bGZ" secondAttribute="centerY" id="bEs-vg-mO4"/>
                             <constraint firstItem="75Y-Tv-5kt" firstAttribute="top" secondItem="R5a-ux-chb" secondAttribute="bottom" constant="16" id="dTP-N6-UHh"/>
-                            <constraint firstItem="shJ-ne-rXh" firstAttribute="top" secondItem="Evg-j6-zco" secondAttribute="top" constant="64" id="ejW-dD-7kr"/>
                             <constraint firstItem="Evg-j6-zco" firstAttribute="bottom" secondItem="gJR-V3-u0B" secondAttribute="bottom" constant="16" id="f7w-dG-j8a"/>
+                            <constraint firstItem="LPl-Ku-NYh" firstAttribute="top" secondItem="9gh-Fv-O7s" secondAttribute="bottom" constant="16" id="kVB-6k-Gpa"/>
+                            <constraint firstItem="shJ-ne-rXh" firstAttribute="top" secondItem="LPl-Ku-NYh" secondAttribute="bottom" constant="32" id="l6O-4u-Chu"/>
                             <constraint firstItem="R5a-ux-chb" firstAttribute="top" secondItem="Xb8-ST-LEu" secondAttribute="bottom" constant="32" id="pKj-ou-Cf2"/>
                             <constraint firstItem="gJR-V3-u0B" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="v02-X2-waJ"/>
+                            <constraint firstItem="9gh-Fv-O7s" firstAttribute="top" secondItem="Evg-j6-zco" secondAttribute="top" constant="16" id="vY8-7C-UOW"/>
                             <constraint firstItem="LPl-Ku-NYh" firstAttribute="centerX" secondItem="OLp-AB-aoB" secondAttribute="centerX" id="w1n-0T-TLp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Evg-j6-zco"/>

@@ -18,11 +18,21 @@ class AboutUsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
+        setTabBarItem()
         configureOutlets()
         if !MFMailComposeViewController.canSendMail() {
             print("Mail services are not available")
             return
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
+    
+    private func setTabBarItem() {
+        title = "aboutUsLabel".localize()
     }
     
     private func configureOutlets() {

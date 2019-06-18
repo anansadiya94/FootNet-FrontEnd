@@ -127,6 +127,12 @@
 		9E93571E224111940036F23A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571D224111940036F23A /* SearchViewController.swift */; };
 		9E9357202241119F0036F23A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571F2241119F0036F23A /* NotificationsViewController.swift */; };
 		9E935722224116540036F23A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E935721224116540036F23A /* Home.storyboard */; };
+		9E9F49D022B8C86A00B07C18 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E82122720F2400267820 /* CustomImageView.swift */; };
+		9E9F49D122B8C86B00B07C18 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E82122720F2400267820 /* CustomImageView.swift */; };
+		9E9F49E122B8C8DF00B07C18 /* CustomContentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E079CB52293DE580060D0F3 /* CustomContentLabel.swift */; };
+		9E9F49E222B8C8DF00B07C18 /* CustomContentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E079CB52293DE580060D0F3 /* CustomContentLabel.swift */; };
+		9E9F49E322B8C8E700B07C18 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E80E22720F2400267820 /* UIColorExtension.swift */; };
+		9E9F49E422B8C8E800B07C18 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E80E22720F2400267820 /* UIColorExtension.swift */; };
 		9E9FBAB52292CE8300786A78 /* StaticDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB42292CE8300786A78 /* StaticDBManager.swift */; };
 		9E9FBAB72292D94300786A78 /* DisplayOfferDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB62292D94300786A78 /* DisplayOfferDetail.swift */; };
 		9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */; };
@@ -1199,9 +1205,11 @@
 				TargetAttributes = {
 					9E4E0747222593B200F8ED17 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					9E5DEE81224B986A0091CECB = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 						TestTargetID = 9E4E0747222593B200F8ED17;
 					};
 					9EC7FE61224A76EF00ACD562 = {
@@ -1579,8 +1587,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E07D983225E3412004A73A8 /* MainTabBarUITests.swift in Sources */,
+				9E9F49E222B8C8DF00B07C18 /* CustomContentLabel.swift in Sources */,
 				9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */,
 				9E07D981225E3063004A73A8 /* RightHomeUITests.swift in Sources */,
+				9E9F49D122B8C86B00B07C18 /* CustomImageView.swift in Sources */,
+				9E9F49E422B8C8E800B07C18 /* UIColorExtension.swift in Sources */,
 				9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */,
 				9E07D97F225E2CA1004A73A8 /* LeftHomeUITests.swift in Sources */,
 				9E813FA42299A4870051220C /* MyFriendTableViewCell.swift in Sources */,
@@ -1591,9 +1602,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9F49E122B8C8DF00B07C18 /* CustomContentLabel.swift in Sources */,
 				9EADBAAD224A881700C949DD /* SignInTests.swift in Sources */,
+				9E9F49D022B8C86A00B07C18 /* CustomImageView.swift in Sources */,
 				9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */,
 				9E813FA32299A4870051220C /* MyFriendTableViewCell.swift in Sources */,
+				9E9F49E322B8C8E700B07C18 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1793,7 +1807,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tempos21.FootNet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Generic App Development Tempos21";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1815,7 +1829,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tempos21.FootNet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "FootNet Distribution";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1835,7 +1849,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FootNet.demo.FootNetUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FootNet;
 			};
@@ -1856,7 +1870,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FootNet.demo.FootNetUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FootNet;
 			};
@@ -1880,7 +1894,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FootNet.demo.FootNetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootNet.app/FootNet";
 			};
@@ -1903,7 +1917,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FootNet.demo.FootNetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootNet.app/FootNet";
 			};

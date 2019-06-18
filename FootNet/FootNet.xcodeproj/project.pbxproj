@@ -61,7 +61,7 @@
 		9E5420D0223F9FA60098AC44 /* AppNavigationDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420CF223F9FA60098AC44 /* AppNavigationDrawerController.swift */; };
 		9E5420D2223FA3190098AC44 /* LeftHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D1223FA3190098AC44 /* LeftHome.storyboard */; };
 		9E5420D4223FA3270098AC44 /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5420D3223FA3270098AC44 /* AboutUs.storyboard */; };
-		9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */; };
+		9E5420D6223FA4070098AC44 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5420D5223FA4070098AC44 /* AboutUsViewController.swift */; };
 		9E56289D22840D4A003B4FE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289C22840D4A003B4FE2 /* User.swift */; };
 		9E56289F22840EAE003B4FE2 /* DisplaySearchedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */; };
 		9E5DEE79224B812F0091CECB /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */; };
@@ -124,7 +124,6 @@
 		9E935718224111700036F23A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E935717224111700036F23A /* HomeViewController.swift */; };
 		9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9357192241117C0036F23A /* OffersViewController.swift */; };
 		9E93571C224111870036F23A /* OffersStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571B224111870036F23A /* OffersStatusViewController.swift */; };
-		9E93571E224111940036F23A /* draft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571D224111940036F23A /* draft.swift */; };
 		9E9357202241119F0036F23A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571F2241119F0036F23A /* NotificationsViewController.swift */; };
 		9E935722224116540036F23A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E935721224116540036F23A /* Home.storyboard */; };
 		9E9F49D022B8C86A00B07C18 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E82122720F2400267820 /* CustomImageView.swift */; };
@@ -269,7 +268,7 @@
 		9E5420CF223F9FA60098AC44 /* AppNavigationDrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawerController.swift; sourceTree = "<group>"; };
 		9E5420D1223FA3190098AC44 /* LeftHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeftHome.storyboard; sourceTree = "<group>"; };
 		9E5420D3223FA3270098AC44 /* AboutUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUs.storyboard; sourceTree = "<group>"; };
-		9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHomeViewController.swift; sourceTree = "<group>"; };
+		9E5420D5223FA4070098AC44 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		9E56289C22840D4A003B4FE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySearchedUser.swift; sourceTree = "<group>"; };
 		9E5DEE78224B812F0091CECB /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
@@ -329,7 +328,6 @@
 		9E935717224111700036F23A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E9357192241117C0036F23A /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
 		9E93571B224111870036F23A /* OffersStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersStatusViewController.swift; sourceTree = "<group>"; };
-		9E93571D224111940036F23A /* draft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draft.swift; sourceTree = "<group>"; };
 		9E93571F2241119F0036F23A /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		9E935721224116540036F23A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9E9F49E522B8F92600B07C18 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -547,7 +545,7 @@
 				9ED511F2229AA2D200D01136 /* MyPublications */,
 				9ED511F3229AA2E300D01136 /* MyFriends */,
 				9ED511F4229AA2F000D01136 /* MyContacts */,
-				9E93571022410B830036F23A /* AboutMe */,
+				9E93571022410B830036F23A /* AboutUs */,
 				9E93570E22410B700036F23A /* MainTabBar */,
 				9E93571522410FFC0036F23A /* Home */,
 				9EB9A50022903B9600A57E25 /* Publish */,
@@ -875,12 +873,12 @@
 			path = LeftHome;
 			sourceTree = "<group>";
 		};
-		9E93571022410B830036F23A /* AboutMe */ = {
+		9E93571022410B830036F23A /* AboutUs */ = {
 			isa = PBXGroup;
 			children = (
-				9E5420D5223FA4070098AC44 /* RightHomeViewController.swift */,
+				9E5420D5223FA4070098AC44 /* AboutUsViewController.swift */,
 			);
-			path = AboutMe;
+			path = AboutUs;
 			sourceTree = "<group>";
 		};
 		9E93571122410F3D0036F23A /* Offers */ = {
@@ -897,7 +895,6 @@
 		9E93571222410F5D0036F23A /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				9E93571D224111940036F23A /* draft.swift */,
 				9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */,
 				9E9F49E522B8F92600B07C18 /* SearchViewController.swift */,
 			);
@@ -1507,7 +1504,6 @@
 				9E7C582822A2E0ED001A49C1 /* CustomRecoverPassword.swift in Sources */,
 				9E1B1368228F2021003908AE /* ProfileViewController.swift in Sources */,
 				9E82E82C22720F2400267820 /* Spinner.swift in Sources */,
-				9E93571E224111940036F23A /* draft.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
 				9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */,
@@ -1580,7 +1576,7 @@
 				9ECBB32A2299935300E93639 /* MyPublicationsViewController.swift in Sources */,
 				9EB3A6CD222D7909002F244E /* UserProfileModel.swift in Sources */,
 				9E1493E6228982E60035C6DD /* Common.swift in Sources */,
-				9E5420D6223FA4070098AC44 /* RightHomeViewController.swift in Sources */,
+				9E5420D6223FA4070098AC44 /* AboutUsViewController.swift in Sources */,
 				9E38FA87229EFF4600503187 /* APIRequest.swift in Sources */,
 				9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileViewCell.swift in Sources */,
 				9E82E83A22720F2400267820 /* SignUpService.swift in Sources */,

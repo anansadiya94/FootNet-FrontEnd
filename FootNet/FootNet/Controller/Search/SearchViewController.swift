@@ -69,6 +69,9 @@ class SearchViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search users"
+        searchController.searchBar.barStyle = .black
+        searchController.searchBar.tintColor = UIColor.colorSecondary
+        searchController.searchBar.keyboardAppearance = .dark
         self.parent?.navigationItem.searchController = searchController
         definesPresentationContext = true
     }

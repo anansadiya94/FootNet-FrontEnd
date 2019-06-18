@@ -32,6 +32,7 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
     
     private func setTabBarItem() {
         self.parent?.title = "offersStatusTabBar".localize()
+        tabBarItem.title = "offersStatusTabBar".localize()
     }
     
     private func setSegmentControl() {

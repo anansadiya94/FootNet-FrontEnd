@@ -124,7 +124,7 @@
 		9E935718224111700036F23A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E935717224111700036F23A /* HomeViewController.swift */; };
 		9E93571A2241117C0036F23A /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9357192241117C0036F23A /* OffersViewController.swift */; };
 		9E93571C224111870036F23A /* OffersStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571B224111870036F23A /* OffersStatusViewController.swift */; };
-		9E93571E224111940036F23A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571D224111940036F23A /* SearchViewController.swift */; };
+		9E93571E224111940036F23A /* draft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571D224111940036F23A /* draft.swift */; };
 		9E9357202241119F0036F23A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93571F2241119F0036F23A /* NotificationsViewController.swift */; };
 		9E935722224116540036F23A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E935721224116540036F23A /* Home.storyboard */; };
 		9E9F49D022B8C86A00B07C18 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E82122720F2400267820 /* CustomImageView.swift */; };
@@ -133,6 +133,9 @@
 		9E9F49E222B8C8DF00B07C18 /* CustomContentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E079CB52293DE580060D0F3 /* CustomContentLabel.swift */; };
 		9E9F49E322B8C8E700B07C18 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E80E22720F2400267820 /* UIColorExtension.swift */; };
 		9E9F49E422B8C8E800B07C18 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E80E22720F2400267820 /* UIColorExtension.swift */; };
+		9E9F49E622B8F92600B07C18 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F49E522B8F92600B07C18 /* SearchViewController.swift */; };
+		9E9F49E722B8F92600B07C18 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F49E522B8F92600B07C18 /* SearchViewController.swift */; };
+		9E9F49E822B8F92600B07C18 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F49E522B8F92600B07C18 /* SearchViewController.swift */; };
 		9E9FBAB52292CE8300786A78 /* StaticDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB42292CE8300786A78 /* StaticDBManager.swift */; };
 		9E9FBAB72292D94300786A78 /* DisplayOfferDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB62292D94300786A78 /* DisplayOfferDetail.swift */; };
 		9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */; };
@@ -326,9 +329,10 @@
 		9E935717224111700036F23A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E9357192241117C0036F23A /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
 		9E93571B224111870036F23A /* OffersStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersStatusViewController.swift; sourceTree = "<group>"; };
-		9E93571D224111940036F23A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9E93571D224111940036F23A /* draft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draft.swift; sourceTree = "<group>"; };
 		9E93571F2241119F0036F23A /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		9E935721224116540036F23A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		9E9F49E522B8F92600B07C18 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9E9FBAB42292CE8300786A78 /* StaticDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDBManager.swift; sourceTree = "<group>"; };
 		9E9FBAB62292D94300786A78 /* DisplayOfferDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOfferDetail.swift; sourceTree = "<group>"; };
 		9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -893,8 +897,9 @@
 		9E93571222410F5D0036F23A /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				9E93571D224111940036F23A /* SearchViewController.swift */,
+				9E93571D224111940036F23A /* draft.swift */,
 				9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */,
+				9E9F49E522B8F92600B07C18 /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -1502,7 +1507,7 @@
 				9E7C582822A2E0ED001A49C1 /* CustomRecoverPassword.swift in Sources */,
 				9E1B1368228F2021003908AE /* ProfileViewController.swift in Sources */,
 				9E82E82C22720F2400267820 /* Spinner.swift in Sources */,
-				9E93571E224111940036F23A /* SearchViewController.swift in Sources */,
+				9E93571E224111940036F23A /* draft.swift in Sources */,
 				9E1B1E202225A55600C82019 /* BaseViewController.swift in Sources */,
 				9E4E074C222593B200F8ED17 /* AppDelegate.swift in Sources */,
 				9E8D8D22223AB90700A8A880 /* ValidateSignInForm.swift in Sources */,
@@ -1542,6 +1547,7 @@
 				9EE8917722A7C1010040B424 /* CustomAcceptButton.swift in Sources */,
 				9E813FA22299A22F0051220C /* MyFriendTableViewCell.swift in Sources */,
 				9EB24E992227F1EB004B0C66 /* DisplaySignUpSelectProfileCell.swift in Sources */,
+				9E9F49E622B8F92600B07C18 /* SearchViewController.swift in Sources */,
 				9ED9BF34227848C9004F4D13 /* OfferTableViewCell.swift in Sources */,
 				9E8CB802228D893F00D285A0 /* OfferDetailViewController.swift in Sources */,
 				9E82E82422720F2400267820 /* CustomChoosePhotoButton.swift in Sources */,
@@ -1590,6 +1596,7 @@
 				9E9F49E222B8C8DF00B07C18 /* CustomContentLabel.swift in Sources */,
 				9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */,
 				9E07D981225E3063004A73A8 /* RightHomeUITests.swift in Sources */,
+				9E9F49E822B8F92600B07C18 /* SearchViewController.swift in Sources */,
 				9E9F49D122B8C86B00B07C18 /* CustomImageView.swift in Sources */,
 				9E9F49E422B8C8E800B07C18 /* UIColorExtension.swift in Sources */,
 				9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */,
@@ -1607,6 +1614,7 @@
 				9E9F49D022B8C86A00B07C18 /* CustomImageView.swift in Sources */,
 				9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */,
 				9E813FA32299A4870051220C /* MyFriendTableViewCell.swift in Sources */,
+				9E9F49E722B8F92600B07C18 /* SearchViewController.swift in Sources */,
 				9E9F49E322B8C8E700B07C18 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

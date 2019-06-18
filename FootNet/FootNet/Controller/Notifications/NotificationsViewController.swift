@@ -25,6 +25,7 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     private func setTabBarItem() {
         self.parent?.title = "notificationsTabBar".localize()
+        tabBarItem.title = "notificationsTabBar".localize()
     }
     
     func generateDisplayNotificationCell() -> [DisplayNotificationCell] {

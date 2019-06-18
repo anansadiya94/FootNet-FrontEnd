@@ -36,6 +36,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func setTabBarItem() {
         self.parent?.title = "homeTabBar".localize()
+        tabBarItem.title = "homeTabBar".localize()
     }
 
     func generateDisplayTextHomeCells() -> [DisplayTextHomeCell] {

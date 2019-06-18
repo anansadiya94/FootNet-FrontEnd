@@ -30,6 +30,7 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     private func setTabBarItem() {
         self.parent?.title = "offersTabBar".localize()
+        tabBarItem.title = "offersTabBar".localize()
     }
     
     func generateDisplayOfferCells() -> [DisplayOffercell] {

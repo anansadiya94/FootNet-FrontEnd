@@ -1,17 +1,17 @@
 //
-//  SearchNavViewController.swift
+//  SearchViewController.swift
 //  FootNet
 //
-//  Created by Anan Sadiya on 18/06/2019.
+//  Created by Anan Sadiya on 19/03/2019.
 //  Copyright © 2019 FootNet. All rights reserved.
 //
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class draft: UIViewController {
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultsTableView: UITableView!
     
-    let searchController = UISearchController(searchResultsController: nil)
     let lottieAnimation = LottieAnimation()
     var displayUsers = [DisplaySearchedUser]()
     var filteredDisplayUsers = [DisplaySearchedUser]()
@@ -22,10 +22,9 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
         setBackground()
         setTabBarItem()
-        setNavigationController()
+        setSearchBar()
         generateDisplayUsers()
         //create lottie animation Spinner
         lottieAnimation.createLottieAnimation(view: view)
@@ -34,7 +33,6 @@ class SearchViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setTabBarItem()
-        setNavigationController()
         displayUsers = []
         generateDisplayUsers()
         guard let selectedIndexPath = selectedIndexPath else {return}
@@ -42,15 +40,16 @@ class SearchViewController: UIViewController {
         resultsTableView.reloadRows(at: [selectedIndexPath], with: .automatic)
         resultsTableView.endUpdates()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.parent?.navigationItem.searchController = nil
-    }
-    
+
     private func setTabBarItem() {
         self.parent?.title = "searchTabBar".localize()
-        tabBarItem.title = "searchTabBar".localize()
+    }
+    
+    private func setSearchBar() {
+        searchBar.delegate = self as UISearchBarDelegate
+        searchBar.tintColor = UIColor.colorPrimary
+        searchBar.barTintColor = UIColor.colorSecondary
+        searchBar.keyboardAppearance = .dark
     }
     
     private func generateDisplayUsers() {
@@ -63,14 +62,6 @@ class SearchViewController: UIViewController {
             }
         }
         displayUsers.sort() { $0.fullName.lowercased() < $1.fullName.lowercased() }
-    }
-    
-    private func setNavigationController() {
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search users"
-        self.parent?.navigationItem.searchController = searchController
-        definesPresentationContext = true
     }
     
     @IBAction func customFollowButtonTapped(_ sender: CustomFollowButton) {
@@ -97,9 +88,13 @@ class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension draft: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.searching ? filteredDisplayUsers.count : displayUsers.count
+        if searching {
+            return filteredDisplayUsers.count
+        } else {
+            return displayUsers.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -114,22 +109,33 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
+        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        if searching {
+            profileViewController.userId = self.filteredDisplayUsers[indexPath.row].id
+            profileViewController.viewProfileType = .VisitProfile
+        } else {
+            profileViewController.userId = self.displayUsers[indexPath.row].id
+            profileViewController.viewProfileType = .VisitProfile
+        }
+        title = " "
+        navigationController?.pushViewController(profileViewController, animated: true)
     }
 }
 
-extension SearchViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        if let text = searchController.searchBar.text, !text.isEmpty {
-            searchTextString = text
-            filteredDisplayUsers = generatefilteredDisplayUsers(displayUsers, searchTextString)
-            searching = true
-        }
-        else {
-            searching = false
-            filteredDisplayUsers  = [DisplaySearchedUser]()
-        }
+extension draft: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searching = true
+        searchTextString = searchText
+        filteredDisplayUsers = generatefilteredDisplayUsers(displayUsers, searchTextString)
+        resultsTableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
         resultsTableView.reloadData()
     }
 }

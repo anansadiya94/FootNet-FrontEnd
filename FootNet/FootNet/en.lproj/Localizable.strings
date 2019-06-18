@@ -191,6 +191,7 @@
 //Offers
 "filter_button"="Filter";
 "seeMore_button"="See more";
+"offerDetail_title"="Offer details";
 
 //Offer detail
 "request_button"="Request";
@@ -491,3 +492,8 @@
 "recoverPassword_subject"=" [EN] Recover password";
 "recoverPassword_content1"="Hi, \n my email is: ";
 "recoverPassword_content2"="\nI'd like to recover my password. \nThanks";
+
+//Profile types
+"myProfileTitle"="My profile";
+"requestedProfileTitle"="Requested profile";
+"searchedProfileTitle"="Searched profile";

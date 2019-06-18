@@ -23,9 +23,19 @@ class OfferDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
+        setTabBarItem()
         configureUI()
         //create lottie animation Spinner
         lottieAnimation.createLottieAnimation(view: view)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
+    
+    private func setTabBarItem() {
+        self.title = "offerDetail_title".localize()
     }
     
     private func generateOfferDetails() -> DisplayOfferDetail? {

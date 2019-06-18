@@ -191,6 +191,7 @@
 //Offers
 "filter_button"="Filtrar";
 "seeMore_button"="Veure més";
+"offerDetail_title"="Detalls de l’oferta";
 
 //Offer detail
 "request_button"="Sol·licitud";
@@ -490,3 +491,8 @@
 "recoverPassword_subject"=" [CA] Recuperar contrasenya";
 "recoverPassword_content1"="Hola, \n El meu correu és:";
 "recoverPassword_content2"="\nM'agradaria recuperar la meva contrasenya. \nGràcies!";
+
+//Profile types
+"myProfileTitle"="El meu perfil";
+"requestedProfileTitle"="Perfil sol·licitat";
+"searchedProfileTitle"="Perfil buscat";

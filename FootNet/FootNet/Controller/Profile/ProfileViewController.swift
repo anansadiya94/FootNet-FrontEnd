@@ -66,9 +66,11 @@ class ProfileViewController: UIViewController {
     private func setTabBarItem() {
         switch viewProfileType {
         case .MyProfile:
-            title = "myProfileLabel".localize()
-        default:
-            title = ""
+            title = "myProfileTitle".localize()
+        case .RequestedProfile:
+            title = "requestedProfileTitle".localize()
+        case .VisitProfile:
+            title = "searchedProfileTitle".localize()
         }
     }
     

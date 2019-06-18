@@ -116,9 +116,20 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
+        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        if searching {
+            profileViewController.userId = self.filteredDisplayUsers[indexPath.row].id
+            profileViewController.viewProfileType = .VisitProfile
+        } else {
+            profileViewController.userId = self.displayUsers[indexPath.row].id
+            profileViewController.viewProfileType = .VisitProfile
+        }
+        title = " "
+        navigationController?.pushViewController(profileViewController, animated: true)
     }
 }
 

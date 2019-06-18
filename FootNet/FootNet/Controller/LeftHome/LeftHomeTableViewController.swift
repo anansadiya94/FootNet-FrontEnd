@@ -10,6 +10,7 @@ import UIKit
 
 protocol AppNavigationDrawerDelegate: class {
     func closeLeftView()
+    func closeRightView()
 }
 
 class LeftHomeTableViewController: UITableViewController {
@@ -34,7 +35,7 @@ class LeftHomeTableViewController: UITableViewController {
     }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return 10
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,6 +58,8 @@ class LeftHomeTableViewController: UITableViewController {
             return signOutLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         case 8:
             return deactivateLeftHomeCell(TableView: tableView, IndexPath: indexPath)
+        case 9:
+            return abouUsLeftHomeCell(TableView: tableView, IndexPath: indexPath)
         default:
             break
         }
@@ -135,6 +138,14 @@ class LeftHomeTableViewController: UITableViewController {
         return UITableViewCell()
     }
     
+    func abouUsLeftHomeCell(TableView tableView: UITableView, IndexPath indexPath: IndexPath) -> UITableViewCell {
+        if let cell: LeftHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "aboutUsLeftHomeCell", for: indexPath) as? LeftHomeTableViewCell {
+            cell.aboutUsLabel.text = "aboutUsLabel".localize()
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
     //cell height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
@@ -166,6 +177,9 @@ class LeftHomeTableViewController: UITableViewController {
             signOutTapped()
         case 8:
             deactivateAccoutTapped()
+        case 9:
+            delegate?.closeLeftView()
+            NotificationCenter.default.post(name: Notification.Name("aboutUsTapped"), object: self)
         default:
             break
         }

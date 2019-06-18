@@ -165,6 +165,7 @@
 "signOut_alert"="Estàs segur que vols tancar sessió?";
 "deactivateAccoutLabel"="Desactivar compte";
 "deactivateAccout_alert"="Estàs segur que vols desactivar el teu compte?";
+"aboutUsLabel"="Nosaltres";
 
 //My friends
 "followers_scTitle"="Seguidors";
@@ -460,20 +461,23 @@
 "reejct_button"="Rebutjar";
 
 //publish
-"publish_sectionHeader"="Què voleu publicar?";
+"publish_sectionHeader"="Vull publicar:";
 "publish_offer"="Oferta";
 "publish_text"="Text";
 "publish_photo"="Foto";
 
 //publish offer
+"publishOffer_navTitle"="Publicar oferta";
 "publishOffer_title"="Edita per afegir el títol de la teva oferta";
 "publishOffer_text"="Edita per afegir el text de la teva oferta";
 "publishOffer_photoLabel"="La Foto de l'oferta";
 
 //publish text
+"publishText_navTitle"="Publicar text";
 "publishText_title"="Editar per agregar el teu text de publicació";
 
 //publish photo
+"publishPhoto_navTitle"="Publicar foto";
 "publishPhoto_photoLabel"="La foto de la publicació";
 
 //Edit profile

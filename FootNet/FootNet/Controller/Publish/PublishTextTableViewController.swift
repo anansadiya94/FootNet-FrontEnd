@@ -19,12 +19,21 @@ class PublishTextTableViewController: UITableViewController {
         super.viewDidLoad()
         userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
+        setTabBarItem()
         createRightButton()
+        configureUI()
         
         //create lottie animation Spinner
         lottieAnimation.createLottieAnimation(view: view)
-        
-        configureUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
+    
+    private func setTabBarItem() {
+        self.title = "publishText_navTitle".localize()
     }
     
     private func createRightButton() {

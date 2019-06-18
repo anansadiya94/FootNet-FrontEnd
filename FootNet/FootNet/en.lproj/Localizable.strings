@@ -165,6 +165,7 @@
 "signOut_alert"="Are you sure you want to sign out?";
 "deactivateAccoutLabel"="Deactivate account";
 "deactivateAccout_alert"="Are you sure you want to deactivate your account?";
+"aboutUsLabel"="About Us";
 
 //My friends
 "followers_scTitle"="Followers";
@@ -460,21 +461,24 @@
 "reejct_button"="Reject";
 
 //publish
-"publish_sectionHeader"="What would you like to publish?";
+"publish_sectionHeader"="I want to publish:";
 "publish_offer"="Offer";
 "publish_text"="Text";
 "publish_photo"="Photo";
 
 //publish offer
+"publishOffer_navTitle"="Publish offer";
 "publishOffer_title"="Edit to add your offer title";
 "publishOffer_text"="Edit to add your offer text";
 "publishOffer_photoLabel"="Offer Photo";
 "publishOffer_PhotoButton"="Click here to change the default photo";
 
 //publish text
+"publishText_navTitle"="Publish text";
 "publishText_title"="Edit to add your publication text";
 
 //publish photo
+"publishPhoto_navTitle"="Publish photo";
 "publishPhoto_photoLabel"="Publication Photo";
 
 //Edit profile

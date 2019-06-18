@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Right Home View Controller-->
+        <!--About Us View Controller-->
         <scene sceneID="qP1-yi-Ly0">
             <objects>
-                <viewController storyboardIdentifier="RightHomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Imw-xR-NAz" customClass="RightHomeViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutUsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Imw-xR-NAz" customClass="AboutUsViewController" customModule="FootNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OLp-AB-aoB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -104,7 +104,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.16078431369999999" green="0.79607843140000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LPl-Ku-NYh" firstAttribute="top" secondItem="9gh-Fv-O7s" secondAttribute="bottom" constant="16" id="1Bu-WY-u94"/>
                             <constraint firstItem="9gh-Fv-O7s" firstAttribute="top" secondItem="shJ-ne-rXh" secondAttribute="bottom" constant="16" id="7RK-EZ-obv"/>

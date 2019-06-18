@@ -26,6 +26,7 @@ class PublishOfferTableViewController: UITableViewController {
         super.viewDidLoad()
         userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
+        setTabBarItem()
         createRightButton()
         configureUI()
         
@@ -34,6 +35,15 @@ class PublishOfferTableViewController: UITableViewController {
         
         //create lottie animation Spinner
         lottieAnimation.createLottieAnimation(view: view)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
+    
+    private func setTabBarItem() {
+        self.title = "publishOffer_navTitle".localize()
     }
     
     private func createRightButton() {

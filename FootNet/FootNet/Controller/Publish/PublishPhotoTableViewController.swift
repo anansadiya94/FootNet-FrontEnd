@@ -22,6 +22,7 @@ class PublishPhotoTableViewController: UITableViewController {
         super.viewDidLoad()
         userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
+        setTabBarItem()
         createRightButton()
         configureUI()
         
@@ -33,6 +34,15 @@ class PublishPhotoTableViewController: UITableViewController {
         
         //create lottie animation Spinner
         lottieAnimation.createLottieAnimation(view: view)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
+    
+    private func setTabBarItem() {
+        self.title = "publishPhoto_navTitle".localize()
     }
     
     private func createRightButton() {

@@ -9,12 +9,14 @@
 import UIKit
 
 class PublishTableViewController: UITableViewController {
+    weak var delegate: AppNavigationDrawerDelegate?
     var displayPublishCell = [DisplayPublishCell]()
     private var profileType: HomeCellType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackground()
+        view.backgroundColor = UIColor.colorSecondary
+        tableView.tableFooterView = UIView(frame: .zero)
         displayPublishCell = [
             DisplayPublishCell(img: "offersTabBar", title: "publish_offer".localize(), type: .Offer),
             DisplayPublishCell(img: "publishText", title: "publish_text".localize(), type: .Text),
@@ -44,24 +46,22 @@ class PublishTableViewController: UITableViewController {
         let section = "publish_sectionHeader".localize()
         return section
     }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            let publishOfferStoryboard = UIStoryboard(name: "PublishOffer", bundle: nil)
-            let publishOfferTableViewController = publishOfferStoryboard.instantiateViewController(withIdentifier: "PublishOfferTableViewController")
-            title = " "
-            navigationController?.pushViewController(publishOfferTableViewController, animated: true)
+            delegate?.closeRightView()
+            NotificationCenter.default.post(name: Notification.Name("publishOfferTapped"), object: self)
         case 1:
-            let publishOfferStoryboard = UIStoryboard(name: "PublishText", bundle: nil)
-            let publishOfferTableViewController = publishOfferStoryboard.instantiateViewController(withIdentifier: "PublishTextTableViewController")
-            title = " "
-            navigationController?.pushViewController(publishOfferTableViewController, animated: true)
+            delegate?.closeRightView()
+            NotificationCenter.default.post(name: Notification.Name("publishTextTapped"), object: self)
         case 2:
-            let publishOfferStoryboard = UIStoryboard(name: "PublishPhoto", bundle: nil)
-            let publishOfferTableViewController = publishOfferStoryboard.instantiateViewController(withIdentifier: "PublishPhotoTableViewController")
-            title = " "
-            navigationController?.pushViewController(publishOfferTableViewController, animated: true)
+            delegate?.closeRightView()
+            NotificationCenter.default.post(name: Notification.Name("publishPhotoTapped"), object: self)
         default:
             return
         }

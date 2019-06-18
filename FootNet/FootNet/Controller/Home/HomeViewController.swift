@@ -9,7 +9,6 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var publishButton: CustomPublishButton!
     @IBOutlet weak var tableView: UITableView!
     
     var displayTextHomeCells = [DisplayTextHomeCell]()
@@ -23,7 +22,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         userId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
         setTabBarItem()
-        setPublishButton()
         registerNib()
         displayTextHomeCells = generateDisplayTextHomeCells()
         displayPhotoHomeCells = generateDisplayPhotoHomeCells()
@@ -89,10 +87,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         homeCells = homeCells.sorted(by: { $0.date.compare($1.date) == .orderedDescending })
         return homeCells
-    }
-    
-    private func setPublishButton() {
-        publishButton.setTitle("publish_button".localize(), for: .normal)
     }
     
     private func registerNib() {

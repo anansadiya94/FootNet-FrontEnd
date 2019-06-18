@@ -19,6 +19,7 @@ class LeftHomeTableViewCell: UITableViewCell {
     @IBOutlet weak var editProfileLabel: CustomLeftHomeLabel!
     @IBOutlet weak var signOutLabel: CustomLeftHomeLabel!
     @IBOutlet weak var deactivateAccountLabel: CustomLeftHomeLabel!
+    @IBOutlet weak var aboutUsLabel: CustomLeftHomeLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

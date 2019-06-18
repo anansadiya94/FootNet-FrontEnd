@@ -1,5 +1,5 @@
 //
-//  RightHomeViewController.swift
+//  AboutUsViewController
 //  FootNet
 //
 //  Created by Anan Sadiya on 18/03/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class RightHomeViewController: UIViewController {
+class AboutUsViewController: UIViewController {
     @IBOutlet weak var workLabel: UILabel!
     @IBOutlet weak var doubtEmailMessageLabel: UILabel!
     @IBOutlet weak var donateEmailMessageLabel: UILabel!
@@ -17,7 +17,7 @@ class RightHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.colorSecondary
+        setBackground()
         configureOutlets()
         if !MFMailComposeViewController.canSendMail() {
             print("Mail services are not available")
@@ -72,7 +72,7 @@ class RightHomeViewController: UIViewController {
     }
 }
 
-extension RightHomeViewController: MFMailComposeViewControllerDelegate {
+extension AboutUsViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }

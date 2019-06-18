@@ -22,6 +22,7 @@ class MainTabBarController: UITabBarController {
         for viewController in self.viewControllers! {
             _ = viewController.view
         }
+        setNavigationController()
         setTabBar()
         addObservers()
     }
@@ -34,6 +35,12 @@ class MainTabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         title = "   "
+    }
+    
+    private func setNavigationController() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.colorText]
+        definesPresentationContext = true
     }
     
     private func setTabBar() {
@@ -58,6 +65,11 @@ class MainTabBarController: UITabBarController {
         NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.myFriendsTapped), name: Notification.Name("myFriendsTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.myContactsTapped), name: Notification.Name("myContactsTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.editProfileTapped), name: Notification.Name("editProfileTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.aboutUsTapped), name: Notification.Name("aboutUsTapped"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.publishOfferTapped), name: Notification.Name("publishOfferTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.publishTextTapped), name: Notification.Name("publishTextTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainTabBarController.publishPhotoTapped), name: Notification.Name("publishPhotoTapped"), object: nil)
     }
     
     deinit {
@@ -116,6 +128,34 @@ class MainTabBarController: UITabBarController {
         let signInStoryboard = UIStoryboard(name: "SignIn", bundle: nil)
         let signInViewController = signInStoryboard.instantiateViewController(withIdentifier: "SignInViewController")
         self.present(signInViewController, animated: true, completion: nil)
+    }
+    
+    @objc func aboutUsTapped() {
+        let aboutUsStoryboard = UIStoryboard(name: "AboutUs", bundle: nil)
+        let aboutUsViewController = aboutUsStoryboard.instantiateViewController(withIdentifier: "AboutUsViewController")
+        title = " "
+        navigationController?.pushViewController(aboutUsViewController, animated: true)
+    }
+    
+    @objc func publishOfferTapped() {
+        let publishOfferStoryboard = UIStoryboard(name: "PublishOffer", bundle: nil)
+        let publishOfferViewController = publishOfferStoryboard.instantiateViewController(withIdentifier: "PublishOfferTableViewController")
+        title = "   "
+        navigationController?.pushViewController(publishOfferViewController, animated: true)
+    }
+    
+    @objc func publishTextTapped() {
+        let publishTextStoryboard = UIStoryboard(name: "PublishText", bundle: nil)
+        let publishTextViewController = publishTextStoryboard.instantiateViewController(withIdentifier: "PublishTextTableViewController")
+        title = "   "
+        navigationController?.pushViewController(publishTextViewController, animated: true)
+    }
+    
+    @objc func publishPhotoTapped() {
+        let publishPhotoStoryboard = UIStoryboard(name: "PublishPhoto", bundle: nil)
+        let publishPhotoViewController = publishPhotoStoryboard.instantiateViewController(withIdentifier: "PublishPhotoTableViewController")
+        title = "   "
+        navigationController?.pushViewController(publishPhotoViewController, animated: true)
     }
 }
 

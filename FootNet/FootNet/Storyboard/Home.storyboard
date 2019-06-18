@@ -18,28 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMe-tB-7mP">
-                                <rect key="frame" x="8" y="28" width="359" height="29"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81w-iD-dkB" customClass="CustomPublishButton" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="29"/>
-                                        <state key="normal" title="Publish"/>
-                                        <connections>
-                                            <segue destination="hyC-J4-Bza" kind="show" identifier="publishSegue" id="F8M-YL-tC9"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="81w-iD-dkB" secondAttribute="bottom" id="D1x-KG-u9F"/>
-                                    <constraint firstAttribute="height" constant="29" id="duD-6L-jDs"/>
-                                    <constraint firstItem="81w-iD-dkB" firstAttribute="leading" secondItem="JMe-tB-7mP" secondAttribute="leading" id="nAh-L8-uJZ"/>
-                                    <constraint firstItem="81w-iD-dkB" firstAttribute="top" secondItem="JMe-tB-7mP" secondAttribute="top" id="rdN-7I-17Y"/>
-                                    <constraint firstAttribute="trailing" secondItem="81w-iD-dkB" secondAttribute="trailing" id="y2d-Ci-jvY"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l0Q-UT-xna">
-                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -50,13 +30,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="l0Q-UT-xna" firstAttribute="top" secondItem="81w-iD-dkB" secondAttribute="bottom" constant="8" id="Egm-bN-6H6"/>
-                            <constraint firstItem="cp3-aF-qYY" firstAttribute="bottom" secondItem="l0Q-UT-xna" secondAttribute="bottom" id="HR1-0G-Lto"/>
-                            <constraint firstItem="JMe-tB-7mP" firstAttribute="top" secondItem="cp3-aF-qYY" secondAttribute="top" constant="8" id="Hud-Xs-3Ej"/>
-                            <constraint firstItem="cp3-aF-qYY" firstAttribute="trailing" secondItem="l0Q-UT-xna" secondAttribute="trailing" id="Zw2-rf-Lzs"/>
-                            <constraint firstItem="l0Q-UT-xna" firstAttribute="leading" secondItem="cp3-aF-qYY" secondAttribute="leading" id="aiX-uR-H0S"/>
-                            <constraint firstItem="cp3-aF-qYY" firstAttribute="trailing" secondItem="JMe-tB-7mP" secondAttribute="trailing" constant="8" id="rFr-e9-DIA"/>
-                            <constraint firstItem="JMe-tB-7mP" firstAttribute="leading" secondItem="cp3-aF-qYY" secondAttribute="leading" constant="8" id="vgg-Dl-bhc"/>
+                            <constraint firstItem="l0Q-UT-xna" firstAttribute="bottom" secondItem="cp3-aF-qYY" secondAttribute="bottom" id="5o6-Ds-pjm"/>
+                            <constraint firstItem="l0Q-UT-xna" firstAttribute="leading" secondItem="cp3-aF-qYY" secondAttribute="leading" id="MDj-Y4-2BM"/>
+                            <constraint firstItem="l0Q-UT-xna" firstAttribute="trailing" secondItem="cp3-aF-qYY" secondAttribute="trailing" id="PDw-jp-aEQ"/>
+                            <constraint firstItem="l0Q-UT-xna" firstAttribute="top" secondItem="cp3-aF-qYY" secondAttribute="top" id="tCJ-5v-RlD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cp3-aF-qYY"/>
                     </view>
@@ -64,21 +41,12 @@
                         <color key="badgeColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="publishButton" destination="81w-iD-dkB" id="9ue-vk-PKK"/>
                         <outlet property="tableView" destination="l0Q-UT-xna" id="dMG-T6-JZw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwf-2X-Hef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-31" y="44"/>
-        </scene>
-        <!--Publish-->
-        <scene sceneID="cAu-1Y-Qev">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Publish" id="hyC-J4-Bza" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p6g-zA-MgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="692" y="-69"/>
         </scene>
     </scenes>
     <resources>

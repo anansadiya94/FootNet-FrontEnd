@@ -13,6 +13,10 @@ extension AppNavigationDrawer: AppNavigationDrawerDelegate {
     func closeLeftView() {
         appNavigationDrawerController?.closeLeftView()
     }
+    
+    func closeRightView() {
+        appNavigationDrawerController?.closeRightView()
+    }
 }
 
 class AppNavigationDrawer: UIViewController {
@@ -30,8 +34,10 @@ class AppNavigationDrawer: UIViewController {
             return viewController
         }()
         
-        let rightViewController: RightHomeViewController = {
-            return UIStoryboard.viewController(name: "RightHome", identifier: "RightHomeViewController") as! RightHomeViewController
+        let rightViewController: PublishTableViewController = {
+            let viewController = UIStoryboard.viewController(name: "Publish", identifier: "PublishTableViewController") as! PublishTableViewController
+            viewController.delegate = self
+            return viewController
         }()
         
         let navigationController = UINavigationController(rootViewController: mainViewController)
@@ -62,9 +68,7 @@ class AppNavigationDrawer: UIViewController {
     }
     
     private func setHomeRightButton(_ viewController: UIViewController) {
-        let homeRightButton = UIButton(type: .infoLight)
-        homeRightButton.addTarget(self, action: #selector(homeRightTapped), for: .touchUpInside)
-        let homeRightButtonItem = UIBarButtonItem(customView: homeRightButton)
+        let homeRightButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(homeRightTapped))
         homeRightButtonItem.customView?.tintColor = UIColor.colorText
         viewController.navigationItem.rightBarButtonItem = homeRightButtonItem
     }

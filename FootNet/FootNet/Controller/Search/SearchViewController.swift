@@ -42,7 +42,7 @@ class SearchViewController: UIViewController {
     }
 
     private func setTabBarItem() {
-        tabBarItem.title = "searchTabBar".localize()
+        self.parent?.title = "searchTabBar".localize()
     }
     
     private func setSearchBar() {

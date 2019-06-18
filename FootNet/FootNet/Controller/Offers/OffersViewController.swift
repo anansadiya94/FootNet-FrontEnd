@@ -28,6 +28,10 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
         setTabBarItem()
     }
     
+    private func setTabBarItem() {
+        self.parent?.title = "offersTabBar".localize()
+    }
+    
     func generateDisplayOfferCells() -> [DisplayOffercell] {
         for offerCellResponse in StaticDBManager.shared.requestOffers() {
             if let user = StaticDBManager.shared.requestUsersBasicInfo().filter({$0.id == offerCellResponse.userId}).first {
@@ -39,11 +43,7 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
         displayOfferCells = displayOfferCells.sorted(by: { $0.publicationDate.compare($1.publicationDate) == .orderedDescending })
         return displayOfferCells
     }
-    
-    private func setTabBarItem() {
-        tabBarItem.title = "offersTabBar".localize()
-    }
-    
+
     private func setFilterButton() {
         filterButton.setTitle("filter_button".localize(), for: .normal)
     }

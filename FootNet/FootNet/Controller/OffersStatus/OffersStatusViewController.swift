@@ -25,8 +25,13 @@ class OffersStatusViewController: UIViewController, UITableViewDelegate, UITable
         setSegmentControl()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setTabBarItem()
+    }
+    
     private func setTabBarItem() {
-        tabBarItem.title = "offersStatusTabBar".localize()
+        self.parent?.title = "offersStatusTabBar".localize()
     }
     
     private func setSegmentControl() {

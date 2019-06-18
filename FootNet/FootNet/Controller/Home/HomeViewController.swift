@@ -35,6 +35,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidAppear(animated)
         setTabBarItem()
     }
+    
+    private func setTabBarItem() {
+        self.parent?.title = "homeTabBar".localize()
+    }
 
     func generateDisplayTextHomeCells() -> [DisplayTextHomeCell] {
         for textHomeCellResponse in StaticDBManager.shared.requestTextPublications() {
@@ -85,10 +89,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         homeCells = homeCells.sorted(by: { $0.date.compare($1.date) == .orderedDescending })
         return homeCells
-    }
-    
-    private func setTabBarItem() {
-        tabBarItem.title = "homeTabBar".localize()
     }
     
     private func setPublishButton() {

@@ -9,7 +9,6 @@
 import UIKit
 
 class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var filterButton: CustomFilterButton!
     @IBOutlet weak var tableView: UITableView!
     
     var displayOfferCells = [DisplayOffercell]()
@@ -18,7 +17,6 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         setBackground()
         setTabBarItem()
-        setFilterButton()
         registerNib()
         displayOfferCells = generateDisplayOfferCells()
     }
@@ -43,10 +41,6 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         displayOfferCells = displayOfferCells.sorted(by: { $0.publicationDate.compare($1.publicationDate) == .orderedDescending })
         return displayOfferCells
-    }
-
-    private func setFilterButton() {
-        filterButton.setTitle("filter_button".localize(), for: .normal)
     }
     
     private func registerNib() {

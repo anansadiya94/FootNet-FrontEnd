@@ -40,6 +40,7 @@ class MainTabBarController: UITabBarController {
     private func setNavigationController() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.colorText]
+        self.navigationItem.searchController = nil
         definesPresentationContext = true
     }
     

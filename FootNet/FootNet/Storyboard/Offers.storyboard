@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-a9-FYf">
-                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -27,39 +27,18 @@
                                     <outlet property="delegate" destination="EOw-hq-53r" id="bJJ-hL-FJH"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCg-7o-Ccc">
-                                <rect key="frame" x="8" y="28" width="359" height="29"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er2-Mj-JGX" customClass="CustomFilterButton" customModule="FootNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="29"/>
-                                        <state key="normal" title="Filter"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="1mx-QE-dzh"/>
-                                    <constraint firstAttribute="trailing" secondItem="er2-Mj-JGX" secondAttribute="trailing" id="hXj-Nz-yaI"/>
-                                    <constraint firstItem="er2-Mj-JGX" firstAttribute="leading" secondItem="eCg-7o-Ccc" secondAttribute="leading" id="tXe-4b-iKp"/>
-                                    <constraint firstAttribute="bottom" secondItem="er2-Mj-JGX" secondAttribute="bottom" id="wes-eu-FYs"/>
-                                    <constraint firstItem="er2-Mj-JGX" firstAttribute="top" secondItem="eCg-7o-Ccc" secondAttribute="top" id="wrF-hM-WUK"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eCg-7o-Ccc" firstAttribute="leading" secondItem="CcZ-oa-AcK" secondAttribute="leading" constant="8" id="9xL-zM-Cfk"/>
-                            <constraint firstItem="CcZ-oa-AcK" firstAttribute="trailing" secondItem="IdT-a9-FYf" secondAttribute="trailing" id="Jjh-OU-PFv"/>
-                            <constraint firstItem="IdT-a9-FYf" firstAttribute="top" secondItem="eCg-7o-Ccc" secondAttribute="bottom" constant="8" id="MiG-WF-cXM"/>
-                            <constraint firstItem="CcZ-oa-AcK" firstAttribute="bottom" secondItem="IdT-a9-FYf" secondAttribute="bottom" id="TJX-t2-jYE"/>
-                            <constraint firstItem="CcZ-oa-AcK" firstAttribute="trailing" secondItem="eCg-7o-Ccc" secondAttribute="trailing" constant="8" id="Yws-pb-0DL"/>
-                            <constraint firstItem="eCg-7o-Ccc" firstAttribute="top" secondItem="CcZ-oa-AcK" secondAttribute="top" constant="8" id="tx4-So-jOL"/>
-                            <constraint firstItem="IdT-a9-FYf" firstAttribute="leading" secondItem="CcZ-oa-AcK" secondAttribute="leading" id="xpM-nB-DI0"/>
+                            <constraint firstItem="IdT-a9-FYf" firstAttribute="trailing" secondItem="CcZ-oa-AcK" secondAttribute="trailing" id="05B-Kb-Nme"/>
+                            <constraint firstItem="IdT-a9-FYf" firstAttribute="bottom" secondItem="CcZ-oa-AcK" secondAttribute="bottom" id="FtE-pA-wyE"/>
+                            <constraint firstItem="IdT-a9-FYf" firstAttribute="top" secondItem="CcZ-oa-AcK" secondAttribute="top" id="MqR-fV-sOD"/>
+                            <constraint firstItem="IdT-a9-FYf" firstAttribute="leading" secondItem="CcZ-oa-AcK" secondAttribute="leading" id="QFw-Vx-Nnj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CcZ-oa-AcK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Offers" image="offersTabBar" id="6SF-Rh-ncO"/>
                     <connections>
-                        <outlet property="filterButton" destination="er2-Mj-JGX" id="R6a-9H-2up"/>
                         <outlet property="tableView" destination="IdT-a9-FYf" id="tjC-jG-m06"/>
                     </connections>
                 </viewController>

@@ -29,6 +29,10 @@ class SignUpSelectProfileTableViewController: UITableViewController {
         navigationController?.navigationBar.topItem?.title = "signUp_navBarTitle".localize()
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.colorText]
         navigationController?.navigationBar.barTintColor = UIColor.colorBars
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.colorText]
+        self.navigationItem.searchController = nil
+        definesPresentationContext = true
     }
     
     //Back button navigationbar

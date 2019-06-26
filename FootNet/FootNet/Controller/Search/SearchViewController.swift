@@ -68,7 +68,7 @@ class SearchViewController: UIViewController {
     private func setNavigationController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search users"
+        searchController.searchBar.placeholder = "Search_users".localize()
         searchController.searchBar.barStyle = .black
         searchController.searchBar.tintColor = UIColor.colorSecondary
         searchController.searchBar.keyboardAppearance = .dark

@@ -75,6 +75,8 @@ class SignUpDetailTableViewController: UITableViewController, UITextFieldDelegat
         
         //Default image
         chosenImage = #imageLiteral(resourceName: "defaultProfilePhoto")
+        
+        title="signUp_navBarTitle".localize()
 
     }
     

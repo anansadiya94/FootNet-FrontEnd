@@ -187,6 +187,7 @@
 //Search
 "follow_button"="Follow";
 "following_button"="Following";
+"Search_users"="Search users";
 
 //Offers
 "filter_button"="Filter";
@@ -497,3 +498,4 @@
 "myProfileTitle"="My profile";
 "requestedProfileTitle"="Requested profile";
 "searchedProfileTitle"="Searched profile";
+

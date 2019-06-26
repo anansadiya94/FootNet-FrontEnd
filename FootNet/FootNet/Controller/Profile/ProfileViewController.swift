@@ -181,10 +181,12 @@ class ProfileViewController: UIViewController {
     
     private func configureUserBio() {
         bioLabel.text = "bio_label".localize() + userBio
+        bioLabel.adjustsFontSizeToFitWidth = true
     }
     
     private func configureUserRecord() {
         recordLabel.text = "record_label".localize() + userRecord
+        recordLabel.adjustsFontSizeToFitWidth = true
     }
     
     private func profileTypeToString (profileType: ProfileType) -> String {

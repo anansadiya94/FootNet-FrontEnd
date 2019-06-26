@@ -320,8 +320,10 @@
                             <constraint firstItem="Rb0-5r-cER" firstAttribute="centerX" secondItem="ZFa-u3-XSB" secondAttribute="centerX" id="Qa0-7n-LfA"/>
                             <constraint firstItem="Rvp-em-Slo" firstAttribute="leading" secondItem="A5e-IT-NHY" secondAttribute="leading" id="TIU-9n-1uh"/>
                             <constraint firstItem="ZFa-u3-XSB" firstAttribute="top" secondItem="mLq-V9-zK7" secondAttribute="bottom" constant="16" id="Wrn-yL-xJr"/>
+                            <constraint firstItem="MlB-oP-xUe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nqn-zl-8Pp" secondAttribute="bottom" constant="8" id="Z5z-XH-Ybe"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="kM4-rQ-Bwh" secondAttribute="trailing" constant="8" id="ZBQ-Uc-gV5"/>
                             <constraint firstItem="N6B-zw-4mi" firstAttribute="height" secondItem="Alr-Rk-i2o" secondAttribute="height" id="aOO-qk-9io"/>
+                            <constraint firstItem="MlB-oP-xUe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PhY-hZ-LCt" secondAttribute="bottom" constant="8" id="bp0-J2-UlJ"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="lwj-2a-jce" secondAttribute="trailing" constant="8" id="dDh-et-sSR"/>
                             <constraint firstItem="wny-4b-FJb" firstAttribute="top" secondItem="Alr-Rk-i2o" secondAttribute="bottom" constant="16" id="gEu-9r-Oet"/>
                             <constraint firstItem="A5e-IT-NHY" firstAttribute="trailing" secondItem="Rvp-em-Slo" secondAttribute="trailing" id="lZw-vs-qcl"/>

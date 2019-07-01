@@ -137,8 +137,8 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         enablaDisableButtons()
         
         //Comment for testing
-        emailTextField.text = "messi@gmail.com"
-        passwordTextField.text = "Anan1234"
+//        emailTextField.text = "messi@gmail.com"
+//        passwordTextField.text = "Anan1234"
     }
     
     //dismiss keyboad configuration

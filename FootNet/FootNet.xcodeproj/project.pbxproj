@@ -138,6 +138,42 @@
 		9E9FBAB52292CE8300786A78 /* StaticDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB42292CE8300786A78 /* StaticDBManager.swift */; };
 		9E9FBAB72292D94300786A78 /* DisplayOfferDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB62292D94300786A78 /* DisplayOfferDetail.swift */; };
 		9EA25A9B2244C3C500027A31 /* LeftHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA25A9A2244C3C500027A31 /* LeftHomeTableViewCell.swift */; };
+		9EA694D122CA01CD00F8D1B1 /* CustomFollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E7EF22720F2400267820 /* CustomFollowButton.swift */; };
+		9EA694D222CA01CE00F8D1B1 /* CustomFollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E7EF22720F2400267820 /* CustomFollowButton.swift */; };
+		9EA694D322CA01DB00F8D1B1 /* DisplaySearchedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */; };
+		9EA694D422CA01DB00F8D1B1 /* DisplaySearchedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289E22840EAE003B4FE2 /* DisplaySearchedUser.swift */; };
+		9EA694D522CA01E800F8D1B1 /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81722720F2400267820 /* LottieAnimation.swift */; };
+		9EA694D622CA01E900F8D1B1 /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81722720F2400267820 /* LottieAnimation.swift */; };
+		9EA694D722CA01F300F8D1B1 /* StaticDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB42292CE8300786A78 /* StaticDBManager.swift */; };
+		9EA694D822CA01F300F8D1B1 /* StaticDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9FBAB42292CE8300786A78 /* StaticDBManager.swift */; };
+		9EA694D922CA01FB00F8D1B1 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */; };
+		9EA694DA22CA01FC00F8D1B1 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CBACA226E151300F84197 /* SearchTableViewCell.swift */; };
+		9EA694DB22CA020200F8D1B1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1367228F2021003908AE /* ProfileViewController.swift */; };
+		9EA694DC22CA020200F8D1B1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1367228F2021003908AE /* ProfileViewController.swift */; };
+		9EA694DD22CA022D00F8D1B1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E5228982E60035C6DD /* Common.swift */; };
+		9EA694DE22CA022E00F8D1B1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E5228982E60035C6DD /* Common.swift */; };
+		9EA694DF22CA023A00F8D1B1 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38FA84229EFEF300503187 /* APIResponse.swift */; };
+		9EA694E022CA023A00F8D1B1 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38FA84229EFEF300503187 /* APIResponse.swift */; };
+		9EA694E122CA024500F8D1B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289C22840D4A003B4FE2 /* User.swift */; };
+		9EA694E222CA024500F8D1B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E56289C22840D4A003B4FE2 /* User.swift */; };
+		9EA694E322CA026B00F8D1B1 /* DisplayTextHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */; };
+		9EA694E422CA026B00F8D1B1 /* DisplayTextHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1493E322897AA20035C6DD /* DisplayTextHomeCell.swift */; };
+		9EA694E522CA027100F8D1B1 /* DisplaySignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB24E982227F1EB004B0C66 /* DisplaySignUpSelectProfileCell.swift */; };
+		9EA694E622CA027200F8D1B1 /* DisplaySignUpSelectProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB24E982227F1EB004B0C66 /* DisplaySignUpSelectProfileCell.swift */; };
+		9EA694E722CA02B800F8D1B1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
+		9EA694E822CA02B900F8D1B1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B1E1F2225A55600C82019 /* BaseViewController.swift */; };
+		9EA694E922CA02C800F8D1B1 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DE5862272E0450093470F /* LocalizationSystem.swift */; };
+		9EA694EA22CA02C800F8D1B1 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DE5862272E0450093470F /* LocalizationSystem.swift */; };
+		9EA694EB22CA02D700F8D1B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA3632231A2FA00094509 /* Constants.swift */; };
+		9EA694EC22CA02D700F8D1B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA3632231A2FA00094509 /* Constants.swift */; };
+		9EA694ED22CA02F200F8D1B1 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81922720F2400267820 /* UIFontExtension.swift */; };
+		9EA694EE22CA02F200F8D1B1 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E81922720F2400267820 /* UIFontExtension.swift */; };
+		9EA694EF22CA02FE00F8D1B1 /* CustomAcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917622A7C1010040B424 /* CustomAcceptButton.swift */; };
+		9EA694F022CA02FE00F8D1B1 /* CustomAcceptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917622A7C1010040B424 /* CustomAcceptButton.swift */; };
+		9EA694F122CA030600F8D1B1 /* ViewProfileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917422A7BD1A0040B424 /* ViewProfileType.swift */; };
+		9EA694F222CA030600F8D1B1 /* ViewProfileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917422A7BD1A0040B424 /* ViewProfileType.swift */; };
+		9EA694F522CA033F00F8D1B1 /* CustomRejectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917822A7C10A0040B424 /* CustomRejectButton.swift */; };
+		9EA694F622CA034000F8D1B1 /* CustomRejectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8917822A7C10A0040B424 /* CustomRejectButton.swift */; };
 		9EADBAAD224A881700C949DD /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EADBAAC224A881700C949DD /* SignInTests.swift */; };
 		9EB02D2B2227FE7700C9FFBF /* SignUpSelectProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2A2227FE7700C9FFBF /* SignUpSelectProfileViewCell.swift */; };
 		9EB02D2D22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB02D2C22280B3400C9FFBF /* SignUpSelectProfileTableViewController.swift */; };
@@ -1588,16 +1624,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA694F022CA02FE00F8D1B1 /* CustomAcceptButton.swift in Sources */,
+				9EA694E422CA026B00F8D1B1 /* DisplayTextHomeCell.swift in Sources */,
+				9EA694DE22CA022E00F8D1B1 /* Common.swift in Sources */,
+				9EA694F522CA033F00F8D1B1 /* CustomRejectButton.swift in Sources */,
+				9EA694D422CA01DB00F8D1B1 /* DisplaySearchedUser.swift in Sources */,
 				9E07D983225E3412004A73A8 /* MainTabBarUITests.swift in Sources */,
 				9E9F49E222B8C8DF00B07C18 /* CustomContentLabel.swift in Sources */,
+				9EA694F222CA030600F8D1B1 /* ViewProfileType.swift in Sources */,
+				9EA694E622CA027200F8D1B1 /* DisplaySignUpSelectProfileCell.swift in Sources */,
+				9EA694D822CA01F300F8D1B1 /* StaticDBManager.swift in Sources */,
 				9E5DEE85224B986A0091CECB /* SignInUITests.swift in Sources */,
+				9EA694D222CA01CE00F8D1B1 /* CustomFollowButton.swift in Sources */,
+				9EA694DC22CA020200F8D1B1 /* ProfileViewController.swift in Sources */,
 				9E07D981225E3063004A73A8 /* RightHomeUITests.swift in Sources */,
+				9EA694EE22CA02F200F8D1B1 /* UIFontExtension.swift in Sources */,
+				9EA694EA22CA02C800F8D1B1 /* LocalizationSystem.swift in Sources */,
 				9E9F49E822B8F92600B07C18 /* SearchViewController.swift in Sources */,
+				9EA694D622CA01E900F8D1B1 /* LottieAnimation.swift in Sources */,
+				9EA694E822CA02B900F8D1B1 /* BaseViewController.swift in Sources */,
+				9EA694DA22CA01FC00F8D1B1 /* SearchTableViewCell.swift in Sources */,
 				9E9F49D122B8C86B00B07C18 /* CustomImageView.swift in Sources */,
 				9E9F49E422B8C8E800B07C18 /* UIColorExtension.swift in Sources */,
 				9EF07905224CCBF20034FA1C /* SignUpUITests.swift in Sources */,
 				9E07D97F225E2CA1004A73A8 /* LeftHomeUITests.swift in Sources */,
 				9E813FA42299A4870051220C /* MyFriendTableViewCell.swift in Sources */,
+				9EA694E022CA023A00F8D1B1 /* APIResponse.swift in Sources */,
+				9EA694E222CA024500F8D1B1 /* User.swift in Sources */,
+				9EA694EC22CA02D700F8D1B1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1606,12 +1660,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E9F49E122B8C8DF00B07C18 /* CustomContentLabel.swift in Sources */,
+				9EA694E922CA02C800F8D1B1 /* LocalizationSystem.swift in Sources */,
+				9EA694F622CA034000F8D1B1 /* CustomRejectButton.swift in Sources */,
 				9EADBAAD224A881700C949DD /* SignInTests.swift in Sources */,
 				9E9F49D022B8C86A00B07C18 /* CustomImageView.swift in Sources */,
 				9EF07907224CE96C0034FA1C /* SignUpTests.swift in Sources */,
+				9EA694E722CA02B800F8D1B1 /* BaseViewController.swift in Sources */,
+				9EA694F122CA030600F8D1B1 /* ViewProfileType.swift in Sources */,
+				9EA694E122CA024500F8D1B1 /* User.swift in Sources */,
 				9E813FA32299A4870051220C /* MyFriendTableViewCell.swift in Sources */,
+				9EA694EF22CA02FE00F8D1B1 /* CustomAcceptButton.swift in Sources */,
+				9EA694D122CA01CD00F8D1B1 /* CustomFollowButton.swift in Sources */,
+				9EA694E322CA026B00F8D1B1 /* DisplayTextHomeCell.swift in Sources */,
+				9EA694ED22CA02F200F8D1B1 /* UIFontExtension.swift in Sources */,
+				9EA694DD22CA022D00F8D1B1 /* Common.swift in Sources */,
+				9EA694EB22CA02D700F8D1B1 /* Constants.swift in Sources */,
+				9EA694D322CA01DB00F8D1B1 /* DisplaySearchedUser.swift in Sources */,
+				9EA694DF22CA023A00F8D1B1 /* APIResponse.swift in Sources */,
+				9EA694D722CA01F300F8D1B1 /* StaticDBManager.swift in Sources */,
 				9E9F49E722B8F92600B07C18 /* SearchViewController.swift in Sources */,
+				9EA694D922CA01FB00F8D1B1 /* SearchTableViewCell.swift in Sources */,
+				9EA694E522CA027100F8D1B1 /* DisplaySignUpSelectProfileCell.swift in Sources */,
+				9EA694DB22CA020200F8D1B1 /* ProfileViewController.swift in Sources */,
 				9E9F49E322B8C8E700B07C18 /* UIColorExtension.swift in Sources */,
+				9EA694D522CA01E800F8D1B1 /* LottieAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

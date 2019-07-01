@@ -64,7 +64,7 @@ class RightHomeUITests: XCTestCase {
         app.keys["4"].tap()
         app.keys["more"].tap()
         app.buttons["Sign In"].tap()
-        app.navigationBars["FootNet"].buttons["More Info"].tap()
+        app.navigationBars["Home"].buttons["Add"].tap()
     }
     
     func testCloseRightHome() {
@@ -72,21 +72,15 @@ class RightHomeUITests: XCTestCase {
         app.children(matching: .window).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
     }
     
-    //It's not working with the simulator
-//    func testSendAnEmailRightHome() {
-//        testOpenRightHomeCase()
-//        app.buttons["Send an email"].tap()
-//    }
-    
-    func testOpenInstagramRightHome() {
+    func testPublishRightHome() {
         testOpenRightHomeCase()
-        app.buttons["LinkedIn"].tap()
-    }
-    
-    func testOpenLinkedInRightHome() {
-        testOpenRightHomeCase()
-        app.buttons["Instagram"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Offer"]/*[[".cells.matching(identifier: \"signUpSelectProfileCell\").staticTexts[\"Offer\"]",".staticTexts[\"Offer\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Publish offer"].buttons["Back"].tap()
+        app.navigationBars["Home"].buttons["Add"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Text"]/*[[".cells.matching(identifier: \"signUpSelectProfileCell\").staticTexts[\"Text\"]",".staticTexts[\"Text\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Publish text"].buttons["Back"].tap()
+        app.navigationBars["Home"].buttons["Add"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Photo"]/*[[".cells.matching(identifier: \"signUpSelectProfileCell\").staticTexts[\"Photo\"]",".staticTexts[\"Photo\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Publish photo"].buttons["Back"].tap()
     }
 }
-
-

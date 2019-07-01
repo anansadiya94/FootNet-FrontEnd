@@ -34,35 +34,35 @@ class SignUpTests: XCTestCase {
     func testCreateSignUpDetailPlayerScreen() {
         testCreateSignUpSelectScreen()
         signUpDetailVC = signUpSB.instantiateViewController(withIdentifier: "SignUpDetailTableViewController") as! SignUpDetailTableViewController
-        signUpDetailVC.profileType = ProfileType.Player
+        signUpDetailVC.profileType = .Player
         _ = signUpDetailVC.view
     }
     
     func testCreateSignUpDetailCoachScreen() {
         testCreateSignUpSelectScreen()
         signUpDetailVC = signUpSB.instantiateViewController(withIdentifier: "SignUpDetailTableViewController") as! SignUpDetailTableViewController
-        signUpDetailVC.profileType = ProfileType.Coach
+        signUpDetailVC.profileType = .Coach
         _ = signUpDetailVC.view
     }
     
     func testCreateSignUpDetailSportDirectorScreen() {
         testCreateSignUpSelectScreen()
         signUpDetailVC = signUpSB.instantiateViewController(withIdentifier: "SignUpDetailTableViewController") as! SignUpDetailTableViewController
-        signUpDetailVC.profileType = ProfileType.SportDirector
+        signUpDetailVC.profileType = .SportDirector
         _ = signUpDetailVC.view
     }
     
     func testCreateSignUpDetailTeamScreen() {
         testCreateSignUpSelectScreen()
         signUpDetailVC = signUpSB.instantiateViewController(withIdentifier: "SignUpDetailTableViewController") as! SignUpDetailTableViewController
-        signUpDetailVC.profileType = ProfileType.Team
+        signUpDetailVC.profileType = .Team
         _ = signUpDetailVC.view
     }
     
     func testCreateSignUpDetailFanScreen() {
         testCreateSignUpSelectScreen()
         signUpDetailVC = signUpSB.instantiateViewController(withIdentifier: "SignUpDetailTableViewController") as! SignUpDetailTableViewController
-        signUpDetailVC.profileType = ProfileType.Fan
+        signUpDetailVC.profileType = .Fan
         _ = signUpDetailVC.view
     }
 }

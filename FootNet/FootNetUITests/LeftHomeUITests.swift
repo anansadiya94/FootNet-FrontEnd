@@ -64,12 +64,12 @@ class LeftHomeUITests: XCTestCase {
         app.keys["4"].tap()
         app.keys["more"].tap()
         app.buttons["Sign In"].tap()
-        app.navigationBars["FootNet"].buttons["menuButton"].tap()
+        app.navigationBars["Home"].buttons["menuButton"].tap()
     }
     
     func testCloseLeftHome() {
         testOpenLeftHomeCase()
-        app.navigationBars["FootNet"].buttons["More Info"].tap()
+        app.navigationBars["Home"].buttons["Add"].tap()
     }
     
     func testMyProfileLeftHome() {

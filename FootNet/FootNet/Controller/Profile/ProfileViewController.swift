@@ -165,11 +165,11 @@ class ProfileViewController: UIViewController {
     }
     
     private func configureUserHeight() {
-        heightLabel.text = "height_label".localize() + userHeight
+        heightLabel.text = "height_label".localize() + userHeight + " cm"
     }
     
     private func configureUserWeight() {
-        weightLabel.text = "weight_label".localize() + userWeight
+        weightLabel.text = "weight_label".localize() + userWeight + " kg"
     }
     
     private func configureUserActualClub() {

@@ -215,8 +215,8 @@ class ProfileViewController: UIViewController {
             requestView.isHidden = true
         }
         
-        acceptRequestButton.setTitle("Accept", for: .normal)
-        rejectRequestButton.setTitle("Reject", for: .normal)
+        acceptRequestButton.setTitle("accept_button".localize(), for: .normal)
+        rejectRequestButton.setTitle("reject_button".localize(), for: .normal)
     }
     
     private func configureFollowView() {

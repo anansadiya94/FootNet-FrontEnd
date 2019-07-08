@@ -499,3 +499,5 @@
 "requestedProfileTitle"="Requested profile";
 "searchedProfileTitle"="Searched profile";
 
+"accept_button"="Accept";
+"reject_button"="Reject";

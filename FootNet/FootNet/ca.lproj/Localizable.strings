@@ -497,3 +497,6 @@
 "myProfileTitle"="El meu perfil";
 "requestedProfileTitle"="Perfil sol·licitat";
 "searchedProfileTitle"="Perfil buscat";
+
+"accept_button"="D'acord";
+"reject_button"="Rebutjar";

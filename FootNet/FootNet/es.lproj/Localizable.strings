@@ -496,3 +496,6 @@
 "myProfileTitle"="Mi perfil";
 "requestedProfileTitle"="Perfil solicitado";
 "searchedProfileTitle"="Perfil buscado";
+
+"accept_button"="Aceptar";
+"reject_button"="Rechazar";

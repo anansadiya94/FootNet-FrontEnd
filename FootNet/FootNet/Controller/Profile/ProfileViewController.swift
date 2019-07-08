@@ -54,6 +54,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         myId = Int(UserDefaults.standard.string(forKey: "signUserId")!)!
         setBackground()
         setTabBarItem()
